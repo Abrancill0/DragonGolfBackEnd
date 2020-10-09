@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragonGolfBackEnd", "DragonGolfBackEnd\DragonGolfBackEnd.csproj", "{7B5324DB-01A6-4F38-948C-355BA63A566F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7B5324DB-01A6-4F38-948C-355BA63A566F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B5324DB-01A6-4F38-948C-355BA63A566F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B5324DB-01A6-4F38-948C-355BA63A566F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B5324DB-01A6-4F38-948C-355BA63A566F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1D4245A3-8FC1-4A09-88C9-E195037F9599}
+	EndGlobalSection
+EndGlobal
