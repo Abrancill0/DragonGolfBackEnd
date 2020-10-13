@@ -45,11 +45,11 @@ namespace DragonGolfBackEnd.Controllers
                 comando.CommandType = CommandType.StoredProcedure;
 
                 //Declaracion de parametros
-                comando.Parameters.Add("@IDUsuario", SqlDbType.Varchar);
+                comando.Parameters.Add("@IDUsuario", SqlDbType.VarChar);
 
 
                 //Asignacion de valores a parametros
-                comando.Parameters["@IDUsuario"].Value = Datos.Cou_Nombre;
+                comando.Parameters["@IDUsuario"].Value = Datos.IDUsuario;
 
 
                 comando.Connection = new SqlConnection(VariablesGlobales.CadenaConexion);
@@ -60,6 +60,8 @@ namespace DragonGolfBackEnd.Controllers
                 SqlDataAdapter DA = new SqlDataAdapter(comando);
                 comando.Connection.Close();
                 DA.Fill(DT);
+
+                List<ParametrosSalida> lista = new List<ParametrosSalida>();
 
                 string Mensaje = "";
                 int Estatus = 0;
@@ -72,6 +74,7 @@ namespace DragonGolfBackEnd.Controllers
                     {
                         Mensaje = Convert.ToString(row["mensaje"]);
                         Estatus = Convert.ToInt32(row["Estatus"]);
+
                         if (Estatus == 1)
                         {
                             ParametrosSalida ent = new ParametrosSalida
@@ -88,8 +91,9 @@ namespace DragonGolfBackEnd.Controllers
 
                             lista.Add(ent);
                         }
+                    }
 
-                        JObject Resultado = JObject.FromObject(new
+                    JObject Resultado = JObject.FromObject(new
                         {
                             mensaje = Mensaje,
                             estatus = Estatus,

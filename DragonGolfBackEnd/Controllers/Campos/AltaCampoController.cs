@@ -36,10 +36,10 @@ namespace DragonGolfBackEnd.Controllers
                 comando.CommandType = CommandType.StoredProcedure;
 
                 //Declaracion de parametros
-                comando.Parameters.Add("@Cou_Nombre", SqlDbType.Varchar);
-                comando.Parameters.Add("@Cou_NombreCorto", SqlDbType.Varchar);
-                comando.Parameters.Add("@Cou_Ciudad", SqlDbType.Varchar);
-                comando.Parameters.Add("@Cou_Pais", SqlDbType.Varchar);
+                comando.Parameters.Add("@Cou_Nombre", SqlDbType.VarChar);
+                comando.Parameters.Add("@Cou_NombreCorto", SqlDbType.VarChar);
+                comando.Parameters.Add("@Cou_Ciudad", SqlDbType.VarChar);
+                comando.Parameters.Add("@Cou_Pais", SqlDbType.VarChar);
                 comando.Parameters.Add("@IDUsuario", SqlDbType.Int);
 
                 //Asignacion de valores a parametros
