@@ -178,11 +178,16 @@
     <Compile Include="Controllers\Campos\ListaCamposController.cs" />
     <Compile Include="Controllers\Campos\AltaCampoController.cs" />
     <Compile Include="Controllers\Campos\ActualizaCampoController.cs" />
+    <Compile Include="Controllers\Holes\AltaHolesController.cs" />
+    <Compile Include="Controllers\Holes\ListaHoleController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\Settings\ActualizarSettingsController.cs" />
     <Compile Include="Controllers\Settings\AltaSettingsController.cs" />
     <Compile Include="Controllers\Settings\ListadoSettingsController.cs" />
+    <Compile Include="Controllers\Tees\AltaTeesController.cs" />
+    <Compile Include="Controllers\Tees\ListaTeesController.cs" />
     <Compile Include="Controllers\Usuario\ActualizarUsuarioController.cs" />
+    <Compile Include="Controllers\Usuario\InfoUsuarioController.cs" />
     <Compile Include="Controllers\Usuario\LoginUsuarioController.cs" />
     <Compile Include="Controllers\Usuario\RegistrarUsuarioController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />

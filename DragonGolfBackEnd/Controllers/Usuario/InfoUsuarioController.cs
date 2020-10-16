@@ -16,12 +16,27 @@ namespace DragonGolfBackEnd.Controllers
 {
 
     [EnableCors(origins: "*", headers: "*", methods: "*", SupportsCredentials = true)]
-    [RoutePrefix("api/ListadoSettings")]
-    public class ListadoSettingsController : ApiController
+    [RoutePrefix("api/InfoUsuario")]
+    public class InfoUsuarioController : ApiController
     {
+        public class ParametrosEntradas
+        {
+            public int IDUsuario { get; set; }
+           
+
+        }
+
         public class ParametrosSalida
         {
             public int IDUsuario { get; set; }
+            public string usu_nickname { get; set; }
+            public string usu_email { get; set; }
+            public string usu_pass { get; set; }
+            public string usu_passalterno { get; set; }
+            public string usu_nombre { get; set; }
+            public string usu_apellido_paterno { get; set; }
+            public string usu_apellido_materno { get; set; }
+            public bool usu_olvido_contrasena { get; set; }
             public string set_idioma { get; set; }
             public string set_how_adv_move { get; set; }
             public decimal set_strokes_moved_per_round { get; set; }
@@ -64,26 +79,21 @@ namespace DragonGolfBackEnd.Controllers
 
         }
 
-        public class ParametrosEntradas
-        {
-            public int IDSettings { get; set; }
 
-        }
+
 
         public JObject Post(ParametrosEntradas Datos)
         {
             try
             {
-                SqlCommand comando = new SqlCommand("DragoGolf_ListSettings");
+                SqlCommand comando = new SqlCommand("DragoGolf_InfoUsuario");
                 comando.CommandType = CommandType.StoredProcedure;
-
                 //Declaracion de parametros
-                comando.Parameters.Add("@IDSettings", SqlDbType.Int);
-
+                comando.Parameters.Add("@IDUsuario", SqlDbType.Int);
+               
                 //Asignacion de valores a parametros
-                comando.Parameters["@IDSettings"].Value = Datos.IDSettings;
-
-
+                comando.Parameters["@IDUsuario"].Value = Datos.IDUsuario;
+               
                 comando.Connection = new SqlConnection(VariablesGlobales.CadenaConexion);
                 comando.CommandTimeout = 0;
                 comando.Connection.Open();
@@ -94,7 +104,6 @@ namespace DragonGolfBackEnd.Controllers
                 DA.Fill(DT);
 
                 List<ParametrosSalida> lista = new List<ParametrosSalida>();
-
 
                 string Mensaje = "";
                 int Estatus = 0;
@@ -107,11 +116,20 @@ namespace DragonGolfBackEnd.Controllers
                     {
                         Mensaje = Convert.ToString(row["mensaje"]);
                         Estatus = Convert.ToInt32(row["Estatus"]);
+
                         if (Estatus == 1)
                         {
                             ParametrosSalida ent = new ParametrosSalida
                             {
                                 IDUsuario = Convert.ToInt32(row["IDUsuario"]),
+                                usu_nickname = Convert.ToString(row["usu_nickname"]),
+                                usu_pass = Convert.ToString(row["usu_pass"]),
+                                usu_passalterno = Convert.ToString(row["usu_passalterno"]),
+                                usu_nombre = Convert.ToString(row["usu_nombre"]),
+                                usu_apellido_paterno = Convert.ToString(row["usu_apellido_paterno"]),
+                                usu_apellido_materno = Convert.ToString(row["usu_apellido_materno"]),
+                                usu_email = Convert.ToString(row["usu_email"]),
+                                usu_olvido_contrasena = Convert.ToBoolean(row["usu_olvido_contrasena"]),
                                 set_idioma = Convert.ToString(row["set_idioma"]),
                                 set_how_adv_move = Convert.ToString(row["set_how_adv_move"]),
                                 set_strokes_moved_per_round = Convert.ToInt32(row["set_strokes_moved_per_round"]),
@@ -155,39 +173,40 @@ namespace DragonGolfBackEnd.Controllers
 
                             lista.Add(ent);
                         }
-                    }
+                       }
 
-                        JObject Resultado = JObject.FromObject(new
-                        {
-                            mensaje = Mensaje,
-                            estatus = Estatus,
-
-                        });
-
-                        return Resultado;
-                    }
-                else
+                    JObject Resultado = JObject.FromObject(new
                     {
-                        JObject Resultado = JObject.FromObject(new
-                        {
-                            mensaje = Mensaje,
-                            estatus = Estatus,
-                            Result= lista
+                        mensaje = Mensaje,
+                        estatus = Estatus,
+                        Result = lista
+                    });
 
-                        });
-
-                        return Resultado;
-                    }
-
+                    return Resultado;
                 }
+                else
+                {
+                    JObject Resultado = JObject.FromObject(new
+                    {
+                        mensaje = Mensaje,
+                        estatus = Estatus,
+                        Result = lista
+                    });
+
+                    return Resultado;
+                }
+
+            }
             catch (Exception ex)
             {
+
+                List<ParametrosSalida> lista = new List<ParametrosSalida>();
 
                 JObject Resultado = JObject.FromObject(new
                 {
                     mensaje = ex.ToString(),
                     estatus = 0,
-
+                    Result = lista
                 });
 
                 return Resultado; //JsonConvert.SerializeObject(lista);

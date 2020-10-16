@@ -17,7 +17,7 @@ namespace DragonGolfBackEnd.Controllers
 
     [EnableCors(origins: "*", headers: "*", methods: "*", SupportsCredentials = true)]
     [RoutePrefix("api/ListaCampos")]
-    public class ListaCamposontroller : ApiController
+    public class ListaCamposController : ApiController
     {
 
         public class ParametrosEntradas
@@ -85,7 +85,7 @@ namespace DragonGolfBackEnd.Controllers
                                 Cou_Ciudad = Convert.ToString(row["Cou_Ciudad"]),
                                 Cou_Pais = Convert.ToString(row["Cou_Pais"]),
                                 IDUsuario = Convert.ToInt32(row["IDUsuario"]),
-                                FechaCreacion = Convert.ToDateTime(row["FechaCreacion"]),
+                                FechaCreacion = Convert.ToDateTime(row["Cou_FechaCreacion"]),
 
                             };
 
@@ -97,8 +97,9 @@ namespace DragonGolfBackEnd.Controllers
                         {
                             mensaje = Mensaje,
                             estatus = Estatus,
+                             Result = lista
 
-                        });
+                    });
 
                         return Resultado;
                     }
