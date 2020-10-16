@@ -34,7 +34,7 @@ namespace DragonGolfBackEnd.Controllers
             public string Te_TeeName { get; set; }
             public int Te_Slope { get; set; }
             public int Te_Rating { get; set; }
-            public int Te_TeeColor { get; set; }
+            public string Te_TeeColor { get; set; }
             public int Te_In { get; set; }
             public int Te_Out { get; set; }
             public int Te_Total { get; set; }
@@ -92,9 +92,9 @@ namespace DragonGolfBackEnd.Controllers
                                 Te_TeeName = Convert.ToString(row["Te_TeeName"]),
                                 Te_Slope = Convert.ToInt32(row["Te_Slope"]),
                                 Te_Rating = Convert.ToInt32(row["Te_Rating"]),
-                                Te_TeeColor = Convert.ToInt32(row["Te_TeeColor"]),
-                                Te_In = Convert.ToInt32(row["IDHoTe_Inles"]),
-                                Te_Out = Convert.ToInt32(row["IDHTe_Outoles"]),
+                                Te_TeeColor = Convert.ToString(row["Te_TeeColor"]),
+                                Te_In = Convert.ToInt32(row["Te_In"]),
+                                Te_Out = Convert.ToInt32(row["Te_Out"]),
                                 Te_Total = Convert.ToInt32(row["Te_Total"]),
                                 IDCourse = Convert.ToInt32(row["IDCourse"]),
                                 Te_FechaCreacion = Convert.ToDateTime(row["Te_FechaCreacion"]),
