@@ -41,7 +41,7 @@ namespace DragonGolfBackEnd.Controllers
         {
             try
             {
-                SqlCommand comando = new SqlCommand("DragoGolf_InsertCourse");
+                SqlCommand comando = new SqlCommand("DragoGolf_ListCourse");
                 comando.CommandType = CommandType.StoredProcedure;
 
                 //Declaracion de parametros
