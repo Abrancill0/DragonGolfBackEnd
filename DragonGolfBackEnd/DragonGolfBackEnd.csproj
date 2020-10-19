@@ -191,11 +191,15 @@
     <Compile Include="Controllers\Tees\ActualizarTeesController.cs" />
     <Compile Include="Controllers\Tees\AltaTeesController.cs" />
     <Compile Include="Controllers\Tees\ListaTeesController.cs" />
+    <Compile Include="Controllers\Usuario\RestablecerContrasenaController.cs" />
+    <Compile Include="Controllers\Usuario\OlvideContrasenaController.cs" />
+    <Compile Include="Controllers\Usuario\SubirImagenUsuarioController.cs" />
     <Compile Include="Controllers\Usuario\ActualizarUsuarioController.cs" />
     <Compile Include="Controllers\Usuario\InfoUsuarioController.cs" />
     <Compile Include="Controllers\Usuario\LoginUsuarioController.cs" />
     <Compile Include="Controllers\Usuario\RegistrarUsuarioController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Extensions\HttpContentExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

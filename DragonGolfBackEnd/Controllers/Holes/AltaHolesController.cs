@@ -82,8 +82,7 @@ namespace DragonGolfBackEnd.Controllers
                         {
                             mensaje = Mensaje,
                             estatus = Estatus,
-                            idcourse = IDCourse
-
+                         
                         });
 
                         return Resultado;
