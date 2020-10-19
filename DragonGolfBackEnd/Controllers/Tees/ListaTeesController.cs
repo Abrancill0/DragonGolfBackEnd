@@ -33,7 +33,7 @@ namespace DragonGolfBackEnd.Controllers
             public int IDTees { get; set; }
             public string Te_TeeName { get; set; }
             public int Te_Slope { get; set; }
-            public int Te_Rating { get; set; }
+            public decimal Te_Rating { get; set; }
             public string Te_TeeColor { get; set; }
             public int Te_In { get; set; }
             public int Te_Out { get; set; }
@@ -91,7 +91,7 @@ namespace DragonGolfBackEnd.Controllers
                                 IDTees = Convert.ToInt32(row["IDTees"]),
                                 Te_TeeName = Convert.ToString(row["Te_TeeName"]),
                                 Te_Slope = Convert.ToInt32(row["Te_Slope"]),
-                                Te_Rating = Convert.ToInt32(row["Te_Rating"]),
+                                Te_Rating = Convert.ToDecimal(row["Te_Rating"]),
                                 Te_TeeColor = Convert.ToString(row["Te_TeeColor"]),
                                 Te_In = Convert.ToInt32(row["Te_In"]),
                                 Te_Out = Convert.ToInt32(row["Te_Out"]),
