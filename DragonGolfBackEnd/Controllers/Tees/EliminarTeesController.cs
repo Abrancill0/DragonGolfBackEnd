@@ -17,7 +17,7 @@ namespace DragonGolfBackEnd.Controllers
 
     [EnableCors(origins: "*", headers: "*", methods: "*", SupportsCredentials = true)]
     [RoutePrefix("api/EliminarTees")]
-    public class ActualizarTeesController : ApiController
+    public class EliminarTeesController : ApiController
     {
         public class ParametrosEntradas
         {

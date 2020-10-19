@@ -16,8 +16,8 @@ namespace DragonGolfBackEnd.Controllers
 {
 
     [EnableCors(origins: "*", headers: "*", methods: "*", SupportsCredentials = true)]
-    [RoutePrefix("api/ListaCampos")]
-    public class ListaCamposController : ApiController
+    [RoutePrefix("api/ListaCamposTodos")]
+    public class ListaCamposTodosController : ApiController
     {
 
         public class ParametrosEntradas
