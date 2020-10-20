@@ -27,8 +27,21 @@ namespace DragonGolfBackEnd.Controllers
             public string usu_email { get; set; }
             public string usu_nickname { get; set; }
             public string usu_telefono { get; set; }
-           
+
             public string usu_pass { get; set; }
+
+        }
+
+        public class ParametrosSalida
+        {
+            public int IDUsuario { get; set; }
+            public string usu_nombre { get; set; }
+            public string usu_apellido_paterno { get; set; }
+            public string usu_apellido_materno { get; set; }
+            public string usu_email { get; set; }
+            public string usu_nickname { get; set; }
+            public string usu_telefono { get; set; }
+            public string usu_imagen { get; set; }
 
         }
 
@@ -65,7 +78,7 @@ namespace DragonGolfBackEnd.Controllers
                 comando.Connection.Close();
                 DA.Fill(DT);
 
-
+                List<ParametrosSalida> lista = new List<ParametrosSalida>();
 
                 string Mensaje = "";
                 int Estatus = 0;
@@ -74,17 +87,38 @@ namespace DragonGolfBackEnd.Controllers
 
                 if (DT.Rows.Count > 0)
                 {
+
+
                     foreach (DataRow row in DT.Rows)
                     {
                         Mensaje = Convert.ToString(row["mensaje"]);
                         Estatus = Convert.ToInt32(row["Estatus"]);
+
+                        if (Estatus == 1)
+                        {
+                            ParametrosSalida ent = new ParametrosSalida
+                            {
+
+                                IDUsuario = Convert.ToInt32(row["IDUsuario"]),
+                                usu_nombre = Convert.ToString(row["usu_nombre"]),
+                                usu_apellido_paterno = Convert.ToString(row["usu_apellido_paterno"]),
+                                usu_apellido_materno = Convert.ToString(row["usu_apellido_materno"]),
+                                usu_email = Convert.ToString(row["usu_email"]),
+                                usu_nickname = Convert.ToString(row["usu_nickname"]),
+                                usu_telefono = Convert.ToString(row["usu_telefono"]),
+                                usu_imagen = Convert.ToString(row["usu_imagen"]),
+
+                            };
+
+                            lista.Add(ent);
+                        }
                     }
 
                     JObject Resultado = JObject.FromObject(new
                     {
                         mensaje = Mensaje,
                         estatus = Estatus,
-
+                        Result = lista
                     });
 
                     return Resultado;

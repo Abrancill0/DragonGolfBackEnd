@@ -74,7 +74,6 @@ namespace DragonGolfBackEnd.Controllers
 
                 //Declaracion de parametros
                 comando.Parameters.Add("@IDSettings", SqlDbType.Int);
-                comando.Parameters.Add("@usu_nombre", SqlDbType.VarChar);
                 comando.Parameters.Add("@IDUsuario", SqlDbType.Int);
                 comando.Parameters.Add("@set_idioma", SqlDbType.VarChar);
                 comando.Parameters.Add("@set_how_adv_move", SqlDbType.Int);
@@ -115,7 +114,6 @@ namespace DragonGolfBackEnd.Controllers
                 comando.Parameters.Add("@set_stableford_par", SqlDbType.Int);
                 comando.Parameters.Add("@set_stableford_bogey", SqlDbType.Int);
                 comando.Parameters.Add("@set_stableford_double_bogey", SqlDbType.Int);
-
 
                 //Asignacion de valores a parametros
                 comando.Parameters["@IDSettings"].Value = Datos.IDSettings;
@@ -168,8 +166,6 @@ namespace DragonGolfBackEnd.Controllers
                 SqlDataAdapter DA = new SqlDataAdapter(comando);
                 comando.Connection.Close();
                 DA.Fill(DT);
-
-
 
                 string Mensaje = "";
                 int Estatus = 0;

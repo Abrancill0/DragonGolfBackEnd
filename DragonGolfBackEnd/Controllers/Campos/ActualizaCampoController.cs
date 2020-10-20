@@ -26,7 +26,6 @@ namespace DragonGolfBackEnd.Controllers
             public string Cou_NombreCorto { get; set; }
             public string Cou_Ciudad { get; set; }
             public string Cou_Pais { get; set; }
-            public int IDUsuario { get; set; }
         }
 
         public JObject Post(ParametrosEntradas Datos)
@@ -42,7 +41,7 @@ namespace DragonGolfBackEnd.Controllers
                 comando.Parameters.Add("@Cou_NombreCorto", SqlDbType.VarChar);
                 comando.Parameters.Add("@Cou_Ciudad", SqlDbType.VarChar);
                 comando.Parameters.Add("@Cou_Pais", SqlDbType.VarChar);
-                comando.Parameters.Add("@IDUsuario", SqlDbType.Int);
+              
 
                 //Asignacion de valores a parametros
                 comando.Parameters["@IDCourse"].Value = Datos.IDCourse;
@@ -50,8 +49,7 @@ namespace DragonGolfBackEnd.Controllers
                 comando.Parameters["@Cou_NombreCorto"].Value = Datos.Cou_NombreCorto;
                 comando.Parameters["@Cou_Ciudad"].Value = Datos.Cou_Ciudad;
                 comando.Parameters["@Cou_Pais"].Value = Datos.Cou_Pais;
-                comando.Parameters["@IDUsuario"].Value = Datos.IDUsuario;
-
+               
                 comando.Connection = new SqlConnection(VariablesGlobales.CadenaConexion);
                 comando.CommandTimeout = 0;
                 comando.Connection.Open();

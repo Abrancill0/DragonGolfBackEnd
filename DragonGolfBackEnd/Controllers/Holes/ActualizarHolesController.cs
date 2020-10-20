@@ -78,7 +78,7 @@ namespace DragonGolfBackEnd.Controllers
                         {
                             Mensaje = Convert.ToString(row["mensaje"]);
                             Estatus = Convert.ToInt32(row["Estatus"]);
-                            IDCourse = Convert.ToInt32(row["IDCourse"]);
+                           
                     }
 
                         JObject Resultado = JObject.FromObject(new
