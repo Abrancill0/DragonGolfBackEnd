@@ -16,41 +16,33 @@ namespace DragonGolfBackEnd.Controllers
 {
 
     [EnableCors(origins: "*", headers: "*", methods: "*", SupportsCredentials = true)]
-    [RoutePrefix("api/ActualizarCampos")]
-    public class ActualizarCamposController : ApiController
+    [RoutePrefix("api/CopiarCampo")]
+    public class CopiarCampoController : ApiController
     {
         public class ParametrosEntradas
         {
             public int IDCourse { get; set; }
-            public string Cou_Nombre { get; set; }
-            public string Cou_NombreCorto { get; set; }
-            public string Cou_Ciudad { get; set; }
-            public string Cou_Pais { get; set; }
             public int IDUsuario { get; set; }
+
+
         }
 
         public JObject Post(ParametrosEntradas Datos)
         {
             try
             {
-                SqlCommand comando = new SqlCommand("DragoGolf_UpdateCourse");
+                SqlCommand comando = new SqlCommand("DragonGolf_CopieCourse");
                 comando.CommandType = CommandType.StoredProcedure;
 
                 //Declaracion de parametros
                 comando.Parameters.Add("@IDCourse", SqlDbType.Int);
-                comando.Parameters.Add("@Cou_Nombre", SqlDbType.VarChar);
-                comando.Parameters.Add("@Cou_NombreCorto", SqlDbType.VarChar);
-                comando.Parameters.Add("@Cou_Ciudad", SqlDbType.VarChar);
-                comando.Parameters.Add("@Cou_Pais", SqlDbType.VarChar);
                 comando.Parameters.Add("@IDUsuario", SqlDbType.Int);
+
 
                 //Asignacion de valores a parametros
                 comando.Parameters["@IDCourse"].Value = Datos.IDCourse;
-                comando.Parameters["@Cou_Nombre"].Value = Datos.Cou_Nombre;
-                comando.Parameters["@Cou_NombreCorto"].Value = Datos.Cou_NombreCorto;
-                comando.Parameters["@Cou_Ciudad"].Value = Datos.Cou_Ciudad;
-                comando.Parameters["@Cou_Pais"].Value = Datos.Cou_Pais;
                 comando.Parameters["@IDUsuario"].Value = Datos.IDUsuario;
+               
 
                 comando.Connection = new SqlConnection(VariablesGlobales.CadenaConexion);
                 comando.CommandTimeout = 0;
@@ -60,6 +52,8 @@ namespace DragonGolfBackEnd.Controllers
                 SqlDataAdapter DA = new SqlDataAdapter(comando);
                 comando.Connection.Close();
                 DA.Fill(DT);
+
+
 
                 string Mensaje = "";
                 int Estatus = 0;
