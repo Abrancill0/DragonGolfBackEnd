@@ -37,7 +37,9 @@ namespace DragonGolfBackEnd.Controllers
             public string usu_apellido_paterno { get; set; }
             public string usu_apellido_materno { get; set; }
             public string usu_imagen { get; set; }
-            public bool usu_olvido_contrasena { get; set; }
+
+            public string usu_telefono { get; set; }
+        public bool usu_olvido_contrasena { get; set; }
             public int IDSettings { get; set; }
             public string set_idioma { get; set; }
             public string set_how_adv_move { get; set; }
@@ -132,6 +134,7 @@ namespace DragonGolfBackEnd.Controllers
                                 usu_apellido_materno = Convert.ToString(row["usu_apellido_materno"]),
                                 usu_email = Convert.ToString(row["usu_email"]),
                                 usu_imagen = Convert.ToString(row["usu_imagen"]),
+                                usu_telefono = Convert.ToString(row["usu_telefono"]),
                                 usu_olvido_contrasena = Convert.ToBoolean(row["usu_olvido_contrasena"]),
                                 set_idioma = Convert.ToString(row["set_idioma"]),
                                 IDSettings = Convert.ToInt32(row["IDSettings"]),
