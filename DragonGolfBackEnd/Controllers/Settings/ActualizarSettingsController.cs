@@ -76,7 +76,7 @@ namespace DragonGolfBackEnd.Controllers
                 comando.Parameters.Add("@IDSettings", SqlDbType.Int);
                 comando.Parameters.Add("@IDUsuario", SqlDbType.Int);
                 comando.Parameters.Add("@set_idioma", SqlDbType.VarChar);
-                comando.Parameters.Add("@set_how_adv_move", SqlDbType.Int);
+                comando.Parameters.Add("@set_how_adv_move", SqlDbType.VarChar);
                 comando.Parameters.Add("@set_strokes_moved_per_round", SqlDbType.Decimal);
                 comando.Parameters.Add("@set_adv_moves_on_9_holes", SqlDbType.Bit);
                 comando.Parameters.Add("@set_carry_moves_adv", SqlDbType.Bit);

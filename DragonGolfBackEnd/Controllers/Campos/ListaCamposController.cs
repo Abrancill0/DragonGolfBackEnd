@@ -33,6 +33,8 @@ namespace DragonGolfBackEnd.Controllers
             public string Cou_NombreCorto { get; set; }
             public string Cou_Ciudad { get; set; }
             public string Cou_Pais { get; set; }
+            public string Tipo { get; set; }
+
             public int IDUsuario { get; set; }
             public DateTime FechaCreacion { get; set; }
         }
@@ -84,6 +86,7 @@ namespace DragonGolfBackEnd.Controllers
                                 Cou_NombreCorto = Convert.ToString(row["Cou_NombreCorto"]),
                                 Cou_Ciudad = Convert.ToString(row["Cou_Ciudad"]),
                                 Cou_Pais = Convert.ToString(row["Cou_Pais"]),
+                                Tipo = Convert.ToString(row["Tipo"]),
                                 IDUsuario = Convert.ToInt32(row["IDUsuario"]),
                                 FechaCreacion = Convert.ToDateTime(row["Cou_FechaCreacion"]),
 
