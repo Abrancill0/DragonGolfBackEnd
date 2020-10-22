@@ -80,6 +80,8 @@ namespace DragonGolfBackEnd.Controllers
             public int set_stableford_par { get; set; }
             public int set_stableford_bogey { get; set; }
             public int set_stableford_double_bogey { get; set; }
+            public int usu_ghinnumber { get; set; }
+            public decimal usu_handicapindex { get; set; }
 
         }
 
@@ -176,6 +178,8 @@ namespace DragonGolfBackEnd.Controllers
                                 set_stableford_par = Convert.ToInt32(row["set_stableford_par"]),
                                 set_stableford_bogey = Convert.ToInt32(row["set_stableford_bogey"]),
                                 set_stableford_double_bogey = Convert.ToInt32(row["set_stableford_double_bogey"]),
+                                usu_ghinnumber = Convert.ToInt32(row["usu_ghinnumber"]),
+                                usu_handicapindex = Convert.ToDecimal(row["usu_handicapindex"]),
                             };
 
                             lista.Add(ent);

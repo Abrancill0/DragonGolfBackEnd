@@ -28,7 +28,9 @@ namespace DragonGolfBackEnd.Controllers
             public string usu_apellido_materno { get; set; }
             public string usu_nickname { get; set; }
             public string usu_telefono { get; set; }
-         
+            public int usu_ghinnumber { get; set; }
+            public decimal usu_handicapindex { get; set; }
+
         }
 
         public JObject Post(ParametrosEntradas Datos)
@@ -45,6 +47,8 @@ namespace DragonGolfBackEnd.Controllers
                 comando.Parameters.Add("@usu_nickname", SqlDbType.VarChar);
                 comando.Parameters.Add("@usu_telefono", SqlDbType.VarChar);
                 comando.Parameters.Add("@IDUsuario", SqlDbType.Int);
+                comando.Parameters.Add("@usu_ghinnumber", SqlDbType.Int);
+                comando.Parameters.Add("@usu_handicapindex", SqlDbType.Decimal);
 
                 //Asignacion de valores a parametros
                 comando.Parameters["@usu_nombre"].Value = Datos.usu_nombre;
@@ -53,6 +57,8 @@ namespace DragonGolfBackEnd.Controllers
                 comando.Parameters["@usu_nickname"].Value = Datos.usu_nickname;
                 comando.Parameters["@usu_telefono"].Value = Datos.usu_telefono;
                 comando.Parameters["@IDUsuario"].Value = Datos.IDUsuario;
+                comando.Parameters["@usu_ghinnumber"].Value = Datos.usu_ghinnumber;
+                comando.Parameters["@usu_handicapindex"].Value = Datos.usu_handicapindex;
 
                 comando.Connection = new SqlConnection(VariablesGlobales.CadenaConexion);
                 comando.CommandTimeout = 0;

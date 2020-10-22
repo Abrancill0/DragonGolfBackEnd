@@ -153,6 +153,7 @@ namespace DragonGolfBackEnd.Controllers
                 DA.Fill(DT);
 
                 string Mensaje = "";
+                string RutaImagen = "";
                 int Estatus = 0;
 
                 if (DT.Rows.Count > 0)
@@ -161,7 +162,7 @@ namespace DragonGolfBackEnd.Controllers
                     {
                         Mensaje = Convert.ToString(row["mensaje"]);
                         Estatus = Convert.ToInt32(row["Estatus"]);
-
+                        RutaImagen = Convert.ToString(row["RutaImagen"]);
                     }
 
                     JObject Resultado = JObject.FromObject(new

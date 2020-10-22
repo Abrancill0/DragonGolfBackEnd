@@ -38,6 +38,7 @@ namespace DragonGolfBackEnd.Controllers
             public string usu_apellido_materno { get; set; }
             public bool usu_olvido_contrasena { get; set; }
             public string set_idioma { get; set; }
+            public string usu_imagen { get; set; }
             public string set_how_adv_move { get; set; }
             public decimal set_strokes_moved_per_round { get; set; }
             public bool set_adv_moves_on_9_holes { get; set; }
@@ -76,8 +77,10 @@ namespace DragonGolfBackEnd.Controllers
             public int set_stableford_par { get; set; }
             public int set_stableford_bogey { get; set; }
             public int set_stableford_double_bogey { get; set; }
+            public int usu_ghinnumber { get; set; }
+            public decimal usu_handicapindex { get; set; }
 
-        }
+}
 
 
 
@@ -132,6 +135,7 @@ namespace DragonGolfBackEnd.Controllers
                                 usu_apellido_materno = Convert.ToString(row["usu_apellido_materno"]),
                                 usu_email = Convert.ToString(row["usu_email"]),
                                 usu_olvido_contrasena = Convert.ToBoolean(row["usu_olvido_contrasena"]),
+                                usu_imagen = Convert.ToString(row["usu_imagen"]),
                                 set_idioma = Convert.ToString(row["set_idioma"]),
                                 set_how_adv_move = Convert.ToString(row["set_how_adv_move"]),
                                 set_strokes_moved_per_round = Convert.ToInt32(row["set_strokes_moved_per_round"]),
@@ -171,6 +175,8 @@ namespace DragonGolfBackEnd.Controllers
                                 set_stableford_par = Convert.ToInt32(row["set_stableford_par"]),
                                 set_stableford_bogey = Convert.ToInt32(row["set_stableford_bogey"]),
                                 set_stableford_double_bogey = Convert.ToInt32(row["set_stableford_double_bogey"]),
+                                usu_ghinnumber = Convert.ToInt32(row["usu_ghinnumber"]),
+                                usu_handicapindex = Convert.ToDecimal(row["usu_handicapindex"]),
                             };
 
                             lista.Add(ent);
