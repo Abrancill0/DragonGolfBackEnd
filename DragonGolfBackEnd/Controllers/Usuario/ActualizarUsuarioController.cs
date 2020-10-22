@@ -26,7 +26,6 @@ namespace DragonGolfBackEnd.Controllers
             public string usu_nombre { get; set; }
             public string usu_apellido_paterno { get; set; }
             public string usu_apellido_materno { get; set; }
-            public string usu_email { get; set; }
             public string usu_nickname { get; set; }
             public string usu_telefono { get; set; }
          
@@ -39,21 +38,21 @@ namespace DragonGolfBackEnd.Controllers
                 SqlCommand comando = new SqlCommand("DragoGolf_UpdateUser");
                 comando.CommandType = CommandType.StoredProcedure;
                 //Declaracion de parametros
+          
                 comando.Parameters.Add("@usu_nombre", SqlDbType.VarChar);
                 comando.Parameters.Add("@usu_apellido_paterno", SqlDbType.VarChar);
                 comando.Parameters.Add("@usu_apellido_materno", SqlDbType.VarChar);
-                comando.Parameters.Add("@usu_email", SqlDbType.VarChar);
                 comando.Parameters.Add("@usu_nickname", SqlDbType.VarChar);
                 comando.Parameters.Add("@usu_telefono", SqlDbType.VarChar);
-                comando.Parameters.Add("@usu_imagen", SqlDbType.VarChar);
+                comando.Parameters.Add("@IDUsuario", SqlDbType.Int);
 
                 //Asignacion de valores a parametros
                 comando.Parameters["@usu_nombre"].Value = Datos.usu_nombre;
                 comando.Parameters["@usu_apellido_paterno"].Value = Datos.usu_apellido_paterno;
                 comando.Parameters["@usu_apellido_materno"].Value = Datos.usu_apellido_materno;
-                comando.Parameters["@usu_email"].Value = Datos.usu_email;
                 comando.Parameters["@usu_nickname"].Value = Datos.usu_nickname;
                 comando.Parameters["@usu_telefono"].Value = Datos.usu_telefono;
+                comando.Parameters["@IDUsuario"].Value = Datos.IDUsuario;
 
                 comando.Connection = new SqlConnection(VariablesGlobales.CadenaConexion);
                 comando.CommandTimeout = 0;
