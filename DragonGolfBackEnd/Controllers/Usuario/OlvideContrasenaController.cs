@@ -134,7 +134,7 @@ namespace DragonGolfBackEnd.Controllers
 
                 var fromAddress = new MailAddress("abrx23@gmail.com", "Dragon Golf");
                 var toAddress = new MailAddress(CorreoCliente, "To Name");
-                const string fromPassword = "elmasmejor123a";
+                const string fromPassword = "44Brancill0_";
                 string subject = Asunto;
                 const string body = "Body";
 
