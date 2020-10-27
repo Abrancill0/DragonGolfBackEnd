@@ -194,6 +194,7 @@
     <Compile Include="Controllers\Tees\ActualizarTeesController.cs" />
     <Compile Include="Controllers\Tees\AltaTeesController.cs" />
     <Compile Include="Controllers\Tees\ListaTeesController.cs" />
+    <Compile Include="Controllers\Usuario\ListaJugadoresController.cs" />
     <Compile Include="Controllers\Usuario\RestablecerContrasenaController.cs" />
     <Compile Include="Controllers\Usuario\OlvideContrasenaController.cs" />
     <Compile Include="Controllers\Usuario\SubirImagenUsuarioController.cs" />

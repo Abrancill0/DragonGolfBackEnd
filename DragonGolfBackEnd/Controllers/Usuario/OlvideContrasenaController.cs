@@ -1,5 +1,4 @@
-﻿using DragonGolfBackEnd.Clases;
-using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -12,6 +11,8 @@ using System.Web.Http.Cors;
 using System.Security.Cryptography;
 using System.Text;
 using System.Net.Mail;
+using DragonGolfBackEnd.Clases;
+
 namespace DragonGolfBackEnd.Controllers
 {
 
@@ -385,7 +386,7 @@ namespace DragonGolfBackEnd.Controllers
     "<h1 class='webfont h1' style='color: #FFFFFF; font-size: 36px;" +
     "font-weight: 300; line-height: 100%; margin: 0;'>" +
     "<a href='link_webpage'>" +
-            "<img src='http://drive.google.com/uc?export=view&id=1mFEeISOkXsm6hfVFIS4nrK6NBxZV95qI' alt='Gobierno Municipal' width='170px' height='70px' style='width:170px; height: 70px;'>" +
+            "<img src='https://drive.google.com/file/d/1LR5qNzOHVGdFSqnQoB53XOCfZcrOq__v/view?usp=sharing' alt='Dragon Golf' width='170px' height='70px' style='width:170px; height: 70px;'>" +
     "</a>" +
     "</h1>" +
     "</td>" +

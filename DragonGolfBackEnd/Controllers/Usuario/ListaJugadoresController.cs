@@ -16,8 +16,8 @@ namespace DragonGolfBackEnd.Controllers
 {
 
     [EnableCors(origins: "*", headers: "*", methods: "*", SupportsCredentials = true)]
-    [RoutePrefix("api/ListaAmigos")]
-    public class ListaAmigosController : ApiController
+    [RoutePrefix("api/ListaJugadores")]
+    public class ListaJugadoresController : ApiController
     {
 
         public class ParametrosEntradas
@@ -44,7 +44,7 @@ namespace DragonGolfBackEnd.Controllers
         {
             try
             {
-                SqlCommand comando = new SqlCommand("DragoGolf_ListFriend");
+                SqlCommand comando = new SqlCommand("DragoGolf_ListPlayers");
                 comando.CommandType = CommandType.StoredProcedure;
 
                 //Declaracion de parametros
