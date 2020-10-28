@@ -82,7 +82,7 @@ namespace DragonGolfBackEnd.Controllers
                         {
                             ParametrosSalida ent = new ParametrosSalida
                             {
-                             IDUsuario = Convert.ToInt32(row["IDCourse"]),
+                             IDUsuario = Convert.ToInt32(row["IDUsuario"]),
                              usu_nombre = Convert.ToString(row["usu_nombre"]),
                              usu_apellido_paterno = Convert.ToString(row["usu_apellido_paterno"]),
                              usu_apellido_materno = Convert.ToString(row["usu_apellido_materno"]),
