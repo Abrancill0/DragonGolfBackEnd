@@ -21,9 +21,9 @@ namespace DragonGolfBackEnd.Controllers
     {
         public class ParametrosEntradas
         {
-            //public int IDHoles { get; set; } 
+           //public int IDHoles { get; set; } 
             public string Ho_TeeName { get; set; }
-            public int Ho_Hole { get; set; }
+           // public int Ho_Hole { get; set; }
             //public int Ho_Par { get; set; }
             //public int Ho_Advantage { get; set; }
             //public int Ho_Yards { get; set; }
@@ -55,16 +55,16 @@ namespace DragonGolfBackEnd.Controllers
                     //Declaracion de parametros
                     comando.Parameters.Add("@IDHoles", SqlDbType.Int);
                     comando.Parameters.Add("@Ho_TeeName", SqlDbType.VarChar);
-                    comando.Parameters.Add("@Ho_Hole", SqlDbType.Int);
-                    comando.Parameters.Add("@Ho_Par", SqlDbType.Decimal);
-                    comando.Parameters.Add("@Ho_Advantage", SqlDbType.VarChar);
+                    //comando.Parameters.Add("@Ho_Hole", SqlDbType.Int);
+                    comando.Parameters.Add("@Ho_Par", SqlDbType.Int);
+                    comando.Parameters.Add("@Ho_Advantage", SqlDbType.Int);
                     comando.Parameters.Add("@Ho_Yards", SqlDbType.Int);
                     comando.Parameters.Add("@IDTees", SqlDbType.Int);
 
                     //Asignacion de valores a parametros
                     comando.Parameters["@IDHoles"].Value = ID;// Datos.IDHoles;
                     comando.Parameters["@Ho_TeeName"].Value = Datos.Ho_TeeName;
-                    comando.Parameters["@Ho_Hole"].Value = Datos.Ho_Hole;
+                    //comando.Parameters["@Ho_Hole"].Value = Datos.Ho_Hole;
                     comando.Parameters["@Ho_Par"].Value = Par;// Datos.Ho_Par;
                     comando.Parameters["@Ho_Advantage"].Value = Adv;// Datos.Ho_Advantage;
                     comando.Parameters["@Ho_Yards"].Value = yrds;// Datos.Ho_Yards;
