@@ -183,6 +183,7 @@
     <Compile Include="Controllers\Campos\ListaCamposController.cs" />
     <Compile Include="Controllers\Campos\AltaCampoController.cs" />
     <Compile Include="Controllers\Campos\ActualizaCampoController.cs" />
+    <Compile Include="Controllers\Holes\ActualizarTeesTotalController.cs" />
     <Compile Include="Controllers\Holes\EliminarHolesController.cs" />
     <Compile Include="Controllers\Holes\ActualizarHolesController.cs" />
     <Compile Include="Controllers\Holes\AltaHolesController.cs" />

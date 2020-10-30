@@ -43,7 +43,8 @@ namespace DragonGolfBackEnd.Controllers
             public string Cou_Nombre { get; set; }
             public string Cou_NombreCorto { get; set; }
             public string Cou_Pais { get; set; }
-        }
+            public int Te_Par { get; set; }
+    }
 
         public JObject Post(ParametrosEntradas Datos)
         {
@@ -87,7 +88,6 @@ namespace DragonGolfBackEnd.Controllers
                         {
                             ParametrosSalida ent = new ParametrosSalida
                             {
-                                
                                 IDTees = Convert.ToInt32(row["IDTees"]),
                                 Te_TeeName = Convert.ToString(row["Te_TeeName"]),
                                 Te_Slope = Convert.ToInt32(row["Te_Slope"]),
@@ -96,13 +96,13 @@ namespace DragonGolfBackEnd.Controllers
                                 Te_In = Convert.ToInt32(row["Te_In"]),
                                 Te_Out = Convert.ToInt32(row["Te_Out"]),
                                 Te_Total = Convert.ToInt32(row["Te_Total"]),
+                                Te_Par = Convert.ToInt32(row["Te_Par"]),
                                 IDCourse = Convert.ToInt32(row["IDCourse"]),
                                 Te_FechaCreacion = Convert.ToDateTime(row["Te_FechaCreacion"]),
                                 Cou_Nombre = Convert.ToString(row["Cou_Nombre"]),
                                 Cou_NombreCorto = Convert.ToString(row["Cou_NombreCorto"]),
                                 Cou_Pais = Convert.ToString(row["Cou_Pais"]),
-
-                            };
+};
 
                             lista.Add(ent);
                         }
