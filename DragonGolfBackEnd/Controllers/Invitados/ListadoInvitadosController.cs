@@ -16,52 +16,40 @@ namespace DragonGolfBackEnd.Controllers
 {
 
     [EnableCors(origins: "*", headers: "*", methods: "*", SupportsCredentials = true)]
-    [RoutePrefix("api/ActualizarUsuario")]
-    public class ActualizarUsuarioController : ApiController
+    [RoutePrefix("api/CrearInvitados")]
+    public class ListadoInvitadosController : ApiController
     {
         public class ParametrosEntradas
         {
+            public int IDUsuarioCrea { get; set; }
+        }
+        public class ParametrosSalida
+        {
 
-            public int IDUsuario { get; set; }
+            public int IDUsuario{ get; set; }
             public string usu_nombre { get; set; }
             public string usu_apellido_paterno { get; set; }
-            public string usu_apellido_materno { get; set; }
             public string usu_nickname { get; set; }
-            public string usu_telefono { get; set; }
-            public int usu_ghinnumber { get; set; }
+            public string usu_imagen { get; set; }
             public decimal usu_handicapindex { get; set; }
-
+            public string usu_ghinnumber { get; set; }
+            public int usu_golpesventaja { get; set; }
+            public int usu_diferenciatee { get; set; }
+            public int IDUsuarioCrea { get; set; }
         }
+
 
         public JObject Post(ParametrosEntradas Datos)
         {
             try
             {
-                SqlCommand comando = new SqlCommand("DragoGolf_UpdateUser");
+                SqlCommand comando = new SqlCommand("DragoGolf_ListGuest");
                 comando.CommandType = CommandType.StoredProcedure;
                 //Declaracion de parametros
-          
-                comando.Parameters.Add("@usu_nombre", SqlDbType.VarChar);
-                comando.Parameters.Add("@usu_apellido_paterno", SqlDbType.VarChar);
-                comando.Parameters.Add("@usu_apellido_materno", SqlDbType.VarChar);
-                comando.Parameters.Add("@usu_nickname", SqlDbType.VarChar);
-                comando.Parameters.Add("@usu_telefono", SqlDbType.VarChar);
-                comando.Parameters.Add("@IDUsuario", SqlDbType.Int);
-                comando.Parameters.Add("@usu_ghinnumber", SqlDbType.VarChar);
-                comando.Parameters.Add("@usu_handicapindex", SqlDbType.Decimal);
+                comando.Parameters.Add("@IDUsuarioCrea", SqlDbType.Int);
 
                 //Asignacion de valores a parametros
-                comando.Parameters["@usu_nombre"].Value = Datos.usu_nombre;
-                comando.Parameters["@usu_apellido_paterno"].Value = Datos.usu_apellido_paterno;
-                comando.Parameters["@usu_apellido_materno"].Value = Datos.usu_apellido_materno;
-                comando.Parameters["@usu_nickname"].Value = Datos.usu_nickname;
-                comando.Parameters["@usu_telefono"].Value = Datos.usu_telefono;
-                comando.Parameters["@IDUsuario"].Value = Datos.IDUsuario;
-
-                string numeroFormato = Datos.usu_ghinnumber.ToString("D7");
-
-                comando.Parameters["@usu_ghinnumber"].Value = numeroFormato;
-                comando.Parameters["@usu_handicapindex"].Value = Datos.usu_handicapindex;
+                comando.Parameters["@IDUsuarioCrea"].Value = Datos.IDUsuarioCrea;
 
                 comando.Connection = new SqlConnection(VariablesGlobales.CadenaConexion);
                 comando.CommandTimeout = 0;
@@ -72,7 +60,7 @@ namespace DragonGolfBackEnd.Controllers
                 comando.Connection.Close();
                 DA.Fill(DT);
 
-
+                List<ParametrosSalida> lista = new List<ParametrosSalida>();
 
                 string Mensaje = "";
                 int Estatus = 0;
@@ -81,17 +69,40 @@ namespace DragonGolfBackEnd.Controllers
 
                 if (DT.Rows.Count > 0)
                 {
+
+
                     foreach (DataRow row in DT.Rows)
                     {
                         Mensaje = Convert.ToString(row["mensaje"]);
                         Estatus = Convert.ToInt32(row["Estatus"]);
+
+                        if (Estatus == 1)
+                        {
+                            ParametrosSalida ent = new ParametrosSalida
+                            {
+
+                                IDUsuario = Convert.ToInt32(row["IDUsuario"]),
+                                usu_nombre = Convert.ToString(row["usu_nombre"]),
+                                usu_apellido_paterno = Convert.ToString(row["usu_apellido_paterno"]),
+                                usu_nickname = Convert.ToString(row["usu_nickname"]),
+                                usu_imagen = Convert.ToString(row["usu_imagen"]),
+                                usu_handicapindex = Convert.ToDecimal(row["usu_handicapindex"]),
+                                usu_ghinnumber = Convert.ToString(row["usu_ghinnumber"]),
+                                usu_golpesventaja = Convert.ToInt32(row["usu_golpesventaja"]),
+                                usu_diferenciatee = Convert.ToInt32(row["usu_diferenciatee"]),
+                                IDUsuarioCrea = Convert.ToInt32(row["IDUsuarioCrea"]),
+                            };
+
+                            lista.Add(ent);
+                        }
+
                     }
 
                     JObject Resultado = JObject.FromObject(new
                     {
                         mensaje = Mensaje,
                         estatus = Estatus,
-
+                        Result = lista
                     });
 
                     return Resultado;

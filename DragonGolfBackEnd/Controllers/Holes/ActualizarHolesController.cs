@@ -24,17 +24,17 @@ namespace DragonGolfBackEnd.Controllers
         public class ParametrosEntradas
         {
            public int IDTees { get; set; }
-            public string[] Arreglo { get; set; }
+            public string Arreglo { get; set; }
 
         }
         public JObject Post(ParametrosEntradas Datos)
         {
-
+            string Arreglover = Datos.Arreglo;
             try
             {
 
               
-                string Arreglo1 = Datos.Arreglo[0].Replace("\"", "");
+                string Arreglo1 = Datos.Arreglo.Replace("\"", "");
                 string Arreglo2 = Arreglo1.Replace("[", "");
                 string Arreglo3 = Arreglo2.Replace("]", "");
 
@@ -46,8 +46,9 @@ namespace DragonGolfBackEnd.Controllers
 
                     string EliminaParte1 = ArregloSimple.Replace("{", "");
                     string EliminaParte2 = EliminaParte1.Replace("},", "");
+                    string EliminaParte3 = EliminaParte2.Replace("}", "");
 
-                    string[] Valores = EliminaParte2.Split(',');
+                    string[] Valores = EliminaParte3.Split(',');
 
                     int ID = Convert.ToInt32(Valores[0]);
                     int Par = Convert.ToInt32(Valores[2]);
@@ -98,7 +99,7 @@ namespace DragonGolfBackEnd.Controllers
                 DataTable DT2 = new DataTable();
                 SqlDataAdapter DA2 = new SqlDataAdapter(comando2);
                 comando2.Connection.Close();
-                DA.Fill(DT);
+                DA2.Fill(DT2);
 
                 JObject Resultado = JObject.FromObject(new
                     {
@@ -117,8 +118,9 @@ namespace DragonGolfBackEnd.Controllers
                 {
                     mensaje = ex.ToString(),
                     estatus = 0,
+                    Arreglover = Arreglover
 
-                });
+                }); ;
 
                 return Resultado; //JsonConvert.SerializeObject(lista);
             }
