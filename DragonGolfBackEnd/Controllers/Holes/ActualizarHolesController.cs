@@ -98,7 +98,7 @@ namespace DragonGolfBackEnd.Controllers
                 DataTable DT2 = new DataTable();
                 SqlDataAdapter DA2 = new SqlDataAdapter(comando2);
                 comando2.Connection.Close();
-                DA.Fill(DT);
+                DA2.Fill(DT2);
 
                 JObject Resultado = JObject.FromObject(new
                     {
