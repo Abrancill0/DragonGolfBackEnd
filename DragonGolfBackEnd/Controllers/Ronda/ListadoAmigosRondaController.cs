@@ -56,6 +56,7 @@ namespace DragonGolfBackEnd.Controllers
             public string usu_apellido_paterno { get; set; }
             public string usu_apellido_materno { get; set; }
             public string usu_nickname { get; set; }
+            public int usu_ghinnumber { get; set; }
         }
         public JObject Post(ParametrosEntradas Datos)
         {
@@ -69,8 +70,8 @@ namespace DragonGolfBackEnd.Controllers
                 comando.Parameters.Add("@IDUsuario", SqlDbType.Int);
 
 
-                comando.Parameters["@IDRounds"].Value = Datos.IDUsuario;
-                comando.Parameters["@IDUsuario"].Value = Datos.IDRounds;
+                comando.Parameters["@IDRounds"].Value = Datos.IDRounds;
+                comando.Parameters["@IDUsuario"].Value = Datos.IDUsuario;
 
                 comando.Connection = new SqlConnection(VariablesGlobales.CadenaConexion);
                 comando.CommandTimeout = 0;
@@ -128,6 +129,7 @@ namespace DragonGolfBackEnd.Controllers
                                 usu_apellido_paterno = Convert.ToString(row["usu_apellido_paterno"]),
                                 usu_apellido_materno = Convert.ToString(row["usu_apellido_materno"]),
                                 usu_nickname = Convert.ToString(row["usu_nickname"]),
+                                usu_ghinnumber = Convert.ToInt32(row["usu_ghinnumber"]),
                             };
 
                             lista.Add(ent);

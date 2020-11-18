@@ -21,10 +21,7 @@ namespace DragonGolfBackEnd.Controllers
     {
         public class ParametrosEntradas
         {
-
-            public int IDCourse { get; set; }
-
-            public int IDRounds { get; set; }
+           public int IDRounds { get; set; }
             public int IDUsuario { get; set; }
             public int PlayerId { get; set; }
             public decimal RoundHandicap { get; set; }
@@ -56,7 +53,6 @@ namespace DragonGolfBackEnd.Controllers
                 comando.CommandType = CommandType.StoredProcedure;
 
                 //Declaracion de parametros
-                comando.Parameters.Add("@IDCourse", SqlDbType.Int);
                 comando.Parameters.Add("@IDRounds", SqlDbType.Int);
                 comando.Parameters.Add("@IDUsuario", SqlDbType.Int);
                 comando.Parameters.Add("@PlayerId", SqlDbType.Int);
@@ -84,13 +80,12 @@ namespace DragonGolfBackEnd.Controllers
 
                 //Asignacion de valores a parametros
 
-                comando.Parameters["@IDCourse"].Value = Datos.IDCourse;
                 comando.Parameters["@IDRounds"].Value = Datos.IDRounds;
                 comando.Parameters["@IDUsuario"].Value = Datos.IDUsuario;
                 comando.Parameters["@PlayerId"].Value = Datos.PlayerId;
                 comando.Parameters["@RoundHandicap"].Value = Datos.RoundHandicap;
                 comando.Parameters["@PlayerTee"].Value = Datos.PlayerTee;
-       comando.Parameters["@ScoreHole1"].Value = Datos.ScoreHole1;
+                comando.Parameters["@ScoreHole1"].Value = Datos.ScoreHole1;
                 comando.Parameters["@ScoreHole2"].Value = Datos.ScoreHole2;
                 comando.Parameters["@ScoreHole3"].Value = Datos.ScoreHole3;
                 comando.Parameters["@ScoreHole4"].Value = Datos.ScoreHole4;
