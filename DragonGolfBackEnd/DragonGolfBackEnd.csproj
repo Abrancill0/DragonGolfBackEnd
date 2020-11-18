@@ -192,6 +192,10 @@
     <Compile Include="Controllers\Invitados\CrearInvitadosController.cs" />
     <Compile Include="Controllers\Invitados\ListaTodosController.cs" />
     <Compile Include="Controllers\Invitados\ListadoInvitadosController.cs" />
+    <Compile Include="Controllers\Ronda\AgregarAmigosRondaController.cs" />
+    <Compile Include="Controllers\Ronda\ListadoAmigosRondaController.cs" />
+    <Compile Include="Controllers\Ronda\ListadoRondaController.cs" />
+    <Compile Include="Controllers\Ronda\CrearRondaController.cs" />
     <Compile Include="Controllers\Settings\ActualizarSettingsController.cs" />
     <Compile Include="Controllers\Settings\AltaSettingsController.cs" />
     <Compile Include="Controllers\Settings\ListadoSettingsController.cs" />

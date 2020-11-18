@@ -27,8 +27,8 @@ namespace DragonGolfBackEnd.Controllers
             public string usu_nickname { get; set; }
             public decimal usu_handicapindex { get; set; }
             public string usu_ghinnumber { get; set; }
-            public int usu_golpesventaja { get; set; }
-            public int usu_diferenciatee { get; set; }
+            public decimal usu_golpesventaja { get; set; }
+            public decimal usu_diferenciatee { get; set; }
             public int IDUsuarioCrea { get; set; }
         }
 
@@ -45,8 +45,8 @@ namespace DragonGolfBackEnd.Controllers
                 comando.Parameters.Add("@usu_nickname", SqlDbType.VarChar);
                 comando.Parameters.Add("@usu_handicapindex", SqlDbType.Decimal);
                 comando.Parameters.Add("@usu_ghinnumber", SqlDbType.VarChar);
-                comando.Parameters.Add("@usu_golpesventaja", SqlDbType.Int);
-                comando.Parameters.Add("@usu_diferenciatee", SqlDbType.Int);
+                comando.Parameters.Add("@usu_golpesventaja", SqlDbType.Decimal);
+                comando.Parameters.Add("@usu_diferenciatee", SqlDbType.Decimal);
                 comando.Parameters.Add("@IDUsuarioCrea", SqlDbType.Int);
 
                 //Asignacion de valores a parametros
