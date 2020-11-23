@@ -78,6 +78,9 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (Estatus == 1)
                         {
+
+                            string numeroFormato = Convert.ToInt32(row["usu_ghinnumber"]).ToString("D7");
+
                             ParametrosSalida ent = new ParametrosSalida
                             {
 
@@ -87,7 +90,7 @@ namespace DragonGolfBackEnd.Controllers
                                 usu_nickname = Convert.ToString(row["usu_nickname"]),
                                 usu_imagen = Convert.ToString(row["usu_imagen"]),
                                 usu_handicapindex = Convert.ToDecimal(row["usu_handicapindex"]),
-                                usu_ghinnumber = Convert.ToString(row["usu_ghinnumber"]),
+                                usu_ghinnumber = numeroFormato,
                                 usu_golpesventaja = Convert.ToDecimal(row["usu_golpesventaja"]),
                                 usu_diferenciatee = Convert.ToDecimal(row["usu_diferenciatee"]),
                                 IDUsuarioCrea = Convert.ToInt32(row["IDUsuarioCrea"]),

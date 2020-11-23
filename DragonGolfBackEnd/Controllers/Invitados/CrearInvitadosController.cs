@@ -26,7 +26,7 @@ namespace DragonGolfBackEnd.Controllers
             public string usu_apellido_paterno { get; set; }
             public string usu_nickname { get; set; }
             public decimal usu_handicapindex { get; set; }
-            public string usu_ghinnumber { get; set; }
+            public int usu_ghinnumber { get; set; }
             public decimal usu_golpesventaja { get; set; }
             public decimal usu_diferenciatee { get; set; }
             public int IDUsuarioCrea { get; set; }
@@ -54,7 +54,9 @@ namespace DragonGolfBackEnd.Controllers
                 comando.Parameters["@usu_apellido_paterno"].Value = Datos.usu_apellido_paterno;
                 comando.Parameters["@usu_nickname"].Value = Datos.usu_nickname;
                 comando.Parameters["@usu_handicapindex"].Value = Datos.usu_handicapindex;
-                comando.Parameters["@usu_ghinnumber"].Value = Datos.usu_ghinnumber;
+                string numeroFormato = Datos.usu_ghinnumber.ToString("D7");
+
+                comando.Parameters["@usu_ghinnumber"].Value = numeroFormato;
                 comando.Parameters["@usu_golpesventaja"].Value = Datos.usu_golpesventaja;
                 comando.Parameters["@usu_diferenciatee"].Value = Datos.usu_diferenciatee;
                 comando.Parameters["@IDUsuarioCrea"].Value = Datos.IDUsuarioCrea;

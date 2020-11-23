@@ -37,7 +37,7 @@ namespace DragonGolfBackEnd.Controllers
             public string usu_telefono { get; set; }
             public string usu_imagen { get; set; }
             public decimal usu_handicapindex { get; set; }
-            public int usu_ghinnumber { get; set; }
+            public string usu_ghinnumber { get; set; }
         }
 
         public JObject Post(ParametrosEntradas Datos)
@@ -80,6 +80,8 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (Estatus == 1)
                         {
+                            string numeroFormato = Convert.ToInt32(row["usu_ghinnumber"]).ToString("D7");
+
                             ParametrosSalida ent = new ParametrosSalida
                             {
                              IDUsuario = Convert.ToInt32(row["IDUsuario"]),
@@ -91,7 +93,7 @@ namespace DragonGolfBackEnd.Controllers
                              usu_telefono = Convert.ToString(row["usu_telefono"]),
                              usu_imagen = Convert.ToString(row["usu_imagen"]),
                              usu_handicapindex = Convert.ToDecimal(row["usu_handicapindex"]),
-                             usu_ghinnumber = Convert.ToInt32(row["usu_ghinnumber"]),
+                             usu_ghinnumber = numeroFormato,
                             };
 
                             lista.Add(ent);

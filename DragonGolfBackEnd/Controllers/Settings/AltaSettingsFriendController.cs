@@ -177,6 +177,7 @@ namespace DragonGolfBackEnd.Controllers
 
                 string Mensaje = "";
                 int Estatus = 0;
+                int IDSettings = 0;
 
                 int contador = DT.Rows.Count;
 
@@ -186,12 +187,14 @@ namespace DragonGolfBackEnd.Controllers
                     {
                         Mensaje = Convert.ToString(row["mensaje"]);
                         Estatus = Convert.ToInt32(row["Estatus"]);
+                        IDSettings = Convert.ToInt32(row["IDSettings"]);
                     }
 
                     JObject Resultado = JObject.FromObject(new
                     {
                         mensaje = Mensaje,
                         estatus = Estatus,
+                        idsettings = IDSettings,
 
                     });
 

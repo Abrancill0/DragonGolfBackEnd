@@ -169,7 +169,7 @@ namespace DragonGolfBackEnd.Controllers
                         {
                             mensaje = Mensaje,
                             estatus = Estatus,
-
+                            Result = lista
                         });
 
                         return Resultado;
@@ -180,8 +180,6 @@ namespace DragonGolfBackEnd.Controllers
                         {
                             mensaje = Mensaje,
                             estatus = Estatus,
-                            Result= lista
-
                         });
 
                         return Resultado;
