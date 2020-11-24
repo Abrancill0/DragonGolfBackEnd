@@ -16,7 +16,7 @@ namespace DragonGolfBackEnd.Controllers
 {
 
     [EnableCors(origins: "*", headers: "*", methods: "*", SupportsCredentials = true)]
-    [RoutePrefix("api/CrearInvitados")]
+    [RoutePrefix("api/ListadoInvitados")]
     public class ListadoInvitadosController : ApiController
     {
         public class ParametrosEntradas
@@ -36,6 +36,7 @@ namespace DragonGolfBackEnd.Controllers
             public decimal usu_golpesventaja { get; set; }
             public decimal usu_diferenciatee { get; set; }
             public int IDUsuarioCrea { get; set; }
+         
         }
 
 

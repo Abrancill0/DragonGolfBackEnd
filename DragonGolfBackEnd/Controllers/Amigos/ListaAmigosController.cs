@@ -38,6 +38,8 @@ namespace DragonGolfBackEnd.Controllers
             public string usu_imagen { get; set; }
             public decimal usu_handicapindex { get; set; }
             public string usu_ghinnumber { get; set; }
+            public int usu_golpesventaja { get; set; }
+            public int usu_diferenciatee { get; set; }
         }
 
         public JObject Post(ParametrosEntradas Datos)

@@ -124,6 +124,10 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (Estatus == 1)
                         {
+                            Random r2 = new Random();
+
+                            int resultInt = r2.Next(50, 100);
+
                             ParametrosSalida ent = new ParametrosSalida
                             {
                                 IDUsuario = Convert.ToInt32(row["IDUsuario"]),
@@ -134,7 +138,7 @@ namespace DragonGolfBackEnd.Controllers
                                 usu_apellido_paterno = Convert.ToString(row["usu_apellido_paterno"]),
                                 usu_apellido_materno = Convert.ToString(row["usu_apellido_materno"]),
                                 usu_email = Convert.ToString(row["usu_email"]),
-                                usu_imagen = Convert.ToString(row["usu_imagen"]),
+                                usu_imagen = Convert.ToString(row["usu_imagen"]) + "?" + Convert.ToString(resultInt),
                                 usu_telefono = Convert.ToString(row["usu_telefono"]),
                                 usu_olvido_contrasena = Convert.ToBoolean(row["usu_olvido_contrasena"]),
                                 set_idioma = Convert.ToString(row["set_idioma"]),
