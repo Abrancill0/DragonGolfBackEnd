@@ -198,6 +198,7 @@
     <Compile Include="Controllers\Ronda\ListadoRondaController.cs" />
     <Compile Include="Controllers\Ronda\CrearRondaController.cs" />
     <Compile Include="Controllers\Settings\ActualizarSettingsController.cs" />
+    <Compile Include="Controllers\Settings\ActualizaSettingsFriendController.cs" />
     <Compile Include="Controllers\Settings\AltaSettingsFriendController.cs" />
     <Compile Include="Controllers\Settings\AltaSettingsController.cs" />
     <Compile Include="Controllers\Settings\ListadoSettingsFriendController.cs" />

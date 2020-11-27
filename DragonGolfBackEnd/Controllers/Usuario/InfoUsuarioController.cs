@@ -126,7 +126,7 @@ namespace DragonGolfBackEnd.Controllers
                         {
                             Random r2 = new Random();
 
-                            int resultInt = r2.Next(50, 100);
+                            int resultInt = r2.Next(1, 10000);
 
                             ParametrosSalida ent = new ParametrosSalida
                             {

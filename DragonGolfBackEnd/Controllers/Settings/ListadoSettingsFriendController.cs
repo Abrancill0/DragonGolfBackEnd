@@ -21,6 +21,7 @@ namespace DragonGolfBackEnd.Controllers
     {
         public class ParametrosSalida
         {
+            public int IDSettings { get; set; }
             public int IDUsuario { get; set; }
             public int IDUsuarioFriend { get; set; }
             public string set_idioma { get; set; }
@@ -117,6 +118,7 @@ namespace DragonGolfBackEnd.Controllers
                         {
                             ParametrosSalida ent = new ParametrosSalida
                             {
+                                IDSettings = Convert.ToInt32(row["IDSettings"]),
                                 IDUsuario = Convert.ToInt32(row["IDUsuario"]),
                                 set_idioma = Convert.ToString(row["set_idioma"]),
                                 set_how_adv_move = Convert.ToString(row["set_how_adv_move"]),
