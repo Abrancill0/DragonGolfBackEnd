@@ -30,6 +30,9 @@ namespace DragonGolfBackEnd.Controllers
             public decimal usu_golpesventaja { get; set; }
             public decimal usu_diferenciatee { get; set; }
             public int IDUsuarioCrea { get; set; }
+
+            public string usu_email { get; set; }
+            public string usu_telefono { get; set; }
         }
 
       
@@ -48,6 +51,8 @@ namespace DragonGolfBackEnd.Controllers
                 comando.Parameters.Add("@usu_golpesventaja", SqlDbType.Decimal);
                 comando.Parameters.Add("@usu_diferenciatee", SqlDbType.Decimal);
                 comando.Parameters.Add("@IDUsuarioCrea", SqlDbType.Int);
+                comando.Parameters.Add("@usu_email", SqlDbType.VarChar);
+                comando.Parameters.Add("@usu_telefono", SqlDbType.VarChar);
 
                 //Asignacion de valores a parametros
                 comando.Parameters["@usu_nombre"].Value = Datos.usu_nombre;
@@ -60,6 +65,9 @@ namespace DragonGolfBackEnd.Controllers
                 comando.Parameters["@usu_golpesventaja"].Value = Datos.usu_golpesventaja;
                 comando.Parameters["@usu_diferenciatee"].Value = Datos.usu_diferenciatee;
                 comando.Parameters["@IDUsuarioCrea"].Value = Datos.IDUsuarioCrea;
+
+                comando.Parameters["@usu_email"].Value = Datos.usu_email;
+                comando.Parameters["@usu_telefono"].Value = Datos.usu_telefono;
 
                 comando.Connection = new SqlConnection(VariablesGlobales.CadenaConexion);
                 comando.CommandTimeout = 0;

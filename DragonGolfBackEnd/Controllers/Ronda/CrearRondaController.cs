@@ -28,6 +28,7 @@ namespace DragonGolfBackEnd.Controllers
             public int Ro_StartingHole { get; set; }
             public int Ro_SwitchAdventage { get; set; }
             public int IDUsuario { get; set; }
+            public DateTime Ro_Date { get; set; }
         }
         public JObject Post(ParametrosEntradas Datos)
         {
@@ -43,6 +44,7 @@ namespace DragonGolfBackEnd.Controllers
                 comando.Parameters.Add("@Ro_StartingHole", SqlDbType.Int);
                 comando.Parameters.Add("@Ro_SwitchAdventage", SqlDbType.Int);
                 comando.Parameters.Add("@IDUsuario", SqlDbType.Int);
+                comando.Parameters.Add("@Ro_Date", SqlDbType.Date);
 
 
                 //Asignacion de valores a parametros
@@ -52,6 +54,7 @@ namespace DragonGolfBackEnd.Controllers
                 comando.Parameters["@Ro_StartingHole"].Value = Datos.Ro_StartingHole;
                 comando.Parameters["@Ro_SwitchAdventage"].Value = Datos.Ro_SwitchAdventage;
                 comando.Parameters["@IDUsuario"].Value = Datos.IDUsuario;
+                comando.Parameters["@Ro_Date"].Value = Datos.Ro_Date;
 
 
                 comando.Connection = new SqlConnection(VariablesGlobales.CadenaConexion);
