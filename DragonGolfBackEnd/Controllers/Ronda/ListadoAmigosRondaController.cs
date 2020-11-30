@@ -56,7 +56,9 @@ namespace DragonGolfBackEnd.Controllers
             public string usu_apellido_paterno { get; set; }
             public string usu_apellido_materno { get; set; }
             public string usu_nickname { get; set; }
-            public int usu_ghinnumber { get; set; }
+            public string usu_ghinnumber { get; set; }
+            public decimal usu_golpesventaja { get; set; }
+            public decimal usu_diferenciatee { get; set; }
         }
         public JObject Post(ParametrosEntradas Datos)
         {
@@ -99,6 +101,9 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (Estatus == 1)
                         {
+
+                            string numeroFormato = Convert.ToInt32(row["usu_ghinnumber"]).ToString("D7");
+
                             ParametrosSalida ent = new ParametrosSalida
                             {
 
@@ -129,7 +134,9 @@ namespace DragonGolfBackEnd.Controllers
                                 usu_apellido_paterno = Convert.ToString(row["usu_apellido_paterno"]),
                                 usu_apellido_materno = Convert.ToString(row["usu_apellido_materno"]),
                                 usu_nickname = Convert.ToString(row["usu_nickname"]),
-                                usu_ghinnumber = Convert.ToInt32(row["usu_ghinnumber"]),
+                                usu_ghinnumber = numeroFormato,
+                                usu_golpesventaja = Convert.ToDecimal(row["usu_golpesventaja"]),
+                                usu_diferenciatee = Convert.ToDecimal(row["usu_diferenciatee"]),
                             };
 
                             lista.Add(ent);

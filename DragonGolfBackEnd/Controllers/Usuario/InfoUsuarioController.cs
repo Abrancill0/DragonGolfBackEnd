@@ -83,10 +83,6 @@ namespace DragonGolfBackEnd.Controllers
             public decimal usu_handicapindex { get; set; }
 
         }
-
-
-
-
         public JObject Post(ParametrosEntradas Datos)
         {
             try
