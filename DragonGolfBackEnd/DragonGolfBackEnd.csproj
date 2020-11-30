@@ -189,6 +189,9 @@
     <Compile Include="Controllers\Holes\AltaHolesController.cs" />
     <Compile Include="Controllers\Holes\ListaHoleController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\Invitaciones\EliminarInvitacionController.cs" />
+    <Compile Include="Controllers\Invitaciones\CrearInviitacionController.cs" />
+    <Compile Include="Controllers\Invitaciones\ListadoInvitacionController.cs" />
     <Compile Include="Controllers\Invitados\CrearInvitadosController.cs" />
     <Compile Include="Controllers\Invitados\ListaTodosController.cs" />
     <Compile Include="Controllers\Invitados\ListadoInvitadosController.cs" />
