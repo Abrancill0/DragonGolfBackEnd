@@ -78,7 +78,7 @@ namespace DragonGolfBackEnd.Controllers
                         if (Estatus == 1)
                         {
 
-                            string numeroFormato = Convert.ToInt32(row["usu_ghinnumber"]).ToString("D7");
+                           // string numeroFormato = Convert.ToInt32(row["usu_ghinnumber"]).ToString("D7");
 
                             ParametrosSalida ent = new ParametrosSalida
                             {
