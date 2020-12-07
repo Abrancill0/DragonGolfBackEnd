@@ -40,10 +40,10 @@ namespace DragonGolfBackEnd.Controllers
             public int ScoreHole12 { get; set; }
             public int ScoreHole13 { get; set; }
             public int ScoreHole14 { get; set; }
-        public int ScoreHole15 { get; set; }
-        public int ScoreHole16 { get; set; }
-        public int ScoreHole17 { get; set; }
-        public int ScoreHole18 { get; set; }
+            public int ScoreHole15 { get; set; }
+            public int ScoreHole16 { get; set; }
+            public int ScoreHole17 { get; set; }
+            public int ScoreHole18 { get; set; }
     }
         public JObject Post(ParametrosEntradas Datos)
         {
@@ -127,37 +127,40 @@ namespace DragonGolfBackEnd.Controllers
                         Mensaje = Convert.ToString(row["mensaje"]);
                         Estatus = Convert.ToInt32(row["Estatus"]);
 
-                        PlayerId = Convert.ToInt32(row["PlayerId"]);
-
-                        if (PlayerId != 0)
+                        if (Estatus == 1 )
                         {
+                            PlayerId = Convert.ToInt32(row["PlayerId"]);
+
+                            if (PlayerId != 0)
+                            {
+
+                                SqlCommand comando2 = new SqlCommand("DragoGolf_AddPlayervsPlayer");
+                                comando2.CommandType = CommandType.StoredProcedure;
+
+                                //Declaracion de parametros
+                                comando2.Parameters.Add("@IDRound", SqlDbType.Int);
+                                comando2.Parameters.Add("@Player1", SqlDbType.Int);
+                                comando2.Parameters.Add("@Player2", SqlDbType.Int);
 
 
-                            SqlCommand comando2 = new SqlCommand("DragoGolf_AddPlayervsPlayer");
-                            comando2.CommandType = CommandType.StoredProcedure;
+                                //Asignacion de valores a parametros
+                                comando2.Parameters["@IDRound"].Value = Datos.IDRounds;
+                                comando2.Parameters["@Player1"].Value = Datos.PlayerId;
+                                comando2.Parameters["@Player2"].Value = PlayerId;
 
-                            //Declaracion de parametros
-                            comando2.Parameters.Add("@IDRound", SqlDbType.Int);
-                            comando2.Parameters.Add("@Player1", SqlDbType.Int);
-                            comando2.Parameters.Add("@Player2", SqlDbType.Int);
+                                comando2.Connection = new SqlConnection(VariablesGlobales.CadenaConexion);
+                                comando2.CommandTimeout = 0;
+                                comando2.Connection.Open();
 
+                                DataTable DT2 = new DataTable();
+                                SqlDataAdapter DA2 = new SqlDataAdapter(comando2);
+                                comando.Connection.Close();
+                                DA2.Fill(DT2);
 
-                            //Asignacion de valores a parametros
-                            comando2.Parameters["@IDRound"].Value = Datos.IDRounds;
-                            comando2.Parameters["@Player1"].Value = Datos.PlayerId;
-                            comando2.Parameters["@Player2"].Value = PlayerId;
-                          
-                            comando2.Connection = new SqlConnection(VariablesGlobales.CadenaConexion);
-                            comando2.CommandTimeout = 0;
-                            comando2.Connection.Open();
-
-                            DataTable DT2 = new DataTable();
-                            SqlDataAdapter DA2 = new SqlDataAdapter(comando);
-                            comando.Connection.Close();
-                            DA2.Fill(DT2);
-
+                            }
                         }
 
+               
                     }
 
                     JObject Resultado = JObject.FromObject(new
