@@ -114,11 +114,9 @@ namespace DragonGolfBackEnd.Controllers
                 comando.Connection.Close();
                 DA.Fill(DT);
 
-
-
                 string Mensaje = "";
                 int Estatus = 0;
-              
+                int PlayerId = 0;
 
                 int contador = DT.Rows.Count;
 
@@ -128,6 +126,38 @@ namespace DragonGolfBackEnd.Controllers
                     {
                         Mensaje = Convert.ToString(row["mensaje"]);
                         Estatus = Convert.ToInt32(row["Estatus"]);
+
+                        PlayerId = Convert.ToInt32(row["PlayerId"]);
+
+                        if (PlayerId != 0)
+                        {
+
+
+                            SqlCommand comando2 = new SqlCommand("DragoGolf_AddPlayervsPlayer");
+                            comando2.CommandType = CommandType.StoredProcedure;
+
+                            //Declaracion de parametros
+                            comando2.Parameters.Add("@IDRound", SqlDbType.Int);
+                            comando2.Parameters.Add("@Player1", SqlDbType.Int);
+                            comando2.Parameters.Add("@Player2", SqlDbType.Int);
+
+
+                            //Asignacion de valores a parametros
+                            comando2.Parameters["@IDRound"].Value = Datos.IDRounds;
+                            comando2.Parameters["@Player1"].Value = Datos.PlayerId;
+                            comando2.Parameters["@Player2"].Value = PlayerId;
+                          
+                            comando2.Connection = new SqlConnection(VariablesGlobales.CadenaConexion);
+                            comando2.CommandTimeout = 0;
+                            comando2.Connection.Open();
+
+                            DataTable DT2 = new DataTable();
+                            SqlDataAdapter DA2 = new SqlDataAdapter(comando);
+                            comando.Connection.Close();
+                            DA2.Fill(DT2);
+
+                        }
+
                     }
 
                     JObject Resultado = JObject.FromObject(new

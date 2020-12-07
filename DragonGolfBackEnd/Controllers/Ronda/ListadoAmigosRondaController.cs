@@ -59,6 +59,8 @@ namespace DragonGolfBackEnd.Controllers
             public string usu_ghinnumber { get; set; }
             public decimal usu_golpesventaja { get; set; }
             public decimal usu_diferenciatee { get; set; }
+            public decimal handicapAuto { get; set; }
+            public string Te_TeeColor { get; set; }
         }
         public JObject Post(ParametrosEntradas Datos)
         {
@@ -137,6 +139,8 @@ namespace DragonGolfBackEnd.Controllers
                                 usu_ghinnumber = numeroFormato,
                                 usu_golpesventaja = Convert.ToDecimal(row["usu_golpesventaja"]),
                                 usu_diferenciatee = Convert.ToDecimal(row["usu_diferenciatee"]),
+                                handicapAuto = Convert.ToDecimal(row["handicapAuto"]),
+                                Te_TeeColor = Convert.ToString(row["Te_TeeColor"]),
                             };
 
                             lista.Add(ent);
