@@ -24,6 +24,8 @@ namespace DragonGolfBackEnd.Controllers
             public string Usuario { get; set; }
             public string Pass { get; set; }
 
+            public string usu_token { get; set; }
+
         }
 
         public class ParametrosSalida
@@ -79,8 +81,8 @@ namespace DragonGolfBackEnd.Controllers
             public int set_stableford_double_bogey { get; set; }
             public string usu_ghinnumber { get; set; }
             public decimal usu_handicapindex { get; set; }
-
-}
+            
+        }
 
 
 
@@ -94,10 +96,12 @@ namespace DragonGolfBackEnd.Controllers
                 //Declaracion de parametros
                 comando.Parameters.Add("@Usuario", SqlDbType.VarChar);
                 comando.Parameters.Add("@Pass", SqlDbType.VarChar);
+                comando.Parameters.Add("@usu_token", SqlDbType.VarChar);
 
                 //Asignacion de valores a parametros
                 comando.Parameters["@Usuario"].Value = Datos.Usuario;
                 comando.Parameters["@Pass"].Value = Datos.Pass;
+                comando.Parameters["@usu_token"].Value = Datos.usu_token;
 
                 comando.Connection = new SqlConnection(VariablesGlobales.CadenaConexion);
                 comando.CommandTimeout = 0;

@@ -27,8 +27,8 @@ namespace DragonGolfBackEnd.Controllers
             public string usu_email { get; set; }
             public string usu_nickname { get; set; }
             public string usu_telefono { get; set; }
-
             public string usu_pass { get; set; }
+            public string usu_token { get; set; }
 
         }
 
@@ -59,6 +59,7 @@ namespace DragonGolfBackEnd.Controllers
                 comando.Parameters.Add("@usu_nickname", SqlDbType.VarChar);
                 comando.Parameters.Add("@usu_telefono", SqlDbType.VarChar);
                 comando.Parameters.Add("@usu_pass", SqlDbType.VarChar);
+                comando.Parameters.Add("@usu_token", SqlDbType.VarChar);
 
                 //Asignacion de valores a parametros
                 comando.Parameters["@usu_nombre"].Value = Datos.usu_nombre;
@@ -68,6 +69,7 @@ namespace DragonGolfBackEnd.Controllers
                 comando.Parameters["@usu_nickname"].Value = Datos.usu_nickname;
                 comando.Parameters["@usu_telefono"].Value = Datos.usu_telefono;
                 comando.Parameters["@usu_pass"].Value = Datos.usu_pass;
+                comando.Parameters["@usu_token"].Value = Datos.usu_token;
 
                 comando.Connection = new SqlConnection(VariablesGlobales.CadenaConexion);
                 comando.CommandTimeout = 0;
