@@ -16,45 +16,46 @@ namespace DragonGolfBackEnd.Controllers
 {
 
     [EnableCors(origins: "*", headers: "*", methods: "*", SupportsCredentials = true)]
-    [RoutePrefix("api/ListadoRondaStroker")]
-    public class ListadoRondaStrokerController : ApiController
+    [RoutePrefix("api/ListaAmigosAgregar")]
+    public class ListaAmigosAgregarController : ApiController
     {
 
         public class ParametrosEntradas
         {
-          
-            public int IDRound { get; set; }
-            public int Player1 { get; set; }
-           
-
+            public int IDUsuario { get; set; }
         }
+
+
         public class ParametrosSalida
         {
-            public int RoundPvPId { get; set; }
-            public int RoundId { get; set; }
-            public int Player1Id { get; set; }
-            public int Player2Id { get; set; }
-            public decimal P1vsP2Strokes { get; set; }
+            public int IDUsuario { get; set; }
             public string usu_nombre { get; set; }
             public string usu_apellido_paterno { get; set; }
             public string usu_apellido_materno { get; set; }
             public string usu_email { get; set; }
             public string usu_nickname { get; set; }
-
+            public string usu_telefono { get; set; }
+            public string usu_imagen { get; set; }
+            public decimal usu_handicapindex { get; set; }
+            public string usu_ghinnumber { get; set; }
+            public int usu_golpesventaja { get; set; }
+            public int usu_diferenciatee { get; set; }
         }
+
         public JObject Post(ParametrosEntradas Datos)
         {
             try
             {
-                SqlCommand comando = new SqlCommand("DragoGolf_ListStokers");
+                SqlCommand comando = new SqlCommand("DragoGolf_ListFriend_Ronda");
                 comando.CommandType = CommandType.StoredProcedure;
 
                 //Declaracion de parametros
-                comando.Parameters.Add("@IDRound", SqlDbType.Int);
-                comando.Parameters.Add("@Player1", SqlDbType.Int);
+                comando.Parameters.Add("@IDUsuario", SqlDbType.VarChar);
 
-                comando.Parameters["@IDRound"].Value = Datos.IDRound;
-                comando.Parameters["@Player1"].Value = Datos.Player1;
+
+                //Asignacion de valores a parametros
+                comando.Parameters["@IDUsuario"].Value = Datos.IDUsuario;
+
 
                 comando.Connection = new SqlConnection(VariablesGlobales.CadenaConexion);
                 comando.CommandTimeout = 0;
@@ -69,7 +70,6 @@ namespace DragonGolfBackEnd.Controllers
 
                 string Mensaje = "";
                 int Estatus = 0;
-              
 
                 int contador = DT.Rows.Count;
 
@@ -82,48 +82,49 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (Estatus == 1)
                         {
+                            string numeroFormato = Convert.ToInt32(row["usu_ghinnumber"]).ToString("D7");
+
                             ParametrosSalida ent = new ParametrosSalida
                             {
-
-                                RoundPvPId = Convert.ToInt32(row["RoundPvPId"]),
-                                RoundId = Convert.ToInt32(row["RoundId"]),
-                                Player2Id = Convert.ToInt32(row["Player2Id"]),
-                                Player1Id= Convert.ToInt32(row["Player1Id"]),
-                                P1vsP2Strokes = Convert.ToDecimal(row["P1vsP2Strokes"]),
-                                usu_nombre = Convert.ToString(row["usu_nombre"]),
-                                usu_apellido_paterno = Convert.ToString(row["usu_apellido_paterno"]),
-                                usu_apellido_materno = Convert.ToString(row["usu_apellido_materno"]),
-                                usu_email = Convert.ToString(row["usu_email"]),
-                                usu_nickname = Convert.ToString(row["usu_nickname"]),
+                             IDUsuario = Convert.ToInt32(row["IDUsuario"]),
+                             usu_nombre = Convert.ToString(row["usu_nombre"]),
+                             usu_apellido_paterno = Convert.ToString(row["usu_apellido_paterno"]),
+                             usu_apellido_materno = Convert.ToString(row["usu_apellido_materno"]),
+                             usu_email = Convert.ToString(row["usu_email"]),
+                             usu_nickname = Convert.ToString(row["usu_nickname"]),
+                             usu_telefono = Convert.ToString(row["usu_telefono"]),
+                             usu_imagen = Convert.ToString(row["usu_imagen"]),
+                             usu_handicapindex = Convert.ToDecimal(row["usu_handicapindex"]),
+                             usu_ghinnumber = numeroFormato,
                             };
 
                             lista.Add(ent);
                         }
-
                     }
 
                     JObject Resultado = JObject.FromObject(new
-                    {
-                        mensaje = Mensaje,
-                        estatus = Estatus,
-                        Result = lista
+                        {
+                            mensaje = Mensaje,
+                            estatus = Estatus,
+                             Result = lista
+
                     });
 
-                    return Resultado;
-                }
+                        return Resultado;
+                    }
                 else
-                {
-                    JObject Resultado = JObject.FromObject(new
                     {
-                        mensaje = Mensaje,
-                        estatus = Estatus,
+                        JObject Resultado = JObject.FromObject(new
+                        {
+                            mensaje = Mensaje,
+                            estatus = Estatus,
 
-                    });
+                        });
 
-                    return Resultado;
+                        return Resultado;
+                    }
+
                 }
-
-            }
             catch (Exception ex)
             {
 

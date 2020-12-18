@@ -59,8 +59,47 @@ namespace DragonGolfBackEnd.Controllers
             public string usu_ghinnumber { get; set; }
             public decimal usu_golpesventaja { get; set; }
             public decimal usu_diferenciatee { get; set; }
-            public decimal handicapAuto { get; set; }
+            public int handicapAuto { get; set; }
             public string Te_TeeColor { get; set; }
+            public int ho_par1 { get; set; }
+            public int ho_par2 { get; set; }
+            public int ho_par3 { get; set; }
+            public int ho_par4 { get; set; }
+            public int ho_par5 { get; set; }
+            public int ho_par6 { get; set; }
+            public int ho_par7 { get; set; }
+            public int ho_par8 { get; set; }
+            public int ho_par9 { get; set; }
+            public int ho_par10 { get; set; }
+            public int ho_par11 { get; set; }
+            public int ho_par12 { get; set; }
+            public int ho_par13 { get; set; }
+            public int ho_par14 { get; set; }
+            public int ho_par15 { get; set; }
+            public int ho_par16 { get; set; }
+            public int ho_par17 { get; set; }
+            public int ho_par18 { get; set; }
+            public int Ho_Advantage1 { get; set; }
+            public int Ho_Advantage2 { get; set; }
+            public int Ho_Advantage3 { get; set; }
+            public int Ho_Advantage4 { get; set; }
+            public int Ho_Advantage5 { get; set; }
+            public int Ho_Advantage6 { get; set; }
+            public int Ho_Advantage7 { get; set; }
+            public int Ho_Advantage8 { get; set; }
+            public int Ho_Advantage9 { get; set; }
+            public int Ho_Advantage10 { get; set; }
+            public int Ho_Advantage11 { get; set; }
+            public int Ho_Advantage12 { get; set; }
+            public int Ho_Advantage13 { get; set; }
+            public int Ho_Advantage14 { get; set; }
+            public int Ho_Advantage15 { get; set; }
+            public int Ho_Advantage16 { get; set; }
+            public int Ho_Advantage17 { get; set; }
+            public int Ho_Advantage18 { get; set; }
+            public decimal usu_handicapindex { get; set; }
+
+
         }
         public JObject Post(ParametrosEntradas Datos)
         {
@@ -132,6 +171,42 @@ namespace DragonGolfBackEnd.Controllers
                                 ScoreHole16 = Convert.ToInt32(row["ScoreHole16"]),
                                 ScoreHole17 = Convert.ToInt32(row["ScoreHole17"]),
                                 ScoreHole18 = Convert.ToInt32(row["ScoreHole18"]),
+                                ho_par1 = Convert.ToInt32(row["ho_par1"]),
+                                ho_par2 = Convert.ToInt32(row["ho_par2"]),
+                                ho_par3 = Convert.ToInt32(row["ho_par3"]),
+                                ho_par4 = Convert.ToInt32(row["ho_par4"]),
+                                ho_par5 = Convert.ToInt32(row["ho_par5"]),
+                                ho_par6 = Convert.ToInt32(row["ho_par6"]),
+                                ho_par7 = Convert.ToInt32(row["ho_par7"]),
+                                ho_par8 = Convert.ToInt32(row["ho_par8"]),
+                                ho_par9 = Convert.ToInt32(row["ho_par9"]),
+                                ho_par10 = Convert.ToInt32(row["ho_par10"]),
+                                ho_par11 = Convert.ToInt32(row["ho_par11"]),
+                                ho_par12 = Convert.ToInt32(row["ho_par12"]),
+                                ho_par13 = Convert.ToInt32(row["ho_par13"]),
+                                ho_par14 = Convert.ToInt32(row["ho_par14"]),
+                                ho_par15 = Convert.ToInt32(row["ho_par15"]),
+                                ho_par16 = Convert.ToInt32(row["ho_par16"]),
+                                ho_par17 = Convert.ToInt32(row["ho_par17"]),
+                                ho_par18 = Convert.ToInt32(row["ho_par18"]),
+                                Ho_Advantage1 = Convert.ToInt32(row["Ho_Advantage1"]),
+                                Ho_Advantage2 = Convert.ToInt32(row["Ho_Advantage2"]),
+                                Ho_Advantage3 = Convert.ToInt32(row["Ho_Advantage3"]),
+                                Ho_Advantage4 = Convert.ToInt32(row["Ho_Advantage4"]),
+                                Ho_Advantage5 = Convert.ToInt32(row["Ho_Advantage5"]),
+                                Ho_Advantage6 = Convert.ToInt32(row["Ho_Advantage6"]),
+                                Ho_Advantage7 = Convert.ToInt32(row["Ho_Advantage7"]),
+                                Ho_Advantage8 = Convert.ToInt32(row["Ho_Advantage8"]),
+                                Ho_Advantage9 = Convert.ToInt32(row["Ho_Advantage9"]),
+                                Ho_Advantage10 = Convert.ToInt32(row["Ho_Advantage10"]),
+                                Ho_Advantage11 = Convert.ToInt32(row["Ho_Advantage11"]),
+                                Ho_Advantage12 = Convert.ToInt32(row["Ho_Advantage12"]),
+                                Ho_Advantage13 = Convert.ToInt32(row["Ho_Advantage13"]),
+                                Ho_Advantage14 = Convert.ToInt32(row["Ho_Advantage14"]),
+                                Ho_Advantage15 = Convert.ToInt32(row["Ho_Advantage15"]),
+                                Ho_Advantage16 = Convert.ToInt32(row["Ho_Advantage16"]),
+                                Ho_Advantage17 = Convert.ToInt32(row["Ho_Advantage17"]),
+                                Ho_Advantage18 = Convert.ToInt32(row["Ho_Advantage18"]),
                                 usu_nombre = Convert.ToString(row["usu_nombre"]),
                                 usu_apellido_paterno = Convert.ToString(row["usu_apellido_paterno"]),
                                 usu_apellido_materno = Convert.ToString(row["usu_apellido_materno"]),
@@ -139,8 +214,9 @@ namespace DragonGolfBackEnd.Controllers
                                 usu_ghinnumber = numeroFormato,
                                 usu_golpesventaja = Convert.ToDecimal(row["usu_golpesventaja"]),
                                 usu_diferenciatee = Convert.ToDecimal(row["usu_diferenciatee"]),
-                                handicapAuto = Convert.ToDecimal(row["handicapAuto"]),
+                                handicapAuto = Convert.ToInt32(row["handicapAuto"]),
                                 Te_TeeColor = Convert.ToString(row["Te_TeeColor"]),
+                                usu_handicapindex = Convert.ToDecimal(row["usu_handicapindex"]),
                             };
 
                             lista.Add(ent);

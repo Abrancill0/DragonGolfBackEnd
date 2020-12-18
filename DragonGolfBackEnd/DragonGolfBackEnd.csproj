@@ -179,6 +179,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Clases\VariablesGlobales.cs" />
+    <Compile Include="Controllers\Amigos\ListaAmigosAgregarController.cs" />
     <Compile Include="Controllers\Amigos\QuitarAmigosController.cs" />
     <Compile Include="Controllers\Amigos\AltaAmigosController.cs" />
     <Compile Include="Controllers\Amigos\ListaAmigosController.cs" />
@@ -198,10 +199,14 @@
     <Compile Include="Controllers\Invitaciones\EliminarInvitacionController.cs" />
     <Compile Include="Controllers\Invitaciones\CrearInviitacionController.cs" />
     <Compile Include="Controllers\Invitaciones\ListadoInvitacionController.cs" />
+    <Compile Include="Controllers\Invitados\ActualizarInvitadosController.cs" />
     <Compile Include="Controllers\Invitados\CrearInvitadosController.cs" />
+    <Compile Include="Controllers\Invitados\ListadoInvitadosAgregarController.cs" />
+    <Compile Include="Controllers\Invitados\ListaTodosAgregarController.cs" />
     <Compile Include="Controllers\Invitados\ListaTodosController.cs" />
     <Compile Include="Controllers\Invitados\ListadoInvitadosController.cs" />
     <Compile Include="Controllers\Ronda\ActualizaStrokerPvPRondaController.cs" />
+    <Compile Include="Controllers\Ronda\ActualizarScoreHoyoController.cs" />
     <Compile Include="Controllers\Ronda\EliminarAmigosRondaController.cs" />
     <Compile Include="Controllers\Ronda\AgregarAmigosRondaController.cs" />
     <Compile Include="Controllers\Ronda\AgregarTeesRondaController.cs" />

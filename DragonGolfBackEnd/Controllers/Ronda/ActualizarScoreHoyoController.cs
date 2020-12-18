@@ -16,35 +16,39 @@ namespace DragonGolfBackEnd.Controllers
 {
 
     [EnableCors(origins: "*", headers: "*", methods: "*", SupportsCredentials = true)]
-    [RoutePrefix("api/ActualizaStrokerPvPRonda")]
-    public class ActualizaStrokerPvPRondaController : ApiController
+    [RoutePrefix("api/ActualizarScoreHoyo")]
+    public class ActualizarScoreHoyoController : ApiController
     {
         public class ParametrosEntradas
         {
-           public int IDRound { get; set; }
-            public int Player1 { get; set; }
-            public int Player2 { get; set; }
-            public decimal stroker { get; set; }
 
+            public int IDRounds { get; set; }
+            public int IDUsuario { get; set; }
+            public int PlayerId { get; set; }
+            public int Score { get; set; }
+            public int hole { get; set; }
+          
         }
         public JObject Post(ParametrosEntradas Datos)
         {
             try
             {
-                SqlCommand comando = new SqlCommand("DragoGolf_UpdateStokersPvP");
+                SqlCommand comando = new SqlCommand("DragoGolf_Update_Hole_Stoker");
                 comando.CommandType = CommandType.StoredProcedure;
 
                 //Declaracion de parametros
-                comando.Parameters.Add("@IDRound", SqlDbType.Int);
-                comando.Parameters.Add("@Player1", SqlDbType.Int);
-                comando.Parameters.Add("@Player2", SqlDbType.Int);
-                comando.Parameters.Add("@stroker", SqlDbType.Decimal);
+                comando.Parameters.Add("@IDRounds", SqlDbType.Int);
+                comando.Parameters.Add("@IDUsuario", SqlDbType.Int);
+                comando.Parameters.Add("@PlayerId", SqlDbType.Int);
+                comando.Parameters.Add("@Score", SqlDbType.Int);
+                comando.Parameters.Add("@hole", SqlDbType.Int);
 
                 //Asignacion de valores a parametros
-                comando.Parameters["@IDRound"].Value = Datos.IDRound;
-                comando.Parameters["@Player1"].Value = Datos.Player1;
-                comando.Parameters["@Player2"].Value = Datos.Player2;
-                comando.Parameters["@stroker"].Value = Datos.stroker;
+                comando.Parameters["@IDRounds"].Value = Datos.IDRounds;
+                comando.Parameters["@IDUsuario"].Value = Datos.IDUsuario;
+                comando.Parameters["@PlayerId"].Value = Datos.PlayerId;
+                comando.Parameters["@Score"].Value = Datos.Score;
+                comando.Parameters["@hole"].Value = Datos.hole;
 
                 comando.Connection = new SqlConnection(VariablesGlobales.CadenaConexion);
                 comando.CommandTimeout = 0;
@@ -55,9 +59,10 @@ namespace DragonGolfBackEnd.Controllers
                 comando.Connection.Close();
                 DA.Fill(DT);
 
+
                 string Mensaje = "";
                 int Estatus = 0;
-              
+
                 int contador = DT.Rows.Count;
 
                 if (DT.Rows.Count > 0)
@@ -66,6 +71,7 @@ namespace DragonGolfBackEnd.Controllers
                     {
                         Mensaje = Convert.ToString(row["mensaje"]);
                         Estatus = Convert.ToInt32(row["Estatus"]);
+
                     }
 
                     JObject Resultado = JObject.FromObject(new
