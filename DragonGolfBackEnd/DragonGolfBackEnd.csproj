@@ -199,6 +199,7 @@
     <Compile Include="Controllers\Invitaciones\EliminarInvitacionController.cs" />
     <Compile Include="Controllers\Invitaciones\CrearInviitacionController.cs" />
     <Compile Include="Controllers\Invitaciones\ListadoInvitacionController.cs" />
+    <Compile Include="Controllers\Invitados\EliminarInvitadosController.cs" />
     <Compile Include="Controllers\Invitados\ActualizarInvitadosController.cs" />
     <Compile Include="Controllers\Invitados\CrearInvitadosController.cs" />
     <Compile Include="Controllers\Invitados\ListadoInvitadosAgregarController.cs" />
