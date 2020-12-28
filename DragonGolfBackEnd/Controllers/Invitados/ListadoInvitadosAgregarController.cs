@@ -38,6 +38,7 @@ namespace DragonGolfBackEnd.Controllers
             public int IDUsuarioCrea { get; set; }
             public string usu_email { get; set; }
             public string usu_telefono { get; set; }
+            public Boolean usu_invitado { get; set; }
 
         }
 
@@ -73,7 +74,6 @@ namespace DragonGolfBackEnd.Controllers
                 if (DT.Rows.Count > 0)
                 {
 
-
                     foreach (DataRow row in DT.Rows)
                     {
                         Mensaje = Convert.ToString(row["mensaje"]);
@@ -99,6 +99,7 @@ namespace DragonGolfBackEnd.Controllers
                                 IDUsuarioCrea = Convert.ToInt32(row["IDUsuarioCrea"]),
                                 usu_email = Convert.ToString(row["usu_email"]),
                                 usu_telefono = Convert.ToString(row["usu_telefono"]),
+                                usu_invitado = Convert.ToBoolean(row["usu_invitado"]),
                             };
 
                             lista.Add(ent);

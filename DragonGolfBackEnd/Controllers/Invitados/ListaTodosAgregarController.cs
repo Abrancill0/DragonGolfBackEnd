@@ -34,6 +34,8 @@ namespace DragonGolfBackEnd.Controllers
             public decimal usu_handicapindex { get; set; }
             public string usu_ghinnumber { get; set; }
             public bool usu_invitado { get; set; }
+            public string usu_email { get; set; }
+            public string usu_telefono { get; set; }
             public int IDUsuarioCrea { get; set; }
             public decimal usu_golpesventaja { get; set; }
             public decimal usu_diferenciatee { get; set; }
@@ -95,6 +97,8 @@ namespace DragonGolfBackEnd.Controllers
                                 usu_golpesventaja = Convert.ToDecimal(row["usu_golpesventaja"]),
                                 usu_diferenciatee = Convert.ToDecimal(row["usu_diferenciatee"]),
                                 IDUsuarioCrea = Convert.ToInt32(row["IDUsuarioCrea"]),
+                                usu_email = Convert.ToString(row["usu_email"]),
+                                usu_telefono = Convert.ToString(row["usu_telefono"]),
                             };
 
                             lista.Add(ent);

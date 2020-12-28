@@ -31,6 +31,8 @@ namespace DragonGolfBackEnd.Controllers
             public string usu_apellido_paterno { get; set; }
             public string usu_nickname { get; set; }
             public string usu_imagen { get; set; }
+            public string usu_email { get; set; }
+            public string usu_telefono { get; set; }
             public decimal usu_handicapindex { get; set; }
             public string usu_ghinnumber { get; set; }
             public bool usu_invitado { get; set; }
@@ -86,6 +88,8 @@ namespace DragonGolfBackEnd.Controllers
 
                                 IDUsuario = Convert.ToInt32(row["IDUsuario"]),
                                 usu_nombre = Convert.ToString(row["usu_nombre"]),
+                                usu_email = Convert.ToString(row["usu_email"]),
+                                usu_telefono = Convert.ToString(row["usu_telefono"]),
                                 usu_apellido_paterno = Convert.ToString(row["usu_apellido_paterno"]),
                                 usu_nickname = Convert.ToString(row["usu_nickname"]),
                                 usu_imagen = Convert.ToString(row["usu_imagen"]),

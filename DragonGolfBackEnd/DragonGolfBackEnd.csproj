@@ -206,6 +206,7 @@
     <Compile Include="Controllers\Invitados\ListaTodosAgregarController.cs" />
     <Compile Include="Controllers\Invitados\ListaTodosController.cs" />
     <Compile Include="Controllers\Invitados\ListadoInvitadosController.cs" />
+    <Compile Include="Controllers\Ronda\ActualizarRondaHoyosController.cs" />
     <Compile Include="Controllers\Ronda\ActualizaStrokerPvPRondaController.cs" />
     <Compile Include="Controllers\Ronda\ActualizarScoreHoyoController.cs" />
     <Compile Include="Controllers\Ronda\EliminarAmigosRondaController.cs" />

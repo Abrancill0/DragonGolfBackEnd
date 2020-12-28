@@ -53,6 +53,8 @@ namespace DragonGolfBackEnd.Controllers
             public int ScoreHole17 { get; set; }
             public int ScoreHole18 { get; set; }
             public string usu_nombre { get; set; }
+            public string usu_telefono { get; set; }
+            public string usu_email { get; set; }
             public string usu_apellido_paterno { get; set; }
             public string usu_apellido_materno { get; set; }
             public string usu_nickname { get; set; }
@@ -153,6 +155,8 @@ namespace DragonGolfBackEnd.Controllers
                                 PlayerId = Convert.ToInt32(row["PlayerId"]),
                                 RoundHandicap = Convert.ToDecimal(row["RoundHandicap"]),
                                 PlayerTee = Convert.ToString(row["PlayerTee"]),
+                                usu_telefono = Convert.ToString(row["usu_telefono"]),
+                                usu_email = Convert.ToString(row["usu_email"]),
                                 ScoreHole1 = Convert.ToInt32(row["ScoreHole1"]),
                                 ScoreHole2 = Convert.ToInt32(row["ScoreHole2"]),
                                 ScoreHole3 = Convert.ToInt32(row["ScoreHole3"]),
