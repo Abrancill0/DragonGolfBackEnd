@@ -36,11 +36,12 @@ namespace DragonGolfBackEnd.Controllers
             public int BetD_Player2 { get; set; }
             public float BetD_MontoF9 { get; set; }
             public float BetD_MontoB9 { get; set; }
-            public int BetD_DiferenciaHoyos { get; set; }
-            public float BetD_MontoPerdidoGanado { get; set; }
-            public float BetD_MontoApuestaMedal { get; set; }
-            public float BetD_Division { get; set; }
-
+            public int BetD_Match { get; set; }
+            public float BetD_Carry { get; set; }
+            public float BetD_Medal { get; set; }
+            public bool BetD_AutoPress { get; set; }
+            public int BetD_ManuallyOverrideAdv { get; set; }
+            public int BetD_AdvStrokers { get; set; }
         }
 
 
@@ -52,6 +53,7 @@ namespace DragonGolfBackEnd.Controllers
                 SqlCommand comando = new SqlCommand("DragoGolf_CreateDetailBet");
                 comando.CommandType = CommandType.StoredProcedure;
 
+
                 //Declaracion de parametros
                 comando.Parameters.Add("@IDBet", SqlDbType.Int);
                 comando.Parameters.Add("@IDRonda", SqlDbType.Int);
@@ -59,10 +61,12 @@ namespace DragonGolfBackEnd.Controllers
                 comando.Parameters.Add("@BetD_Player2", SqlDbType.Int);
                 comando.Parameters.Add("@BetD_MontoF9", SqlDbType.Float);
                 comando.Parameters.Add("@BetD_MontoB9", SqlDbType.Float);
-                comando.Parameters.Add("@BetD_DiferenciaHoyos", SqlDbType.Int);
-                comando.Parameters.Add("@BetD_MontoPerdidoGanado", SqlDbType.Float);
-                comando.Parameters.Add("@BetD_MontoApuestaMedal", SqlDbType.Float);
-                comando.Parameters.Add("@BetD_Division", SqlDbType.Float);
+                comando.Parameters.Add("@BetD_Match", SqlDbType.Int);
+                comando.Parameters.Add("@BetD_Carry", SqlDbType.Float);
+                comando.Parameters.Add("@BetD_Medal", SqlDbType.Float);
+                comando.Parameters.Add("@BetD_AutoPress", SqlDbType.Bit);
+                comando.Parameters.Add("@BetD_ManuallyOverrideAdv", SqlDbType.Int);
+                comando.Parameters.Add("@BetD_AdvStrokers", SqlDbType.Int);
 
                 //Asignacion de valores a parametros
                 comando.Parameters["@IDBet"].Value = Datos.IDBet;
@@ -71,11 +75,13 @@ namespace DragonGolfBackEnd.Controllers
                 comando.Parameters["@BetD_Player2"].Value = Datos.BetD_Player2;
                 comando.Parameters["@BetD_MontoF9"].Value = Datos.BetD_MontoF9;
                 comando.Parameters["@BetD_MontoB9"].Value = Datos.BetD_MontoB9;
-                comando.Parameters["@BetD_DiferenciaHoyos"].Value = Datos.BetD_DiferenciaHoyos;
-                comando.Parameters["@BetD_DiferenciaHoyos"].Value = Datos.BetD_DiferenciaHoyos;
-                comando.Parameters["@BetD_MontoApuestaMedal"].Value = Datos.BetD_MontoApuestaMedal;
-                comando.Parameters["@BetD_Division"].Value = Datos.BetD_Division;
-             
+                comando.Parameters["@BetD_Match"].Value = Datos.BetD_Match;
+                comando.Parameters["@BetD_Carry"].Value = Datos.BetD_Carry;
+                comando.Parameters["@BetD_Medal"].Value = Datos.BetD_Medal;
+                comando.Parameters["@BetD_AutoPress"].Value = Datos.BetD_AutoPress;
+                comando.Parameters["@BetD_ManuallyOverrideAdv"].Value = Datos.BetD_ManuallyOverrideAdv;
+                comando.Parameters["@BetD_AdvStrokers"].Value = Datos.BetD_AdvStrokers;
+
 
                 comando.Connection = new SqlConnection(VariablesGlobales.CadenaConexion);
                 comando.CommandTimeout = 0;
@@ -106,7 +112,7 @@ namespace DragonGolfBackEnd.Controllers
                             {
                                 IDBet = Convert.ToInt32(row["IDBet"]),
                                 IDRonda = Convert.ToInt32(row["IDRonda"]),
-                                IDBetDetail  = Convert.ToInt32(row["IDBetDetail"]),
+                                IDBetDetail = Convert.ToInt32(row["IDBetDetail"]),
                             };
 
                             lista.Add(ent);
