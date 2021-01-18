@@ -31,7 +31,10 @@ namespace DragonGolfBackEnd.Controllers
         public class ParametrosSalida
         {
             public int IDBet { get; set; }
+            public int IDBetDetail { get; set; }
             public int IDRonda { get; set; }
+            public string Player1 { get; set; }
+            public string Player2 { get; set; }
             public int BetD_Player1 { get; set; }
             public int BetD_Player2 { get; set; }
             public float BetD_MontoF9 { get; set; }
@@ -44,7 +47,7 @@ namespace DragonGolfBackEnd.Controllers
             public float BetD_Match { get; set; }
             public float BetD_Carry { get; set; }
             public float BetD_Medal { get; set; }
-            public bool BetD_AutoPress { get; set; }
+            public int BetD_AutoPress { get; set; }
             public int BetD_ManuallyOverrideAdv { get; set; }
             public int BetD_AdvStrokers { get; set; }
             public int BetD_F9_1 { get; set; }
@@ -113,7 +116,10 @@ namespace DragonGolfBackEnd.Controllers
                             ParametrosSalida ent = new ParametrosSalida
                             {
                                 IDBet = Convert.ToInt32(row["IDBet"]),
+                                IDBetDetail = Convert.ToInt32(row["IDBetDetail"]),
                                 IDRonda = Convert.ToInt32(row["IDRonda"]),
+                                Player1 = Convert.ToString(row["Player1"]),
+                                Player2 = Convert.ToString(row["Player2"]),
                                 BetD_Player1 = Convert.ToInt32(row["BetD_Player1"]),
                                 BetD_Player2 = Convert.ToInt32(row["BetD_Player2"]),
                                 BetD_MontoF9 = Convert.ToSingle(row["BetD_MontoF9"]),
@@ -126,7 +132,7 @@ namespace DragonGolfBackEnd.Controllers
                                 BetD_Match = Convert.ToSingle(row["BetD_Division"]),
                                 BetD_Carry = Convert.ToSingle(row["BetD_Division"]),
                                 BetD_Medal = Convert.ToSingle(row["BetD_Division"]),
-                                BetD_AutoPress = Convert.ToBoolean(row["BetD_Division"]),
+                                BetD_AutoPress = Convert.ToInt32(row["BetD_Division"]),
                                 BetD_ManuallyOverrideAdv = Convert.ToInt32(row["BetD_Division"]),
                                 BetD_AdvStrokers = Convert.ToInt32(row["BetD_Division"]),
                                 BetD_F9_1 = Convert.ToInt32(row["BetD_Division"]),
