@@ -737,9 +737,9 @@ namespace DragonGolfBackEnd.Controllers
         }
 
         private int CalcularApuestaPresion2(int Resultado1, int Resultado2, int Resultado3, int Resultado4,
-     int Resultado5, int Resultado6, int Resultado7, int Resultado8, int Resultado9, int Resultado10,
-     int Resultado12, int Resultado13, int Resultado14, int Resultado15, int Resultado16, int Resultado17,
-     int Resultado18, int Resultado19)
+        int Resultado5, int Resultado6, int Resultado7, int Resultado8, int Resultado9, int Resultado10,
+        int Resultado12, int Resultado13, int Resultado14, int Resultado15, int Resultado16, int Resultado17,
+        int Resultado18, int Resultado19)
         {
 
             int[] ResultadoPresionFront = new int[10];
@@ -863,19 +863,13 @@ namespace DragonGolfBackEnd.Controllers
 
             string ResultadoString = "";
             int ResultadoInt = 0;
-            int ResultadoInt1 = 0;
-            int ResultadoInt2 = 0;
-            int ResultadoInt3 = 0;
-            int ResultadoInt4 = 0;
-            int ResultadoInt5 = 0;
-            int ResultadoInt6 = 0;
-            int ResultadoInt7 = 0;
-            int ResultadoInt8 = 0;
-
+         
             int Presion1 = 0;
-            int Presion2 = 0;
-            int Presion3 = 0;
-            int Presion4 = 0;
+
+            string PresionValor1 = "";
+            string PresionValor2 = "";
+            string PresionValor3 = "";
+            string PresionValor4 = "";
 
             for (int i = 1; i < 10; i++)
             {
@@ -884,330 +878,134 @@ namespace DragonGolfBackEnd.Controllers
                 {
 
                     ResultadoInt += 1;
+                    Presion1 += 1;
 
-                    switch (i)
+                    if (PresionValor1 != "")
                     {
-                        case 1:
-
-                            ResultadoString = Convert.ToString(ResultadoInt);
-
-                            Presion1 = 1;
-
-                            break;
-                        case 2:
-
-                            Presion1 += 1;
-
-                            if (Presion1 == 2)
-                            {
-                                ResultadoString = Convert.ToString(ResultadoInt) + ", 0";
-                            }
-                            else
-                            {
-                                ResultadoString = Convert.ToString(ResultadoInt);
-                            }
-
-                           
-
-                            break;
-                        case 3:
-
-                            ResultadoInt1 += 1;
-                            ResultadoInt2 += 1;
-                            ResultadoInt3 = 0;
-
-                            ResultadoString = Convert.ToString(ResultadoInt) + "," + Convert.ToString(ResultadoInt1) + "," + Convert.ToString(ResultadoInt2) + ", 0";
-
-                            break;
-                        case 4:
-
-                            ResultadoInt1 += 1;
-                            ResultadoInt2 += 1;
-                            ResultadoInt3 += 1;
-                            ResultadoInt4 = 0;
-
-                            ResultadoString = Convert.ToString(ResultadoInt) + "," + Convert.ToString(ResultadoInt1) + "," + Convert.ToString(ResultadoInt2) + "," + Convert.ToString(ResultadoInt3) + ", 0";
-
-                            break;
-                        case 5:
-
-                            ResultadoInt1 += 1;
-                            ResultadoInt2 += 1;
-                            ResultadoInt3 += 1;
-                            ResultadoInt4 += 1;
-                            ResultadoInt5 = 0;
-
-                            ResultadoString = Convert.ToString(ResultadoInt) + "," + Convert.ToString(ResultadoInt1) + "," + Convert.ToString(ResultadoInt2) + "," + Convert.ToString(ResultadoInt3) + "," + Convert.ToString(ResultadoInt4) + ", 0";
-
-
-                            break;
-                        case 6:
-
-                            ResultadoInt1 += 1;
-                            ResultadoInt2 += 1;
-                            ResultadoInt3 += 1;
-                            ResultadoInt4 += 1;
-                            ResultadoInt5 += 1;
-                            ResultadoInt6 = 0;
-
-                            ResultadoString = Convert.ToString(ResultadoInt) + "," + Convert.ToString(ResultadoInt1) + "," + Convert.ToString(ResultadoInt2) + "," + Convert.ToString(ResultadoInt3) + "," + Convert.ToString(ResultadoInt4) + "," + Convert.ToString(ResultadoInt5) + ", 0";
-
-
-                            break;
-                        case 7:
-
-                            ResultadoInt1 += 1;
-                            ResultadoInt2 += 1;
-                            ResultadoInt3 += 1;
-                            ResultadoInt4 += 1;
-                            ResultadoInt5 += 1;
-                            ResultadoInt6 += 1;
-                            ResultadoInt7 = 0;
-
-                            ResultadoString = Convert.ToString(ResultadoInt) + "," + Convert.ToString(ResultadoInt1) + "," + Convert.ToString(ResultadoInt2) + "," + Convert.ToString(ResultadoInt3) + "," + Convert.ToString(ResultadoInt4) + "," + Convert.ToString(ResultadoInt5) + "," + Convert.ToString(ResultadoInt6) + ", 0";
-
-
-
-                            break;
-                        case 8:
-
-                            ResultadoInt1 += 1;
-                            ResultadoInt2 += 1;
-                            ResultadoInt3 += 1;
-                            ResultadoInt4 += 1;
-                            ResultadoInt5 += 1;
-                            ResultadoInt6 += 1;
-                            ResultadoInt7 += 1;
-                            ResultadoInt8 = 0;
-
-                            ResultadoString = Convert.ToString(ResultadoInt) + "," + Convert.ToString(ResultadoInt1) + "," + Convert.ToString(ResultadoInt2) + "," + Convert.ToString(ResultadoInt3) + "," + Convert.ToString(ResultadoInt4) + "," + Convert.ToString(ResultadoInt5) + "," + Convert.ToString(ResultadoInt6) + "," + Convert.ToString(ResultadoInt7) + ", 0";
-
-
-                            break;
-                        case 9:
-
-                            ResultadoInt1 += 1;
-                            ResultadoInt2 += 1;
-                            ResultadoInt3 += 1;
-                            ResultadoInt4 += 1;
-                            ResultadoInt5 += 1;
-                            ResultadoInt6 += 1;
-                            ResultadoInt7 += 1;
-                            ResultadoInt8 += 1;
-
-
-                            ResultadoString = Convert.ToString(ResultadoInt) + "," + Convert.ToString(ResultadoInt1) + "," + Convert.ToString(ResultadoInt2) + "," + Convert.ToString(ResultadoInt3) + "," + Convert.ToString(ResultadoInt4) + "," + Convert.ToString(ResultadoInt5) + "," + Convert.ToString(ResultadoInt6) + "," + Convert.ToString(ResultadoInt7) + "," + Convert.ToString(ResultadoInt8) + ", 0";
-
-
-                            break;
-                        default:
-
-
-
-                            break;
+                        int Presion = Convert.ToInt32(PresionValor1);
+                        Presion += 1;
+                        PresionValor1 = Convert.ToString(Presion);
                     }
+
+                    if (PresionValor2 != "")
+                    {
+                        int Presion = Convert.ToInt32(PresionValor2);
+                        Presion += 1;
+                        PresionValor1 = Convert.ToString(Presion);
+                    }
+
+                    if (PresionValor3 != "")
+                    {
+                        int Presion = Convert.ToInt32(PresionValor3);
+                        Presion += 1;
+                        PresionValor1 = Convert.ToString(Presion);
+                    }
+
+                    if (PresionValor4 != "")
+                    {
+                        int Presion = Convert.ToInt32(PresionValor4);
+                        Presion += 1;
+                        PresionValor1 = Convert.ToString(Presion);
+                    }
+
+                    if (Presion1 == 2)
+                    {
+                       
+                        if (PresionValor1 == "")
+                        {
+                            PresionValor1 = "0";
+                            Presion1 = 0;
+                        }
+
+                        if (PresionValor2 == "")
+                        {
+                            PresionValor2 = "0";
+                            Presion1 = 0;
+                        }
+
+                        if (PresionValor3 == "")
+                        {
+                            PresionValor3 = "0";
+                            Presion1 = 0;
+                        }
+
+                        if (PresionValor4 == "")
+                        {
+                            PresionValor4 = "0";
+                            Presion1 = 0;
+                        }
+
+                    }
+
+                    
 
                 }
                 else if (ResultadoPresionFront[i] == -1)
                 {
                     ResultadoInt -= 1;
+                    Presion1 -= 1;
 
-                    switch (i)
+                    if (PresionValor1 != "")
                     {
-                        case 1:
+                        int Presion = Convert.ToInt32(PresionValor1);
+                        Presion -= 1;
+                        PresionValor1 = Convert.ToString(Presion);
+                    }
 
-                            ResultadoString = Convert.ToString(ResultadoInt) + ", 0";
+                    if (PresionValor2 != "")
+                    {
+                        int Presion = Convert.ToInt32(PresionValor2);
+                        Presion -= 1;
+                        PresionValor1 = Convert.ToString(Presion);
+                    }
 
-                            ResultadoInt1 = 0;
-                            break;
-                        case 2:
+                    if (PresionValor3 != "")
+                    {
+                        int Presion = Convert.ToInt32(PresionValor3);
+                        Presion -= 1;
+                        PresionValor1 = Convert.ToString(Presion);
+                    }
 
-                            ResultadoInt1 -= 1;
-                            ResultadoInt2 = 0;
-
-                            ResultadoString = Convert.ToString(ResultadoInt) + "," + Convert.ToString(ResultadoInt1) + ", 0";
-
-                            break;
-                        case 3:
-
-                            ResultadoInt1 -= 1;
-                            ResultadoInt2 -= 1;
-                            ResultadoInt3 = 0;
-
-                            ResultadoString = Convert.ToString(ResultadoInt) + "," + Convert.ToString(ResultadoInt1) + "," + Convert.ToString(ResultadoInt2) + ", 0";
-
-                            break;
-                        case 4:
-
-                            ResultadoInt1 -= 1;
-                            ResultadoInt2 -= 1;
-                            ResultadoInt3 -= 1;
-                            ResultadoInt4 = 0;
-
-                            ResultadoString = Convert.ToString(ResultadoInt) + "," + Convert.ToString(ResultadoInt1) + "," + Convert.ToString(ResultadoInt2) + "," + Convert.ToString(ResultadoInt3) + ", 0";
-
-                            break;
-                        case 5:
-
-                            ResultadoInt1 -= 1;
-                            ResultadoInt2 -= 1;
-                            ResultadoInt3 -= 1;
-                            ResultadoInt4 -= 1;
-                            ResultadoInt5 = 0;
-
-                            ResultadoString = Convert.ToString(ResultadoInt) + "," + Convert.ToString(ResultadoInt1) + "," + Convert.ToString(ResultadoInt2) + "," + Convert.ToString(ResultadoInt3) + "," + Convert.ToString(ResultadoInt4) + ", 0";
-
-
-                            break;
-                        case 6:
-
-                            ResultadoInt1 -= 1;
-                            ResultadoInt2 -= 1;
-                            ResultadoInt3 -= 1;
-                            ResultadoInt4 -= 1;
-                            ResultadoInt5 -= 1;
-                            ResultadoInt6 = 0;
-
-                            ResultadoString = Convert.ToString(ResultadoInt) + "," + Convert.ToString(ResultadoInt1) + "," + Convert.ToString(ResultadoInt2) + "," + Convert.ToString(ResultadoInt3) + "," + Convert.ToString(ResultadoInt4) + "," + Convert.ToString(ResultadoInt5) + ", 0";
-
-
-                            break;
-                        case 7:
-
-                            ResultadoInt1 -= 1;
-                            ResultadoInt2 -= 1;
-                            ResultadoInt3 -= 1;
-                            ResultadoInt4 -= 1;
-                            ResultadoInt5 -= 1;
-                            ResultadoInt6 -= 1;
-                            ResultadoInt7 = 0;
-
-                            ResultadoString = Convert.ToString(ResultadoInt) + "," + Convert.ToString(ResultadoInt1) + "," + Convert.ToString(ResultadoInt2) + "," + Convert.ToString(ResultadoInt3) + "," + Convert.ToString(ResultadoInt4) + "," + Convert.ToString(ResultadoInt5) + "," + Convert.ToString(ResultadoInt6) + ", 0";
-
-
-
-                            break;
-                        case 8:
-
-                            ResultadoInt1 -= 1;
-                            ResultadoInt2 -= 1;
-                            ResultadoInt3 -= 1;
-                            ResultadoInt4 -= 1;
-                            ResultadoInt5 -= 1;
-                            ResultadoInt6 -= 1;
-                            ResultadoInt7 -= 1;
-                            ResultadoInt8 = 0;
-
-                            ResultadoString = Convert.ToString(ResultadoInt) + "," + Convert.ToString(ResultadoInt1) + "," + Convert.ToString(ResultadoInt2) + "," + Convert.ToString(ResultadoInt3) + "," + Convert.ToString(ResultadoInt4) + "," + Convert.ToString(ResultadoInt5) + "," + Convert.ToString(ResultadoInt6) + "," + Convert.ToString(ResultadoInt7) + ", 0";
-
-
-                            break;
-                        case 9:
-
-                            ResultadoInt1 -= 1;
-                            ResultadoInt2 -= 1;
-                            ResultadoInt3 -= 1;
-                            ResultadoInt4 -= 1;
-                            ResultadoInt5 -= 1;
-                            ResultadoInt6 -= 1;
-                            ResultadoInt7 -= 1;
-                            ResultadoInt8 -= 1;
-                         
-
-                            ResultadoString = Convert.ToString(ResultadoInt) + "," + Convert.ToString(ResultadoInt1) + "," + Convert.ToString(ResultadoInt2) + "," + Convert.ToString(ResultadoInt3) + "," + Convert.ToString(ResultadoInt4) + "," + Convert.ToString(ResultadoInt5) + "," + Convert.ToString(ResultadoInt6) + "," + Convert.ToString(ResultadoInt7) + "," + Convert.ToString(ResultadoInt8) + ", 0";
-
-
-                            break;
-                        default:
-
-
-
-                            break;
+                    if (PresionValor4 != "")
+                    {
+                        int Presion = Convert.ToInt32(PresionValor4);
+                        Presion -= 1;
+                        PresionValor1 = Convert.ToString(Presion);
                     }
 
 
+                    if (Presion1 == -2)
+                    {
+                        if (PresionValor1 == "")
+                        {
+                            PresionValor1 = "0";
+                            Presion1 = 0;
+                        }
+
+                        if (PresionValor2 == "")
+                        {
+                            PresionValor2 = "0";
+                            Presion1 = 0;
+                        }
+
+                        if (PresionValor3 == "")
+                        {
+                            PresionValor3 = "0";
+                            Presion1 = 0;
+                        }
+
+                        if (PresionValor4 == "")
+                        {
+                            PresionValor4 = "0";
+                            Presion1 = 0;
+                        }
+                    }
                 }
                 else
                 {
 
                     ResultadoInt += 0;
-
-                    switch (i)
-                    {
-                        case 1:
-
-                            ResultadoString = Convert.ToString(ResultadoInt) + ", 0";
-
-
-                            break;
-                        case 2:
-
-
-
-                            ResultadoString = Convert.ToString(ResultadoInt) + "," + Convert.ToString(ResultadoInt1);
-
-                            break;
-                        case 3:
-
-
-
-                            ResultadoString = Convert.ToString(ResultadoInt) + "," + Convert.ToString(ResultadoInt1) + "," + Convert.ToString(ResultadoInt2);
-
-                            break;
-                        case 4:
-
-
-
-                            ResultadoString = Convert.ToString(ResultadoInt) + "," + Convert.ToString(ResultadoInt1) + "," + Convert.ToString(ResultadoInt2) + "," + Convert.ToString(ResultadoInt3);
-
-                            break;
-                        case 5:
-
-
-                            ResultadoString = Convert.ToString(ResultadoInt) + "," + Convert.ToString(ResultadoInt1) + "," + Convert.ToString(ResultadoInt2) + "," + Convert.ToString(ResultadoInt3) + "," + Convert.ToString(ResultadoInt4);
-
-
-                            break;
-                        case 6:
-
-
-
-                            ResultadoString = Convert.ToString(ResultadoInt) + "," + Convert.ToString(ResultadoInt1) + "," + Convert.ToString(ResultadoInt2) + "," + Convert.ToString(ResultadoInt3) + "," + Convert.ToString(ResultadoInt4) + "," + Convert.ToString(ResultadoInt5);
-
-
-                            break;
-                        case 7:
-
-
-
-                            ResultadoString = Convert.ToString(ResultadoInt) + "," + Convert.ToString(ResultadoInt1) + "," + Convert.ToString(ResultadoInt2) + "," + Convert.ToString(ResultadoInt3) + "," + Convert.ToString(ResultadoInt4) + "," + Convert.ToString(ResultadoInt5) + "," + Convert.ToString(ResultadoInt6);
-
-
-
-                            break;
-                        case 8:
-
-
-
-                            ResultadoString = Convert.ToString(ResultadoInt) + "," + Convert.ToString(ResultadoInt1) + "," + Convert.ToString(ResultadoInt2) + "," + Convert.ToString(ResultadoInt3) + "," + Convert.ToString(ResultadoInt4) + "," + Convert.ToString(ResultadoInt5) + "," + Convert.ToString(ResultadoInt6) + "," + Convert.ToString(ResultadoInt7);
-
-
-                            break;
-                        case 9:
-
-
-
-                            ResultadoString = Convert.ToString(ResultadoInt) + "," + Convert.ToString(ResultadoInt1) + "," + Convert.ToString(ResultadoInt2) + "," + Convert.ToString(ResultadoInt3) + "," + Convert.ToString(ResultadoInt4) + "," + Convert.ToString(ResultadoInt5) + "," + Convert.ToString(ResultadoInt6) + "," + Convert.ToString(ResultadoInt7) + "," + Convert.ToString(ResultadoInt8);
-
-
-                            break;
-                        default:
-
-
-
-                            break;
-                    }
-
+                    Presion1 += 0;
 
                 }
 
@@ -1223,8 +1021,274 @@ namespace DragonGolfBackEnd.Controllers
                                             int Resultado18, int Resultado19)
         {
 
+            int[] ResultadoPresionFront = new int[10];
+
+            if (Resultado1 == 0)
+            {
+                ResultadoPresionFront[1] = 0;
+            }
+            else if (Resultado1 > 0)
+            {
+                ResultadoPresionFront[1] = 1;
+            }
+            else if (Resultado1 < 0)
+            {
+                ResultadoPresionFront[1] = -1;
+            }
+
+            if (Resultado2 == 0)
+            {
+                ResultadoPresionFront[2] = 0;
+            }
+            else if (Resultado2 > 0)
+            {
+                ResultadoPresionFront[2] = 0;
+            }
+            else if (Resultado2 < 0)
+            {
+                ResultadoPresionFront[2] = -1;
+            }
+
+            if (Resultado3 == 0)
+            {
+                ResultadoPresionFront[3] = 0;
+            }
+            else if (Resultado3 > 0)
+            {
+                ResultadoPresionFront[3] = 0;
+            }
+            else if (Resultado3 < 0)
+            {
+                ResultadoPresionFront[3] = -1;
+            }
+
+            if (Resultado4 == 0)
+            {
+                ResultadoPresionFront[4] = 0;
+            }
+            else if (Resultado4 > 0)
+            {
+                ResultadoPresionFront[4] = 0;
+            }
+            else if (Resultado4 < 0)
+            {
+                ResultadoPresionFront[4] = -1;
+            }
+
+            if (Resultado5 == 0)
+            {
+                ResultadoPresionFront[5] = 0;
+            }
+            else if (Resultado5 > 0)
+            {
+                ResultadoPresionFront[5] = 0;
+            }
+            else if (Resultado5 < 0)
+            {
+                ResultadoPresionFront[5] = -1;
+            }
+
+            if (Resultado6 == 0)
+            {
+                ResultadoPresionFront[6] = 0;
+            }
+            else if (Resultado6 > 0)
+            {
+                ResultadoPresionFront[6] = 0;
+            }
+            else if (Resultado6 < 0)
+            {
+                ResultadoPresionFront[6] = -1;
+            }
+
+            if (Resultado7 == 0)
+            {
+                ResultadoPresionFront[7] = 0;
+            }
+            else if (Resultado7 > 0)
+            {
+                ResultadoPresionFront[7] = 0;
+            }
+            else if (Resultado7 < 0)
+            {
+                ResultadoPresionFront[7] = -1;
+            }
+
+            if (Resultado8 == 0)
+            {
+                ResultadoPresionFront[8] = 0;
+            }
+            else if (Resultado8 > 0)
+            {
+                ResultadoPresionFront[8] = 0;
+            }
+            else if (Resultado8 < 0)
+            {
+                ResultadoPresionFront[8] = -1;
+            }
+
+            if (Resultado9 == 0)
+            {
+                ResultadoPresionFront[9] = 0;
+            }
+            else if (Resultado9 > 0)
+            {
+                ResultadoPresionFront[9] = 0;
+            }
+            else if (Resultado9 < 0)
+            {
+                ResultadoPresionFront[9] = -1;
+            }
+
+            string ResultadoString = "";
+            int ResultadoInt = 0;
+
+            int Presion1 = 0;
+
+            string PresionValor1 = "";
+            string PresionValor2 = "";
+            string PresionValor3 = "";
+            string PresionValor4 = "";
+
+            for (int i = 1; i < 10; i++)
+            {
+
+                if (ResultadoPresionFront[i] == 1)
+                {
+
+                    ResultadoInt += 1;
+                    Presion1 += 1;
+
+                    if (PresionValor1 != "")
+                    {
+                        int Presion = Convert.ToInt32(PresionValor1);
+                        Presion += 1;
+                        PresionValor1 = Convert.ToString(Presion);
+                    }
+
+                    if (PresionValor2 != "")
+                    {
+                        int Presion = Convert.ToInt32(PresionValor2);
+                        Presion += 1;
+                        PresionValor1 = Convert.ToString(Presion);
+                    }
+
+                    if (PresionValor3 != "")
+                    {
+                        int Presion = Convert.ToInt32(PresionValor3);
+                        Presion += 1;
+                        PresionValor1 = Convert.ToString(Presion);
+                    }
+
+                    if (PresionValor4 != "")
+                    {
+                        int Presion = Convert.ToInt32(PresionValor4);
+                        Presion += 1;
+                        PresionValor1 = Convert.ToString(Presion);
+                    }
+
+                    if (Presion1 == 3)
+                    {
+
+                        if (PresionValor1 == "")
+                        {
+                            PresionValor1 = "0";
+                            Presion1 = 0;
+                        }
+
+                        if (PresionValor2 == "")
+                        {
+                            PresionValor2 = "0";
+                            Presion1 = 0;
+                        }
+
+                        if (PresionValor3 == "")
+                        {
+                            PresionValor3 = "0";
+                            Presion1 = 0;
+                        }
+
+                        if (PresionValor4 == "")
+                        {
+                            PresionValor4 = "0";
+                            Presion1 = 0;
+                        }
+
+                    }
 
 
+
+                }
+                else if (ResultadoPresionFront[i] == -1)
+                {
+                    ResultadoInt -= 1;
+                    Presion1 -= 1;
+
+                    if (PresionValor1 != "")
+                    {
+                        int Presion = Convert.ToInt32(PresionValor1);
+                        Presion -= 1;
+                        PresionValor1 = Convert.ToString(Presion);
+                    }
+
+                    if (PresionValor2 != "")
+                    {
+                        int Presion = Convert.ToInt32(PresionValor2);
+                        Presion -= 1;
+                        PresionValor1 = Convert.ToString(Presion);
+                    }
+
+                    if (PresionValor3 != "")
+                    {
+                        int Presion = Convert.ToInt32(PresionValor3);
+                        Presion -= 1;
+                        PresionValor1 = Convert.ToString(Presion);
+                    }
+
+                    if (PresionValor4 != "")
+                    {
+                        int Presion = Convert.ToInt32(PresionValor4);
+                        Presion -= 1;
+                        PresionValor1 = Convert.ToString(Presion);
+                    }
+
+
+                    if (Presion1 == -3)
+                    {
+                        if (PresionValor1 == "")
+                        {
+                            PresionValor1 = "0";
+                            Presion1 = 0;
+                        }
+
+                        if (PresionValor2 == "")
+                        {
+                            PresionValor2 = "0";
+                            Presion1 = 0;
+                        }
+
+                        if (PresionValor3 == "")
+                        {
+                            PresionValor3 = "0";
+                            Presion1 = 0;
+                        }
+
+                        if (PresionValor4 == "")
+                        {
+                            PresionValor4 = "0";
+                            Presion1 = 0;
+                        }
+                    }
+                }
+                else
+                {
+
+                    ResultadoInt += 0;
+                    Presion1 += 0;
+
+                }
+
+            }
 
 
             return 0;
