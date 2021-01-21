@@ -210,6 +210,8 @@ namespace DragonGolfBackEnd.Controllers
                         PlayerID2 = Convert.ToInt32(row["PlayerID2"]);
                         AutoPress = Convert.ToInt32(row["AutoPress"]);
                         Adv = Convert.ToInt32(row["Adv"]);
+
+                       
                         DificultatHoyo1 = Convert.ToInt32(row["DificultatHoyo1"]);//7
                         DificultatHoyo2 = Convert.ToInt32(row["DificultatHoyo2"]);//1
                         DificultatHoyo3 = Convert.ToInt32(row["DificultatHoyo3"]);//8
@@ -228,6 +230,114 @@ namespace DragonGolfBackEnd.Controllers
                         DificultatHoyo16 = Convert.ToInt32(row["DificultatHoyo16"]);//17
                         DificultatHoyo17 = Convert.ToInt32(row["DificultatHoyo17"]);//18
                         DificultatHoyo18 = Convert.ToInt32(row["DificultatHoyo18"]);//12
+
+                        int Contador = 0;
+                        for (int i = 1; i < 18; i++)
+                        {
+                            Contador += 1;
+
+                            if (Contador <= Adv)
+                            {
+
+                               if (DificultatHoyo1 == i)
+                                {
+                                    ScoreHole1_P1 = -1;
+                                }
+
+                                if (DificultatHoyo2 == i)
+                                {
+                                    ScoreHole2_P1 = -1;
+                                }
+
+                                if (DificultatHoyo3 == i)
+                                {
+                                    ScoreHole3_P1 = -1;
+                                }
+
+                                if (DificultatHoyo4 == i)
+                                {
+                                    ScoreHole4_P1 = -1;
+                                }
+
+                                if (DificultatHoyo5 == i)
+                                {
+                                    ScoreHole5_P1 = -1;
+                                }
+
+                                if (DificultatHoyo6 == i)
+                                {
+                                    ScoreHole6_P1 = -1;
+                                }
+
+                                if (DificultatHoyo7 == i)
+                                {
+                                    ScoreHole7_P1 = -1;
+                                }
+
+                                if (DificultatHoyo8 == i)
+                                {
+                                    ScoreHole8_P1 = -1;
+                                }
+
+                                if (DificultatHoyo9 == i)
+                                {
+                                    ScoreHole1_P1 = -1;
+                                }
+
+                                if (DificultatHoyo10 == i)
+                                {
+                                    ScoreHole1_P1 = -1;
+                                }
+
+                                if (DificultatHoyo11 == i)
+                                {
+                                    ScoreHole1_P1 = -1;
+                                }
+
+                                if (DificultatHoyo12 == i)
+                                {
+                                    ScoreHole1_P1 = -1;
+                                }
+
+                                if (DificultatHoyo13 == i)
+                                {
+                                    ScoreHole13_P1 = -1;
+                                }
+
+                                if (DificultatHoyo14 == i)
+                                {
+                                    ScoreHole14_P1 = -1;
+                                }
+
+                                if (DificultatHoyo15 == i)
+                                {
+                                    ScoreHole15_P1 = -1;
+                                }
+
+                                if (DificultatHoyo16 == i)
+                                {
+                                    ScoreHole16_P1 = -1;
+                                }
+
+                                if (DificultatHoyo17 == i)
+                                {
+                                    ScoreHole17_P1 = -1;
+                                }
+
+                                if (DificultatHoyo18 == i)
+                                {
+                                    ScoreHole18_P1 = -1;
+                                }
+
+                               
+                            }
+                            else
+                            {
+                                break;
+                            }
+
+                        }
+
 
                         int Resultado1 = ScoreHole1_P1 - ScoreHole1_P2;
                         int Resultado2 = ScoreHole2_P1 - ScoreHole2_P2;
