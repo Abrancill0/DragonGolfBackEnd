@@ -197,6 +197,7 @@
     <Compile Include="Controllers\Holes\EliminarHolesController.cs" />
     <Compile Include="Controllers\Holes\ActualizarHolesController.cs" />
     <Compile Include="Controllers\Holes\AltaHolesController.cs" />
+    <Compile Include="Controllers\Holes\LastHoleController.cs" />
     <Compile Include="Controllers\Holes\ListaHoleController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\Invitaciones\EnvioNotificacionController.cs" />
@@ -229,6 +230,7 @@
     <Compile Include="Controllers\Tees\EliminarTeesController.cs" />
     <Compile Include="Controllers\Tees\ActualizarTeesController.cs" />
     <Compile Include="Controllers\Tees\AltaTeesController.cs" />
+    <Compile Include="Controllers\Tees\LastTeesController.cs" />
     <Compile Include="Controllers\Tees\ListaTeesController.cs" />
     <Compile Include="Controllers\Usuario\ListaJugadoresController.cs" />
     <Compile Include="Controllers\Usuario\RestablecerContrasenaController.cs" />

@@ -39,7 +39,9 @@ namespace DragonGolfBackEnd.Controllers
             public int BetD_Player2 { get; set; }
             public float BetD_MontoF9 { get; set; }
             public float BetD_MontoB9 { get; set; }
-            public float BetD_MachMonto { get; set; }
+            public float BetD_MontoCalculoF9 { get; set; }
+            public float BetD_MontoCalculoB9 { get; set; }
+             public float BetD_MachMonto { get; set; }
             public int BetD_DiferenciaHoyos { get; set; }
             public float BetD_MontoPerdidoGanado { get; set; }
             public float BetD_MontoApuestaMedal { get; set; }
@@ -124,6 +126,8 @@ namespace DragonGolfBackEnd.Controllers
                                 BetD_Player2 = Convert.ToInt32(row["BetD_Player2"]),
                                 BetD_MontoF9 = Convert.ToSingle(row["BetD_MontoF9"]),
                                 BetD_MontoB9 = Convert.ToSingle(row["BetD_MontoB9"]),
+                                BetD_MontoCalculoF9 = Convert.ToSingle(row["BetD_MontoCalculoF9"]),
+                                BetD_MontoCalculoB9 = Convert.ToSingle(row["BetD_MontoCalculoB9"]),
                                 BetD_DiferenciaHoyos = Convert.ToInt32(row["BetD_DiferenciaHoyos"]),
                                 BetD_MontoPerdidoGanado = Convert.ToSingle(row["BetD_MontoPerdidoGanado"]),
                                 BetD_MontoApuestaMedal = Convert.ToSingle(row["BetD_MontoApuestaMedal"]),
@@ -153,7 +157,6 @@ namespace DragonGolfBackEnd.Controllers
                                 BetD_B9_7 = Convert.ToInt32(row["BetD_Division"]),
                                 BetD_B9_8 = Convert.ToInt32(row["BetD_Division"]),
                                 BetD_B9_9 = Convert.ToInt32(row["BetD_Division"]),
-
                             };
 
                             lista.Add(ent);

@@ -98,10 +98,16 @@ namespace DragonGolfBackEnd.Controllers
                 comando.Parameters.Add("@Pass", SqlDbType.VarChar);
                 comando.Parameters.Add("@usu_token", SqlDbType.VarChar);
 
+                string token = "";
+                if  (Datos.usu_token != null)
+                {
+                    token = Datos.usu_token;
+                }
+
                 //Asignacion de valores a parametros
                 comando.Parameters["@Usuario"].Value = Datos.Usuario;
                 comando.Parameters["@Pass"].Value = Datos.Pass;
-                comando.Parameters["@usu_token"].Value = Datos.usu_token;
+                comando.Parameters["@usu_token"].Value = token;
 
                 comando.Connection = new SqlConnection(VariablesGlobales.CadenaConexion);
                 comando.CommandTimeout = 0;
