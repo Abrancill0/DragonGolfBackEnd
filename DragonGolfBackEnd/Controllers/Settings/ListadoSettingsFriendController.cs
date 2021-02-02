@@ -159,7 +159,7 @@ namespace DragonGolfBackEnd.Controllers
                                 set_stableford_par = Convert.ToInt32(row["set_stableford_par"]),
                                 set_stableford_bogey = Convert.ToInt32(row["set_stableford_bogey"]),
                                 set_stableford_double_bogey = Convert.ToInt32(row["set_stableford_double_bogey"]),
-                                set_golpesventaja = Convert.ToInt32(row["set_golpesventaja"]),
+                                set_golpesventaja = Convert.ToDecimal(row["set_golpesventaja"]),
                                 set_diferenciatee = Convert.ToInt32(row["set_diferenciatee"]),
                             };
 

@@ -115,7 +115,7 @@ namespace DragonGolfBackEnd.Controllers
                 comando.Parameters.Add("@set_stableford_par", SqlDbType.Int);
                 comando.Parameters.Add("@set_stableford_bogey", SqlDbType.Int);
                 comando.Parameters.Add("@set_stableford_double_bogey", SqlDbType.Int);
-                comando.Parameters.Add("@set_golpesventaja", SqlDbType.Int);
+                comando.Parameters.Add("@set_golpesventaja", SqlDbType.Decimal);
                 comando.Parameters.Add("@set_diferenciatee", SqlDbType.Int);
 
 
