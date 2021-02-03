@@ -520,7 +520,7 @@ namespace DragonGolfBackEnd.Controllers
             }
             else if (Resultado2 > 0)
             {
-                ResultadoPresionFront[2] = 0;
+                ResultadoPresionFront[2] = 1;
             }
             else if (Resultado2 < 0)
             {
@@ -533,7 +533,7 @@ namespace DragonGolfBackEnd.Controllers
             }
             else if (Resultado3 > 0)
             {
-                ResultadoPresionFront[3] = 0;
+                ResultadoPresionFront[3] = 1;
             }
             else if (Resultado3 < 0)
             {
@@ -546,7 +546,7 @@ namespace DragonGolfBackEnd.Controllers
             }
             else if (Resultado4 > 0)
             {
-                ResultadoPresionFront[4] = 0;
+                ResultadoPresionFront[4] = 1;
             }
             else if (Resultado4 < 0)
             {
@@ -559,7 +559,7 @@ namespace DragonGolfBackEnd.Controllers
             }
             else if (Resultado5 > 0)
             {
-                ResultadoPresionFront[5] = 0;
+                ResultadoPresionFront[5] = 1;
             }
             else if (Resultado5 < 0)
             {
@@ -572,7 +572,7 @@ namespace DragonGolfBackEnd.Controllers
             }
             else if (Resultado6 > 0)
             {
-                ResultadoPresionFront[6] = 0;
+                ResultadoPresionFront[6] = 1;
             }
             else if (Resultado6 < 0)
             {
@@ -585,7 +585,7 @@ namespace DragonGolfBackEnd.Controllers
             }
             else if (Resultado7 > 0)
             {
-                ResultadoPresionFront[7] = 0;
+                ResultadoPresionFront[7] = 1;
             }
             else if (Resultado7 < 0)
             {
@@ -598,7 +598,7 @@ namespace DragonGolfBackEnd.Controllers
             }
             else if (Resultado8 > 0)
             {
-                ResultadoPresionFront[8] = 0;
+                ResultadoPresionFront[8] = 1;
             }
             else if (Resultado8 < 0)
             {
@@ -611,7 +611,7 @@ namespace DragonGolfBackEnd.Controllers
             }
             else if (Resultado9 > 0)
             {
-                ResultadoPresionFront[9] = 0;
+                ResultadoPresionFront[9] = 1;
             }
             else if (Resultado9 < 0)
             {
