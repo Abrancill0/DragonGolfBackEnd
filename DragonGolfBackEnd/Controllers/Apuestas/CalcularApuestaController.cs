@@ -339,24 +339,24 @@ namespace DragonGolfBackEnd.Controllers
                         }
 
 
-                        int Resultado1 = ScoreHole1_P1 - ScoreHole1_P2;
-                        int Resultado2 = ScoreHole2_P1 - ScoreHole2_P2;
-                        int Resultado3 = ScoreHole3_P1 - ScoreHole3_P2;
-                        int Resultado4 = ScoreHole4_P1 - ScoreHole4_P2;
-                        int Resultado5 = ScoreHole5_P1 - ScoreHole5_P2;
-                        int Resultado6 = ScoreHole6_P1 - ScoreHole6_P2;
-                        int Resultado7 = ScoreHole7_P1 - ScoreHole7_P2;
-                        int Resultado8 = ScoreHole8_P1 - ScoreHole8_P2;
-                        int Resultado9 = ScoreHole9_P1 - ScoreHole9_P2;
-                        int Resultado10 = ScoreHole10_P1 - ScoreHole10_P2;
-                        int Resultado11 = ScoreHole11_P1 - ScoreHole11_P2;
-                        int Resultado12 = ScoreHole12_P1 - ScoreHole12_P2;
-                        int Resultado13 = ScoreHole13_P1 - ScoreHole13_P2;
-                        int Resultado14 = ScoreHole14_P1 - ScoreHole14_P2;
-                        int Resultado15 = ScoreHole15_P1 - ScoreHole15_P2;
-                        int Resultado16 = ScoreHole16_P1 - ScoreHole16_P2;
-                        int Resultado17 = ScoreHole17_P1 - ScoreHole17_P2;
-                        int Resultado18 = ScoreHole18_P1 - ScoreHole18_P2;
+                        int Resultado1 = ScoreHole1_P2 - ScoreHole1_P1;
+                        int Resultado2 = ScoreHole2_P2 - ScoreHole2_P1;
+                        int Resultado3 = ScoreHole3_P2 - ScoreHole3_P1;
+                        int Resultado4 = ScoreHole4_P2 - ScoreHole4_P1;
+                        int Resultado5 = ScoreHole5_P2 - ScoreHole5_P1;
+                        int Resultado6 = ScoreHole6_P2 - ScoreHole6_P1;
+                        int Resultado7 = ScoreHole7_P2 - ScoreHole7_P1;
+                        int Resultado8 = ScoreHole8_P2 - ScoreHole8_P1;
+                        int Resultado9 = ScoreHole9_P2 - ScoreHole9_P1;
+                        int Resultado10 = ScoreHole10_P2 - ScoreHole10_P1;
+                        int Resultado11 = ScoreHole11_P2 - ScoreHole11_P1;
+                        int Resultado12 = ScoreHole12_P2 - ScoreHole12_P1;
+                        int Resultado13 = ScoreHole13_P2 - ScoreHole13_P1;
+                        int Resultado14 = ScoreHole14_P2 - ScoreHole14_P1;
+                        int Resultado15 = ScoreHole15_P2 - ScoreHole15_P1;
+                        int Resultado16 = ScoreHole16_P2 - ScoreHole16_P1;
+                        int Resultado17 = ScoreHole17_P2 - ScoreHole17_P1;
+                        int Resultado18 = ScoreHole18_P2 - ScoreHole18_P1;
 
                         string BetD_F9_1 = "";
                         string BetD_F9_2 = "";
@@ -426,10 +426,12 @@ namespace DragonGolfBackEnd.Controllers
                             BetD_F9_2 = Convert.ToString(FrontValores[1]);
                             BetD_F9_3 = Convert.ToString(FrontValores[2]);
                             BetD_F9_4 = Convert.ToString(FrontValores[3]);
+                            BetD_F9_5 = Convert.ToString(FrontValores[4]);
                             BetD_B9_1 = Convert.ToString(BackValores[0]);
                             BetD_B9_2 = Convert.ToString(BackValores[1]);
                             BetD_B9_3 = Convert.ToString(BackValores[2]);
                             BetD_B9_4 = Convert.ToString(BackValores[3]);
+                            BetD_B9_5 = Convert.ToString(BackValores[4]);
 
                             ActualizarAPuesta(Datos.IDBet, Datos.IDRonda, PlayerID1, PlayerID2, BetD_F9_1, BetD_F9_2, BetD_F9_3, BetD_F9_4, BetD_F9_5, BetD_F9_6,
                                               BetD_F9_7, BetD_F9_8,BetD_F9_9,BetD_B9_1,BetD_B9_2,BetD_B9_3, BetD_B9_4, BetD_B9_5,BetD_B9_6,BetD_B9_7,BetD_B9_8,BetD_B9_9);
@@ -456,6 +458,13 @@ namespace DragonGolfBackEnd.Controllers
 
                             ActualizarAPuesta(Datos.IDBet, Datos.IDRonda, PlayerID1, PlayerID2, BetD_F9_1, BetD_F9_2, BetD_F9_3, BetD_F9_4, BetD_F9_5, BetD_F9_6,
                                              BetD_F9_7, BetD_F9_8, BetD_F9_9, BetD_B9_1, BetD_B9_2, BetD_B9_3, BetD_B9_4, BetD_B9_5, BetD_B9_6, BetD_B9_7, BetD_B9_8, BetD_B9_9);
+                        }
+                        else
+                        {
+
+                            ActualizarAPuesta(Datos.IDBet, Datos.IDRonda, PlayerID1, PlayerID2, Convert.ToString(Resultado1), Convert.ToString(Resultado2), Convert.ToString(Resultado3), Convert.ToString(Resultado4), Convert.ToString(Resultado5), Convert.ToString(Resultado6),
+                                            Convert.ToString(Resultado7), Convert.ToString(Resultado8), Convert.ToString(Resultado9), Convert.ToString(Resultado10), Convert.ToString(Resultado11), Convert.ToString(Resultado12), Convert.ToString(Resultado13), Convert.ToString(Resultado14), Convert.ToString(Resultado15), Convert.ToString(Resultado16), Convert.ToString(Resultado17), Convert.ToString(Resultado18));
+
                         }
 
                     }
@@ -1450,7 +1459,7 @@ namespace DragonGolfBackEnd.Controllers
             }
             else if (Resultado2 > 0)
             {
-                ResultadoPresionFront[2] = 0;
+                ResultadoPresionFront[2] = 1;
             }
             else if (Resultado2 < 0)
             {
@@ -1463,7 +1472,7 @@ namespace DragonGolfBackEnd.Controllers
             }
             else if (Resultado3 > 0)
             {
-                ResultadoPresionFront[3] = 0;
+                ResultadoPresionFront[3] = 1;
             }
             else if (Resultado3 < 0)
             {
@@ -1476,7 +1485,7 @@ namespace DragonGolfBackEnd.Controllers
             }
             else if (Resultado4 > 0)
             {
-                ResultadoPresionFront[4] = 0;
+                ResultadoPresionFront[4] = 1;
             }
             else if (Resultado4 < 0)
             {
@@ -1489,7 +1498,7 @@ namespace DragonGolfBackEnd.Controllers
             }
             else if (Resultado5 > 0)
             {
-                ResultadoPresionFront[5] = 0;
+                ResultadoPresionFront[5] = 1;
             }
             else if (Resultado5 < 0)
             {
@@ -1502,7 +1511,7 @@ namespace DragonGolfBackEnd.Controllers
             }
             else if (Resultado6 > 0)
             {
-                ResultadoPresionFront[6] = 0;
+                ResultadoPresionFront[6] = 1;
             }
             else if (Resultado6 < 0)
             {
@@ -1515,7 +1524,7 @@ namespace DragonGolfBackEnd.Controllers
             }
             else if (Resultado7 > 0)
             {
-                ResultadoPresionFront[7] = 0;
+                ResultadoPresionFront[7] = 1;
             }
             else if (Resultado7 < 0)
             {
@@ -1528,7 +1537,7 @@ namespace DragonGolfBackEnd.Controllers
             }
             else if (Resultado8 > 0)
             {
-                ResultadoPresionFront[8] = 0;
+                ResultadoPresionFront[8] = 1;
             }
             else if (Resultado8 < 0)
             {
@@ -1541,7 +1550,7 @@ namespace DragonGolfBackEnd.Controllers
             }
             else if (Resultado9 > 0)
             {
-                ResultadoPresionFront[9] = 0;
+                ResultadoPresionFront[9] = 1;
             }
             else if (Resultado9 < 0)
             {
@@ -1557,6 +1566,7 @@ namespace DragonGolfBackEnd.Controllers
             string PresionValor2 = "";
             string PresionValor3 = "";
             string PresionValor4 = "";
+            string PresionValor5 = "";
 
             for (int i = 1; i < 10; i++)
             {
@@ -1578,21 +1588,28 @@ namespace DragonGolfBackEnd.Controllers
                     {
                         int Presion = Convert.ToInt32(PresionValor2);
                         Presion += 1;
-                        PresionValor1 = Convert.ToString(Presion);
+                        PresionValor2 = Convert.ToString(Presion);
                     }
 
                     if (PresionValor3 != "")
                     {
                         int Presion = Convert.ToInt32(PresionValor3);
                         Presion += 1;
-                        PresionValor1 = Convert.ToString(Presion);
+                        PresionValor3 = Convert.ToString(Presion);
                     }
 
                     if (PresionValor4 != "")
                     {
                         int Presion = Convert.ToInt32(PresionValor4);
                         Presion += 1;
-                        PresionValor1 = Convert.ToString(Presion);
+                        PresionValor4 = Convert.ToString(Presion);
+                    }
+
+                    if (PresionValor5 != "")
+                    {
+                        int Presion = Convert.ToInt32(PresionValor5);
+                        Presion += 1;
+                        PresionValor5 = Convert.ToString(Presion);
                     }
 
                     if (Presion1 == 2)
@@ -1602,24 +1619,36 @@ namespace DragonGolfBackEnd.Controllers
                         {
                             PresionValor1 = "0";
                             Presion1 = 0;
+
+                            continue;
                         }
 
-                        if (PresionValor2 == "")
+                        if (PresionValor2 == "" && PresionValor1 !="")
                         {
                             PresionValor2 = "0";
                             Presion1 = 0;
+                            continue;
                         }
 
-                        if (PresionValor3 == "")
+                        if (PresionValor3 == "" && PresionValor1 != "" && PresionValor2 != "")
                         {
                             PresionValor3 = "0";
                             Presion1 = 0;
+                            continue;
                         }
 
-                        if (PresionValor4 == "")
+                        if (PresionValor4 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "")
                         {
                             PresionValor4 = "0";
                             Presion1 = 0;
+                            continue;
+                        }
+
+                        if (PresionValor5 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "")
+                        {
+                            PresionValor5 = "0";
+                            Presion1 = 0;
+                            continue;
                         }
 
                     }
@@ -1643,21 +1672,28 @@ namespace DragonGolfBackEnd.Controllers
                     {
                         int Presion = Convert.ToInt32(PresionValor2);
                         Presion -= 1;
-                        PresionValor1 = Convert.ToString(Presion);
+                        PresionValor2 = Convert.ToString(Presion);
                     }
 
                     if (PresionValor3 != "")
                     {
                         int Presion = Convert.ToInt32(PresionValor3);
                         Presion -= 1;
-                        PresionValor1 = Convert.ToString(Presion);
+                        PresionValor3 = Convert.ToString(Presion);
                     }
 
                     if (PresionValor4 != "")
                     {
                         int Presion = Convert.ToInt32(PresionValor4);
                         Presion -= 1;
-                        PresionValor1 = Convert.ToString(Presion);
+                        PresionValor4 = Convert.ToString(Presion);
+                    }
+
+                    if (PresionValor5 != "")
+                    {
+                        int Presion = Convert.ToInt32(PresionValor5);
+                        Presion -= 1;
+                        PresionValor5 = Convert.ToString(Presion);
                     }
 
 
@@ -1667,24 +1703,35 @@ namespace DragonGolfBackEnd.Controllers
                         {
                             PresionValor1 = "0";
                             Presion1 = 0;
+                            continue;
                         }
 
-                        if (PresionValor2 == "")
+                        if (PresionValor2 == "" && PresionValor1 != "")
                         {
                             PresionValor2 = "0";
                             Presion1 = 0;
+                            continue;
                         }
 
-                        if (PresionValor3 == "")
+                        if (PresionValor3 == "" && PresionValor1 != "" && PresionValor2 != "")
                         {
                             PresionValor3 = "0";
                             Presion1 = 0;
+                            continue;
                         }
 
-                        if (PresionValor4 == "")
+                        if (PresionValor4 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "")
                         {
                             PresionValor4 = "0";
                             Presion1 = 0;
+                            continue;
+                        }
+
+                        if (PresionValor5 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "")
+                        {
+                            PresionValor5 = "0";
+                            Presion1 = 0;
+                            continue;
                         }
                     }
                 }
@@ -1698,7 +1745,7 @@ namespace DragonGolfBackEnd.Controllers
 
             }
 
-            ResultadoString = Convert.ToString(ResultadoInt) + "," + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4;
+            ResultadoString = Convert.ToString(ResultadoInt) + "," + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5;
 
             return ResultadoString;
         }
@@ -1727,7 +1774,7 @@ namespace DragonGolfBackEnd.Controllers
             }
             else if (Resultado10 > 0)
             {
-                ResultadoPresionBack[2] = 0;
+                ResultadoPresionBack[2] = 1;
             }
             else if (Resultado10 < 0)
             {
@@ -1740,7 +1787,7 @@ namespace DragonGolfBackEnd.Controllers
             }
             else if (Resultado12 > 0)
             {
-                ResultadoPresionBack[3] = 0;
+                ResultadoPresionBack[3] = 1;
             }
             else if (Resultado12 < 0)
             {
@@ -1753,7 +1800,7 @@ namespace DragonGolfBackEnd.Controllers
             }
             else if (Resultado13 > 0)
             {
-                ResultadoPresionBack[4] = 0;
+                ResultadoPresionBack[4] = 1;
             }
             else if (Resultado13 < 0)
             {
@@ -1766,7 +1813,7 @@ namespace DragonGolfBackEnd.Controllers
             }
             else if (Resultado14 > 0)
             {
-                ResultadoPresionBack[5] = 0;
+                ResultadoPresionBack[5] = 1;
             }
             else if (Resultado14 < 0)
             {
@@ -1779,7 +1826,7 @@ namespace DragonGolfBackEnd.Controllers
             }
             else if (Resultado15 > 0)
             {
-                ResultadoPresionBack[6] = 0;
+                ResultadoPresionBack[6] = 1;
             }
             else if (Resultado15 < 0)
             {
@@ -1792,7 +1839,7 @@ namespace DragonGolfBackEnd.Controllers
             }
             else if (Resultado16 > 0)
             {
-                ResultadoPresionBack[7] = 0;
+                ResultadoPresionBack[7] = 1;
             }
             else if (Resultado16 < 0)
             {
@@ -1805,7 +1852,7 @@ namespace DragonGolfBackEnd.Controllers
             }
             else if (Resultado17 > 0)
             {
-                ResultadoPresionBack[8] = 0;
+                ResultadoPresionBack[8] = 1;
             }
             else if (Resultado17 < 0)
             {
@@ -1818,7 +1865,7 @@ namespace DragonGolfBackEnd.Controllers
             }
             else if (Resultado18 > 0)
             {
-                ResultadoPresionBack[9] = 0;
+                ResultadoPresionBack[9] = 1;
             }
             else if (Resultado18 < 0)
             {
@@ -1834,6 +1881,7 @@ namespace DragonGolfBackEnd.Controllers
             string PresionValor2 = "";
             string PresionValor3 = "";
             string PresionValor4 = "";
+            string PresionValor5 = "";
 
             for (int i = 1; i < 10; i++)
             {
@@ -1872,6 +1920,14 @@ namespace DragonGolfBackEnd.Controllers
                         PresionValor1 = Convert.ToString(Presion);
                     }
 
+                    if (PresionValor5 != "")
+                    {
+                        int Presion = Convert.ToInt32(PresionValor5);
+                        Presion += 1;
+                        PresionValor5 = Convert.ToString(Presion);
+                    }
+
+
                     if (Presion1 == 2)
                     {
 
@@ -1879,24 +1935,39 @@ namespace DragonGolfBackEnd.Controllers
                         {
                             PresionValor1 = "0";
                             Presion1 = 0;
+
+                            continue;
                         }
 
-                        if (PresionValor2 == "")
+                        if (PresionValor2 == "" && PresionValor1 != "" && PresionValor2 != "")
                         {
                             PresionValor2 = "0";
                             Presion1 = 0;
+
+                            continue;
                         }
 
-                        if (PresionValor3 == "")
+                        if (PresionValor3 == "" && PresionValor1 != "" && PresionValor2 != "" )
                         {
                             PresionValor3 = "0";
                             Presion1 = 0;
+
+                            continue;
                         }
 
-                        if (PresionValor4 == "")
+                        if (PresionValor4 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "")
                         {
                             PresionValor4 = "0";
                             Presion1 = 0;
+
+                            continue;
+                        }
+
+                        if (PresionValor5 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "")
+                        {
+                            PresionValor5 = "0";
+                            Presion1 = 0;
+                            continue;
                         }
 
                     }
@@ -1944,24 +2015,35 @@ namespace DragonGolfBackEnd.Controllers
                         {
                             PresionValor1 = "0";
                             Presion1 = 0;
+                            continue;
                         }
 
-                        if (PresionValor2 == "")
+                        if (PresionValor2 == "" && PresionValor1 != "" )
                         {
                             PresionValor2 = "0";
                             Presion1 = 0;
+                            continue;
                         }
 
-                        if (PresionValor3 == "")
+                        if (PresionValor3 == "" && PresionValor1 != "" && PresionValor2 != "")
                         {
                             PresionValor3 = "0";
                             Presion1 = 0;
+                            continue;
                         }
 
-                        if (PresionValor4 == "")
+                        if (PresionValor4 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "")
                         {
                             PresionValor4 = "0";
                             Presion1 = 0;
+                            continue;
+                        }
+
+                        if (PresionValor5 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "")
+                        {
+                            PresionValor5 = "0";
+                            Presion1 = 0;
+                            continue;
                         }
                     }
                 }
@@ -1975,7 +2057,7 @@ namespace DragonGolfBackEnd.Controllers
 
             }
 
-            ResultadoString = Convert.ToString(ResultadoInt) + "," + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4;
+            ResultadoString = Convert.ToString(ResultadoInt) + "," + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5;
 
             return ResultadoString;
         }
@@ -2004,7 +2086,7 @@ namespace DragonGolfBackEnd.Controllers
             }
             else if (Resultado2 > 0)
             {
-                ResultadoPresionFront[2] = 0;
+                ResultadoPresionFront[2] = 1;
             }
             else if (Resultado2 < 0)
             {
@@ -2017,7 +2099,7 @@ namespace DragonGolfBackEnd.Controllers
             }
             else if (Resultado3 > 0)
             {
-                ResultadoPresionFront[3] = 0;
+                ResultadoPresionFront[3] = 1;
             }
             else if (Resultado3 < 0)
             {
@@ -2030,7 +2112,7 @@ namespace DragonGolfBackEnd.Controllers
             }
             else if (Resultado4 > 0)
             {
-                ResultadoPresionFront[4] = 0;
+                ResultadoPresionFront[4] = 1;
             }
             else if (Resultado4 < 0)
             {
@@ -2043,7 +2125,7 @@ namespace DragonGolfBackEnd.Controllers
             }
             else if (Resultado5 > 0)
             {
-                ResultadoPresionFront[5] = 0;
+                ResultadoPresionFront[5] = 1;
             }
             else if (Resultado5 < 0)
             {
@@ -2056,7 +2138,7 @@ namespace DragonGolfBackEnd.Controllers
             }
             else if (Resultado6 > 0)
             {
-                ResultadoPresionFront[6] = 0;
+                ResultadoPresionFront[6] = 1;
             }
             else if (Resultado6 < 0)
             {
@@ -2069,7 +2151,7 @@ namespace DragonGolfBackEnd.Controllers
             }
             else if (Resultado7 > 0)
             {
-                ResultadoPresionFront[7] = 0;
+                ResultadoPresionFront[7] = 1;
             }
             else if (Resultado7 < 0)
             {
@@ -2082,7 +2164,7 @@ namespace DragonGolfBackEnd.Controllers
             }
             else if (Resultado8 > 0)
             {
-                ResultadoPresionFront[8] = 0;
+                ResultadoPresionFront[8] = 1;
             }
             else if (Resultado8 < 0)
             {
@@ -2095,7 +2177,7 @@ namespace DragonGolfBackEnd.Controllers
             }
             else if (Resultado9 > 0)
             {
-                ResultadoPresionFront[9] = 0;
+                ResultadoPresionFront[9] = 1;
             }
             else if (Resultado9 < 0)
             {
@@ -2132,22 +2214,22 @@ namespace DragonGolfBackEnd.Controllers
                     {
                         int Presion = Convert.ToInt32(PresionValor2);
                         Presion += 1;
-                        PresionValor1 = Convert.ToString(Presion);
+                        PresionValor2 = Convert.ToString(Presion);
                     }
 
                     if (PresionValor3 != "")
                     {
                         int Presion = Convert.ToInt32(PresionValor3);
                         Presion += 1;
-                        PresionValor1 = Convert.ToString(Presion);
+                        PresionValor3 = Convert.ToString(Presion);
                     }
 
-                    if (PresionValor4 != "")
-                    {
-                        int Presion = Convert.ToInt32(PresionValor4);
-                        Presion += 1;
-                        PresionValor1 = Convert.ToString(Presion);
-                    }
+                    //if (PresionValor4 != "")
+                    //{
+                    //    int Presion = Convert.ToInt32(PresionValor4);
+                    //    Presion += 1;
+                    //    PresionValor4 = Convert.ToString(Presion);
+                    //}
 
                     if (Presion1 == 3)
                     {
@@ -2156,25 +2238,27 @@ namespace DragonGolfBackEnd.Controllers
                         {
                             PresionValor1 = "0";
                             Presion1 = 0;
+
+                            continue;
                         }
 
-                        if (PresionValor2 == "")
+                        if (PresionValor2 == "" && PresionValor1 !="")
                         {
                             PresionValor2 = "0";
                             Presion1 = 0;
+
+                            continue;
                         }
 
-                        if (PresionValor3 == "")
+                        if (PresionValor3 == "" && PresionValor1 != "" && PresionValor2 != "")
                         {
                             PresionValor3 = "0";
                             Presion1 = 0;
+
+                            continue;
                         }
 
-                        if (PresionValor4 == "")
-                        {
-                            PresionValor4 = "0";
-                            Presion1 = 0;
-                        }
+                       
 
                     }
 
@@ -2197,22 +2281,22 @@ namespace DragonGolfBackEnd.Controllers
                     {
                         int Presion = Convert.ToInt32(PresionValor2);
                         Presion -= 1;
-                        PresionValor1 = Convert.ToString(Presion);
+                        PresionValor2 = Convert.ToString(Presion);
                     }
 
                     if (PresionValor3 != "")
                     {
                         int Presion = Convert.ToInt32(PresionValor3);
                         Presion -= 1;
-                        PresionValor1 = Convert.ToString(Presion);
+                        PresionValor2 = Convert.ToString(Presion);
                     }
 
-                    if (PresionValor4 != "")
-                    {
-                        int Presion = Convert.ToInt32(PresionValor4);
-                        Presion -= 1;
-                        PresionValor1 = Convert.ToString(Presion);
-                    }
+                    //if (PresionValor4 != "")
+                    //{
+                    //    int Presion = Convert.ToInt32(PresionValor4);
+                    //    Presion -= 1;
+                    //    PresionValor1 = Convert.ToString(Presion);
+                    //}
 
 
                     if (Presion1 == -3)
@@ -2221,25 +2305,26 @@ namespace DragonGolfBackEnd.Controllers
                         {
                             PresionValor1 = "0";
                             Presion1 = 0;
+
+                            continue;
                         }
 
-                        if (PresionValor2 == "")
+                        if (PresionValor2 == "" && PresionValor1 != "")
                         {
                             PresionValor2 = "0";
                             Presion1 = 0;
+
+                            continue;
                         }
 
-                        if (PresionValor3 == "")
+                        if (PresionValor3 == "" && PresionValor1 != "" && PresionValor2 != "")
                         {
                             PresionValor3 = "0";
                             Presion1 = 0;
+                            continue;
                         }
 
-                        if (PresionValor4 == "")
-                        {
-                            PresionValor4 = "0";
-                            Presion1 = 0;
-                        }
+                       
                     }
                 }
                 else
@@ -2282,7 +2367,7 @@ namespace DragonGolfBackEnd.Controllers
             }
             else if (Resultado11 > 0)
             {
-                ResultadoPresionBack[2] = 0;
+                ResultadoPresionBack[2] = 1;
             }
             else if (Resultado11 < 0)
             {
@@ -2295,7 +2380,7 @@ namespace DragonGolfBackEnd.Controllers
             }
             else if (Resultado12 > 0)
             {
-                ResultadoPresionBack[3] = 0;
+                ResultadoPresionBack[3] = 1;
             }
             else if (Resultado12 < 0)
             {
@@ -2308,7 +2393,7 @@ namespace DragonGolfBackEnd.Controllers
             }
             else if (Resultado13 > 0)
             {
-                ResultadoPresionBack[4] = 0;
+                ResultadoPresionBack[4] = 1;
             }
             else if (Resultado13 < 0)
             {
@@ -2321,7 +2406,7 @@ namespace DragonGolfBackEnd.Controllers
             }
             else if (Resultado14 > 0)
             {
-                ResultadoPresionBack[5] = 0;
+                ResultadoPresionBack[5] = 1;
             }
             else if (Resultado14 < 0)
             {
@@ -2334,7 +2419,7 @@ namespace DragonGolfBackEnd.Controllers
             }
             else if (Resultado15 > 0)
             {
-                ResultadoPresionBack[6] = 0;
+                ResultadoPresionBack[6] = 1;
             }
             else if (Resultado15 < 0)
             {
@@ -2347,7 +2432,7 @@ namespace DragonGolfBackEnd.Controllers
             }
             else if (Resultado16 > 0)
             {
-                ResultadoPresionBack[7] = 0;
+                ResultadoPresionBack[7] = 1;
             }
             else if (Resultado16 < 0)
             {
@@ -2360,7 +2445,7 @@ namespace DragonGolfBackEnd.Controllers
             }
             else if (Resultado17 > 0)
             {
-                ResultadoPresionBack[8] = 0;
+                ResultadoPresionBack[8] = 1;
             }
             else if (Resultado17 < 0)
             {
@@ -2373,7 +2458,7 @@ namespace DragonGolfBackEnd.Controllers
             }
             else if (Resultado18 > 0)
             {
-                ResultadoPresionBack[9] = 0;
+                ResultadoPresionBack[9] = 1;
             }
             else if (Resultado18 < 0)
             {
@@ -2389,6 +2474,7 @@ namespace DragonGolfBackEnd.Controllers
             string PresionValor2 = "";
             string PresionValor3 = "";
             string PresionValor4 = "";
+            //string PresionValor5 = "";
 
             for (int i = 1; i < 10; i++)
             {
@@ -2547,24 +2633,24 @@ namespace DragonGolfBackEnd.Controllers
             comando.Parameters.Add("@IDRonda", SqlDbType.Int);
             comando.Parameters.Add("@BetD_Player1", SqlDbType.Int);
             comando.Parameters.Add("@BetD_Player2", SqlDbType.Int);
-            comando.Parameters.Add("@BetD_F9_1", SqlDbType.Int);
-            comando.Parameters.Add("@BetD_F9_2", SqlDbType.Int);
-            comando.Parameters.Add("@BetD_F9_3", SqlDbType.Int);
-            comando.Parameters.Add("@BetD_F9_4", SqlDbType.Int);
-            comando.Parameters.Add("@BetD_F9_5", SqlDbType.Int);
-            comando.Parameters.Add("@BetD_F9_6", SqlDbType.Int);
-            comando.Parameters.Add("@BetD_F9_7", SqlDbType.Int);
-            comando.Parameters.Add("@BetD_F9_8", SqlDbType.Int);
-            comando.Parameters.Add("@BetD_F9_9", SqlDbType.Int);
-            comando.Parameters.Add("@BetD_B9_1", SqlDbType.Int);
-            comando.Parameters.Add("@BetD_B9_2", SqlDbType.Int);
-            comando.Parameters.Add("@BetD_B9_3", SqlDbType.Int);
-            comando.Parameters.Add("@BetD_B9_4", SqlDbType.Int);
-            comando.Parameters.Add("@BetD_B9_5", SqlDbType.Int);
-            comando.Parameters.Add("@BetD_B9_6", SqlDbType.Int);
-            comando.Parameters.Add("@BetD_B9_7", SqlDbType.Int);
-            comando.Parameters.Add("@BetD_B9_8", SqlDbType.Int);
-            comando.Parameters.Add("@BetD_B9_9", SqlDbType.Int);
+            comando.Parameters.Add("@BetD_F9_1", SqlDbType.VarChar);
+            comando.Parameters.Add("@BetD_F9_2", SqlDbType.VarChar);
+            comando.Parameters.Add("@BetD_F9_3", SqlDbType.VarChar);
+            comando.Parameters.Add("@BetD_F9_4", SqlDbType.VarChar);
+            comando.Parameters.Add("@BetD_F9_5", SqlDbType.VarChar);
+            comando.Parameters.Add("@BetD_F9_6", SqlDbType.VarChar);
+            comando.Parameters.Add("@BetD_F9_7", SqlDbType.VarChar);
+            comando.Parameters.Add("@BetD_F9_8", SqlDbType.VarChar);
+            comando.Parameters.Add("@BetD_F9_9", SqlDbType.VarChar);
+            comando.Parameters.Add("@BetD_B9_1", SqlDbType.VarChar);
+            comando.Parameters.Add("@BetD_B9_2", SqlDbType.VarChar);
+            comando.Parameters.Add("@BetD_B9_3", SqlDbType.VarChar);
+            comando.Parameters.Add("@BetD_B9_4", SqlDbType.VarChar);
+            comando.Parameters.Add("@BetD_B9_5", SqlDbType.VarChar);
+            comando.Parameters.Add("@BetD_B9_6", SqlDbType.VarChar);
+            comando.Parameters.Add("@BetD_B9_7", SqlDbType.VarChar);
+            comando.Parameters.Add("@BetD_B9_8", SqlDbType.VarChar);
+            comando.Parameters.Add("@BetD_B9_9", SqlDbType.VarChar);
 
             //Asignacion de valores a parametros
             comando.Parameters["@IDBet"].Value = IDBet;
