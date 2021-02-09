@@ -2625,6 +2625,8 @@ namespace DragonGolfBackEnd.Controllers
         private int ActualizarAPuesta(int IDBet, int IDRonda, int BetD_Player1, int BetD_Player2, string BetD_F9_1, string BetD_F9_2, string BetD_F9_3, string BetD_F9_4, string BetD_F9_5, string BetD_F9_6, string BetD_F9_7, string BetD_F9_8, string BetD_F9_9,
                                       string @BetD_B9_1, string BetD_B9_2, string BetD_B9_3 , string BetD_B9_4 , string BetD_B9_5  , string BetD_B9_6 , string BetD_B9_7 , string BetD_B9_8 , string BetD_B9_9 )
         {
+
+            
             SqlCommand comando = new SqlCommand("DragoGolf_UpdateDetailBet");
             comando.CommandType = CommandType.StoredProcedure;
 

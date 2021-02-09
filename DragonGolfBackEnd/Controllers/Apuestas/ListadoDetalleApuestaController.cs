@@ -52,24 +52,24 @@ namespace DragonGolfBackEnd.Controllers
             public int BetD_AutoPress { get; set; }
             public int BetD_ManuallyOverrideAdv { get; set; }
             public int BetD_AdvStrokers { get; set; }
-            public int BetD_F9_1 { get; set; }
-            public int BetD_F9_2 { get; set; }
-            public int BetD_F9_3 { get; set; }
-            public int BetD_F9_4 { get; set; }
-            public int BetD_F9_5 { get; set; }
-            public int BetD_F9_6 { get; set; }
-            public int BetD_F9_7 { get; set; }
-            public int BetD_F9_8 { get; set; }
-            public int BetD_F9_9 { get; set; }
-            public int BetD_B9_1 { get; set; }
-            public int BetD_B9_2 { get; set; }
-            public int BetD_B9_3 { get; set; }
-            public int BetD_B9_4 { get; set; }
-            public int BetD_B9_5 { get; set; }
-            public int BetD_B9_6 { get; set; }
-            public int BetD_B9_7 { get; set; }
-            public int BetD_B9_8 { get; set; }
-            public int BetD_B9_9 { get; set; }
+            public string BetD_F9_1 { get; set; }
+            public string BetD_F9_2 { get; set; }
+            public string BetD_F9_3 { get; set; }
+            public string BetD_F9_4 { get; set; }
+            public string BetD_F9_5 { get; set; }
+            public string BetD_F9_6 { get; set; }
+            public string BetD_F9_7 { get; set; }
+            public string BetD_F9_8 { get; set; }
+            public string BetD_F9_9 { get; set; }
+            public string BetD_B9_1 { get; set; }
+            public string BetD_B9_2 { get; set; }
+            public string BetD_B9_3 { get; set; }
+            public string BetD_B9_4 { get; set; }
+            public string BetD_B9_5 { get; set; }
+            public string BetD_B9_6 { get; set; }
+            public string BetD_B9_7 { get; set; }
+            public string BetD_B9_8 { get; set; }
+            public string BetD_B9_9 { get; set; }
 
         }
 
@@ -132,31 +132,31 @@ namespace DragonGolfBackEnd.Controllers
                                 BetD_MontoPerdidoGanado = Convert.ToSingle(row["BetD_MontoPerdidoGanado"]),
                                 BetD_MontoApuestaMedal = Convert.ToSingle(row["BetD_MontoApuestaMedal"]),
                                 BetD_Division = Convert.ToSingle(row["BetD_Division"]),
-                                BetD_MachMonto = Convert.ToSingle(row["BetD_Division"]),
-                                BetD_Match = Convert.ToSingle(row["BetD_Division"]),
-                                BetD_Carry = Convert.ToSingle(row["BetD_Division"]),
-                                BetD_Medal = Convert.ToSingle(row["BetD_Division"]),
-                                BetD_AutoPress = Convert.ToInt32(row["BetD_Division"]),
-                                BetD_ManuallyOverrideAdv = Convert.ToInt32(row["BetD_Division"]),
-                                BetD_AdvStrokers = Convert.ToInt32(row["BetD_Division"]),
-                                BetD_F9_1 = Convert.ToInt32(row["BetD_Division"]),
-                                BetD_F9_2 = Convert.ToInt32(row["BetD_Division"]),
-                                BetD_F9_3 = Convert.ToInt32(row["BetD_Division"]),
-                                BetD_F9_4 = Convert.ToInt32(row["BetD_Division"]),
-                                BetD_F9_5 = Convert.ToInt32(row["BetD_Division"]),
-                                BetD_F9_6 = Convert.ToInt32(row["BetD_Division"]),
-                                BetD_F9_7 = Convert.ToInt32(row["BetD_Division"]),
-                                BetD_F9_8 = Convert.ToInt32(row["BetD_Division"]),
-                                BetD_F9_9 = Convert.ToInt32(row["BetD_Division"]),
-                                BetD_B9_1 = Convert.ToInt32(row["BetD_Division"]),
-                                BetD_B9_2 = Convert.ToInt32(row["BetD_Division"]),
-                                BetD_B9_3 = Convert.ToInt32(row["BetD_Division"]),
-                                BetD_B9_4 = Convert.ToInt32(row["BetD_Division"]),
-                                BetD_B9_5 = Convert.ToInt32(row["BetD_Division"]),
-                                BetD_B9_6 = Convert.ToInt32(row["BetD_Division"]),
-                                BetD_B9_7 = Convert.ToInt32(row["BetD_Division"]),
-                                BetD_B9_8 = Convert.ToInt32(row["BetD_Division"]),
-                                BetD_B9_9 = Convert.ToInt32(row["BetD_Division"]),
+                                BetD_MachMonto = Convert.ToSingle(row["BetD_MachMonto"]),
+                                BetD_Match = Convert.ToSingle(row["BetD_Match"]),
+                                BetD_Carry = Convert.ToSingle(row["BetD_Carry"]),
+                                BetD_Medal = Convert.ToSingle(row["BetD_Medal"]),
+                                BetD_AutoPress = Convert.ToInt32(row["BetD_AutoPress"]),
+                                BetD_ManuallyOverrideAdv = Convert.ToInt32(row["BetD_ManuallyOverrideAdv"]),
+                                BetD_AdvStrokers = Convert.ToInt32(row["BetD_AdvStrokers"]),
+                                BetD_F9_1 = Convert.ToString(row["BetD_F9_1"]),
+                                BetD_F9_2 = Convert.ToString(row["BetD_F9_2"]),
+                                BetD_F9_3 = Convert.ToString(row["BetD_F9_3"]),
+                                BetD_F9_4 = Convert.ToString(row["BetD_F9_4"]),
+                                BetD_F9_5 = Convert.ToString(row["BetD_F9_5"]),
+                                BetD_F9_6 = Convert.ToString(row["BetD_F9_6"]),
+                                BetD_F9_7 = Convert.ToString(row["BetD_F9_7"]),
+                                BetD_F9_8 = Convert.ToString(row["BetD_F9_8"]),
+                                BetD_F9_9 = Convert.ToString(row["BetD_F9_9"]),
+                                BetD_B9_1 = Convert.ToString(row["BetD_B9_1"]),
+                                BetD_B9_2 = Convert.ToString(row["BetD_B9_2"]),
+                                BetD_B9_3 = Convert.ToString(row["BetD_B9_3"]),
+                                BetD_B9_4 = Convert.ToString(row["BetD_B9_4"]),
+                                BetD_B9_5 = Convert.ToString(row["BetD_B9_5"]),
+                                BetD_B9_6 = Convert.ToString(row["BetD_B9_6"]),
+                                BetD_B9_7 = Convert.ToString(row["BetD_B9_7"]),
+                                BetD_B9_8 = Convert.ToString(row["BetD_B9_8"]),
+                                BetD_B9_9 = Convert.ToString(row["BetD_B9_9"]),
                             };
 
                             lista.Add(ent);
