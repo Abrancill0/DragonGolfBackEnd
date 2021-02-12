@@ -217,6 +217,7 @@
     <Compile Include="Controllers\Ronda\EliminarAmigosRondaController.cs" />
     <Compile Include="Controllers\Ronda\AgregarAmigosRondaController.cs" />
     <Compile Include="Controllers\Ronda\AgregarTeesRondaController.cs" />
+    <Compile Include="Controllers\Ronda\ListadoAmigosRondaDataController.cs" />
     <Compile Include="Controllers\Ronda\ListadoAmigosRondaController.cs" />
     <Compile Include="Controllers\Ronda\ListadoRondaStrokerController.cs" />
     <Compile Include="Controllers\Ronda\ListadoRondaController.cs" />
