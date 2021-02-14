@@ -22,22 +22,17 @@ namespace DragonGolfBackEnd.Controllers
 
         public class ParametrosEntradas
         {
-            public int IDUsuario { get; set; }
-            public int IDRounds { get; set; }
+            public int Player1 { get; set; }
+            public int Player2 { get; set; }
 
-        }
+}
         public class ParametrosSalida
         {
-            public int IDRounds { get; set; }
             public int IDUsuario { get; set; }
-            public int PlayerId { get; set; }
-            public decimal RoundHandicap { get; set; }
-            public string PlayerTee { get; set; }
-            public int IDTees { get; set; }
             public int set_skins_carry_over { get; set; }
+            public int set_snw_use_factor { get; set; }
             public int set_lower_adv_f9 { get; set; }
             public int set_snw_automatic_press { get; set; }
-            public int set_snw_use_factor { get; set; }
             public int set_snw_front_9 { get; set; }
             public int set_snw_back_9 { get; set; }
             public int set_snw_match { get; set; }
@@ -53,12 +48,8 @@ namespace DragonGolfBackEnd.Controllers
             public int set_tmw_adv_strokes { get; set; }
             public int set_eb_wager { get; set; }
             public int set_bbt_wager_f9 { get; set; }
-            public decimal set_golpesventaja { get; set; }
-            public decimal set_diferenciatee { get; set; }
-            public string Usu_nickname { get; set; }
-            public string Usu_Nombre { get; set; }
-            public string Usu_Apellido_Paterno { get; set; }
-            public string Usu_Apellido_Materno { get; set; }
+            public int set_golpesventaja { get; set; }
+            public int set_diferenciatee { get; set; }
 
 
         }
@@ -70,12 +61,12 @@ namespace DragonGolfBackEnd.Controllers
                 comando.CommandType = CommandType.StoredProcedure;
 
                 //Declaracion de parametros
-                comando.Parameters.Add("@IDRounds", SqlDbType.Int);
-                comando.Parameters.Add("@IDUsuario", SqlDbType.Int);
+                comando.Parameters.Add("@Player1", SqlDbType.Int);
+                comando.Parameters.Add("@Player2", SqlDbType.Int);
 
 
-                comando.Parameters["@IDRounds"].Value = Datos.IDRounds;
-                comando.Parameters["@IDUsuario"].Value = Datos.IDUsuario;
+                comando.Parameters["@Player1"].Value = Datos.Player1;
+                comando.Parameters["@Player2"].Value = Datos.Player2;
 
                 comando.Connection = new SqlConnection(VariablesGlobales.CadenaConexion);
                 comando.CommandTimeout = 0;
@@ -109,12 +100,8 @@ namespace DragonGolfBackEnd.Controllers
                             ParametrosSalida ent = new ParametrosSalida
                             {
 
-                                IDRounds = Convert.ToInt32(row["IDRounds"]),
+
                                 IDUsuario = Convert.ToInt32(row["IDUsuario"]),
-                                PlayerId = Convert.ToInt32(row["PlayerId"]),
-                                RoundHandicap = Convert.ToInt32(row["RoundHandicap"]),
-                                PlayerTee = Convert.ToString(row["PlayerTee"]),
-                                IDTees = Convert.ToInt32(row["IDTees"]),
                                 set_skins_carry_over = Convert.ToInt32(row["set_skins_carry_over"]),
                                 set_lower_adv_f9 = Convert.ToInt32(row["set_lower_adv_f9"]),
                                 set_snw_automatic_press = Convert.ToInt32(row["set_snw_automatic_press"]),
@@ -136,10 +123,7 @@ namespace DragonGolfBackEnd.Controllers
                                 set_bbt_wager_f9 = Convert.ToInt32(row["set_bbt_wager_f9"]),
                                 set_golpesventaja = Convert.ToInt32(row["set_golpesventaja"]),
                                 set_diferenciatee = Convert.ToInt32(row["set_diferenciatee"]),
-                                Usu_nickname = Convert.ToString(row["Usu_nickname"]),
-                                Usu_Nombre = Convert.ToString(row["Usu_Nombre"]),
-                                Usu_Apellido_Paterno = Convert.ToString(row["Usu_Apellido_Paterno"]),
-                                Usu_Apellido_Materno = Convert.ToString(row["Usu_Apellido_Materno"]),
+                             
                             };
 
                             lista.Add(ent);
