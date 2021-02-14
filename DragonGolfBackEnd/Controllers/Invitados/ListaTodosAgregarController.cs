@@ -22,7 +22,9 @@ namespace DragonGolfBackEnd.Controllers
         public class ParametrosEntradas
         {
             public int IDUsuario { get; set; }
-        }
+
+            public int IDRonda { get; set; }
+    }
         public class ParametrosSalida
         {
 
@@ -50,9 +52,11 @@ namespace DragonGolfBackEnd.Controllers
                 comando.CommandType = CommandType.StoredProcedure;
                 //Declaracion de parametros
                 comando.Parameters.Add("@IDUsuario", SqlDbType.Int);
+                comando.Parameters.Add("@IDRonda", SqlDbType.Int);
 
                 //Asignacion de valores a parametros
                 comando.Parameters["@IDUsuario"].Value = Datos.IDUsuario;
+                comando.Parameters["@IDRonda"].Value = Datos.IDRonda;
 
                 comando.Connection = new SqlConnection(VariablesGlobales.CadenaConexion);
                 comando.CommandTimeout = 0;
