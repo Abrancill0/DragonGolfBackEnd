@@ -56,7 +56,7 @@ namespace DragonGolfBackEnd.Controllers
 
 
                 //Asignacion de valores a parametros
-                comando.Parameters["@IDUsuario"].Value = Datos.IDusuario;
+                comando.Parameters["@IDUsuario"].Value = Datos.IDUsuario;
                 comando.Parameters["@IDRonda"].Value = Datos.IDRonda;
 
 
