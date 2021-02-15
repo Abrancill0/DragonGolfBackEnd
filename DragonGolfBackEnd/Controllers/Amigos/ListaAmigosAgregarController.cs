@@ -52,12 +52,12 @@ namespace DragonGolfBackEnd.Controllers
 
                 //Declaracion de parametros
                 comando.Parameters.Add("@IDUsuario", SqlDbType.Int);
-                comando.Parameters.Add("@IDRounds", SqlDbType.Int);
+                comando.Parameters.Add("@IDRonda", SqlDbType.Int);
 
 
                 //Asignacion de valores a parametros
-                comando.Parameters["@IDUsuario"].Value = Datos.IDRonda;
-                comando.Parameters["@IDRounds"].Value = Datos.IDUsuario;
+                comando.Parameters["@IDUsuario"].Value = Datos.IDusuario;
+                comando.Parameters["@IDRonda"].Value = Datos.IDRonda;
 
 
                 comando.Connection = new SqlConnection(VariablesGlobales.CadenaConexion);
