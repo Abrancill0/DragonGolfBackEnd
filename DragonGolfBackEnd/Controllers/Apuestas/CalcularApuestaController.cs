@@ -241,92 +241,92 @@ namespace DragonGolfBackEnd.Controllers
 
                                if (DificultatHoyo1 == i)
                                 {
-                                    ScoreHole1_P1 = -1;
+                                    ScoreHole1_P1 = ScoreHole1_P1 - 1;
                                 }
 
                                 if (DificultatHoyo2 == i)
                                 {
-                                    ScoreHole2_P1 = -1;
+                                    ScoreHole2_P1 = ScoreHole2_P1 - 1;
                                 }
 
                                 if (DificultatHoyo3 == i)
                                 {
-                                    ScoreHole3_P1 = -1;
+                                    ScoreHole3_P1 = ScoreHole3_P1 - 1;
                                 }
 
                                 if (DificultatHoyo4 == i)
                                 {
-                                    ScoreHole4_P1 = -1;
+                                    ScoreHole4_P1 = ScoreHole4_P1 - 1;
                                 }
 
                                 if (DificultatHoyo5 == i)
                                 {
-                                    ScoreHole5_P1 = -1;
+                                    ScoreHole5_P1 = ScoreHole5_P1 - 1;
                                 }
 
                                 if (DificultatHoyo6 == i)
                                 {
-                                    ScoreHole6_P1 = -1;
+                                    ScoreHole6_P1 = ScoreHole6_P1 - 1;
                                 }
 
                                 if (DificultatHoyo7 == i)
                                 {
-                                    ScoreHole7_P1 = -1;
+                                    ScoreHole7_P1 = ScoreHole7_P1 - 1;
                                 }
 
                                 if (DificultatHoyo8 == i)
                                 {
-                                    ScoreHole8_P1 = -1;
+                                    ScoreHole8_P1 = ScoreHole8_P1 - 1;
                                 }
 
                                 if (DificultatHoyo9 == i)
                                 {
-                                    ScoreHole1_P1 = -1;
+                                    ScoreHole9_P1 = ScoreHole9_P1 - 1;
                                 }
 
                                 if (DificultatHoyo10 == i)
                                 {
-                                    ScoreHole1_P1 = -1;
+                                    ScoreHole10_P1 = ScoreHole10_P1 - 1;
                                 }
 
                                 if (DificultatHoyo11 == i)
                                 {
-                                    ScoreHole1_P1 = -1;
+                                    ScoreHole11_P1 = ScoreHole11_P1 - 1;
                                 }
 
                                 if (DificultatHoyo12 == i)
                                 {
-                                    ScoreHole1_P1 = -1;
+                                    ScoreHole12_P1 = ScoreHole1_P1 - 1;
                                 }
 
                                 if (DificultatHoyo13 == i)
                                 {
-                                    ScoreHole13_P1 = -1;
+                                    ScoreHole13_P1 = ScoreHole13_P1 - 1;
                                 }
 
                                 if (DificultatHoyo14 == i)
                                 {
-                                    ScoreHole14_P1 = -1;
+                                    ScoreHole14_P1 = ScoreHole14_P1 - 1;
                                 }
 
                                 if (DificultatHoyo15 == i)
                                 {
-                                    ScoreHole15_P1 = -1;
+                                    ScoreHole15_P1 = ScoreHole15_P1 - 1;
                                 }
 
                                 if (DificultatHoyo16 == i)
                                 {
-                                    ScoreHole16_P1 = -1;
+                                    ScoreHole16_P1 = ScoreHole16_P1 - 1;
                                 }
 
                                 if (DificultatHoyo17 == i)
                                 {
-                                    ScoreHole17_P1 = -1;
+                                    ScoreHole17_P1 = ScoreHole17_P1 - 1;
                                 }
 
                                 if (DificultatHoyo18 == i)
                                 {
-                                    ScoreHole18_P1 = -1;
+                                    ScoreHole18_P1 = ScoreHole18_P1 - 1;
                                 }
 
                                
@@ -994,7 +994,7 @@ namespace DragonGolfBackEnd.Controllers
             }
             else if (Resultado11 > 0)
             {
-                ResultadoPresionFront[2] = 0;
+                ResultadoPresionFront[2] = 1;
             }
             else if (Resultado11 < 0)
             {
@@ -1007,7 +1007,7 @@ namespace DragonGolfBackEnd.Controllers
             }
             else if (Resultado12 > 0)
             {
-                ResultadoPresionFront[3] = 0;
+                ResultadoPresionFront[3] = 1;
             }
             else if (Resultado12 < 0)
             {
@@ -1020,7 +1020,7 @@ namespace DragonGolfBackEnd.Controllers
             }
             else if (Resultado13 > 0)
             {
-                ResultadoPresionFront[4] = 0;
+                ResultadoPresionFront[4] = 1;
             }
             else if (Resultado13 < 0)
             {
@@ -1033,7 +1033,7 @@ namespace DragonGolfBackEnd.Controllers
             }
             else if (Resultado14 > 0)
             {
-                ResultadoPresionFront[5] = 0;
+                ResultadoPresionFront[5] = 1;
             }
             else if (Resultado14 < 0)
             {
@@ -1046,7 +1046,7 @@ namespace DragonGolfBackEnd.Controllers
             }
             else if (Resultado15 > 0)
             {
-                ResultadoPresionFront[6] = 0;
+                ResultadoPresionFront[6] = 1;
             }
             else if (Resultado15 < 0)
             {
@@ -1059,7 +1059,7 @@ namespace DragonGolfBackEnd.Controllers
             }
             else if (Resultado16 > 0)
             {
-                ResultadoPresionFront[7] = 0;
+                ResultadoPresionFront[7] = 1;
             }
             else if (Resultado16 < 0)
             {
@@ -1072,7 +1072,7 @@ namespace DragonGolfBackEnd.Controllers
             }
             else if (Resultado17 > 0)
             {
-                ResultadoPresionFront[8] = 0;
+                ResultadoPresionFront[8] = 1;
             }
             else if (Resultado17 < 0)
             {
@@ -1085,7 +1085,7 @@ namespace DragonGolfBackEnd.Controllers
             }
             else if (Resultado18 > 0)
             {
-                ResultadoPresionFront[9] = 0;
+                ResultadoPresionFront[9] = 1;
             }
             else if (Resultado18 < 0)
             {
@@ -1653,8 +1653,6 @@ namespace DragonGolfBackEnd.Controllers
 
                     }
 
-
-
                 }
                 else if (ResultadoPresionFront[i] == -1)
                 {
@@ -1695,7 +1693,6 @@ namespace DragonGolfBackEnd.Controllers
                         Presion -= 1;
                         PresionValor5 = Convert.ToString(Presion);
                     }
-
 
                     if (Presion1 == -2)
                     {
@@ -1750,126 +1747,125 @@ namespace DragonGolfBackEnd.Controllers
             return ResultadoString;
         }
 
-        private string CalcularApuestaPresionBack2(int Resultado9, int Resultado10, int Resultado12, int Resultado13, int Resultado14, int Resultado15, int Resultado16, int Resultado17, int Resultado18)
+        private string CalcularApuestaPresionBack2(int Resultado1, int Resultado2, int Resultado3, int Resultado4, int Resultado5, int Resultado6, int Resultado7, int Resultado8, int Resultado9)
         {
+            int[] ResultadoPresionFront = new int[10];
 
-            int[] ResultadoPresionBack = new int[10];
+            if (Resultado1 == 0)
+            {
+                ResultadoPresionFront[1] = 0;
+            }
+            else if (Resultado1 > 0)
+            {
+                ResultadoPresionFront[1] = 1;
+            }
+            else if (Resultado1 < 0)
+            {
+                ResultadoPresionFront[1] = -1;
+            }
+
+            if (Resultado2 == 0)
+            {
+                ResultadoPresionFront[2] = 0;
+            }
+            else if (Resultado2 > 0)
+            {
+                ResultadoPresionFront[2] = 1;
+            }
+            else if (Resultado2 < 0)
+            {
+                ResultadoPresionFront[2] = -1;
+            }
+
+            if (Resultado3 == 0)
+            {
+                ResultadoPresionFront[3] = 0;
+            }
+            else if (Resultado3 > 0)
+            {
+                ResultadoPresionFront[3] = 1;
+            }
+            else if (Resultado3 < 0)
+            {
+                ResultadoPresionFront[3] = -1;
+            }
+
+            if (Resultado4 == 0)
+            {
+                ResultadoPresionFront[4] = 0;
+            }
+            else if (Resultado4 > 0)
+            {
+                ResultadoPresionFront[4] = 1;
+            }
+            else if (Resultado4 < 0)
+            {
+                ResultadoPresionFront[4] = -1;
+            }
+
+            if (Resultado5 == 0)
+            {
+                ResultadoPresionFront[5] = 0;
+            }
+            else if (Resultado5 > 0)
+            {
+                ResultadoPresionFront[5] = 1;
+            }
+            else if (Resultado5 < 0)
+            {
+                ResultadoPresionFront[5] = -1;
+            }
+
+            if (Resultado6 == 0)
+            {
+                ResultadoPresionFront[6] = 0;
+            }
+            else if (Resultado6 > 0)
+            {
+                ResultadoPresionFront[6] = 1;
+            }
+            else if (Resultado6 < 0)
+            {
+                ResultadoPresionFront[6] = -1;
+            }
+
+            if (Resultado7 == 0)
+            {
+                ResultadoPresionFront[7] = 0;
+            }
+            else if (Resultado7 > 0)
+            {
+                ResultadoPresionFront[7] = 1;
+            }
+            else if (Resultado7 < 0)
+            {
+                ResultadoPresionFront[7] = -1;
+            }
+
+            if (Resultado8 == 0)
+            {
+                ResultadoPresionFront[8] = 0;
+            }
+            else if (Resultado8 > 0)
+            {
+                ResultadoPresionFront[8] = 1;
+            }
+            else if (Resultado8 < 0)
+            {
+                ResultadoPresionFront[8] = -1;
+            }
 
             if (Resultado9 == 0)
             {
-                ResultadoPresionBack[1] = 0;
+                ResultadoPresionFront[9] = 0;
             }
             else if (Resultado9 > 0)
             {
-                ResultadoPresionBack[1] = 1;
+                ResultadoPresionFront[9] = 1;
             }
             else if (Resultado9 < 0)
             {
-                ResultadoPresionBack[1] = -1;
-            }
-
-            if (Resultado10 == 0)
-            {
-                ResultadoPresionBack[2] = 0;
-            }
-            else if (Resultado10 > 0)
-            {
-                ResultadoPresionBack[2] = 1;
-            }
-            else if (Resultado10 < 0)
-            {
-                ResultadoPresionBack[2] = -1;
-            }
-
-            if (Resultado12 == 0)
-            {
-                ResultadoPresionBack[3] = 0;
-            }
-            else if (Resultado12 > 0)
-            {
-                ResultadoPresionBack[3] = 1;
-            }
-            else if (Resultado12 < 0)
-            {
-                ResultadoPresionBack[3] = -1;
-            }
-
-            if (Resultado13 == 0)
-            {
-                ResultadoPresionBack[4] = 0;
-            }
-            else if (Resultado13 > 0)
-            {
-                ResultadoPresionBack[4] = 1;
-            }
-            else if (Resultado13 < 0)
-            {
-                ResultadoPresionBack[4] = -1;
-            }
-
-            if (Resultado14 == 0)
-            {
-                ResultadoPresionBack[5] = 0;
-            }
-            else if (Resultado14 > 0)
-            {
-                ResultadoPresionBack[5] = 1;
-            }
-            else if (Resultado14 < 0)
-            {
-                ResultadoPresionBack[5] = -1;
-            }
-
-            if (Resultado15 == 0)
-            {
-                ResultadoPresionBack[6] = 0;
-            }
-            else if (Resultado15 > 0)
-            {
-                ResultadoPresionBack[6] = 1;
-            }
-            else if (Resultado15 < 0)
-            {
-                ResultadoPresionBack[6] = -1;
-            }
-
-            if (Resultado16 == 0)
-            {
-                ResultadoPresionBack[7] = 0;
-            }
-            else if (Resultado16 > 0)
-            {
-                ResultadoPresionBack[7] = 1;
-            }
-            else if (Resultado16 < 0)
-            {
-                ResultadoPresionBack[7] = -1;
-            }
-
-            if (Resultado17 == 0)
-            {
-                ResultadoPresionBack[8] = 0;
-            }
-            else if (Resultado17 > 0)
-            {
-                ResultadoPresionBack[8] = 1;
-            }
-            else if (Resultado17 < 0)
-            {
-                ResultadoPresionBack[8] = -1;
-            }
-
-            if (Resultado18 == 0)
-            {
-                ResultadoPresionBack[9] = 0;
-            }
-            else if (Resultado18 > 0)
-            {
-                ResultadoPresionBack[9] = 1;
-            }
-            else if (Resultado18 < 0)
-            {
-                ResultadoPresionBack[9] = -1;
+                ResultadoPresionFront[9] = -1;
             }
 
             string ResultadoString = "";
@@ -1886,7 +1882,7 @@ namespace DragonGolfBackEnd.Controllers
             for (int i = 1; i < 10; i++)
             {
 
-                if (ResultadoPresionBack[i] == 1)
+                if (ResultadoPresionFront[i] == 1)
                 {
 
                     ResultadoInt += 1;
@@ -1903,21 +1899,21 @@ namespace DragonGolfBackEnd.Controllers
                     {
                         int Presion = Convert.ToInt32(PresionValor2);
                         Presion += 1;
-                        PresionValor1 = Convert.ToString(Presion);
+                        PresionValor2 = Convert.ToString(Presion);
                     }
 
                     if (PresionValor3 != "")
                     {
                         int Presion = Convert.ToInt32(PresionValor3);
                         Presion += 1;
-                        PresionValor1 = Convert.ToString(Presion);
+                        PresionValor3 = Convert.ToString(Presion);
                     }
 
                     if (PresionValor4 != "")
                     {
                         int Presion = Convert.ToInt32(PresionValor4);
                         Presion += 1;
-                        PresionValor1 = Convert.ToString(Presion);
+                        PresionValor4 = Convert.ToString(Presion);
                     }
 
                     if (PresionValor5 != "")
@@ -1926,7 +1922,6 @@ namespace DragonGolfBackEnd.Controllers
                         Presion += 1;
                         PresionValor5 = Convert.ToString(Presion);
                     }
-
 
                     if (Presion1 == 2)
                     {
@@ -1939,19 +1934,17 @@ namespace DragonGolfBackEnd.Controllers
                             continue;
                         }
 
-                        if (PresionValor2 == "" && PresionValor1 != "" && PresionValor2 != "")
+                        if (PresionValor2 == "" && PresionValor1 != "")
                         {
                             PresionValor2 = "0";
                             Presion1 = 0;
-
                             continue;
                         }
 
-                        if (PresionValor3 == "" && PresionValor1 != "" && PresionValor2 != "" )
+                        if (PresionValor3 == "" && PresionValor1 != "" && PresionValor2 != "")
                         {
                             PresionValor3 = "0";
                             Presion1 = 0;
-
                             continue;
                         }
 
@@ -1959,7 +1952,6 @@ namespace DragonGolfBackEnd.Controllers
                         {
                             PresionValor4 = "0";
                             Presion1 = 0;
-
                             continue;
                         }
 
@@ -1972,10 +1964,8 @@ namespace DragonGolfBackEnd.Controllers
 
                     }
 
-
-
                 }
-                else if (ResultadoPresionBack[i] == -1)
+                else if (ResultadoPresionFront[i] == -1)
                 {
                     ResultadoInt -= 1;
                     Presion1 -= 1;
@@ -1991,23 +1981,29 @@ namespace DragonGolfBackEnd.Controllers
                     {
                         int Presion = Convert.ToInt32(PresionValor2);
                         Presion -= 1;
-                        PresionValor1 = Convert.ToString(Presion);
+                        PresionValor2 = Convert.ToString(Presion);
                     }
 
                     if (PresionValor3 != "")
                     {
                         int Presion = Convert.ToInt32(PresionValor3);
                         Presion -= 1;
-                        PresionValor1 = Convert.ToString(Presion);
+                        PresionValor3 = Convert.ToString(Presion);
                     }
 
                     if (PresionValor4 != "")
                     {
                         int Presion = Convert.ToInt32(PresionValor4);
                         Presion -= 1;
-                        PresionValor1 = Convert.ToString(Presion);
+                        PresionValor4 = Convert.ToString(Presion);
                     }
 
+                    if (PresionValor5 != "")
+                    {
+                        int Presion = Convert.ToInt32(PresionValor5);
+                        Presion -= 1;
+                        PresionValor5 = Convert.ToString(Presion);
+                    }
 
                     if (Presion1 == -2)
                     {
@@ -2018,7 +2014,7 @@ namespace DragonGolfBackEnd.Controllers
                             continue;
                         }
 
-                        if (PresionValor2 == "" && PresionValor1 != "" )
+                        if (PresionValor2 == "" && PresionValor1 != "")
                         {
                             PresionValor2 = "0";
                             Presion1 = 0;
