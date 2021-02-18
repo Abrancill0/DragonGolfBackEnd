@@ -345,7 +345,7 @@ namespace DragonGolfBackEnd.Controllers
                             }
 
                         }
-                        else if (Adv < 0)
+                        else if (Adv > 0)
                         {
 
                             for (int i = 1; i < 18; i++)
@@ -524,7 +524,7 @@ namespace DragonGolfBackEnd.Controllers
                             BetD_B9_8 = Convert.ToString(BackValores[7]);
                             BetD_B9_9 = Convert.ToString(BackValores[8]);
 
-                            ActualizarAPuesta(Datos.IDBet, Datos.IDRonda, PlayerID1, PlayerID2, BetD_F9_1, BetD_F9_2, BetD_F9_3, BetD_F9_4, BetD_F9_5, BetD_F9_6,
+                            ActualizarAPuesta(Datos.IDBetDetail, Datos.IDBet, Datos.IDRonda, PlayerID1, PlayerID2, BetD_F9_1, BetD_F9_2, BetD_F9_3, BetD_F9_4, BetD_F9_5, BetD_F9_6,
                                             BetD_F9_7, BetD_F9_8, BetD_F9_9, BetD_B9_1, BetD_B9_2, BetD_B9_3, BetD_B9_4, BetD_B9_5, BetD_B9_6, BetD_B9_7, BetD_B9_8, BetD_B9_9);
 
                         }
@@ -550,7 +550,7 @@ namespace DragonGolfBackEnd.Controllers
                             BetD_B9_4 = Convert.ToString(BackValores[3]);
                             BetD_B9_5 = Convert.ToString(BackValores[4]);
 
-                            ActualizarAPuesta(Datos.IDBet, Datos.IDRonda, PlayerID1, PlayerID2, BetD_F9_1, BetD_F9_2, BetD_F9_3, BetD_F9_4, BetD_F9_5, BetD_F9_6,
+                            ActualizarAPuesta(Datos.IDBetDetail, Datos.IDBet, Datos.IDRonda, PlayerID1, PlayerID2, BetD_F9_1, BetD_F9_2, BetD_F9_3, BetD_F9_4, BetD_F9_5, BetD_F9_6,
                                               BetD_F9_7, BetD_F9_8, BetD_F9_9, BetD_B9_1, BetD_B9_2, BetD_B9_3, BetD_B9_4, BetD_B9_5, BetD_B9_6, BetD_B9_7, BetD_B9_8, BetD_B9_9);
 
                         }
@@ -573,13 +573,13 @@ namespace DragonGolfBackEnd.Controllers
                             BetD_B9_2 = Convert.ToString(BackValores[1]);
                             BetD_B9_3 = Convert.ToString(BackValores[2]);
 
-                            ActualizarAPuesta(Datos.IDBet, Datos.IDRonda, PlayerID1, PlayerID2, BetD_F9_1, BetD_F9_2, BetD_F9_3, BetD_F9_4, BetD_F9_5, BetD_F9_6,
+                            ActualizarAPuesta(Datos.IDBetDetail, Datos.IDBet, Datos.IDRonda, PlayerID1, PlayerID2, BetD_F9_1, BetD_F9_2, BetD_F9_3, BetD_F9_4, BetD_F9_5, BetD_F9_6,
                                              BetD_F9_7, BetD_F9_8, BetD_F9_9, BetD_B9_1, BetD_B9_2, BetD_B9_3, BetD_B9_4, BetD_B9_5, BetD_B9_6, BetD_B9_7, BetD_B9_8, BetD_B9_9);
                         }
                         else
                         {
 
-                            ActualizarAPuesta(Datos.IDBet, Datos.IDRonda, PlayerID1, PlayerID2, Convert.ToString(Resultado1), Convert.ToString(Resultado2), Convert.ToString(Resultado3), Convert.ToString(Resultado4), Convert.ToString(Resultado5), Convert.ToString(Resultado6),
+                            ActualizarAPuesta(Datos.IDBetDetail, Datos.IDBet, Datos.IDRonda, PlayerID1, PlayerID2, Convert.ToString(Resultado1), Convert.ToString(Resultado2), Convert.ToString(Resultado3), Convert.ToString(Resultado4), Convert.ToString(Resultado5), Convert.ToString(Resultado6),
                                             Convert.ToString(Resultado7), Convert.ToString(Resultado8), Convert.ToString(Resultado9), Convert.ToString(Resultado10), Convert.ToString(Resultado11), Convert.ToString(Resultado12), Convert.ToString(Resultado13), Convert.ToString(Resultado14), Convert.ToString(Resultado15), Convert.ToString(Resultado16), Convert.ToString(Resultado17), Convert.ToString(Resultado18));
 
                         }
@@ -2735,7 +2735,7 @@ namespace DragonGolfBackEnd.Controllers
             return ResultadoString;
         }
 
-        private int ActualizarAPuesta(int IDBet, int IDRonda, int BetD_Player1, int BetD_Player2, string BetD_F9_1, string BetD_F9_2, string BetD_F9_3, string BetD_F9_4, string BetD_F9_5, string BetD_F9_6, string BetD_F9_7, string BetD_F9_8, string BetD_F9_9,
+        private int ActualizarAPuesta(int IDBetDetail, int IDBet, int IDRonda, int BetD_Player1, int BetD_Player2, string BetD_F9_1, string BetD_F9_2, string BetD_F9_3, string BetD_F9_4, string BetD_F9_5, string BetD_F9_6, string BetD_F9_7, string BetD_F9_8, string BetD_F9_9,
                                       string @BetD_B9_1, string BetD_B9_2, string BetD_B9_3, string BetD_B9_4, string BetD_B9_5, string BetD_B9_6, string BetD_B9_7, string BetD_B9_8, string BetD_B9_9)
         {
 
@@ -2745,6 +2745,7 @@ namespace DragonGolfBackEnd.Controllers
 
             //Declaracion de parametros
             comando.Parameters.Add("@IDBet", SqlDbType.Int);
+            comando.Parameters.Add("@IDBetDetail", SqlDbType.Int);
             comando.Parameters.Add("@IDRonda", SqlDbType.Int);
             comando.Parameters.Add("@BetD_Player1", SqlDbType.Int);
             comando.Parameters.Add("@BetD_Player2", SqlDbType.Int);
@@ -2769,6 +2770,7 @@ namespace DragonGolfBackEnd.Controllers
 
             //Asignacion de valores a parametros
             comando.Parameters["@IDBet"].Value = IDBet;
+            comando.Parameters["@IDBetDetail"].Value = IDBetDetail;
             comando.Parameters["@IDRonda"].Value = IDRonda;
             comando.Parameters["@BetD_Player1"].Value = BetD_Player1;
             comando.Parameters["@BetD_Player2"].Value = BetD_Player2;
