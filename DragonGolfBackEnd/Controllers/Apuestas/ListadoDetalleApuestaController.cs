@@ -24,7 +24,8 @@ namespace DragonGolfBackEnd.Controllers
         {
             public int IDBet { get; set; }
             public int IDRonda { get; set; }
-           
+            public int IDUsuario { get; set; }
+
         }
 
 
@@ -83,12 +84,14 @@ namespace DragonGolfBackEnd.Controllers
                 //Declaracion de parametros
                 comando.Parameters.Add("@IDBet", SqlDbType.Int);
                 comando.Parameters.Add("@IDRonda", SqlDbType.Int);
-              
+                comando.Parameters.Add("@IDUsuario", SqlDbType.Int);
+
 
                 //Asignacion de valores a parametros
                 comando.Parameters["@IDBet"].Value = Datos.IDBet;
                 comando.Parameters["@IDRonda"].Value = Datos.IDRonda;
-               
+                comando.Parameters["@IDUsuario"].Value = Datos.IDUsuario;
+
 
                 comando.Connection = new SqlConnection(VariablesGlobales.CadenaConexion);
                 comando.CommandTimeout = 0;
