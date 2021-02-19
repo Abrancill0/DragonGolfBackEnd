@@ -24,8 +24,9 @@ namespace DragonGolfBackEnd.Controllers
         {
             public int Player1 { get; set; }
             public int Player2 { get; set; }
+            public int IDRonda { get; set; }
 
-}
+        }
         public class ParametrosSalida
         {
             public int IDUsuario { get; set; }
@@ -63,10 +64,11 @@ namespace DragonGolfBackEnd.Controllers
                 //Declaracion de parametros
                 comando.Parameters.Add("@Player1", SqlDbType.Int);
                 comando.Parameters.Add("@Player2", SqlDbType.Int);
-
+                comando.Parameters.Add("@IDRonda", SqlDbType.Int);
 
                 comando.Parameters["@Player1"].Value = Datos.Player1;
                 comando.Parameters["@Player2"].Value = Datos.Player2;
+                comando.Parameters["@IDRonda"].Value = Datos.IDRonda;
 
                 comando.Connection = new SqlConnection(VariablesGlobales.CadenaConexion);
                 comando.CommandTimeout = 0;
@@ -95,26 +97,33 @@ namespace DragonGolfBackEnd.Controllers
                         if (Estatus == 1)
                         {
 
-                            string numeroFormato = Convert.ToInt32(row["usu_ghinnumber"]).ToString("D7");
+                            //string numeroFormato = Convert.ToInt32(row["usu_ghinnumber"]).ToString("D7");
 
                             ParametrosSalida ent = new ParametrosSalida
                             {
 
 
                                 IDUsuario = Convert.ToInt32(row["IDUsuario"]),
+
                                 set_skins_carry_over = Convert.ToInt32(row["set_skins_carry_over"]),
-                                set_lower_adv_f9 = Convert.ToInt32(row["set_lower_adv_f9"]),
+                               set_lower_adv_f9 = Convert.ToInt32(row["set_lower_adv_f9"]),
                                 set_snw_automatic_press = Convert.ToInt32(row["set_snw_automatic_press"]),
+                                
+                                
                                 set_snw_use_factor = Convert.ToInt32(row["set_snw_use_factor"]),
                                 set_snw_front_9 = Convert.ToInt32(row["set_snw_front_9"]),
                                 set_snw_back_9 = Convert.ToInt32(row["set_snw_back_9"]),
                                 set_snw_match = Convert.ToInt32(row["set_snw_match"]),
                                 set_snw_carry = Convert.ToInt32(row["set_snw_carry"]),
+                                
+                                
+                                
                                 set_snw_medal = Convert.ToInt32(row["set_snw_medal"]),
                                 set_tmw_automatic_press = Convert.ToInt32(row["set_tmw_automatic_press"]),
                                 set_tmw_use_factor = Convert.ToInt32(row["set_tmw_use_factor"]),
                                 set_tmw_front_9 = Convert.ToInt32(row["set_tmw_front_9"]),
                                 set_tmw_back_9 = Convert.ToInt32(row["set_tmw_back_9"]),
+                                
                                 set_tmw_match = Convert.ToInt32(row["set_tmw_match"]),
                                 set_tmw_carry = Convert.ToInt32(row["set_tmw_carry"]),
                                 set_tmw_medal = Convert.ToInt32(row["set_tmw_medal"]),
