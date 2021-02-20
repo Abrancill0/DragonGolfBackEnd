@@ -53,7 +53,7 @@ namespace DragonGolfBackEnd.Controllers
         {
             try
             {
-                SqlCommand comando = new SqlCommand("DragoGolf_ListFriendRound");
+                SqlCommand comando = new SqlCommand("DragoGolf_ListFriendRound2");
                 comando.CommandType = CommandType.StoredProcedure;
 
                 //Declaracion de parametros
