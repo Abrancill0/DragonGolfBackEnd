@@ -100,9 +100,12 @@ namespace DragonGolfBackEnd.Controllers
             public int Ho_Advantage17 { get; set; }
             public int Ho_Advantage18 { get; set; }
             public decimal usu_handicapindex { get; set; }
+          public int ValidaUsuarioCreo { get; set; }
+            public int IDUsuarioCreo { get; set; }
 
 
-        }
+
+    }
         public JObject Post(ParametrosEntradas Datos)
         {
             try
@@ -221,6 +224,8 @@ namespace DragonGolfBackEnd.Controllers
                                 handicapAuto = Convert.ToInt32(row["handicapAuto"]),
                                 Te_TeeColor = Convert.ToString(row["Te_TeeColor"]),
                                 usu_handicapindex = Convert.ToDecimal(row["usu_handicapindex"]),
+                                ValidaUsuarioCreo = Convert.ToInt32(row["ValidaUsuarioCreo"]),
+                                IDUsuarioCreo = Convert.ToInt32(row["IDUsuarioCreo"]),
                             };
 
                             lista.Add(ent);
