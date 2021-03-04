@@ -630,6 +630,114 @@ namespace DragonGolfBackEnd.Controllers
                         int Resultado7 = ScoreHole7_P2 - ScoreHole7_P1;
                         int Resultado8 = ScoreHole8_P2 - ScoreHole8_P1;
                         int Resultado9 = ScoreHole9_P2 - ScoreHole9_P1;
+
+                        //Quien Gano, no lo sabemos
+
+                        int ContadorHoyos = 0;
+
+                        if (Resultado1>0)
+                          {
+                            ContadorHoyos = ContadorHoyos + 1;
+                          }
+                        else if (Resultado1 < 0)
+                        {
+                            ContadorHoyos = ContadorHoyos - 1;
+                        }
+
+                        if (Resultado2 > 0)
+                        {
+                            ContadorHoyos = ContadorHoyos + 1;
+                        }
+                        else if (Resultado2 < 0)
+                        {
+                            ContadorHoyos = ContadorHoyos - 1;
+                        }
+
+                        if (Resultado3 > 0)
+                        {
+                            ContadorHoyos = ContadorHoyos + 1;
+                        }
+                        else if (Resultado3 < 0)
+                        {
+                            ContadorHoyos = ContadorHoyos - 1;
+                        }
+
+                        if (Resultado4 > 0)
+                        {
+                            ContadorHoyos = ContadorHoyos + 1;
+                        }
+                        else if (Resultado4 < 0)
+                        {
+                            ContadorHoyos = ContadorHoyos - 1;
+                        }
+
+                        if (Resultado5 > 0)
+                        {
+                            ContadorHoyos = ContadorHoyos + 1;
+                        }
+                        else if (Resultado5 < 0)
+                        {
+                            ContadorHoyos = ContadorHoyos - 1;
+                        }
+
+                        if (Resultado6 > 0)
+                        {
+                            ContadorHoyos = ContadorHoyos + 1;
+                        }
+                        else if (Resultado6 < 0)
+                        {
+                            ContadorHoyos = ContadorHoyos - 1;
+                        }
+
+                        if (Resultado7 > 0)
+                        {
+                            ContadorHoyos = ContadorHoyos + 1;
+                        }
+                        else if (Resultado7 < 0)
+                        {
+                            ContadorHoyos = ContadorHoyos - 1;
+                        }
+
+                        if (Resultado8 > 0)
+                        {
+                            ContadorHoyos = ContadorHoyos + 1;
+                        }
+                        else if (Resultado8 < 0)
+                        {
+                            ContadorHoyos = ContadorHoyos - 1;
+                        }
+
+                        if (Resultado9 > 0)
+                        {
+                            ContadorHoyos = ContadorHoyos + 1;
+                        }
+                        else if (Resultado9 < 0)
+                        {
+                            ContadorHoyos = ContadorHoyos - 1;
+                        }
+
+
+                        //Calculo Medal front
+                        int ResultadoTotaFl1 = ScoreHole1_P1 + ScoreHole2_P1 + ScoreHole3_P1 + ScoreHole4_P1 + ScoreHole5_P1 + ScoreHole6_P1 + ScoreHole7_P1 + ScoreHole8_P1 + ScoreHole9_P1;
+                        int ResultadoTotaFl2 = ScoreHole1_P2 + ScoreHole2_P2 + ScoreHole3_P2 + ScoreHole4_P2 + ScoreHole5_P2 + ScoreHole6_P2 + ScoreHole7_P2 + ScoreHole8_P2 + ScoreHole9_P2;
+
+                        int GanadorF = 0;
+
+                        if (ResultadoTotaFl1 < ResultadoTotaFl2)
+                        {
+                            GanadorF = 1;
+                        }
+                        else if (ResultadoTotaFl1 > ResultadoTotaFl2)
+                        {
+                            GanadorF = -1;
+                        }
+                        else
+                        {
+                            GanadorF = 0;
+                        }
+
+                        //Termina
+
                         int Resultado10 = ScoreHole10_P2 - ScoreHole10_P1;
                         int Resultado11 = ScoreHole11_P2 - ScoreHole11_P1;
                         int Resultado12 = ScoreHole12_P2 - ScoreHole12_P1;
@@ -639,6 +747,113 @@ namespace DragonGolfBackEnd.Controllers
                         int Resultado16 = ScoreHole16_P2 - ScoreHole16_P1;
                         int Resultado17 = ScoreHole17_P2 - ScoreHole17_P1;
                         int Resultado18 = ScoreHole18_P2 - ScoreHole18_P1;
+
+
+
+                        if (Resultado10 > 0)
+                        {
+                            ContadorHoyos = ContadorHoyos + 1;
+                        }
+                        else if (Resultado10 < 0)
+                        {
+                            ContadorHoyos = ContadorHoyos - 1;
+                        }
+
+                        if (Resultado11 > 0)
+                        {
+                            ContadorHoyos = ContadorHoyos + 1;
+                        }
+                        else if (Resultado11 < 0)
+                        {
+                            ContadorHoyos = ContadorHoyos - 1;
+                        }
+
+                        if (Resultado12 > 0)
+                        {
+                            ContadorHoyos = ContadorHoyos + 1;
+                        }
+                        else if (Resultado12 < 0)
+                        {
+                            ContadorHoyos = ContadorHoyos - 1;
+                        }
+
+                        if (Resultado13 > 0)
+                        {
+                            ContadorHoyos = ContadorHoyos + 1;
+                        }
+                        else if (Resultado13 < 0)
+                        {
+                            ContadorHoyos = ContadorHoyos - 1;
+                        }
+
+                        if (Resultado14 > 0)
+                        {
+                            ContadorHoyos = ContadorHoyos + 1;
+                        }
+                        else if (Resultado14 < 0)
+                        {
+                            ContadorHoyos = ContadorHoyos - 1;
+                        }
+
+                        if (Resultado15 > 0)
+                        {
+                            ContadorHoyos = ContadorHoyos + 1;
+                        }
+                        else if (Resultado15 < 0)
+                        {
+                            ContadorHoyos = ContadorHoyos - 1;
+                        }
+
+                        if (Resultado16 > 0)
+                        {
+                            ContadorHoyos = ContadorHoyos + 1;
+                        }
+                        else if (Resultado16 < 0)
+                        {
+                            ContadorHoyos = ContadorHoyos - 1;
+                        }
+
+                        if (Resultado17 > 0)
+                        {
+                            ContadorHoyos = ContadorHoyos + 1;
+                        }
+                        else if (Resultado17 < 0)
+                        {
+                            ContadorHoyos = ContadorHoyos - 1;
+                        }
+
+                        if (Resultado18 > 0)
+                        {
+                            ContadorHoyos = ContadorHoyos + 1;
+                        }
+                        else if (Resultado18 < 0)
+                        {
+                            ContadorHoyos = ContadorHoyos - 1;
+                        }
+
+
+                        //Calculo Medal front
+                        int ResultadoTotaBl1 = ScoreHole10_P1 + ScoreHole11_P1 + ScoreHole12_P1 + ScoreHole13_P1 + ScoreHole14_P1 + ScoreHole15_P1 + ScoreHole16_P1 + ScoreHole17_P1 + ScoreHole18_P1;
+                        int ResultadoTotaBl2 = ScoreHole10_P2 + ScoreHole11_P2 + ScoreHole12_P2 + ScoreHole13_P2 + ScoreHole14_P2 + ScoreHole15_P2 + ScoreHole16_P2 + ScoreHole17_P2 + ScoreHole18_P2;
+
+
+                        int GanadorB = 0;
+
+                        if (ResultadoTotaBl1 < ResultadoTotaBl2)
+                        {
+                            GanadorB = 1;
+                        }
+                        else if (ResultadoTotaBl1 > ResultadoTotaBl2)
+                        {
+                            GanadorB = -1;
+                        }
+                        else
+                        {
+                            GanadorB = 0;
+                        }
+                        //Termina
+                        int ResultadoFinalMedal = GanadorF + GanadorB;
+
 
                         string BetD_F9_1 = "";
                         string BetD_F9_2 = "";
@@ -690,7 +905,7 @@ namespace DragonGolfBackEnd.Controllers
                             BetD_B9_9 = Convert.ToString(BackValores[8]);
 
                             ActualizarAPuesta(Datos.IDBetDetail, Datos.IDBet, Datos.IDRonda, PlayerID1, PlayerID2, BetD_F9_1, BetD_F9_2, BetD_F9_3, BetD_F9_4, BetD_F9_5, BetD_F9_6,
-                                            BetD_F9_7, BetD_F9_8, BetD_F9_9, BetD_B9_1, BetD_B9_2, BetD_B9_3, BetD_B9_4, BetD_B9_5, BetD_B9_6, BetD_B9_7, BetD_B9_8, BetD_B9_9);
+                                            BetD_F9_7, BetD_F9_8, BetD_F9_9, BetD_B9_1, BetD_B9_2, BetD_B9_3, BetD_B9_4, BetD_B9_5, BetD_B9_6, BetD_B9_7, BetD_B9_8, BetD_B9_9, ResultadoFinalMedal, ContadorHoyos);
 
                         }
                         else if (AutoPress == 2)
@@ -716,7 +931,7 @@ namespace DragonGolfBackEnd.Controllers
                             BetD_B9_5 = Convert.ToString(BackValores[4]);
 
                             ActualizarAPuesta(Datos.IDBetDetail, Datos.IDBet, Datos.IDRonda, PlayerID1, PlayerID2, BetD_F9_1, BetD_F9_2, BetD_F9_3, BetD_F9_4, BetD_F9_5, BetD_F9_6,
-                                              BetD_F9_7, BetD_F9_8, BetD_F9_9, BetD_B9_1, BetD_B9_2, BetD_B9_3, BetD_B9_4, BetD_B9_5, BetD_B9_6, BetD_B9_7, BetD_B9_8, BetD_B9_9);
+                                              BetD_F9_7, BetD_F9_8, BetD_F9_9, BetD_B9_1, BetD_B9_2, BetD_B9_3, BetD_B9_4, BetD_B9_5, BetD_B9_6, BetD_B9_7, BetD_B9_8, BetD_B9_9, ResultadoFinalMedal, ContadorHoyos);
 
                         }
                         else if (AutoPress == 3)
@@ -739,13 +954,13 @@ namespace DragonGolfBackEnd.Controllers
                             BetD_B9_3 = Convert.ToString(BackValores[2]);
 
                             ActualizarAPuesta(Datos.IDBetDetail, Datos.IDBet, Datos.IDRonda, PlayerID1, PlayerID2, BetD_F9_1, BetD_F9_2, BetD_F9_3, BetD_F9_4, BetD_F9_5, BetD_F9_6,
-                                             BetD_F9_7, BetD_F9_8, BetD_F9_9, BetD_B9_1, BetD_B9_2, BetD_B9_3, BetD_B9_4, BetD_B9_5, BetD_B9_6, BetD_B9_7, BetD_B9_8, BetD_B9_9);
+                                             BetD_F9_7, BetD_F9_8, BetD_F9_9, BetD_B9_1, BetD_B9_2, BetD_B9_3, BetD_B9_4, BetD_B9_5, BetD_B9_6, BetD_B9_7, BetD_B9_8, BetD_B9_9, ResultadoFinalMedal, ContadorHoyos);
                         }
                         else
                         {
 
                             ActualizarAPuesta(Datos.IDBetDetail, Datos.IDBet, Datos.IDRonda, PlayerID1, PlayerID2, Convert.ToString(Resultado1), Convert.ToString(Resultado2), Convert.ToString(Resultado3), Convert.ToString(Resultado4), Convert.ToString(Resultado5), Convert.ToString(Resultado6),
-                                            Convert.ToString(Resultado7), Convert.ToString(Resultado8), Convert.ToString(Resultado9), Convert.ToString(Resultado10), Convert.ToString(Resultado11), Convert.ToString(Resultado12), Convert.ToString(Resultado13), Convert.ToString(Resultado14), Convert.ToString(Resultado15), Convert.ToString(Resultado16), Convert.ToString(Resultado17), Convert.ToString(Resultado18));
+                                            Convert.ToString(Resultado7), Convert.ToString(Resultado8), Convert.ToString(Resultado9), Convert.ToString(Resultado10), Convert.ToString(Resultado11), Convert.ToString(Resultado12), Convert.ToString(Resultado13), Convert.ToString(Resultado14), Convert.ToString(Resultado15), Convert.ToString(Resultado16), Convert.ToString(Resultado17), Convert.ToString(Resultado18), ResultadoFinalMedal, ContadorHoyos);
 
                         }
 
@@ -2901,7 +3116,7 @@ namespace DragonGolfBackEnd.Controllers
         }
 
         private int ActualizarAPuesta(int IDBetDetail, int IDBet, int IDRonda, int BetD_Player1, int BetD_Player2, string BetD_F9_1, string BetD_F9_2, string BetD_F9_3, string BetD_F9_4, string BetD_F9_5, string BetD_F9_6, string BetD_F9_7, string BetD_F9_8, string BetD_F9_9,
-                                      string @BetD_B9_1, string BetD_B9_2, string BetD_B9_3, string BetD_B9_4, string BetD_B9_5, string BetD_B9_6, string BetD_B9_7, string BetD_B9_8, string BetD_B9_9)
+                                      string @BetD_B9_1, string BetD_B9_2, string BetD_B9_3, string BetD_B9_4, string BetD_B9_5, string BetD_B9_6, string BetD_B9_7, string BetD_B9_8, string BetD_B9_9,int ResultadoFinalMedal,int Match)
         {
 
 
@@ -2932,6 +3147,8 @@ namespace DragonGolfBackEnd.Controllers
             comando.Parameters.Add("@BetD_B9_7", SqlDbType.VarChar);
             comando.Parameters.Add("@BetD_B9_8", SqlDbType.VarChar);
             comando.Parameters.Add("@BetD_B9_9", SqlDbType.VarChar);
+            comando.Parameters.Add("@Medal", SqlDbType.Int);
+            comando.Parameters.Add("@Match", SqlDbType.Int);
 
             //Asignacion de valores a parametros
             comando.Parameters["@IDBet"].Value = IDBet;
@@ -2957,6 +3174,9 @@ namespace DragonGolfBackEnd.Controllers
             comando.Parameters["@BetD_B9_7"].Value = BetD_B9_7;
             comando.Parameters["@BetD_B9_8"].Value = BetD_B9_8;
             comando.Parameters["@BetD_B9_9"].Value = BetD_B9_9;
+
+            comando.Parameters["@Medal"].Value = ResultadoFinalMedal;
+            comando.Parameters["@Match"].Value = Match;
 
             comando.Connection = new SqlConnection(VariablesGlobales.CadenaConexion);
             comando.CommandTimeout = 0;
