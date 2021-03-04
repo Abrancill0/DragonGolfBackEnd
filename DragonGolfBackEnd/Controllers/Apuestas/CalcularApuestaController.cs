@@ -240,7 +240,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             int CicloFor = 18;
 
-                                if (Adv > 18)
+                            if (Adv > 18)
                             {
                                 CicloFor = Adv;
                             }
@@ -259,7 +259,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                     if (DificultatHoyo1 == i)
                                     {
-                                        if (ScoreHole1_P1 > 0)
+                                        if (ScoreHole1_P1 > 0 && ScoreHole1_P2 > 0)
                                         {
                                             ScoreHole1_P1 = ScoreHole1_P1 - 1;
                                         }
@@ -268,7 +268,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                     if (DificultatHoyo2 == i)
                                     {
-                                        if (ScoreHole2_P1 > 0)
+                                        if (ScoreHole2_P1 > 0 && ScoreHole2_P2 > 0)
                                         {
                                             ScoreHole2_P1 = ScoreHole2_P1 - 1;
                                         }
@@ -277,7 +277,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                     if (DificultatHoyo3 == i)
                                     {
-                                        if (ScoreHole3_P1 > 0)
+                                        if (ScoreHole3_P1 > 0 && ScoreHole3_P2 > 0)
                                         {
                                             ScoreHole3_P1 = ScoreHole3_P1 - 1;
                                         }
@@ -286,7 +286,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                     if (DificultatHoyo4 == i)
                                     {
-                                        if (ScoreHole4_P1 > 0)
+                                        if (ScoreHole4_P1 > 0 && ScoreHole4_P2 > 0)
                                         {
                                             ScoreHole4_P1 = ScoreHole4_P1 - 1;
                                         }
@@ -295,7 +295,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                     if (DificultatHoyo5 == i)
                                     {
-                                        if (ScoreHole5_P1 > 0)
+                                        if (ScoreHole5_P1 > 0 && ScoreHole5_P2 > 0)
                                         {
                                             ScoreHole5_P1 = ScoreHole5_P1 - 1;
                                         }
@@ -304,7 +304,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                     if (DificultatHoyo6 == i)
                                     {
-                                        if (ScoreHole6_P1 > 0)
+                                        if (ScoreHole6_P1 > 0 && ScoreHole6_P2 > 0)
                                         {
                                             ScoreHole6_P1 = ScoreHole6_P1 - 1;
                                         }
@@ -313,7 +313,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                     if (DificultatHoyo7 == i)
                                     {
-                                        if (ScoreHole7_P1 > 0)
+                                        if (ScoreHole7_P1 > 0 && ScoreHole7_P2 > 0)
                                         {
                                             ScoreHole7_P1 = ScoreHole7_P1 - 1;
                                         }
@@ -322,7 +322,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                     if (DificultatHoyo8 == i)
                                     {
-                                        if (ScoreHole8_P1 > 0)
+                                        if (ScoreHole8_P1 > 0 && ScoreHole8_P2 > 0)
                                         {
                                             ScoreHole8_P1 = ScoreHole8_P1 - 1;
                                         }
@@ -331,7 +331,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                     if (DificultatHoyo9 == i)
                                     {
-                                        if (ScoreHole9_P1 > 0)
+                                        if (ScoreHole9_P1 > 0 && ScoreHole9_P2 > 0)
                                         {
                                             ScoreHole9_P1 = ScoreHole9_P1 - 1;
                                         }
@@ -340,7 +340,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                     if (DificultatHoyo10 == i)
                                     {
-                                        if (ScoreHole10_P1 > 0)
+                                        if (ScoreHole10_P1 > 0 && ScoreHole10_P2 > 0)
                                         {
                                             ScoreHole10_P1 = ScoreHole10_P1 - 1;
                                         }
@@ -349,7 +349,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                     if (DificultatHoyo11 == i)
                                     {
-                                        if (ScoreHole11_P1 > 0)
+                                        if (ScoreHole11_P1 > 0 && ScoreHole11_P2 > 0)
                                         {
                                             ScoreHole11_P1 = ScoreHole11_P1 - 1;
                                         }
@@ -358,7 +358,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                     if (DificultatHoyo12 == i)
                                     {
-                                        if (ScoreHole12_P1 > 0)
+                                        if (ScoreHole12_P1 > 0 && ScoreHole12_P2 > 0)
                                         {
                                             ScoreHole12_P1 = ScoreHole1_P1 - 1;
                                         }
@@ -367,7 +367,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                     if (DificultatHoyo13 == i)
                                     {
-                                        if (ScoreHole1_P1 > 0)
+                                        if (ScoreHole13_P1 > 0 && ScoreHole13_P2 > 0)
                                         {
                                             ScoreHole13_P1 = ScoreHole13_P1 - 1;
                                         }
@@ -376,7 +376,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                     if (DificultatHoyo14 == i)
                                     {
-                                        if (ScoreHole14_P1 > 0)
+                                        if (ScoreHole14_P1 > 0 && ScoreHole14_P2 > 0)
                                         {
                                             ScoreHole14_P1 = ScoreHole14_P1 - 1;
                                         }
@@ -385,7 +385,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                     if (DificultatHoyo15 == i)
                                     {
-                                        if (ScoreHole1_P1 > 0)
+                                        if (ScoreHole15_P1 > 0 && ScoreHole15_P2 > 0)
                                         {
                                             ScoreHole15_P1 = ScoreHole15_P1 - 1;
                                         }
@@ -393,7 +393,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                     if (DificultatHoyo16 == i)
                                     {
-                                        if (ScoreHole1_P1 > 0)
+                                        if (ScoreHole16_P1 > 0 && ScoreHole16_P2 > 0)
                                         {
                                             ScoreHole16_P1 = ScoreHole16_P1 - 1;
                                         }
@@ -401,7 +401,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                     if (DificultatHoyo17 == i)
                                     {
-                                        if (ScoreHole17_P1 > 0)
+                                        if (ScoreHole17_P1 > 0 && ScoreHole17_P2 > 0)
                                         {
                                             ScoreHole17_P1 = ScoreHole17_P1 - 1;
                                         }
@@ -409,12 +409,11 @@ namespace DragonGolfBackEnd.Controllers
 
                                     if (DificultatHoyo18 == i)
                                     {
-                                        if (ScoreHole18_P1 > 0)
+                                        if (ScoreHole18_P1 > 0 && ScoreHole18_P2 > 0)
                                         {
                                             ScoreHole18_P1 = ScoreHole18_P1 - 1;
                                         }
                                     }
-
 
                                 }
                                 else
@@ -429,7 +428,7 @@ namespace DragonGolfBackEnd.Controllers
                         {
                             int CicloFor = 18;
 
-                                if (Adv > 18)
+                            if (Adv > 18)
                             {
                                 CicloFor = Adv;
                             }
@@ -449,7 +448,7 @@ namespace DragonGolfBackEnd.Controllers
                                     if (DificultatHoyo1 == i)
                                     {
 
-                                        if (ScoreHole1_P2 > 0)
+                                        if (ScoreHole1_P2 > 0 && ScoreHole1_P1 > 0)
                                         {
                                             ScoreHole1_P2 = ScoreHole1_P2 - 1;
                                         }
@@ -459,7 +458,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                     if (DificultatHoyo2 == i)
                                     {
-                                        if (ScoreHole2_P2 > 0)
+                                        if (ScoreHole2_P2 > 0 && ScoreHole2_P1 > 0)
                                         {
                                             ScoreHole2_P2 = ScoreHole2_P2 - 1;
                                         }
@@ -468,7 +467,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                     if (DificultatHoyo3 == i)
                                     {
-                                        if (ScoreHole3_P2 > 0)
+                                        if (ScoreHole3_P2 > 0 && ScoreHole3_P1 > 0)
                                         {
                                             ScoreHole3_P2 = ScoreHole3_P2 - 1;
                                         }
@@ -477,7 +476,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                     if (DificultatHoyo4 == i)
                                     {
-                                        if (ScoreHole4_P2 > 0)
+                                        if (ScoreHole4_P2 > 0 && ScoreHole4_P1 > 0)
                                         {
                                             ScoreHole4_P2 = ScoreHole4_P2 - 1;
                                         }
@@ -486,7 +485,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                     if (DificultatHoyo5 == i)
                                     {
-                                        if (ScoreHole5_P2 > 0)
+                                        if (ScoreHole5_P2 > 0 && ScoreHole5_P1 > 0)
                                         {
                                             ScoreHole5_P2 = ScoreHole5_P2 - 1;
                                         }
@@ -495,7 +494,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                     if (DificultatHoyo6 == i)
                                     {
-                                        if (ScoreHole6_P2 > 0)
+                                        if (ScoreHole6_P2 > 0 && ScoreHole6_P1 > 0)
                                         {
                                             ScoreHole6_P2 = ScoreHole6_P2 - 1;
                                         }
@@ -504,7 +503,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                     if (DificultatHoyo7 == i)
                                     {
-                                        if (ScoreHole7_P2 > 0)
+                                        if (ScoreHole7_P2 > 0 && ScoreHole7_P1 > 0)
                                         {
                                             ScoreHole7_P2 = ScoreHole7_P2 - 1;
                                         }
@@ -513,7 +512,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                     if (DificultatHoyo8 == i)
                                     {
-                                        if (ScoreHole8_P2 > 0)
+                                        if (ScoreHole8_P2 > 0 && ScoreHole8_P1 > 0)
                                         {
                                             ScoreHole8_P2 = ScoreHole8_P2 - 1;
                                         }
@@ -522,7 +521,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                     if (DificultatHoyo9 == i)
                                     {
-                                        if (ScoreHole9_P2 > 0)
+                                        if (ScoreHole9_P2 > 0 && ScoreHole9_P1 > 0)
                                         {
                                             ScoreHole9_P2 = ScoreHole9_P2 - 1;
                                         }
@@ -531,7 +530,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                     if (DificultatHoyo10 == i)
                                     {
-                                        if (ScoreHole10_P2 > 0)
+                                        if (ScoreHole10_P2 > 0 && ScoreHole10_P1 > 0)
                                         {
                                             ScoreHole10_P2 = ScoreHole10_P2 - 1;
                                         }
@@ -540,7 +539,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                     if (DificultatHoyo11 == i)
                                     {
-                                        if (ScoreHole11_P2 > 0)
+                                        if (ScoreHole11_P2 > 0 && ScoreHole11_P1 > 0)
                                         {
                                             ScoreHole11_P2 = ScoreHole11_P2 - 1;
                                         }
@@ -549,16 +548,16 @@ namespace DragonGolfBackEnd.Controllers
 
                                     if (DificultatHoyo12 == i)
                                     {
-                                        if (ScoreHole1_P2 > 0)
+                                        if (ScoreHole12_P2 > 0 && ScoreHole12_P1 > 0)
                                         {
-                                            ScoreHole1_P2 = ScoreHole1_P2 - 1;
+                                            ScoreHole12_P2 = ScoreHole12_P2 - 1;
                                         }
 
                                     }
 
                                     if (DificultatHoyo13 == i)
                                     {
-                                        if (ScoreHole13_P2 > 0)
+                                        if (ScoreHole13_P2 > 0 && ScoreHole13_P1 > 0)
                                         {
                                             ScoreHole13_P2 = ScoreHole13_P2 - 1;
                                         }
@@ -567,7 +566,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                     if (DificultatHoyo14 == i)
                                     {
-                                        if (ScoreHole14_P2 > 0)
+                                        if (ScoreHole14_P2 > 0 && ScoreHole14_P1 > 0)
                                         {
                                             ScoreHole14_P2 = ScoreHole14_P2 - 1;
                                         }
@@ -576,7 +575,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                     if (DificultatHoyo15 == i)
                                     {
-                                        if (ScoreHole15_P2 > 0)
+                                        if (ScoreHole15_P2 > 0 && ScoreHole15_P1 > 0)
                                         {
                                             ScoreHole15_P2 = ScoreHole15_P2 - 1;
                                         }
@@ -585,7 +584,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                     if (DificultatHoyo16 == i)
                                     {
-                                        if (ScoreHole16_P2 > 0)
+                                        if (ScoreHole16_P2 > 0 && ScoreHole16_P1 > 0)
                                         {
                                             ScoreHole16_P2 = ScoreHole16_P2 - 1;
                                         }
@@ -594,7 +593,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                     if (DificultatHoyo17 == i)
                                     {
-                                        if (ScoreHole17_P2 > 0)
+                                        if (ScoreHole17_P2 > 0 && ScoreHole17_P1 > 0)
                                         {
                                             ScoreHole17_P2 = ScoreHole17_P2 - 1;
                                         }
@@ -603,7 +602,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                     if (DificultatHoyo18 == i)
                                     {
-                                        if (ScoreHole18_P2 > 0)
+                                        if (ScoreHole18_P2 > 0 && ScoreHole18_P1 > 0)
                                         {
                                             ScoreHole18_P2 = ScoreHole18_P2 - 1;
                                         }
@@ -635,10 +634,10 @@ namespace DragonGolfBackEnd.Controllers
 
                         int ContadorHoyos = 0;
 
-                        if (Resultado1>0)
-                          {
+                        if (Resultado1 > 0)
+                        {
                             ContadorHoyos = ContadorHoyos + 1;
-                          }
+                        }
                         else if (Resultado1 < 0)
                         {
                             ContadorHoyos = ContadorHoyos - 1;
@@ -3116,7 +3115,7 @@ namespace DragonGolfBackEnd.Controllers
         }
 
         private int ActualizarAPuesta(int IDBetDetail, int IDBet, int IDRonda, int BetD_Player1, int BetD_Player2, string BetD_F9_1, string BetD_F9_2, string BetD_F9_3, string BetD_F9_4, string BetD_F9_5, string BetD_F9_6, string BetD_F9_7, string BetD_F9_8, string BetD_F9_9,
-                                      string @BetD_B9_1, string BetD_B9_2, string BetD_B9_3, string BetD_B9_4, string BetD_B9_5, string BetD_B9_6, string BetD_B9_7, string BetD_B9_8, string BetD_B9_9,int ResultadoFinalMedal,int Match)
+                                      string @BetD_B9_1, string BetD_B9_2, string BetD_B9_3, string BetD_B9_4, string BetD_B9_5, string BetD_B9_6, string BetD_B9_7, string BetD_B9_8, string BetD_B9_9, int ResultadoFinalMedal, int Match)
         {
 
 
