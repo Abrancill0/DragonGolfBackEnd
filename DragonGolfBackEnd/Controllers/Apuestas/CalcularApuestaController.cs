@@ -238,101 +238,181 @@ namespace DragonGolfBackEnd.Controllers
                         {
                             int AdvPositivo = (-1) * (Adv);
 
-                            for (int i = 1; i < 18; i++)
+                            int CicloFor = 18;
+
+                                if (Adv > 18)
+                            {
+                                CicloFor = Adv;
+                            }
+
+                            for (int i = 1; i < CicloFor; i++)
                             {
                                 Contador += 1;
+
+                                if (Contador > 18)
+                                {
+                                    Contador = 1;
+                                }
 
                                 if (Contador <= AdvPositivo)
                                 {
 
                                     if (DificultatHoyo1 == i)
                                     {
-                                        ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                        if (ScoreHole1_P1 > 0)
+                                        {
+                                            ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                        }
+
                                     }
 
                                     if (DificultatHoyo2 == i)
                                     {
-                                        ScoreHole2_P1 = ScoreHole2_P1 - 1;
+                                        if (ScoreHole2_P1 > 0)
+                                        {
+                                            ScoreHole2_P1 = ScoreHole2_P1 - 1;
+                                        }
+
                                     }
 
                                     if (DificultatHoyo3 == i)
                                     {
-                                        ScoreHole3_P1 = ScoreHole3_P1 - 1;
+                                        if (ScoreHole3_P1 > 0)
+                                        {
+                                            ScoreHole3_P1 = ScoreHole3_P1 - 1;
+                                        }
+
                                     }
 
                                     if (DificultatHoyo4 == i)
                                     {
-                                        ScoreHole4_P1 = ScoreHole4_P1 - 1;
+                                        if (ScoreHole4_P1 > 0)
+                                        {
+                                            ScoreHole4_P1 = ScoreHole4_P1 - 1;
+                                        }
+
                                     }
 
                                     if (DificultatHoyo5 == i)
                                     {
-                                        ScoreHole5_P1 = ScoreHole5_P1 - 1;
+                                        if (ScoreHole5_P1 > 0)
+                                        {
+                                            ScoreHole5_P1 = ScoreHole5_P1 - 1;
+                                        }
+
                                     }
 
                                     if (DificultatHoyo6 == i)
                                     {
-                                        ScoreHole6_P1 = ScoreHole6_P1 - 1;
+                                        if (ScoreHole6_P1 > 0)
+                                        {
+                                            ScoreHole6_P1 = ScoreHole6_P1 - 1;
+                                        }
+
                                     }
 
                                     if (DificultatHoyo7 == i)
                                     {
-                                        ScoreHole7_P1 = ScoreHole7_P1 - 1;
+                                        if (ScoreHole7_P1 > 0)
+                                        {
+                                            ScoreHole7_P1 = ScoreHole7_P1 - 1;
+                                        }
+
                                     }
 
                                     if (DificultatHoyo8 == i)
                                     {
-                                        ScoreHole8_P1 = ScoreHole8_P1 - 1;
+                                        if (ScoreHole8_P1 > 0)
+                                        {
+                                            ScoreHole8_P1 = ScoreHole8_P1 - 1;
+                                        }
+
                                     }
 
                                     if (DificultatHoyo9 == i)
                                     {
-                                        ScoreHole9_P1 = ScoreHole9_P1 - 1;
+                                        if (ScoreHole9_P1 > 0)
+                                        {
+                                            ScoreHole9_P1 = ScoreHole9_P1 - 1;
+                                        }
+
                                     }
 
                                     if (DificultatHoyo10 == i)
                                     {
-                                        ScoreHole10_P1 = ScoreHole10_P1 - 1;
+                                        if (ScoreHole10_P1 > 0)
+                                        {
+                                            ScoreHole10_P1 = ScoreHole10_P1 - 1;
+                                        }
+
                                     }
 
                                     if (DificultatHoyo11 == i)
                                     {
-                                        ScoreHole11_P1 = ScoreHole11_P1 - 1;
+                                        if (ScoreHole11_P1 > 0)
+                                        {
+                                            ScoreHole11_P1 = ScoreHole11_P1 - 1;
+                                        }
+
                                     }
 
                                     if (DificultatHoyo12 == i)
                                     {
-                                        ScoreHole12_P1 = ScoreHole1_P1 - 1;
+                                        if (ScoreHole12_P1 > 0)
+                                        {
+                                            ScoreHole12_P1 = ScoreHole1_P1 - 1;
+                                        }
+
                                     }
 
                                     if (DificultatHoyo13 == i)
                                     {
-                                        ScoreHole13_P1 = ScoreHole13_P1 - 1;
+                                        if (ScoreHole1_P1 > 0)
+                                        {
+                                            ScoreHole13_P1 = ScoreHole13_P1 - 1;
+                                        }
+
                                     }
 
                                     if (DificultatHoyo14 == i)
                                     {
-                                        ScoreHole14_P1 = ScoreHole14_P1 - 1;
+                                        if (ScoreHole14_P1 > 0)
+                                        {
+                                            ScoreHole14_P1 = ScoreHole14_P1 - 1;
+                                        }
+
                                     }
 
                                     if (DificultatHoyo15 == i)
                                     {
-                                        ScoreHole15_P1 = ScoreHole15_P1 - 1;
+                                        if (ScoreHole1_P1 > 0)
+                                        {
+                                            ScoreHole15_P1 = ScoreHole15_P1 - 1;
+                                        }
                                     }
 
                                     if (DificultatHoyo16 == i)
                                     {
-                                        ScoreHole16_P1 = ScoreHole16_P1 - 1;
+                                        if (ScoreHole1_P1 > 0)
+                                        {
+                                            ScoreHole16_P1 = ScoreHole16_P1 - 1;
+                                        }
                                     }
 
                                     if (DificultatHoyo17 == i)
                                     {
-                                        ScoreHole17_P1 = ScoreHole17_P1 - 1;
+                                        if (ScoreHole17_P1 > 0)
+                                        {
+                                            ScoreHole17_P1 = ScoreHole17_P1 - 1;
+                                        }
                                     }
 
                                     if (DificultatHoyo18 == i)
                                     {
-                                        ScoreHole18_P1 = ScoreHole18_P1 - 1;
+                                        if (ScoreHole18_P1 > 0)
+                                        {
+                                            ScoreHole18_P1 = ScoreHole18_P1 - 1;
+                                        }
                                     }
 
 
@@ -347,102 +427,187 @@ namespace DragonGolfBackEnd.Controllers
                         }
                         else if (Adv > 0)
                         {
+                            int CicloFor = 18;
 
-                            for (int i = 1; i < 18; i++)
+                                if (Adv > 18)
+                            {
+                                CicloFor = Adv;
+                            }
+
+                            for (int i = 1; i < CicloFor; i++)
                             {
                                 Contador += 1;
+
+                                if (Contador > 18)
+                                {
+                                    Contador = 1;
+                                }
 
                                 if (Contador <= Adv)
                                 {
 
                                     if (DificultatHoyo1 == i)
                                     {
-                                        ScoreHole1_P2 = ScoreHole1_P2 - 1;
+
+                                        if (ScoreHole1_P2 > 0)
+                                        {
+                                            ScoreHole1_P2 = ScoreHole1_P2 - 1;
+                                        }
+
+
                                     }
 
                                     if (DificultatHoyo2 == i)
                                     {
-                                        ScoreHole2_P2 = ScoreHole2_P2 - 1;
+                                        if (ScoreHole2_P2 > 0)
+                                        {
+                                            ScoreHole2_P2 = ScoreHole2_P2 - 1;
+                                        }
+
                                     }
 
                                     if (DificultatHoyo3 == i)
                                     {
-                                        ScoreHole3_P2 = ScoreHole3_P2 - 1;
+                                        if (ScoreHole3_P2 > 0)
+                                        {
+                                            ScoreHole3_P2 = ScoreHole3_P2 - 1;
+                                        }
+
                                     }
 
                                     if (DificultatHoyo4 == i)
                                     {
-                                        ScoreHole4_P2 = ScoreHole4_P2 - 1;
+                                        if (ScoreHole4_P2 > 0)
+                                        {
+                                            ScoreHole4_P2 = ScoreHole4_P2 - 1;
+                                        }
+
                                     }
 
                                     if (DificultatHoyo5 == i)
                                     {
-                                        ScoreHole5_P2 = ScoreHole5_P2 - 1;
+                                        if (ScoreHole5_P2 > 0)
+                                        {
+                                            ScoreHole5_P2 = ScoreHole5_P2 - 1;
+                                        }
+
                                     }
 
                                     if (DificultatHoyo6 == i)
                                     {
-                                        ScoreHole6_P2 = ScoreHole6_P2 - 1;
+                                        if (ScoreHole6_P2 > 0)
+                                        {
+                                            ScoreHole6_P2 = ScoreHole6_P2 - 1;
+                                        }
+
                                     }
 
                                     if (DificultatHoyo7 == i)
                                     {
-                                        ScoreHole7_P2 = ScoreHole7_P2 - 1;
+                                        if (ScoreHole7_P2 > 0)
+                                        {
+                                            ScoreHole7_P2 = ScoreHole7_P2 - 1;
+                                        }
+
                                     }
 
                                     if (DificultatHoyo8 == i)
                                     {
-                                        ScoreHole8_P2 = ScoreHole8_P2 - 1;
+                                        if (ScoreHole8_P2 > 0)
+                                        {
+                                            ScoreHole8_P2 = ScoreHole8_P2 - 1;
+                                        }
+
                                     }
 
                                     if (DificultatHoyo9 == i)
                                     {
-                                        ScoreHole9_P2 = ScoreHole9_P2 - 1;
+                                        if (ScoreHole9_P2 > 0)
+                                        {
+                                            ScoreHole9_P2 = ScoreHole9_P2 - 1;
+                                        }
+
                                     }
 
                                     if (DificultatHoyo10 == i)
                                     {
-                                        ScoreHole10_P2 = ScoreHole10_P2 - 1;
+                                        if (ScoreHole10_P2 > 0)
+                                        {
+                                            ScoreHole10_P2 = ScoreHole10_P2 - 1;
+                                        }
+
                                     }
 
                                     if (DificultatHoyo11 == i)
                                     {
-                                        ScoreHole11_P2 = ScoreHole11_P2 - 1;
+                                        if (ScoreHole11_P2 > 0)
+                                        {
+                                            ScoreHole11_P2 = ScoreHole11_P2 - 1;
+                                        }
+
                                     }
 
                                     if (DificultatHoyo12 == i)
                                     {
-                                        ScoreHole12_P2 = ScoreHole1_P2 - 1;
+                                        if (ScoreHole1_P2 > 0)
+                                        {
+                                            ScoreHole1_P2 = ScoreHole1_P2 - 1;
+                                        }
+
                                     }
 
                                     if (DificultatHoyo13 == i)
                                     {
-                                        ScoreHole13_P2 = ScoreHole13_P2 - 1;
+                                        if (ScoreHole13_P2 > 0)
+                                        {
+                                            ScoreHole13_P2 = ScoreHole13_P2 - 1;
+                                        }
+
                                     }
 
                                     if (DificultatHoyo14 == i)
                                     {
-                                        ScoreHole14_P2 = ScoreHole14_P2 - 1;
+                                        if (ScoreHole14_P2 > 0)
+                                        {
+                                            ScoreHole14_P2 = ScoreHole14_P2 - 1;
+                                        }
+
                                     }
 
                                     if (DificultatHoyo15 == i)
                                     {
-                                        ScoreHole15_P2 = ScoreHole15_P2 - 1;
+                                        if (ScoreHole15_P2 > 0)
+                                        {
+                                            ScoreHole15_P2 = ScoreHole15_P2 - 1;
+                                        }
+
                                     }
 
                                     if (DificultatHoyo16 == i)
                                     {
-                                        ScoreHole16_P2 = ScoreHole16_P2 - 1;
+                                        if (ScoreHole16_P2 > 0)
+                                        {
+                                            ScoreHole16_P2 = ScoreHole16_P2 - 1;
+                                        }
+
                                     }
 
                                     if (DificultatHoyo17 == i)
                                     {
-                                        ScoreHole17_P2 = ScoreHole17_P2 - 1;
+                                        if (ScoreHole17_P2 > 0)
+                                        {
+                                            ScoreHole17_P2 = ScoreHole17_P2 - 1;
+                                        }
+
                                     }
 
                                     if (DificultatHoyo18 == i)
                                     {
-                                        ScoreHole18_P2 = ScoreHole18_P2 - 1;
+                                        if (ScoreHole18_P2 > 0)
+                                        {
+                                            ScoreHole18_P2 = ScoreHole18_P2 - 1;
+                                        }
+
                                     }
 
 

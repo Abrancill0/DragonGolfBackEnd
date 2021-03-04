@@ -102,10 +102,13 @@ namespace DragonGolfBackEnd.Controllers
             public decimal usu_handicapindex { get; set; }
           public int ValidaUsuarioCreo { get; set; }
             public int IDUsuarioCreo { get; set; }
+            public int ScoreIn { get; set; }
+            public int ScoreOut { get; set; }
+            public int TotalScore { get; set; }
 
 
 
-    }
+        }
         public JObject Post(ParametrosEntradas Datos)
         {
             try
@@ -226,6 +229,9 @@ namespace DragonGolfBackEnd.Controllers
                                 usu_handicapindex = Convert.ToDecimal(row["usu_handicapindex"]),
                                 ValidaUsuarioCreo = Convert.ToInt32(row["ValidaUsuarioCreo"]),
                                 IDUsuarioCreo = Convert.ToInt32(row["IDUsuarioCreo"]),
+                                ScoreIn = Convert.ToInt32(row["ScoreIn"]),
+                                ScoreOut = Convert.ToInt32(row["ScoreOut"]),
+                                TotalScore = Convert.ToInt32(row["TotalScore"]),
                             };
 
                             lista.Add(ent);

@@ -51,6 +51,9 @@ namespace DragonGolfBackEnd.Controllers
             public int set_bbt_wager_f9 { get; set; }
             public int set_golpesventaja { get; set; }
             public int set_diferenciatee { get; set; }
+            public int ScoreIn { get; set; }
+            public int ScoreOut { get; set; }
+            public int TotalScore { get; set; }
 
 
         }
@@ -132,7 +135,11 @@ namespace DragonGolfBackEnd.Controllers
                                 set_bbt_wager_f9 = Convert.ToInt32(row["set_bbt_wager_f9"]),
                                 set_golpesventaja = Convert.ToInt32(row["set_golpesventaja"]),
                                 set_diferenciatee = Convert.ToInt32(row["set_diferenciatee"]),
-                             
+
+                                ScoreIn = Convert.ToInt32(row["ScoreIn"]),
+                                ScoreOut = Convert.ToInt32(row["ScoreOut"]),
+                                TotalScore = Convert.ToInt32(row["TotalScore"]),
+
                             };
 
                             lista.Add(ent);
