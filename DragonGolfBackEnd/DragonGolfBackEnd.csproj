@@ -219,8 +219,10 @@
     <Compile Include="Controllers\Ronda\AgregarAmigosRondaController.cs" />
     <Compile Include="Controllers\Ronda\AgregarTeesRondaController.cs" />
     <Compile Include="Controllers\Ronda\ListadoAmigosRonda2Controller.cs" />
+    <Compile Include="Controllers\Ronda\ListadoAmigosRondaAllController.cs" />
     <Compile Include="Controllers\Ronda\ListadoAmigosRondaDataController.cs" />
     <Compile Include="Controllers\Ronda\ListadoAmigosRondaController.cs" />
+    <Compile Include="Controllers\Ronda\ListadoTeesRondaController.cs" />
     <Compile Include="Controllers\Ronda\ListadoRondaStrokerController.cs" />
     <Compile Include="Controllers\Ronda\ListadoRondaController.cs" />
     <Compile Include="Controllers\Ronda\CrearRondaController.cs" />
