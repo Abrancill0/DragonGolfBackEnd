@@ -26,7 +26,6 @@ namespace DragonGolfBackEnd.Controllers
         }
         public class ParametrosSalida
         {
-            public int RoundPvPId { get; set; }
             public int IDCourse { get; set; }
             public string Ro_Name { get; set; }
             public int IDTees { get; set; }
@@ -50,7 +49,7 @@ namespace DragonGolfBackEnd.Controllers
             public int Par_Hole17 { get; set; }
             public int Par_Hole18 { get; set; }
 
-}
+        }
         public JObject Post(ParametrosEntradas Datos)
         {
             try
@@ -76,7 +75,7 @@ namespace DragonGolfBackEnd.Controllers
 
                 string Mensaje = "";
                 int Estatus = 0;
-              
+
 
                 int contador = DT.Rows.Count;
 
@@ -92,35 +91,34 @@ namespace DragonGolfBackEnd.Controllers
                             ParametrosSalida ent = new ParametrosSalida
                             {
 
-                                RoundPvPId = Convert.ToInt32(row["RoundPvPId"]),
-        IDCourse = Convert.ToInt32(row["IDCourse"]),
-        Ro_Name = Convert.ToString(row["Ro_Name"]),
-        IDTees = Convert.ToInt32(row["IDTees"]),
-        PlayerTee = Convert.ToString(row["PlayerTee"]),
-        Par_Hole1 = Convert.ToInt32(row["Par_Hole1"]),
-        Par_Hole2 = Convert.ToInt32(row["Par_Hole2"]),
-        Par_Hole3 = Convert.ToInt32(row["Par_Hole3"]),
-        Par_Hole4 = Convert.ToInt32(row["Par_Hole4"]),
-        Par_Hole5 = Convert.ToInt32(row["Par_Hole5"]),
-        Par_Hole6 = Convert.ToInt32(row["Par_Hole6"]),
-        Par_Hole7 = Convert.ToInt32(row["Par_Hole7"]),
-        Par_Hole8 = Convert.ToInt32(row["Par_Hole8"]),
-        Par_Hole9 = Convert.ToInt32(row["Par_Hole9"]),
-        Par_Hole10 = Convert.ToInt32(row["Par_Hole10"]),
-        Par_Hole11 = Convert.ToInt32(row["Par_Hole11"]),
-        Par_Hole12 = Convert.ToInt32(row["Par_Hole12"]),
-        Par_Hole13 = Convert.ToInt32(row["Par_Hole13"]),
-        Par_Hole14 = Convert.ToInt32(row["Par_Hole14"]),
-        Par_Hole15 = Convert.ToInt32(row["Par_Hole15"]),
-        Par_Hole16 = Convert.ToInt32(row["Par_Hole16"]),
-        Par_Hole17 = Convert.ToInt32(row["Par_Hole17"]),
-        Par_Hole18 = Convert.ToInt32(row["Par_Hole18"]),
+                                IDCourse = Convert.ToInt32(row["IDCourse"]),
+                                Ro_Name = Convert.ToString(row["Ro_Name"]),
+                                IDTees = Convert.ToInt32(row["IDTees"]),
+                                PlayerTee = Convert.ToString(row["PlayerTee"]),
+                                Par_Hole1 = Convert.ToInt32(row["Par_Hole1"]),
+                                Par_Hole2 = Convert.ToInt32(row["Par_Hole2"]),
+                                Par_Hole3 = Convert.ToInt32(row["Par_Hole3"]),
+                                Par_Hole4 = Convert.ToInt32(row["Par_Hole4"]),
+                                Par_Hole5 = Convert.ToInt32(row["Par_Hole5"]),
+                                Par_Hole6 = Convert.ToInt32(row["Par_Hole6"]),
+                                Par_Hole7 = Convert.ToInt32(row["Par_Hole7"]),
+                                Par_Hole8 = Convert.ToInt32(row["Par_Hole8"]),
+                                Par_Hole9 = Convert.ToInt32(row["Par_Hole9"]),
+                                Par_Hole10 = Convert.ToInt32(row["Par_Hole10"]),
+                                Par_Hole11 = Convert.ToInt32(row["Par_Hole11"]),
+                                Par_Hole12 = Convert.ToInt32(row["Par_Hole12"]),
+                                Par_Hole13 = Convert.ToInt32(row["Par_Hole13"]),
+                                Par_Hole14 = Convert.ToInt32(row["Par_Hole14"]),
+                                Par_Hole15 = Convert.ToInt32(row["Par_Hole15"]),
+                                Par_Hole16 = Convert.ToInt32(row["Par_Hole16"]),
+                                Par_Hole17 = Convert.ToInt32(row["Par_Hole17"]),
+                                Par_Hole18 = Convert.ToInt32(row["Par_Hole18"]),
 
 
 
 
 
-    };
+                            };
 
                             lista.Add(ent);
                         }
