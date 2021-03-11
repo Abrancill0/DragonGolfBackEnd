@@ -31,6 +31,7 @@ namespace DragonGolfBackEnd.Controllers
             public int IDUsuario { get; set; }
             public string usu_email { get; set; }
             public int MontoPerdidoGanado { get; set; }
+            public string usu_nickname { get; set; }
 
         }
         public JObject Post(ParametrosEntradas Datos)
@@ -78,6 +79,7 @@ namespace DragonGolfBackEnd.Controllers
                                 IDUsuario = Convert.ToInt32(row["IDUsuario"]),
                                 usu_email = Convert.ToString(row["usu_email"]),
                                 MontoPerdidoGanado = Convert.ToInt32(row["MontoPerdidoGanado"]),
+                                usu_nickname = Convert.ToString(row["usu_nickname"]),
 
                             };
 
