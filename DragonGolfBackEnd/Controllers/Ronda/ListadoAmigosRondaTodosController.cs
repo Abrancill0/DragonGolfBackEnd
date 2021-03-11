@@ -100,7 +100,6 @@ namespace DragonGolfBackEnd.Controllers
             public int Ho_Advantage17 { get; set; }
             public int Ho_Advantage18 { get; set; }
 
-
             public int GolpesVentaja1 { get; set; }
             public int GolpesVentaja2 { get; set; }
             public int GolpesVentaja3 { get; set; }
@@ -120,13 +119,14 @@ namespace DragonGolfBackEnd.Controllers
             public int GolpesVentaja17 { get; set; }
             public int GolpesVentaja18 { get; set; }
             public decimal usu_handicapindex { get; set; }
-          public int ValidaUsuarioCreo { get; set; }
+            public int ValidaUsuarioCreo { get; set; }
             public int IDUsuarioCreo { get; set; }
             public int ScoreIn { get; set; }
             public int ScoreOut { get; set; }
+            public int ScoreInGP { get; set; }
+            public int ScoreOutGP { get; set; }
             public int TotalScore { get; set; }
-
-
+            public int TotalScoreGP { get; set; }
 
         }
         public JObject Post(ParametrosEntradas Datos)
@@ -254,11 +254,11 @@ namespace DragonGolfBackEnd.Controllers
                             GolpesVentaja17 = 0;
                             GolpesVentaja18 = 0;
                             Adv1 = Convert.ToDecimal(row["handicapAuto"]);
-                            
+
                             int Contador = 0;
 
 
-                         int Adv = Convert.ToInt32(Decimal.Round(Adv1));
+                            int Adv = Convert.ToInt32(Decimal.Round(Adv1));
 
 
                             if (Adv < 0)
@@ -286,9 +286,9 @@ namespace DragonGolfBackEnd.Controllers
 
                                         if (DificultatHoyo1 == Contador)
                                         {
-                                           
-                                                GolpesVentaja1 = GolpesVentaja1 + 1;
-                                            
+
+                                            GolpesVentaja1 = GolpesVentaja1 + 1;
+
 
                                         }
 
@@ -541,6 +541,13 @@ namespace DragonGolfBackEnd.Controllers
                             }
 
 
+                            int TotalGolpesVentajaFront = 0;
+                            int TotalGolpesVentajaBack = 0;
+
+                            TotalGolpesVentajaFront = GolpesVentaja1 + GolpesVentaja2 + GolpesVentaja3 + GolpesVentaja4 + GolpesVentaja5 + GolpesVentaja6 + GolpesVentaja7 + GolpesVentaja8 + GolpesVentaja9;
+                            TotalGolpesVentajaBack = GolpesVentaja10 + GolpesVentaja11 + GolpesVentaja12 + GolpesVentaja13 + GolpesVentaja14 + GolpesVentaja15 + GolpesVentaja16 + GolpesVentaja17 + GolpesVentaja18;
+
+
                             ParametrosSalida ent = new ParametrosSalida
                             {
 
@@ -619,25 +626,28 @@ namespace DragonGolfBackEnd.Controllers
                                 IDUsuarioCreo = Convert.ToInt32(row["IDUsuarioCreo"]),
                                 ScoreIn = Convert.ToInt32(row["ScoreIn"]),
                                 ScoreOut = Convert.ToInt32(row["ScoreOut"]),
+                                ScoreInGP = Convert.ToInt32(row["ScoreIn"]) - TotalGolpesVentajaFront,
+                                ScoreOutGP = Convert.ToInt32(row["ScoreOut"]) - TotalGolpesVentajaBack,
+                                TotalScoreGP = Convert.ToInt32(row["TotalScore"]) - TotalGolpesVentajaFront - TotalGolpesVentajaBack,
                                 TotalScore = Convert.ToInt32(row["TotalScore"]),
                                 GolpesVentaja1 = GolpesVentaja1,
-                            GolpesVentaja2 = GolpesVentaja2,
-                            GolpesVentaja3 = GolpesVentaja3,
-                            GolpesVentaja4 = GolpesVentaja4,
-                             GolpesVentaja5 = GolpesVentaja5,
-                             GolpesVentaja6 = GolpesVentaja6,
-                             GolpesVentaja7 = GolpesVentaja7,
-                             GolpesVentaja8 = GolpesVentaja8,
-                             GolpesVentaja9 = GolpesVentaja9,
-                             GolpesVentaja10 = GolpesVentaja10,
-                             GolpesVentaja11 = GolpesVentaja11,
-                             GolpesVentaja12 = GolpesVentaja12,
-                             GolpesVentaja13 = GolpesVentaja13,
-                             GolpesVentaja14 = GolpesVentaja14,
-                             GolpesVentaja15 = GolpesVentaja15,
-                             GolpesVentaja16 = GolpesVentaja16,
-                             GolpesVentaja17 = GolpesVentaja17,
-                             GolpesVentaja18 = GolpesVentaja18
+                                GolpesVentaja2 = GolpesVentaja2,
+                                GolpesVentaja3 = GolpesVentaja3,
+                                GolpesVentaja4 = GolpesVentaja4,
+                                GolpesVentaja5 = GolpesVentaja5,
+                                GolpesVentaja6 = GolpesVentaja6,
+                                GolpesVentaja7 = GolpesVentaja7,
+                                GolpesVentaja8 = GolpesVentaja8,
+                                GolpesVentaja9 = GolpesVentaja9,
+                                GolpesVentaja10 = GolpesVentaja10,
+                                GolpesVentaja11 = GolpesVentaja11,
+                                GolpesVentaja12 = GolpesVentaja12,
+                                GolpesVentaja13 = GolpesVentaja13,
+                                GolpesVentaja14 = GolpesVentaja14,
+                                GolpesVentaja15 = GolpesVentaja15,
+                                GolpesVentaja16 = GolpesVentaja16,
+                                GolpesVentaja17 = GolpesVentaja17,
+                                GolpesVentaja18 = GolpesVentaja18
                             };
 
                             lista.Add(ent);

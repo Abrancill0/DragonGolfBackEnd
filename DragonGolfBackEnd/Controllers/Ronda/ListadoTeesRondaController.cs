@@ -48,6 +48,7 @@ namespace DragonGolfBackEnd.Controllers
             public int Par_Hole16 { get; set; }
             public int Par_Hole17 { get; set; }
             public int Par_Hole18 { get; set; }
+            public string Te_TeeColor { get; set; }
 
         }
         public JObject Post(ParametrosEntradas Datos)
@@ -113,10 +114,7 @@ namespace DragonGolfBackEnd.Controllers
                                 Par_Hole16 = Convert.ToInt32(row["Par_Hole16"]),
                                 Par_Hole17 = Convert.ToInt32(row["Par_Hole17"]),
                                 Par_Hole18 = Convert.ToInt32(row["Par_Hole18"]),
-
-
-
-
+                                Te_TeeColor = Convert.ToString(row["Te_TeeColor"]),
 
                             };
 
