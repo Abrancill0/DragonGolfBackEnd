@@ -272,7 +272,7 @@ namespace DragonGolfBackEnd.Controllers
                                     CicloFor = AdvPositivo;
                                 }
 
-                                for (int i = 1; i < CicloFor; i++)
+                                for (int i = 0; i < CicloFor; i++)
                                 {
                                     Contador += 1;
 
@@ -408,7 +408,7 @@ namespace DragonGolfBackEnd.Controllers
                                     CicloFor = Adv;
                                 }
 
-                                for (int i = 1; i < CicloFor; i++)
+                                for (int i = 0; i < CicloFor; i++)
                                 {
                                     Contador += 1;
 
@@ -442,7 +442,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                         if (DificultatHoyo4 == Contador)
                                         {
-                                            GolpesVentaja4 = GolpesVentaja3 + 1;
+                                            GolpesVentaja4 = GolpesVentaja4 + 1;
 
                                         }
 

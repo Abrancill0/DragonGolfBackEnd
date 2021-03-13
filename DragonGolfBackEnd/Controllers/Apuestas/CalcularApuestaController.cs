@@ -245,7 +245,7 @@ namespace DragonGolfBackEnd.Controllers
                                 CicloFor = AdvPositivo;
                             }
 
-                            for (int i = 1; i < CicloFor; i++)
+                            for (int i = 0; i < CicloFor; i++)
                             {
                                 Contador += 1;
 
@@ -433,7 +433,7 @@ namespace DragonGolfBackEnd.Controllers
                                 CicloFor = Adv;
                             }
 
-                            for (int i = 1; i < CicloFor; i++)
+                            for (int i = 0; i < CicloFor; i++)
                             {
                                 Contador += 1;
 
