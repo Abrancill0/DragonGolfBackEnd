@@ -202,6 +202,24 @@ namespace DragonGolfBackEnd.Controllers
                     int GolpesVentaja17 = 0;
                     int GolpesVentaja18 = 0;
 
+                    int GolpesVentaja1_1 = 0;
+                    int GolpesVentaja2_1 = 0;
+                    int GolpesVentaja3_1 = 0;
+                    int GolpesVentaja4_1 = 0;
+                    int GolpesVentaja5_1 = 0;
+                    int GolpesVentaja6_1 = 0;
+                    int GolpesVentaja7_1 = 0;
+                    int GolpesVentaja8_1 = 0;
+                    int GolpesVentaja9_1 = 0;
+                    int GolpesVentaja10_1 = 0;
+                    int GolpesVentaja11_1 = 0;
+                    int GolpesVentaja12_1 = 0;
+                    int GolpesVentaja13_1 = 0;
+                    int GolpesVentaja14_1 = 0;
+                    int GolpesVentaja15_1 = 0;
+                    int GolpesVentaja16_1 = 0;
+                    int GolpesVentaja17_1 = 0;
+                    int GolpesVentaja18_1 = 0;
 
                     decimal Adv1 = 0;
 
@@ -216,6 +234,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             string numeroFormato = Convert.ToInt32(row["usu_ghinnumber"]).ToString("D7");
 
+                            int PlayerId = Convert.ToInt32(row["PlayerId"]);
 
                             DificultatHoyo1 = Convert.ToInt32(row["Ho_Advantage1"]);//7
                             DificultatHoyo2 = Convert.ToInt32(row["Ho_Advantage2"]);//1
@@ -253,13 +272,51 @@ namespace DragonGolfBackEnd.Controllers
                             GolpesVentaja16 = 0;
                             GolpesVentaja17 = 0;
                             GolpesVentaja18 = 0;
+
+                            GolpesVentaja1_1 = 0;
+                            GolpesVentaja2_1 = 0;
+                            GolpesVentaja3_1 = 0;
+                            GolpesVentaja4_1 = 0;
+                            GolpesVentaja5_1 = 0;
+                            GolpesVentaja6_1 = 0;
+                            GolpesVentaja7_1 = 0;
+                            GolpesVentaja8_1 = 0;
+                            GolpesVentaja9_1 = 0;
+                            GolpesVentaja10_1 = 0;
+                            GolpesVentaja11_1 = 0;
+                            GolpesVentaja12_1 = 0;
+                            GolpesVentaja13_1 = 0;
+                            GolpesVentaja14_1 = 0;
+                            GolpesVentaja15_1 = 0;
+                            GolpesVentaja16_1 = 0;
+                            GolpesVentaja17_1 = 0;
+                            GolpesVentaja18_1 = 0;
+
+                            int ScoreHole1 = Convert.ToInt32(row["ScoreHole1"]);
+                            int ScoreHole2 = Convert.ToInt32(row["ScoreHole2"]);
+                            int ScoreHole3 = Convert.ToInt32(row["ScoreHole3"]);
+                            int ScoreHole4 = Convert.ToInt32(row["ScoreHole4"]);
+                            int ScoreHole5 = Convert.ToInt32(row["ScoreHole5"]);
+                            int ScoreHole6 = Convert.ToInt32(row["ScoreHole6"]);
+                            int ScoreHole7 = Convert.ToInt32(row["ScoreHole7"]);
+                            int ScoreHole8 = Convert.ToInt32(row["ScoreHole8"]);
+                            int ScoreHole9 = Convert.ToInt32(row["ScoreHole9"]);
+                            int ScoreHole10 = Convert.ToInt32(row["ScoreHole10"]);
+                            int ScoreHole11 = Convert.ToInt32(row["ScoreHole11"]);
+                            int ScoreHole12 = Convert.ToInt32(row["ScoreHole12"]);
+                            int ScoreHole13 = Convert.ToInt32(row["ScoreHole13"]);
+                            int ScoreHole14 = Convert.ToInt32(row["ScoreHole14"]);
+                            int ScoreHole15 = Convert.ToInt32(row["ScoreHole15"]);
+                            int ScoreHole16 = Convert.ToInt32(row["ScoreHole16"]);
+                            int ScoreHole17 = Convert.ToInt32(row["ScoreHole17"]);
+                            int ScoreHole18 = Convert.ToInt32(row["ScoreHole18"]);
+
                             Adv1 = Convert.ToDecimal(row["handicapAuto"]);
 
                             int Contador = 0;
 
-
                             int Adv = Convert.ToInt32(Decimal.Round(Adv1));
-
+                        
 
                             if (Adv < 0)
                             {
@@ -286,108 +343,173 @@ namespace DragonGolfBackEnd.Controllers
 
                                         if (DificultatHoyo1 == Contador)
                                         {
+                                            if (ScoreHole1 > 0)
+                                            {
+                                                GolpesVentaja1 = GolpesVentaja1 + 1;
+                                            }
 
-                                            GolpesVentaja1 = GolpesVentaja1 + 1;
-
-
+                                            GolpesVentaja1_1 = GolpesVentaja1_1 + 1;
                                         }
 
                                         if (DificultatHoyo2 == Contador)
                                         {
-                                            GolpesVentaja2 = GolpesVentaja2 + 1;
+                                            if (ScoreHole2 > 0)
+                                            {
+                                                GolpesVentaja2 = GolpesVentaja2 + 1;
+                                            }
+
+                                            GolpesVentaja2_1 = GolpesVentaja2_1 + 1;
 
                                         }
 
                                         if (DificultatHoyo3 == Contador)
                                         {
-                                            GolpesVentaja3 = GolpesVentaja3 + 1;
+                                            if (ScoreHole3 > 0)
+                                            {
+                                                GolpesVentaja3 = GolpesVentaja3 + 1;
+                                            }
+
+                                            GolpesVentaja3_1 = GolpesVentaja3_1 + 1;
 
                                         }
 
                                         if (DificultatHoyo4 == Contador)
                                         {
-                                            GolpesVentaja4 = GolpesVentaja4 + 1;
 
+                                            if (ScoreHole4 > 0)
+                                            {
+                                                GolpesVentaja4 = GolpesVentaja4 + 1;
+                                            }
+
+                                            GolpesVentaja4_1 = GolpesVentaja4_1 + 1;
                                         }
 
                                         if (DificultatHoyo5 == Contador)
                                         {
-                                            GolpesVentaja5 = GolpesVentaja5 - 1;
+                                            if (ScoreHole5 > 0)
+                                            {
+                                                GolpesVentaja5 = GolpesVentaja5 + 1;
+                                            }
 
+                                            GolpesVentaja5_1 = GolpesVentaja5_1 + 1;
                                         }
 
                                         if (DificultatHoyo6 == Contador)
                                         {
-                                            GolpesVentaja6 = GolpesVentaja6 + 1;
-
+                                            if (ScoreHole6 > 0)
+                                            {
+                                                GolpesVentaja6 = GolpesVentaja6 + 1;
+                                            }
+                                            GolpesVentaja6_1 = GolpesVentaja6_1 + 1;
                                         }
 
                                         if (DificultatHoyo7 == Contador)
                                         {
-                                            GolpesVentaja7 = GolpesVentaja7 + 1;
-
+                                            if (ScoreHole7 > 0)
+                                            {
+                                                GolpesVentaja7 = GolpesVentaja7 + 1;
+                                            }
+                                            GolpesVentaja7_1 = GolpesVentaja7_1 + 1;
                                         }
 
                                         if (DificultatHoyo8 == Contador)
                                         {
-                                            GolpesVentaja8 = GolpesVentaja8 + 1;
-
+                                            if (ScoreHole8 > 0)
+                                            {
+                                                GolpesVentaja8 = GolpesVentaja8 + 1;
+                                            }
+                                            GolpesVentaja8_1 = GolpesVentaja8_1 + 1;
                                         }
 
                                         if (DificultatHoyo9 == Contador)
                                         {
-                                            GolpesVentaja9 = GolpesVentaja9 + 1;
-
+                                            if (ScoreHole9 > 0)
+                                            {
+                                                GolpesVentaja9 = GolpesVentaja9 + 1;
+                                            }
+                                            GolpesVentaja9_1 = GolpesVentaja9_1 + 1;
                                         }
 
                                         if (DificultatHoyo10 == Contador)
                                         {
-                                            GolpesVentaja10 = GolpesVentaja10 + 1;
-
+                                            if (ScoreHole10 > 0)
+                                            {
+                                                GolpesVentaja10 = GolpesVentaja10 + 1;
+                                            }
+                                            GolpesVentaja10_1 = GolpesVentaja10_1 + 1;
                                         }
 
                                         if (DificultatHoyo11 == Contador)
                                         {
-                                            GolpesVentaja11 = GolpesVentaja11 + 1;
-
+                                            if (ScoreHole11 > 0)
+                                            {
+                                                GolpesVentaja11 = GolpesVentaja11 + 1;
+                                            }
+                                            GolpesVentaja11_1 = GolpesVentaja11_1 + 1;
                                         }
 
                                         if (DificultatHoyo12 == Contador)
                                         {
-                                            GolpesVentaja12 = GolpesVentaja12 + 1;
-
+                                            if (ScoreHole12 > 0)
+                                            {
+                                                GolpesVentaja12 = GolpesVentaja12 + 1;
+                                            }
+                                            GolpesVentaja12_1 = GolpesVentaja12_1 + 1;
                                         }
 
                                         if (DificultatHoyo13 == Contador)
                                         {
-                                            GolpesVentaja13 = GolpesVentaja13 + 1;
-
+                                            if (ScoreHole13 > 0)
+                                            {
+                                                GolpesVentaja13 = GolpesVentaja13 + 1;
+                                            }
+                                            GolpesVentaja13_1 = GolpesVentaja13_1 + 1;
                                         }
 
                                         if (DificultatHoyo14 == Contador)
                                         {
-                                            GolpesVentaja14 = GolpesVentaja14 + 1;
-
+                                            if (ScoreHole14 > 0)
+                                            {
+                                                GolpesVentaja14 = GolpesVentaja14 + 1;
+                                            }
+                                            GolpesVentaja14_1 = GolpesVentaja14_1 + 1;
                                         }
 
                                         if (DificultatHoyo15 == Contador)
                                         {
-                                            GolpesVentaja15 = GolpesVentaja15 + 1;
+                                            if (ScoreHole15 > 0)
+                                            {
+                                                GolpesVentaja15 = GolpesVentaja15 + 1;
+                                            }
+                                            GolpesVentaja15_1 = GolpesVentaja15_1 + 1;
                                         }
 
                                         if (DificultatHoyo16 == Contador)
                                         {
-                                            GolpesVentaja16 = GolpesVentaja16 + 1;
+                                            if (ScoreHole16 > 0)
+                                            {
+                                                GolpesVentaja16 = GolpesVentaja16 + 1;
+                                            }
+                                            GolpesVentaja16_1 = GolpesVentaja16_1 + 1;
                                         }
 
                                         if (DificultatHoyo17 == Contador)
                                         {
-                                            GolpesVentaja17 = GolpesVentaja17 + 1;
+                                            if (ScoreHole17 > 0)
+                                            {
+                                                GolpesVentaja17 = GolpesVentaja17 + 1;
+                                            }
+                                            GolpesVentaja17_1 = GolpesVentaja17_1 + 1;
                                         }
 
                                         if (DificultatHoyo18 == Contador)
                                         {
-                                            GolpesVentaja18 = GolpesVentaja18 + 1;
+                                            if (ScoreHole18 > 0)
+                                            {
+                                                GolpesVentaja18 = GolpesVentaja18 + 1;
+                                            }
+
+                                            GolpesVentaja18_1 = GolpesVentaja18_1 + 1;
                                         }
 
                                     }
@@ -423,110 +545,174 @@ namespace DragonGolfBackEnd.Controllers
                                         if (DificultatHoyo1 == Contador)
                                         {
 
-                                            GolpesVentaja1 = GolpesVentaja1 + 1;
-
+                                            if (ScoreHole1 > 0)
+                                            {
+                                                GolpesVentaja1 = GolpesVentaja1 + 1;
+                                            }
+                                            GolpesVentaja1_1 = GolpesVentaja1_1 + 1;
 
                                         }
 
                                         if (DificultatHoyo2 == Contador)
                                         {
-                                            GolpesVentaja2 = GolpesVentaja2 + 1;
-
+                                            if (ScoreHole2 > 0)
+                                            {
+                                                GolpesVentaja2 = GolpesVentaja2 + 1;
+                                            }
+                                            GolpesVentaja2_1 = GolpesVentaja2_1 + 1;
                                         }
 
                                         if (DificultatHoyo3 == Contador)
                                         {
-                                            GolpesVentaja3 = GolpesVentaja3 + 1;
-
+                                            if (ScoreHole3 > 0)
+                                            {
+                                                GolpesVentaja3 = GolpesVentaja3 + 1;
+                                            }
+                                            GolpesVentaja3_1 = GolpesVentaja3_1 + 1;
                                         }
 
                                         if (DificultatHoyo4 == Contador)
                                         {
-                                            GolpesVentaja4 = GolpesVentaja4 + 1;
-
+                                            if (ScoreHole4 > 0)
+                                            {
+                                                GolpesVentaja4 = GolpesVentaja4 + 1;
+                                            }
+                                            GolpesVentaja4_1 = GolpesVentaja4_1 + 1;
                                         }
 
                                         if (DificultatHoyo5 == Contador)
                                         {
-                                            GolpesVentaja5 = GolpesVentaja5 + 1;
-
+                                            if (ScoreHole5 > 0)
+                                            {
+                                                GolpesVentaja5 = GolpesVentaja5 + 1;
+                                            }
+                                            GolpesVentaja5_1 = GolpesVentaja5_1 + 1;
                                         }
 
                                         if (DificultatHoyo6 == Contador)
                                         {
-                                            GolpesVentaja6 = GolpesVentaja6 + 1;
-
+                                            if (ScoreHole6 > 0)
+                                            {
+                                                GolpesVentaja6 = GolpesVentaja6 + 1;
+                                            }
+                                            GolpesVentaja6_1 = GolpesVentaja6_1 + 1;
                                         }
 
                                         if (DificultatHoyo7 == Contador)
                                         {
-                                            GolpesVentaja7 = GolpesVentaja7 + 1;
-
+                                            if (ScoreHole7 > 0)
+                                            {
+                                                GolpesVentaja7 = GolpesVentaja7 + 1;
+                                            }
+                                            GolpesVentaja7_1 = GolpesVentaja7_1 + 1;
                                         }
 
                                         if (DificultatHoyo8 == Contador)
                                         {
-                                            GolpesVentaja8 = GolpesVentaja8 + 1;
+                                            if (ScoreHole8 > 0)
+                                            {
+                                                GolpesVentaja8 = GolpesVentaja8 + 1;
+                                            }
+                                            GolpesVentaja8_1 = GolpesVentaja8_1 + 1;
 
                                         }
 
                                         if (DificultatHoyo9 == Contador)
                                         {
-                                            GolpesVentaja9 = GolpesVentaja9 + 1;
+                                            if (ScoreHole9 > 0)
+                                            {
+                                                GolpesVentaja9 = GolpesVentaja9 + 1;
+                                            }
 
+                                            GolpesVentaja9_1 = GolpesVentaja9_1 + 1;
                                         }
 
                                         if (DificultatHoyo10 == Contador)
                                         {
-                                            GolpesVentaja10 = GolpesVentaja10 + 1;
-
+                                            if (ScoreHole10 > 0)
+                                            {
+                                                GolpesVentaja10 = GolpesVentaja10 + 1;
+                                            }
+                                            GolpesVentaja10_1 = GolpesVentaja10_1 + 1;
                                         }
 
                                         if (DificultatHoyo11 == Contador)
                                         {
-                                            GolpesVentaja11 = GolpesVentaja11 + 1;
-
+                                            if (ScoreHole11 > 0)
+                                            {
+                                                GolpesVentaja11 = GolpesVentaja11 + 1;
+                                            }
+                                            GolpesVentaja11_1 = GolpesVentaja11_1 + 1;
                                         }
 
                                         if (DificultatHoyo12 == Contador)
                                         {
-                                            GolpesVentaja12 = GolpesVentaja12 + 1;
+                                            if (ScoreHole12 > 0)
+                                            {
+                                                GolpesVentaja12 = GolpesVentaja12 + 1;
+                                            }
+
+                                            GolpesVentaja12_1 = GolpesVentaja12_1 + 1;
                                         }
 
                                         if (DificultatHoyo13 == Contador)
                                         {
-                                            GolpesVentaja13 = GolpesVentaja13 + 1;
+                                            if (ScoreHole13 > 0)
+                                            {
+                                                GolpesVentaja13 = GolpesVentaja13 + 1;
+                                            }
 
+                                            GolpesVentaja13_1 = GolpesVentaja13_1 + 1;
                                         }
 
                                         if (DificultatHoyo14 == Contador)
                                         {
-                                            GolpesVentaja14 = GolpesVentaja14 + 1;
+                                            if (ScoreHole14 > 0)
+                                            {
+                                                GolpesVentaja14 = GolpesVentaja14 + 1;
+                                            }
 
+                                            GolpesVentaja14_1 = GolpesVentaja14_1 + 1;
                                         }
 
                                         if (DificultatHoyo15 == Contador)
                                         {
-                                            GolpesVentaja15 = GolpesVentaja15 + 1;
+                                            if (ScoreHole15 > 0)
+                                            {
+                                                GolpesVentaja15 = GolpesVentaja15 + 1;
+                                            }
 
+                                            GolpesVentaja15_1 = GolpesVentaja15_1 + 1;
                                         }
 
                                         if (DificultatHoyo16 == Contador)
                                         {
-                                            GolpesVentaja16 = GolpesVentaja16 + 1;
+                                            if (ScoreHole16 > 0)
+                                            {
+                                                GolpesVentaja16 = GolpesVentaja16 + 1;
+                                            }
 
+                                            GolpesVentaja16_1 = GolpesVentaja16_1 + 1;
                                         }
 
                                         if (DificultatHoyo17 == Contador)
                                         {
-                                            GolpesVentaja17 = GolpesVentaja17 + 1;
+                                            if (ScoreHole17 > 0)
+                                            {
+                                                GolpesVentaja17 = GolpesVentaja17 + 1;
+                                            }
 
+                                            GolpesVentaja17_1 = GolpesVentaja17_1 + 1;
                                         }
 
                                         if (DificultatHoyo18 == Contador)
                                         {
-                                            GolpesVentaja18 = GolpesVentaja18 + 1;
+                                            if (ScoreHole18 > 0)
+                                            {
+                                                GolpesVentaja18 = GolpesVentaja18 + 1;
+                                            }
 
+                                            GolpesVentaja18_1 = GolpesVentaja18_1 + 1;
                                         }
 
 
@@ -630,24 +816,24 @@ namespace DragonGolfBackEnd.Controllers
                                 ScoreOutGP = Convert.ToInt32(row["ScoreOut"]) - TotalGolpesVentajaBack,
                                 TotalScoreGP = Convert.ToInt32(row["TotalScore"]) - TotalGolpesVentajaFront - TotalGolpesVentajaBack,
                                 TotalScore = Convert.ToInt32(row["TotalScore"]),
-                                GolpesVentaja1 = GolpesVentaja1,
-                                GolpesVentaja2 = GolpesVentaja2,
-                                GolpesVentaja3 = GolpesVentaja3,
-                                GolpesVentaja4 = GolpesVentaja4,
-                                GolpesVentaja5 = GolpesVentaja5,
-                                GolpesVentaja6 = GolpesVentaja6,
-                                GolpesVentaja7 = GolpesVentaja7,
-                                GolpesVentaja8 = GolpesVentaja8,
-                                GolpesVentaja9 = GolpesVentaja9,
-                                GolpesVentaja10 = GolpesVentaja10,
-                                GolpesVentaja11 = GolpesVentaja11,
-                                GolpesVentaja12 = GolpesVentaja12,
-                                GolpesVentaja13 = GolpesVentaja13,
-                                GolpesVentaja14 = GolpesVentaja14,
-                                GolpesVentaja15 = GolpesVentaja15,
-                                GolpesVentaja16 = GolpesVentaja16,
-                                GolpesVentaja17 = GolpesVentaja17,
-                                GolpesVentaja18 = GolpesVentaja18
+                                GolpesVentaja1 = GolpesVentaja1_1,
+                                GolpesVentaja2 = GolpesVentaja2_1,
+                                GolpesVentaja3 = GolpesVentaja3_1,
+                                GolpesVentaja4 = GolpesVentaja4_1,
+                                GolpesVentaja5 = GolpesVentaja5_1,
+                                GolpesVentaja6 = GolpesVentaja6_1,
+                                GolpesVentaja7 = GolpesVentaja7_1,
+                                GolpesVentaja8 = GolpesVentaja8_1,
+                                GolpesVentaja9 = GolpesVentaja9_1,
+                                GolpesVentaja10 = GolpesVentaja10_1,
+                                GolpesVentaja11 = GolpesVentaja11_1,
+                                GolpesVentaja12 = GolpesVentaja12_1,
+                                GolpesVentaja13 = GolpesVentaja13_1,
+                                GolpesVentaja14 = GolpesVentaja14_1,
+                                GolpesVentaja15 = GolpesVentaja15_1,
+                                GolpesVentaja16 = GolpesVentaja16_1,
+                                GolpesVentaja17 = GolpesVentaja17_1,
+                                GolpesVentaja18 = GolpesVentaja18_1
                             };
 
                             lista.Add(ent);

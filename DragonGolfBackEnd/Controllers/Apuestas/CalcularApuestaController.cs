@@ -233,10 +233,11 @@ namespace DragonGolfBackEnd.Controllers
 
                         int Contador = 0;
 
+                        int AdvInverso = (-1) * (Adv);
 
-                        if (Adv < 0)
+                        if (AdvInverso < 0)
                         {
-                            int AdvPositivo = (-1) * (Adv);
+                            int AdvPositivo = (-1) * (AdvInverso);
 
                             int CicloFor = 18;
 
@@ -424,13 +425,13 @@ namespace DragonGolfBackEnd.Controllers
                             }
 
                         }
-                        else if (Adv > 0)
+                        else if (AdvInverso > 0)
                         {
                             int CicloFor = 18;
 
-                            if (Adv > 18)
+                            if (AdvInverso > 18)
                             {
-                                CicloFor = Adv;
+                                CicloFor = AdvInverso;
                             }
 
                             for (int i = 0; i < CicloFor; i++)
@@ -442,7 +443,7 @@ namespace DragonGolfBackEnd.Controllers
                                     Contador = 1;
                                 }
 
-                                if (Contador <= Adv)
+                                if (Contador <= AdvInverso)
                                 {
 
                                     if (DificultatHoyo1 == Contador)
