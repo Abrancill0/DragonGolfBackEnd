@@ -16,19 +16,17 @@ namespace DragonGolfBackEnd.Controllers
 {
 
     [EnableCors(origins: "*", headers: "*", methods: "*", SupportsCredentials = true)]
-    [RoutePrefix("api/ListadoAmigosRondaTodos")]
-    public class ListadoAmigosRondaTodosController : ApiController
+    [RoutePrefix("api/ListadoAmigosRondaIndividual")]
+    public class ListadoAmigosRondaIndividualController : ApiController
     {
 
         public class ParametrosEntradas
         {
-            public int IDUsuario { get; set; }
-            public int IDRounds { get; set; }
-
+            public int IDBetDetail { get; set; }
+       
         }
         public class ParametrosSalida
         {
-
             public int IDRounds { get; set; }
             public int IDUsuario { get; set; }
             public int PlayerId { get; set; }
@@ -127,22 +125,38 @@ namespace DragonGolfBackEnd.Controllers
             public int TotalScore { get; set; }
             public int TotalScoreGP { get; set; }
 
+            public string Hoyo1Presion { get; set; }
+            public string Hoyo2Presion { get; set; }
+            public string Hoyo3Presion { get; set; }
+            public string Hoyo4Presion { get; set; }
+            public string Hoyo5Presion { get; set; }
+            public string Hoyo6Presion { get; set; }
+            public string Hoyo7Presion { get; set; }
+            public string Hoyo8Presion { get; set; }
+            public string Hoyo9Presion { get; set; }
+            public string Hoyo10Presion { get; set; }
+            public string Hoyo11Presion { get; set; }
+            public string Hoyo12Presion { get; set; }
+            public string Hoyo13Presion { get; set; }
+            public string Hoyo14Presion { get; set; }
+            public string Hoyo15Presion { get; set; }
+            public string Hoyo16Presion { get; set; }
+            public string Hoyo17Presion { get; set; }
+            public string Hoyo18Presion { get; set; }
+
         }
         public JObject Post(ParametrosEntradas Datos)
         {
             try
             {
-                SqlCommand comando = new SqlCommand("DragoGolf_ListFriendRound");
+                SqlCommand comando = new SqlCommand("DragoGolf_ListFriendRound_Individual");
                 comando.CommandType = CommandType.StoredProcedure;
 
                 //Declaracion de parametros
-                comando.Parameters.Add("@IDRounds", SqlDbType.Int);
-                comando.Parameters.Add("@IDUsuario", SqlDbType.Int);
-
-
-                comando.Parameters["@IDRounds"].Value = Datos.IDRounds;
-                comando.Parameters["@IDUsuario"].Value = Datos.IDUsuario;
-
+                comando.Parameters.Add("@IDBet_Detail", SqlDbType.Int);
+               
+                comando.Parameters["@IDBet_Detail"].Value = Datos.IDBetDetail;
+                
                 comando.Connection = new SqlConnection(VariablesGlobales.CadenaConexion);
                 comando.CommandTimeout = 0;
                 comando.Connection.Open();
@@ -156,7 +170,6 @@ namespace DragonGolfBackEnd.Controllers
 
                 string Mensaje = "";
                 int Estatus = 0;
-
 
                 int contador = DT.Rows.Count;
 
@@ -180,7 +193,6 @@ namespace DragonGolfBackEnd.Controllers
                     int DificultatHoyo16 = 0;
                     int DificultatHoyo17 = 0;
                     int DificultatHoyo18 = 0;
-
 
                     int GolpesVentaja1 = 0;
                     int GolpesVentaja2 = 0;
@@ -832,7 +844,27 @@ namespace DragonGolfBackEnd.Controllers
                                 GolpesVentaja15 = GolpesVentaja15_1,
                                 GolpesVentaja16 = GolpesVentaja16_1,
                                 GolpesVentaja17 = GolpesVentaja17_1,
-                                GolpesVentaja18 = GolpesVentaja18_1
+                                GolpesVentaja18 = GolpesVentaja18_1,
+
+                                 Hoyo1Presion = Convert.ToString(row["Hoyo1Presion"]),
+                                Hoyo2Presion = Convert.ToString(row["Hoyo2Presion"]),
+                                Hoyo3Presion = Convert.ToString(row["Hoyo3Presion"]),
+                                Hoyo4Presion = Convert.ToString(row["Hoyo4Presion"]),
+                                Hoyo5Presion = Convert.ToString(row["Hoyo5Presion"]),
+                                Hoyo6Presion = Convert.ToString(row["Hoyo6Presion"]),
+                                Hoyo7Presion = Convert.ToString(row["Hoyo7Presion"]),
+                                Hoyo8Presion = Convert.ToString(row["Hoyo8Presion"]),
+                                Hoyo9Presion = Convert.ToString(row["Hoyo9Presion"]),
+                                Hoyo10Presion = Convert.ToString(row["Hoyo10Presion"]),
+                                Hoyo11Presion = Convert.ToString(row["Hoyo11Presion"]),
+                                Hoyo12Presion = Convert.ToString(row["Hoyo12Presion"]),
+                                Hoyo13Presion = Convert.ToString(row["Hoyo13Presion"]),
+                                Hoyo14Presion = Convert.ToString(row["Hoyo14Presion"]),
+                                Hoyo15Presion = Convert.ToString(row["Hoyo15Presion"]),
+                                Hoyo16Presion = Convert.ToString(row["Hoyo16Presion"]),
+                                Hoyo17Presion = Convert.ToString(row["Hoyo17Presion"]),
+                                Hoyo18Presion = Convert.ToString(row["Hoyo18Presion"]),
+
                             };
 
                             lista.Add(ent);
