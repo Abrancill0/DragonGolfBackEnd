@@ -106,7 +106,7 @@ namespace DragonGolfBackEnd.Controllers
             public int ScoreOut { get; set; }
             public int TotalScore { get; set; }
 
-
+            public int initHole { get; set; }
 
         }
         public JObject Post(ParametrosEntradas Datos)
@@ -232,6 +232,7 @@ namespace DragonGolfBackEnd.Controllers
                                 ScoreIn = Convert.ToInt32(row["ScoreIn"]),
                                 ScoreOut = Convert.ToInt32(row["ScoreOut"]),
                                 TotalScore = Convert.ToInt32(row["TotalScore"]),
+                                initHole = Convert.ToInt32(row["initHole"]),
                             };
 
                             lista.Add(ent);

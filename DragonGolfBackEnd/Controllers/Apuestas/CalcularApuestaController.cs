@@ -844,12 +844,12 @@ namespace DragonGolfBackEnd.Controllers
 
 
                         //Calculo Medal front
-                        int ResultadoTotaFl1 = ScoreHole1_P1 + ScoreHole2_P1 + ScoreHole3_P1 + ScoreHole4_P1 + ScoreHole5_P1 + ScoreHole6_P1 + ScoreHole7_P1 + ScoreHole8_P1 + ScoreHole9_P1;
-                        int ResultadoTotaFl2 = ScoreHole1_P2 + ScoreHole2_P2 + ScoreHole3_P2 + ScoreHole4_P2 + ScoreHole5_P2 + ScoreHole6_P2 + ScoreHole7_P2 + ScoreHole8_P2 + ScoreHole9_P2;
+                        int ResultadoTotaF1 = ScoreHole1_P1 + ScoreHole2_P1 + ScoreHole3_P1 + ScoreHole4_P1 + ScoreHole5_P1 + ScoreHole6_P1 + ScoreHole7_P1 + ScoreHole8_P1 + ScoreHole9_P1;
+                        int ResultadoTotaF2 = ScoreHole1_P2 + ScoreHole2_P2 + ScoreHole3_P2 + ScoreHole4_P2 + ScoreHole5_P2 + ScoreHole6_P2 + ScoreHole7_P2 + ScoreHole8_P2 + ScoreHole9_P2;
 
                         bool ValidaJuegoInicio = false;
 
-                        if ((ResultadoTotaFl1 + ResultadoTotaFl2) > 0)
+                        if ((ResultadoTotaF1 + ResultadoTotaF2) > 0)
                         {
                             ValidaJuegoInicio = false;
                         }
@@ -858,22 +858,6 @@ namespace DragonGolfBackEnd.Controllers
                             ValidaJuegoInicio = true;
                         }
 
-                        int GanadorF = 0;
-
-                        if (ResultadoTotaFl1 < ResultadoTotaFl2)
-                        {
-                            GanadorF = 1;
-                        }
-                        else if (ResultadoTotaFl1 > ResultadoTotaFl2)
-                        {
-                            GanadorF = -1;
-                        }
-                        else
-                        {
-                            GanadorF = 0;
-                        }
-
-                        //Termina
 
                         int Resultado10 = 0;
                         int Resultado11 = 0;
@@ -1078,28 +1062,28 @@ namespace DragonGolfBackEnd.Controllers
 
 
                         //Calculo Medal front
-                        int ResultadoTotaBl1 = ScoreHole10_P1 + ScoreHole11_P1 + ScoreHole12_P1 + ScoreHole13_P1 + ScoreHole14_P1 + ScoreHole15_P1 + ScoreHole16_P1 + ScoreHole17_P1 + ScoreHole18_P1;
-                        int ResultadoTotaBl2 = ScoreHole10_P2 + ScoreHole11_P2 + ScoreHole12_P2 + ScoreHole13_P2 + ScoreHole14_P2 + ScoreHole15_P2 + ScoreHole16_P2 + ScoreHole17_P2 + ScoreHole18_P2;
+                        int ResultadoTotaB1 = ScoreHole10_P1 + ScoreHole11_P1 + ScoreHole12_P1 + ScoreHole13_P1 + ScoreHole14_P1 + ScoreHole15_P1 + ScoreHole16_P1 + ScoreHole17_P1 + ScoreHole18_P1;
+                        int ResultadoTotaB2 = ScoreHole10_P2 + ScoreHole11_P2 + ScoreHole12_P2 + ScoreHole13_P2 + ScoreHole14_P2 + ScoreHole15_P2 + ScoreHole16_P2 + ScoreHole17_P2 + ScoreHole18_P2;
 
+                        //Valida Medal
 
+                        int ResultadoFinalMedal = 0;
 
-                        int GanadorB = 0;
+                        int GolpesTotalesJugador1 = ResultadoTotaF1 + ResultadoTotaB1;
+                        int GolpesTotalesJugador2 = ResultadoTotaF2 + ResultadoTotaB2;
 
-                        if (ResultadoTotaBl1 < ResultadoTotaBl2)
+                        if (GolpesTotalesJugador1 < GolpesTotalesJugador2)
                         {
-                            GanadorB = 1;
+                            ResultadoFinalMedal = 1;
                         }
-                        else if (ResultadoTotaBl1 > ResultadoTotaBl2)
+                        else if (GolpesTotalesJugador1 > GolpesTotalesJugador2)
                         {
-                            GanadorB = -1;
+                            ResultadoFinalMedal = -1;
                         }
                         else
                         {
-                            GanadorB = 0;
+                            ResultadoFinalMedal = 0;
                         }
-                        //Termina
-                        int ResultadoFinalMedal = GanadorF + GanadorB;
-
 
                         string BetD_F9_1 = "";
                         string BetD_F9_2 = "";
