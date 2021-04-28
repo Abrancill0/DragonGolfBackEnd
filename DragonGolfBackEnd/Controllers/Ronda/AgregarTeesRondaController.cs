@@ -26,6 +26,7 @@ namespace DragonGolfBackEnd.Controllers
             public int IDUsuario { get; set; }
             public int PlayerId { get; set; }
             public int IDTees { get; set; }
+            public int estatus { get; set; }
         }
         public JObject Post(ParametrosEntradas Datos)
         {
@@ -39,14 +40,16 @@ namespace DragonGolfBackEnd.Controllers
                 comando.Parameters.Add("@IDUsuario", SqlDbType.Int);
                 comando.Parameters.Add("@PlayerId", SqlDbType.Int);
                 comando.Parameters.Add("@IDTees", SqlDbType.Int);
-                
+                comando.Parameters.Add("@estatus", SqlDbType.Int);
+
 
                 //Asignacion de valores a parametros
                 comando.Parameters["@IDRounds"].Value = Datos.IDRounds;
                 comando.Parameters["@IDUsuario"].Value = Datos.IDUsuario;
                 comando.Parameters["@PlayerId"].Value = Datos.PlayerId;
                 comando.Parameters["@IDTees"].Value = Datos.IDTees;
-               
+                comando.Parameters["@estatus"].Value = Datos.estatus;
+
 
                 comando.Connection = new SqlConnection(VariablesGlobales.CadenaConexion);
                 comando.CommandTimeout = 0;

@@ -184,6 +184,7 @@
     <Compile Include="Controllers\Amigos\AltaAmigosController.cs" />
     <Compile Include="Controllers\Amigos\ListaAmigosController.cs" />
     <Compile Include="Controllers\Apuestas\CalcularApuestaController.cs" />
+    <Compile Include="Controllers\Apuestas\EliminaApuestaController.cs" />
     <Compile Include="Controllers\Apuestas\CrearDetalleApuestaController.cs" />
     <Compile Include="Controllers\Apuestas\ListadoDetalleApuestaIndividualController.cs" />
     <Compile Include="Controllers\Apuestas\ListadoDetalleApuestaController.cs" />

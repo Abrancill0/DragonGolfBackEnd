@@ -170,6 +170,23 @@ namespace DragonGolfBackEnd.Controllers
                         Mensaje = Convert.ToString(row["mensaje"]);
                         Estatus = Convert.ToInt32(row["Estatus"]);
 
+                        bool InicioPartida1 = Convert.ToBoolean(row["InicioPartida1"]);
+                        bool InicioPartida2 = Convert.ToBoolean(row["InicioPartida2"]);
+
+
+                        if (InicioPartida1 == false && InicioPartida2 == false)
+                        {
+
+                            JObject Res1 = JObject.FromObject(new
+                            {
+                                mensaje = "Aun no se inicia la ronda",
+                                estatus = 0,
+
+                            });
+
+                            return Res1;
+                        }
+
                         ScoreHole1_P1 = Convert.ToInt32(row["ScoreHole1_P1"]);
                         ScoreHole2_P1 = Convert.ToInt32(row["ScoreHole2_P1"]);
                         ScoreHole3_P1 = Convert.ToInt32(row["ScoreHole3_P1"]);
@@ -621,15 +638,124 @@ namespace DragonGolfBackEnd.Controllers
 
                         }
 
-                        int Resultado1 = ScoreHole1_P2 - ScoreHole1_P1;
-                        int Resultado2 = ScoreHole2_P2 - ScoreHole2_P1;
-                        int Resultado3 = ScoreHole3_P2 - ScoreHole3_P1;
-                        int Resultado4 = ScoreHole4_P2 - ScoreHole4_P1;
-                        int Resultado5 = ScoreHole5_P2 - ScoreHole5_P1;
-                        int Resultado6 = ScoreHole6_P2 - ScoreHole6_P1;
-                        int Resultado7 = ScoreHole7_P2 - ScoreHole7_P1;
-                        int Resultado8 = ScoreHole8_P2 - ScoreHole8_P1;
-                        int Resultado9 = ScoreHole9_P2 - ScoreHole9_P1;
+
+                        int Resultado1 = 0;
+                        int Resultado2 = 0;
+                        int Resultado3 = 0;
+                        int Resultado4 = 0;
+                        int Resultado5 = 0;
+                        int Resultado6 = 0;
+                        int Resultado7 = 0;
+                        int Resultado8 = 0;
+                        int Resultado9 = 0;
+
+                        int ValidaFront = 0;
+
+                        if (ScoreHole1_P1 > 0 && ScoreHole1_P2 > 0)
+                        {
+                            if (ValidaFront == 0)
+                            {
+                                Resultado1 = ScoreHole1_P2 - ScoreHole1_P1;
+                            }
+                        }
+                        else
+                        {
+                            ValidaFront = 1;
+                        }
+
+                        if (ScoreHole2_P1 > 0 && ScoreHole2_P2 > 0)
+                        {
+                            if (ValidaFront == 0)
+                            {
+                                Resultado2 = ScoreHole2_P2 - ScoreHole2_P1;
+                            }
+                        }
+                        else
+                        {
+                            ValidaFront = 1;
+                        }
+
+                        if (ScoreHole3_P1 > 0 && ScoreHole3_P2 > 0)
+                        {
+                            if (ValidaFront == 0)
+                            {
+                                Resultado3 = ScoreHole3_P2 - ScoreHole3_P1;
+                            }
+                        }
+                        else
+                        {
+                            ValidaFront = 1;
+                        }
+
+                        if (ScoreHole4_P1 > 0 && ScoreHole4_P2 > 0)
+                        {
+                            if (ValidaFront == 0)
+                            {
+                                Resultado4 = ScoreHole4_P2 - ScoreHole4_P1;
+                            }
+                        }
+                        else
+                        {
+                            ValidaFront = 1;
+                        }
+
+                        if (ScoreHole5_P1 > 0 && ScoreHole5_P2 > 0)
+                        {
+                            if (ValidaFront == 0)
+                            {
+                                Resultado5 = ScoreHole5_P2 - ScoreHole5_P1;
+                            }
+                        }
+                        else
+                        {
+                            ValidaFront = 1;
+                        }
+
+                        if (ScoreHole6_P1 > 0 && ScoreHole6_P2 > 0)
+                        {
+                            if (ValidaFront == 0)
+                            {
+                                Resultado6 = ScoreHole6_P2 - ScoreHole6_P1;
+                            }
+                        }
+                        else
+                        {
+                            ValidaFront = 1;
+                        }
+
+                        if (ScoreHole7_P1 > 0 && ScoreHole7_P2 > 0)
+                        {
+                            if (ValidaFront == 0)
+                            {
+                                Resultado7 = ScoreHole7_P2 - ScoreHole7_P1;
+                            }
+                        }
+                        else
+                        {
+                            ValidaFront = 1;
+                        }
+
+                        if (ScoreHole8_P1 > 0 && ScoreHole8_P2 > 0)
+                        {
+                            if (ValidaFront == 0)
+                            {
+                                Resultado8 = ScoreHole8_P2 - ScoreHole8_P1;
+                            }
+                        }
+                        else
+                        {
+                            ValidaFront = 1;
+                        }
+
+                        if (ScoreHole9_P1 > 0 && ScoreHole9_P2 > 0)
+                        {
+                            if (ValidaFront==0)
+                            {
+                                Resultado9 = ScoreHole9_P2 - ScoreHole9_P1;
+                            }
+                             
+                        }
+                      
 
                         //Quien Gano, no lo sabemos
 
@@ -721,6 +847,17 @@ namespace DragonGolfBackEnd.Controllers
                         int ResultadoTotaFl1 = ScoreHole1_P1 + ScoreHole2_P1 + ScoreHole3_P1 + ScoreHole4_P1 + ScoreHole5_P1 + ScoreHole6_P1 + ScoreHole7_P1 + ScoreHole8_P1 + ScoreHole9_P1;
                         int ResultadoTotaFl2 = ScoreHole1_P2 + ScoreHole2_P2 + ScoreHole3_P2 + ScoreHole4_P2 + ScoreHole5_P2 + ScoreHole6_P2 + ScoreHole7_P2 + ScoreHole8_P2 + ScoreHole9_P2;
 
+                        bool ValidaJuegoInicio = false;
+
+                        if ((ResultadoTotaFl1 + ResultadoTotaFl2) > 0)
+                        {
+                            ValidaJuegoInicio = false;
+                        }
+                        else
+                        {
+                            ValidaJuegoInicio = true;
+                        }
+
                         int GanadorF = 0;
 
                         if (ResultadoTotaFl1 < ResultadoTotaFl2)
@@ -738,15 +875,123 @@ namespace DragonGolfBackEnd.Controllers
 
                         //Termina
 
-                        int Resultado10 = ScoreHole10_P2 - ScoreHole10_P1;
-                        int Resultado11 = ScoreHole11_P2 - ScoreHole11_P1;
-                        int Resultado12 = ScoreHole12_P2 - ScoreHole12_P1;
-                        int Resultado13 = ScoreHole13_P2 - ScoreHole13_P1;
-                        int Resultado14 = ScoreHole14_P2 - ScoreHole14_P1;
-                        int Resultado15 = ScoreHole15_P2 - ScoreHole15_P1;
-                        int Resultado16 = ScoreHole16_P2 - ScoreHole16_P1;
-                        int Resultado17 = ScoreHole17_P2 - ScoreHole17_P1;
-                        int Resultado18 = ScoreHole18_P2 - ScoreHole18_P1;
+                        int Resultado10 = 0;
+                        int Resultado11 = 0;
+                        int Resultado12 = 0;
+                        int Resultado13 = 0;
+                        int Resultado14 = 0;
+                        int Resultado15 = 0;
+                        int Resultado16 = 0;
+                        int Resultado17 = 0;
+                        int Resultado18 = 0;
+
+
+                        int ValidaBack = 0;
+
+                        if (ScoreHole10_P1 > 0 && ScoreHole10_P2 > 0)
+                        {
+                            if (ValidaBack == 0)
+                            {
+                                Resultado10 = ScoreHole10_P2 - ScoreHole10_P1;
+                            }
+                        }
+                        else
+                        {
+                            ValidaBack = 1;
+                        }
+
+                        if (ScoreHole11_P1 > 0 && ScoreHole11_P2 > 0)
+                        {
+                            if (ValidaBack == 0)
+                            {
+                                Resultado11 = ScoreHole11_P2 - ScoreHole11_P1;
+                            }
+                        }
+                        else
+                        {
+                            ValidaBack = 1;
+                        }
+
+                        if (ScoreHole12_P1 > 0 && ScoreHole12_P2 > 0)
+                        {
+                            if (ValidaBack == 0)
+                            {
+                                Resultado12 = ScoreHole12_P2 - ScoreHole12_P1;
+                            }
+                        }
+                        else
+                        {
+                            ValidaBack = 1;
+                        }
+
+                        if (ScoreHole13_P1 > 0 && ScoreHole13_P2 > 0)
+                        {
+                            if (ValidaBack == 0)
+                            {
+                                Resultado13 = ScoreHole13_P2 - ScoreHole13_P1;
+                            }
+                        }
+                        else
+                        {
+                            ValidaBack = 1;
+                        }
+
+                        if (ScoreHole14_P1 > 0 && ScoreHole14_P2 > 0)
+                        {
+                            if (ValidaFront == 0)
+                            {
+                                Resultado14 = ScoreHole14_P2 - ScoreHole14_P1;
+                            }
+                        }
+                        else
+                        {
+                            ValidaBack = 1;
+                        }
+
+                        if (ScoreHole15_P1 > 0 && ScoreHole15_P2 > 0)
+                        {
+                            if (ValidaBack == 0)
+                            {
+                                Resultado15 = ScoreHole15_P2 - ScoreHole15_P1;
+                            }
+                        }
+                        else
+                        {
+                            ValidaBack = 1;
+                        }
+
+                        if (ScoreHole16_P1 > 0 && ScoreHole16_P2 > 0)
+                        {
+                            if (ValidaBack == 0)
+                            {
+                                Resultado16 = ScoreHole16_P2 - ScoreHole16_P1;
+                            }
+                        }
+                        else
+                        {
+                            ValidaBack = 1;
+                        }
+
+                        if (ScoreHole17_P1 > 0 && ScoreHole17_P2 > 0)
+                        {
+                            if (ValidaBack == 0)
+                            {
+                                Resultado17 = ScoreHole17_P2 - ScoreHole17_P1;
+                            }
+                        }
+                        else
+                        {
+                            ValidaBack = 1;
+                        }
+
+                        if (ScoreHole18_P1 > 0 && ScoreHole18_P2 > 0)
+                        {
+                            if (ValidaBack == 0)
+                            {
+                                Resultado18 = ScoreHole18_P2 - ScoreHole18_P1;
+                            }
+
+                        }
 
 
 
@@ -837,6 +1082,7 @@ namespace DragonGolfBackEnd.Controllers
                         int ResultadoTotaBl2 = ScoreHole10_P2 + ScoreHole11_P2 + ScoreHole12_P2 + ScoreHole13_P2 + ScoreHole14_P2 + ScoreHole15_P2 + ScoreHole16_P2 + ScoreHole17_P2 + ScoreHole18_P2;
 
 
+
                         int GanadorB = 0;
 
                         if (ResultadoTotaBl1 < ResultadoTotaBl2)
@@ -874,13 +1120,14 @@ namespace DragonGolfBackEnd.Controllers
                         string BetD_B9_8 = "";
                         string BetD_B9_9 = "";
 
+
                         if (AutoPress == 1)
                         {
                             ResultFront = CalcularApuestaPresionFront1(Resultado1, Resultado2, Resultado3, Resultado4, Resultado5,
-                              Resultado6, Resultado7, Resultado8, Resultado9);
+                              Resultado6, Resultado7, Resultado8, Resultado9, ValidaJuegoInicio);
 
                             ResultBack = CalcularApuestaPresionBack1(Resultado10, Resultado11, Resultado12, Resultado13,
-                              Resultado14, Resultado15, Resultado16, Resultado17, Resultado18);
+                              Resultado14, Resultado15, Resultado16, Resultado17, Resultado18, ValidaJuegoInicio);
 
                             string[] FrontValores = ResultFront[0].Split(',');
                             string[] BackValores = ResultBack[0].Split(',');
@@ -907,16 +1154,16 @@ namespace DragonGolfBackEnd.Controllers
                             ActualizarAPuesta(Datos.IDBetDetail, Datos.IDBet, Datos.IDRonda, PlayerID1, PlayerID2, BetD_F9_1, BetD_F9_2, BetD_F9_3, BetD_F9_4, BetD_F9_5, BetD_F9_6,
                                             BetD_F9_7, BetD_F9_8, BetD_F9_9, BetD_B9_1, BetD_B9_2, BetD_B9_3, BetD_B9_4, BetD_B9_5, BetD_B9_6, BetD_B9_7, BetD_B9_8, BetD_B9_9, ResultadoFinalMedal, ContadorHoyos,
                                             ResultFront[1], ResultFront[2], ResultFront[3], ResultFront[4], ResultFront[5], ResultFront[6], ResultFront[7], ResultFront[8], ResultFront[9],
-                                            ResultBack[1], ResultBack[2], ResultBack[3], ResultBack[4], ResultBack[5], ResultBack[6], ResultBack[7], ResultBack[8], ResultBack[9], 1);
+                                            ResultBack[1], ResultBack[2], ResultBack[3], ResultBack[4], ResultBack[5], ResultBack[6], ResultBack[7], ResultBack[8], ResultBack[9], 1, ValidaJuegoInicio);
 
                         }
                         else if (AutoPress == 2)
                         {
                             ResultFront = CalcularApuestaPresionFront2(Resultado1, Resultado2, Resultado3, Resultado4, Resultado5,
-                                Resultado6, Resultado7, Resultado8, Resultado9);
+                                Resultado6, Resultado7, Resultado8, Resultado9, ValidaJuegoInicio);
 
                             ResultBack = CalcularApuestaPresionBack2(Resultado10, Resultado11, Resultado12, Resultado13,
-                                Resultado14, Resultado15, Resultado16, Resultado17, Resultado18);
+                                Resultado14, Resultado15, Resultado16, Resultado17, Resultado18, ValidaJuegoInicio);
 
                             string[] FrontValores = ResultFront[0].Split(',');
                             string[] BackValores = ResultBack[0].Split(',');
@@ -935,16 +1182,16 @@ namespace DragonGolfBackEnd.Controllers
                             ActualizarAPuesta(Datos.IDBetDetail, Datos.IDBet, Datos.IDRonda, PlayerID1, PlayerID2, BetD_F9_1, BetD_F9_2, BetD_F9_3, BetD_F9_4, BetD_F9_5, BetD_F9_6,
                                               BetD_F9_7, BetD_F9_8, BetD_F9_9, BetD_B9_1, BetD_B9_2, BetD_B9_3, BetD_B9_4, BetD_B9_5, BetD_B9_6, BetD_B9_7, BetD_B9_8, BetD_B9_9, ResultadoFinalMedal, ContadorHoyos,
                                               ResultFront[1], ResultFront[2], ResultFront[3], ResultFront[4], ResultFront[5], ResultFront[6], ResultFront[7], ResultFront[8], ResultFront[9],
-                                            ResultBack[1], ResultBack[2], ResultBack[3], ResultBack[4], ResultBack[5], ResultBack[6], ResultBack[7], ResultBack[8], ResultBack[9], 2);
+                                            ResultBack[1], ResultBack[2], ResultBack[3], ResultBack[4], ResultBack[5], ResultBack[6], ResultBack[7], ResultBack[8], ResultBack[9], 2, ValidaJuegoInicio);
 
                         }
                         else if (AutoPress == 3)
                         {
                             ResultFront = CalcularApuestaPresionFront3(Resultado1, Resultado2, Resultado3, Resultado4, Resultado5,
-                                Resultado6, Resultado7, Resultado8, Resultado9);
+                                Resultado6, Resultado7, Resultado8, Resultado9, ValidaJuegoInicio);
 
                             ResultBack = CalcularApuestaPresionBack3(Resultado10, Resultado11, Resultado12, Resultado13,
-                                Resultado14, Resultado15, Resultado16, Resultado17, Resultado18);
+                                Resultado14, Resultado15, Resultado16, Resultado17, Resultado18, ValidaJuegoInicio);
 
                             string[] FrontValores = ResultFront[0].Split(',');
                             string[] BackValores = ResultBack[0].Split(',');
@@ -960,7 +1207,7 @@ namespace DragonGolfBackEnd.Controllers
                             ActualizarAPuesta(Datos.IDBetDetail, Datos.IDBet, Datos.IDRonda, PlayerID1, PlayerID2, BetD_F9_1, BetD_F9_2, BetD_F9_3, BetD_F9_4, BetD_F9_5, BetD_F9_6,
                                              BetD_F9_7, BetD_F9_8, BetD_F9_9, BetD_B9_1, BetD_B9_2, BetD_B9_3, BetD_B9_4, BetD_B9_5, BetD_B9_6, BetD_B9_7, BetD_B9_8, BetD_B9_9, ResultadoFinalMedal, ContadorHoyos,
                                            ResultFront[1], ResultFront[2], ResultFront[3], ResultFront[4], ResultFront[5], ResultFront[6], ResultFront[7], ResultFront[8], ResultFront[9],
-                                            ResultBack[1], ResultBack[2], ResultBack[3], ResultBack[4], ResultBack[5], ResultBack[6], ResultBack[7], ResultBack[8], ResultBack[9], 3);
+                                            ResultBack[1], ResultBack[2], ResultBack[3], ResultBack[4], ResultBack[5], ResultBack[6], ResultBack[7], ResultBack[8], ResultBack[9], 3, ValidaJuegoInicio);
 
                         }
                         else
@@ -969,12 +1216,11 @@ namespace DragonGolfBackEnd.Controllers
                             ActualizarAPuesta(Datos.IDBetDetail, Datos.IDBet, Datos.IDRonda, PlayerID1, PlayerID2, Convert.ToString(Resultado1), Convert.ToString(Resultado2), Convert.ToString(Resultado3), Convert.ToString(Resultado4), Convert.ToString(Resultado5), Convert.ToString(Resultado6),
                                             Convert.ToString(Resultado7), Convert.ToString(Resultado8), Convert.ToString(Resultado9), Convert.ToString(Resultado10), Convert.ToString(Resultado11), Convert.ToString(Resultado12), Convert.ToString(Resultado13), Convert.ToString(Resultado14), Convert.ToString(Resultado15), Convert.ToString(Resultado16), Convert.ToString(Resultado17), Convert.ToString(Resultado18), ResultadoFinalMedal, ContadorHoyos,
                                            ResultFront[1], ResultFront[2], ResultFront[3], ResultFront[4], ResultFront[5], ResultFront[6], ResultFront[7], ResultFront[8], ResultFront[9],
-                                            ResultBack[1], ResultBack[2], ResultBack[3], ResultBack[4], ResultBack[5], ResultBack[6], ResultBack[7], ResultBack[8], ResultBack[9], 1);
+                                            ResultBack[1], ResultBack[2], ResultBack[3], ResultBack[4], ResultBack[5], ResultBack[6], ResultBack[7], ResultBack[8], ResultBack[9], 1, ValidaJuegoInicio);
 
                         }
 
                     }
-
 
                     JObject Resultado = JObject.FromObject(new
                     {
@@ -1011,7 +1257,7 @@ namespace DragonGolfBackEnd.Controllers
             }
         }
 
-        private string[] CalcularApuestaPresionFront1(int Resultado1, int Resultado2, int Resultado3, int Resultado4, int Resultado5, int Resultado6, int Resultado7, int Resultado8, int Resultado9)
+        private string[] CalcularApuestaPresionFront1(int Resultado1, int Resultado2, int Resultado3, int Resultado4, int Resultado5, int Resultado6, int Resultado7, int Resultado8, int Resultado9, bool ValidaJuegoInicio)
         {
 
             int[] ResultadoPresionFront = new int[10];
@@ -1530,11 +1776,11 @@ namespace DragonGolfBackEnd.Controllers
             ResultadoFinal[7] = ResultadoPresionFrontString[7];
             ResultadoFinal[8] = ResultadoPresionFrontString[8];
             ResultadoFinal[9] = ResultadoPresionFrontString[9];
-           
+
             return ResultadoFinal;
         }
 
-        private string[] CalcularApuestaPresionBack1(int Resultado1, int Resultado2, int Resultado3, int Resultado4, int Resultado5, int Resultado6, int Resultado7, int Resultado8, int Resultado9)
+        private string[] CalcularApuestaPresionBack1(int Resultado1, int Resultado2, int Resultado3, int Resultado4, int Resultado5, int Resultado6, int Resultado7, int Resultado8, int Resultado9, bool ValidaJuegoInicio)
         {
             int[] ResultadoPresionFront = new int[10];
 
@@ -2055,7 +2301,7 @@ namespace DragonGolfBackEnd.Controllers
 
         }
 
-        private string[] CalcularApuestaPresionFront2(int Resultado1, int Resultado2, int Resultado3, int Resultado4, int Resultado5, int Resultado6, int Resultado7, int Resultado8, int Resultado9)
+        private string[] CalcularApuestaPresionFront2(int Resultado1, int Resultado2, int Resultado3, int Resultado4, int Resultado5, int Resultado6, int Resultado7, int Resultado8, int Resultado9, bool ValidaJuegoInicio)
         {
             int[] ResultadoPresionFront = new int[10];
 
@@ -2208,7 +2454,7 @@ namespace DragonGolfBackEnd.Controllers
                             PresionValor1 = "0";
                             Presion1 = 0;
 
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt);
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1;
 
                             continue;
                         }
@@ -2225,7 +2471,7 @@ namespace DragonGolfBackEnd.Controllers
                                 PresionValor1 = Convert.ToString(Presion);
                             }
 
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1;
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2;
 
 
                             continue;
@@ -2251,7 +2497,9 @@ namespace DragonGolfBackEnd.Controllers
                                 PresionValor2 = Convert.ToString(Presion);
                             }
 
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2;
+                            //  ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3;
+
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3;
 
                             continue;
                         }
@@ -2282,7 +2530,7 @@ namespace DragonGolfBackEnd.Controllers
                                 PresionValor3 = Convert.ToString(Presion);
                             }
 
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3;
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4;
 
                             continue;
                         }
@@ -2319,552 +2567,8 @@ namespace DragonGolfBackEnd.Controllers
                                 Presion += 1;
                                 PresionValor4 = Convert.ToString(Presion);
                             }
-
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4;
-
-                            continue;
-                        }
-
-                    }
-                    else
-                    {
-                        if (PresionValor1 != "")
-                        {
-                            int Presion = Convert.ToInt32(PresionValor1);
-                            Presion += 1;
-                            PresionValor1 = Convert.ToString(Presion);
-
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1;
-                        }
-
-                        if (PresionValor2 != "")
-                        {
-                            int Presion = Convert.ToInt32(PresionValor2);
-                            Presion += 1;
-                            PresionValor2 = Convert.ToString(Presion);
-
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2;
-                        }
-
-                        if (PresionValor3 != "")
-                        {
-                            int Presion = Convert.ToInt32(PresionValor3);
-                            Presion += 1;
-                            PresionValor3 = Convert.ToString(Presion);
-
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3;
-                        }
-
-                        if (PresionValor4 != "")
-                        {
-                            int Presion = Convert.ToInt32(PresionValor4);
-                            Presion += 1;
-                            PresionValor4 = Convert.ToString(Presion);
-
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4;
-                        }
-
-                        if (PresionValor5 != "")
-                        {
-                            int Presion = Convert.ToInt32(PresionValor5);
-                            Presion += 1;
-                            PresionValor5 = Convert.ToString(Presion);
 
                             ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5;
-                        }
-                    }
-
-                }
-                else if (ResultadoPresionFront[i] == -1)
-                {
-                    ResultadoInt -= 1;
-                    Presion1 -= 1;
-
-                    ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt);
-
-                    if (Presion1 == -2)
-                    {
-                        if (PresionValor1 == "")
-                        {
-                            PresionValor1 = "0";
-                            Presion1 = 0;
-
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt);
-
-                            continue;
-                        }
-
-                        if (PresionValor2 == "" && PresionValor1 != "")
-                        {
-                            PresionValor2 = "0";
-                            Presion1 = 0;
-
-                            if (PresionValor1 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor1);
-                                Presion -= 1;
-                                PresionValor1 = Convert.ToString(Presion);
-                            }
-
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1;
-
-                            continue;
-                        }
-
-                        if (PresionValor3 == "" && PresionValor1 != "" && PresionValor2 != "")
-                        {
-                            PresionValor3 = "0";
-                            Presion1 = 0;
-
-                            if (PresionValor1 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor1);
-                                Presion -= 1;
-                                PresionValor1 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor2 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor2);
-                                Presion -= 1;
-                                PresionValor2 = Convert.ToString(Presion);
-                            }
-
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2;
-
-
-                            continue;
-                        }
-
-                        if (PresionValor4 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "")
-                        {
-                            PresionValor4 = "0";
-                            Presion1 = 0;
-
-                            if (PresionValor1 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor1);
-                                Presion -= 1;
-                                PresionValor1 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor2 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor2);
-                                Presion -= 1;
-                                PresionValor2 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor3 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor3);
-                                Presion -= 1;
-                                PresionValor3 = Convert.ToString(Presion);
-                            }
-
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3;
-
-
-                            continue;
-                        }
-
-                        if (PresionValor5 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "")
-                        {
-                            PresionValor5 = "0";
-                            Presion1 = 0;
-
-                            if (PresionValor1 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor1);
-                                Presion -= 1;
-                                PresionValor1 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor2 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor2);
-                                Presion -= 1;
-                                PresionValor2 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor3 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor3);
-                                Presion -= 1;
-                                PresionValor3 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor4 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor4);
-                                Presion -= 1;
-                                PresionValor4 = Convert.ToString(Presion);
-                            }
-
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4;
-
-
-                            continue;
-                        }
-                    }
-                    else
-                    {
-
-                        if (PresionValor1 != "")
-                        {
-                            int Presion = Convert.ToInt32(PresionValor1);
-                            Presion -= 1;
-                            PresionValor1 = Convert.ToString(Presion);
-
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1;
-                        }
-
-                        if (PresionValor2 != "")
-                        {
-                            int Presion = Convert.ToInt32(PresionValor2);
-                            Presion -= 1;
-                            PresionValor2 = Convert.ToString(Presion);
-
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2;
-                        }
-
-                        if (PresionValor3 != "")
-                        {
-                            int Presion = Convert.ToInt32(PresionValor3);
-                            Presion -= 1;
-                            PresionValor3 = Convert.ToString(Presion);
-
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3;
-                        }
-
-                        if (PresionValor4 != "")
-                        {
-                            int Presion = Convert.ToInt32(PresionValor4);
-                            Presion -= 1;
-                            PresionValor4 = Convert.ToString(Presion);
-
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4;
-                        }
-
-                        if (PresionValor5 != "")
-                        {
-                            int Presion = Convert.ToInt32(PresionValor5);
-                            Presion -= 1;
-                            PresionValor5 = Convert.ToString(Presion);
-
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5;
-                        }
-
-                    }
-                }
-                else
-                {
-                  
-                    ResultadoInt += 0;
-                    Presion1 += 0;
-
-                    if (i > 1)
-                    {
-                        ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", 0";
-                    }
-                    else
-                    {
-                        ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", 0";
-                    }
-
-                   
-                }
-
-            }
-
-            ResultadoString = Convert.ToString(ResultadoInt) + "," + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5;
-
-
-            string[] ResultadoFinal = new string[10];
-
-            ResultadoFinal[0] = ResultadoString;
-
-            ResultadoFinal[1] = ResultadoPresionFrontString[1];
-            ResultadoFinal[2] = ResultadoPresionFrontString[2];
-            ResultadoFinal[3] = ResultadoPresionFrontString[3];
-            ResultadoFinal[4] = ResultadoPresionFrontString[4];
-            ResultadoFinal[5] = ResultadoPresionFrontString[5];
-            ResultadoFinal[6] = ResultadoPresionFrontString[6];
-            ResultadoFinal[7] = ResultadoPresionFrontString[7];
-            ResultadoFinal[8] = ResultadoPresionFrontString[8];
-            ResultadoFinal[9] = ResultadoPresionFrontString[9];
-
-            return ResultadoFinal;
-
-        }
-
-        private string[] CalcularApuestaPresionBack2(int Resultado1, int Resultado2, int Resultado3, int Resultado4, int Resultado5, int Resultado6, int Resultado7, int Resultado8, int Resultado9)
-        {
-
-            int[] ResultadoPresionFront = new int[10];
-
-            string[] ResultadoPresionFrontString = new string[10];
-
-            if (Resultado1 == 0)
-            {
-                ResultadoPresionFront[1] = 0;
-            }
-            else if (Resultado1 > 0)
-            {
-                ResultadoPresionFront[1] = 1;
-            }
-            else if (Resultado1 < 0)
-            {
-                ResultadoPresionFront[1] = -1;
-            }
-
-            if (Resultado2 == 0)
-            {
-                ResultadoPresionFront[2] = 0;
-            }
-            else if (Resultado2 > 0)
-            {
-                ResultadoPresionFront[2] = 1;
-            }
-            else if (Resultado2 < 0)
-            {
-                ResultadoPresionFront[2] = -1;
-            }
-
-            if (Resultado3 == 0)
-            {
-                ResultadoPresionFront[3] = 0;
-            }
-            else if (Resultado3 > 0)
-            {
-                ResultadoPresionFront[3] = 1;
-            }
-            else if (Resultado3 < 0)
-            {
-                ResultadoPresionFront[3] = -1;
-            }
-
-            if (Resultado4 == 0)
-            {
-                ResultadoPresionFront[4] = 0;
-            }
-            else if (Resultado4 > 0)
-            {
-                ResultadoPresionFront[4] = 1;
-            }
-            else if (Resultado4 < 0)
-            {
-                ResultadoPresionFront[4] = -1;
-            }
-
-            if (Resultado5 == 0)
-            {
-                ResultadoPresionFront[5] = 0;
-            }
-            else if (Resultado5 > 0)
-            {
-                ResultadoPresionFront[5] = 1;
-            }
-            else if (Resultado5 < 0)
-            {
-                ResultadoPresionFront[5] = -1;
-            }
-
-            if (Resultado6 == 0)
-            {
-                ResultadoPresionFront[6] = 0;
-            }
-            else if (Resultado6 > 0)
-            {
-                ResultadoPresionFront[6] = 1;
-            }
-            else if (Resultado6 < 0)
-            {
-                ResultadoPresionFront[6] = -1;
-            }
-
-            if (Resultado7 == 0)
-            {
-                ResultadoPresionFront[7] = 0;
-            }
-            else if (Resultado7 > 0)
-            {
-                ResultadoPresionFront[7] = 1;
-            }
-            else if (Resultado7 < 0)
-            {
-                ResultadoPresionFront[7] = -1;
-            }
-
-            if (Resultado8 == 0)
-            {
-                ResultadoPresionFront[8] = 0;
-            }
-            else if (Resultado8 > 0)
-            {
-                ResultadoPresionFront[8] = 1;
-            }
-            else if (Resultado8 < 0)
-            {
-                ResultadoPresionFront[8] = -1;
-            }
-
-            if (Resultado9 == 0)
-            {
-                ResultadoPresionFront[9] = 0;
-            }
-            else if (Resultado9 > 0)
-            {
-                ResultadoPresionFront[9] = 1;
-            }
-            else if (Resultado9 < 0)
-            {
-                ResultadoPresionFront[9] = -1;
-            }
-
-            string ResultadoString = "";
-            int ResultadoInt = 0;
-
-            int Presion1 = 0;
-
-            string PresionValor1 = "";
-            string PresionValor2 = "";
-            string PresionValor3 = "";
-            string PresionValor4 = "";
-            string PresionValor5 = "";
-
-            for (int i = 1; i < 10; i++)
-            {
-
-                if (ResultadoPresionFront[i] == 1)
-                {
-
-                    ResultadoInt += 1;
-                    Presion1 += 1;
-
-                    ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt);
-
-                    if (Presion1 == 2)
-                    {
-
-                        if (PresionValor1 == "")
-                        {
-                            PresionValor1 = "0";
-                            Presion1 = 0;
-
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt);
-
-                            continue;
-                        }
-
-                        if (PresionValor2 == "" && PresionValor1 != "")
-                        {
-                            PresionValor2 = "0";
-                            Presion1 = 0;
-
-                            if (PresionValor1 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor1);
-                                Presion += 1;
-                                PresionValor1 = Convert.ToString(Presion);
-                            }
-
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1;
-
-
-                            continue;
-                        }
-
-                        if (PresionValor3 == "" && PresionValor1 != "" && PresionValor2 != "")
-                        {
-                            PresionValor3 = "0";
-                            Presion1 = 0;
-
-
-                            if (PresionValor1 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor1);
-                                Presion += 1;
-                                PresionValor1 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor2 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor2);
-                                Presion += 1;
-                                PresionValor2 = Convert.ToString(Presion);
-                            }
-
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2;
-
-                            continue;
-                        }
-
-                        if (PresionValor4 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "")
-                        {
-                            PresionValor4 = "0";
-                            Presion1 = 0;
-
-                            if (PresionValor1 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor1);
-                                Presion += 1;
-                                PresionValor1 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor2 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor2);
-                                Presion += 1;
-                                PresionValor2 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor3 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor3);
-                                Presion += 1;
-                                PresionValor3 = Convert.ToString(Presion);
-                            }
-
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3;
-
-                            continue;
-                        }
-
-                        if (PresionValor5 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "")
-                        {
-                            PresionValor5 = "0";
-                            Presion1 = 0;
-
-                            if (PresionValor1 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor1);
-                                Presion += 1;
-                                PresionValor1 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor2 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor2);
-                                Presion += 1;
-                                PresionValor2 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor3 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor3);
-                                Presion += 1;
-                                PresionValor3 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor4 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor4);
-                                Presion += 1;
-                                PresionValor4 = Convert.ToString(Presion);
-                            }
-
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4;
 
                             continue;
                         }
@@ -3109,11 +2813,11 @@ namespace DragonGolfBackEnd.Controllers
 
                     if (i > 1)
                     {
-                        ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", 0";
+                        ResultadoPresionFrontString[i] = Convert.ToString(ResultadoPresionFrontString[i - 1]);
                     }
                     else
                     {
-                        ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", 0";
+                        ResultadoPresionFrontString[i] = "0";
                     }
 
 
@@ -3121,8 +2825,20 @@ namespace DragonGolfBackEnd.Controllers
 
             }
 
-            ResultadoString = Convert.ToString(ResultadoInt) + "," + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5;
 
+            string ResultadointFinal = "";
+
+            if (ValidaJuegoInicio == true)
+            {
+                ResultadointFinal = "";
+            }
+            else
+            {
+                ResultadointFinal = Convert.ToString(ResultadoInt);
+            }
+
+
+            ResultadoString = ResultadointFinal + "," + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5;
 
             string[] ResultadoFinal = new string[10];
 
@@ -3139,9 +2855,566 @@ namespace DragonGolfBackEnd.Controllers
             ResultadoFinal[9] = ResultadoPresionFrontString[9];
 
             return ResultadoFinal;
+
         }
 
-        private string[] CalcularApuestaPresionFront3(int Resultado1, int Resultado2, int Resultado3, int Resultado4, int Resultado5, int Resultado6, int Resultado7, int Resultado8, int Resultado9)
+        private string[] CalcularApuestaPresionBack2(int Resultado1, int Resultado2, int Resultado3, int Resultado4, int Resultado5, int Resultado6, int Resultado7, int Resultado8, int Resultado9, bool ValidaJuegoInicio)
+        {
+            int[] ResultadoPresionFront = new int[10];
+
+            string[] ResultadoPresionFrontString = new string[10];
+
+            if (Resultado1 == 0)
+            {
+                ResultadoPresionFront[1] = 0;
+            }
+            else if (Resultado1 > 0)
+            {
+                ResultadoPresionFront[1] = 1;
+            }
+            else if (Resultado1 < 0)
+            {
+                ResultadoPresionFront[1] = -1;
+            }
+
+            if (Resultado2 == 0)
+            {
+                ResultadoPresionFront[2] = 0;
+            }
+            else if (Resultado2 > 0)
+            {
+                ResultadoPresionFront[2] = 1;
+            }
+            else if (Resultado2 < 0)
+            {
+                ResultadoPresionFront[2] = -1;
+            }
+
+            if (Resultado3 == 0)
+            {
+                ResultadoPresionFront[3] = 0;
+            }
+            else if (Resultado3 > 0)
+            {
+                ResultadoPresionFront[3] = 1;
+            }
+            else if (Resultado3 < 0)
+            {
+                ResultadoPresionFront[3] = -1;
+            }
+
+            if (Resultado4 == 0)
+            {
+                ResultadoPresionFront[4] = 0;
+            }
+            else if (Resultado4 > 0)
+            {
+                ResultadoPresionFront[4] = 1;
+            }
+            else if (Resultado4 < 0)
+            {
+                ResultadoPresionFront[4] = -1;
+            }
+
+            if (Resultado5 == 0)
+            {
+                ResultadoPresionFront[5] = 0;
+            }
+            else if (Resultado5 > 0)
+            {
+                ResultadoPresionFront[5] = 1;
+            }
+            else if (Resultado5 < 0)
+            {
+                ResultadoPresionFront[5] = -1;
+            }
+
+            if (Resultado6 == 0)
+            {
+                ResultadoPresionFront[6] = 0;
+            }
+            else if (Resultado6 > 0)
+            {
+                ResultadoPresionFront[6] = 1;
+            }
+            else if (Resultado6 < 0)
+            {
+                ResultadoPresionFront[6] = -1;
+            }
+
+            if (Resultado7 == 0)
+            {
+                ResultadoPresionFront[7] = 0;
+            }
+            else if (Resultado7 > 0)
+            {
+                ResultadoPresionFront[7] = 1;
+            }
+            else if (Resultado7 < 0)
+            {
+                ResultadoPresionFront[7] = -1;
+            }
+
+            if (Resultado8 == 0)
+            {
+                ResultadoPresionFront[8] = 0;
+            }
+            else if (Resultado8 > 0)
+            {
+                ResultadoPresionFront[8] = 1;
+            }
+            else if (Resultado8 < 0)
+            {
+                ResultadoPresionFront[8] = -1;
+            }
+
+            if (Resultado9 == 0)
+            {
+                ResultadoPresionFront[9] = 0;
+            }
+            else if (Resultado9 > 0)
+            {
+                ResultadoPresionFront[9] = 1;
+            }
+            else if (Resultado9 < 0)
+            {
+                ResultadoPresionFront[9] = -1;
+            }
+
+            string ResultadoString = "";
+            int ResultadoInt = 0;
+
+            int Presion1 = 0;
+
+            string PresionValor1 = "";
+            string PresionValor2 = "";
+            string PresionValor3 = "";
+            string PresionValor4 = "";
+            string PresionValor5 = "";
+
+            for (int i = 1; i < 10; i++)
+            {
+
+                if (ResultadoPresionFront[i] == 1)
+                {
+
+                    ResultadoInt += 1;
+                    Presion1 += 1;
+
+                    ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt);
+
+                    if (Presion1 == 2)
+                    {
+
+                        if (PresionValor1 == "")
+                        {
+                            PresionValor1 = "0";
+                            Presion1 = 0;
+
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1;
+
+                            continue;
+                        }
+
+                        if (PresionValor2 == "" && PresionValor1 != "")
+                        {
+                            PresionValor2 = "0";
+                            Presion1 = 0;
+
+                            if (PresionValor1 != "")
+                            {
+                                int Presion = Convert.ToInt32(PresionValor1);
+                                Presion += 1;
+                                PresionValor1 = Convert.ToString(Presion);
+                            }
+
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2;
+
+
+                            continue;
+                        }
+
+                        if (PresionValor3 == "" && PresionValor1 != "" && PresionValor2 != "")
+                        {
+                            PresionValor3 = "0";
+                            Presion1 = 0;
+
+
+                            if (PresionValor1 != "")
+                            {
+                                int Presion = Convert.ToInt32(PresionValor1);
+                                Presion += 1;
+                                PresionValor1 = Convert.ToString(Presion);
+                            }
+
+                            if (PresionValor2 != "")
+                            {
+                                int Presion = Convert.ToInt32(PresionValor2);
+                                Presion += 1;
+                                PresionValor2 = Convert.ToString(Presion);
+                            }
+
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3;
+
+                            continue;
+                        }
+
+                        if (PresionValor4 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "")
+                        {
+                            PresionValor4 = "0";
+                            Presion1 = 0;
+
+                            if (PresionValor1 != "")
+                            {
+                                int Presion = Convert.ToInt32(PresionValor1);
+                                Presion += 1;
+                                PresionValor1 = Convert.ToString(Presion);
+                            }
+
+                            if (PresionValor2 != "")
+                            {
+                                int Presion = Convert.ToInt32(PresionValor2);
+                                Presion += 1;
+                                PresionValor2 = Convert.ToString(Presion);
+                            }
+
+                            if (PresionValor3 != "")
+                            {
+                                int Presion = Convert.ToInt32(PresionValor3);
+                                Presion += 1;
+                                PresionValor3 = Convert.ToString(Presion);
+                            }
+
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4;
+
+                            continue;
+                        }
+
+                        if (PresionValor5 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "")
+                        {
+                            PresionValor5 = "0";
+                            Presion1 = 0;
+
+                            if (PresionValor1 != "")
+                            {
+                                int Presion = Convert.ToInt32(PresionValor1);
+                                Presion += 1;
+                                PresionValor1 = Convert.ToString(Presion);
+                            }
+
+                            if (PresionValor2 != "")
+                            {
+                                int Presion = Convert.ToInt32(PresionValor2);
+                                Presion += 1;
+                                PresionValor2 = Convert.ToString(Presion);
+                            }
+
+                            if (PresionValor3 != "")
+                            {
+                                int Presion = Convert.ToInt32(PresionValor3);
+                                Presion += 1;
+                                PresionValor3 = Convert.ToString(Presion);
+                            }
+
+                            if (PresionValor4 != "")
+                            {
+                                int Presion = Convert.ToInt32(PresionValor4);
+                                Presion += 1;
+                                PresionValor4 = Convert.ToString(Presion);
+                            }
+
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5;
+
+                            continue;
+                        }
+
+                    }
+                    else
+                    {
+                        if (PresionValor1 != "")
+                        {
+                            int Presion = Convert.ToInt32(PresionValor1);
+                            Presion += 1;
+                            PresionValor1 = Convert.ToString(Presion);
+
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1;
+                        }
+
+                        if (PresionValor2 != "")
+                        {
+                            int Presion = Convert.ToInt32(PresionValor2);
+                            Presion += 1;
+                            PresionValor2 = Convert.ToString(Presion);
+
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2;
+                        }
+
+                        if (PresionValor3 != "")
+                        {
+                            int Presion = Convert.ToInt32(PresionValor3);
+                            Presion += 1;
+                            PresionValor3 = Convert.ToString(Presion);
+
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3;
+                        }
+
+                        if (PresionValor4 != "")
+                        {
+                            int Presion = Convert.ToInt32(PresionValor4);
+                            Presion += 1;
+                            PresionValor4 = Convert.ToString(Presion);
+
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4;
+                        }
+
+                        if (PresionValor5 != "")
+                        {
+                            int Presion = Convert.ToInt32(PresionValor5);
+                            Presion += 1;
+                            PresionValor5 = Convert.ToString(Presion);
+
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5;
+                        }
+                    }
+
+                }
+                else if (ResultadoPresionFront[i] == -1)
+                {
+                    ResultadoInt -= 1;
+                    Presion1 -= 1;
+
+                    ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt);
+
+                    if (Presion1 == -2)
+                    {
+                        if (PresionValor1 == "")
+                        {
+                            PresionValor1 = "0";
+                            Presion1 = 0;
+
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt);
+
+                            continue;
+                        }
+
+                        if (PresionValor2 == "" && PresionValor1 != "")
+                        {
+                            PresionValor2 = "0";
+                            Presion1 = 0;
+
+                            if (PresionValor1 != "")
+                            {
+                                int Presion = Convert.ToInt32(PresionValor1);
+                                Presion -= 1;
+                                PresionValor1 = Convert.ToString(Presion);
+                            }
+
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1;
+
+                            continue;
+                        }
+
+                        if (PresionValor3 == "" && PresionValor1 != "" && PresionValor2 != "")
+                        {
+                            PresionValor3 = "0";
+                            Presion1 = 0;
+
+                            if (PresionValor1 != "")
+                            {
+                                int Presion = Convert.ToInt32(PresionValor1);
+                                Presion -= 1;
+                                PresionValor1 = Convert.ToString(Presion);
+                            }
+
+                            if (PresionValor2 != "")
+                            {
+                                int Presion = Convert.ToInt32(PresionValor2);
+                                Presion -= 1;
+                                PresionValor2 = Convert.ToString(Presion);
+                            }
+
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2;
+
+
+                            continue;
+                        }
+
+                        if (PresionValor4 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "")
+                        {
+                            PresionValor4 = "0";
+                            Presion1 = 0;
+
+                            if (PresionValor1 != "")
+                            {
+                                int Presion = Convert.ToInt32(PresionValor1);
+                                Presion -= 1;
+                                PresionValor1 = Convert.ToString(Presion);
+                            }
+
+                            if (PresionValor2 != "")
+                            {
+                                int Presion = Convert.ToInt32(PresionValor2);
+                                Presion -= 1;
+                                PresionValor2 = Convert.ToString(Presion);
+                            }
+
+                            if (PresionValor3 != "")
+                            {
+                                int Presion = Convert.ToInt32(PresionValor3);
+                                Presion -= 1;
+                                PresionValor3 = Convert.ToString(Presion);
+                            }
+
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3;
+
+
+                            continue;
+                        }
+
+                        if (PresionValor5 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "")
+                        {
+                            PresionValor5 = "0";
+                            Presion1 = 0;
+
+                            if (PresionValor1 != "")
+                            {
+                                int Presion = Convert.ToInt32(PresionValor1);
+                                Presion -= 1;
+                                PresionValor1 = Convert.ToString(Presion);
+                            }
+
+                            if (PresionValor2 != "")
+                            {
+                                int Presion = Convert.ToInt32(PresionValor2);
+                                Presion -= 1;
+                                PresionValor2 = Convert.ToString(Presion);
+                            }
+
+                            if (PresionValor3 != "")
+                            {
+                                int Presion = Convert.ToInt32(PresionValor3);
+                                Presion -= 1;
+                                PresionValor3 = Convert.ToString(Presion);
+                            }
+
+                            if (PresionValor4 != "")
+                            {
+                                int Presion = Convert.ToInt32(PresionValor4);
+                                Presion -= 1;
+                                PresionValor4 = Convert.ToString(Presion);
+                            }
+
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4;
+
+
+                            continue;
+                        }
+                    }
+                    else
+                    {
+
+                        if (PresionValor1 != "")
+                        {
+                            int Presion = Convert.ToInt32(PresionValor1);
+                            Presion -= 1;
+                            PresionValor1 = Convert.ToString(Presion);
+
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1;
+                        }
+
+                        if (PresionValor2 != "")
+                        {
+                            int Presion = Convert.ToInt32(PresionValor2);
+                            Presion -= 1;
+                            PresionValor2 = Convert.ToString(Presion);
+
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2;
+                        }
+
+                        if (PresionValor3 != "")
+                        {
+                            int Presion = Convert.ToInt32(PresionValor3);
+                            Presion -= 1;
+                            PresionValor3 = Convert.ToString(Presion);
+
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3;
+                        }
+
+                        if (PresionValor4 != "")
+                        {
+                            int Presion = Convert.ToInt32(PresionValor4);
+                            Presion -= 1;
+                            PresionValor4 = Convert.ToString(Presion);
+
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4;
+                        }
+
+                        if (PresionValor5 != "")
+                        {
+                            int Presion = Convert.ToInt32(PresionValor5);
+                            Presion -= 1;
+                            PresionValor5 = Convert.ToString(Presion);
+
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5;
+                        }
+
+                    }
+                }
+                else
+                {
+
+                    ResultadoInt += 0;
+                    Presion1 += 0;
+
+                    if (i > 1)
+                    {
+                        ResultadoPresionFrontString[i] = Convert.ToString(ResultadoPresionFrontString[i - 1]);
+                    }
+                    else
+                    {
+                        ResultadoPresionFrontString[i] = "0";
+                    }
+
+
+                }
+
+            }
+
+
+            string ResultadointFinal = "";
+
+            if (ValidaJuegoInicio == true)
+            {
+                ResultadointFinal = "";
+            }
+            else
+            {
+                ResultadointFinal = Convert.ToString(ResultadoInt);
+            }
+
+
+            ResultadoString = ResultadointFinal + "," + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5;
+
+            string[] ResultadoFinal = new string[10];
+
+            ResultadoFinal[0] = ResultadoString;
+
+            ResultadoFinal[1] = ResultadoPresionFrontString[1];
+            ResultadoFinal[2] = ResultadoPresionFrontString[2];
+            ResultadoFinal[3] = ResultadoPresionFrontString[3];
+            ResultadoFinal[4] = ResultadoPresionFrontString[4];
+            ResultadoFinal[5] = ResultadoPresionFrontString[5];
+            ResultadoFinal[6] = ResultadoPresionFrontString[6];
+            ResultadoFinal[7] = ResultadoPresionFrontString[7];
+            ResultadoFinal[8] = ResultadoPresionFrontString[8];
+            ResultadoFinal[9] = ResultadoPresionFrontString[9];
+
+            return ResultadoFinal;
+
+
+        }
+
+        private string[] CalcularApuestaPresionFront3(int Resultado1, int Resultado2, int Resultado3, int Resultado4, int Resultado5, int Resultado6, int Resultado7, int Resultado8, int Resultado9, bool ValidaJuegoInicio)
         {
 
             int[] ResultadoPresionFront = new int[10];
@@ -3293,7 +3566,7 @@ namespace DragonGolfBackEnd.Controllers
                             PresionValor1 = "0";
                             Presion1 = 0;
 
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt);
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1;
 
                             continue;
                         }
@@ -3310,7 +3583,7 @@ namespace DragonGolfBackEnd.Controllers
                                 PresionValor1 = Convert.ToString(Presion);
                             }
 
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1;
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2;
 
                             continue;
                         }
@@ -3334,7 +3607,7 @@ namespace DragonGolfBackEnd.Controllers
                                 PresionValor2 = Convert.ToString(Presion);
                             }
 
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2;
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3;
 
                             continue;
                         }
@@ -3473,11 +3746,11 @@ namespace DragonGolfBackEnd.Controllers
 
                     if (i > 1)
                     {
-                        ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", 0";
+                        ResultadoPresionFrontString[i] = Convert.ToString(ResultadoPresionFrontString[i - 1]);
                     }
                     else
                     {
-                        ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", 0";
+                        ResultadoPresionFrontString[i] = "0";
                     }
 
                 }
@@ -3485,7 +3758,19 @@ namespace DragonGolfBackEnd.Controllers
             }
 
 
-            ResultadoString = Convert.ToString(ResultadoInt) + "," + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3;
+            string ResultadointFinal = "";
+
+            if (ValidaJuegoInicio == true)
+            {
+                ResultadointFinal = "";
+            }
+            else
+            {
+                ResultadointFinal = Convert.ToString(ResultadoInt);
+            }
+
+
+            ResultadoString = ResultadointFinal + "," + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3;
 
             string[] ResultadoFinal = new string[10];
 
@@ -3504,7 +3789,7 @@ namespace DragonGolfBackEnd.Controllers
             return ResultadoFinal;
         }
 
-        private string[] CalcularApuestaPresionBack3(int Resultado1, int Resultado2, int Resultado3, int Resultado4, int Resultado5, int Resultado6, int Resultado7, int Resultado8, int Resultado9)
+        private string[] CalcularApuestaPresionBack3(int Resultado1, int Resultado2, int Resultado3, int Resultado4, int Resultado5, int Resultado6, int Resultado7, int Resultado8, int Resultado9, bool ValidaJuegoInicio)
         {
             int[] ResultadoPresionFront = new int[10];
 
@@ -3655,7 +3940,7 @@ namespace DragonGolfBackEnd.Controllers
                             PresionValor1 = "0";
                             Presion1 = 0;
 
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt);
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1;
 
                             continue;
                         }
@@ -3672,7 +3957,7 @@ namespace DragonGolfBackEnd.Controllers
                                 PresionValor1 = Convert.ToString(Presion);
                             }
 
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1;
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2;
 
                             continue;
                         }
@@ -3696,7 +3981,7 @@ namespace DragonGolfBackEnd.Controllers
                                 PresionValor2 = Convert.ToString(Presion);
                             }
 
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2;
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3;
 
                             continue;
                         }
@@ -3835,11 +4120,11 @@ namespace DragonGolfBackEnd.Controllers
 
                     if (i > 1)
                     {
-                        ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", 0";
+                        ResultadoPresionFrontString[i] = Convert.ToString(ResultadoPresionFrontString[i - 1]);
                     }
                     else
                     {
-                        ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", 0";
+                        ResultadoPresionFrontString[i] = "0";
                     }
 
                 }
@@ -3847,7 +4132,19 @@ namespace DragonGolfBackEnd.Controllers
             }
 
 
-            ResultadoString = Convert.ToString(ResultadoInt) + "," + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3;
+            string ResultadointFinal = "";
+
+            if (ValidaJuegoInicio == true)
+            {
+                ResultadointFinal = "";
+            }
+            else
+            {
+                ResultadointFinal = Convert.ToString(ResultadoInt);
+            }
+
+
+            ResultadoString = ResultadointFinal + "," + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3;
 
             string[] ResultadoFinal = new string[10];
 
@@ -3870,7 +4167,7 @@ namespace DragonGolfBackEnd.Controllers
                                       string BetD_B9_1, string BetD_B9_2, string BetD_B9_3, string BetD_B9_4, string BetD_B9_5, string BetD_B9_6, string BetD_B9_7, string BetD_B9_8, string BetD_B9_9, int ResultadoFinalMedal, int Match,
                                       string Hoyo_1, string Hoyo_2, string Hoyo_3, string Hoyo_4, string Hoyo_5, string Hoyo_6, string Hoyo_7, string Hoyo_8, string Hoyo_9,
                                       string Hoyo_10, string Hoyo_11, string Hoyo_12, string Hoyo_13, string Hoyo_14, string Hoyo_15, string Hoyo_16, string Hoyo_17, string Hoyo_18
-                                      ,int Presion)
+                                      , int Presion, bool ValidaJuegoInicio)
         {
 
 
@@ -3924,6 +4221,8 @@ namespace DragonGolfBackEnd.Controllers
 
             comando.Parameters.Add("@Medal", SqlDbType.Int);
             comando.Parameters.Add("@Match", SqlDbType.Int);
+            comando.Parameters.Add("@ValidaJuegoInicio", SqlDbType.Bit);
+
 
             //Asignacion de valores a parametros
             comando.Parameters["@IDBet"].Value = IDBet;
@@ -3972,6 +4271,9 @@ namespace DragonGolfBackEnd.Controllers
 
             comando.Parameters["@Medal"].Value = ResultadoFinalMedal;
             comando.Parameters["@Match"].Value = Match;
+            comando.Parameters["@ValidaJuegoInicio"].Value = ValidaJuegoInicio;
+
+
 
             comando.Connection = new SqlConnection(VariablesGlobales.CadenaConexion);
             comando.CommandTimeout = 0;

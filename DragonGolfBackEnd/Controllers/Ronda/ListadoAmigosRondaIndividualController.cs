@@ -23,7 +23,7 @@ namespace DragonGolfBackEnd.Controllers
         public class ParametrosEntradas
         {
             public int IDBetDetail { get; set; }
-       
+
         }
         public class ParametrosSalida
         {
@@ -124,7 +124,6 @@ namespace DragonGolfBackEnd.Controllers
             public int ScoreOutGP { get; set; }
             public int TotalScore { get; set; }
             public int TotalScoreGP { get; set; }
-
             public string Hoyo1Presion { get; set; }
             public string Hoyo2Presion { get; set; }
             public string Hoyo3Presion { get; set; }
@@ -144,6 +143,27 @@ namespace DragonGolfBackEnd.Controllers
             public string Hoyo17Presion { get; set; }
             public string Hoyo18Presion { get; set; }
 
+            public int GolpesVentaja1_tee { get; set; }
+            public int GolpesVentaja2_tee { get; set; }
+            public int GolpesVentaja3_tee { get; set; }
+            public int GolpesVentaja4_tee { get; set; }
+            public int GolpesVentaja5_tee { get; set; }
+            public int GolpesVentaja6_tee { get; set; }
+            public int GolpesVentaja7_tee { get; set; }
+            public int GolpesVentaja8_tee { get; set; }
+            public int GolpesVentaja9_tee { get; set; }
+            public int GolpesVentaja10_tee { get; set; }
+            public int GolpesVentaja11_tee { get; set; }
+            public int GolpesVentaja12_tee { get; set; }
+            public int GolpesVentaja13_tee { get; set; }
+            public int GolpesVentaja14_tee { get; set; }
+            public int GolpesVentaja15_tee { get; set; }
+            public int GolpesVentaja16_tee { get; set; }
+            public int GolpesVentaja17_tee { get; set; }
+            public int GolpesVentaja18_tee { get; set; }
+            public int ventaja { get; set; }
+            public int SumaGolpesVentaja { get; set; }
+
         }
         public JObject Post(ParametrosEntradas Datos)
         {
@@ -154,9 +174,9 @@ namespace DragonGolfBackEnd.Controllers
 
                 //Declaracion de parametros
                 comando.Parameters.Add("@IDBet_Detail", SqlDbType.Int);
-               
+
                 comando.Parameters["@IDBet_Detail"].Value = Datos.IDBetDetail;
-                
+
                 comando.Connection = new SqlConnection(VariablesGlobales.CadenaConexion);
                 comando.CommandTimeout = 0;
                 comando.Connection.Open();
@@ -193,6 +213,25 @@ namespace DragonGolfBackEnd.Controllers
                     int DificultatHoyo16 = 0;
                     int DificultatHoyo17 = 0;
                     int DificultatHoyo18 = 0;
+
+                    int DificultatHoyo1_tee = 0;
+                    int DificultatHoyo2_tee = 0;
+                    int DificultatHoyo3_tee = 0;
+                    int DificultatHoyo4_tee = 0;
+                    int DificultatHoyo5_tee = 0;
+                    int DificultatHoyo6_tee = 0;
+                    int DificultatHoyo7_tee = 0;
+                    int DificultatHoyo8_tee = 0;
+                    int DificultatHoyo9_tee = 0;
+                    int DificultatHoyo10_tee = 0;
+                    int DificultatHoyo11_tee = 0;
+                    int DificultatHoyo12_tee = 0;
+                    int DificultatHoyo13_tee = 0;
+                    int DificultatHoyo14_tee = 0;
+                    int DificultatHoyo15_tee = 0;
+                    int DificultatHoyo16_tee = 0;
+                    int DificultatHoyo17_tee = 0;
+                    int DificultatHoyo18_tee = 0;
 
                     int GolpesVentaja1 = 0;
                     int GolpesVentaja2 = 0;
@@ -233,6 +272,7 @@ namespace DragonGolfBackEnd.Controllers
                     int GolpesVentaja18_1 = 0;
 
                     decimal Adv1 = 0;
+                    int Adv_tee = 0;
 
 
                     foreach (DataRow row in DT.Rows)
@@ -265,6 +305,26 @@ namespace DragonGolfBackEnd.Controllers
                             DificultatHoyo16 = Convert.ToInt32(row["Ho_Advantage16"]);//17
                             DificultatHoyo17 = Convert.ToInt32(row["Ho_Advantage17"]);//18
                             DificultatHoyo18 = Convert.ToInt32(row["Ho_Advantage18"]);//12
+
+                            DificultatHoyo1_tee = Convert.ToInt32(row["DificutadHoyo1"]);//7
+                            DificultatHoyo2_tee = Convert.ToInt32(row["DificutadHoyo2"]);//1
+                            DificultatHoyo3_tee = Convert.ToInt32(row["DificutadHoyo3"]);//8
+                            DificultatHoyo4_tee = Convert.ToInt32(row["DificutadHoyo4"]);//5
+                            DificultatHoyo5_tee = Convert.ToInt32(row["DificutadHoyo5"]);//2
+                            DificultatHoyo6_tee = Convert.ToInt32(row["DificutadHoyo6"]);//6
+                            DificultatHoyo7_tee = Convert.ToInt32(row["DificutadHoyo7"]);//4
+                            DificultatHoyo8_tee = Convert.ToInt32(row["DificutadHoyo8"]);//3
+                            DificultatHoyo9_tee = Convert.ToInt32(row["DificutadHoyo9"]);//9
+                            DificultatHoyo10_tee = Convert.ToInt32(row["DificutadHoyo10"]);//10
+                            DificultatHoyo11_tee = Convert.ToInt32(row["DificutadHoyo11"]);//11
+                            DificultatHoyo12_tee = Convert.ToInt32(row["DificutadHoyo12"]);//14
+                            DificultatHoyo13_tee = Convert.ToInt32(row["DificutadHoyo13"]);//15
+                            DificultatHoyo14_tee = Convert.ToInt32(row["DificutadHoyo14"]);//13
+                            DificultatHoyo15_tee = Convert.ToInt32(row["DificutadHoyo15"]);//16
+                            DificultatHoyo16_tee = Convert.ToInt32(row["DificutadHoyo16"]);//17
+                            DificultatHoyo17_tee = Convert.ToInt32(row["DificutadHoyo17"]);//18
+                            DificultatHoyo18_tee = Convert.ToInt32(row["DificutadHoyo18"]);//12
+
                             GolpesVentaja1 = 0;
                             GolpesVentaja2 = 0;
                             GolpesVentaja3 = 0;
@@ -303,6 +363,26 @@ namespace DragonGolfBackEnd.Controllers
                             GolpesVentaja17_1 = 0;
                             GolpesVentaja18_1 = 0;
 
+
+                            int GolpesVentaja1_tee = 0;
+                            int GolpesVentaja2_tee = 0;
+                            int GolpesVentaja3_tee = 0;
+                            int GolpesVentaja4_tee = 0;
+                            int GolpesVentaja5_tee = 0;
+                            int GolpesVentaja6_tee = 0;
+                            int GolpesVentaja7_tee = 0;
+                            int GolpesVentaja8_tee = 0;
+                            int GolpesVentaja9_tee = 0;
+                            int GolpesVentaja10_tee = 0;
+                            int GolpesVentaja11_tee = 0;
+                            int GolpesVentaja12_tee = 0;
+                            int GolpesVentaja13_tee = 0;
+                            int GolpesVentaja14_tee = 0;
+                            int GolpesVentaja15_tee = 0;
+                            int GolpesVentaja16_tee = 0;
+                            int GolpesVentaja17_tee = 0;
+                            int GolpesVentaja18_tee = 0;
+
                             int ScoreHole1 = Convert.ToInt32(row["ScoreHole1"]);
                             int ScoreHole2 = Convert.ToInt32(row["ScoreHole2"]);
                             int ScoreHole3 = Convert.ToInt32(row["ScoreHole3"]);
@@ -321,13 +401,443 @@ namespace DragonGolfBackEnd.Controllers
                             int ScoreHole16 = Convert.ToInt32(row["ScoreHole16"]);
                             int ScoreHole17 = Convert.ToInt32(row["ScoreHole17"]);
                             int ScoreHole18 = Convert.ToInt32(row["ScoreHole18"]);
+                            Adv_tee = Convert.ToInt32(row["adv"]);
+
+                            int ventaja = Convert.ToInt32(row["Ventaja"]); ;
+                            int SumaGolpesVentaja = 0;
+
+                            int AdvInverso = (-1) * (Adv_tee);
+
+                            if (AdvInverso < 0)
+                            {
+                               if (Convert.ToInt32(row["IDUsuario"]) == Convert.ToInt32(row["PlayerId"]))
+                                {
+                                    SumaGolpesVentaja = AdvInverso;
+                                }
+                                else
+                                {
+                                    SumaGolpesVentaja = Adv_tee;
+                                }
+
+                            }
+                            else
+                            {
+                                if (Convert.ToInt32(row["IDUsuario"]) == Convert.ToInt32(row["PlayerId"]))
+                                {
+                                    SumaGolpesVentaja = AdvInverso;
+                                }
+                                else
+                                {
+                                    SumaGolpesVentaja = Adv_tee;
+                                }
+                            }
+
+                            int Contadorcito = 0;
+                            //Cuando es negativo es ventaja para el player 1
+                            if (AdvInverso < 0)
+                            {
+                                int AdvPositivo = (-1) * (AdvInverso);
+
+                                int CicloFor = 18;
+
+                                if (AdvPositivo > 18)
+                                {
+                                    CicloFor = AdvPositivo;
+                                }
+
+                                for (int i = 0; i < CicloFor; i++)
+                                {
+                                    Contadorcito += 1;
+
+                                    if (Contadorcito > 18)
+                                    {
+                                        Contadorcito = 1;
+                                    }
+
+                                    if (Contadorcito <= AdvPositivo)
+                                    {
+
+                                        if (DificultatHoyo1_tee == Contadorcito)
+                                        {
+                                            if (ScoreHole1 > 0)
+                                            {
+                                                GolpesVentaja1_tee = GolpesVentaja1_tee + 1;
+                                            }
+
+
+                                        }
+
+                                        if (DificultatHoyo2_tee == Contadorcito)
+                                        {
+                                            if (ScoreHole2 > 0)
+                                            {
+                                                GolpesVentaja2_tee = GolpesVentaja2_tee + 1;
+                                            }
+
+                                        }
+
+                                        if (DificultatHoyo3_tee == Contadorcito)
+                                        {
+                                            if (ScoreHole3 > 0)
+                                            {
+                                                GolpesVentaja3_tee = GolpesVentaja3_tee + 1;
+                                            }
+
+                                        }
+
+                                        if (DificultatHoyo4_tee == Contadorcito)
+                                        {
+
+                                            if (ScoreHole4 > 0)
+                                            {
+                                                GolpesVentaja4_tee = GolpesVentaja4_tee + 1;
+                                            }
+
+
+                                        }
+
+                                        if (DificultatHoyo5_tee == Contadorcito)
+                                        {
+                                            if (ScoreHole5 > 0)
+                                            {
+                                                GolpesVentaja5_tee = GolpesVentaja5_tee + 1;
+                                            }
+
+
+                                        }
+
+                                        if (DificultatHoyo6_tee == Contadorcito)
+                                        {
+                                            if (ScoreHole6 > 0)
+                                            {
+                                                GolpesVentaja6_tee = GolpesVentaja6_tee + 1;
+                                            }
+
+                                        }
+
+                                        if (DificultatHoyo7_tee == Contadorcito)
+                                        {
+                                            if (ScoreHole7 > 0)
+                                            {
+                                                GolpesVentaja7_tee = GolpesVentaja7_tee + 1;
+                                            }
+
+                                        }
+
+                                        if (DificultatHoyo8_tee == Contadorcito)
+                                        {
+                                            if (ScoreHole8 > 0)
+                                            {
+                                                GolpesVentaja8_tee = GolpesVentaja8_tee + 1;
+                                            }
+
+                                        }
+
+                                        if (DificultatHoyo9_tee == Contadorcito)
+                                        {
+                                            if (ScoreHole9 > 0)
+                                            {
+                                                GolpesVentaja9_tee = GolpesVentaja9_tee + 1;
+                                            }
+
+                                        }
+
+                                        if (DificultatHoyo10_tee == Contadorcito)
+                                        {
+                                            if (ScoreHole10 > 0)
+                                            {
+                                                GolpesVentaja10_tee = GolpesVentaja10_tee + 1;
+                                            }
+
+                                        }
+
+                                        if (DificultatHoyo11_tee == Contadorcito)
+                                        {
+                                            if (ScoreHole11 > 0)
+                                            {
+                                                GolpesVentaja11_tee = GolpesVentaja11_tee + 1;
+                                            }
+
+                                        }
+
+                                        if (DificultatHoyo12_tee == Contadorcito)
+                                        {
+                                            if (ScoreHole12 > 0)
+                                            {
+                                                GolpesVentaja12_tee = GolpesVentaja12_tee + 1;
+                                            }
+
+                                        }
+
+                                        if (DificultatHoyo13_tee == Contadorcito)
+                                        {
+                                            if (ScoreHole13 > 0)
+                                            {
+                                                GolpesVentaja13_tee = GolpesVentaja13_tee + 1;
+                                            }
+
+                                        }
+
+                                        if (DificultatHoyo14_tee == Contadorcito)
+                                        {
+                                            if (ScoreHole14 > 0)
+                                            {
+                                                GolpesVentaja14_tee = GolpesVentaja14_tee + 1;
+                                            }
+
+                                        }
+
+                                        if (DificultatHoyo15_tee == Contadorcito)
+                                        {
+                                            if (ScoreHole15 > 0)
+                                            {
+                                                GolpesVentaja15_tee = GolpesVentaja15_tee + 1;
+                                            }
+
+                                        }
+
+                                        if (DificultatHoyo16_tee == Contadorcito)
+                                        {
+                                            if (ScoreHole16 > 0)
+                                            {
+                                                GolpesVentaja16_tee = GolpesVentaja16_tee + 1;
+                                            }
+
+                                        }
+
+                                        if (DificultatHoyo17_tee == Contadorcito)
+                                        {
+                                            if (ScoreHole17 > 0)
+                                            {
+                                                GolpesVentaja17_tee = GolpesVentaja17_tee + 1;
+                                            }
+
+                                        }
+
+                                        if (DificultatHoyo18_tee == Contadorcito)
+                                        {
+                                            if (ScoreHole18 > 0)
+                                            {
+                                                GolpesVentaja18_tee = GolpesVentaja18_tee + 1;
+                                            }
+
+                                        }
+
+                                    }
+                                    else
+                                    {
+                                        break;
+                                    }
+
+                                }
+
+                            }
+                            else if (AdvInverso > 0)
+                            {
+                                int CicloFor = 18;
+
+                                if (AdvInverso > 18)
+                                {
+                                    CicloFor = AdvInverso;
+                                }
+
+                                for (int i = 0; i < CicloFor; i++)
+                                {
+                                    Contadorcito += 1;
+
+                                    if (Contadorcito > 18)
+                                    {
+                                        Contadorcito = 1;
+                                    }
+
+                                    if (Contadorcito <= AdvInverso)
+                                    {
+
+                                        if (DificultatHoyo1_tee == Contadorcito)
+                                        {
+
+                                            if (ScoreHole1 > 0)
+                                            {
+                                                GolpesVentaja1_tee = GolpesVentaja1_tee + 1;
+                                            }
+
+                                        }
+
+                                        if (DificultatHoyo2_tee == Contadorcito)
+                                        {
+                                            if (ScoreHole2 > 0)
+                                            {
+                                                GolpesVentaja2_tee = GolpesVentaja2_tee + 1;
+                                            }
+
+                                        }
+
+                                        if (DificultatHoyo3_tee == Contadorcito)
+                                        {
+                                            if (ScoreHole3 > 0)
+                                            {
+                                                GolpesVentaja3_tee = GolpesVentaja3_tee + 1;
+                                            }
+
+                                        }
+
+                                        if (DificultatHoyo4_tee == Contadorcito)
+                                        {
+                                            if (ScoreHole4 > 0)
+                                            {
+                                                GolpesVentaja4_tee = GolpesVentaja4_tee + 1;
+                                            }
+
+                                        }
+
+                                        if (DificultatHoyo5_tee == Contadorcito)
+                                        {
+                                            if (ScoreHole5 > 0)
+                                            {
+                                                GolpesVentaja5_tee = GolpesVentaja5_tee + 1;
+                                            }
+
+                                        }
+
+                                        if (DificultatHoyo6_tee == Contadorcito)
+                                        {
+                                            if (ScoreHole6 > 0)
+                                            {
+                                                GolpesVentaja6_tee = GolpesVentaja6_tee + 1;
+                                            }
+
+                                        }
+
+                                        if (DificultatHoyo7_tee == Contadorcito)
+                                        {
+                                            if (ScoreHole7 > 0)
+                                            {
+                                                GolpesVentaja7_tee = GolpesVentaja7_tee + 1;
+                                            }
+
+                                        }
+
+                                        if (DificultatHoyo8_tee == Contadorcito)
+                                        {
+                                            if (ScoreHole8 > 0)
+                                            {
+                                                GolpesVentaja8_tee = GolpesVentaja8_tee + 1;
+                                            }
+
+
+                                        }
+
+                                        if (DificultatHoyo9_tee == Contadorcito)
+                                        {
+                                            if (ScoreHole9 > 0)
+                                            {
+                                                GolpesVentaja9_tee = GolpesVentaja9_tee + 1;
+                                            }
+
+                                        }
+
+                                        if (DificultatHoyo10_tee == Contadorcito)
+                                        {
+                                            if (ScoreHole10 > 0)
+                                            {
+                                                GolpesVentaja10_tee = GolpesVentaja10_tee + 1;
+                                            }
+
+                                        }
+
+                                        if (DificultatHoyo11_tee == Contadorcito)
+                                        {
+                                            if (ScoreHole11 > 0)
+                                            {
+                                                GolpesVentaja11_tee = GolpesVentaja11_tee + 1;
+                                            }
+
+                                        }
+
+                                        if (DificultatHoyo12_tee == Contadorcito)
+                                        {
+                                            if (ScoreHole12 > 0)
+                                            {
+                                                GolpesVentaja12_tee = GolpesVentaja12_tee + 1;
+                                            }
+
+
+                                        }
+
+                                        if (DificultatHoyo13_tee == Contadorcito)
+                                        {
+                                            if (ScoreHole13 > 0)
+                                            {
+                                                GolpesVentaja13_tee = GolpesVentaja13_tee + 1;
+                                            }
+
+
+                                        }
+
+                                        if (DificultatHoyo14_tee == Contadorcito)
+                                        {
+                                            if (ScoreHole14 > 0)
+                                            {
+                                                GolpesVentaja14_tee = GolpesVentaja14_tee + 1;
+                                            }
+
+
+                                        }
+
+                                        if (DificultatHoyo15_tee == Contadorcito)
+                                        {
+                                            if (ScoreHole15 > 0)
+                                            {
+                                                GolpesVentaja15_tee = GolpesVentaja15_tee + 1;
+                                            }
+
+                                        }
+
+                                        if (DificultatHoyo16_tee == Contadorcito)
+                                        {
+                                            if (ScoreHole16 > 0)
+                                            {
+                                                GolpesVentaja16_tee = GolpesVentaja16_tee + 1;
+                                            }
+
+
+                                        }
+
+                                        if (DificultatHoyo17_tee == Contadorcito)
+                                        {
+                                            if (ScoreHole17 > 0)
+                                            {
+                                                GolpesVentaja17_tee = GolpesVentaja17_tee + 1;
+                                            }
+
+                                        }
+
+                                        if (DificultatHoyo18_tee == Contadorcito)
+                                        {
+                                            if (ScoreHole18 > 0)
+                                            {
+                                                GolpesVentaja18_tee = GolpesVentaja18_tee + 1;
+                                            }
+
+                                        }
+
+
+                                    }
+                                    else
+                                    {
+                                        break;
+                                    }
+
+                                }
+
+                            }
+
 
                             Adv1 = Convert.ToDecimal(row["handicapAuto"]);
 
                             int Contador = 0;
 
                             int Adv = Convert.ToInt32(Decimal.Round(Adv1));
-                        
 
                             if (Adv < 0)
                             {
@@ -737,13 +1247,11 @@ namespace DragonGolfBackEnd.Controllers
 
                             }
 
-
                             int TotalGolpesVentajaFront = 0;
                             int TotalGolpesVentajaBack = 0;
 
                             TotalGolpesVentajaFront = GolpesVentaja1 + GolpesVentaja2 + GolpesVentaja3 + GolpesVentaja4 + GolpesVentaja5 + GolpesVentaja6 + GolpesVentaja7 + GolpesVentaja8 + GolpesVentaja9;
                             TotalGolpesVentajaBack = GolpesVentaja10 + GolpesVentaja11 + GolpesVentaja12 + GolpesVentaja13 + GolpesVentaja14 + GolpesVentaja15 + GolpesVentaja16 + GolpesVentaja17 + GolpesVentaja18;
-
 
                             ParametrosSalida ent = new ParametrosSalida
                             {
@@ -845,8 +1353,27 @@ namespace DragonGolfBackEnd.Controllers
                                 GolpesVentaja16 = GolpesVentaja16_1,
                                 GolpesVentaja17 = GolpesVentaja17_1,
                                 GolpesVentaja18 = GolpesVentaja18_1,
+                                ventaja = ventaja,
+                                GolpesVentaja1_tee = GolpesVentaja1_tee,
+                                GolpesVentaja2_tee = GolpesVentaja2_tee,
+                                GolpesVentaja3_tee = GolpesVentaja3_tee,
+                                GolpesVentaja4_tee = GolpesVentaja4_tee,
+                                GolpesVentaja5_tee = GolpesVentaja5_tee,
+                                GolpesVentaja6_tee = GolpesVentaja6_tee,
+                                GolpesVentaja7_tee = GolpesVentaja7_tee,
+                                GolpesVentaja8_tee = GolpesVentaja8_tee,
+                                GolpesVentaja9_tee = GolpesVentaja9_tee,
+                                GolpesVentaja10_tee = GolpesVentaja10_tee,
+                                GolpesVentaja11_tee = GolpesVentaja11_tee,
+                                GolpesVentaja12_tee = GolpesVentaja12_tee,
+                                GolpesVentaja13_tee = GolpesVentaja13_tee,
+                                GolpesVentaja14_tee = GolpesVentaja14_tee,
+                                GolpesVentaja15_tee = GolpesVentaja15_tee,
+                                GolpesVentaja16_tee = GolpesVentaja16_tee,
+                                GolpesVentaja17_tee = GolpesVentaja17_tee,
+                                GolpesVentaja18_tee = GolpesVentaja18_tee,
 
-                                 Hoyo1Presion = Convert.ToString(row["Hoyo1Presion"]),
+                                Hoyo1Presion = Convert.ToString(row["Hoyo1Presion"]),
                                 Hoyo2Presion = Convert.ToString(row["Hoyo2Presion"]),
                                 Hoyo3Presion = Convert.ToString(row["Hoyo3Presion"]),
                                 Hoyo4Presion = Convert.ToString(row["Hoyo4Presion"]),
@@ -864,6 +1391,7 @@ namespace DragonGolfBackEnd.Controllers
                                 Hoyo16Presion = Convert.ToString(row["Hoyo16Presion"]),
                                 Hoyo17Presion = Convert.ToString(row["Hoyo17Presion"]),
                                 Hoyo18Presion = Convert.ToString(row["Hoyo18Presion"]),
+                                SumaGolpesVentaja = SumaGolpesVentaja
 
                             };
 
