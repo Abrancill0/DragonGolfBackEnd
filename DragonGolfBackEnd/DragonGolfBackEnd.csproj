@@ -216,6 +216,7 @@
     <Compile Include="Controllers\Ronda\ActualizarRondaHoyosController.cs" />
     <Compile Include="Controllers\Ronda\ActualizaStrokerPvPRondaController.cs" />
     <Compile Include="Controllers\Ronda\ActualizarScoreHoyoController.cs" />
+    <Compile Include="Controllers\Ronda\ActualizarRondaController.cs" />
     <Compile Include="Controllers\Ronda\EliminarAmigosRondaController.cs" />
     <Compile Include="Controllers\Ronda\AgregarAmigosRondaController.cs" />
     <Compile Include="Controllers\Ronda\AgregarTeesRondaController.cs" />
