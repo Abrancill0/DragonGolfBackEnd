@@ -189,6 +189,7 @@
     <Compile Include="Controllers\Apuestas\ListadoDetalleApuestaIndividualController.cs" />
     <Compile Include="Controllers\Apuestas\ListadoDetalleApuestaController.cs" />
     <Compile Include="Controllers\Apuestas\ListaApuestaController.cs" />
+    <Compile Include="Controllers\Apuestas\TeamNassau\CalcularApuestaTeamNassauController.cs" />
     <Compile Include="Controllers\Campos\CopiarCampoController.cs" />
     <Compile Include="Controllers\Campos\EliminarCampoController.cs" />
     <Compile Include="Controllers\Campos\ListaCamposTodosController.cs" />
