@@ -156,6 +156,7 @@ namespace DragonGolfBackEnd.Controllers
                 int DificultatHoyo16 = 0;
                 int DificultatHoyo17 = 0;
                 int DificultatHoyo18 = 0;
+                int HoyoInicial = 0;
                 int Adv = 0;
 
                 string[] ResultFront = new string[9];
@@ -169,6 +170,7 @@ namespace DragonGolfBackEnd.Controllers
                     {
                         Mensaje = Convert.ToString(row["mensaje"]);
                         Estatus = Convert.ToInt32(row["Estatus"]);
+                        HoyoInicial = Convert.ToInt32(row["HoyoInicial"]);
 
                         bool InicioPartida1 = Convert.ToBoolean(row["InicioPartida1"]);
                         bool InicioPartida2 = Convert.ToBoolean(row["InicioPartida2"]);
@@ -223,11 +225,13 @@ namespace DragonGolfBackEnd.Controllers
                         ScoreHole16_P2 = Convert.ToInt32(row["ScoreHole16_P2"]);
                         ScoreHole17_P2 = Convert.ToInt32(row["ScoreHole17_P2"]);
                         ScoreHole18_P2 = Convert.ToInt32(row["ScoreHole18_P2"]);
+
+
+                       
                         PlayerID1 = Convert.ToInt32(row["PlayerID1"]);
                         PlayerID2 = Convert.ToInt32(row["PlayerID2"]);
                         AutoPress = Convert.ToInt32(row["AutoPress"]);
                         Adv = Convert.ToInt32(row["Adv"]);
-
 
                         DificultatHoyo1 = Convert.ToInt32(row["DificultatHoyo1"]);//7
                         DificultatHoyo2 = Convert.ToInt32(row["DificultatHoyo2"]);//1
@@ -638,6 +642,50 @@ namespace DragonGolfBackEnd.Controllers
 
                         }
 
+                        //Cambio de hoyo
+                        int[] CambioHoyos = new int[36];
+
+                        CambioHoyos = HoyoInicialCambio(ScoreHole1_P1, ScoreHole2_P1, ScoreHole3_P1, ScoreHole4_P1, ScoreHole5_P1, ScoreHole6_P1, ScoreHole7_P1, ScoreHole8_P1, ScoreHole9_P1, ScoreHole10_P1, ScoreHole11_P1, ScoreHole12_P1, ScoreHole13_P1, ScoreHole14_P1, ScoreHole15_P1, ScoreHole16_P1, ScoreHole17_P1, ScoreHole18_P1,
+                            ScoreHole1_P2, ScoreHole2_P2, ScoreHole3_P2, ScoreHole4_P2, ScoreHole5_P2, ScoreHole6_P2, ScoreHole7_P2, ScoreHole8_P2, ScoreHole9_P2, ScoreHole10_P2, ScoreHole11_P2, ScoreHole12_P2, ScoreHole13_P2, ScoreHole14_P2, ScoreHole15_P2, ScoreHole16_P2, ScoreHole17_P2, ScoreHole18_P2, HoyoInicial);
+
+                        ScoreHole1_P1 = CambioHoyos[1];
+                        ScoreHole2_P1 = CambioHoyos[2];
+                        ScoreHole3_P1 = CambioHoyos[3];
+                        ScoreHole4_P1 = CambioHoyos[4];
+                        ScoreHole5_P1 = CambioHoyos[5];
+                        ScoreHole6_P1 = CambioHoyos[6];
+                        ScoreHole7_P1 = CambioHoyos[7];
+                        ScoreHole8_P1 = CambioHoyos[8];
+                        ScoreHole9_P1 = CambioHoyos[9];
+                        ScoreHole10_P1 = CambioHoyos[10];
+                        ScoreHole11_P1 = CambioHoyos[11];
+                        ScoreHole12_P1 = CambioHoyos[12];
+                        ScoreHole13_P1 = CambioHoyos[13];
+                        ScoreHole14_P1 = CambioHoyos[14];
+                        ScoreHole15_P1 = CambioHoyos[15];
+                        ScoreHole16_P1 = CambioHoyos[16];
+                        ScoreHole17_P1 = CambioHoyos[17];
+                        ScoreHole18_P1 = CambioHoyos[18];
+
+                        ScoreHole1_P2 = CambioHoyos[19];
+                        ScoreHole2_P2 = CambioHoyos[20];
+                        ScoreHole3_P2 = CambioHoyos[21];
+                        ScoreHole4_P2 = CambioHoyos[22];
+                        ScoreHole5_P2 = CambioHoyos[23];
+                        ScoreHole6_P2 = CambioHoyos[24];
+                        ScoreHole7_P2 = CambioHoyos[25];
+                        ScoreHole8_P2 = CambioHoyos[26];
+                        ScoreHole9_P2 = CambioHoyos[27];
+                        ScoreHole10_P2 = CambioHoyos[28];
+                        ScoreHole11_P2 = CambioHoyos[29];
+                        ScoreHole12_P2 = CambioHoyos[30];
+                        ScoreHole13_P2 = CambioHoyos[31];
+                        ScoreHole14_P2 = CambioHoyos[32];
+                        ScoreHole15_P2 = CambioHoyos[33];
+                        ScoreHole16_P2 = CambioHoyos[34];
+                        ScoreHole17_P2 = CambioHoyos[35];
+                        ScoreHole18_P2 = CambioHoyos[36];
+                        //Termina cambio de hoyo
 
                         int Resultado1 = 0;
                         int Resultado2 = 0;
@@ -749,13 +797,13 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (ScoreHole9_P1 > 0 && ScoreHole9_P2 > 0)
                         {
-                            if (ValidaFront==0)
+                            if (ValidaFront == 0)
                             {
                                 Resultado9 = ScoreHole9_P2 - ScoreHole9_P1;
                             }
-                             
+
                         }
-                      
+
 
                         //Quien Gano, no lo sabemos
 
@@ -841,7 +889,6 @@ namespace DragonGolfBackEnd.Controllers
                         {
                             ContadorHoyos = ContadorHoyos - 1;
                         }
-
 
                         //Calculo Medal front
                         int ResultadoTotaF1 = ScoreHole1_P1 + ScoreHole2_P1 + ScoreHole3_P1 + ScoreHole4_P1 + ScoreHole5_P1 + ScoreHole6_P1 + ScoreHole7_P1 + ScoreHole8_P1 + ScoreHole9_P1;
@@ -976,7 +1023,6 @@ namespace DragonGolfBackEnd.Controllers
                             }
 
                         }
-
 
 
                         if (Resultado10 > 0)
@@ -4258,7 +4304,6 @@ namespace DragonGolfBackEnd.Controllers
             comando.Parameters["@ValidaJuegoInicio"].Value = ValidaJuegoInicio;
 
 
-
             comando.Connection = new SqlConnection(VariablesGlobales.CadenaConexion);
             comando.CommandTimeout = 0;
             comando.Connection.Open();
@@ -4268,9 +4313,801 @@ namespace DragonGolfBackEnd.Controllers
             comando.Connection.Close();
             DA.Fill(DT);
 
-           
-                    return 0;
+
+            return 0;
         }
 
+
+        private int[] HoyoInicialCambio(int hole1_P1, int hole2_P1, int hole3_P1, int hole4_P1, int hole5_P1, int hole6_P1, int hole7_P1, int hole8_P1, int hole9_P1, int hole10_P1, int hole11_P1, int hole12_P1, int hole13_P1, int hole14_P1, int hole15_P1, int hole16_P1, int hole17_P1, int hole18_P1,
+            int hole1_P2, int hole2_P2, int hole3_P2, int hole4_P2, int hole5_P2, int hole6_P2, int hole7_P2, int hole8_P2, int hole9_P2, int hole10_P2, int hole11_P2, int hole12_P2, int hole13_P2, int hole14_P2, int hole15_P2, int hole16_P2, int hole17_P2, int hole18_P2, int HoyoInicial)
+        {
+
+            int[] SwitchHoles_P1 = new int[18];
+            int[] SwitchHoles_P2 = new int[18];
+
+            int[] SwitchHoles = new int[36];
+
+
+            switch (HoyoInicial)
+            {
+                case 1:
+
+                    SwitchHoles_P1[1] = hole11_P1;
+                    SwitchHoles_P1[2] = hole2_P1;
+                    SwitchHoles_P1[3] = hole3_P1;
+                    SwitchHoles_P1[4] = hole4_P1;
+                    SwitchHoles_P1[5] = hole5_P1;
+                    SwitchHoles_P1[6] = hole6_P1;
+                    SwitchHoles_P1[7] = hole7_P1;
+                    SwitchHoles_P1[8] = hole8_P1;
+                    SwitchHoles_P1[9] = hole9_P1;
+                    SwitchHoles_P1[10] = hole10_P1;
+                    SwitchHoles_P1[11] = hole11_P1;
+                    SwitchHoles_P1[12] = hole12_P1;
+                    SwitchHoles_P1[13] = hole13_P1;
+                    SwitchHoles_P1[14] = hole14_P1;
+                    SwitchHoles_P1[15] = hole15_P1;
+                    SwitchHoles_P1[16] = hole16_P1;
+                    SwitchHoles_P1[17] = hole17_P1;
+                    SwitchHoles_P1[18] = hole18_P1;
+
+                    SwitchHoles_P2[1] = hole1_P2;
+                    SwitchHoles_P2[2] = hole2_P2;
+                    SwitchHoles_P2[3] = hole3_P2;
+                    SwitchHoles_P2[4] = hole4_P2;
+                    SwitchHoles_P2[5] = hole5_P2;
+                    SwitchHoles_P2[6] = hole6_P2;
+                    SwitchHoles_P2[7] = hole7_P2;
+                    SwitchHoles_P2[8] = hole8_P2;
+                    SwitchHoles_P2[9] = hole9_P2;
+                    SwitchHoles_P2[10] = hole10_P2;
+                    SwitchHoles_P2[11] = hole11_P2;
+                    SwitchHoles_P2[12] = hole12_P2;
+                    SwitchHoles_P2[13] = hole13_P2;
+                    SwitchHoles_P2[14] = hole14_P2;
+                    SwitchHoles_P2[15] = hole15_P2;
+                    SwitchHoles_P2[16] = hole16_P2;
+                    SwitchHoles_P2[17] = hole17_P2;
+                    SwitchHoles_P2[18] = hole18_P2;
+
+
+                    break;
+                case 2:
+                    SwitchHoles_P1[1] = hole18_P1;
+                    SwitchHoles_P1[2] = hole1_P1;
+                    SwitchHoles_P1[3] = hole2_P1;
+                    SwitchHoles_P1[4] = hole3_P1;
+                    SwitchHoles_P1[5] = hole4_P1;
+                    SwitchHoles_P1[6] = hole5_P1;
+                    SwitchHoles_P1[7] = hole6_P1;
+                    SwitchHoles_P1[8] = hole7_P1;
+                    SwitchHoles_P1[9] = hole8_P1;
+                    SwitchHoles_P1[10] = hole9_P1;
+                    SwitchHoles_P1[11] = hole10_P1;
+                    SwitchHoles_P1[12] = hole11_P1;
+                    SwitchHoles_P1[13] = hole12_P1;
+                    SwitchHoles_P1[14] = hole13_P1;
+                    SwitchHoles_P1[15] = hole14_P1;
+                    SwitchHoles_P1[16] = hole15_P1;
+                    SwitchHoles_P1[17] = hole16_P1;
+                    SwitchHoles_P1[18] = hole17_P1;
+
+                    SwitchHoles_P2[1] = hole18_P2;
+                    SwitchHoles_P2[2] = hole1_P2;
+                    SwitchHoles_P2[3] = hole2_P2;
+                    SwitchHoles_P2[4] = hole3_P2;
+                    SwitchHoles_P2[5] = hole4_P2;
+                    SwitchHoles_P2[6] = hole5_P2;
+                    SwitchHoles_P2[7] = hole6_P2;
+                    SwitchHoles_P2[8] = hole7_P2;
+                    SwitchHoles_P2[9] = hole8_P2;
+                    SwitchHoles_P2[10] = hole9_P2;
+                    SwitchHoles_P2[11] = hole10_P2;
+                    SwitchHoles_P2[12] = hole11_P2;
+                    SwitchHoles_P2[13] = hole12_P2;
+                    SwitchHoles_P2[14] = hole13_P2;
+                    SwitchHoles_P2[15] = hole14_P2;
+                    SwitchHoles_P2[16] = hole15_P2;
+                    SwitchHoles_P2[17] = hole16_P2;
+                    SwitchHoles_P2[18] = hole17_P2;
+
+                    break;
+                case 3:
+                    SwitchHoles_P1[1] = hole17_P1;
+                    SwitchHoles_P1[2] = hole18_P1;
+                    SwitchHoles_P1[3] = hole1_P1;
+                    SwitchHoles_P1[4] = hole2_P1;
+                    SwitchHoles_P1[5] = hole3_P1;
+                    SwitchHoles_P1[6] = hole4_P1;
+                    SwitchHoles_P1[7] = hole5_P1;
+                    SwitchHoles_P1[8] = hole6_P1;
+                    SwitchHoles_P1[9] = hole7_P1;
+                    SwitchHoles_P1[10] = hole8_P1;
+                    SwitchHoles_P1[11] = hole9_P1;
+                    SwitchHoles_P1[12] = hole10_P1;
+                    SwitchHoles_P1[13] = hole11_P1;
+                    SwitchHoles_P1[14] = hole12_P1;
+                    SwitchHoles_P1[15] = hole13_P1;
+                    SwitchHoles_P1[16] = hole14_P1;
+                    SwitchHoles_P1[17] = hole15_P1;
+                    SwitchHoles_P1[18] = hole16_P1;
+
+                    SwitchHoles_P2[1] = hole17_P2;
+                    SwitchHoles_P2[2] = hole18_P2;
+                    SwitchHoles_P2[3] = hole1_P2;
+                    SwitchHoles_P2[4] = hole2_P2;
+                    SwitchHoles_P2[5] = hole3_P2;
+                    SwitchHoles_P2[6] = hole4_P2;
+                    SwitchHoles_P2[7] = hole5_P2;
+                    SwitchHoles_P2[8] = hole6_P2;
+                    SwitchHoles_P2[9] = hole7_P2;
+                    SwitchHoles_P2[10] = hole8_P2;
+                    SwitchHoles_P2[11] = hole9_P2;
+                    SwitchHoles_P2[12] = hole10_P2;
+                    SwitchHoles_P2[13] = hole11_P2;
+                    SwitchHoles_P2[14] = hole12_P2;
+                    SwitchHoles_P2[15] = hole13_P2;
+                    SwitchHoles_P2[16] = hole14_P2;
+                    SwitchHoles_P2[17] = hole15_P2;
+                    SwitchHoles_P2[18] = hole16_P2;
+
+                    break;
+                case 4:
+                    SwitchHoles_P1[1] = hole16_P1;
+                    SwitchHoles_P1[2] = hole17_P1;
+                    SwitchHoles_P1[3] = hole18_P1;
+                    SwitchHoles_P1[4] = hole1_P1;
+                    SwitchHoles_P1[5] = hole2_P1;
+                    SwitchHoles_P1[6] = hole3_P1;
+                    SwitchHoles_P1[7] = hole4_P1;
+                    SwitchHoles_P1[8] = hole5_P1;
+                    SwitchHoles_P1[9] = hole6_P1;
+                    SwitchHoles_P1[10] = hole7_P1;
+                    SwitchHoles_P1[11] = hole8_P1;
+                    SwitchHoles_P1[12] = hole9_P1;
+                    SwitchHoles_P1[13] = hole10_P1;
+                    SwitchHoles_P1[14] = hole11_P1;
+                    SwitchHoles_P1[15] = hole12_P1;
+                    SwitchHoles_P1[16] = hole13_P1;
+                    SwitchHoles_P1[17] = hole14_P1;
+                    SwitchHoles_P1[18] = hole15_P1;
+
+                    SwitchHoles_P2[1] = hole16_P2;
+                    SwitchHoles_P2[2] = hole17_P2;
+                    SwitchHoles_P2[3] = hole18_P2;
+                    SwitchHoles_P2[4] = hole1_P2;
+                    SwitchHoles_P2[5] = hole2_P2;
+                    SwitchHoles_P2[6] = hole3_P2;
+                    SwitchHoles_P2[7] = hole4_P2;
+                    SwitchHoles_P2[8] = hole5_P2;
+                    SwitchHoles_P2[9] = hole6_P2;
+                    SwitchHoles_P2[10] = hole7_P2;
+                    SwitchHoles_P2[11] = hole8_P2;
+                    SwitchHoles_P2[12] = hole9_P2;
+                    SwitchHoles_P2[13] = hole10_P2;
+                    SwitchHoles_P2[14] = hole11_P2;
+                    SwitchHoles_P2[15] = hole12_P2;
+                    SwitchHoles_P2[16] = hole13_P2;
+                    SwitchHoles_P2[17] = hole15_P2;
+                    SwitchHoles_P2[18] = hole16_P2;
+
+                    break;
+                case 5:
+                    SwitchHoles_P1[1] = hole15_P1;
+                    SwitchHoles_P1[2] = hole16_P1;
+                    SwitchHoles_P1[3] = hole17_P1;
+                    SwitchHoles_P1[4] = hole18_P1;
+                    SwitchHoles_P1[5] = hole1_P1;
+                    SwitchHoles_P1[6] = hole2_P1;
+                    SwitchHoles_P1[7] = hole3_P1;
+                    SwitchHoles_P1[8] = hole4_P1;
+                    SwitchHoles_P1[9] = hole5_P1;
+                    SwitchHoles_P1[10] = hole6_P1;
+                    SwitchHoles_P1[11] = hole7_P1;
+                    SwitchHoles_P1[12] = hole8_P1;
+                    SwitchHoles_P1[13] = hole9_P1;
+                    SwitchHoles_P1[14] = hole10_P1;
+                    SwitchHoles_P1[15] = hole11_P1;
+                    SwitchHoles_P1[16] = hole12_P1;
+                    SwitchHoles_P1[17] = hole13_P1;
+                    SwitchHoles_P1[18] = hole14_P1;
+
+                    SwitchHoles_P2[1] = hole15_P2;
+                    SwitchHoles_P2[2] = hole16_P2;
+                    SwitchHoles_P2[3] = hole17_P2;
+                    SwitchHoles_P2[4] = hole18_P2;
+                    SwitchHoles_P2[5] = hole1_P2;
+                    SwitchHoles_P2[6] = hole2_P2;
+                    SwitchHoles_P2[7] = hole3_P2;
+                    SwitchHoles_P2[8] = hole4_P2;
+                    SwitchHoles_P2[9] = hole5_P2;
+                    SwitchHoles_P2[10] = hole6_P2;
+                    SwitchHoles_P2[11] = hole7_P2;
+                    SwitchHoles_P2[12] = hole8_P2;
+                    SwitchHoles_P2[13] = hole9_P2;
+                    SwitchHoles_P2[14] = hole10_P2;
+                    SwitchHoles_P2[15] = hole11_P2;
+                    SwitchHoles_P2[16] = hole12_P2;
+                    SwitchHoles_P2[17] = hole13_P2;
+                    SwitchHoles_P2[18] = hole14_P2;
+
+                    break;
+                case 6:
+                    SwitchHoles_P1[1] = hole14_P1;
+                    SwitchHoles_P1[2] = hole15_P1;
+                    SwitchHoles_P1[3] = hole16_P1;
+                    SwitchHoles_P1[4] = hole17_P1;
+                    SwitchHoles_P1[5] = hole18_P1;
+                    SwitchHoles_P1[6] = hole1_P1;
+                    SwitchHoles_P1[7] = hole2_P1;
+                    SwitchHoles_P1[8] = hole3_P1;
+                    SwitchHoles_P1[9] = hole4_P1;
+                    SwitchHoles_P1[10] = hole5_P1;
+                    SwitchHoles_P1[11] = hole6_P1;
+                    SwitchHoles_P1[12] = hole7_P1;
+                    SwitchHoles_P1[13] = hole8_P1;
+                    SwitchHoles_P1[14] = hole9_P1;
+                    SwitchHoles_P1[15] = hole10_P1;
+                    SwitchHoles_P1[16] = hole11_P1;
+                    SwitchHoles_P1[17] = hole12_P1;
+                    SwitchHoles_P1[18] = hole13_P1;
+
+                    SwitchHoles_P2[1] = hole14_P2;
+                    SwitchHoles_P2[2] = hole15_P2;
+                    SwitchHoles_P2[3] = hole16_P2;
+                    SwitchHoles_P2[4] = hole17_P2;
+                    SwitchHoles_P2[5] = hole18_P2;
+                    SwitchHoles_P2[6] = hole1_P2;
+                    SwitchHoles_P2[7] = hole2_P2;
+                    SwitchHoles_P2[8] = hole3_P2;
+                    SwitchHoles_P2[9] = hole4_P2;
+                    SwitchHoles_P2[10] = hole5_P2;
+                    SwitchHoles_P2[11] = hole6_P2;
+                    SwitchHoles_P2[12] = hole7_P2;
+                    SwitchHoles_P2[13] = hole8_P2;
+                    SwitchHoles_P2[14] = hole9_P2;
+                    SwitchHoles_P2[15] = hole10_P2;
+                    SwitchHoles_P2[16] = hole11_P2;
+                    SwitchHoles_P2[17] = hole12_P2;
+                    SwitchHoles_P2[18] = hole13_P2;
+                    break;
+                case 7:
+                    SwitchHoles_P1[1] = hole13_P1;
+                    SwitchHoles_P1[2] = hole14_P1;
+                    SwitchHoles_P1[3] = hole15_P1;
+                    SwitchHoles_P1[4] = hole16_P1;
+                    SwitchHoles_P1[5] = hole17_P1;
+                    SwitchHoles_P1[6] = hole18_P1;
+                    SwitchHoles_P1[7] = hole1_P1;
+                    SwitchHoles_P1[8] = hole2_P1;
+                    SwitchHoles_P1[9] = hole3_P1;
+                    SwitchHoles_P1[10] = hole4_P1;
+                    SwitchHoles_P1[11] = hole5_P1;
+                    SwitchHoles_P1[12] = hole6_P1;
+                    SwitchHoles_P1[13] = hole7_P1;
+                    SwitchHoles_P1[14] = hole8_P1;
+                    SwitchHoles_P1[15] = hole9_P1;
+                    SwitchHoles_P1[16] = hole10_P1;
+                    SwitchHoles_P1[17] = hole11_P1;
+                    SwitchHoles_P1[18] = hole12_P1;
+
+                    SwitchHoles_P2[1] = hole13_P2;
+                    SwitchHoles_P2[2] = hole14_P2;
+                    SwitchHoles_P2[3] = hole15_P2;
+                    SwitchHoles_P2[4] = hole16_P2;
+                    SwitchHoles_P2[5] = hole17_P2;
+                    SwitchHoles_P2[6] = hole18_P2;
+                    SwitchHoles_P2[7] = hole1_P2;
+                    SwitchHoles_P2[8] = hole2_P2;
+                    SwitchHoles_P2[9] = hole3_P2;
+                    SwitchHoles_P2[10] = hole4_P2;
+                    SwitchHoles_P2[11] = hole5_P2;
+                    SwitchHoles_P2[12] = hole6_P2;
+                    SwitchHoles_P2[13] = hole7_P2;
+                    SwitchHoles_P2[14] = hole8_P2;
+                    SwitchHoles_P2[15] = hole9_P2;
+                    SwitchHoles_P2[16] = hole10_P2;
+                    SwitchHoles_P2[17] = hole11_P2;
+                    SwitchHoles_P2[18] = hole12_P2;
+
+                    break;
+                case 8:
+
+                    SwitchHoles_P1[1] = hole12_P1;
+                    SwitchHoles_P1[2] = hole13_P1;
+                    SwitchHoles_P1[3] = hole14_P1;
+                    SwitchHoles_P1[4] = hole15_P1;
+                    SwitchHoles_P1[5] = hole16_P1;
+                    SwitchHoles_P1[6] = hole17_P1;
+                    SwitchHoles_P1[7] = hole18_P1;
+                    SwitchHoles_P1[8] = hole1_P1;
+                    SwitchHoles_P1[9] = hole2_P1;
+                    SwitchHoles_P1[10] = hole3_P1;
+                    SwitchHoles_P1[11] = hole4_P1;
+                    SwitchHoles_P1[12] = hole5_P1;
+                    SwitchHoles_P1[13] = hole6_P1;
+                    SwitchHoles_P1[14] = hole7_P1;
+                    SwitchHoles_P1[15] = hole8_P1;
+                    SwitchHoles_P1[16] = hole9_P1;
+                    SwitchHoles_P1[17] = hole10_P1;
+                    SwitchHoles_P1[18] = hole11_P1;
+
+                    SwitchHoles_P2[1] = hole12_P2;
+                    SwitchHoles_P2[2] = hole13_P2;
+                    SwitchHoles_P2[3] = hole14_P2;
+                    SwitchHoles_P2[4] = hole15_P2;
+                    SwitchHoles_P2[5] = hole16_P2;
+                    SwitchHoles_P2[6] = hole17_P2;
+                    SwitchHoles_P2[7] = hole18_P2;
+                    SwitchHoles_P2[8] = hole1_P2;
+                    SwitchHoles_P2[9] = hole2_P2;
+                    SwitchHoles_P2[10] = hole3_P2;
+                    SwitchHoles_P2[11] = hole4_P2;
+                    SwitchHoles_P2[12] = hole5_P2;
+                    SwitchHoles_P2[13] = hole6_P2;
+                    SwitchHoles_P2[14] = hole7_P2;
+                    SwitchHoles_P2[15] = hole8_P2;
+                    SwitchHoles_P2[16] = hole9_P2;
+                    SwitchHoles_P2[17] = hole10_P2;
+                    SwitchHoles_P2[18] = hole11_P2;
+
+                    break;
+                case 9:
+                    SwitchHoles_P1[1] = hole11_P1;
+                    SwitchHoles_P1[2] = hole12_P1;
+                    SwitchHoles_P1[3] = hole13_P1;
+                    SwitchHoles_P1[4] = hole14_P1;
+                    SwitchHoles_P1[5] = hole15_P1;
+                    SwitchHoles_P1[6] = hole16_P1;
+                    SwitchHoles_P1[7] = hole17_P1;
+                    SwitchHoles_P1[8] = hole18_P1;
+                    SwitchHoles_P1[9] = hole1_P1;
+                    SwitchHoles_P1[10] = hole2_P1;
+                    SwitchHoles_P1[11] = hole3_P1;
+                    SwitchHoles_P1[12] = hole4_P1;
+                    SwitchHoles_P1[13] = hole5_P1;
+                    SwitchHoles_P1[14] = hole6_P1;
+                    SwitchHoles_P1[15] = hole7_P1;
+                    SwitchHoles_P1[16] = hole8_P1;
+                    SwitchHoles_P1[17] = hole9_P1;
+                    SwitchHoles_P1[18] = hole10_P1;
+
+                    SwitchHoles_P2[1] = hole11_P2;
+                    SwitchHoles_P2[2] = hole12_P2;
+                    SwitchHoles_P2[3] = hole13_P2;
+                    SwitchHoles_P2[4] = hole14_P2;
+                    SwitchHoles_P2[5] = hole15_P2;
+                    SwitchHoles_P2[6] = hole16_P2;
+                    SwitchHoles_P2[7] = hole17_P2;
+                    SwitchHoles_P2[8] = hole18_P2;
+                    SwitchHoles_P2[9] = hole1_P2;
+                    SwitchHoles_P2[10] = hole2_P2;
+                    SwitchHoles_P2[11] = hole3_P2;
+                    SwitchHoles_P2[12] = hole4_P2;
+                    SwitchHoles_P2[13] = hole5_P2;
+                    SwitchHoles_P2[14] = hole6_P2;
+                    SwitchHoles_P2[15] = hole7_P2;
+                    SwitchHoles_P2[16] = hole8_P2;
+                    SwitchHoles_P2[17] = hole9_P2;
+                    SwitchHoles_P2[18] = hole10_P2;
+
+                    break;
+                case 10:
+
+                    SwitchHoles_P1[1] = hole10_P1;
+                    SwitchHoles_P1[2] = hole11_P1;
+                    SwitchHoles_P1[3] = hole12_P1;
+                    SwitchHoles_P1[4] = hole13_P1;
+                    SwitchHoles_P1[5] = hole14_P1;
+                    SwitchHoles_P1[6] = hole15_P1;
+                    SwitchHoles_P1[7] = hole16_P1;
+                    SwitchHoles_P1[8] = hole17_P1;
+                    SwitchHoles_P1[9] = hole18_P1;
+                    SwitchHoles_P1[10] = hole1_P1;
+                    SwitchHoles_P1[11] = hole2_P1;
+                    SwitchHoles_P1[12] = hole3_P1;
+                    SwitchHoles_P1[13] = hole4_P1;
+                    SwitchHoles_P1[14] = hole5_P1;
+                    SwitchHoles_P1[15] = hole6_P1;
+                    SwitchHoles_P1[16] = hole7_P1;
+                    SwitchHoles_P1[17] = hole8_P1;
+                    SwitchHoles_P1[18] = hole9_P1;
+
+                    SwitchHoles_P2[1] = hole10_P2;
+                    SwitchHoles_P2[2] = hole11_P2;
+                    SwitchHoles_P2[3] = hole12_P2;
+                    SwitchHoles_P2[4] = hole13_P2;
+                    SwitchHoles_P2[5] = hole14_P2;
+                    SwitchHoles_P2[6] = hole15_P2;
+                    SwitchHoles_P2[7] = hole16_P2;
+                    SwitchHoles_P2[8] = hole17_P2;
+                    SwitchHoles_P2[9] = hole18_P2;
+                    SwitchHoles_P2[10] = hole1_P2;
+                    SwitchHoles_P2[11] = hole2_P2;
+                    SwitchHoles_P2[12] = hole3_P2;
+                    SwitchHoles_P2[13] = hole4_P2;
+                    SwitchHoles_P2[14] = hole5_P2;
+                    SwitchHoles_P2[15] = hole6_P2;
+                    SwitchHoles_P2[16] = hole7_P2;
+                    SwitchHoles_P2[17] = hole8_P2;
+                    SwitchHoles_P2[18] = hole9_P2;
+
+                    break;
+                case 11:
+
+                    SwitchHoles_P1[1] = hole9_P1;
+                    SwitchHoles_P1[2] = hole10_P1;
+                    SwitchHoles_P1[3] = hole11_P1;
+                    SwitchHoles_P1[4] = hole12_P1;
+                    SwitchHoles_P1[5] = hole13_P1;
+                    SwitchHoles_P1[6] = hole14_P1;
+                    SwitchHoles_P1[7] = hole15_P1;
+                    SwitchHoles_P1[8] = hole16_P1;
+                    SwitchHoles_P1[9] = hole17_P1;
+                    SwitchHoles_P1[10] = hole18_P1;
+                    SwitchHoles_P1[11] = hole1_P1;
+                    SwitchHoles_P1[12] = hole2_P1;
+                    SwitchHoles_P1[13] = hole3_P1;
+                    SwitchHoles_P1[14] = hole4_P1;
+                    SwitchHoles_P1[15] = hole5_P1;
+                    SwitchHoles_P1[16] = hole6_P1;
+                    SwitchHoles_P1[17] = hole7_P1;
+                    SwitchHoles_P1[18] = hole8_P1;
+
+                    SwitchHoles_P2[1] = hole9_P2;
+                    SwitchHoles_P2[2] = hole10_P2;
+                    SwitchHoles_P2[3] = hole11_P2;
+                    SwitchHoles_P2[4] = hole12_P2;
+                    SwitchHoles_P2[5] = hole13_P2;
+                    SwitchHoles_P2[6] = hole14_P2;
+                    SwitchHoles_P2[7] = hole15_P2;
+                    SwitchHoles_P2[8] = hole16_P2;
+                    SwitchHoles_P2[9] = hole17_P2;
+                    SwitchHoles_P2[10] = hole18_P2;
+                    SwitchHoles_P2[11] = hole1_P2;
+                    SwitchHoles_P2[12] = hole2_P2;
+                    SwitchHoles_P2[13] = hole3_P2;
+                    SwitchHoles_P2[14] = hole4_P2;
+                    SwitchHoles_P2[15] = hole5_P2;
+                    SwitchHoles_P2[16] = hole6_P2;
+                    SwitchHoles_P2[17] = hole7_P2;
+                    SwitchHoles_P2[18] = hole8_P2;
+
+                    break;
+                case 12:
+
+                    SwitchHoles_P1[1] = hole8_P1;
+                    SwitchHoles_P1[2] = hole9_P1;
+                    SwitchHoles_P1[3] = hole10_P1;
+                    SwitchHoles_P1[4] = hole11_P1;
+                    SwitchHoles_P1[5] = hole12_P1;
+                    SwitchHoles_P1[6] = hole13_P1;
+                    SwitchHoles_P1[7] = hole14_P1;
+                    SwitchHoles_P1[8] = hole15_P1;
+                    SwitchHoles_P1[9] = hole16_P1;
+                    SwitchHoles_P1[10] = hole17_P1;
+                    SwitchHoles_P1[11] = hole18_P1;
+                    SwitchHoles_P1[12] = hole1_P1;
+                    SwitchHoles_P1[13] = hole2_P1;
+                    SwitchHoles_P1[14] = hole3_P1;
+                    SwitchHoles_P1[15] = hole4_P1;
+                    SwitchHoles_P1[16] = hole5_P1;
+                    SwitchHoles_P1[17] = hole6_P1;
+                    SwitchHoles_P1[18] = hole7_P1;
+
+                    SwitchHoles_P2[1] = hole8_P2;
+                    SwitchHoles_P2[2] = hole9_P2;
+                    SwitchHoles_P2[3] = hole10_P2;
+                    SwitchHoles_P2[4] = hole11_P2;
+                    SwitchHoles_P2[5] = hole12_P2;
+                    SwitchHoles_P2[6] = hole13_P2;
+                    SwitchHoles_P2[7] = hole14_P2;
+                    SwitchHoles_P2[8] = hole15_P2;
+                    SwitchHoles_P2[9] = hole16_P2;
+                    SwitchHoles_P2[10] = hole17_P2;
+                    SwitchHoles_P2[11] = hole18_P2;
+                    SwitchHoles_P2[12] = hole1_P2;
+                    SwitchHoles_P2[13] = hole2_P2;
+                    SwitchHoles_P2[14] = hole3_P2;
+                    SwitchHoles_P2[15] = hole4_P2;
+                    SwitchHoles_P2[16] = hole5_P2;
+                    SwitchHoles_P2[17] = hole6_P2;
+                    SwitchHoles_P2[18] = hole7_P2;
+
+                    break;
+                case 13:
+
+                    SwitchHoles_P1[1] = hole7_P1;
+                    SwitchHoles_P1[2] = hole8_P1;
+                    SwitchHoles_P1[3] = hole9_P1;
+                    SwitchHoles_P1[4] = hole10_P1;
+                    SwitchHoles_P1[5] = hole11_P1;
+                    SwitchHoles_P1[6] = hole12_P1;
+                    SwitchHoles_P1[7] = hole13_P1;
+                    SwitchHoles_P1[8] = hole14_P1;
+                    SwitchHoles_P1[9] = hole15_P1;
+                    SwitchHoles_P1[10] = hole16_P1;
+                    SwitchHoles_P1[11] = hole17_P1;
+                    SwitchHoles_P1[12] = hole18_P1;
+                    SwitchHoles_P1[13] = hole1_P1;
+                    SwitchHoles_P1[14] = hole2_P1;
+                    SwitchHoles_P1[15] = hole3_P1;
+                    SwitchHoles_P1[16] = hole4_P1;
+                    SwitchHoles_P1[17] = hole5_P1;
+                    SwitchHoles_P1[18] = hole6_P1;
+
+                    SwitchHoles_P2[1] = hole7_P2;
+                    SwitchHoles_P2[2] = hole8_P2;
+                    SwitchHoles_P2[3] = hole9_P2;
+                    SwitchHoles_P2[4] = hole10_P2;
+                    SwitchHoles_P2[5] = hole11_P2;
+                    SwitchHoles_P2[6] = hole12_P2;
+                    SwitchHoles_P2[7] = hole13_P2;
+                    SwitchHoles_P2[8] = hole14_P2;
+                    SwitchHoles_P2[9] = hole15_P2;
+                    SwitchHoles_P2[10] = hole16_P2;
+                    SwitchHoles_P2[11] = hole17_P2;
+                    SwitchHoles_P2[12] = hole18_P2;
+                    SwitchHoles_P2[13] = hole1_P2;
+                    SwitchHoles_P2[14] = hole2_P2;
+                    SwitchHoles_P2[15] = hole3_P2;
+                    SwitchHoles_P2[16] = hole4_P2;
+                    SwitchHoles_P2[17] = hole5_P2;
+                    SwitchHoles_P2[18] = hole6_P2;
+
+                    break;
+                case 14:
+
+                    SwitchHoles_P1[1] = hole6_P1;
+                    SwitchHoles_P1[2] = hole7_P1;
+                    SwitchHoles_P1[3] = hole8_P1;
+                    SwitchHoles_P1[4] = hole9_P1;
+                    SwitchHoles_P1[5] = hole10_P1;
+                    SwitchHoles_P1[6] = hole11_P1;
+                    SwitchHoles_P1[7] = hole12_P1;
+                    SwitchHoles_P1[8] = hole13_P1;
+                    SwitchHoles_P1[9] = hole14_P1;
+                    SwitchHoles_P1[10] = hole15_P1;
+                    SwitchHoles_P1[11] = hole16_P1;
+                    SwitchHoles_P1[12] = hole17_P1;
+                    SwitchHoles_P1[13] = hole18_P1;
+                    SwitchHoles_P1[14] = hole1_P1;
+                    SwitchHoles_P1[15] = hole2_P1;
+                    SwitchHoles_P1[16] = hole3_P1;
+                    SwitchHoles_P1[17] = hole4_P1;
+                    SwitchHoles_P1[18] = hole5_P1;
+
+                    SwitchHoles_P2[1] = hole6_P2;
+                    SwitchHoles_P2[2] = hole7_P2;
+                    SwitchHoles_P2[3] = hole8_P2;
+                    SwitchHoles_P2[4] = hole9_P2;
+                    SwitchHoles_P2[5] = hole10_P2;
+                    SwitchHoles_P2[6] = hole11_P2;
+                    SwitchHoles_P2[7] = hole12_P2;
+                    SwitchHoles_P2[8] = hole13_P2;
+                    SwitchHoles_P2[9] = hole14_P2;
+                    SwitchHoles_P2[10] = hole15_P2;
+                    SwitchHoles_P2[11] = hole16_P2;
+                    SwitchHoles_P2[12] = hole17_P2;
+                    SwitchHoles_P2[13] = hole18_P2;
+                    SwitchHoles_P2[14] = hole1_P2;
+                    SwitchHoles_P2[15] = hole2_P2;
+                    SwitchHoles_P2[16] = hole3_P2;
+                    SwitchHoles_P2[17] = hole4_P2;
+                    SwitchHoles_P2[18] = hole5_P2;
+
+                    break;
+                case 15:
+
+                    SwitchHoles_P1[1] = hole5_P1;
+                    SwitchHoles_P1[2] = hole6_P1;
+                    SwitchHoles_P1[3] = hole7_P1;
+                    SwitchHoles_P1[4] = hole8_P1;
+                    SwitchHoles_P1[5] = hole9_P1;
+                    SwitchHoles_P1[6] = hole10_P1;
+                    SwitchHoles_P1[7] = hole11_P1;
+                    SwitchHoles_P1[8] = hole12_P1;
+                    SwitchHoles_P1[9] = hole13_P1;
+                    SwitchHoles_P1[10] = hole14_P1;
+                    SwitchHoles_P1[11] = hole15_P1;
+                    SwitchHoles_P1[12] = hole16_P1;
+                    SwitchHoles_P1[13] = hole17_P1;
+                    SwitchHoles_P1[14] = hole18_P1;
+                    SwitchHoles_P1[15] = hole1_P1;
+                    SwitchHoles_P1[16] = hole2_P1;
+                    SwitchHoles_P1[17] = hole3_P1;
+                    SwitchHoles_P1[18] = hole4_P1;
+
+                    SwitchHoles_P2[1] = hole5_P2;
+                    SwitchHoles_P2[2] = hole6_P2;
+                    SwitchHoles_P2[3] = hole7_P2;
+                    SwitchHoles_P2[4] = hole8_P2;
+                    SwitchHoles_P2[5] = hole9_P2;
+                    SwitchHoles_P2[6] = hole10_P2;
+                    SwitchHoles_P2[7] = hole11_P2;
+                    SwitchHoles_P2[8] = hole12_P2;
+                    SwitchHoles_P2[9] = hole13_P2;
+                    SwitchHoles_P2[10] = hole14_P2;
+                    SwitchHoles_P2[11] = hole15_P2;
+                    SwitchHoles_P2[12] = hole16_P2;
+                    SwitchHoles_P2[13] = hole17_P2;
+                    SwitchHoles_P2[14] = hole18_P2;
+                    SwitchHoles_P2[15] = hole1_P2;
+                    SwitchHoles_P2[16] = hole2_P2;
+                    SwitchHoles_P2[17] = hole3_P2;
+                    SwitchHoles_P2[18] = hole4_P2;
+
+                    break;
+                case 16:
+
+                    SwitchHoles_P1[1] = hole4_P1;
+                    SwitchHoles_P1[2] = hole5_P1;
+                    SwitchHoles_P1[3] = hole6_P1;
+                    SwitchHoles_P1[4] = hole7_P1;
+                    SwitchHoles_P1[5] = hole8_P1;
+                    SwitchHoles_P1[6] = hole9_P1;
+                    SwitchHoles_P1[7] = hole10_P1;
+                    SwitchHoles_P1[8] = hole11_P1;
+                    SwitchHoles_P1[9] = hole12_P1;
+                    SwitchHoles_P1[10] = hole13_P1;
+                    SwitchHoles_P1[11] = hole14_P1;
+                    SwitchHoles_P1[12] = hole15_P1;
+                    SwitchHoles_P1[13] = hole16_P1;
+                    SwitchHoles_P1[14] = hole17_P1;
+                    SwitchHoles_P1[15] = hole18_P1;
+                    SwitchHoles_P1[16] = hole1_P1;
+                    SwitchHoles_P1[17] = hole2_P1;
+                    SwitchHoles_P1[18] = hole3_P1;
+
+                    SwitchHoles_P2[1] = hole4_P2;
+                    SwitchHoles_P2[2] = hole5_P2;
+                    SwitchHoles_P2[3] = hole6_P2;
+                    SwitchHoles_P2[4] = hole7_P2;
+                    SwitchHoles_P2[5] = hole8_P2;
+                    SwitchHoles_P2[6] = hole9_P2;
+                    SwitchHoles_P2[7] = hole10_P2;
+                    SwitchHoles_P2[8] = hole11_P2;
+                    SwitchHoles_P2[9] = hole12_P2;
+                    SwitchHoles_P2[10] = hole13_P2;
+                    SwitchHoles_P2[11] = hole14_P2;
+                    SwitchHoles_P2[12] = hole15_P2;
+                    SwitchHoles_P2[13] = hole16_P2;
+                    SwitchHoles_P2[14] = hole17_P2;
+                    SwitchHoles_P2[15] = hole18_P2;
+                    SwitchHoles_P2[16] = hole1_P2;
+                    SwitchHoles_P2[17] = hole2_P2;
+                    SwitchHoles_P2[18] = hole3_P2;
+
+                    break;
+                case 17:
+
+                    SwitchHoles_P1[1] = hole3_P1;
+                    SwitchHoles_P1[2] = hole4_P1;
+                    SwitchHoles_P1[3] = hole5_P1;
+                    SwitchHoles_P1[4] = hole6_P1;
+                    SwitchHoles_P1[5] = hole7_P1;
+                    SwitchHoles_P1[6] = hole8_P1;
+                    SwitchHoles_P1[7] = hole9_P1;
+                    SwitchHoles_P1[8] = hole10_P1;
+                    SwitchHoles_P1[9] = hole11_P1;
+                    SwitchHoles_P1[10] = hole12_P1;
+                    SwitchHoles_P1[11] = hole13_P1;
+                    SwitchHoles_P1[12] = hole14_P1;
+                    SwitchHoles_P1[13] = hole15_P1;
+                    SwitchHoles_P1[14] = hole16_P1;
+                    SwitchHoles_P1[15] = hole17_P1;
+                    SwitchHoles_P1[16] = hole18_P1;
+                    SwitchHoles_P1[17] = hole1_P1;
+                    SwitchHoles_P1[18] = hole2_P1;
+
+                    SwitchHoles_P2[1] = hole3_P2;
+                    SwitchHoles_P2[2] = hole4_P2;
+                    SwitchHoles_P2[3] = hole5_P2;
+                    SwitchHoles_P2[4] = hole6_P2;
+                    SwitchHoles_P2[5] = hole7_P2;
+                    SwitchHoles_P2[6] = hole8_P2;
+                    SwitchHoles_P2[7] = hole9_P2;
+                    SwitchHoles_P2[8] = hole10_P2;
+                    SwitchHoles_P2[9] = hole11_P2;
+                    SwitchHoles_P2[10] = hole12_P2;
+                    SwitchHoles_P2[11] = hole13_P2;
+                    SwitchHoles_P2[12] = hole14_P2;
+                    SwitchHoles_P2[13] = hole15_P2;
+                    SwitchHoles_P2[14] = hole16_P2;
+                    SwitchHoles_P2[15] = hole17_P2;
+                    SwitchHoles_P2[16] = hole18_P2;
+                    SwitchHoles_P2[17] = hole1_P2;
+                    SwitchHoles_P2[18] = hole2_P2;
+
+                    break;
+                case 18:
+
+                    SwitchHoles_P1[1] = hole2_P1;
+                    SwitchHoles_P1[2] = hole3_P1;
+                    SwitchHoles_P1[3] = hole4_P1;
+                    SwitchHoles_P1[4] = hole5_P1;
+                    SwitchHoles_P1[5] = hole6_P1;
+                    SwitchHoles_P1[6] = hole7_P1;
+                    SwitchHoles_P1[7] = hole8_P1;
+                    SwitchHoles_P1[8] = hole9_P1;
+                    SwitchHoles_P1[9] = hole10_P1;
+                    SwitchHoles_P1[10] = hole11_P1;
+                    SwitchHoles_P1[11] = hole12_P1;
+                    SwitchHoles_P1[12] = hole13_P1;
+                    SwitchHoles_P1[13] = hole14_P1;
+                    SwitchHoles_P1[14] = hole15_P1;
+                    SwitchHoles_P1[15] = hole16_P1;
+                    SwitchHoles_P1[16] = hole17_P1;
+                    SwitchHoles_P1[17] = hole18_P1;
+                    SwitchHoles_P1[18] = hole1_P1;
+
+                    SwitchHoles_P2[1] = hole2_P2;
+                    SwitchHoles_P2[2] = hole3_P2;
+                    SwitchHoles_P2[3] = hole4_P2;
+                    SwitchHoles_P2[4] = hole5_P2;
+                    SwitchHoles_P2[5] = hole6_P2;
+                    SwitchHoles_P2[6] = hole7_P2;
+                    SwitchHoles_P2[7] = hole8_P2;
+                    SwitchHoles_P2[8] = hole9_P2;
+                    SwitchHoles_P2[9] = hole10_P2;
+                    SwitchHoles_P2[10] = hole11_P2;
+                    SwitchHoles_P2[11] = hole12_P2;
+                    SwitchHoles_P2[12] = hole13_P2;
+                    SwitchHoles_P2[13] = hole14_P2;
+                    SwitchHoles_P2[14] = hole15_P2;
+                    SwitchHoles_P2[15] = hole16_P2;
+                    SwitchHoles_P2[16] = hole17_P2;
+                    SwitchHoles_P2[17] = hole18_P2;
+                    SwitchHoles_P2[18] = hole1_P2;
+
+                    break;
+                default:
+                    Console.WriteLine("Default case");
+                    break;
+            }
+
+            SwitchHoles[1] = SwitchHoles_P1[1];
+            SwitchHoles[2] = SwitchHoles_P1[2];
+            SwitchHoles[3] = SwitchHoles_P1[3];
+            SwitchHoles[4] = SwitchHoles_P1[4];
+            SwitchHoles[5] = SwitchHoles_P1[5];
+            SwitchHoles[6] = SwitchHoles_P1[6];
+            SwitchHoles[7] = SwitchHoles_P1[7];
+            SwitchHoles[8] = SwitchHoles_P1[8];
+            SwitchHoles[9] = SwitchHoles_P1[9];
+            SwitchHoles[10] = SwitchHoles_P1[10];
+            SwitchHoles[11] = SwitchHoles_P1[11];
+            SwitchHoles[12] = SwitchHoles_P1[12];
+            SwitchHoles[13] = SwitchHoles_P1[13];
+            SwitchHoles[14] = SwitchHoles_P1[14];
+            SwitchHoles[15] = SwitchHoles_P1[15];
+            SwitchHoles[16] = SwitchHoles_P1[16];
+            SwitchHoles[17] = SwitchHoles_P1[17];
+            SwitchHoles[18] = SwitchHoles_P1[18];
+
+            SwitchHoles[19] = SwitchHoles_P2[1];
+            SwitchHoles[20] = SwitchHoles_P2[2];
+            SwitchHoles[21] = SwitchHoles_P2[3];
+            SwitchHoles[22] = SwitchHoles_P2[4];
+            SwitchHoles[23] = SwitchHoles_P2[5];
+            SwitchHoles[24] = SwitchHoles_P2[6];
+            SwitchHoles[25] = SwitchHoles_P2[7];
+            SwitchHoles[26] = SwitchHoles_P2[8];
+            SwitchHoles[27] = SwitchHoles_P2[9];
+            SwitchHoles[28] = SwitchHoles_P2[10];
+            SwitchHoles[29] = SwitchHoles_P2[11];
+            SwitchHoles[30] = SwitchHoles_P2[12];
+            SwitchHoles[31] = SwitchHoles_P2[13];
+            SwitchHoles[32] = SwitchHoles_P2[14];
+            SwitchHoles[33] = SwitchHoles_P2[15];
+            SwitchHoles[34] = SwitchHoles_P2[16];
+            SwitchHoles[35] = SwitchHoles_P2[17];
+            SwitchHoles[36] = SwitchHoles_P2[18];
+
+            return SwitchHoles;
+        }
+
+
     }
+
 }

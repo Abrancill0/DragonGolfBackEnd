@@ -163,6 +163,7 @@ namespace DragonGolfBackEnd.Controllers
             public int GolpesVentaja18_tee { get; set; }
             public int ventaja { get; set; }
             public int SumaGolpesVentaja { get; set; }
+            public int initHole { get; set; }
 
         }
         public JObject Post(ParametrosEntradas Datos)
@@ -1391,7 +1392,8 @@ namespace DragonGolfBackEnd.Controllers
                                 Hoyo16Presion = Convert.ToString(row["Hoyo16Presion"]),
                                 Hoyo17Presion = Convert.ToString(row["Hoyo17Presion"]),
                                 Hoyo18Presion = Convert.ToString(row["Hoyo18Presion"]),
-                                SumaGolpesVentaja = SumaGolpesVentaja
+                                SumaGolpesVentaja = SumaGolpesVentaja,
+                                initHole = Convert.ToInt32(row["initHole"]),
 
                             };
 
