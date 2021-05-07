@@ -25,6 +25,7 @@ namespace DragonGolfBackEnd.Controllers
             public int IDBet { get; set; }
             public int IDRonda { get; set; }
             public int IDBetDetail { get; set; }
+            public string TypeHandicap { get; set; }
         }
 
         public class ParametrosSalida
