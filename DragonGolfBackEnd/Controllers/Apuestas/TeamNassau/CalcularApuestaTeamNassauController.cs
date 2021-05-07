@@ -238,6 +238,14 @@ namespace DragonGolfBackEnd.Controllers
                 int DificultatHoyo17 = 0;
                 int DificultatHoyo18 = 0;
                 int HoyoInicial = 0;
+
+                double HandicapP1 = 0;
+                double HandicapP2 = 0;
+                double HandicapP3 = 0;
+                double HandicapP4 = 0;
+
+                string TipoGolpesVentaja = "";
+
                 int Adv = 0;
 
                 string[] ResultFront = new string[9];
@@ -374,6 +382,13 @@ namespace DragonGolfBackEnd.Controllers
                         DificultatHoyo17 = Convert.ToInt32(row["DificultatHoyo17"]);//18
                         DificultatHoyo18 = Convert.ToInt32(row["DificultatHoyo18"]);//12
 
+                        TipoGolpesVentaja = Convert.ToString(row["TipoGolpesVentaja"]);
+
+                        HandicapP1 = Convert.ToDouble(row["HandicapP1"]);
+                        HandicapP2 = Convert.ToDouble(row["HandicapP2"]);
+                        HandicapP3 = Convert.ToDouble(row["HandicapP3"]);
+                        HandicapP4 = Convert.ToDouble(row["HandicapP4"]);
+
                         int Contador = 0;
 
                         int AdvInverso = (-1) * (Adv);
@@ -403,159 +418,694 @@ namespace DragonGolfBackEnd.Controllers
 
                                     if (DificultatHoyo1 == Contador)
                                     {
-                                        if (ScoreHole1_P1 > 0 && ScoreHole1_P2 > 0)
+                                        if (ScoreHole1_P1 > 0 && ScoreHole1_P2 > 0 && ScoreHole1_P3 > 0 && ScoreHole1_P4 > 0)
                                         {
-                                            ScoreHole1_P1 = ScoreHole1_P1 - 1;
+
+                                            if (TipoGolpesVentaja == "High")
+                                            {
+
+                                                if (HandicapP1 > HandicapP3)
+                                                {
+
+                                                    ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                }
+                                                else
+                                                {
+
+                                                    ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                }
+
+                                            }
+
+                                            if (TipoGolpesVentaja == "Low")
+                                            {
+
+                                                if (HandicapP1 < HandicapP3)
+                                                {
+                                                    ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                }
+                                                else
+                                                {
+                                                    ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                }
+
+
+                                            }
+
                                         }
 
                                     }
 
                                     if (DificultatHoyo2 == Contador)
                                     {
-                                        if (ScoreHole2_P1 > 0 && ScoreHole2_P2 > 0)
+                                        if (ScoreHole2_P1 > 0 && ScoreHole2_P2 > 0 && ScoreHole3_P3 > 0 && ScoreHole4_P4 > 0)
                                         {
-                                            ScoreHole2_P1 = ScoreHole2_P1 - 1;
+
+                                            if (TipoGolpesVentaja == "High")
+                                            {
+
+                                                if (HandicapP1 > HandicapP3)
+                                                {
+
+                                                    ScoreHole2_P1 = ScoreHole2_P1 - 1;
+                                                }
+                                                else
+                                                {
+
+                                                    ScoreHole2_P3 = ScoreHole2_P3 - 1;
+                                                }
+
+                                            }
+
+                                            if (TipoGolpesVentaja == "Low")
+                                            {
+
+                                                if (HandicapP1 < HandicapP3)
+                                                {
+                                                    ScoreHole2_P1 = ScoreHole2_P1 - 1;
+                                                }
+                                                else
+                                                {
+                                                    ScoreHole2_P3 = ScoreHole2_P3 - 1;
+                                                }
+
+
+                                            }
+
                                         }
 
                                     }
 
                                     if (DificultatHoyo3 == Contador)
                                     {
-                                        if (ScoreHole3_P1 > 0 && ScoreHole3_P2 > 0)
+                                        if (ScoreHole3_P1 > 0 && ScoreHole3_P2 > 0 && ScoreHole3_P3 > 0 && ScoreHole4_P4 > 0)
                                         {
                                             ScoreHole3_P1 = ScoreHole3_P1 - 1;
+
+                                            if (TipoGolpesVentaja == "High")
+                                            {
+
+                                                if (HandicapP1 > HandicapP3)
+                                                {
+
+                                                    ScoreHole3_P1 = ScoreHole3_P1 - 1;
+                                                }
+                                                else
+                                                {
+
+                                                    ScoreHole3_P3 = ScoreHole3_P3 - 1;
+                                                }
+
+                                            }
+
+                                            if (TipoGolpesVentaja == "Low")
+                                            {
+
+                                                if (HandicapP1 < HandicapP3)
+                                                {
+                                                    ScoreHole3_P1 = ScoreHole3_P1 - 1;
+                                                }
+                                                else
+                                                {
+                                                    ScoreHole3_P3 = ScoreHole3_P3 - 1;
+                                                }
+
+
+                                            }
+
+
                                         }
 
                                     }
 
                                     if (DificultatHoyo4 == Contador)
                                     {
-                                        if (ScoreHole4_P1 > 0 && ScoreHole4_P2 > 0)
+                                        if (ScoreHole4_P1 > 0 && ScoreHole4_P2 > 0 && ScoreHole4_P3 > 0 && ScoreHole4_P4 > 0)
                                         {
-                                            ScoreHole4_P1 = ScoreHole4_P1 - 1;
+
+                                            if (TipoGolpesVentaja == "High")
+                                            {
+
+                                                if (HandicapP1 > HandicapP3)
+                                                {
+
+                                                    ScoreHole4_P1 = ScoreHole4_P1 - 1;
+                                                }
+                                                else
+                                                {
+
+                                                    ScoreHole4_P3 = ScoreHole4_P3 - 1;
+                                                }
+
+                                            }
+
+                                            if (TipoGolpesVentaja == "Low")
+                                            {
+
+                                                if (HandicapP1 < HandicapP3)
+                                                {
+                                                    ScoreHole4_P1 = ScoreHole4_P1 - 1;
+                                                }
+                                                else
+                                                {
+                                                    ScoreHole4_P3 = ScoreHole4_P3 - 1;
+                                                }
+
+
+                                            }
                                         }
 
                                     }
 
                                     if (DificultatHoyo5 == Contador)
                                     {
-                                        if (ScoreHole5_P1 > 0 && ScoreHole5_P2 > 0)
+                                        if (ScoreHole5_P1 > 0 && ScoreHole5_P2 > 0 && ScoreHole5_P3 > 0 && ScoreHole5_P4 > 0)
                                         {
-                                            ScoreHole5_P1 = ScoreHole5_P1 - 1;
+                                            if (TipoGolpesVentaja == "High")
+                                            {
+
+                                                if (HandicapP1 > HandicapP3)
+                                                {
+
+                                                    ScoreHole5_P1 = ScoreHole5_P1 - 1;
+                                                }
+                                                else
+                                                {
+
+                                                    ScoreHole5_P3 = ScoreHole5_P3 - 1;
+                                                }
+
+                                            }
+
+                                            if (TipoGolpesVentaja == "Low")
+                                            {
+
+                                                if (HandicapP1 < HandicapP3)
+                                                {
+                                                    ScoreHole5_P1 = ScoreHole5_P1 - 1;
+                                                }
+                                                else
+                                                {
+                                                    ScoreHole5_P3 = ScoreHole5_P3 - 1;
+                                                }
+
+
+                                            }
+
                                         }
 
                                     }
 
                                     if (DificultatHoyo6 == Contador)
                                     {
-                                        if (ScoreHole6_P1 > 0 && ScoreHole6_P2 > 0)
+                                        if (ScoreHole6_P1 > 0 && ScoreHole6_P2 > 0 && ScoreHole5_P3 > 0 && ScoreHole5_P4 > 0)
                                         {
-                                            ScoreHole6_P1 = ScoreHole6_P1 - 1;
+
+                                            if (TipoGolpesVentaja == "High")
+                                            {
+
+                                                if (HandicapP1 > HandicapP3)
+                                                {
+
+                                                    ScoreHole6_P1 = ScoreHole6_P1 - 1;
+                                                }
+                                                else
+                                                {
+
+                                                    ScoreHole6_P3 = ScoreHole6_P3 - 1;
+                                                }
+
+                                            }
+
+                                            if (TipoGolpesVentaja == "Low")
+                                            {
+
+                                                if (HandicapP1 < HandicapP3)
+                                                {
+                                                    ScoreHole6_P1 = ScoreHole6_P1 - 1;
+                                                }
+                                                else
+                                                {
+                                                    ScoreHole6_P3 = ScoreHole6_P3 - 1;
+                                                }
+
+
+                                            }
                                         }
 
                                     }
 
                                     if (DificultatHoyo7 == Contador)
                                     {
-                                        if (ScoreHole7_P1 > 0 && ScoreHole7_P2 > 0)
+                                        if (ScoreHole7_P1 > 0 && ScoreHole7_P2 > 0 && ScoreHole7_P3 > 0 && ScoreHole7_P4 > 0)
                                         {
-                                            ScoreHole7_P1 = ScoreHole7_P1 - 1;
+
+                                            if (TipoGolpesVentaja == "High")
+                                            {
+
+                                                if (HandicapP1 > HandicapP3)
+                                                {
+
+                                                    ScoreHole7_P1 = ScoreHole7_P1 - 1;
+                                                }
+                                                else
+                                                {
+
+                                                    ScoreHole7_P3 = ScoreHole7_P3 - 1;
+                                                }
+
+                                            }
+
+                                            if (TipoGolpesVentaja == "Low")
+                                            {
+
+                                                if (HandicapP1 < HandicapP3)
+                                                {
+                                                    ScoreHole7_P1 = ScoreHole7_P1 - 1;
+                                                }
+                                                else
+                                                {
+                                                    ScoreHole7_P3 = ScoreHole7_P3 - 1;
+                                                }
+
+
+                                            }
+
                                         }
 
                                     }
 
                                     if (DificultatHoyo8 == Contador)
                                     {
-                                        if (ScoreHole8_P1 > 0 && ScoreHole8_P2 > 0)
+                                        if (ScoreHole8_P1 > 0 && ScoreHole8_P2 > 0 && ScoreHole8_P3 > 0 && ScoreHole8_P4 > 0)
                                         {
-                                            ScoreHole8_P1 = ScoreHole8_P1 - 1;
+
+                                            if (TipoGolpesVentaja == "High")
+                                            {
+
+                                                if (HandicapP1 > HandicapP3)
+                                                {
+
+                                                    ScoreHole8_P1 = ScoreHole8_P1 - 1;
+                                                }
+                                                else
+                                                {
+
+                                                    ScoreHole8_P3 = ScoreHole8_P3 - 1;
+                                                }
+
+                                            }
+
+                                            if (TipoGolpesVentaja == "Low")
+                                            {
+
+                                                if (HandicapP1 < HandicapP3)
+                                                {
+                                                    ScoreHole8_P1 = ScoreHole8_P1 - 1;
+                                                }
+                                                else
+                                                {
+                                                    ScoreHole8_P3 = ScoreHole8_P3 - 1;
+                                                }
+
+                                            }
+
+
                                         }
 
                                     }
 
                                     if (DificultatHoyo9 == Contador)
                                     {
-                                        if (ScoreHole9_P1 > 0 && ScoreHole9_P2 > 0)
+                                        if (ScoreHole9_P1 > 0 && ScoreHole9_P2 > 0 && ScoreHole9_P3 > 0 && ScoreHole9_P4 > 0)
                                         {
                                             ScoreHole9_P1 = ScoreHole9_P1 - 1;
+
+
+                                            if (TipoGolpesVentaja == "High")
+                                            {
+
+                                                if (HandicapP1 > HandicapP3)
+                                                {
+
+                                                    ScoreHole9_P1 = ScoreHole9_P1 - 1;
+                                                }
+                                                else
+                                                {
+
+                                                    ScoreHole9_P3 = ScoreHole9_P3 - 1;
+                                                }
+
+                                            }
+
+                                            if (TipoGolpesVentaja == "Low")
+                                            {
+
+                                                if (HandicapP1 < HandicapP3)
+                                                {
+                                                    ScoreHole9_P1 = ScoreHole9_P1 - 1;
+                                                }
+                                                else
+                                                {
+                                                    ScoreHole9_P3 = ScoreHole9_P3 - 1;
+                                                }
+
+                                            }
                                         }
 
                                     }
 
                                     if (DificultatHoyo10 == Contador)
                                     {
-                                        if (ScoreHole10_P1 > 0 && ScoreHole10_P2 > 0)
+                                        if (ScoreHole10_P1 > 0 && ScoreHole10_P2 > 0 && ScoreHole10_P3 > 0 && ScoreHole10_P4 > 0)
                                         {
-                                            ScoreHole10_P1 = ScoreHole10_P1 - 1;
+
+                                            if (TipoGolpesVentaja == "High")
+                                            {
+
+                                                if (HandicapP1 > HandicapP3)
+                                                {
+
+                                                    ScoreHole10_P1 = ScoreHole10_P1 - 1;
+                                                }
+                                                else
+                                                {
+
+                                                    ScoreHole10_P3 = ScoreHole10_P3 - 1;
+                                                }
+
+                                            }
+
+                                            if (TipoGolpesVentaja == "Low")
+                                            {
+
+                                                if (HandicapP1 < HandicapP3)
+                                                {
+                                                    ScoreHole10_P1 = ScoreHole10_P1 - 1;
+                                                }
+                                                else
+                                                {
+                                                    ScoreHole10_P3 = ScoreHole10_P3 - 1;
+                                                }
+
+                                            }
                                         }
 
                                     }
 
                                     if (DificultatHoyo11 == Contador)
                                     {
-                                        if (ScoreHole11_P1 > 0 && ScoreHole11_P2 > 0)
+                                        if (ScoreHole11_P1 > 0 && ScoreHole11_P2 > 0 && ScoreHole11_P3 > 0 && ScoreHole11_P4 > 0)
                                         {
-                                            ScoreHole11_P1 = ScoreHole11_P1 - 1;
+
+                                            if (TipoGolpesVentaja == "High")
+                                            {
+
+                                                if (HandicapP1 > HandicapP3)
+                                                {
+                                                    ScoreHole11_P1 = ScoreHole11_P1 - 1;
+                                                }
+                                                else
+                                                {
+                                                    ScoreHole11_P3 = ScoreHole11_P3 - 1;
+                                                }
+
+                                            }
+
+                                            if (TipoGolpesVentaja == "Low")
+                                            {
+
+                                                if (HandicapP1 < HandicapP3)
+                                                {
+                                                    ScoreHole11_P1 = ScoreHole11_P1 - 1;
+                                                }
+                                                else
+                                                {
+                                                    ScoreHole11_P3 = ScoreHole11_P3 - 1;
+                                                }
+
+                                            }
                                         }
 
                                     }
 
                                     if (DificultatHoyo12 == Contador)
                                     {
-                                        if (ScoreHole12_P1 > 0 && ScoreHole12_P2 > 0)
+                                        if (ScoreHole12_P1 > 0 && ScoreHole12_P2 > 0 && ScoreHole12_P3 > 0 && ScoreHole12_P4 > 0)
                                         {
-                                            ScoreHole12_P1 = ScoreHole12_P1 - 1;
+
+                                            if (TipoGolpesVentaja == "High")
+                                            {
+
+                                                if (HandicapP1 > HandicapP3)
+                                                {
+
+                                                    ScoreHole12_P1 = ScoreHole12_P1 - 1;
+                                                }
+                                                else
+                                                {
+
+                                                    ScoreHole12_P3 = ScoreHole12_P3 - 1;
+                                                }
+
+                                            }
+
+                                            if (TipoGolpesVentaja == "Low")
+                                            {
+
+                                                if (HandicapP1 < HandicapP3)
+                                                {
+                                                    ScoreHole12_P1 = ScoreHole12_P1 - 1;
+                                                }
+                                                else
+                                                {
+                                                    ScoreHole12_P3 = ScoreHole12_P3 - 1;
+                                                }
+
+                                            }
                                         }
 
                                     }
 
                                     if (DificultatHoyo13 == Contador)
                                     {
-                                        if (ScoreHole13_P1 > 0 && ScoreHole13_P2 > 0)
+                                        if (ScoreHole13_P1 > 0 && ScoreHole13_P2 > 0 && ScoreHole13_P3 > 0 && ScoreHole13_P4 > 0)
                                         {
-                                            ScoreHole13_P1 = ScoreHole13_P1 - 1;
+                                            if (TipoGolpesVentaja == "High")
+                                            {
+
+                                                if (HandicapP1 > HandicapP3)
+                                                {
+
+                                                    ScoreHole13_P1 = ScoreHole13_P1 - 1;
+                                                }
+                                                else
+                                                {
+
+                                                    ScoreHole13_P3 = ScoreHole13_P3 - 1;
+                                                }
+
+                                            }
+
+                                            if (TipoGolpesVentaja == "Low")
+                                            {
+
+                                                if (HandicapP1 < HandicapP3)
+                                                {
+                                                    ScoreHole13_P1 = ScoreHole13_P1 - 1;
+                                                }
+                                                else
+                                                {
+                                                    ScoreHole13_P3 = ScoreHole13_P3 - 1;
+                                                }
+
+                                            }
                                         }
 
                                     }
 
                                     if (DificultatHoyo14 == Contador)
                                     {
-                                        if (ScoreHole14_P1 > 0 && ScoreHole14_P2 > 0)
+                                        if (ScoreHole14_P1 > 0 && ScoreHole14_P2 > 0 && ScoreHole14_P3 > 0 && ScoreHole14_P4 > 0)
                                         {
-                                            ScoreHole14_P1 = ScoreHole14_P1 - 1;
+
+                                            if (TipoGolpesVentaja == "High")
+                                            {
+
+                                                if (HandicapP1 > HandicapP3)
+                                                {
+
+                                                    ScoreHole14_P1 = ScoreHole14_P1 - 1;
+                                                }
+                                                else
+                                                {
+
+                                                    ScoreHole14_P3 = ScoreHole14_P3 - 1;
+                                                }
+
+                                            }
+
+                                            if (TipoGolpesVentaja == "Low")
+                                            {
+
+                                                if (HandicapP1 < HandicapP3)
+                                                {
+                                                    ScoreHole14_P1 = ScoreHole14_P1 - 1;
+                                                }
+                                                else
+                                                {
+                                                    ScoreHole14_P3 = ScoreHole14_P3 - 1;
+                                                }
+
+                                            }
                                         }
 
                                     }
 
                                     if (DificultatHoyo15 == Contador)
                                     {
-                                        if (ScoreHole15_P1 > 0 && ScoreHole15_P2 > 0)
+                                        if (ScoreHole15_P1 > 0 && ScoreHole15_P2 > 0 && ScoreHole15_P3 > 0 && ScoreHole15_P4 > 0)
                                         {
-                                            ScoreHole15_P1 = ScoreHole15_P1 - 1;
+
+                                            if (TipoGolpesVentaja == "High")
+                                            {
+
+                                                if (HandicapP1 > HandicapP3)
+                                                {
+
+                                                    ScoreHole15_P1 = ScoreHole15_P1 - 1;
+                                                }
+                                                else
+                                                {
+
+                                                    ScoreHole15_P3 = ScoreHole15_P3 - 1;
+                                                }
+
+                                            }
+
+                                            if (TipoGolpesVentaja == "Low")
+                                            {
+
+                                                if (HandicapP1 < HandicapP3)
+                                                {
+                                                    ScoreHole15_P1 = ScoreHole15_P1 - 1;
+                                                }
+                                                else
+                                                {
+                                                    ScoreHole15_P3 = ScoreHole15_P3 - 1;
+                                                }
+
+                                            }
                                         }
                                     }
 
                                     if (DificultatHoyo16 == Contador)
                                     {
-                                        if (ScoreHole16_P1 > 0 && ScoreHole16_P2 > 0)
+                                        if (ScoreHole16_P1 > 0 && ScoreHole16_P2 > 0 && ScoreHole16_P3 > 0 && ScoreHole16_P4 > 0)
                                         {
-                                            ScoreHole16_P1 = ScoreHole16_P1 - 1;
+
+                                            if (TipoGolpesVentaja == "High")
+                                            {
+
+                                                if (HandicapP1 > HandicapP3)
+                                                {
+
+                                                    ScoreHole16_P1 = ScoreHole16_P1 - 1;
+                                                }
+                                                else
+                                                {
+
+                                                    ScoreHole16_P3 = ScoreHole16_P3 - 1;
+                                                }
+
+                                            }
+
+                                            if (TipoGolpesVentaja == "Low")
+                                            {
+
+                                                if (HandicapP1 < HandicapP3)
+                                                {
+                                                    ScoreHole16_P1 = ScoreHole16_P1 - 1;
+                                                }
+                                                else
+                                                {
+                                                    ScoreHole16_P3 = ScoreHole16_P3 - 1;
+                                                }
+
+                                            }
                                         }
                                     }
 
                                     if (DificultatHoyo17 == Contador)
                                     {
-                                        if (ScoreHole17_P1 > 0 && ScoreHole17_P2 > 0)
+                                        if (ScoreHole17_P1 > 0 && ScoreHole17_P2 > 0 && ScoreHole17_P3 > 0 && ScoreHole17_P4 > 0)
                                         {
-                                            ScoreHole17_P1 = ScoreHole17_P1 - 1;
+                                            if (TipoGolpesVentaja == "High")
+                                            {
+
+                                                if (HandicapP1 > HandicapP3)
+                                                {
+
+                                                    ScoreHole17_P1 = ScoreHole17_P1 - 1;
+                                                }
+                                                else
+                                                {
+
+                                                    ScoreHole17_P3 = ScoreHole17_P3 - 1;
+                                                }
+
+                                            }
+
+                                            if (TipoGolpesVentaja == "Low")
+                                            {
+
+                                                if (HandicapP1 < HandicapP3)
+                                                {
+                                                    ScoreHole17_P1 = ScoreHole17_P1 - 1;
+                                                }
+                                                else
+                                                {
+                                                    ScoreHole17_P3 = ScoreHole17_P3 - 1;
+                                                }
+
+                                            }
                                         }
                                     }
 
                                     if (DificultatHoyo18 == Contador)
                                     {
-                                        if (ScoreHole18_P1 > 0 && ScoreHole18_P2 > 0)
+                                        if (ScoreHole18_P1 > 0 && ScoreHole18_P2 > 0 && ScoreHole18_P3 > 0 && ScoreHole18_P4 > 0)
                                         {
-                                            ScoreHole18_P1 = ScoreHole18_P1 - 1;
+
+                                            if (TipoGolpesVentaja == "High")
+                                            {
+
+                                                if (HandicapP1 > HandicapP3)
+                                                {
+
+                                                    ScoreHole18_P1 = ScoreHole18_P1 - 1;
+                                                }
+                                                else
+                                                {
+
+                                                    ScoreHole18_P3 = ScoreHole18_P3 - 1;
+                                                }
+
+                                            }
+
+                                            if (TipoGolpesVentaja == "Low")
+                                            {
+
+                                                if (HandicapP1 < HandicapP3)
+                                                {
+                                                    ScoreHole18_P1 = ScoreHole18_P1 - 1;
+                                                }
+                                                else
+                                                {
+                                                    ScoreHole18_P3 = ScoreHole18_P3 - 1;
+                                                }
+
+                                            }
                                         }
                                     }
 
@@ -592,9 +1142,40 @@ namespace DragonGolfBackEnd.Controllers
                                     if (DificultatHoyo1 == Contador)
                                     {
 
-                                        if (ScoreHole1_P2 > 0 && ScoreHole1_P1 > 0)
+                                        if (ScoreHole1_P2 > 0 && ScoreHole1_P1 > 0 && ScoreHole1_P3 > 0 && ScoreHole1_P4 > 0)
                                         {
-                                            ScoreHole1_P2 = ScoreHole1_P2 - 1;
+
+                                            if (TipoGolpesVentaja == "High")
+                                            {
+                                                if (HandicapP2 > HandicapP4)
+                                                {
+
+                                                    ScoreHole1_P2 = ScoreHole1_P2 - 1;
+                                                }
+                                                else
+                                                {
+
+                                                    ScoreHole1_P4 = ScoreHole1_P4 - 1;
+                                                }
+
+                                            }
+
+                                            if (TipoGolpesVentaja == "Low")
+                                            {
+
+                                                if (HandicapP2 < HandicapP4)
+                                                {
+                                                    ScoreHole1_P2 = ScoreHole1_P4 - 1;
+                                                }
+                                                else
+                                                {
+                                                    ScoreHole1_P2 = ScoreHole1_P4 - 1;
+                                                }
+
+
+                                            }
+
+
                                         }
 
 
@@ -602,157 +1183,654 @@ namespace DragonGolfBackEnd.Controllers
 
                                     if (DificultatHoyo2 == Contador)
                                     {
-                                        if (ScoreHole2_P2 > 0 && ScoreHole2_P1 > 0)
+                                        if (ScoreHole2_P2 > 0 && ScoreHole2_P1 > 0 && ScoreHole2_P3 > 0 && ScoreHole2_P4 > 0)
                                         {
-                                            ScoreHole2_P2 = ScoreHole2_P2 - 1;
+                                            
+                                            if (TipoGolpesVentaja == "High")
+                                            {
+                                                if (HandicapP2 > HandicapP4)
+                                                {
+
+                                                    ScoreHole2_P2 = ScoreHole2_P2 - 1;
+                                                }
+                                                else
+                                                {
+
+                                                    ScoreHole2_P4 = ScoreHole2_P4 - 1;
+                                                }
+
+                                            }
+
+                                            if (TipoGolpesVentaja == "Low")
+                                            {
+
+                                                if (HandicapP2 < HandicapP4)
+                                                {
+                                                    ScoreHole2_P2 = ScoreHole2_P4 - 1;
+                                                }
+                                                else
+                                                {
+                                                    ScoreHole2_P2 = ScoreHole2_P4 - 1;
+                                                }
+
+
+                                            }
                                         }
 
                                     }
 
                                     if (DificultatHoyo3 == Contador)
                                     {
-                                        if (ScoreHole3_P2 > 0 && ScoreHole3_P1 > 0)
+                                        if (ScoreHole3_P2 > 0 && ScoreHole3_P1 > 0 && ScoreHole3_P3 > 0 && ScoreHole3_P4 > 0)
                                         {
-                                            ScoreHole3_P2 = ScoreHole3_P2 - 1;
+                                           
+                                            if (TipoGolpesVentaja == "High")
+                                            {
+                                                if (HandicapP2 > HandicapP4)
+                                                {
+
+                                                    ScoreHole3_P2 = ScoreHole3_P2 - 1;
+                                                }
+                                                else
+                                                {
+
+                                                    ScoreHole3_P4 = ScoreHole3_P4 - 1;
+                                                }
+
+                                            }
+
+                                            if (TipoGolpesVentaja == "Low")
+                                            {
+
+                                                if (HandicapP2 < HandicapP4)
+                                                {
+                                                    ScoreHole3_P2 = ScoreHole3_P4 - 1;
+                                                }
+                                                else
+                                                {
+                                                    ScoreHole3_P2 = ScoreHole3_P4 - 1;
+                                                }
+
+                                            }
                                         }
 
                                     }
 
                                     if (DificultatHoyo4 == Contador)
                                     {
-                                        if (ScoreHole4_P2 > 0 && ScoreHole4_P1 > 0)
+                                        if (ScoreHole4_P2 > 0 && ScoreHole4_P1 > 0 && ScoreHole4_P3 > 0 && ScoreHole4_P4 > 0)
                                         {
-                                            ScoreHole4_P2 = ScoreHole4_P2 - 1;
+                                           
+                                            if (TipoGolpesVentaja == "High")
+                                            {
+                                                if (HandicapP2 > HandicapP4)
+                                                {
+
+                                                    ScoreHole4_P2 = ScoreHole4_P2 - 1;
+                                                }
+                                                else
+                                                {
+
+                                                    ScoreHole4_P4 = ScoreHole4_P4 - 1;
+                                                }
+
+                                            }
+
+                                            if (TipoGolpesVentaja == "Low")
+                                            {
+
+                                                if (HandicapP2 < HandicapP4)
+                                                {
+                                                    ScoreHole4_P2 = ScoreHole4_P4 - 1;
+                                                }
+                                                else
+                                                {
+                                                    ScoreHole4_P2 = ScoreHole4_P4 - 1;
+                                                }
+
+
+                                            }
                                         }
 
                                     }
 
                                     if (DificultatHoyo5 == Contador)
                                     {
-                                        if (ScoreHole5_P2 > 0 && ScoreHole5_P1 > 0)
+                                        if (ScoreHole5_P2 > 0 && ScoreHole5_P1 > 0 && ScoreHole5_P3 > 0 && ScoreHole5_P4 > 0)
                                         {
-                                            ScoreHole5_P2 = ScoreHole5_P2 - 1;
+                                           
+                                            if (TipoGolpesVentaja == "High")
+                                            {
+                                                if (HandicapP2 > HandicapP4)
+                                                {
+
+                                                    ScoreHole5_P2 = ScoreHole5_P2 - 1;
+                                                }
+                                                else
+                                                {
+
+                                                    ScoreHole5_P4 = ScoreHole5_P4 - 1;
+                                                }
+
+                                            }
+
+                                            if (TipoGolpesVentaja == "Low")
+                                            {
+
+                                                if (HandicapP2 < HandicapP4)
+                                                {
+                                                    ScoreHole5_P2 = ScoreHole5_P4 - 1;
+                                                }
+                                                else
+                                                {
+                                                    ScoreHole5_P2 = ScoreHole5_P4 - 1;
+                                                }
+
+
+                                            }
                                         }
 
                                     }
 
                                     if (DificultatHoyo6 == Contador)
                                     {
-                                        if (ScoreHole6_P2 > 0 && ScoreHole6_P1 > 0)
+                                        if (ScoreHole6_P2 > 0 && ScoreHole6_P1 > 0 && ScoreHole6_P3 > 0 && ScoreHole6_P4 > 0)
                                         {
-                                            ScoreHole6_P2 = ScoreHole6_P2 - 1;
+                                            
+                                            if (TipoGolpesVentaja == "High")
+                                            {
+                                                if (HandicapP2 > HandicapP4)
+                                                {
+
+                                                    ScoreHole6_P2 = ScoreHole6_P2 - 1;
+                                                }
+                                                else
+                                                {
+
+                                                    ScoreHole6_P4 = ScoreHole6_P4 - 1;
+                                                }
+
+                                            }
+
+                                            if (TipoGolpesVentaja == "Low")
+                                            {
+
+                                                if (HandicapP2 < HandicapP4)
+                                                {
+                                                    ScoreHole6_P2 = ScoreHole6_P4 - 1;
+                                                }
+                                                else
+                                                {
+                                                    ScoreHole6_P2 = ScoreHole6_P4 - 1;
+                                                }
+
+
+                                            }
                                         }
 
                                     }
 
                                     if (DificultatHoyo7 == Contador)
                                     {
-                                        if (ScoreHole7_P2 > 0 && ScoreHole7_P1 > 0)
+                                        if (ScoreHole7_P2 > 0 && ScoreHole7_P1 > 0 && ScoreHole7_P3 > 0 && ScoreHole7_P4 > 0)
                                         {
-                                            ScoreHole7_P2 = ScoreHole7_P2 - 1;
+
+
+                                            if (TipoGolpesVentaja == "High")
+                                            {
+                                                if (HandicapP2 > HandicapP4)
+                                                {
+
+                                                    ScoreHole7_P2 = ScoreHole7_P2 - 1;
+                                                }
+                                                else
+                                                {
+
+                                                    ScoreHole7_P4 = ScoreHole7_P4 - 1;
+                                                }
+
+                                            }
+
+                                            if (TipoGolpesVentaja == "Low")
+                                            {
+
+                                                if (HandicapP2 < HandicapP4)
+                                                {
+                                                    ScoreHole7_P2 = ScoreHole7_P4 - 1;
+                                                }
+                                                else
+                                                {
+                                                    ScoreHole7_P2 = ScoreHole7_P4 - 1;
+                                                }
+
+
+                                            }
                                         }
 
                                     }
 
                                     if (DificultatHoyo8 == Contador)
                                     {
-                                        if (ScoreHole8_P2 > 0 && ScoreHole8_P1 > 0)
+                                        if (ScoreHole8_P2 > 0 && ScoreHole8_P1 > 0 && ScoreHole8_P3 > 0 && ScoreHole8_P4 > 0)
                                         {
-                                            ScoreHole8_P2 = ScoreHole8_P2 - 1;
+                                            
+                                            if (TipoGolpesVentaja == "High")
+                                            {
+                                                if (HandicapP2 > HandicapP4)
+                                                {
+
+                                                    ScoreHole8_P2 = ScoreHole8_P2 - 1;
+                                                }
+                                                else
+                                                {
+
+                                                    ScoreHole8_P4 = ScoreHole8_P4 - 1;
+                                                }
+
+                                            }
+
+                                            if (TipoGolpesVentaja == "Low")
+                                            {
+
+                                                if (HandicapP2 < HandicapP4)
+                                                {
+                                                    ScoreHole8_P2 = ScoreHole8_P4 - 1;
+                                                }
+                                                else
+                                                {
+                                                    ScoreHole8_P2 = ScoreHole8_P4 - 1;
+                                                }
+
+
+                                            }
                                         }
 
                                     }
 
                                     if (DificultatHoyo9 == Contador)
                                     {
-                                        if (ScoreHole9_P2 > 0 && ScoreHole9_P1 > 0)
+                                        if (ScoreHole9_P2 > 0 && ScoreHole9_P1 > 0 && ScoreHole9_P3 > 0 && ScoreHole9_P4 > 0)
                                         {
-                                            ScoreHole9_P2 = ScoreHole9_P2 - 1;
+                                          
+                                            if (TipoGolpesVentaja == "High")
+                                            {
+                                                if (HandicapP2 > HandicapP4)
+                                                {
+
+                                                    ScoreHole9_P2 = ScoreHole9_P2 - 1;
+                                                }
+                                                else
+                                                {
+
+                                                    ScoreHole9_P4 = ScoreHole9_P4 - 1;
+                                                }
+
+                                            }
+
+                                            if (TipoGolpesVentaja == "Low")
+                                            {
+
+                                                if (HandicapP2 < HandicapP4)
+                                                {
+                                                    ScoreHole9_P2 = ScoreHole9_P4 - 1;
+                                                }
+                                                else
+                                                {
+                                                    ScoreHole9_P2 = ScoreHole9_P4 - 1;
+                                                }
+
+
+                                            }
                                         }
 
                                     }
 
                                     if (DificultatHoyo10 == Contador)
                                     {
-                                        if (ScoreHole10_P2 > 0 && ScoreHole10_P1 > 0)
+                                        if (ScoreHole10_P2 > 0 && ScoreHole10_P1 > 0 && ScoreHole10_P3 > 0 && ScoreHole10_P4 > 0)
                                         {
                                             ScoreHole10_P2 = ScoreHole10_P2 - 1;
+
+                                            if (TipoGolpesVentaja == "High")
+                                            {
+                                                if (HandicapP2 > HandicapP4)
+                                                {
+
+                                                    ScoreHole10_P2 = ScoreHole10_P2 - 1;
+                                                }
+                                                else
+                                                {
+
+                                                    ScoreHole10_P4 = ScoreHole10_P4 - 1;
+                                                }
+
+                                            }
+
+                                            if (TipoGolpesVentaja == "Low")
+                                            {
+
+                                                if (HandicapP2 < HandicapP4)
+                                                {
+                                                    ScoreHole10_P2 = ScoreHole10_P4 - 1;
+                                                }
+                                                else
+                                                {
+                                                    ScoreHole10_P2 = ScoreHole10_P4 - 1;
+                                                }
+
+
+                                            }
                                         }
 
                                     }
 
                                     if (DificultatHoyo11 == Contador)
                                     {
-                                        if (ScoreHole11_P2 > 0 && ScoreHole11_P1 > 0)
+                                        if (ScoreHole11_P2 > 0 && ScoreHole11_P1 > 0 && ScoreHole11_P3 > 0 && ScoreHole11_P4 > 0)
                                         {
                                             ScoreHole11_P2 = ScoreHole11_P2 - 1;
+
+
+                                            if (TipoGolpesVentaja == "High")
+                                            {
+                                                if (HandicapP2 > HandicapP4)
+                                                {
+
+                                                    ScoreHole11_P2 = ScoreHole11_P2 - 1;
+                                                }
+                                                else
+                                                {
+
+                                                    ScoreHole11_P4 = ScoreHole11_P4 - 1;
+                                                }
+
+                                            }
+
+                                            if (TipoGolpesVentaja == "Low")
+                                            {
+
+                                                if (HandicapP2 < HandicapP4)
+                                                {
+                                                    ScoreHole11_P2 = ScoreHole11_P4 - 1;
+                                                }
+                                                else
+                                                {
+                                                    ScoreHole11_P2 = ScoreHole11_P4 - 1;
+                                                }
+
+
+                                            }
+
                                         }
 
                                     }
 
                                     if (DificultatHoyo12 == Contador)
                                     {
-                                        if (ScoreHole12_P2 > 0 && ScoreHole12_P1 > 0)
+                                        if (ScoreHole12_P2 > 0 && ScoreHole12_P1 > 0 && ScoreHole12_P3 > 0 && ScoreHole12_P4 > 0)
                                         {
-                                            ScoreHole12_P2 = ScoreHole12_P2 - 1;
+                                            
+                                            if (TipoGolpesVentaja == "High")
+                                            {
+                                                if (HandicapP2 > HandicapP4)
+                                                {
+
+                                                    ScoreHole12_P2 = ScoreHole12_P2 - 1;
+                                                }
+                                                else
+                                                {
+
+                                                    ScoreHole12_P4 = ScoreHole12_P4 - 1;
+                                                }
+
+                                            }
+
+                                            if (TipoGolpesVentaja == "Low")
+                                            {
+
+                                                if (HandicapP2 < HandicapP4)
+                                                {
+                                                    ScoreHole12_P2 = ScoreHole12_P4 - 1;
+                                                }
+                                                else
+                                                {
+                                                    ScoreHole12_P2 = ScoreHole12_P4 - 1;
+                                                }
+
+
+                                            }
                                         }
 
                                     }
 
                                     if (DificultatHoyo13 == Contador)
                                     {
-                                        if (ScoreHole13_P2 > 0 && ScoreHole13_P1 > 0)
+                                        if (ScoreHole13_P2 > 0 && ScoreHole13_P1 > 0 && ScoreHole13_P3 > 0 && ScoreHole13_P4 > 0)
                                         {
-                                            ScoreHole13_P2 = ScoreHole13_P2 - 1;
+                                         
+                                       if (TipoGolpesVentaja == "High")
+                                            {
+                                                if (HandicapP2 > HandicapP4)
+                                                {
+
+                                                    ScoreHole13_P2 = ScoreHole13_P2 - 1;
+                                                }
+                                                else
+                                                {
+
+                                                    ScoreHole13_P4 = ScoreHole13_P4 - 1;
+                                                }
+
+                                            }
+
+                                            if (TipoGolpesVentaja == "Low")
+                                            {
+
+                                                if (HandicapP2 < HandicapP4)
+                                                {
+                                                    ScoreHole13_P2 = ScoreHole13_P4 - 1;
+                                                }
+                                                else
+                                                {
+                                                    ScoreHole13_P2 = ScoreHole13_P4 - 1;
+                                                }
+
+
+                                            }
                                         }
 
                                     }
 
                                     if (DificultatHoyo14 == Contador)
                                     {
-                                        if (ScoreHole14_P2 > 0 && ScoreHole14_P1 > 0)
+                                        if (ScoreHole14_P2 > 0 && ScoreHole14_P1 > 0 && ScoreHole14_P3 > 0 && ScoreHole14_P4 > 0)
                                         {
-                                            ScoreHole14_P2 = ScoreHole14_P2 - 1;
+                                            
+                                            if (TipoGolpesVentaja == "High")
+                                            {
+                                                if (HandicapP2 > HandicapP4)
+                                                {
+
+                                                    ScoreHole14_P2 = ScoreHole14_P2 - 1;
+                                                }
+                                                else
+                                                {
+
+                                                    ScoreHole14_P4 = ScoreHole14_P4 - 1;
+                                                }
+
+                                            }
+
+                                            if (TipoGolpesVentaja == "Low")
+                                            {
+
+                                                if (HandicapP2 < HandicapP4)
+                                                {
+                                                    ScoreHole14_P2 = ScoreHole14_P4 - 1;
+                                                }
+                                                else
+                                                {
+                                                    ScoreHole14_P2 = ScoreHole14_P4 - 1;
+                                                }
+
+
+                                            }
                                         }
 
                                     }
 
                                     if (DificultatHoyo15 == Contador)
                                     {
-                                        if (ScoreHole15_P2 > 0 && ScoreHole15_P1 > 0)
+                                        if (ScoreHole15_P2 > 0 && ScoreHole15_P1 > 0 && ScoreHole15_P3 > 0 && ScoreHole15_P4 > 0)
                                         {
-                                            ScoreHole15_P2 = ScoreHole15_P2 - 1;
+                                           
+                                            if (TipoGolpesVentaja == "High")
+                                            {
+                                                if (HandicapP2 > HandicapP4)
+                                                {
+
+                                                    ScoreHole15_P2 = ScoreHole15_P2 - 1;
+                                                }
+                                                else
+                                                {
+
+                                                    ScoreHole15_P4 = ScoreHole15_P4 - 1;
+                                                }
+
+                                            }
+
+                                            if (TipoGolpesVentaja == "Low")
+                                            {
+
+                                                if (HandicapP2 < HandicapP4)
+                                                {
+                                                    ScoreHole15_P2 = ScoreHole15_P4 - 1;
+                                                }
+                                                else
+                                                {
+                                                    ScoreHole15_P2 = ScoreHole15_P4 - 1;
+                                                }
+
+
+                                            }
                                         }
 
                                     }
 
                                     if (DificultatHoyo16 == Contador)
                                     {
-                                        if (ScoreHole16_P2 > 0 && ScoreHole16_P1 > 0)
+                                        if (ScoreHole16_P2 > 0 && ScoreHole16_P1 > 0 && ScoreHole16_P3 > 0 && ScoreHole16_P4 > 0)
                                         {
-                                            ScoreHole16_P2 = ScoreHole16_P2 - 1;
+                                           
+                                            if (TipoGolpesVentaja == "High")
+                                            {
+                                                if (HandicapP2 > HandicapP4)
+                                                {
+
+                                                    ScoreHole16_P2 = ScoreHole16_P2 - 1;
+                                                }
+                                                else
+                                                {
+
+                                                    ScoreHole16_P4 = ScoreHole16_P4 - 1;
+                                                }
+
+                                            }
+
+                                            if (TipoGolpesVentaja == "Low")
+                                            {
+
+                                                if (HandicapP2 < HandicapP4)
+                                                {
+                                                    ScoreHole16_P2 = ScoreHole16_P4 - 1;
+                                                }
+                                                else
+                                                {
+                                                    ScoreHole16_P2 = ScoreHole16_P4 - 1;
+                                                }
+
+
+                                            }
                                         }
 
                                     }
 
                                     if (DificultatHoyo17 == Contador)
                                     {
-                                        if (ScoreHole17_P2 > 0 && ScoreHole17_P1 > 0)
+                                        if (ScoreHole17_P2 > 0 && ScoreHole17_P1 > 0 && ScoreHole17_P3 > 0 && ScoreHole17_P4 > 0)
                                         {
-                                            ScoreHole17_P2 = ScoreHole17_P2 - 1;
+                                          
+
+                                            if (TipoGolpesVentaja == "High")
+                                            {
+                                                if (HandicapP2 > HandicapP4)
+                                                {
+
+                                                    ScoreHole17_P2 = ScoreHole17_P2 - 1;
+                                                }
+                                                else
+                                                {
+
+                                                    ScoreHole17_P4 = ScoreHole17_P4 - 1;
+                                                }
+
+                                            }
+
+                                            if (TipoGolpesVentaja == "Low")
+                                            {
+
+                                                if (HandicapP2 < HandicapP4)
+                                                {
+                                                    ScoreHole17_P2 = ScoreHole17_P4 - 1;
+                                                }
+                                                else
+                                                {
+                                                    ScoreHole17_P2 = ScoreHole17_P4 - 1;
+                                                }
+
+
+                                            }
                                         }
 
                                     }
 
                                     if (DificultatHoyo18 == Contador)
                                     {
-                                        if (ScoreHole18_P2 > 0 && ScoreHole18_P1 > 0)
+                                        if (ScoreHole18_P2 > 0 && ScoreHole18_P1 > 0 && ScoreHole18_P3 > 0 && ScoreHole18_P4 > 0)
                                         {
-                                            ScoreHole18_P2 = ScoreHole18_P2 - 1;
+                                            
+                                            if (TipoGolpesVentaja == "High")
+                                            {
+                                                if (HandicapP2 > HandicapP4)
+                                                {
+
+                                                    ScoreHole18_P2 = ScoreHole18_P2 - 1;
+                                                }
+                                                else
+                                                {
+
+                                                    ScoreHole18_P4 = ScoreHole18_P4 - 1;
+                                                }
+
+                                            }
+
+                                            if (TipoGolpesVentaja == "Low")
+                                            {
+
+                                                if (HandicapP2 < HandicapP4)
+                                                {
+                                                    ScoreHole18_P2 = ScoreHole18_P4 - 1;
+                                                }
+                                                else
+                                                {
+                                                    ScoreHole18_P2 = ScoreHole18_P4 - 1;
+                                                }
+
+
+                                            }
                                         }
 
                                     }
-
 
                                 }
                                 else
@@ -849,23 +1927,83 @@ namespace DragonGolfBackEnd.Controllers
                         ScoreHole18_P4 = CambioHoyos[72];
                         //Termina cambio de hoyo
 
-                        int Resultado1 = 0;
-                        int Resultado2 = 0;
-                        int Resultado3 = 0;
-                        int Resultado4 = 0;
-                        int Resultado5 = 0;
-                        int Resultado6 = 0;
-                        int Resultado7 = 0;
-                        int Resultado8 = 0;
-                        int Resultado9 = 0;
+                        int Resultado1_H = 0;
+                        int Resultado2_H = 0;
+                        int Resultado3_H = 0;
+                        int Resultado4_H = 0;
+                        int Resultado5_H = 0;
+                        int Resultado6_H = 0;
+                        int Resultado7_H = 0;
+                        int Resultado8_H = 0;
+                        int Resultado9_H = 0;
+
+                        int Resultado1_L = 0;
+                        int Resultado2_L = 0;
+                        int Resultado3_L = 0;
+                        int Resultado4_L = 0;
+                        int Resultado5_L = 0;
+                        int Resultado6_L = 0;
+                        int Resultado7_L = 0;
+                        int Resultado8_L = 0;
+                        int Resultado9_L = 0;
 
                         int ValidaFront = 0;
 
-                        if (ScoreHole1_P1 > 0 && ScoreHole1_P2 > 0)
+                        if (ScoreHole1_P1 > 0 && ScoreHole1_P2 > 0 && ScoreHole1_P3 > 0 && ScoreHole1_P4 > 0)
                         {
                             if (ValidaFront == 0)
                             {
-                                Resultado1 = ScoreHole1_P2 - ScoreHole1_P1;
+                              
+                               // Resultado1 = ScoreHole1_P2 - ScoreHole1_P1;
+
+                                //Malo vs Malo 
+                                if (ScoreHole1_P1> ScoreHole1_P3)
+                                {
+                                    if (ScoreHole1_P2 > ScoreHole1_P4)
+                                    {
+                                        Resultado1_L = ScoreHole1_P2 - ScoreHole1_P1;
+                                    }
+                                    else
+                                    {
+                                        Resultado1_L = ScoreHole1_P4 - ScoreHole1_P1;
+                                    }
+                                }
+                                else
+                                {
+                                    if (ScoreHole1_P2 > ScoreHole1_P4)
+                                    {
+                                        Resultado1_L = ScoreHole1_P2 - ScoreHole1_P3;
+                                    }
+                                    else
+                                    {
+                                        Resultado1_L = ScoreHole1_P4 - ScoreHole1_P3;
+                                    }
+                                }
+
+                                //Bueno Vs Bueno
+                                if (ScoreHole1_P1 < ScoreHole1_P3)
+                                {
+                                    if (ScoreHole1_P2 < ScoreHole1_P4)
+                                    {
+                                        Resultado1_H = ScoreHole1_P4 - ScoreHole1_P3;
+                                    }
+                                    else
+                                    {
+                                        Resultado1_H = ScoreHole1_P3 - ScoreHole1_P3;
+                                    }
+                                }
+                                else
+                                {
+                                    if (ScoreHole1_P2 < ScoreHole1_P4)
+                                    {
+                                        Resultado1_H = ScoreHole1_P4 - ScoreHole1_P1;
+                                    }
+                                    else
+                                    {
+                                        Resultado1_H = ScoreHole1_P2 - ScoreHole1_P1;
+                                    }
+                                }
+
                             }
                         }
                         else
@@ -873,11 +2011,59 @@ namespace DragonGolfBackEnd.Controllers
                             ValidaFront = 1;
                         }
 
-                        if (ScoreHole2_P1 > 0 && ScoreHole2_P2 > 0)
+                        if (ScoreHole2_P1 > 0 && ScoreHole2_P2 > 0 && ScoreHole2_P3 > 0 && ScoreHole2_P4 > 0)
                         {
                             if (ValidaFront == 0)
                             {
-                                Resultado2 = ScoreHole2_P2 - ScoreHole2_P1;
+                               // Resultado2 = ScoreHole2_P2 - ScoreHole2_P1;
+
+                                if (ScoreHole2_P1 > ScoreHole2_P3)
+                                {
+                                    if (ScoreHole2_P2 > ScoreHole2_P4)
+                                    {
+                                        Resultado2_L = ScoreHole2_P2 - ScoreHole2_P1;
+                                    }
+                                    else
+                                    {
+                                        Resultado2_L = ScoreHole2_P4 - ScoreHole2_P1;
+                                    }
+                                }
+                                else
+                                {
+                                    if (ScoreHole2_P2 > ScoreHole2_P4)
+                                    {
+                                        Resultado2_L = ScoreHole2_P2 - ScoreHole2_P3;
+                                    }
+                                    else
+                                    {
+                                        Resultado2_L = ScoreHole2_P4 - ScoreHole2_P3;
+                                    }
+                                }
+
+                                //Bueno Vs Bueno
+                                if (ScoreHole2_P1 < ScoreHole2_P3)
+                                {
+                                    if (ScoreHole2_P2 < ScoreHole2_P4)
+                                    {
+                                        Resultado2_H = ScoreHole2_P4 - ScoreHole2_P3;
+                                    }
+                                    else
+                                    {
+                                        Resultado2_H = ScoreHole2_P3 - ScoreHole2_P3;
+                                    }
+                                }
+                                else
+                                {
+                                    if (ScoreHole2_P2 < ScoreHole2_P4)
+                                    {
+                                        Resultado2_H = ScoreHole2_P4 - ScoreHole2_P1;
+                                    }
+                                    else
+                                    {
+                                        Resultado2_H = ScoreHole2_P2 - ScoreHole2_P1;
+                                    }
+                                }
+
                             }
                         }
                         else
@@ -885,11 +2071,59 @@ namespace DragonGolfBackEnd.Controllers
                             ValidaFront = 1;
                         }
 
-                        if (ScoreHole3_P1 > 0 && ScoreHole3_P2 > 0)
+                        if (ScoreHole3_P1 > 0 && ScoreHole3_P2 > 0 && ScoreHole3_P3 > 0 && ScoreHole3_P4 > 0)
                         {
                             if (ValidaFront == 0)
                             {
                                 Resultado3 = ScoreHole3_P2 - ScoreHole3_P1;
+
+
+                                if (ScoreHole2_P1 > ScoreHole2_P3)
+                                {
+                                    if (ScoreHole2_P2 > ScoreHole2_P4)
+                                    {
+                                        Resultado2_L = ScoreHole2_P2 - ScoreHole2_P1;
+                                    }
+                                    else
+                                    {
+                                        Resultado2_L = ScoreHole2_P4 - ScoreHole2_P1;
+                                    }
+                                }
+                                else
+                                {
+                                    if (ScoreHole2_P2 > ScoreHole2_P4)
+                                    {
+                                        Resultado2_L = ScoreHole2_P2 - ScoreHole2_P3;
+                                    }
+                                    else
+                                    {
+                                        Resultado2_L = ScoreHole2_P4 - ScoreHole2_P3;
+                                    }
+                                }
+
+                                //Bueno Vs Bueno
+                                if (ScoreHole2_P1 < ScoreHole2_P3)
+                                {
+                                    if (ScoreHole2_P2 < ScoreHole2_P4)
+                                    {
+                                        Resultado2_H = ScoreHole2_P4 - ScoreHole2_P3;
+                                    }
+                                    else
+                                    {
+                                        Resultado2_H = ScoreHole2_P3 - ScoreHole2_P3;
+                                    }
+                                }
+                                else
+                                {
+                                    if (ScoreHole2_P2 < ScoreHole2_P4)
+                                    {
+                                        Resultado2_H = ScoreHole2_P4 - ScoreHole2_P1;
+                                    }
+                                    else
+                                    {
+                                        Resultado2_H = ScoreHole2_P2 - ScoreHole2_P1;
+                                    }
+                                }
                             }
                         }
                         else
@@ -897,11 +2131,59 @@ namespace DragonGolfBackEnd.Controllers
                             ValidaFront = 1;
                         }
 
-                        if (ScoreHole4_P1 > 0 && ScoreHole4_P2 > 0)
+                        if (ScoreHole4_P1 > 0 && ScoreHole4_P2 > 0 && ScoreHole4_P3 > 0 && ScoreHole4_P4 > 0)
                         {
                             if (ValidaFront == 0)
                             {
                                 Resultado4 = ScoreHole4_P2 - ScoreHole4_P1;
+
+
+                                if (ScoreHole2_P1 > ScoreHole2_P3)
+                                {
+                                    if (ScoreHole2_P2 > ScoreHole2_P4)
+                                    {
+                                        Resultado2_L = ScoreHole2_P2 - ScoreHole2_P1;
+                                    }
+                                    else
+                                    {
+                                        Resultado2_L = ScoreHole2_P4 - ScoreHole2_P1;
+                                    }
+                                }
+                                else
+                                {
+                                    if (ScoreHole2_P2 > ScoreHole2_P4)
+                                    {
+                                        Resultado2_L = ScoreHole2_P2 - ScoreHole2_P3;
+                                    }
+                                    else
+                                    {
+                                        Resultado2_L = ScoreHole2_P4 - ScoreHole2_P3;
+                                    }
+                                }
+
+                                //Bueno Vs Bueno
+                                if (ScoreHole2_P1 < ScoreHole2_P3)
+                                {
+                                    if (ScoreHole2_P2 < ScoreHole2_P4)
+                                    {
+                                        Resultado2_H = ScoreHole2_P4 - ScoreHole2_P3;
+                                    }
+                                    else
+                                    {
+                                        Resultado2_H = ScoreHole2_P3 - ScoreHole2_P3;
+                                    }
+                                }
+                                else
+                                {
+                                    if (ScoreHole2_P2 < ScoreHole2_P4)
+                                    {
+                                        Resultado2_H = ScoreHole2_P4 - ScoreHole2_P1;
+                                    }
+                                    else
+                                    {
+                                        Resultado2_H = ScoreHole2_P2 - ScoreHole2_P1;
+                                    }
+                                }
                             }
                         }
                         else
@@ -909,11 +2191,59 @@ namespace DragonGolfBackEnd.Controllers
                             ValidaFront = 1;
                         }
 
-                        if (ScoreHole5_P1 > 0 && ScoreHole5_P2 > 0)
+                        if (ScoreHole5_P1 > 0 && ScoreHole5_P2 > 0 && ScoreHole5_P3 > 0 && ScoreHole5_P4 > 0)
                         {
                             if (ValidaFront == 0)
                             {
                                 Resultado5 = ScoreHole5_P2 - ScoreHole5_P1;
+
+
+                                if (ScoreHole2_P1 > ScoreHole2_P3)
+                                {
+                                    if (ScoreHole2_P2 > ScoreHole2_P4)
+                                    {
+                                        Resultado2_L = ScoreHole2_P2 - ScoreHole2_P1;
+                                    }
+                                    else
+                                    {
+                                        Resultado2_L = ScoreHole2_P4 - ScoreHole2_P1;
+                                    }
+                                }
+                                else
+                                {
+                                    if (ScoreHole2_P2 > ScoreHole2_P4)
+                                    {
+                                        Resultado2_L = ScoreHole2_P2 - ScoreHole2_P3;
+                                    }
+                                    else
+                                    {
+                                        Resultado2_L = ScoreHole2_P4 - ScoreHole2_P3;
+                                    }
+                                }
+
+                                //Bueno Vs Bueno
+                                if (ScoreHole2_P1 < ScoreHole2_P3)
+                                {
+                                    if (ScoreHole2_P2 < ScoreHole2_P4)
+                                    {
+                                        Resultado2_H = ScoreHole2_P4 - ScoreHole2_P3;
+                                    }
+                                    else
+                                    {
+                                        Resultado2_H = ScoreHole2_P3 - ScoreHole2_P3;
+                                    }
+                                }
+                                else
+                                {
+                                    if (ScoreHole2_P2 < ScoreHole2_P4)
+                                    {
+                                        Resultado2_H = ScoreHole2_P4 - ScoreHole2_P1;
+                                    }
+                                    else
+                                    {
+                                        Resultado2_H = ScoreHole2_P2 - ScoreHole2_P1;
+                                    }
+                                }
                             }
                         }
                         else
@@ -921,11 +2251,59 @@ namespace DragonGolfBackEnd.Controllers
                             ValidaFront = 1;
                         }
 
-                        if (ScoreHole6_P1 > 0 && ScoreHole6_P2 > 0)
+                        if (ScoreHole6_P1 > 0 && ScoreHole6_P2 > 0 && ScoreHole6_P3 > 0 && ScoreHole6_P4 > 0)
                         {
                             if (ValidaFront == 0)
                             {
                                 Resultado6 = ScoreHole6_P2 - ScoreHole6_P1;
+
+
+                                if (ScoreHole2_P1 > ScoreHole2_P3)
+                                {
+                                    if (ScoreHole2_P2 > ScoreHole2_P4)
+                                    {
+                                        Resultado2_L = ScoreHole2_P2 - ScoreHole2_P1;
+                                    }
+                                    else
+                                    {
+                                        Resultado2_L = ScoreHole2_P4 - ScoreHole2_P1;
+                                    }
+                                }
+                                else
+                                {
+                                    if (ScoreHole2_P2 > ScoreHole2_P4)
+                                    {
+                                        Resultado2_L = ScoreHole2_P2 - ScoreHole2_P3;
+                                    }
+                                    else
+                                    {
+                                        Resultado2_L = ScoreHole2_P4 - ScoreHole2_P3;
+                                    }
+                                }
+
+                                //Bueno Vs Bueno
+                                if (ScoreHole2_P1 < ScoreHole2_P3)
+                                {
+                                    if (ScoreHole2_P2 < ScoreHole2_P4)
+                                    {
+                                        Resultado2_H = ScoreHole2_P4 - ScoreHole2_P3;
+                                    }
+                                    else
+                                    {
+                                        Resultado2_H = ScoreHole2_P3 - ScoreHole2_P3;
+                                    }
+                                }
+                                else
+                                {
+                                    if (ScoreHole2_P2 < ScoreHole2_P4)
+                                    {
+                                        Resultado2_H = ScoreHole2_P4 - ScoreHole2_P1;
+                                    }
+                                    else
+                                    {
+                                        Resultado2_H = ScoreHole2_P2 - ScoreHole2_P1;
+                                    }
+                                }
                             }
                         }
                         else
@@ -933,11 +2311,59 @@ namespace DragonGolfBackEnd.Controllers
                             ValidaFront = 1;
                         }
 
-                        if (ScoreHole7_P1 > 0 && ScoreHole7_P2 > 0)
+                        if (ScoreHole7_P1 > 0 && ScoreHole7_P2 > 0 && ScoreHole7_P3 > 0 && ScoreHole7_P4 > 0)
                         {
                             if (ValidaFront == 0)
                             {
                                 Resultado7 = ScoreHole7_P2 - ScoreHole7_P1;
+
+
+                                if (ScoreHole2_P1 > ScoreHole2_P3)
+                                {
+                                    if (ScoreHole2_P2 > ScoreHole2_P4)
+                                    {
+                                        Resultado2_L = ScoreHole2_P2 - ScoreHole2_P1;
+                                    }
+                                    else
+                                    {
+                                        Resultado2_L = ScoreHole2_P4 - ScoreHole2_P1;
+                                    }
+                                }
+                                else
+                                {
+                                    if (ScoreHole2_P2 > ScoreHole2_P4)
+                                    {
+                                        Resultado2_L = ScoreHole2_P2 - ScoreHole2_P3;
+                                    }
+                                    else
+                                    {
+                                        Resultado2_L = ScoreHole2_P4 - ScoreHole2_P3;
+                                    }
+                                }
+
+                                //Bueno Vs Bueno
+                                if (ScoreHole2_P1 < ScoreHole2_P3)
+                                {
+                                    if (ScoreHole2_P2 < ScoreHole2_P4)
+                                    {
+                                        Resultado2_H = ScoreHole2_P4 - ScoreHole2_P3;
+                                    }
+                                    else
+                                    {
+                                        Resultado2_H = ScoreHole2_P3 - ScoreHole2_P3;
+                                    }
+                                }
+                                else
+                                {
+                                    if (ScoreHole2_P2 < ScoreHole2_P4)
+                                    {
+                                        Resultado2_H = ScoreHole2_P4 - ScoreHole2_P1;
+                                    }
+                                    else
+                                    {
+                                        Resultado2_H = ScoreHole2_P2 - ScoreHole2_P1;
+                                    }
+                                }
                             }
                         }
                         else
@@ -945,11 +2371,59 @@ namespace DragonGolfBackEnd.Controllers
                             ValidaFront = 1;
                         }
 
-                        if (ScoreHole8_P1 > 0 && ScoreHole8_P2 > 0)
+                        if (ScoreHole8_P1 > 0 && ScoreHole8_P2 > 0 && ScoreHole8_P3 > 0 && ScoreHole8_P4 > 0)
                         {
                             if (ValidaFront == 0)
                             {
                                 Resultado8 = ScoreHole8_P2 - ScoreHole8_P1;
+
+
+                                if (ScoreHole2_P1 > ScoreHole2_P3)
+                                {
+                                    if (ScoreHole2_P2 > ScoreHole2_P4)
+                                    {
+                                        Resultado2_L = ScoreHole2_P2 - ScoreHole2_P1;
+                                    }
+                                    else
+                                    {
+                                        Resultado2_L = ScoreHole2_P4 - ScoreHole2_P1;
+                                    }
+                                }
+                                else
+                                {
+                                    if (ScoreHole2_P2 > ScoreHole2_P4)
+                                    {
+                                        Resultado2_L = ScoreHole2_P2 - ScoreHole2_P3;
+                                    }
+                                    else
+                                    {
+                                        Resultado2_L = ScoreHole2_P4 - ScoreHole2_P3;
+                                    }
+                                }
+
+                                //Bueno Vs Bueno
+                                if (ScoreHole2_P1 < ScoreHole2_P3)
+                                {
+                                    if (ScoreHole2_P2 < ScoreHole2_P4)
+                                    {
+                                        Resultado2_H = ScoreHole2_P4 - ScoreHole2_P3;
+                                    }
+                                    else
+                                    {
+                                        Resultado2_H = ScoreHole2_P3 - ScoreHole2_P3;
+                                    }
+                                }
+                                else
+                                {
+                                    if (ScoreHole2_P2 < ScoreHole2_P4)
+                                    {
+                                        Resultado2_H = ScoreHole2_P4 - ScoreHole2_P1;
+                                    }
+                                    else
+                                    {
+                                        Resultado2_H = ScoreHole2_P2 - ScoreHole2_P1;
+                                    }
+                                }
                             }
                         }
                         else
@@ -957,13 +2431,65 @@ namespace DragonGolfBackEnd.Controllers
                             ValidaFront = 1;
                         }
 
-                        if (ScoreHole9_P1 > 0 && ScoreHole9_P2 > 0)
+                        if (ScoreHole9_P1 > 0 && ScoreHole9_P2 > 0 && ScoreHole9_P3 > 0 && ScoreHole9_P4 > 0)
                         {
                             if (ValidaFront == 0)
                             {
                                 Resultado9 = ScoreHole9_P2 - ScoreHole9_P1;
+
+
+                                if (ScoreHole2_P1 > ScoreHole2_P3)
+                                {
+                                    if (ScoreHole2_P2 > ScoreHole2_P4)
+                                    {
+                                        Resultado2_L = ScoreHole2_P2 - ScoreHole2_P1;
+                                    }
+                                    else
+                                    {
+                                        Resultado2_L = ScoreHole2_P4 - ScoreHole2_P1;
+                                    }
+                                }
+                                else
+                                {
+                                    if (ScoreHole2_P2 > ScoreHole2_P4)
+                                    {
+                                        Resultado2_L = ScoreHole2_P2 - ScoreHole2_P3;
+                                    }
+                                    else
+                                    {
+                                        Resultado2_L = ScoreHole2_P4 - ScoreHole2_P3;
+                                    }
+                                }
+
+                                //Bueno Vs Bueno
+                                if (ScoreHole2_P1 < ScoreHole2_P3)
+                                {
+                                    if (ScoreHole2_P2 < ScoreHole2_P4)
+                                    {
+                                        Resultado2_H = ScoreHole2_P4 - ScoreHole2_P3;
+                                    }
+                                    else
+                                    {
+                                        Resultado2_H = ScoreHole2_P3 - ScoreHole2_P3;
+                                    }
+                                }
+                                else
+                                {
+                                    if (ScoreHole2_P2 < ScoreHole2_P4)
+                                    {
+                                        Resultado2_H = ScoreHole2_P4 - ScoreHole2_P1;
+                                    }
+                                    else
+                                    {
+                                        Resultado2_H = ScoreHole2_P2 - ScoreHole2_P1;
+                                    }
+                                }
                             }
 
+                        }
+                        else
+                        {
+                            ValidaFront = 1;
                         }
 
 
@@ -4483,7 +6009,7 @@ namespace DragonGolfBackEnd.Controllers
         private int[] HoyoInicialCambio(int hole1_P1, int hole2_P1, int hole3_P1, int hole4_P1, int hole5_P1, int hole6_P1, int hole7_P1, int hole8_P1, int hole9_P1, int hole10_P1, int hole11_P1, int hole12_P1, int hole13_P1, int hole14_P1, int hole15_P1, int hole16_P1, int hole17_P1, int hole18_P1,
             int hole1_P2, int hole2_P2, int hole3_P2, int hole4_P2, int hole5_P2, int hole6_P2, int hole7_P2, int hole8_P2, int hole9_P2, int hole10_P2, int hole11_P2, int hole12_P2, int hole13_P2, int hole14_P2, int hole15_P2, int hole16_P2, int hole17_P2, int hole18_P2,
             int hole1_P3, int hole2_P3, int hole3_P3, int hole4_P3, int hole5_P3, int hole6_P3, int hole7_P3, int hole8_P3, int hole9_P3, int hole10_P3, int hole11_P3, int hole12_P3, int hole13_P3, int hole14_P3, int hole15_P3, int hole16_P3, int hole17_P3, int hole18_P3,
-            int hole1_P4, int hole2_P4, int hole3_P4, int hole4_P4, int hole5_P4, int hole6_P4, int hole7_P4, int hole8_P4, int hole9_P4, int hole10_P4, int hole11_P4, int hole12_P4, int hole13_P4, int hole14_P4, int hole15_P4, int hole16_P4, int hole17_P4, int hole18_P4,int HoyoInicial)
+            int hole1_P4, int hole2_P4, int hole3_P4, int hole4_P4, int hole5_P4, int hole6_P4, int hole7_P4, int hole8_P4, int hole9_P4, int hole10_P4, int hole11_P4, int hole12_P4, int hole13_P4, int hole14_P4, int hole15_P4, int hole16_P4, int hole17_P4, int hole18_P4, int HoyoInicial)
         {
 
             int[] SwitchHoles_P1 = new int[18];
