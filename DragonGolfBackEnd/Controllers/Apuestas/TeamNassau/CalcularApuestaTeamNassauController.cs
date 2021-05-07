@@ -155,6 +155,7 @@ namespace DragonGolfBackEnd.Controllers
                 int ScoreHole16_P1 = 0;
                 int ScoreHole17_P1 = 0;
                 int ScoreHole18_P1 = 0;
+
                 int ScoreHole1_P2 = 0;
                 int ScoreHole2_P2 = 0;
                 int ScoreHole3_P2 = 0;
@@ -192,7 +193,6 @@ namespace DragonGolfBackEnd.Controllers
                 int ScoreHole16_P3 = 0;
                 int ScoreHole17_P3 = 0;
                 int ScoreHole18_P3 = 0;
-
 
                 int ScoreHole1_P4 = 0;
                 int ScoreHole2_P4 = 0;
@@ -257,8 +257,8 @@ namespace DragonGolfBackEnd.Controllers
                         bool InicioPartida3 = Convert.ToBoolean(row["InicioPartida3"]);
                         bool InicioPartida4 = Convert.ToBoolean(row["InicioPartida4"]);
 
-
-                        if (InicioPartida1 == false && InicioPartida2 == false)
+                        if (InicioPartida1 == false && InicioPartida2 == false && InicioPartida3 == false
+                            && InicioPartida4 == false)
                         {
 
                             JObject Res1 = JObject.FromObject(new
@@ -764,10 +764,12 @@ namespace DragonGolfBackEnd.Controllers
                         }
 
                         //Cambio de hoyo
-                        int[] CambioHoyos = new int[36];
+                        int[] CambioHoyos = new int[72];
 
                         CambioHoyos = HoyoInicialCambio(ScoreHole1_P1, ScoreHole2_P1, ScoreHole3_P1, ScoreHole4_P1, ScoreHole5_P1, ScoreHole6_P1, ScoreHole7_P1, ScoreHole8_P1, ScoreHole9_P1, ScoreHole10_P1, ScoreHole11_P1, ScoreHole12_P1, ScoreHole13_P1, ScoreHole14_P1, ScoreHole15_P1, ScoreHole16_P1, ScoreHole17_P1, ScoreHole18_P1,
-                            ScoreHole1_P2, ScoreHole2_P2, ScoreHole3_P2, ScoreHole4_P2, ScoreHole5_P2, ScoreHole6_P2, ScoreHole7_P2, ScoreHole8_P2, ScoreHole9_P2, ScoreHole10_P2, ScoreHole11_P2, ScoreHole12_P2, ScoreHole13_P2, ScoreHole14_P2, ScoreHole15_P2, ScoreHole16_P2, ScoreHole17_P2, ScoreHole18_P2, HoyoInicial);
+                            ScoreHole1_P2, ScoreHole2_P2, ScoreHole3_P2, ScoreHole4_P2, ScoreHole5_P2, ScoreHole6_P2, ScoreHole7_P2, ScoreHole8_P2, ScoreHole9_P2, ScoreHole10_P2, ScoreHole11_P2, ScoreHole12_P2, ScoreHole13_P2, ScoreHole14_P2, ScoreHole15_P2, ScoreHole16_P2, ScoreHole17_P2, ScoreHole18_P2,
+                            ScoreHole1_P3, ScoreHole2_P3, ScoreHole3_P3, ScoreHole4_P3, ScoreHole5_P3, ScoreHole6_P3, ScoreHole7_P3, ScoreHole8_P3, ScoreHole9_P3, ScoreHole10_P3, ScoreHole11_P3, ScoreHole12_P3, ScoreHole13_P3, ScoreHole14_P3, ScoreHole15_P3, ScoreHole16_P3, ScoreHole17_P3, ScoreHole18_P3,
+                            ScoreHole1_P4, ScoreHole2_P4, ScoreHole3_P4, ScoreHole4_P4, ScoreHole5_P4, ScoreHole6_P4, ScoreHole7_P4, ScoreHole8_P4, ScoreHole9_P4, ScoreHole10_P4, ScoreHole11_P4, ScoreHole12_P4, ScoreHole13_P4, ScoreHole14_P4, ScoreHole15_P4, ScoreHole16_P4, ScoreHole17_P4, ScoreHole18_P4, HoyoInicial);
 
                         ScoreHole1_P1 = CambioHoyos[1];
                         ScoreHole2_P1 = CambioHoyos[2];
@@ -806,6 +808,44 @@ namespace DragonGolfBackEnd.Controllers
                         ScoreHole16_P2 = CambioHoyos[34];
                         ScoreHole17_P2 = CambioHoyos[35];
                         ScoreHole18_P2 = CambioHoyos[36];
+
+                        ScoreHole1_P3 = CambioHoyos[37];
+                        ScoreHole2_P3 = CambioHoyos[38];
+                        ScoreHole3_P3 = CambioHoyos[39];
+                        ScoreHole4_P3 = CambioHoyos[40];
+                        ScoreHole5_P3 = CambioHoyos[41];
+                        ScoreHole6_P3 = CambioHoyos[42];
+                        ScoreHole7_P3 = CambioHoyos[43];
+                        ScoreHole8_P3 = CambioHoyos[44];
+                        ScoreHole9_P3 = CambioHoyos[45];
+                        ScoreHole10_P3 = CambioHoyos[46];
+                        ScoreHole11_P3 = CambioHoyos[47];
+                        ScoreHole12_P3 = CambioHoyos[48];
+                        ScoreHole13_P3 = CambioHoyos[49];
+                        ScoreHole14_P3 = CambioHoyos[50];
+                        ScoreHole15_P3 = CambioHoyos[51];
+                        ScoreHole16_P3 = CambioHoyos[52];
+                        ScoreHole17_P3 = CambioHoyos[53];
+                        ScoreHole18_P3 = CambioHoyos[54];
+
+                        ScoreHole1_P4 = CambioHoyos[55];
+                        ScoreHole2_P4 = CambioHoyos[56];
+                        ScoreHole3_P4 = CambioHoyos[57];
+                        ScoreHole4_P4 = CambioHoyos[58];
+                        ScoreHole5_P4 = CambioHoyos[59];
+                        ScoreHole6_P4 = CambioHoyos[60];
+                        ScoreHole7_P4 = CambioHoyos[61];
+                        ScoreHole8_P4 = CambioHoyos[62];
+                        ScoreHole9_P4 = CambioHoyos[63];
+                        ScoreHole10_P4 = CambioHoyos[64];
+                        ScoreHole11_P4 = CambioHoyos[65];
+                        ScoreHole12_P4 = CambioHoyos[66];
+                        ScoreHole13_P4 = CambioHoyos[67];
+                        ScoreHole14_P4 = CambioHoyos[68];
+                        ScoreHole15_P4 = CambioHoyos[69];
+                        ScoreHole16_P4 = CambioHoyos[70];
+                        ScoreHole17_P4 = CambioHoyos[71];
+                        ScoreHole18_P4 = CambioHoyos[72];
                         //Termina cambio de hoyo
 
                         int Resultado1 = 0;
@@ -4440,11 +4480,15 @@ namespace DragonGolfBackEnd.Controllers
 
 
         private int[] HoyoInicialCambio(int hole1_P1, int hole2_P1, int hole3_P1, int hole4_P1, int hole5_P1, int hole6_P1, int hole7_P1, int hole8_P1, int hole9_P1, int hole10_P1, int hole11_P1, int hole12_P1, int hole13_P1, int hole14_P1, int hole15_P1, int hole16_P1, int hole17_P1, int hole18_P1,
-            int hole1_P2, int hole2_P2, int hole3_P2, int hole4_P2, int hole5_P2, int hole6_P2, int hole7_P2, int hole8_P2, int hole9_P2, int hole10_P2, int hole11_P2, int hole12_P2, int hole13_P2, int hole14_P2, int hole15_P2, int hole16_P2, int hole17_P2, int hole18_P2, int HoyoInicial)
+            int hole1_P2, int hole2_P2, int hole3_P2, int hole4_P2, int hole5_P2, int hole6_P2, int hole7_P2, int hole8_P2, int hole9_P2, int hole10_P2, int hole11_P2, int hole12_P2, int hole13_P2, int hole14_P2, int hole15_P2, int hole16_P2, int hole17_P2, int hole18_P2,
+            int hole1_P3, int hole2_P3, int hole3_P3, int hole4_P3, int hole5_P3, int hole6_P3, int hole7_P3, int hole8_P3, int hole9_P3, int hole10_P3, int hole11_P3, int hole12_P3, int hole13_P3, int hole14_P3, int hole15_P3, int hole16_P3, int hole17_P3, int hole18_P3,
+            int hole1_P4, int hole2_P4, int hole3_P4, int hole4_P4, int hole5_P4, int hole6_P4, int hole7_P4, int hole8_P4, int hole9_P4, int hole10_P4, int hole11_P4, int hole12_P4, int hole13_P4, int hole14_P4, int hole15_P4, int hole16_P4, int hole17_P4, int hole18_P4,int HoyoInicial)
         {
 
             int[] SwitchHoles_P1 = new int[18];
             int[] SwitchHoles_P2 = new int[18];
+            int[] SwitchHoles_P3 = new int[18];
+            int[] SwitchHoles_P4 = new int[18];
 
             int[] SwitchHoles = new int[36];
 
@@ -4452,7 +4496,7 @@ namespace DragonGolfBackEnd.Controllers
             switch (HoyoInicial)
             {
                 case 1:
-
+                    //OK
                     SwitchHoles_P1[1] = hole11_P1;
                     SwitchHoles_P1[2] = hole2_P1;
                     SwitchHoles_P1[3] = hole3_P1;
@@ -4491,9 +4535,48 @@ namespace DragonGolfBackEnd.Controllers
                     SwitchHoles_P2[17] = hole17_P2;
                     SwitchHoles_P2[18] = hole18_P2;
 
+                    SwitchHoles_P3[1] = hole1_P3;
+                    SwitchHoles_P3[2] = hole2_P3;
+                    SwitchHoles_P3[3] = hole3_P3;
+                    SwitchHoles_P3[4] = hole4_P3;
+                    SwitchHoles_P3[5] = hole5_P3;
+                    SwitchHoles_P3[6] = hole6_P3;
+                    SwitchHoles_P3[7] = hole7_P3;
+                    SwitchHoles_P3[8] = hole8_P3;
+                    SwitchHoles_P3[9] = hole9_P3;
+                    SwitchHoles_P3[10] = hole10_P3;
+                    SwitchHoles_P3[11] = hole11_P3;
+                    SwitchHoles_P3[12] = hole12_P3;
+                    SwitchHoles_P3[13] = hole13_P3;
+                    SwitchHoles_P3[14] = hole14_P3;
+                    SwitchHoles_P3[15] = hole15_P3;
+                    SwitchHoles_P3[16] = hole16_P3;
+                    SwitchHoles_P3[17] = hole17_P3;
+                    SwitchHoles_P3[18] = hole18_P3;
+
+                    SwitchHoles_P4[1] = hole1_P4;
+                    SwitchHoles_P4[2] = hole2_P4;
+                    SwitchHoles_P4[3] = hole3_P4;
+                    SwitchHoles_P4[4] = hole4_P4;
+                    SwitchHoles_P4[5] = hole5_P4;
+                    SwitchHoles_P4[6] = hole6_P4;
+                    SwitchHoles_P4[7] = hole7_P4;
+                    SwitchHoles_P4[8] = hole8_P4;
+                    SwitchHoles_P4[9] = hole9_P4;
+                    SwitchHoles_P4[10] = hole10_P4;
+                    SwitchHoles_P4[11] = hole11_P4;
+                    SwitchHoles_P4[12] = hole12_P4;
+                    SwitchHoles_P4[13] = hole13_P4;
+                    SwitchHoles_P4[14] = hole14_P4;
+                    SwitchHoles_P4[15] = hole15_P4;
+                    SwitchHoles_P4[16] = hole16_P4;
+                    SwitchHoles_P4[17] = hole17_P4;
+                    SwitchHoles_P4[18] = hole18_P4;
+
 
                     break;
                 case 2:
+                    //OK
                     SwitchHoles_P1[1] = hole18_P1;
                     SwitchHoles_P1[2] = hole1_P1;
                     SwitchHoles_P1[3] = hole2_P1;
@@ -4531,6 +4614,44 @@ namespace DragonGolfBackEnd.Controllers
                     SwitchHoles_P2[16] = hole15_P2;
                     SwitchHoles_P2[17] = hole16_P2;
                     SwitchHoles_P2[18] = hole17_P2;
+
+                    SwitchHoles_P3[1] = hole18_P3;
+                    SwitchHoles_P3[2] = hole1_P3;
+                    SwitchHoles_P3[3] = hole2_P3;
+                    SwitchHoles_P3[4] = hole3_P3;
+                    SwitchHoles_P3[5] = hole4_P3;
+                    SwitchHoles_P3[6] = hole5_P3;
+                    SwitchHoles_P3[7] = hole6_P3;
+                    SwitchHoles_P3[8] = hole7_P3;
+                    SwitchHoles_P3[9] = hole8_P3;
+                    SwitchHoles_P3[10] = hole9_P3;
+                    SwitchHoles_P3[11] = hole10_P3;
+                    SwitchHoles_P3[12] = hole11_P3;
+                    SwitchHoles_P3[13] = hole12_P3;
+                    SwitchHoles_P3[14] = hole13_P3;
+                    SwitchHoles_P3[15] = hole14_P3;
+                    SwitchHoles_P3[16] = hole15_P3;
+                    SwitchHoles_P3[17] = hole16_P3;
+                    SwitchHoles_P3[18] = hole17_P3;
+
+                    SwitchHoles_P4[1] = hole18_P4;
+                    SwitchHoles_P4[2] = hole1_P4;
+                    SwitchHoles_P4[3] = hole2_P4;
+                    SwitchHoles_P4[4] = hole3_P4;
+                    SwitchHoles_P4[5] = hole4_P4;
+                    SwitchHoles_P4[6] = hole5_P4;
+                    SwitchHoles_P4[7] = hole6_P4;
+                    SwitchHoles_P4[8] = hole7_P4;
+                    SwitchHoles_P4[9] = hole8_P4;
+                    SwitchHoles_P4[10] = hole9_P4;
+                    SwitchHoles_P4[11] = hole10_P4;
+                    SwitchHoles_P4[12] = hole11_P4;
+                    SwitchHoles_P4[13] = hole12_P4;
+                    SwitchHoles_P4[14] = hole13_P4;
+                    SwitchHoles_P4[15] = hole14_P4;
+                    SwitchHoles_P4[16] = hole15_P4;
+                    SwitchHoles_P4[17] = hole16_P4;
+                    SwitchHoles_P4[18] = hole17_P4;
 
                     break;
                 case 3:
@@ -4572,6 +4693,44 @@ namespace DragonGolfBackEnd.Controllers
                     SwitchHoles_P2[17] = hole15_P2;
                     SwitchHoles_P2[18] = hole16_P2;
 
+                    SwitchHoles_P3[1] = hole17_P3;
+                    SwitchHoles_P3[2] = hole18_P3;
+                    SwitchHoles_P3[3] = hole1_P3;
+                    SwitchHoles_P3[4] = hole2_P3;
+                    SwitchHoles_P3[5] = hole3_P3;
+                    SwitchHoles_P3[6] = hole4_P3;
+                    SwitchHoles_P3[7] = hole5_P3;
+                    SwitchHoles_P3[8] = hole6_P3;
+                    SwitchHoles_P3[9] = hole7_P3;
+                    SwitchHoles_P3[10] = hole8_P3;
+                    SwitchHoles_P3[11] = hole9_P3;
+                    SwitchHoles_P3[12] = hole10_P3;
+                    SwitchHoles_P3[13] = hole11_P3;
+                    SwitchHoles_P3[14] = hole12_P3;
+                    SwitchHoles_P3[15] = hole13_P3;
+                    SwitchHoles_P3[16] = hole14_P3;
+                    SwitchHoles_P3[17] = hole15_P3;
+                    SwitchHoles_P3[18] = hole16_P3;
+
+                    SwitchHoles_P4[1] = hole17_P4;
+                    SwitchHoles_P4[2] = hole18_P4;
+                    SwitchHoles_P4[3] = hole1_P4;
+                    SwitchHoles_P4[4] = hole2_P4;
+                    SwitchHoles_P4[5] = hole3_P4;
+                    SwitchHoles_P4[6] = hole4_P4;
+                    SwitchHoles_P4[7] = hole5_P4;
+                    SwitchHoles_P4[8] = hole6_P4;
+                    SwitchHoles_P4[9] = hole7_P4;
+                    SwitchHoles_P4[10] = hole8_P4;
+                    SwitchHoles_P4[11] = hole9_P4;
+                    SwitchHoles_P4[12] = hole10_P4;
+                    SwitchHoles_P4[13] = hole11_P4;
+                    SwitchHoles_P4[14] = hole12_P4;
+                    SwitchHoles_P4[15] = hole13_P4;
+                    SwitchHoles_P4[16] = hole14_P4;
+                    SwitchHoles_P4[17] = hole15_P4;
+                    SwitchHoles_P4[18] = hole16_P4;
+
                     break;
                 case 4:
                     SwitchHoles_P1[1] = hole16_P1;
@@ -4609,8 +4768,46 @@ namespace DragonGolfBackEnd.Controllers
                     SwitchHoles_P2[14] = hole11_P2;
                     SwitchHoles_P2[15] = hole12_P2;
                     SwitchHoles_P2[16] = hole13_P2;
-                    SwitchHoles_P2[17] = hole15_P2;
-                    SwitchHoles_P2[18] = hole16_P2;
+                    SwitchHoles_P2[17] = hole14_P2;
+                    SwitchHoles_P2[18] = hole15_P2;
+
+                    SwitchHoles_P3[1] = hole16_P3;
+                    SwitchHoles_P3[2] = hole17_P3;
+                    SwitchHoles_P3[3] = hole18_P3;
+                    SwitchHoles_P3[4] = hole1_P3;
+                    SwitchHoles_P3[5] = hole2_P3;
+                    SwitchHoles_P3[6] = hole3_P3;
+                    SwitchHoles_P3[7] = hole4_P3;
+                    SwitchHoles_P3[8] = hole5_P3;
+                    SwitchHoles_P3[9] = hole6_P3;
+                    SwitchHoles_P3[10] = hole7_P3;
+                    SwitchHoles_P3[11] = hole8_P3;
+                    SwitchHoles_P3[12] = hole9_P3;
+                    SwitchHoles_P3[13] = hole10_P3;
+                    SwitchHoles_P3[14] = hole11_P3;
+                    SwitchHoles_P3[15] = hole12_P3;
+                    SwitchHoles_P3[16] = hole13_P3;
+                    SwitchHoles_P3[17] = hole14_P3;
+                    SwitchHoles_P3[18] = hole15_P3;
+
+                    SwitchHoles_P4[1] = hole16_P4;
+                    SwitchHoles_P4[2] = hole17_P4;
+                    SwitchHoles_P4[3] = hole18_P4;
+                    SwitchHoles_P4[4] = hole1_P4;
+                    SwitchHoles_P4[5] = hole2_P4;
+                    SwitchHoles_P4[6] = hole3_P4;
+                    SwitchHoles_P4[7] = hole4_P4;
+                    SwitchHoles_P4[8] = hole5_P4;
+                    SwitchHoles_P4[9] = hole6_P4;
+                    SwitchHoles_P4[10] = hole7_P4;
+                    SwitchHoles_P4[11] = hole8_P4;
+                    SwitchHoles_P4[12] = hole9_P4;
+                    SwitchHoles_P4[13] = hole10_P4;
+                    SwitchHoles_P4[14] = hole11_P4;
+                    SwitchHoles_P4[15] = hole12_P4;
+                    SwitchHoles_P4[16] = hole13_P4;
+                    SwitchHoles_P4[17] = hole14_P4;
+                    SwitchHoles_P4[18] = hole15_P4;
 
                     break;
                 case 5:
@@ -4652,6 +4849,44 @@ namespace DragonGolfBackEnd.Controllers
                     SwitchHoles_P2[17] = hole13_P2;
                     SwitchHoles_P2[18] = hole14_P2;
 
+                    SwitchHoles_P3[1] = hole15_P3;
+                    SwitchHoles_P3[2] = hole16_P3;
+                    SwitchHoles_P3[3] = hole17_P3;
+                    SwitchHoles_P3[4] = hole18_P3;
+                    SwitchHoles_P3[5] = hole1_P3;
+                    SwitchHoles_P3[6] = hole2_P3;
+                    SwitchHoles_P3[7] = hole3_P3;
+                    SwitchHoles_P3[8] = hole4_P3;
+                    SwitchHoles_P3[9] = hole5_P3;
+                    SwitchHoles_P3[10] = hole6_P3;
+                    SwitchHoles_P3[11] = hole7_P3;
+                    SwitchHoles_P3[12] = hole8_P3;
+                    SwitchHoles_P3[13] = hole9_P3;
+                    SwitchHoles_P3[14] = hole10_P3;
+                    SwitchHoles_P3[15] = hole11_P3;
+                    SwitchHoles_P3[16] = hole12_P3;
+                    SwitchHoles_P3[17] = hole13_P3;
+                    SwitchHoles_P3[18] = hole14_P3;
+
+                    SwitchHoles_P4[1] = hole15_P4;
+                    SwitchHoles_P4[2] = hole16_P4;
+                    SwitchHoles_P4[3] = hole17_P4;
+                    SwitchHoles_P4[4] = hole18_P4;
+                    SwitchHoles_P4[5] = hole1_P4;
+                    SwitchHoles_P4[6] = hole2_P4;
+                    SwitchHoles_P4[7] = hole3_P4;
+                    SwitchHoles_P4[8] = hole4_P4;
+                    SwitchHoles_P4[9] = hole5_P4;
+                    SwitchHoles_P4[10] = hole6_P4;
+                    SwitchHoles_P4[11] = hole7_P4;
+                    SwitchHoles_P4[12] = hole8_P4;
+                    SwitchHoles_P4[13] = hole9_P4;
+                    SwitchHoles_P4[14] = hole10_P4;
+                    SwitchHoles_P4[15] = hole11_P4;
+                    SwitchHoles_P4[16] = hole12_P4;
+                    SwitchHoles_P4[17] = hole13_P4;
+                    SwitchHoles_P4[18] = hole14_P4;
+
                     break;
                 case 6:
                     SwitchHoles_P1[1] = hole14_P1;
@@ -4691,6 +4926,45 @@ namespace DragonGolfBackEnd.Controllers
                     SwitchHoles_P2[16] = hole11_P2;
                     SwitchHoles_P2[17] = hole12_P2;
                     SwitchHoles_P2[18] = hole13_P2;
+
+                    SwitchHoles_P3[1] = hole14_P3;
+                    SwitchHoles_P3[2] = hole15_P3;
+                    SwitchHoles_P3[3] = hole16_P3;
+                    SwitchHoles_P3[4] = hole17_P3;
+                    SwitchHoles_P3[5] = hole18_P3;
+                    SwitchHoles_P3[6] = hole1_P3;
+                    SwitchHoles_P3[7] = hole2_P3;
+                    SwitchHoles_P3[8] = hole3_P3;
+                    SwitchHoles_P3[9] = hole4_P3;
+                    SwitchHoles_P3[10] = hole5_P3;
+                    SwitchHoles_P3[11] = hole6_P3;
+                    SwitchHoles_P3[12] = hole7_P3;
+                    SwitchHoles_P3[13] = hole8_P3;
+                    SwitchHoles_P3[14] = hole9_P3;
+                    SwitchHoles_P3[15] = hole10_P3;
+                    SwitchHoles_P3[16] = hole11_P3;
+                    SwitchHoles_P3[17] = hole12_P3;
+                    SwitchHoles_P3[18] = hole13_P3;
+
+                    SwitchHoles_P4[1] = hole14_P4;
+                    SwitchHoles_P4[2] = hole15_P4;
+                    SwitchHoles_P4[3] = hole16_P4;
+                    SwitchHoles_P4[4] = hole17_P4;
+                    SwitchHoles_P4[5] = hole18_P4;
+                    SwitchHoles_P4[6] = hole1_P4;
+                    SwitchHoles_P4[7] = hole2_P4;
+                    SwitchHoles_P4[8] = hole3_P4;
+                    SwitchHoles_P4[9] = hole4_P4;
+                    SwitchHoles_P4[10] = hole5_P4;
+                    SwitchHoles_P4[11] = hole6_P4;
+                    SwitchHoles_P4[12] = hole7_P4;
+                    SwitchHoles_P4[13] = hole8_P4;
+                    SwitchHoles_P4[14] = hole9_P4;
+                    SwitchHoles_P4[15] = hole10_P4;
+                    SwitchHoles_P4[16] = hole11_P4;
+                    SwitchHoles_P4[17] = hole12_P4;
+                    SwitchHoles_P4[18] = hole13_P4;
+
                     break;
                 case 7:
                     SwitchHoles_P1[1] = hole13_P1;
@@ -4730,6 +5004,44 @@ namespace DragonGolfBackEnd.Controllers
                     SwitchHoles_P2[16] = hole10_P2;
                     SwitchHoles_P2[17] = hole11_P2;
                     SwitchHoles_P2[18] = hole12_P2;
+
+                    SwitchHoles_P3[1] = hole13_P3;
+                    SwitchHoles_P3[2] = hole14_P3;
+                    SwitchHoles_P3[3] = hole15_P3;
+                    SwitchHoles_P3[4] = hole16_P3;
+                    SwitchHoles_P3[5] = hole17_P3;
+                    SwitchHoles_P3[6] = hole18_P3;
+                    SwitchHoles_P3[7] = hole1_P3;
+                    SwitchHoles_P3[8] = hole2_P3;
+                    SwitchHoles_P3[9] = hole3_P3;
+                    SwitchHoles_P3[10] = hole4_P3;
+                    SwitchHoles_P3[11] = hole5_P3;
+                    SwitchHoles_P3[12] = hole6_P3;
+                    SwitchHoles_P3[13] = hole7_P3;
+                    SwitchHoles_P3[14] = hole8_P3;
+                    SwitchHoles_P3[15] = hole9_P3;
+                    SwitchHoles_P3[16] = hole10_P3;
+                    SwitchHoles_P3[17] = hole11_P3;
+                    SwitchHoles_P3[18] = hole12_P3;
+
+                    SwitchHoles_P4[1] = hole13_P4;
+                    SwitchHoles_P4[2] = hole14_P4;
+                    SwitchHoles_P4[3] = hole15_P4;
+                    SwitchHoles_P4[4] = hole16_P4;
+                    SwitchHoles_P4[5] = hole17_P4;
+                    SwitchHoles_P4[6] = hole18_P4;
+                    SwitchHoles_P4[7] = hole1_P4;
+                    SwitchHoles_P4[8] = hole2_P4;
+                    SwitchHoles_P4[9] = hole3_P4;
+                    SwitchHoles_P4[10] = hole4_P4;
+                    SwitchHoles_P4[11] = hole5_P4;
+                    SwitchHoles_P4[12] = hole6_P4;
+                    SwitchHoles_P4[13] = hole7_P4;
+                    SwitchHoles_P4[14] = hole8_P4;
+                    SwitchHoles_P4[15] = hole9_P4;
+                    SwitchHoles_P4[16] = hole10_P4;
+                    SwitchHoles_P4[17] = hole11_P4;
+                    SwitchHoles_P4[18] = hole12_P4;
 
                     break;
                 case 8:
@@ -4772,6 +5084,44 @@ namespace DragonGolfBackEnd.Controllers
                     SwitchHoles_P2[17] = hole10_P2;
                     SwitchHoles_P2[18] = hole11_P2;
 
+                    SwitchHoles_P3[1] = hole12_P3;
+                    SwitchHoles_P3[2] = hole13_P3;
+                    SwitchHoles_P3[3] = hole14_P3;
+                    SwitchHoles_P3[4] = hole15_P3;
+                    SwitchHoles_P3[5] = hole16_P3;
+                    SwitchHoles_P3[6] = hole17_P3;
+                    SwitchHoles_P3[7] = hole18_P3;
+                    SwitchHoles_P3[8] = hole1_P3;
+                    SwitchHoles_P3[9] = hole2_P3;
+                    SwitchHoles_P3[10] = hole3_P3;
+                    SwitchHoles_P3[11] = hole4_P3;
+                    SwitchHoles_P3[12] = hole5_P3;
+                    SwitchHoles_P3[13] = hole6_P3;
+                    SwitchHoles_P3[14] = hole7_P3;
+                    SwitchHoles_P3[15] = hole8_P3;
+                    SwitchHoles_P3[16] = hole9_P3;
+                    SwitchHoles_P3[17] = hole10_P3;
+                    SwitchHoles_P3[18] = hole11_P3;
+
+                    SwitchHoles_P4[1] = hole12_P4;
+                    SwitchHoles_P4[2] = hole13_P4;
+                    SwitchHoles_P4[3] = hole14_P4;
+                    SwitchHoles_P4[4] = hole15_P4;
+                    SwitchHoles_P4[5] = hole16_P4;
+                    SwitchHoles_P4[6] = hole17_P4;
+                    SwitchHoles_P4[7] = hole18_P4;
+                    SwitchHoles_P4[8] = hole1_P4;
+                    SwitchHoles_P4[9] = hole2_P4;
+                    SwitchHoles_P4[10] = hole3_P4;
+                    SwitchHoles_P4[11] = hole4_P4;
+                    SwitchHoles_P4[12] = hole5_P4;
+                    SwitchHoles_P4[13] = hole6_P4;
+                    SwitchHoles_P4[14] = hole7_P4;
+                    SwitchHoles_P4[15] = hole8_P4;
+                    SwitchHoles_P4[16] = hole9_P4;
+                    SwitchHoles_P4[17] = hole10_P4;
+                    SwitchHoles_P4[18] = hole11_P4;
+
                     break;
                 case 9:
                     SwitchHoles_P1[1] = hole11_P1;
@@ -4811,6 +5161,44 @@ namespace DragonGolfBackEnd.Controllers
                     SwitchHoles_P2[16] = hole8_P2;
                     SwitchHoles_P2[17] = hole9_P2;
                     SwitchHoles_P2[18] = hole10_P2;
+
+                    SwitchHoles_P3[1] = hole11_P3;
+                    SwitchHoles_P3[2] = hole12_P3;
+                    SwitchHoles_P3[3] = hole13_P3;
+                    SwitchHoles_P3[4] = hole14_P3;
+                    SwitchHoles_P3[5] = hole15_P3;
+                    SwitchHoles_P3[6] = hole16_P3;
+                    SwitchHoles_P3[7] = hole17_P3;
+                    SwitchHoles_P3[8] = hole18_P3;
+                    SwitchHoles_P3[9] = hole1_P3;
+                    SwitchHoles_P3[10] = hole2_P3;
+                    SwitchHoles_P3[11] = hole3_P3;
+                    SwitchHoles_P3[12] = hole4_P3;
+                    SwitchHoles_P3[13] = hole5_P3;
+                    SwitchHoles_P3[14] = hole6_P3;
+                    SwitchHoles_P3[15] = hole7_P3;
+                    SwitchHoles_P3[16] = hole8_P3;
+                    SwitchHoles_P3[17] = hole9_P3;
+                    SwitchHoles_P3[18] = hole10_P3;
+
+                    SwitchHoles_P4[1] = hole11_P4;
+                    SwitchHoles_P4[2] = hole12_P4;
+                    SwitchHoles_P4[3] = hole13_P4;
+                    SwitchHoles_P4[4] = hole14_P4;
+                    SwitchHoles_P4[5] = hole15_P4;
+                    SwitchHoles_P4[6] = hole16_P4;
+                    SwitchHoles_P4[7] = hole17_P4;
+                    SwitchHoles_P4[8] = hole18_P4;
+                    SwitchHoles_P4[9] = hole1_P4;
+                    SwitchHoles_P4[10] = hole2_P4;
+                    SwitchHoles_P4[11] = hole3_P4;
+                    SwitchHoles_P4[12] = hole4_P4;
+                    SwitchHoles_P4[13] = hole5_P4;
+                    SwitchHoles_P4[14] = hole6_P4;
+                    SwitchHoles_P4[15] = hole7_P4;
+                    SwitchHoles_P4[16] = hole8_P4;
+                    SwitchHoles_P4[17] = hole9_P4;
+                    SwitchHoles_P4[18] = hole10_P4;
 
                     break;
                 case 10:
@@ -4852,6 +5240,44 @@ namespace DragonGolfBackEnd.Controllers
                     SwitchHoles_P2[16] = hole7_P2;
                     SwitchHoles_P2[17] = hole8_P2;
                     SwitchHoles_P2[18] = hole9_P2;
+
+                    SwitchHoles_P3[1] = hole11_P3;
+                    SwitchHoles_P3[2] = hole12_P3;
+                    SwitchHoles_P3[3] = hole13_P3;
+                    SwitchHoles_P3[4] = hole14_P3;
+                    SwitchHoles_P3[35] = hole15_P3;
+                    SwitchHoles_P3[6] = hole16_P3;
+                    SwitchHoles_P3[7] = hole17_P3;
+                    SwitchHoles_P3[8] = hole18_P3;
+                    SwitchHoles_P3[9] = hole1_P3;
+                    SwitchHoles_P3[10] = hole2_P3;
+                    SwitchHoles_P3[11] = hole3_P3;
+                    SwitchHoles_P3[12] = hole4_P3;
+                    SwitchHoles_P3[13] = hole5_P3;
+                    SwitchHoles_P3[14] = hole6_P3;
+                    SwitchHoles_P3[15] = hole7_P3;
+                    SwitchHoles_P3[16] = hole8_P3;
+                    SwitchHoles_P3[17] = hole9_P3;
+                    SwitchHoles_P3[18] = hole10_P3;
+
+                    SwitchHoles_P4[1] = hole11_P4;
+                    SwitchHoles_P4[2] = hole12_P4;
+                    SwitchHoles_P4[3] = hole13_P4;
+                    SwitchHoles_P4[4] = hole14_P4;
+                    SwitchHoles_P4[5] = hole15_P4;
+                    SwitchHoles_P4[6] = hole16_P4;
+                    SwitchHoles_P4[7] = hole17_P4;
+                    SwitchHoles_P4[8] = hole18_P4;
+                    SwitchHoles_P4[9] = hole1_P4;
+                    SwitchHoles_P4[10] = hole2_P4;
+                    SwitchHoles_P4[11] = hole3_P4;
+                    SwitchHoles_P4[12] = hole4_P4;
+                    SwitchHoles_P4[13] = hole5_P4;
+                    SwitchHoles_P4[14] = hole6_P4;
+                    SwitchHoles_P4[15] = hole7_P4;
+                    SwitchHoles_P4[16] = hole8_P4;
+                    SwitchHoles_P4[17] = hole9_P4;
+                    SwitchHoles_P4[18] = hole10_P4;
 
                     break;
                 case 11:
@@ -4935,6 +5361,44 @@ namespace DragonGolfBackEnd.Controllers
                     SwitchHoles_P2[17] = hole6_P2;
                     SwitchHoles_P2[18] = hole7_P2;
 
+                    SwitchHoles_P2[1] = hole8_P3;
+                    SwitchHoles_P2[2] = hole9_P3;
+                    SwitchHoles_P2[3] = hole10_P3;
+                    SwitchHoles_P2[4] = hole11_P3;
+                    SwitchHoles_P2[5] = hole12_P3;
+                    SwitchHoles_P2[6] = hole13_P3;
+                    SwitchHoles_P2[7] = hole14_P3;
+                    SwitchHoles_P2[8] = hole15_P3;
+                    SwitchHoles_P2[9] = hole16_P3;
+                    SwitchHoles_P2[10] = hole17_P3;
+                    SwitchHoles_P2[11] = hole18_P3;
+                    SwitchHoles_P2[12] = hole1_P3;
+                    SwitchHoles_P2[13] = hole2_P3;
+                    SwitchHoles_P2[14] = hole3_P3;
+                    SwitchHoles_P2[15] = hole4_P3;
+                    SwitchHoles_P2[16] = hole5_P3;
+                    SwitchHoles_P2[17] = hole6_P3;
+                    SwitchHoles_P2[18] = hole7_P3;
+
+                    SwitchHoles_P4[1] = hole8_P4;
+                    SwitchHoles_P4[2] = hole9_P4;
+                    SwitchHoles_P4[3] = hole10_P4;
+                    SwitchHoles_P4[4] = hole11_P4;
+                    SwitchHoles_P4[5] = hole12_P4;
+                    SwitchHoles_P4[6] = hole13_P4;
+                    SwitchHoles_P4[7] = hole14_P4;
+                    SwitchHoles_P4[8] = hole15_P4;
+                    SwitchHoles_P4[9] = hole16_P4;
+                    SwitchHoles_P4[10] = hole17_P4;
+                    SwitchHoles_P4[11] = hole18_P4;
+                    SwitchHoles_P4[12] = hole1_P4;
+                    SwitchHoles_P4[13] = hole2_P4;
+                    SwitchHoles_P4[14] = hole3_P4;
+                    SwitchHoles_P4[15] = hole4_P4;
+                    SwitchHoles_P4[16] = hole5_P4;
+                    SwitchHoles_P4[17] = hole6_P4;
+                    SwitchHoles_P4[18] = hole7_P4;
+
                     break;
                 case 13:
 
@@ -4957,24 +5421,43 @@ namespace DragonGolfBackEnd.Controllers
                     SwitchHoles_P1[17] = hole5_P1;
                     SwitchHoles_P1[18] = hole6_P1;
 
-                    SwitchHoles_P2[1] = hole7_P2;
-                    SwitchHoles_P2[2] = hole8_P2;
-                    SwitchHoles_P2[3] = hole9_P2;
-                    SwitchHoles_P2[4] = hole10_P2;
-                    SwitchHoles_P2[5] = hole11_P2;
-                    SwitchHoles_P2[6] = hole12_P2;
-                    SwitchHoles_P2[7] = hole13_P2;
-                    SwitchHoles_P2[8] = hole14_P2;
-                    SwitchHoles_P2[9] = hole15_P2;
-                    SwitchHoles_P2[10] = hole16_P2;
-                    SwitchHoles_P2[11] = hole17_P2;
-                    SwitchHoles_P2[12] = hole18_P2;
-                    SwitchHoles_P2[13] = hole1_P2;
-                    SwitchHoles_P2[14] = hole2_P2;
-                    SwitchHoles_P2[15] = hole3_P2;
-                    SwitchHoles_P2[16] = hole4_P2;
-                    SwitchHoles_P2[17] = hole5_P2;
-                    SwitchHoles_P2[18] = hole6_P2;
+                    SwitchHoles_P3[1] = hole7_P3;
+                    SwitchHoles_P3[2] = hole8_P3;
+                    SwitchHoles_P3[3] = hole9_P3;
+                    SwitchHoles_P3[4] = hole10_P3;
+                    SwitchHoles_P3[5] = hole11_P3;
+                    SwitchHoles_P3[6] = hole12_P3;
+                    SwitchHoles_P3[7] = hole13_P3;
+                    SwitchHoles_P3[8] = hole14_P3;
+                    SwitchHoles_P3[9] = hole15_P3;
+                    SwitchHoles_P3[10] = hole16_P3;
+                    SwitchHoles_P3[11] = hole17_P3;
+                    SwitchHoles_P3[12] = hole18_P3;
+                    SwitchHoles_P3[13] = hole1_P3;
+                    SwitchHoles_P3[14] = hole2_P3;
+                    SwitchHoles_P3[15] = hole3_P3;
+                    SwitchHoles_P3[16] = hole4_P3;
+                    SwitchHoles_P3[17] = hole5_P3;
+                    SwitchHoles_P3[18] = hole6_P3;
+
+                    SwitchHoles_P4[1] = hole7_P4;
+                    SwitchHoles_P4[2] = hole8_P4;
+                    SwitchHoles_P4[3] = hole9_P4;
+                    SwitchHoles_P4[4] = hole10_P4;
+                    SwitchHoles_P4[5] = hole11_P4;
+                    SwitchHoles_P4[6] = hole12_P4;
+                    SwitchHoles_P4[7] = hole13_P4;
+                    SwitchHoles_P4[8] = hole14_P4;
+                    SwitchHoles_P4[9] = hole15_P4;
+                    SwitchHoles_P4[10] = hole16_P4;
+                    SwitchHoles_P4[11] = hole17_P4;
+                    SwitchHoles_P4[12] = hole18_P4;
+                    SwitchHoles_P4[13] = hole1_P4;
+                    SwitchHoles_P4[14] = hole2_P4;
+                    SwitchHoles_P4[15] = hole3_P4;
+                    SwitchHoles_P4[16] = hole4_P4;
+                    SwitchHoles_P4[17] = hole5_P4;
+                    SwitchHoles_P4[18] = hole6_P4;
 
                     break;
                 case 14:
@@ -5017,6 +5500,44 @@ namespace DragonGolfBackEnd.Controllers
                     SwitchHoles_P2[17] = hole4_P2;
                     SwitchHoles_P2[18] = hole5_P2;
 
+                    SwitchHoles_P3[1] = hole6_P3;
+                    SwitchHoles_P3[2] = hole7_P3;
+                    SwitchHoles_P3[3] = hole8_P3;
+                    SwitchHoles_P3[4] = hole9_P3;
+                    SwitchHoles_P3[5] = hole10_P3;
+                    SwitchHoles_P3[6] = hole11_P3;
+                    SwitchHoles_P3[7] = hole12_P3;
+                    SwitchHoles_P3[8] = hole13_P3;
+                    SwitchHoles_P3[9] = hole14_P3;
+                    SwitchHoles_P3[10] = hole15_P3;
+                    SwitchHoles_P3[11] = hole16_P3;
+                    SwitchHoles_P3[12] = hole17_P3;
+                    SwitchHoles_P3[13] = hole18_P3;
+                    SwitchHoles_P3[14] = hole1_P3;
+                    SwitchHoles_P3[15] = hole2_P3;
+                    SwitchHoles_P3[16] = hole3_P3;
+                    SwitchHoles_P3[17] = hole4_P3;
+                    SwitchHoles_P3[18] = hole5_P3;
+
+                    SwitchHoles_P4[1] = hole6_P4;
+                    SwitchHoles_P4[2] = hole7_P4;
+                    SwitchHoles_P4[3] = hole8_P4;
+                    SwitchHoles_P4[4] = hole9_P4;
+                    SwitchHoles_P4[5] = hole10_P4;
+                    SwitchHoles_P4[6] = hole11_P4;
+                    SwitchHoles_P4[7] = hole12_P4;
+                    SwitchHoles_P4[8] = hole13_P4;
+                    SwitchHoles_P4[9] = hole14_P4;
+                    SwitchHoles_P4[10] = hole15_P4;
+                    SwitchHoles_P4[11] = hole16_P4;
+                    SwitchHoles_P4[12] = hole17_P4;
+                    SwitchHoles_P4[13] = hole18_P4;
+                    SwitchHoles_P4[14] = hole1_P4;
+                    SwitchHoles_P4[15] = hole2_P4;
+                    SwitchHoles_P4[16] = hole3_P4;
+                    SwitchHoles_P4[17] = hole4_P4;
+                    SwitchHoles_P4[18] = hole5_P4;
+
                     break;
                 case 15:
 
@@ -5057,6 +5578,44 @@ namespace DragonGolfBackEnd.Controllers
                     SwitchHoles_P2[16] = hole2_P2;
                     SwitchHoles_P2[17] = hole3_P2;
                     SwitchHoles_P2[18] = hole4_P2;
+
+                    SwitchHoles_P3[1] = hole5_P3;
+                    SwitchHoles_P3[2] = hole6_P3;
+                    SwitchHoles_P3[3] = hole7_P3;
+                    SwitchHoles_P3[4] = hole8_P3;
+                    SwitchHoles_P3[5] = hole9_P3;
+                    SwitchHoles_P3[6] = hole10_P3;
+                    SwitchHoles_P3[7] = hole11_P3;
+                    SwitchHoles_P3[8] = hole12_P3;
+                    SwitchHoles_P3[9] = hole13_P3;
+                    SwitchHoles_P3[10] = hole14_P3;
+                    SwitchHoles_P3[11] = hole15_P3;
+                    SwitchHoles_P3[12] = hole16_P3;
+                    SwitchHoles_P3[13] = hole17_P3;
+                    SwitchHoles_P3[14] = hole18_P3;
+                    SwitchHoles_P3[15] = hole1_P3;
+                    SwitchHoles_P3[16] = hole2_P3;
+                    SwitchHoles_P3[17] = hole3_P3;
+                    SwitchHoles_P3[18] = hole4_P3;
+
+                    SwitchHoles_P4[1] = hole5_P4;
+                    SwitchHoles_P4[2] = hole6_P4;
+                    SwitchHoles_P4[3] = hole7_P4;
+                    SwitchHoles_P4[4] = hole8_P4;
+                    SwitchHoles_P4[5] = hole9_P4;
+                    SwitchHoles_P4[6] = hole10_P4;
+                    SwitchHoles_P4[7] = hole11_P4;
+                    SwitchHoles_P4[8] = hole12_P4;
+                    SwitchHoles_P4[9] = hole13_P4;
+                    SwitchHoles_P4[10] = hole14_P4;
+                    SwitchHoles_P4[11] = hole15_P4;
+                    SwitchHoles_P4[12] = hole16_P4;
+                    SwitchHoles_P4[13] = hole17_P4;
+                    SwitchHoles_P4[14] = hole18_P4;
+                    SwitchHoles_P4[15] = hole1_P4;
+                    SwitchHoles_P4[16] = hole2_P4;
+                    SwitchHoles_P4[17] = hole3_P4;
+                    SwitchHoles_P4[18] = hole4_P4;
 
                     break;
                 case 16:
@@ -5099,6 +5658,44 @@ namespace DragonGolfBackEnd.Controllers
                     SwitchHoles_P2[17] = hole2_P2;
                     SwitchHoles_P2[18] = hole3_P2;
 
+                    SwitchHoles_P3[1] = hole4_P3;
+                    SwitchHoles_P3[2] = hole5_P3;
+                    SwitchHoles_P3[3] = hole6_P3;
+                    SwitchHoles_P3[4] = hole7_P3;
+                    SwitchHoles_P3[5] = hole8_P3;
+                    SwitchHoles_P3[6] = hole9_P3;
+                    SwitchHoles_P3[7] = hole10_P3;
+                    SwitchHoles_P3[8] = hole11_P3;
+                    SwitchHoles_P3[9] = hole12_P3;
+                    SwitchHoles_P3[10] = hole13_P3;
+                    SwitchHoles_P3[11] = hole14_P3;
+                    SwitchHoles_P3[12] = hole15_P3;
+                    SwitchHoles_P3[13] = hole16_P3;
+                    SwitchHoles_P3[14] = hole17_P3;
+                    SwitchHoles_P3[15] = hole18_P3;
+                    SwitchHoles_P3[16] = hole1_P3;
+                    SwitchHoles_P3[17] = hole2_P3;
+                    SwitchHoles_P3[18] = hole3_P3;
+
+                    SwitchHoles_P4[1] = hole4_P4;
+                    SwitchHoles_P4[2] = hole5_P4;
+                    SwitchHoles_P4[3] = hole6_P4;
+                    SwitchHoles_P4[4] = hole7_P4;
+                    SwitchHoles_P4[5] = hole8_P4;
+                    SwitchHoles_P4[6] = hole9_P4;
+                    SwitchHoles_P4[7] = hole10_P4;
+                    SwitchHoles_P4[8] = hole11_P4;
+                    SwitchHoles_P4[9] = hole12_P4;
+                    SwitchHoles_P4[10] = hole13_P4;
+                    SwitchHoles_P4[11] = hole14_P4;
+                    SwitchHoles_P4[12] = hole15_P4;
+                    SwitchHoles_P4[13] = hole16_P4;
+                    SwitchHoles_P4[14] = hole17_P4;
+                    SwitchHoles_P4[15] = hole18_P4;
+                    SwitchHoles_P4[16] = hole1_P4;
+                    SwitchHoles_P4[17] = hole2_P4;
+                    SwitchHoles_P4[18] = hole3_P4;
+
                     break;
                 case 17:
 
@@ -5140,6 +5737,44 @@ namespace DragonGolfBackEnd.Controllers
                     SwitchHoles_P2[17] = hole1_P2;
                     SwitchHoles_P2[18] = hole2_P2;
 
+                    SwitchHoles_P3[1] = hole3_P3;
+                    SwitchHoles_P3[2] = hole4_P3;
+                    SwitchHoles_P3[3] = hole5_P3;
+                    SwitchHoles_P3[4] = hole6_P3;
+                    SwitchHoles_P3[5] = hole7_P3;
+                    SwitchHoles_P3[6] = hole8_P3;
+                    SwitchHoles_P3[7] = hole9_P3;
+                    SwitchHoles_P3[8] = hole10_P3;
+                    SwitchHoles_P3[9] = hole11_P3;
+                    SwitchHoles_P3[10] = hole12_P3;
+                    SwitchHoles_P3[11] = hole13_P3;
+                    SwitchHoles_P3[12] = hole14_P3;
+                    SwitchHoles_P3[13] = hole15_P3;
+                    SwitchHoles_P3[14] = hole16_P3;
+                    SwitchHoles_P3[15] = hole17_P3;
+                    SwitchHoles_P3[16] = hole18_P3;
+                    SwitchHoles_P3[17] = hole1_P3;
+                    SwitchHoles_P3[18] = hole2_P3;
+
+                    SwitchHoles_P4[1] = hole3_P4;
+                    SwitchHoles_P4[2] = hole4_P4;
+                    SwitchHoles_P4[3] = hole5_P4;
+                    SwitchHoles_P4[4] = hole6_P4;
+                    SwitchHoles_P4[5] = hole7_P4;
+                    SwitchHoles_P4[6] = hole8_P4;
+                    SwitchHoles_P4[7] = hole9_P4;
+                    SwitchHoles_P4[8] = hole10_P4;
+                    SwitchHoles_P4[9] = hole11_P4;
+                    SwitchHoles_P4[10] = hole12_P4;
+                    SwitchHoles_P4[11] = hole13_P4;
+                    SwitchHoles_P4[12] = hole14_P4;
+                    SwitchHoles_P4[13] = hole15_P4;
+                    SwitchHoles_P4[14] = hole16_P4;
+                    SwitchHoles_P4[15] = hole17_P4;
+                    SwitchHoles_P4[16] = hole18_P4;
+                    SwitchHoles_P4[17] = hole1_P4;
+                    SwitchHoles_P4[18] = hole2_P4;
+
                     break;
                 case 18:
 
@@ -5180,6 +5815,44 @@ namespace DragonGolfBackEnd.Controllers
                     SwitchHoles_P2[16] = hole17_P2;
                     SwitchHoles_P2[17] = hole18_P2;
                     SwitchHoles_P2[18] = hole1_P2;
+
+                    SwitchHoles_P3[1] = hole2_P3;
+                    SwitchHoles_P3[2] = hole3_P3;
+                    SwitchHoles_P3[3] = hole4_P3;
+                    SwitchHoles_P3[4] = hole5_P3;
+                    SwitchHoles_P3[5] = hole6_P3;
+                    SwitchHoles_P3[6] = hole7_P3;
+                    SwitchHoles_P3[7] = hole8_P3;
+                    SwitchHoles_P3[8] = hole9_P3;
+                    SwitchHoles_P3[9] = hole10_P3;
+                    SwitchHoles_P3[10] = hole11_P3;
+                    SwitchHoles_P3[11] = hole12_P3;
+                    SwitchHoles_P3[12] = hole13_P3;
+                    SwitchHoles_P3[13] = hole14_P3;
+                    SwitchHoles_P3[14] = hole15_P3;
+                    SwitchHoles_P3[15] = hole16_P3;
+                    SwitchHoles_P3[16] = hole17_P3;
+                    SwitchHoles_P3[17] = hole18_P3;
+                    SwitchHoles_P3[18] = hole1_P3;
+
+                    SwitchHoles_P4[1] = hole2_P4;
+                    SwitchHoles_P4[2] = hole3_P4;
+                    SwitchHoles_P4[3] = hole4_P4;
+                    SwitchHoles_P4[4] = hole5_P4;
+                    SwitchHoles_P4[5] = hole6_P4;
+                    SwitchHoles_P4[6] = hole7_P4;
+                    SwitchHoles_P4[7] = hole8_P4;
+                    SwitchHoles_P4[8] = hole9_P4;
+                    SwitchHoles_P4[9] = hole10_P4;
+                    SwitchHoles_P4[10] = hole11_P4;
+                    SwitchHoles_P4[11] = hole12_P4;
+                    SwitchHoles_P4[12] = hole13_P4;
+                    SwitchHoles_P4[13] = hole14_P4;
+                    SwitchHoles_P4[14] = hole15_P4;
+                    SwitchHoles_P4[15] = hole16_P4;
+                    SwitchHoles_P4[16] = hole17_P4;
+                    SwitchHoles_P4[17] = hole18_P4;
+                    SwitchHoles_P4[18] = hole1_P4;
 
                     break;
                 default:

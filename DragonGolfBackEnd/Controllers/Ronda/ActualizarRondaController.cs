@@ -82,7 +82,7 @@ namespace DragonGolfBackEnd.Controllers
                     {
                         Mensaje = Convert.ToString(row["mensaje"]);
                         Estatus = Convert.ToInt32(row["Estatus"]);
-                        IDRound = Convert.ToInt32(row["IDRound"]);
+                        //IDRound = Convert.ToInt32(row["IDRound"]);
 
                     }
 
@@ -90,7 +90,7 @@ namespace DragonGolfBackEnd.Controllers
                     {
                         mensaje = Mensaje,
                         estatus = Estatus,
-                        idround = IDRound,
+                        //idround = IDRound,
                     });
 
                     return Resultado;

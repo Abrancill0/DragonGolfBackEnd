@@ -4488,8 +4488,8 @@ namespace DragonGolfBackEnd.Controllers
                     SwitchHoles_P2[14] = hole11_P2;
                     SwitchHoles_P2[15] = hole12_P2;
                     SwitchHoles_P2[16] = hole13_P2;
-                    SwitchHoles_P2[17] = hole15_P2;
-                    SwitchHoles_P2[18] = hole16_P2;
+                    SwitchHoles_P2[17] = hole14_P2;
+                    SwitchHoles_P2[18] = hole15_P2;
 
                     break;
                 case 5:
