@@ -2075,53 +2075,53 @@ namespace DragonGolfBackEnd.Controllers
                         {
                             if (ValidaFront == 0)
                             {
-                                Resultado3 = ScoreHole3_P2 - ScoreHole3_P1;
+                                //Resultado3 = ScoreHole3_P2 - ScoreHole3_P1;
 
 
-                                if (ScoreHole2_P1 > ScoreHole2_P3)
+                                if (ScoreHole3_P1 > ScoreHole3_P3)
                                 {
-                                    if (ScoreHole2_P2 > ScoreHole2_P4)
+                                    if (ScoreHole3_P2 > ScoreHole3_P4)
                                     {
-                                        Resultado2_L = ScoreHole2_P2 - ScoreHole2_P1;
+                                        Resultado3_L = ScoreHole3_P2 - ScoreHole3_P1;
                                     }
                                     else
                                     {
-                                        Resultado2_L = ScoreHole2_P4 - ScoreHole2_P1;
+                                        Resultado3_L = ScoreHole3_P4 - ScoreHole3_P1;
                                     }
                                 }
                                 else
                                 {
-                                    if (ScoreHole2_P2 > ScoreHole2_P4)
+                                    if (ScoreHole3_P2 > ScoreHole3_P4)
                                     {
-                                        Resultado2_L = ScoreHole2_P2 - ScoreHole2_P3;
+                                        Resultado3_L = ScoreHole3_P2 - ScoreHole3_P3;
                                     }
                                     else
                                     {
-                                        Resultado2_L = ScoreHole2_P4 - ScoreHole2_P3;
+                                        Resultado3_L = ScoreHole3_P4 - ScoreHole3_P3;
                                     }
                                 }
 
                                 //Bueno Vs Bueno
-                                if (ScoreHole2_P1 < ScoreHole2_P3)
+                                if (ScoreHole3_P1 < ScoreHole3_P3)
                                 {
-                                    if (ScoreHole2_P2 < ScoreHole2_P4)
+                                    if (ScoreHole3_P2 < ScoreHole3_P4)
                                     {
-                                        Resultado2_H = ScoreHole2_P4 - ScoreHole2_P3;
+                                        Resultado3_H = ScoreHole3_P4 - ScoreHole3_P3;
                                     }
                                     else
                                     {
-                                        Resultado2_H = ScoreHole2_P3 - ScoreHole2_P3;
+                                        Resultado3_H = ScoreHole3_P3 - ScoreHole3_P3;
                                     }
                                 }
                                 else
                                 {
-                                    if (ScoreHole2_P2 < ScoreHole2_P4)
+                                    if (ScoreHole3_P2 < ScoreHole3_P4)
                                     {
-                                        Resultado2_H = ScoreHole2_P4 - ScoreHole2_P1;
+                                        Resultado3_H = ScoreHole3_P4 - ScoreHole3_P1;
                                     }
                                     else
                                     {
-                                        Resultado2_H = ScoreHole2_P2 - ScoreHole2_P1;
+                                        Resultado3_H = ScoreHole3_P2 - ScoreHole3_P1;
                                     }
                                 }
                             }
@@ -2135,53 +2135,52 @@ namespace DragonGolfBackEnd.Controllers
                         {
                             if (ValidaFront == 0)
                             {
-                                Resultado4 = ScoreHole4_P2 - ScoreHole4_P1;
+                               // Resultado4 = ScoreHole4_P2 - ScoreHole4_P1;
 
-
-                                if (ScoreHole2_P1 > ScoreHole2_P3)
+                                if (ScoreHole4_P1 > ScoreHole4_P3)
                                 {
-                                    if (ScoreHole2_P2 > ScoreHole2_P4)
+                                    if (ScoreHole4_P2 > ScoreHole4_P4)
                                     {
-                                        Resultado2_L = ScoreHole2_P2 - ScoreHole2_P1;
+                                        Resultado4_L = ScoreHole4_P2 - ScoreHole4_P1;
                                     }
                                     else
                                     {
-                                        Resultado2_L = ScoreHole2_P4 - ScoreHole2_P1;
+                                        Resultado4_L = ScoreHole4_P4 - ScoreHole4_P1;
                                     }
                                 }
                                 else
                                 {
-                                    if (ScoreHole2_P2 > ScoreHole2_P4)
+                                    if (ScoreHole4_P2 > ScoreHole4_P4)
                                     {
-                                        Resultado2_L = ScoreHole2_P2 - ScoreHole2_P3;
+                                        Resultado4_L = ScoreHole4_P2 - ScoreHole4_P3;
                                     }
                                     else
                                     {
-                                        Resultado2_L = ScoreHole2_P4 - ScoreHole2_P3;
+                                        Resultado4_L = ScoreHole4_P4 - ScoreHole4_P3;
                                     }
                                 }
 
                                 //Bueno Vs Bueno
-                                if (ScoreHole2_P1 < ScoreHole2_P3)
+                                if (ScoreHole4_P1 < ScoreHole4_P3)
                                 {
-                                    if (ScoreHole2_P2 < ScoreHole2_P4)
+                                    if (ScoreHole4_P2 < ScoreHole4_P4)
                                     {
-                                        Resultado2_H = ScoreHole2_P4 - ScoreHole2_P3;
+                                        Resultado4_H = ScoreHole4_P4 - ScoreHole4_P3;
                                     }
                                     else
                                     {
-                                        Resultado2_H = ScoreHole2_P3 - ScoreHole2_P3;
+                                        Resultado4_H = ScoreHole4_P3 - ScoreHole4_P3;
                                     }
                                 }
                                 else
                                 {
-                                    if (ScoreHole2_P2 < ScoreHole2_P4)
+                                    if (ScoreHole4_P2 < ScoreHole4_P4)
                                     {
-                                        Resultado2_H = ScoreHole2_P4 - ScoreHole2_P1;
+                                        Resultado4_H = ScoreHole4_P4 - ScoreHole4_P1;
                                     }
                                     else
                                     {
-                                        Resultado2_H = ScoreHole2_P2 - ScoreHole2_P1;
+                                        Resultado4_H = ScoreHole4_P2 - ScoreHole4_P1;
                                     }
                                 }
                             }
@@ -2195,53 +2194,53 @@ namespace DragonGolfBackEnd.Controllers
                         {
                             if (ValidaFront == 0)
                             {
-                                Resultado5 = ScoreHole5_P2 - ScoreHole5_P1;
+                              //  Resultado5 = ScoreHole5_P2 - ScoreHole5_P1;
 
 
-                                if (ScoreHole2_P1 > ScoreHole2_P3)
+                                if (ScoreHole5_P1 > ScoreHole5_P3)
                                 {
-                                    if (ScoreHole2_P2 > ScoreHole2_P4)
+                                    if (ScoreHole5_P2 > ScoreHole5_P4)
                                     {
-                                        Resultado2_L = ScoreHole2_P2 - ScoreHole2_P1;
+                                        Resultado5_L = ScoreHole5_P2 - ScoreHole5_P1;
                                     }
                                     else
                                     {
-                                        Resultado2_L = ScoreHole2_P4 - ScoreHole2_P1;
+                                        Resultado5_L = ScoreHole5_P4 - ScoreHole5_P1;
                                     }
                                 }
                                 else
                                 {
-                                    if (ScoreHole2_P2 > ScoreHole2_P4)
+                                    if (ScoreHole5_P2 > ScoreHole5_P4)
                                     {
-                                        Resultado2_L = ScoreHole2_P2 - ScoreHole2_P3;
+                                        Resultado5_L = ScoreHole5_P2 - ScoreHole5_P3;
                                     }
                                     else
                                     {
-                                        Resultado2_L = ScoreHole2_P4 - ScoreHole2_P3;
+                                        Resultado5_L = ScoreHole5_P4 - ScoreHole5_P3;
                                     }
                                 }
 
                                 //Bueno Vs Bueno
-                                if (ScoreHole2_P1 < ScoreHole2_P3)
+                                if (ScoreHole5_P1 < ScoreHole5_P3)
                                 {
-                                    if (ScoreHole2_P2 < ScoreHole2_P4)
+                                    if (ScoreHole5_P2 < ScoreHole5_P4)
                                     {
-                                        Resultado2_H = ScoreHole2_P4 - ScoreHole2_P3;
+                                        Resultado5_H = ScoreHole5_P4 - ScoreHole5_P3;
                                     }
                                     else
                                     {
-                                        Resultado2_H = ScoreHole2_P3 - ScoreHole2_P3;
+                                        Resultado5_H = ScoreHole5_P3 - ScoreHole5_P3;
                                     }
                                 }
                                 else
                                 {
-                                    if (ScoreHole2_P2 < ScoreHole2_P4)
+                                    if (ScoreHole5_P2 < ScoreHole5_P4)
                                     {
-                                        Resultado2_H = ScoreHole2_P4 - ScoreHole2_P1;
+                                        Resultado5_H = ScoreHole5_P4 - ScoreHole5_P1;
                                     }
                                     else
                                     {
-                                        Resultado2_H = ScoreHole2_P2 - ScoreHole2_P1;
+                                        Resultado5_H = ScoreHole5_P2 - ScoreHole5_P1;
                                     }
                                 }
                             }
@@ -2255,53 +2254,52 @@ namespace DragonGolfBackEnd.Controllers
                         {
                             if (ValidaFront == 0)
                             {
-                                Resultado6 = ScoreHole6_P2 - ScoreHole6_P1;
+                              //  Resultado6 = ScoreHole6_P2 - ScoreHole6_P1;
 
-
-                                if (ScoreHole2_P1 > ScoreHole2_P3)
+                                if (ScoreHole6_P1 > ScoreHole6_P3)
                                 {
-                                    if (ScoreHole2_P2 > ScoreHole2_P4)
+                                    if (ScoreHole6_P2 > ScoreHole6_P4)
                                     {
-                                        Resultado2_L = ScoreHole2_P2 - ScoreHole2_P1;
+                                        Resultado6_L = ScoreHole6_P2 - ScoreHole6_P1;
                                     }
                                     else
                                     {
-                                        Resultado2_L = ScoreHole2_P4 - ScoreHole2_P1;
+                                        Resultado6_L = ScoreHole6_P4 - ScoreHole6_P1;
                                     }
                                 }
                                 else
                                 {
-                                    if (ScoreHole2_P2 > ScoreHole2_P4)
+                                    if (ScoreHole6_P2 > ScoreHole6_P4)
                                     {
-                                        Resultado2_L = ScoreHole2_P2 - ScoreHole2_P3;
+                                        Resultado6_L = ScoreHole6_P2 - ScoreHole6_P3;
                                     }
                                     else
                                     {
-                                        Resultado2_L = ScoreHole2_P4 - ScoreHole2_P3;
+                                        Resultado6_L = ScoreHole6_P4 - ScoreHole6_P3;
                                     }
                                 }
 
                                 //Bueno Vs Bueno
-                                if (ScoreHole2_P1 < ScoreHole2_P3)
+                                if (ScoreHole6_P1 < ScoreHole6_P3)
                                 {
-                                    if (ScoreHole2_P2 < ScoreHole2_P4)
+                                    if (ScoreHole6_P2 < ScoreHole6_P4)
                                     {
-                                        Resultado2_H = ScoreHole2_P4 - ScoreHole2_P3;
+                                        Resultado6_H = ScoreHole6_P4 - ScoreHole6_P3;
                                     }
                                     else
                                     {
-                                        Resultado2_H = ScoreHole2_P3 - ScoreHole2_P3;
+                                        Resultado6_H = ScoreHole6_P3 - ScoreHole6_P3;
                                     }
                                 }
                                 else
                                 {
-                                    if (ScoreHole2_P2 < ScoreHole2_P4)
+                                    if (ScoreHole6_P2 < ScoreHole6_P4)
                                     {
-                                        Resultado2_H = ScoreHole2_P4 - ScoreHole2_P1;
+                                        Resultado6_H = ScoreHole6_P4 - ScoreHole6_P1;
                                     }
                                     else
                                     {
-                                        Resultado2_H = ScoreHole2_P2 - ScoreHole2_P1;
+                                        Resultado6_H = ScoreHole6_P2 - ScoreHole6_P1;
                                     }
                                 }
                             }
@@ -2315,53 +2313,52 @@ namespace DragonGolfBackEnd.Controllers
                         {
                             if (ValidaFront == 0)
                             {
-                                Resultado7 = ScoreHole7_P2 - ScoreHole7_P1;
+                               // Resultado7 = ScoreHole7_P2 - ScoreHole7_P1;
 
-
-                                if (ScoreHole2_P1 > ScoreHole2_P3)
+                                if (ScoreHole7_P1 > ScoreHole7_P3)
                                 {
-                                    if (ScoreHole2_P2 > ScoreHole2_P4)
+                                    if (ScoreHole7_P2 > ScoreHole7_P4)
                                     {
-                                        Resultado2_L = ScoreHole2_P2 - ScoreHole2_P1;
+                                        Resultado7_L = ScoreHole7_P2 - ScoreHole7_P1;
                                     }
                                     else
                                     {
-                                        Resultado2_L = ScoreHole2_P4 - ScoreHole2_P1;
+                                        Resultado7_L = ScoreHole7_P4 - ScoreHole7_P1;
                                     }
                                 }
                                 else
                                 {
-                                    if (ScoreHole2_P2 > ScoreHole2_P4)
+                                    if (ScoreHole7_P2 > ScoreHole7_P4)
                                     {
-                                        Resultado2_L = ScoreHole2_P2 - ScoreHole2_P3;
+                                        Resultado7_L = ScoreHole7_P2 - ScoreHole7_P3;
                                     }
                                     else
                                     {
-                                        Resultado2_L = ScoreHole2_P4 - ScoreHole2_P3;
+                                        Resultado7_L = ScoreHole7_P4 - ScoreHole7_P3;
                                     }
                                 }
 
                                 //Bueno Vs Bueno
-                                if (ScoreHole2_P1 < ScoreHole2_P3)
+                                if (ScoreHole7_P1 < ScoreHole7_P3)
                                 {
-                                    if (ScoreHole2_P2 < ScoreHole2_P4)
+                                    if (ScoreHole7_P2 < ScoreHole7_P4)
                                     {
-                                        Resultado2_H = ScoreHole2_P4 - ScoreHole2_P3;
+                                        Resultado7_H = ScoreHole7_P4 - ScoreHole7_P3;
                                     }
                                     else
                                     {
-                                        Resultado2_H = ScoreHole2_P3 - ScoreHole2_P3;
+                                        Resultado7_H = ScoreHole7_P3 - ScoreHole7_P3;
                                     }
                                 }
                                 else
                                 {
-                                    if (ScoreHole2_P2 < ScoreHole2_P4)
+                                    if (ScoreHole7_P2 < ScoreHole7_P4)
                                     {
-                                        Resultado2_H = ScoreHole2_P4 - ScoreHole2_P1;
+                                        Resultado7_H = ScoreHole7_P4 - ScoreHole7_P1;
                                     }
                                     else
                                     {
-                                        Resultado2_H = ScoreHole2_P2 - ScoreHole2_P1;
+                                        Resultado7_H = ScoreHole7_P2 - ScoreHole7_P1;
                                     }
                                 }
                             }
@@ -2375,53 +2372,52 @@ namespace DragonGolfBackEnd.Controllers
                         {
                             if (ValidaFront == 0)
                             {
-                                Resultado8 = ScoreHole8_P2 - ScoreHole8_P1;
+                               // Resultado8 = ScoreHole8_P2 - ScoreHole8_P1;
 
-
-                                if (ScoreHole2_P1 > ScoreHole2_P3)
+                                if (ScoreHole8_P1 > ScoreHole8_P3)
                                 {
-                                    if (ScoreHole2_P2 > ScoreHole2_P4)
+                                    if (ScoreHole8_P2 > ScoreHole8_P4)
                                     {
-                                        Resultado2_L = ScoreHole2_P2 - ScoreHole2_P1;
+                                        Resultado8_L = ScoreHole8_P2 - ScoreHole8_P1;
                                     }
                                     else
                                     {
-                                        Resultado2_L = ScoreHole2_P4 - ScoreHole2_P1;
+                                        Resultado8_L = ScoreHole8_P4 - ScoreHole8_P1;
                                     }
                                 }
                                 else
                                 {
-                                    if (ScoreHole2_P2 > ScoreHole2_P4)
+                                    if (ScoreHole8_P2 > ScoreHole8_P4)
                                     {
-                                        Resultado2_L = ScoreHole2_P2 - ScoreHole2_P3;
+                                        Resultado8_L = ScoreHole8_P2 - ScoreHole8_P3;
                                     }
                                     else
                                     {
-                                        Resultado2_L = ScoreHole2_P4 - ScoreHole2_P3;
+                                        Resultado8_L = ScoreHole8_P4 - ScoreHole8_P3;
                                     }
                                 }
 
                                 //Bueno Vs Bueno
-                                if (ScoreHole2_P1 < ScoreHole2_P3)
+                                if (ScoreHole8_P1 < ScoreHole8_P3)
                                 {
-                                    if (ScoreHole2_P2 < ScoreHole2_P4)
+                                    if (ScoreHole8_P2 < ScoreHole8_P4)
                                     {
-                                        Resultado2_H = ScoreHole2_P4 - ScoreHole2_P3;
+                                        Resultado8_H = ScoreHole8_P4 - ScoreHole8_P3;
                                     }
                                     else
                                     {
-                                        Resultado2_H = ScoreHole2_P3 - ScoreHole2_P3;
+                                        Resultado8_H = ScoreHole8_P3 - ScoreHole8_P3;
                                     }
                                 }
                                 else
                                 {
-                                    if (ScoreHole2_P2 < ScoreHole2_P4)
+                                    if (ScoreHole8_P2 < ScoreHole8_P4)
                                     {
-                                        Resultado2_H = ScoreHole2_P4 - ScoreHole2_P1;
+                                        Resultado8_H = ScoreHole8_P4 - ScoreHole8_P1;
                                     }
                                     else
                                     {
-                                        Resultado2_H = ScoreHole2_P2 - ScoreHole2_P1;
+                                        Resultado8_H = ScoreHole8_P2 - ScoreHole8_P1;
                                     }
                                 }
                             }
@@ -2435,53 +2431,52 @@ namespace DragonGolfBackEnd.Controllers
                         {
                             if (ValidaFront == 0)
                             {
-                                Resultado9 = ScoreHole9_P2 - ScoreHole9_P1;
+                              //  Resultado9 = ScoreHole9_P2 - ScoreHole9_P1;
 
-
-                                if (ScoreHole2_P1 > ScoreHole2_P3)
+                                if (ScoreHole9_P1 > ScoreHole9_P3)
                                 {
-                                    if (ScoreHole2_P2 > ScoreHole2_P4)
+                                    if (ScoreHole9_P2 > ScoreHole9_P4)
                                     {
-                                        Resultado2_L = ScoreHole2_P2 - ScoreHole2_P1;
+                                        Resultado9_L = ScoreHole9_P2 - ScoreHole9_P1;
                                     }
                                     else
                                     {
-                                        Resultado2_L = ScoreHole2_P4 - ScoreHole2_P1;
+                                        Resultado9_L = ScoreHole9_P4 - ScoreHole9_P1;
                                     }
                                 }
                                 else
                                 {
-                                    if (ScoreHole2_P2 > ScoreHole2_P4)
+                                    if (ScoreHole9_P2 > ScoreHole9_P4)
                                     {
-                                        Resultado2_L = ScoreHole2_P2 - ScoreHole2_P3;
+                                        Resultado9_L = ScoreHole9_P2 - ScoreHole9_P3;
                                     }
                                     else
                                     {
-                                        Resultado2_L = ScoreHole2_P4 - ScoreHole2_P3;
+                                        Resultado9_L = ScoreHole9_P4 - ScoreHole9_P3;
                                     }
                                 }
 
                                 //Bueno Vs Bueno
-                                if (ScoreHole2_P1 < ScoreHole2_P3)
+                                if (ScoreHole9_P1 < ScoreHole9_P3)
                                 {
-                                    if (ScoreHole2_P2 < ScoreHole2_P4)
+                                    if (ScoreHole9_P2 < ScoreHole9_P4)
                                     {
-                                        Resultado2_H = ScoreHole2_P4 - ScoreHole2_P3;
+                                        Resultado9_H = ScoreHole9_P4 - ScoreHole9_P3;
                                     }
                                     else
                                     {
-                                        Resultado2_H = ScoreHole2_P3 - ScoreHole2_P3;
+                                        Resultado9_H = ScoreHole9_P3 - ScoreHole9_P3;
                                     }
                                 }
                                 else
                                 {
-                                    if (ScoreHole2_P2 < ScoreHole2_P4)
+                                    if (ScoreHole9_P2 < ScoreHole9_P4)
                                     {
-                                        Resultado2_H = ScoreHole2_P4 - ScoreHole2_P1;
+                                        Resultado9_H = ScoreHole9_P4 - ScoreHole9_P1;
                                     }
                                     else
                                     {
-                                        Resultado2_H = ScoreHole2_P2 - ScoreHole2_P1;
+                                        Resultado9_H = ScoreHole9_P2 - ScoreHole9_P1;
                                     }
                                 }
                             }
@@ -2492,88 +2487,176 @@ namespace DragonGolfBackEnd.Controllers
                             ValidaFront = 1;
                         }
 
-
+                        
                         //Quien Gano, no lo sabemos
 
                         int ContadorHoyos = 0;
-
-                        if (Resultado1 > 0)
+                        //Resultado 1
+                        if (Resultado1_H > 0)
                         {
                             ContadorHoyos = ContadorHoyos + 1;
                         }
-                        else if (Resultado1 < 0)
+                        else if (Resultado1_H < 0)
                         {
                             ContadorHoyos = ContadorHoyos - 1;
                         }
 
-                        if (Resultado2 > 0)
+                        if (Resultado1_L > 0)
                         {
                             ContadorHoyos = ContadorHoyos + 1;
                         }
-                        else if (Resultado2 < 0)
+                        else if (Resultado1_L < 0)
+                        {
+                            ContadorHoyos = ContadorHoyos - 1;
+                        }
+                        //Resultado 2
+                        if (Resultado2_H > 0)
+                        {
+                            ContadorHoyos = ContadorHoyos + 1;
+                        }
+                        else if (Resultado2_H < 0)
                         {
                             ContadorHoyos = ContadorHoyos - 1;
                         }
 
-                        if (Resultado3 > 0)
+                        if (Resultado2_L > 0)
                         {
                             ContadorHoyos = ContadorHoyos + 1;
                         }
-                        else if (Resultado3 < 0)
+                        else if (Resultado2_L < 0)
                         {
                             ContadorHoyos = ContadorHoyos - 1;
                         }
 
-                        if (Resultado4 > 0)
+                        //Resultado 3
+                        if (Resultado3_H > 0)
                         {
                             ContadorHoyos = ContadorHoyos + 1;
                         }
-                        else if (Resultado4 < 0)
+                        else if (Resultado3_H < 0)
                         {
                             ContadorHoyos = ContadorHoyos - 1;
                         }
 
-                        if (Resultado5 > 0)
+                        if (Resultado3_L > 0)
                         {
                             ContadorHoyos = ContadorHoyos + 1;
                         }
-                        else if (Resultado5 < 0)
+                        else if (Resultado3_L < 0)
                         {
                             ContadorHoyos = ContadorHoyos - 1;
                         }
 
-                        if (Resultado6 > 0)
+                        //Resultado 4
+                        if (Resultado4_H > 0)
                         {
                             ContadorHoyos = ContadorHoyos + 1;
                         }
-                        else if (Resultado6 < 0)
+                        else if (Resultado4_H < 0)
                         {
                             ContadorHoyos = ContadorHoyos - 1;
                         }
 
-                        if (Resultado7 > 0)
+                        if (Resultado4_L > 0)
                         {
                             ContadorHoyos = ContadorHoyos + 1;
                         }
-                        else if (Resultado7 < 0)
+                        else if (Resultado4_L < 0)
                         {
                             ContadorHoyos = ContadorHoyos - 1;
                         }
 
-                        if (Resultado8 > 0)
+                        //Resultado 5
+                        if (Resultado5_H > 0)
                         {
                             ContadorHoyos = ContadorHoyos + 1;
                         }
-                        else if (Resultado8 < 0)
+                        else if (Resultado5_H < 0)
                         {
                             ContadorHoyos = ContadorHoyos - 1;
                         }
 
-                        if (Resultado9 > 0)
+                        if (Resultado5_L > 0)
                         {
                             ContadorHoyos = ContadorHoyos + 1;
                         }
-                        else if (Resultado9 < 0)
+                        else if (Resultado5_L < 0)
+                        {
+                            ContadorHoyos = ContadorHoyos - 1;
+                        }
+
+                        //Resultado 6
+                        if (Resultado6_H > 0)
+                        {
+                            ContadorHoyos = ContadorHoyos + 1;
+                        }
+                        else if (Resultado6_H < 0)
+                        {
+                            ContadorHoyos = ContadorHoyos - 1;
+                        }
+
+                        if (Resultado6_L > 0)
+                        {
+                            ContadorHoyos = ContadorHoyos + 1;
+                        }
+                        else if (Resultado6_L < 0)
+                        {
+                            ContadorHoyos = ContadorHoyos - 1;
+                        }
+
+                        //Resultado 7
+                        if (Resultado7_H > 0)
+                        {
+                            ContadorHoyos = ContadorHoyos + 1;
+                        }
+                        else if (Resultado7_H < 0)
+                        {
+                            ContadorHoyos = ContadorHoyos - 1;
+                        }
+
+                        if (Resultado7_L > 0)
+                        {
+                            ContadorHoyos = ContadorHoyos + 1;
+                        }
+                        else if (Resultado7_L < 0)
+                        {
+                            ContadorHoyos = ContadorHoyos - 1;
+                        }
+
+                        //Resultado 8
+                        if (Resultado8_H > 0)
+                        {
+                            ContadorHoyos = ContadorHoyos + 1;
+                        }
+                        else if (Resultado8_H < 0)
+                        {
+                            ContadorHoyos = ContadorHoyos - 1;
+                        }
+
+                        if (Resultado8_L > 0)
+                        {
+                            ContadorHoyos = ContadorHoyos + 1;
+                        }
+                        else if (Resultado8_L < 0)
+                        {
+                            ContadorHoyos = ContadorHoyos - 1;
+                        }
+
+                        //Resultado )
+                        if (Resultado9_H > 0)
+                        {
+                            ContadorHoyos = ContadorHoyos + 1;
+                        }
+                        else if (Resultado9_H < 0)
+                        {
+                            ContadorHoyos = ContadorHoyos - 1;
+                        }
+
+                        if (Resultado9_L > 0)
+                        {
+                            ContadorHoyos = ContadorHoyos + 1;
+                        }
+                        else if (Resultado9_L < 0)
                         {
                             ContadorHoyos = ContadorHoyos - 1;
                         }
@@ -2594,24 +2677,82 @@ namespace DragonGolfBackEnd.Controllers
                         }
 
 
-                        int Resultado10 = 0;
-                        int Resultado11 = 0;
-                        int Resultado12 = 0;
-                        int Resultado13 = 0;
-                        int Resultado14 = 0;
-                        int Resultado15 = 0;
-                        int Resultado16 = 0;
-                        int Resultado17 = 0;
-                        int Resultado18 = 0;
+                        int Resultado10_H = 0;
+                        int Resultado11_H = 0;
+                        int Resultado12_H = 0;
+                        int Resultado13_H = 0;
+                        int Resultado14_H = 0;
+                        int Resultado15_H = 0;
+                        int Resultado16_H = 0;
+                        int Resultado17_H = 0;
+                        int Resultado18_H = 0;
+
+                        int Resultado10_L = 0;
+                        int Resultado11_L = 0;
+                        int Resultado12_L = 0;
+                        int Resultado13_L = 0;
+                        int Resultado14_L = 0;
+                        int Resultado15_L = 0;
+                        int Resultado16_L = 0;
+                        int Resultado17_L = 0;
+                        int Resultado18_L = 0;
 
 
                         int ValidaBack = 0;
 
-                        if (ScoreHole10_P1 > 0 && ScoreHole10_P2 > 0)
+                        if (ScoreHole10_P1 > 0 && ScoreHole10_P2 > 0 && ScoreHole10_P3 > 0 && ScoreHole10_P4 > 0)
                         {
                             if (ValidaBack == 0)
                             {
-                                Resultado10 = ScoreHole10_P2 - ScoreHole10_P1;
+                               // Resultado10 = ScoreHole10_P2 - ScoreHole10_P1;
+
+                                if (ScoreHole10_P1 > ScoreHole10_P3)
+                                {
+                                    if (ScoreHole10_P2 > ScoreHole10_P4)
+                                    {
+                                        Resultado10_L = ScoreHole10_P2 - ScoreHole10_P1;
+                                    }
+                                    else
+                                    {
+                                        Resultado10_L = ScoreHole10_P4 - ScoreHole10_P1;
+                                    }
+                                }
+                                else
+                                {
+                                    if (ScoreHole10_P2 > ScoreHole10_P4)
+                                    {
+                                        Resultado10_L = ScoreHole10_P2 - ScoreHole10_P3;
+                                    }
+                                    else
+                                    {
+                                        Resultado10_L = ScoreHole10_P4 - ScoreHole10_P3;
+                                    }
+                                }
+
+                                //Bueno Vs Bueno
+                                if (ScoreHole10_P1 < ScoreHole10_P3)
+                                {
+                                    if (ScoreHole10_P2 < ScoreHole10_P4)
+                                    {
+                                        Resultado10_H = ScoreHole10_P4 - ScoreHole10_P3;
+                                    }
+                                    else
+                                    {
+                                        Resultado10_H = ScoreHole10_P3 - ScoreHole10_P3;
+                                    }
+                                }
+                                else
+                                {
+                                    if (ScoreHole10_P2 < ScoreHole10_P4)
+                                    {
+                                        Resultado10_H = ScoreHole10_P4 - ScoreHole10_P1;
+                                    }
+                                    else
+                                    {
+                                        Resultado10_H = ScoreHole10_P2 - ScoreHole10_P1;
+                                    }
+                                }
+
                             }
                         }
                         else
@@ -2619,11 +2760,58 @@ namespace DragonGolfBackEnd.Controllers
                             ValidaBack = 1;
                         }
 
-                        if (ScoreHole11_P1 > 0 && ScoreHole11_P2 > 0)
+                        if (ScoreHole11_P1 > 0 && ScoreHole11_P2 > 0 && ScoreHole11_P3 > 0 && ScoreHole11_P4 > 0)
                         {
                             if (ValidaBack == 0)
                             {
-                                Resultado11 = ScoreHole11_P2 - ScoreHole11_P1;
+                                //Resultado11 = ScoreHole11_P2 - ScoreHole11_P1;
+
+                                if (ScoreHole11_P1 > ScoreHole11_P3)
+                                {
+                                    if (ScoreHole11_P2 > ScoreHole11_P4)
+                                    {
+                                        Resultado11_L = ScoreHole11_P2 - ScoreHole11_P1;
+                                    }
+                                    else
+                                    {
+                                        Resultado11_L = ScoreHole11_P4 - ScoreHole11_P1;
+                                    }
+                                }
+                                else
+                                {
+                                    if (ScoreHole11_P2 > ScoreHole11_P4)
+                                    {
+                                        Resultado11_L = ScoreHole11_P2 - ScoreHole11_P3;
+                                    }
+                                    else
+                                    {
+                                        Resultado11_L = ScoreHole11_P4 - ScoreHole11_P3;
+                                    }
+                                }
+
+                                //Bueno Vs Bueno
+                                if (ScoreHole11_P1 < ScoreHole11_P3)
+                                {
+                                    if (ScoreHole11_P2 < ScoreHole11_P4)
+                                    {
+                                        Resultado11_H = ScoreHole11_P4 - ScoreHole11_P3;
+                                    }
+                                    else
+                                    {
+                                        Resultado11_H = ScoreHole11_P3 - ScoreHole11_P3;
+                                    }
+                                }
+                                else
+                                {
+                                    if (ScoreHole11_P2 < ScoreHole11_P4)
+                                    {
+                                        Resultado11_H = ScoreHole11_P4 - ScoreHole11_P1;
+                                    }
+                                    else
+                                    {
+                                        Resultado11_H = ScoreHole11_P2 - ScoreHole11_P1;
+                                    }
+                                }
                             }
                         }
                         else
@@ -2631,11 +2819,58 @@ namespace DragonGolfBackEnd.Controllers
                             ValidaBack = 1;
                         }
 
-                        if (ScoreHole12_P1 > 0 && ScoreHole12_P2 > 0)
+                        if (ScoreHole12_P1 > 0 && ScoreHole12_P2 > 0 && ScoreHole12_P3 > 0 && ScoreHole12_P4 > 0)
                         {
                             if (ValidaBack == 0)
                             {
-                                Resultado12 = ScoreHole12_P2 - ScoreHole12_P1;
+                               // Resultado12 = ScoreHole12_P2 - ScoreHole12_P1;
+
+                                if (ScoreHole12_P1 > ScoreHole12_P3)
+                                {
+                                    if (ScoreHole12_P2 > ScoreHole12_P4)
+                                    {
+                                        Resultado12_L = ScoreHole12_P2 - ScoreHole12_P1;
+                                    }
+                                    else
+                                    {
+                                        Resultado12_L = ScoreHole12_P4 - ScoreHole12_P1;
+                                    }
+                                }
+                                else
+                                {
+                                    if (ScoreHole12_P2 > ScoreHole12_P4)
+                                    {
+                                        Resultado12_L = ScoreHole12_P2 - ScoreHole12_P3;
+                                    }
+                                    else
+                                    {
+                                        Resultado12_L = ScoreHole12_P4 - ScoreHole12_P3;
+                                    }
+                                }
+
+                                //Bueno Vs Bueno
+                                if (ScoreHole12_P1 < ScoreHole12_P3)
+                                {
+                                    if (ScoreHole12_P2 < ScoreHole12_P4)
+                                    {
+                                        Resultado12_H = ScoreHole12_P4 - ScoreHole12_P3;
+                                    }
+                                    else
+                                    {
+                                        Resultado12_H = ScoreHole12_P3 - ScoreHole12_P3;
+                                    }
+                                }
+                                else
+                                {
+                                    if (ScoreHole12_P2 < ScoreHole12_P4)
+                                    {
+                                        Resultado12_H = ScoreHole12_P4 - ScoreHole12_P1;
+                                    }
+                                    else
+                                    {
+                                        Resultado12_H = ScoreHole12_P2 - ScoreHole12_P1;
+                                    }
+                                }
                             }
                         }
                         else
@@ -2643,11 +2878,58 @@ namespace DragonGolfBackEnd.Controllers
                             ValidaBack = 1;
                         }
 
-                        if (ScoreHole13_P1 > 0 && ScoreHole13_P2 > 0)
+                        if (ScoreHole13_P1 > 0 && ScoreHole13_P2 > 0 && ScoreHole13_P3 > 0 && ScoreHole13_P4 > 0)
                         {
                             if (ValidaBack == 0)
                             {
-                                Resultado13 = ScoreHole13_P2 - ScoreHole13_P1;
+                               // Resultado13 = ScoreHole13_P2 - ScoreHole13_P1;
+
+                                if (ScoreHole13_P1 > ScoreHole13_P3)
+                                {
+                                    if (ScoreHole13_P2 > ScoreHole13_P4)
+                                    {
+                                        Resultado13_L = ScoreHole13_P2 - ScoreHole13_P1;
+                                    }
+                                    else
+                                    {
+                                        Resultado13_L = ScoreHole13_P4 - ScoreHole13_P1;
+                                    }
+                                }
+                                else
+                                {
+                                    if (ScoreHole13_P2 > ScoreHole13_P4)
+                                    {
+                                        Resultado13_L = ScoreHole13_P2 - ScoreHole13_P3;
+                                    }
+                                    else
+                                    {
+                                        Resultado13_L = ScoreHole13_P4 - ScoreHole13_P3;
+                                    }
+                                }
+
+                                //Bueno Vs Bueno
+                                if (ScoreHole13_P1 < ScoreHole13_P3)
+                                {
+                                    if (ScoreHole13_P2 < ScoreHole13_P4)
+                                    {
+                                        Resultado13_H = ScoreHole13_P4 - ScoreHole13_P3;
+                                    }
+                                    else
+                                    {
+                                        Resultado13_H = ScoreHole13_P3 - ScoreHole13_P3;
+                                    }
+                                }
+                                else
+                                {
+                                    if (ScoreHole13_P2 < ScoreHole13_P4)
+                                    {
+                                        Resultado13_H = ScoreHole13_P4 - ScoreHole13_P1;
+                                    }
+                                    else
+                                    {
+                                        Resultado13_H = ScoreHole13_P2 - ScoreHole13_P1;
+                                    }
+                                }
                             }
                         }
                         else
@@ -2655,11 +2937,58 @@ namespace DragonGolfBackEnd.Controllers
                             ValidaBack = 1;
                         }
 
-                        if (ScoreHole14_P1 > 0 && ScoreHole14_P2 > 0)
+                        if (ScoreHole14_P1 > 0 && ScoreHole14_P2 > 0 && ScoreHole14_P3 > 0 && ScoreHole14_P4 > 0)
                         {
                             if (ValidaFront == 0)
                             {
-                                Resultado14 = ScoreHole14_P2 - ScoreHole14_P1;
+                               // Resultado14 = ScoreHole14_P2 - ScoreHole14_P1;
+
+                                if (ScoreHole14_P1 > ScoreHole14_P3)
+                                {
+                                    if (ScoreHole14_P2 > ScoreHole14_P4)
+                                    {
+                                        Resultado14_L = ScoreHole14_P2 - ScoreHole14_P1;
+                                    }
+                                    else
+                                    {
+                                        Resultado14_L = ScoreHole14_P4 - ScoreHole14_P1;
+                                    }
+                                }
+                                else
+                                {
+                                    if (ScoreHole14_P2 > ScoreHole14_P4)
+                                    {
+                                        Resultado14_L = ScoreHole14_P2 - ScoreHole14_P3;
+                                    }
+                                    else
+                                    {
+                                        Resultado14_L = ScoreHole14_P4 - ScoreHole14_P3;
+                                    }
+                                }
+
+                                //Bueno Vs Bueno
+                                if (ScoreHole14_P1 < ScoreHole14_P3)
+                                {
+                                    if (ScoreHole14_P2 < ScoreHole14_P4)
+                                    {
+                                        Resultado14_H = ScoreHole14_P4 - ScoreHole14_P3;
+                                    }
+                                    else
+                                    {
+                                        Resultado14_H = ScoreHole14_P3 - ScoreHole14_P3;
+                                    }
+                                }
+                                else
+                                {
+                                    if (ScoreHole14_P2 < ScoreHole14_P4)
+                                    {
+                                        Resultado14_H = ScoreHole14_P4 - ScoreHole14_P1;
+                                    }
+                                    else
+                                    {
+                                        Resultado14_H = ScoreHole14_P2 - ScoreHole14_P1;
+                                    }
+                                }
                             }
                         }
                         else
@@ -2667,11 +2996,58 @@ namespace DragonGolfBackEnd.Controllers
                             ValidaBack = 1;
                         }
 
-                        if (ScoreHole15_P1 > 0 && ScoreHole15_P2 > 0)
+                        if (ScoreHole15_P1 > 0 && ScoreHole15_P2 > 0 && ScoreHole15_P3 > 0 && ScoreHole15_P4 > 0)
                         {
                             if (ValidaBack == 0)
                             {
-                                Resultado15 = ScoreHole15_P2 - ScoreHole15_P1;
+                               // Resultado15 = ScoreHole15_P2 - ScoreHole15_P1;
+
+                                if (ScoreHole15_P1 > ScoreHole15_P3)
+                                {
+                                    if (ScoreHole15_P2 > ScoreHole15_P4)
+                                    {
+                                        Resultado15_L = ScoreHole15_P2 - ScoreHole15_P1;
+                                    }
+                                    else
+                                    {
+                                        Resultado15_L = ScoreHole15_P4 - ScoreHole15_P1;
+                                    }
+                                }
+                                else
+                                {
+                                    if (ScoreHole15_P2 > ScoreHole15_P4)
+                                    {
+                                        Resultado15_L = ScoreHole15_P2 - ScoreHole15_P3;
+                                    }
+                                    else
+                                    {
+                                        Resultado15_L = ScoreHole15_P4 - ScoreHole15_P3;
+                                    }
+                                }
+
+                                //Bueno Vs Bueno
+                                if (ScoreHole15_P1 < ScoreHole15_P3)
+                                {
+                                    if (ScoreHole15_P2 < ScoreHole15_P4)
+                                    {
+                                        Resultado15_H = ScoreHole15_P4 - ScoreHole15_P3;
+                                    }
+                                    else
+                                    {
+                                        Resultado15_H = ScoreHole15_P3 - ScoreHole15_P3;
+                                    }
+                                }
+                                else
+                                {
+                                    if (ScoreHole15_P2 < ScoreHole15_P4)
+                                    {
+                                        Resultado15_H = ScoreHole15_P4 - ScoreHole15_P1;
+                                    }
+                                    else
+                                    {
+                                        Resultado15_H = ScoreHole15_P2 - ScoreHole15_P1;
+                                    }
+                                }
                             }
                         }
                         else
@@ -2679,11 +3055,58 @@ namespace DragonGolfBackEnd.Controllers
                             ValidaBack = 1;
                         }
 
-                        if (ScoreHole16_P1 > 0 && ScoreHole16_P2 > 0)
+                        if (ScoreHole16_P1 > 0 && ScoreHole16_P2 > 0 && ScoreHole16_P3 > 0 && ScoreHole16_P4 > 0)
                         {
                             if (ValidaBack == 0)
                             {
-                                Resultado16 = ScoreHole16_P2 - ScoreHole16_P1;
+                               // Resultado16 = ScoreHole16_P2 - ScoreHole16_P1;
+
+                                if (ScoreHole16_P1 > ScoreHole16_P3)
+                                {
+                                    if (ScoreHole16_P2 > ScoreHole16_P4)
+                                    {
+                                        Resultado16_L = ScoreHole16_P2 - ScoreHole16_P1;
+                                    }
+                                    else
+                                    {
+                                        Resultado16_L = ScoreHole16_P4 - ScoreHole16_P1;
+                                    }
+                                }
+                                else
+                                {
+                                    if (ScoreHole16_P2 > ScoreHole16_P4)
+                                    {
+                                        Resultado16_L = ScoreHole16_P2 - ScoreHole16_P3;
+                                    }
+                                    else
+                                    {
+                                        Resultado16_L = ScoreHole16_P4 - ScoreHole16_P3;
+                                    }
+                                }
+
+                                //Bueno Vs Bueno
+                                if (ScoreHole16_P1 < ScoreHole16_P3)
+                                {
+                                    if (ScoreHole16_P2 < ScoreHole16_P4)
+                                    {
+                                        Resultado16_H = ScoreHole16_P4 - ScoreHole16_P3;
+                                    }
+                                    else
+                                    {
+                                        Resultado16_H = ScoreHole16_P3 - ScoreHole16_P3;
+                                    }
+                                }
+                                else
+                                {
+                                    if (ScoreHole16_P2 < ScoreHole16_P4)
+                                    {
+                                        Resultado16_H = ScoreHole16_P4 - ScoreHole16_P1;
+                                    }
+                                    else
+                                    {
+                                        Resultado16_H = ScoreHole16_P2 - ScoreHole16_P1;
+                                    }
+                                }
                             }
                         }
                         else
@@ -2691,11 +3114,58 @@ namespace DragonGolfBackEnd.Controllers
                             ValidaBack = 1;
                         }
 
-                        if (ScoreHole17_P1 > 0 && ScoreHole17_P2 > 0)
+                        if (ScoreHole17_P1 > 0 && ScoreHole17_P2 > 0 && ScoreHole17_P3 > 0 && ScoreHole17_P4 > 0)
                         {
                             if (ValidaBack == 0)
                             {
-                                Resultado17 = ScoreHole17_P2 - ScoreHole17_P1;
+                               // Resultado17 = ScoreHole17_P2 - ScoreHole17_P1;
+
+                                if (ScoreHole17_P1 > ScoreHole17_P3)
+                                {
+                                    if (ScoreHole17_P2 > ScoreHole17_P4)
+                                    {
+                                        Resultado17_L = ScoreHole17_P2 - ScoreHole17_P1;
+                                    }
+                                    else
+                                    {
+                                        Resultado17_L = ScoreHole17_P4 - ScoreHole17_P1;
+                                    }
+                                }
+                                else
+                                {
+                                    if (ScoreHole17_P2 > ScoreHole17_P4)
+                                    {
+                                        Resultado17_L = ScoreHole17_P2 - ScoreHole17_P3;
+                                    }
+                                    else
+                                    {
+                                        Resultado17_L = ScoreHole17_P4 - ScoreHole17_P3;
+                                    }
+                                }
+
+                                //Bueno Vs Bueno
+                                if (ScoreHole17_P1 < ScoreHole17_P3)
+                                {
+                                    if (ScoreHole17_P2 < ScoreHole17_P4)
+                                    {
+                                        Resultado17_H = ScoreHole17_P4 - ScoreHole17_P3;
+                                    }
+                                    else
+                                    {
+                                        Resultado17_H = ScoreHole17_P3 - ScoreHole17_P3;
+                                    }
+                                }
+                                else
+                                {
+                                    if (ScoreHole17_P2 < ScoreHole17_P4)
+                                    {
+                                        Resultado17_H = ScoreHole17_P4 - ScoreHole17_P1;
+                                    }
+                                    else
+                                    {
+                                        Resultado17_H = ScoreHole17_P2 - ScoreHole17_P1;
+                                    }
+                                }
                             }
                         }
                         else
@@ -2703,93 +3173,233 @@ namespace DragonGolfBackEnd.Controllers
                             ValidaBack = 1;
                         }
 
-                        if (ScoreHole18_P1 > 0 && ScoreHole18_P2 > 0)
+                        if (ScoreHole18_P1 > 0 && ScoreHole18_P2 > 0 && ScoreHole18_P3 > 0 && ScoreHole18_P4 > 0)
                         {
                             if (ValidaBack == 0)
                             {
-                                Resultado18 = ScoreHole18_P2 - ScoreHole18_P1;
+                                //Resultado18 = ScoreHole18_P2 - ScoreHole18_P1;
+
+                                if (ScoreHole18_P1 > ScoreHole18_P3)
+                                {
+                                    if (ScoreHole18_P2 > ScoreHole18_P4)
+                                    {
+                                        Resultado18_L = ScoreHole18_P2 - ScoreHole18_P1;
+                                    }
+                                    else
+                                    {
+                                        Resultado18_L = ScoreHole18_P4 - ScoreHole18_P1;
+                                    }
+                                }
+                                else
+                                {
+                                    if (ScoreHole18_P2 > ScoreHole18_P4)
+                                    {
+                                        Resultado18_L = ScoreHole18_P2 - ScoreHole18_P3;
+                                    }
+                                    else
+                                    {
+                                        Resultado18_L = ScoreHole18_P4 - ScoreHole18_P3;
+                                    }
+                                }
+
+                                //Bueno Vs Bueno
+                                if (ScoreHole18_P1 < ScoreHole18_P3)
+                                {
+                                    if (ScoreHole18_P2 < ScoreHole18_P4)
+                                    {
+                                        Resultado18_H = ScoreHole18_P4 - ScoreHole18_P3;
+                                    }
+                                    else
+                                    {
+                                        Resultado18_H = ScoreHole18_P3 - ScoreHole18_P3;
+                                    }
+                                }
+                                else
+                                {
+                                    if (ScoreHole18_P2 < ScoreHole18_P4)
+                                    {
+                                        Resultado18_H = ScoreHole18_P4 - ScoreHole18_P1;
+                                    }
+                                    else
+                                    {
+                                        Resultado18_H = ScoreHole18_P2 - ScoreHole18_P1;
+                                    }
+                                }
                             }
 
                         }
+                        else
+                        {
+                            ValidaBack = 1;
+                        }
 
-
-                        if (Resultado10 > 0)
+                        //Resultado 10
+                        if (Resultado10_H > 0)
                         {
                             ContadorHoyos = ContadorHoyos + 1;
                         }
-                        else if (Resultado10 < 0)
+                        else if (Resultado10_H < 0)
                         {
                             ContadorHoyos = ContadorHoyos - 1;
                         }
 
-                        if (Resultado11 > 0)
+                        if (Resultado10_L > 0)
                         {
                             ContadorHoyos = ContadorHoyos + 1;
                         }
-                        else if (Resultado11 < 0)
+                        else if (Resultado10_L < 0)
                         {
                             ContadorHoyos = ContadorHoyos - 1;
                         }
 
-                        if (Resultado12 > 0)
+                        //Resultado 11
+                        if (Resultado11_H > 0)
                         {
                             ContadorHoyos = ContadorHoyos + 1;
                         }
-                        else if (Resultado12 < 0)
+                        else if (Resultado11_H < 0)
                         {
                             ContadorHoyos = ContadorHoyos - 1;
                         }
 
-                        if (Resultado13 > 0)
+                        if (Resultado11_L > 0)
                         {
                             ContadorHoyos = ContadorHoyos + 1;
                         }
-                        else if (Resultado13 < 0)
+                        else if (Resultado11_L < 0)
                         {
                             ContadorHoyos = ContadorHoyos - 1;
                         }
 
-                        if (Resultado14 > 0)
+                        //Resultado 12
+                        if (Resultado12_H > 0)
                         {
                             ContadorHoyos = ContadorHoyos + 1;
                         }
-                        else if (Resultado14 < 0)
+                        else if (Resultado12_H < 0)
                         {
                             ContadorHoyos = ContadorHoyos - 1;
                         }
 
-                        if (Resultado15 > 0)
+                        if (Resultado12_L > 0)
                         {
                             ContadorHoyos = ContadorHoyos + 1;
                         }
-                        else if (Resultado15 < 0)
+                        else if (Resultado12_L < 0)
                         {
                             ContadorHoyos = ContadorHoyos - 1;
                         }
 
-                        if (Resultado16 > 0)
+                        //Resultado 13
+                        if (Resultado13_H > 0)
                         {
                             ContadorHoyos = ContadorHoyos + 1;
                         }
-                        else if (Resultado16 < 0)
+                        else if (Resultado13_H < 0)
                         {
                             ContadorHoyos = ContadorHoyos - 1;
                         }
 
-                        if (Resultado17 > 0)
+                        if (Resultado13_L > 0)
                         {
                             ContadorHoyos = ContadorHoyos + 1;
                         }
-                        else if (Resultado17 < 0)
+                        else if (Resultado13_L < 0)
                         {
                             ContadorHoyos = ContadorHoyos - 1;
                         }
 
-                        if (Resultado18 > 0)
+                        //Resultado 14
+                        if (Resultado14_H > 0)
                         {
                             ContadorHoyos = ContadorHoyos + 1;
                         }
-                        else if (Resultado18 < 0)
+                        else if (Resultado14_H < 0)
+                        {
+                            ContadorHoyos = ContadorHoyos - 1;
+                        }
+
+                        if (Resultado14_L > 0)
+                        {
+                            ContadorHoyos = ContadorHoyos + 1;
+                        }
+                        else if (Resultado14_L < 0)
+                        {
+                            ContadorHoyos = ContadorHoyos - 1;
+                        }
+
+                        //Resultado 15
+                        if (Resultado15_H > 0)
+                        {
+                            ContadorHoyos = ContadorHoyos + 1;
+                        }
+                        else if (Resultado15_H < 0)
+                        {
+                            ContadorHoyos = ContadorHoyos - 1;
+                        }
+
+                        if (Resultado15_L > 0)
+                        {
+                            ContadorHoyos = ContadorHoyos + 1;
+                        }
+                        else if (Resultado15_L < 0)
+                        {
+                            ContadorHoyos = ContadorHoyos - 1;
+                        }
+
+                        //Resultado 16
+                        if (Resultado16_H > 0)
+                        {
+                            ContadorHoyos = ContadorHoyos + 1;
+                        }
+                        else if (Resultado16_H < 0)
+                        {
+                            ContadorHoyos = ContadorHoyos - 1;
+                        }
+
+                        if (Resultado16_L > 0)
+                        {
+                            ContadorHoyos = ContadorHoyos + 1;
+                        }
+                        else if (Resultado16_L < 0)
+                        {
+                            ContadorHoyos = ContadorHoyos - 1;
+                        }
+
+                        //Resultado 17
+                        if (Resultado17_H > 0)
+                        {
+                            ContadorHoyos = ContadorHoyos + 1;
+                        }
+                        else if (Resultado17_H < 0)
+                        {
+                            ContadorHoyos = ContadorHoyos - 1;
+                        }
+
+                        if (Resultado17_L > 0)
+                        {
+                            ContadorHoyos = ContadorHoyos + 1;
+                        }
+                        else if (Resultado17_L < 0)
+                        {
+                            ContadorHoyos = ContadorHoyos - 1;
+                        }
+
+                        //Resultado 18
+                        if (Resultado18_H > 0)
+                        {
+                            ContadorHoyos = ContadorHoyos + 1;
+                        }
+                        else if (Resultado18_H < 0)
+                        {
+                            ContadorHoyos = ContadorHoyos - 1;
+                        }
+
+                        if (Resultado18_L > 0)
+                        {
+                            ContadorHoyos = ContadorHoyos + 1;
+                        }
+                        else if (Resultado18_L < 0)
                         {
                             ContadorHoyos = ContadorHoyos - 1;
                         }
@@ -2838,44 +3448,7 @@ namespace DragonGolfBackEnd.Controllers
                         string BetD_B9_8 = "";
                         string BetD_B9_9 = "";
 
-
-                        if (AutoPress == 1)
-                        {
-                            ResultFront = CalcularApuestaPresionFront1(Resultado1, Resultado2, Resultado3, Resultado4, Resultado5,
-                              Resultado6, Resultado7, Resultado8, Resultado9, ValidaJuegoInicio);
-
-                            ResultBack = CalcularApuestaPresionBack1(Resultado10, Resultado11, Resultado12, Resultado13,
-                              Resultado14, Resultado15, Resultado16, Resultado17, Resultado18, ValidaJuegoInicio);
-
-                            string[] FrontValores = ResultFront[0].Split(',');
-                            string[] BackValores = ResultBack[0].Split(',');
-
-                            BetD_F9_1 = Convert.ToString(FrontValores[0]);
-                            BetD_F9_2 = Convert.ToString(FrontValores[1]);
-                            BetD_F9_3 = Convert.ToString(FrontValores[2]);
-                            BetD_F9_4 = Convert.ToString(FrontValores[3]);
-                            BetD_F9_5 = Convert.ToString(FrontValores[4]);
-                            BetD_F9_6 = Convert.ToString(FrontValores[5]);
-                            BetD_F9_7 = Convert.ToString(FrontValores[6]);
-                            BetD_F9_8 = Convert.ToString(FrontValores[7]);
-                            BetD_F9_9 = Convert.ToString(FrontValores[8]);
-                            BetD_B9_1 = Convert.ToString(BackValores[0]);
-                            BetD_B9_2 = Convert.ToString(BackValores[1]);
-                            BetD_B9_3 = Convert.ToString(BackValores[2]);
-                            BetD_B9_4 = Convert.ToString(BackValores[3]);
-                            BetD_B9_5 = Convert.ToString(BackValores[4]);
-                            BetD_B9_6 = Convert.ToString(BackValores[5]);
-                            BetD_B9_7 = Convert.ToString(BackValores[6]);
-                            BetD_B9_8 = Convert.ToString(BackValores[7]);
-                            BetD_B9_9 = Convert.ToString(BackValores[8]);
-
-                            ActualizarAPuesta(Datos.IDBetDetail, Datos.IDBet, Datos.IDRonda, PlayerID1, PlayerID2, BetD_F9_1, BetD_F9_2, BetD_F9_3, BetD_F9_4, BetD_F9_5, BetD_F9_6,
-                                            BetD_F9_7, BetD_F9_8, BetD_F9_9, BetD_B9_1, BetD_B9_2, BetD_B9_3, BetD_B9_4, BetD_B9_5, BetD_B9_6, BetD_B9_7, BetD_B9_8, BetD_B9_9, ResultadoFinalMedal, ContadorHoyos,
-                                            ResultFront[1], ResultFront[2], ResultFront[3], ResultFront[4], ResultFront[5], ResultFront[6], ResultFront[7], ResultFront[8], ResultFront[9],
-                                            ResultBack[1], ResultBack[2], ResultBack[3], ResultBack[4], ResultBack[5], ResultBack[6], ResultBack[7], ResultBack[8], ResultBack[9], 1, ValidaJuegoInicio);
-
-                        }
-                        else if (AutoPress == 2)
+                    if (AutoPress == 2)
                         {
                             ResultFront = CalcularApuestaPresionFront2(Resultado1, Resultado2, Resultado3, Resultado4, Resultado5,
                                 Resultado6, Resultado7, Resultado8, Resultado9, ValidaJuegoInicio);
