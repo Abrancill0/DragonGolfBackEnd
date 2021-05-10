@@ -643,7 +643,7 @@ namespace DragonGolfBackEnd.Controllers
                         }
 
                         //Cambio de hoyo
-                        int[] CambioHoyos = new int[36];
+                        int[] CambioHoyos = new int[38];
 
                         CambioHoyos = HoyoInicialCambio(ScoreHole1_P1, ScoreHole2_P1, ScoreHole3_P1, ScoreHole4_P1, ScoreHole5_P1, ScoreHole6_P1, ScoreHole7_P1, ScoreHole8_P1, ScoreHole9_P1, ScoreHole10_P1, ScoreHole11_P1, ScoreHole12_P1, ScoreHole13_P1, ScoreHole14_P1, ScoreHole15_P1, ScoreHole16_P1, ScoreHole17_P1, ScoreHole18_P1,
                             ScoreHole1_P2, ScoreHole2_P2, ScoreHole3_P2, ScoreHole4_P2, ScoreHole5_P2, ScoreHole6_P2, ScoreHole7_P2, ScoreHole8_P2, ScoreHole9_P2, ScoreHole10_P2, ScoreHole11_P2, ScoreHole12_P2, ScoreHole13_P2, ScoreHole14_P2, ScoreHole15_P2, ScoreHole16_P2, ScoreHole17_P2, ScoreHole18_P2, HoyoInicial);
@@ -2667,7 +2667,7 @@ namespace DragonGolfBackEnd.Controllers
                             PresionValor1 = "0";
                             Presion1 = 0;
 
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt);
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1; ;
 
                             continue;
                         }
@@ -2684,7 +2684,7 @@ namespace DragonGolfBackEnd.Controllers
                                 PresionValor1 = Convert.ToString(Presion);
                             }
 
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1;
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 ;
 
                             continue;
                         }
@@ -2708,7 +2708,7 @@ namespace DragonGolfBackEnd.Controllers
                                 PresionValor2 = Convert.ToString(Presion);
                             }
 
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2;
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3;
 
 
                             continue;
@@ -2740,7 +2740,7 @@ namespace DragonGolfBackEnd.Controllers
                                 PresionValor3 = Convert.ToString(Presion);
                             }
 
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3;
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4;
 
 
                             continue;
@@ -2779,7 +2779,7 @@ namespace DragonGolfBackEnd.Controllers
                                 PresionValor4 = Convert.ToString(Presion);
                             }
 
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4;
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5;
 
 
                             continue;
@@ -3084,6 +3084,8 @@ namespace DragonGolfBackEnd.Controllers
                                 PresionValor2 = Convert.ToString(Presion);
                             }
 
+                            //  ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3;
+
                             ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3;
 
                             continue;
@@ -3222,7 +3224,7 @@ namespace DragonGolfBackEnd.Controllers
                             PresionValor1 = "0";
                             Presion1 = 0;
 
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt);
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1; ;
 
                             continue;
                         }
@@ -3239,7 +3241,7 @@ namespace DragonGolfBackEnd.Controllers
                                 PresionValor1 = Convert.ToString(Presion);
                             }
 
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1;
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2;
 
                             continue;
                         }
@@ -3263,7 +3265,7 @@ namespace DragonGolfBackEnd.Controllers
                                 PresionValor2 = Convert.ToString(Presion);
                             }
 
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2;
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3;
 
 
                             continue;
@@ -3295,7 +3297,7 @@ namespace DragonGolfBackEnd.Controllers
                                 PresionValor3 = Convert.ToString(Presion);
                             }
 
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3;
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4;
 
 
                             continue;
@@ -3334,7 +3336,7 @@ namespace DragonGolfBackEnd.Controllers
                                 PresionValor4 = Convert.ToString(Presion);
                             }
 
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4;
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5;
 
 
                             continue;
@@ -3440,7 +3442,6 @@ namespace DragonGolfBackEnd.Controllers
             ResultadoFinal[9] = ResultadoPresionFrontString[9];
 
             return ResultadoFinal;
-
 
         }
 
@@ -4322,10 +4323,10 @@ namespace DragonGolfBackEnd.Controllers
             int hole1_P2, int hole2_P2, int hole3_P2, int hole4_P2, int hole5_P2, int hole6_P2, int hole7_P2, int hole8_P2, int hole9_P2, int hole10_P2, int hole11_P2, int hole12_P2, int hole13_P2, int hole14_P2, int hole15_P2, int hole16_P2, int hole17_P2, int hole18_P2, int HoyoInicial)
         {
 
-            int[] SwitchHoles_P1 = new int[18];
-            int[] SwitchHoles_P2 = new int[18];
+            int[] SwitchHoles_P1 = new int[19];
+            int[] SwitchHoles_P2 = new int[19];
 
-            int[] SwitchHoles = new int[36];
+            int[] SwitchHoles = new int[38];
 
 
             switch (HoyoInicial)
