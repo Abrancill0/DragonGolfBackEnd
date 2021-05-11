@@ -226,8 +226,6 @@ namespace DragonGolfBackEnd.Controllers
                         ScoreHole17_P2 = Convert.ToInt32(row["ScoreHole17_P2"]);
                         ScoreHole18_P2 = Convert.ToInt32(row["ScoreHole18_P2"]);
 
-
-                       
                         PlayerID1 = Convert.ToInt32(row["PlayerID1"]);
                         PlayerID2 = Convert.ToInt32(row["PlayerID2"]);
                         AutoPress = Convert.ToInt32(row["AutoPress"]);
@@ -3412,7 +3410,6 @@ namespace DragonGolfBackEnd.Controllers
 
             }
 
-
             string ResultadointFinal = "";
 
             if (ValidaJuegoInicio == true)
@@ -4333,7 +4330,7 @@ namespace DragonGolfBackEnd.Controllers
             {
                 case 1:
 
-                    SwitchHoles_P1[1] = hole11_P1;
+                    SwitchHoles_P1[1] = hole1_P1;
                     SwitchHoles_P1[2] = hole2_P1;
                     SwitchHoles_P1[3] = hole3_P1;
                     SwitchHoles_P1[4] = hole4_P1;

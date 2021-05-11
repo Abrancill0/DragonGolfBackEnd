@@ -21,7 +21,7 @@ namespace DragonGolfBackEnd.Controllers
     {
         public class ParametrosEntradas
         {
-
+            //780398629
             public int IDCourse { get; set; }
             public string Ro_Name { get; set; }
             public int Ro_HandicapAdjustment { get; set; }
@@ -72,8 +72,7 @@ namespace DragonGolfBackEnd.Controllers
 
                 string Mensaje = "";
                 int Estatus = 0;
-                int IDRound = 0;
-
+               
                 int contador = DT.Rows.Count;
 
                 if (DT.Rows.Count > 0)
