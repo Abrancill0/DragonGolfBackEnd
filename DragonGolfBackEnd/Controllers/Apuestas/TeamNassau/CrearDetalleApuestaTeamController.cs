@@ -16,8 +16,8 @@ namespace DragonGolfBackEnd.Controllers
 {
 
     [EnableCors(origins: "*", headers: "*", methods: "*", SupportsCredentials = true)]
-    [RoutePrefix("api/ActualizarDetalleApuesta")]
-    public class ActualizarDetalleApuestaController : ApiController
+    [RoutePrefix("api/CrearDetalleApuestaTeam")]
+    public class CrearDetalleApuestaTeamController : ApiController
     {
 
         public class ParametrosSalida
@@ -31,10 +31,11 @@ namespace DragonGolfBackEnd.Controllers
         public class ParametrosEntrada
         {
             public int IDBet { get; set; }
-            public int IDBetDetail { get; set; }
             public int IDRonda { get; set; }
             public int BetD_Player1 { get; set; }
             public int BetD_Player2 { get; set; }
+            public int BetD_Player3 { get; set; }
+            public int BetD_Player4 { get; set; }
             public float BetD_MontoF9 { get; set; }
             public float BetD_MontoB9 { get; set; }
             public int BetD_Match { get; set; }
@@ -51,16 +52,17 @@ namespace DragonGolfBackEnd.Controllers
         {
             try
             {
-                SqlCommand comando = new SqlCommand("DragoGolf_UpdateDetailBet_1");
+                SqlCommand comando = new SqlCommand("DragoGolf_CreateDetailBetTeam");
                 comando.CommandType = CommandType.StoredProcedure;
 
 
                 //Declaracion de parametros
                 comando.Parameters.Add("@IDBet", SqlDbType.Int);
-                comando.Parameters.Add("@IDBetDetail", SqlDbType.Int);
                 comando.Parameters.Add("@IDRonda", SqlDbType.Int);
                 comando.Parameters.Add("@BetD_Player1", SqlDbType.Int);
                 comando.Parameters.Add("@BetD_Player2", SqlDbType.Int);
+                comando.Parameters.Add("@BetD_Player3", SqlDbType.Int);
+                comando.Parameters.Add("@BetD_Player4", SqlDbType.Int);
                 comando.Parameters.Add("@BetD_MontoF9", SqlDbType.Float);
                 comando.Parameters.Add("@BetD_MontoB9", SqlDbType.Float);
                 comando.Parameters.Add("@BetD_Match", SqlDbType.Int);
@@ -72,10 +74,11 @@ namespace DragonGolfBackEnd.Controllers
 
                 //Asignacion de valores a parametros
                 comando.Parameters["@IDBet"].Value = Datos.IDBet;
-                comando.Parameters["@IDBetDetail"].Value = Datos.IDBetDetail;
                 comando.Parameters["@IDRonda"].Value = Datos.IDRonda;
                 comando.Parameters["@BetD_Player1"].Value = Datos.BetD_Player1;
                 comando.Parameters["@BetD_Player2"].Value = Datos.BetD_Player2;
+                comando.Parameters["@BetD_Player3"].Value = Datos.BetD_Player3;
+                comando.Parameters["@BetD_Player4"].Value = Datos.BetD_Player4;
                 comando.Parameters["@BetD_MontoF9"].Value = Datos.BetD_MontoF9;
                 comando.Parameters["@BetD_MontoB9"].Value = Datos.BetD_MontoB9;
                 comando.Parameters["@BetD_Match"].Value = Datos.BetD_Match;
@@ -109,13 +112,25 @@ namespace DragonGolfBackEnd.Controllers
                         Mensaje = Convert.ToString(row["mensaje"]);
                         Estatus = Convert.ToInt32(row["Estatus"]);
 
+                        if (Estatus == 1)
+                        {
+                            ParametrosSalida ent = new ParametrosSalida
+                            {
+                                IDBet = Convert.ToInt32(row["IDBet"]),
+                                IDRonda = Convert.ToInt32(row["IDRonda"]),
+                                IDBetDetail = Convert.ToInt32(row["IDBetDetail"]),
+                            };
+
+                            lista.Add(ent);
+                        }
                     }
 
                     JObject Resultado = JObject.FromObject(new
                     {
                         mensaje = Mensaje,
                         estatus = Estatus,
-                      
+                        Result = lista
+
                     });
 
                     return Resultado;

@@ -21,41 +21,21 @@ namespace DragonGolfBackEnd.Controllers
     {
         public class ParametrosEntradas
         {
-            //780398629
-            public int IDCourse { get; set; }
-            public string Ro_Name { get; set; }
-            public int Ro_HandicapAdjustment { get; set; }
-            public int Ro_StartingHole { get; set; }
-            public int Ro_SwitchAdventage { get; set; }
-            public int IDUsuario { get; set; }
+       
             public int IDRound { get; set; }
-            public DateTime Ro_Date { get; set; }
+          
         }
         public JObject Post(ParametrosEntradas Datos)
         {
             try
             {
-                SqlCommand comando = new SqlCommand("DragoGolf_UpdateRound");
+                SqlCommand comando = new SqlCommand("DragoGolf_CloseRound");
                 comando.CommandType = CommandType.StoredProcedure;
 
                 //Declaracion de parametros
-                comando.Parameters.Add("@IDCourse", SqlDbType.Int);
-                comando.Parameters.Add("@Ro_Name", SqlDbType.VarChar);
-                comando.Parameters.Add("@Ro_HandicapAdjustment", SqlDbType.Int);
-                comando.Parameters.Add("@Ro_StartingHole", SqlDbType.Int);
-                comando.Parameters.Add("@Ro_SwitchAdventage", SqlDbType.Int);
-                comando.Parameters.Add("@IDUsuario", SqlDbType.Int);
-                comando.Parameters.Add("@Ro_Date", SqlDbType.DateTime);
                 comando.Parameters.Add("@IDRound", SqlDbType.Int);
 
                 //Asignacion de valores a parametros
-                comando.Parameters["@IDCourse"].Value = Datos.IDCourse;
-                comando.Parameters["@Ro_Name"].Value = Datos.Ro_Name;
-                comando.Parameters["@Ro_HandicapAdjustment"].Value = Datos.Ro_HandicapAdjustment;
-                comando.Parameters["@Ro_StartingHole"].Value = Datos.Ro_StartingHole;
-                comando.Parameters["@Ro_SwitchAdventage"].Value = Datos.Ro_SwitchAdventage;
-                comando.Parameters["@IDUsuario"].Value = Datos.IDUsuario;
-                comando.Parameters["@Ro_Date"].Value = Datos.Ro_Date;
                 comando.Parameters["@IDRound"].Value = Datos.IDRound;
 
 
@@ -68,8 +48,6 @@ namespace DragonGolfBackEnd.Controllers
                 comando.Connection.Close();
                 DA.Fill(DT);
 
-
-
                 string Mensaje = "";
                 int Estatus = 0;
                
@@ -81,15 +59,14 @@ namespace DragonGolfBackEnd.Controllers
                     {
                         Mensaje = Convert.ToString(row["mensaje"]);
                         Estatus = Convert.ToInt32(row["Estatus"]);
-                        //IDRound = Convert.ToInt32(row["IDRound"]);
-
+                     
                     }
 
                     JObject Resultado = JObject.FromObject(new
                     {
                         mensaje = Mensaje,
                         estatus = Estatus,
-                        //idround = IDRound,
+                        
                     });
 
                     return Resultado;
