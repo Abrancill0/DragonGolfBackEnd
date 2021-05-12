@@ -5189,6 +5189,8 @@ namespace DragonGolfBackEnd.Controllers
                         ResultadoInt += 0;
                         Presion1 += 0;
 
+                        ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt);
+
                         if (i > 1)
                         {
                             ResultadoPresionFrontString[i] = Convert.ToString(ResultadoPresionFrontString[i - 1]);
@@ -7015,10 +7017,6 @@ namespace DragonGolfBackEnd.Controllers
 
                         }
 
-                        //Segunda Vuelta L
-
-
-                        //
                     }
                     else if (ResultadoPresionFront_L[i] == -1)
                     {
@@ -9123,6 +9121,8 @@ namespace DragonGolfBackEnd.Controllers
                         ResultadoInt += 0;
                         Presion1 += 0;
 
+                        ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt);
+
                         if (i > 1)
                         {
                             ResultadoPresionFrontString[i] = Convert.ToString(ResultadoPresionFrontString[i - 1]);
@@ -10949,10 +10949,6 @@ namespace DragonGolfBackEnd.Controllers
 
                         }
 
-                        //Segunda Vuelta L
-
-
-                        //
                     }
                     else if (ResultadoPresionFront_L[i] == -1)
                     {
@@ -12446,6 +12442,8 @@ namespace DragonGolfBackEnd.Controllers
                     ResultadoInt -= 1;
                     Presion1 -= 1;
 
+                    ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt);
+
                     if (Presion1 == -3)
                     {
 
@@ -12916,6 +12914,8 @@ namespace DragonGolfBackEnd.Controllers
                     {
                         ResultadoInt -= 1;
                         Presion1 -= 1;
+
+                        ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt);
 
                         if (Presion1 == -3)
                         {
@@ -14444,6 +14444,8 @@ namespace DragonGolfBackEnd.Controllers
                         ResultadoInt -= 1;
                         Presion1 -= 1;
 
+                        ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt);
+
                         if (Presion1 == -3)
                         {
 
@@ -14696,6 +14698,8 @@ namespace DragonGolfBackEnd.Controllers
                 {
                     ResultadoInt -= 1;
                     Presion1 -= 1;
+
+                    ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt);
 
                     if (Presion1 == -3)
                     {
@@ -15167,6 +15171,8 @@ namespace DragonGolfBackEnd.Controllers
                     {
                         ResultadoInt -= 1;
                         Presion1 -= 1;
+
+                        ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt);
 
                         if (Presion1 == -3)
                         {
@@ -15672,6 +15678,8 @@ namespace DragonGolfBackEnd.Controllers
                     {
                         ResultadoInt -= 1;
                         Presion1 -= 1;
+
+                        ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt);
 
                         if (Presion1 == -3)
                         {
@@ -16494,6 +16502,8 @@ namespace DragonGolfBackEnd.Controllers
                         ResultadoInt -= 1;
                         Presion1 -= 1;
 
+                        ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt);
+
                         if (Presion1 == -4)
                         {
 
@@ -16645,6 +16655,8 @@ namespace DragonGolfBackEnd.Controllers
                 {
                     ResultadoInt -= 1;
                     Presion1 -= 1;
+
+                    ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt);
 
                     if (Presion1 == -4)
                     {

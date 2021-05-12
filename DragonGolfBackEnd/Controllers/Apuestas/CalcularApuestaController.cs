@@ -1235,7 +1235,7 @@ namespace DragonGolfBackEnd.Controllers
                             ActualizarAPuesta(Datos.IDBetDetail, Datos.IDBet, Datos.IDRonda, PlayerID1, PlayerID2, BetD_F9_1, BetD_F9_2, BetD_F9_3, BetD_F9_4, BetD_F9_5, BetD_F9_6,
                                              BetD_F9_7, BetD_F9_8, BetD_F9_9, BetD_B9_1, BetD_B9_2, BetD_B9_3, BetD_B9_4, BetD_B9_5, BetD_B9_6, BetD_B9_7, BetD_B9_8, BetD_B9_9, ResultadoFinalMedal, ContadorHoyos,
                                            ResultFront[1], ResultFront[2], ResultFront[3], ResultFront[4], ResultFront[5], ResultFront[6], ResultFront[7], ResultFront[8], ResultFront[9],
-                                            ResultBack[1], ResultBack[2], ResultBack[3], ResultBack[4], ResultBack[5], ResultBack[6], ResultBack[7], ResultBack[8], ResultBack[9], 3, ValidaJuegoInicio);
+                                            (ResultBack[1]), ResultBack[2], ResultBack[3], ResultBack[4], ResultBack[5], ResultBack[6], ResultBack[7], ResultBack[8], ResultBack[9], 3, ValidaJuegoInicio);
 
                         }
                         else
@@ -3680,6 +3680,8 @@ namespace DragonGolfBackEnd.Controllers
                     ResultadoInt -= 1;
                     Presion1 -= 1;
 
+                    ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt);
+
                     if (Presion1 == -3)
                     {
                         if (PresionValor1 == "")
@@ -4053,6 +4055,8 @@ namespace DragonGolfBackEnd.Controllers
                 {
                     ResultadoInt -= 1;
                     Presion1 -= 1;
+
+                    ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt);
 
                     if (Presion1 == -3)
                     {
