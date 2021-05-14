@@ -72,7 +72,7 @@ namespace DragonGolfBackEnd.Controllers
                 comando.Parameters.Add("@BetD_AutoPress", SqlDbType.Int);
                 comando.Parameters.Add("@BetD_ManuallyOverrideAdv", SqlDbType.Int);
                 comando.Parameters.Add("@BetD_AdvStrokers", SqlDbType.Int);
-                comando.Parameters.Add("@TypeHandicap", SqlDbType.Int);
+                comando.Parameters.Add("@TypeHandicap", SqlDbType.VarChar);
                 
 
                 //Asignacion de valores a parametros
