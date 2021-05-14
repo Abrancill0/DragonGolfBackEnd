@@ -25,7 +25,6 @@ namespace DragonGolfBackEnd.Controllers
             public int IDBet { get; set; }
             public int IDRonda { get; set; }
             public int IDBetDetail { get; set; }
-            public string TypeHandicap { get; set; }
         }
 
         public class ParametrosSalida
@@ -3453,8 +3452,8 @@ namespace DragonGolfBackEnd.Controllers
                             ResultFront = CalcularApuestaPresionFront2(Resultado1_H, Resultado2_H, Resultado3_H, Resultado4_H, Resultado5_H, Resultado6_H, Resultado7_H, Resultado8_H, Resultado9_H,
                                 Resultado1_L, Resultado2_L, Resultado3_L, Resultado4_L, Resultado5_L, Resultado6_L, Resultado7_L, Resultado8_L, Resultado9_L, ValidaJuegoInicio);
 
-                            ResultBack = CalcularApuestaPresionBack2(Resultado1_H, Resultado2_H, Resultado3_H, Resultado4_H, Resultado5_H, Resultado6_H, Resultado7_H, Resultado8_H, Resultado9_H,
-                                Resultado1_L, Resultado2_L, Resultado3_L, Resultado4_L, Resultado5_L, Resultado6_L, Resultado7_L, Resultado8_L, Resultado9_L, ValidaJuegoInicio);
+                            ResultBack = CalcularApuestaPresionBack2(Resultado10_H, Resultado11_H, Resultado12_H, Resultado13_H, Resultado14_H, Resultado15_H, Resultado16_H, Resultado17_H, Resultado18_H,
+                                Resultado10_L, Resultado11_L, Resultado12_L, Resultado13_L, Resultado14_L, Resultado15_L, Resultado16_L, Resultado17_L, Resultado18_L, ValidaJuegoInicio);
 
                             string[] FrontValores = ResultFront[0].Split(',');
                             string[] BackValores = ResultBack[0].Split(',');
@@ -3491,8 +3490,8 @@ namespace DragonGolfBackEnd.Controllers
                             ResultFront = CalcularApuestaPresionFront3(Resultado1_H, Resultado2_H, Resultado3_H, Resultado4_H, Resultado5_H, Resultado6_H, Resultado7_H, Resultado8_H, Resultado9_H,
                                 Resultado1_L, Resultado2_L, Resultado3_L, Resultado4_L, Resultado5_L, Resultado6_L, Resultado7_L, Resultado8_L, Resultado9_L, ValidaJuegoInicio);
 
-                            ResultBack = CalcularApuestaPresionBack3(Resultado1_H, Resultado2_H, Resultado3_H, Resultado4_H, Resultado5_H, Resultado6_H, Resultado7_H, Resultado8_H, Resultado9_H,
-                                Resultado1_L, Resultado2_L, Resultado3_L, Resultado4_L, Resultado5_L, Resultado6_L, Resultado7_L, Resultado8_L, Resultado9_L, ValidaJuegoInicio);
+                            ResultBack = CalcularApuestaPresionBack3(Resultado10_H, Resultado11_H, Resultado12_H, Resultado13_H, Resultado14_H, Resultado15_H, Resultado16_H, Resultado17_H, Resultado18_H,
+                                Resultado10_L, Resultado11_L, Resultado12_L, Resultado13_L, Resultado14_L, Resultado15_L, Resultado16_L, Resultado17_L, Resultado18_L, ValidaJuegoInicio);
 
                             string[] FrontValores = ResultFront[0].Split(',');
                             string[] BackValores = ResultBack[0].Split(',');
@@ -3522,8 +3521,8 @@ namespace DragonGolfBackEnd.Controllers
                             ResultFront = CalcularApuestaPresionFront4(Resultado1_H, Resultado2_H, Resultado3_H, Resultado4_H, Resultado5_H, Resultado6_H, Resultado7_H, Resultado8_H, Resultado9_H,
                                 Resultado1_L, Resultado2_L, Resultado3_L, Resultado4_L, Resultado5_L, Resultado6_L, Resultado7_L, Resultado8_L, Resultado9_L, ValidaJuegoInicio);
 
-                            ResultBack = CalcularApuestaPresionBack4(Resultado1_H, Resultado2_H, Resultado3_H, Resultado4_H, Resultado5_H, Resultado6_H, Resultado7_H, Resultado8_H, Resultado9_H,
-                                Resultado1_L, Resultado2_L, Resultado3_L, Resultado4_L, Resultado5_L, Resultado6_L, Resultado7_L, Resultado8_L, Resultado9_L, ValidaJuegoInicio);
+                            ResultBack = CalcularApuestaPresionBack4(Resultado10_H, Resultado11_H, Resultado12_H, Resultado13_H, Resultado14_H, Resultado15_H, Resultado16_H, Resultado17_H, Resultado18_H,
+                                Resultado10_L, Resultado11_L, Resultado12_L, Resultado13_L, Resultado14_L, Resultado15_L, Resultado16_L, Resultado17_L, Resultado18_L, ValidaJuegoInicio);
 
                             string[] FrontValores = ResultFront[0].Split(',');
                             string[] BackValores = ResultBack[0].Split(',');
@@ -18981,12 +18980,12 @@ namespace DragonGolfBackEnd.Controllers
             int hole1_P4, int hole2_P4, int hole3_P4, int hole4_P4, int hole5_P4, int hole6_P4, int hole7_P4, int hole8_P4, int hole9_P4, int hole10_P4, int hole11_P4, int hole12_P4, int hole13_P4, int hole14_P4, int hole15_P4, int hole16_P4, int hole17_P4, int hole18_P4, int HoyoInicial)
         {
 
-            int[] SwitchHoles_P1 = new int[18];
-            int[] SwitchHoles_P2 = new int[18];
-            int[] SwitchHoles_P3 = new int[18];
-            int[] SwitchHoles_P4 = new int[18];
+            int[] SwitchHoles_P1 = new int[19];
+            int[] SwitchHoles_P2 = new int[19];
+            int[] SwitchHoles_P3 = new int[19];
+            int[] SwitchHoles_P4 = new int[19];
 
-            int[] SwitchHoles = new int[36];
+            int[] SwitchHoles = new int[76];
 
 
             switch (HoyoInicial)
@@ -19741,7 +19740,7 @@ namespace DragonGolfBackEnd.Controllers
                     SwitchHoles_P3[2] = hole12_P3;
                     SwitchHoles_P3[3] = hole13_P3;
                     SwitchHoles_P3[4] = hole14_P3;
-                    SwitchHoles_P3[35] = hole15_P3;
+                    SwitchHoles_P3[5] = hole15_P3;
                     SwitchHoles_P3[6] = hole16_P3;
                     SwitchHoles_P3[7] = hole17_P3;
                     SwitchHoles_P3[8] = hole18_P3;
@@ -20393,6 +20392,44 @@ namespace DragonGolfBackEnd.Controllers
             SwitchHoles[34] = SwitchHoles_P2[16];
             SwitchHoles[35] = SwitchHoles_P2[17];
             SwitchHoles[36] = SwitchHoles_P2[18];
+
+            SwitchHoles[37] = SwitchHoles_P3[1];
+            SwitchHoles[38] = SwitchHoles_P3[2];
+            SwitchHoles[39] = SwitchHoles_P3[3];
+            SwitchHoles[40] = SwitchHoles_P3[4];
+            SwitchHoles[41] = SwitchHoles_P3[5];
+            SwitchHoles[42] = SwitchHoles_P3[6];
+            SwitchHoles[43] = SwitchHoles_P3[7];
+            SwitchHoles[44] = SwitchHoles_P3[8];
+            SwitchHoles[45] = SwitchHoles_P3[9];
+            SwitchHoles[46] = SwitchHoles_P3[10];
+            SwitchHoles[47] = SwitchHoles_P3[11];
+            SwitchHoles[48] = SwitchHoles_P3[12];
+            SwitchHoles[49] = SwitchHoles_P3[13];
+            SwitchHoles[50] = SwitchHoles_P3[14];
+            SwitchHoles[51] = SwitchHoles_P3[15];
+            SwitchHoles[52] = SwitchHoles_P3[16];
+            SwitchHoles[53] = SwitchHoles_P3[17];
+            SwitchHoles[54] = SwitchHoles_P3[18];
+
+            SwitchHoles[55] = SwitchHoles_P4[1];
+            SwitchHoles[56] = SwitchHoles_P4[2];
+            SwitchHoles[57] = SwitchHoles_P4[3];
+            SwitchHoles[58] = SwitchHoles_P4[4];
+            SwitchHoles[59] = SwitchHoles_P4[5];
+            SwitchHoles[60] = SwitchHoles_P4[6];
+            SwitchHoles[61] = SwitchHoles_P4[7];
+            SwitchHoles[62] = SwitchHoles_P4[8];
+            SwitchHoles[63] = SwitchHoles_P4[9];
+            SwitchHoles[64] = SwitchHoles_P4[10];
+            SwitchHoles[65] = SwitchHoles_P4[11];
+            SwitchHoles[66] = SwitchHoles_P4[12];
+            SwitchHoles[67] = SwitchHoles_P4[13];
+            SwitchHoles[68] = SwitchHoles_P4[14];
+            SwitchHoles[69] = SwitchHoles_P4[15];
+            SwitchHoles[70] = SwitchHoles_P4[16];
+            SwitchHoles[71] = SwitchHoles_P4[17];
+            SwitchHoles[72] = SwitchHoles_P4[18];
 
             return SwitchHoles;
         }

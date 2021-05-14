@@ -44,6 +44,7 @@ namespace DragonGolfBackEnd.Controllers
             public int BetD_AutoPress { get; set; }
             public int BetD_ManuallyOverrideAdv { get; set; }
             public int BetD_AdvStrokers { get; set; }
+            public string TypeHandicap { get; set; }
         }
 
 
@@ -71,6 +72,8 @@ namespace DragonGolfBackEnd.Controllers
                 comando.Parameters.Add("@BetD_AutoPress", SqlDbType.Int);
                 comando.Parameters.Add("@BetD_ManuallyOverrideAdv", SqlDbType.Int);
                 comando.Parameters.Add("@BetD_AdvStrokers", SqlDbType.Int);
+                comando.Parameters.Add("@TypeHandicap", SqlDbType.Int);
+                
 
                 //Asignacion de valores a parametros
                 comando.Parameters["@IDBet"].Value = Datos.IDBet;
@@ -87,6 +90,7 @@ namespace DragonGolfBackEnd.Controllers
                 comando.Parameters["@BetD_AutoPress"].Value = Datos.BetD_AutoPress;
                 comando.Parameters["@BetD_ManuallyOverrideAdv"].Value = Datos.BetD_ManuallyOverrideAdv;
                 comando.Parameters["@BetD_AdvStrokers"].Value = Datos.BetD_AdvStrokers;
+                comando.Parameters["@TypeHandicap"].Value = Datos.TypeHandicap;
 
 
                 comando.Connection = new SqlConnection(VariablesGlobales.CadenaConexion);
