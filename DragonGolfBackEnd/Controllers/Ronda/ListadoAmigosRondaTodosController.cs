@@ -219,6 +219,7 @@ namespace DragonGolfBackEnd.Controllers
                     int GolpesVentaja16_1 = 0;
                     int GolpesVentaja17_1 = 0;
                     int GolpesVentaja18_1 = 0;
+                    int HoyoInicial = 0;
 
                     decimal Adv1 = 0;
 
@@ -232,6 +233,8 @@ namespace DragonGolfBackEnd.Controllers
                         {
 
                             string numeroFormato = Convert.ToInt32(row["usu_ghinnumber"]).ToString("D7");
+
+                            HoyoInicial = Convert.ToInt32(row["HoyoInicial"]);
 
                             int PlayerId = Convert.ToInt32(row["PlayerId"]);
 
@@ -310,12 +313,12 @@ namespace DragonGolfBackEnd.Controllers
                             int ScoreHole17 = Convert.ToInt32(row["ScoreHole17"]);
                             int ScoreHole18 = Convert.ToInt32(row["ScoreHole18"]);
 
-                            Adv1 = Convert.ToDecimal(row["handicapAuto"]);
+                            Adv1 = Convert.ToDecimal(row["usu_golpesventaja"]);
 
                             int Contador = 0;
 
-                            int Adv = Convert.ToInt32(Decimal.Round(Adv1));
-                        
+                             int Adv = Convert.ToInt32(Decimal.Round(Adv1));
+                            //Adv = Convert.ToDecimal(row["usu_golpesventaja"]);
 
                             if (Adv < 0)
                             {
@@ -729,9 +732,125 @@ namespace DragonGolfBackEnd.Controllers
                             int TotalGolpesVentajaFront = 0;
                             int TotalGolpesVentajaBack = 0;
 
-                            TotalGolpesVentajaFront = GolpesVentaja1 + GolpesVentaja2 + GolpesVentaja3 + GolpesVentaja4 + GolpesVentaja5 + GolpesVentaja6 + GolpesVentaja7 + GolpesVentaja8 + GolpesVentaja9;
-                            TotalGolpesVentajaBack = GolpesVentaja10 + GolpesVentaja11 + GolpesVentaja12 + GolpesVentaja13 + GolpesVentaja14 + GolpesVentaja15 + GolpesVentaja16 + GolpesVentaja17 + GolpesVentaja18;
+                            switch (HoyoInicial)
+                            {
+                                case 1:
+                                    TotalGolpesVentajaFront = GolpesVentaja1 + GolpesVentaja2 + GolpesVentaja3 + GolpesVentaja4 + GolpesVentaja5 + GolpesVentaja6 + GolpesVentaja7 + GolpesVentaja8 + GolpesVentaja9;
+                                    break;
+                                case 2:
+                                    TotalGolpesVentajaFront = GolpesVentaja2 + GolpesVentaja3 + GolpesVentaja4 + GolpesVentaja5 + GolpesVentaja6 + GolpesVentaja7 + GolpesVentaja8 + GolpesVentaja9 + GolpesVentaja10;
+                                    break;
+                                case 3:
+                                    TotalGolpesVentajaFront = GolpesVentaja3 + GolpesVentaja4 + GolpesVentaja5 + GolpesVentaja6 + GolpesVentaja7 + GolpesVentaja8 + GolpesVentaja9 + GolpesVentaja10 + GolpesVentaja11;
+                                    break;
+                                case 4:
+                                    TotalGolpesVentajaFront = GolpesVentaja4 + GolpesVentaja5 + GolpesVentaja6 + GolpesVentaja7 + GolpesVentaja8 + GolpesVentaja9 + GolpesVentaja10 + GolpesVentaja11 + GolpesVentaja12;
+                                    break;
+                                case 5:
+                                    TotalGolpesVentajaFront = GolpesVentaja5 + GolpesVentaja6 + GolpesVentaja7 + GolpesVentaja8 + GolpesVentaja9 + GolpesVentaja10 + GolpesVentaja11 + GolpesVentaja12 + GolpesVentaja13;
+                                    break;
+                                case 6:
+                                    TotalGolpesVentajaFront = GolpesVentaja6 + GolpesVentaja7 + GolpesVentaja8 + GolpesVentaja9 + GolpesVentaja10 + GolpesVentaja11 + GolpesVentaja12 + GolpesVentaja13 + GolpesVentaja14;
+                                    break;
+                                case 7:
+                                    TotalGolpesVentajaFront = GolpesVentaja7 + GolpesVentaja8 + GolpesVentaja9 + GolpesVentaja10 + GolpesVentaja11 + GolpesVentaja12 + GolpesVentaja13 + GolpesVentaja14 + GolpesVentaja15;
+                                    break;
+                                case 8:
+                                    TotalGolpesVentajaFront = GolpesVentaja8 + GolpesVentaja9 + GolpesVentaja10 + GolpesVentaja11 + GolpesVentaja12 + GolpesVentaja13 + GolpesVentaja14 + GolpesVentaja15 + GolpesVentaja16;
+                                    break;
+                                case 9:
+                                    TotalGolpesVentajaFront = GolpesVentaja9 + GolpesVentaja10 + GolpesVentaja11 + GolpesVentaja12 + GolpesVentaja13 + GolpesVentaja14 + GolpesVentaja15 + GolpesVentaja16 + GolpesVentaja17;
+                                    break;
+                                case 10:
+                                    TotalGolpesVentajaFront = GolpesVentaja10 + GolpesVentaja11 + GolpesVentaja12 + GolpesVentaja13 + GolpesVentaja14 + GolpesVentaja15 + GolpesVentaja16 + GolpesVentaja17 + GolpesVentaja18;
+                                    break;
+                                case 11:
+                                    TotalGolpesVentajaFront = GolpesVentaja11 + GolpesVentaja12 + GolpesVentaja13 + GolpesVentaja14 + GolpesVentaja15 + GolpesVentaja16 + GolpesVentaja17 + GolpesVentaja18 + GolpesVentaja1;
+                                    break;
+                                case 12:
+                                    TotalGolpesVentajaFront = GolpesVentaja12 + GolpesVentaja13 + GolpesVentaja14 + GolpesVentaja15 + GolpesVentaja16 + GolpesVentaja17 + GolpesVentaja18 + GolpesVentaja1 + GolpesVentaja2;
+                                    break;
+                                case 13:
+                                    TotalGolpesVentajaFront = GolpesVentaja13 + GolpesVentaja14 + GolpesVentaja15 + GolpesVentaja16 + GolpesVentaja17 + GolpesVentaja18 + GolpesVentaja1 + GolpesVentaja2 + GolpesVentaja3;
+                                    break;
+                                case 14:
+                                    TotalGolpesVentajaFront = GolpesVentaja14 + GolpesVentaja15 + GolpesVentaja16 + GolpesVentaja17 + GolpesVentaja18 + GolpesVentaja1 + GolpesVentaja2 + GolpesVentaja3 + GolpesVentaja4;
+                                    break;
+                                case 15:
+                                    TotalGolpesVentajaFront = GolpesVentaja15 + GolpesVentaja16 + GolpesVentaja17 + GolpesVentaja18 + GolpesVentaja1 + GolpesVentaja2 + GolpesVentaja3 + GolpesVentaja4 + GolpesVentaja5;
+                                    break;
+                                case 16:
+                                    TotalGolpesVentajaFront = GolpesVentaja16 + GolpesVentaja17 + GolpesVentaja18 + GolpesVentaja1 + GolpesVentaja2 + GolpesVentaja3 + GolpesVentaja4 + GolpesVentaja5 + GolpesVentaja6;
+                                    break;
+                                case 17:
+                                    TotalGolpesVentajaFront = GolpesVentaja17 + GolpesVentaja18 + GolpesVentaja1 + GolpesVentaja2 + GolpesVentaja3 + GolpesVentaja4 + GolpesVentaja5 + GolpesVentaja6 + GolpesVentaja7;
+                                    break;
+                                case 18:
+                                    TotalGolpesVentajaFront = GolpesVentaja18 + GolpesVentaja1 + GolpesVentaja2 + GolpesVentaja3 + GolpesVentaja4 + GolpesVentaja5 + GolpesVentaja6 + GolpesVentaja7 + GolpesVentaja8;
+                                    break;
+                                default:
+                                    break;
+                            }
 
+                            switch (HoyoInicial)
+                            {
+                                case 1:
+                                    TotalGolpesVentajaBack = GolpesVentaja10 + GolpesVentaja11 + GolpesVentaja12 + GolpesVentaja13 + GolpesVentaja14 + GolpesVentaja15 + GolpesVentaja16 + GolpesVentaja17 + GolpesVentaja18;
+                                    break;
+                                case 2:
+                                    TotalGolpesVentajaBack = GolpesVentaja11 + GolpesVentaja12 + GolpesVentaja13 + GolpesVentaja14 + GolpesVentaja15 + GolpesVentaja16 + GolpesVentaja17 + GolpesVentaja18 + GolpesVentaja1;
+                                    break;
+                                case 3:
+                                    TotalGolpesVentajaBack = GolpesVentaja12 + GolpesVentaja13 + GolpesVentaja14 + GolpesVentaja15 + GolpesVentaja16 + GolpesVentaja17 + GolpesVentaja18 + GolpesVentaja1 + GolpesVentaja2;
+                                    break;
+                                case 4:
+                                    TotalGolpesVentajaBack = GolpesVentaja13 + GolpesVentaja14 + GolpesVentaja15 + GolpesVentaja16 + GolpesVentaja17 + GolpesVentaja18 + GolpesVentaja1 + GolpesVentaja2 + GolpesVentaja3;
+                                    break;
+                                case 5:
+                                    TotalGolpesVentajaBack = GolpesVentaja14 + GolpesVentaja15 + GolpesVentaja16 + GolpesVentaja17 + GolpesVentaja18 + GolpesVentaja1 + GolpesVentaja2 + GolpesVentaja3 + GolpesVentaja4;
+                                    break;
+                                case 6:
+                                    TotalGolpesVentajaBack = GolpesVentaja15 + GolpesVentaja16 + GolpesVentaja17 + GolpesVentaja18 + GolpesVentaja1 + GolpesVentaja2 + GolpesVentaja3 + GolpesVentaja4 + GolpesVentaja5;
+                                    break;
+                                case 7:
+                                    TotalGolpesVentajaBack = GolpesVentaja16 + GolpesVentaja17 + GolpesVentaja18 + GolpesVentaja1 + GolpesVentaja2 + GolpesVentaja3 + GolpesVentaja4 + GolpesVentaja5 + GolpesVentaja6;
+                                    break;
+                                case 8:
+                                    TotalGolpesVentajaBack = GolpesVentaja17 + GolpesVentaja18 + GolpesVentaja1 + GolpesVentaja2 + GolpesVentaja3 + GolpesVentaja4 + GolpesVentaja5 + GolpesVentaja6 + GolpesVentaja7;
+                                    break;
+                                case 9:
+                                    TotalGolpesVentajaBack = GolpesVentaja18 + GolpesVentaja1 + GolpesVentaja2 + GolpesVentaja3 + GolpesVentaja4 + GolpesVentaja5 + GolpesVentaja6 + GolpesVentaja7 + GolpesVentaja8;
+                                    break;
+                                case 10:
+                                    TotalGolpesVentajaBack = GolpesVentaja1 + GolpesVentaja2 + GolpesVentaja3 + GolpesVentaja4 + GolpesVentaja5 + GolpesVentaja6 + GolpesVentaja7 + GolpesVentaja8 + GolpesVentaja9;
+                                    break;
+                                case 11:
+                                    TotalGolpesVentajaBack = GolpesVentaja2 + GolpesVentaja3 + GolpesVentaja4 + GolpesVentaja5 + GolpesVentaja6 + GolpesVentaja7 + GolpesVentaja8 + GolpesVentaja9 + GolpesVentaja10;
+                                    break;
+                                case 12:
+                                    TotalGolpesVentajaBack = GolpesVentaja3 + GolpesVentaja4 + GolpesVentaja5 + GolpesVentaja6 + GolpesVentaja7 + GolpesVentaja8 + GolpesVentaja9 + GolpesVentaja10 + GolpesVentaja11;
+                                    break;
+                                case 13:
+                                    TotalGolpesVentajaBack = GolpesVentaja4 + GolpesVentaja5 + GolpesVentaja6 + GolpesVentaja7 + GolpesVentaja8 + GolpesVentaja9 + GolpesVentaja10 + GolpesVentaja11 + GolpesVentaja12;
+                                    break;
+                                case 14:
+                                    TotalGolpesVentajaBack = GolpesVentaja5 + GolpesVentaja6 + GolpesVentaja7 + GolpesVentaja8 + GolpesVentaja9 + GolpesVentaja10 + GolpesVentaja11 + GolpesVentaja12 + GolpesVentaja13;
+                                    break;
+                                case 15:
+                                    TotalGolpesVentajaBack = GolpesVentaja6 + GolpesVentaja7 + GolpesVentaja8 + GolpesVentaja9 + GolpesVentaja10 + GolpesVentaja11 + GolpesVentaja12 + GolpesVentaja13 + GolpesVentaja14;
+                                    break;
+                                case 16:
+                                    TotalGolpesVentajaBack = GolpesVentaja7 + GolpesVentaja8 + GolpesVentaja9 + GolpesVentaja10 + GolpesVentaja11 + GolpesVentaja12 + GolpesVentaja13 + GolpesVentaja14 + GolpesVentaja15;
+                                    break;
+                                case 17:
+                                    TotalGolpesVentajaBack = GolpesVentaja8 + GolpesVentaja9 + GolpesVentaja10 + GolpesVentaja11 + GolpesVentaja12 + GolpesVentaja13 + GolpesVentaja14 + GolpesVentaja15 + GolpesVentaja16;
+                                    break;
+                                case 18:
+                                    TotalGolpesVentajaBack = GolpesVentaja9 + GolpesVentaja10 + GolpesVentaja11 + GolpesVentaja12 + GolpesVentaja13 + GolpesVentaja14 + GolpesVentaja15 + GolpesVentaja16 + GolpesVentaja17;
+                                    break;
+                                default:
+                                    break;
+                            }
 
                             ParametrosSalida ent = new ParametrosSalida
                             {

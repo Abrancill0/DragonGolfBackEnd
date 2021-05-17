@@ -420,7 +420,7 @@ namespace DragonGolfBackEnd.Controllers
                                         if (ScoreHole1_P1 > 0 && ScoreHole1_P2 > 0 && ScoreHole1_P3 > 0 && ScoreHole1_P4 > 0)
                                         {
 
-                                            if (TipoGolpesVentaja == "High")
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                             {
 
                                                 if (HandicapP1 > HandicapP3)
@@ -436,7 +436,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             }
 
-                                            if (TipoGolpesVentaja == "Low")
+                                            if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
                                                 if (HandicapP1 < HandicapP3)
@@ -460,7 +460,7 @@ namespace DragonGolfBackEnd.Controllers
                                         if (ScoreHole2_P1 > 0 && ScoreHole2_P2 > 0 && ScoreHole3_P3 > 0 && ScoreHole4_P4 > 0)
                                         {
 
-                                            if (TipoGolpesVentaja == "High")
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                             {
 
                                                 if (HandicapP1 > HandicapP3)
@@ -476,7 +476,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             }
 
-                                            if (TipoGolpesVentaja == "Low")
+                                            if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
                                                 if (HandicapP1 < HandicapP3)
@@ -501,7 +501,7 @@ namespace DragonGolfBackEnd.Controllers
                                         {
                                             ScoreHole3_P1 = ScoreHole3_P1 - 1;
 
-                                            if (TipoGolpesVentaja == "High")
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                             {
 
                                                 if (HandicapP1 > HandicapP3)
@@ -517,7 +517,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             }
 
-                                            if (TipoGolpesVentaja == "Low")
+                                            if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
                                                 if (HandicapP1 < HandicapP3)
@@ -542,7 +542,7 @@ namespace DragonGolfBackEnd.Controllers
                                         if (ScoreHole4_P1 > 0 && ScoreHole4_P2 > 0 && ScoreHole4_P3 > 0 && ScoreHole4_P4 > 0)
                                         {
 
-                                            if (TipoGolpesVentaja == "High")
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                             {
 
                                                 if (HandicapP1 > HandicapP3)
@@ -558,7 +558,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             }
 
-                                            if (TipoGolpesVentaja == "Low")
+                                            if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
                                                 if (HandicapP1 < HandicapP3)
@@ -580,7 +580,7 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole5_P1 > 0 && ScoreHole5_P2 > 0 && ScoreHole5_P3 > 0 && ScoreHole5_P4 > 0)
                                         {
-                                            if (TipoGolpesVentaja == "High")
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                             {
 
                                                 if (HandicapP1 > HandicapP3)
@@ -596,7 +596,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             }
 
-                                            if (TipoGolpesVentaja == "Low")
+                                            if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
                                                 if (HandicapP1 < HandicapP3)
@@ -620,7 +620,7 @@ namespace DragonGolfBackEnd.Controllers
                                         if (ScoreHole6_P1 > 0 && ScoreHole6_P2 > 0 && ScoreHole5_P3 > 0 && ScoreHole5_P4 > 0)
                                         {
 
-                                            if (TipoGolpesVentaja == "High")
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                             {
 
                                                 if (HandicapP1 > HandicapP3)
@@ -636,7 +636,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             }
 
-                                            if (TipoGolpesVentaja == "Low")
+                                            if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
                                                 if (HandicapP1 < HandicapP3)
@@ -659,7 +659,7 @@ namespace DragonGolfBackEnd.Controllers
                                         if (ScoreHole7_P1 > 0 && ScoreHole7_P2 > 0 && ScoreHole7_P3 > 0 && ScoreHole7_P4 > 0)
                                         {
 
-                                            if (TipoGolpesVentaja == "High")
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                             {
 
                                                 if (HandicapP1 > HandicapP3)
@@ -675,7 +675,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             }
 
-                                            if (TipoGolpesVentaja == "Low")
+                                            if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
                                                 if (HandicapP1 < HandicapP3)
@@ -699,7 +699,7 @@ namespace DragonGolfBackEnd.Controllers
                                         if (ScoreHole8_P1 > 0 && ScoreHole8_P2 > 0 && ScoreHole8_P3 > 0 && ScoreHole8_P4 > 0)
                                         {
 
-                                            if (TipoGolpesVentaja == "High")
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                             {
 
                                                 if (HandicapP1 > HandicapP3)
@@ -715,7 +715,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             }
 
-                                            if (TipoGolpesVentaja == "Low")
+                                            if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
                                                 if (HandicapP1 < HandicapP3)
@@ -741,7 +741,7 @@ namespace DragonGolfBackEnd.Controllers
                                             ScoreHole9_P1 = ScoreHole9_P1 - 1;
 
 
-                                            if (TipoGolpesVentaja == "High")
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                             {
 
                                                 if (HandicapP1 > HandicapP3)
@@ -757,7 +757,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             }
 
-                                            if (TipoGolpesVentaja == "Low")
+                                            if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
                                                 if (HandicapP1 < HandicapP3)
@@ -779,7 +779,7 @@ namespace DragonGolfBackEnd.Controllers
                                         if (ScoreHole10_P1 > 0 && ScoreHole10_P2 > 0 && ScoreHole10_P3 > 0 && ScoreHole10_P4 > 0)
                                         {
 
-                                            if (TipoGolpesVentaja == "High")
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                             {
 
                                                 if (HandicapP1 > HandicapP3)
@@ -795,7 +795,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             }
 
-                                            if (TipoGolpesVentaja == "Low")
+                                            if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
                                                 if (HandicapP1 < HandicapP3)
@@ -817,7 +817,7 @@ namespace DragonGolfBackEnd.Controllers
                                         if (ScoreHole11_P1 > 0 && ScoreHole11_P2 > 0 && ScoreHole11_P3 > 0 && ScoreHole11_P4 > 0)
                                         {
 
-                                            if (TipoGolpesVentaja == "High")
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                             {
 
                                                 if (HandicapP1 > HandicapP3)
@@ -831,7 +831,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             }
 
-                                            if (TipoGolpesVentaja == "Low")
+                                            if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
                                                 if (HandicapP1 < HandicapP3)
@@ -853,7 +853,7 @@ namespace DragonGolfBackEnd.Controllers
                                         if (ScoreHole12_P1 > 0 && ScoreHole12_P2 > 0 && ScoreHole12_P3 > 0 && ScoreHole12_P4 > 0)
                                         {
 
-                                            if (TipoGolpesVentaja == "High")
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                             {
 
                                                 if (HandicapP1 > HandicapP3)
@@ -869,7 +869,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             }
 
-                                            if (TipoGolpesVentaja == "Low")
+                                            if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
                                                 if (HandicapP1 < HandicapP3)
@@ -890,7 +890,7 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole13_P1 > 0 && ScoreHole13_P2 > 0 && ScoreHole13_P3 > 0 && ScoreHole13_P4 > 0)
                                         {
-                                            if (TipoGolpesVentaja == "High")
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                             {
 
                                                 if (HandicapP1 > HandicapP3)
@@ -906,7 +906,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             }
 
-                                            if (TipoGolpesVentaja == "Low")
+                                            if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
                                                 if (HandicapP1 < HandicapP3)
@@ -928,7 +928,7 @@ namespace DragonGolfBackEnd.Controllers
                                         if (ScoreHole14_P1 > 0 && ScoreHole14_P2 > 0 && ScoreHole14_P3 > 0 && ScoreHole14_P4 > 0)
                                         {
 
-                                            if (TipoGolpesVentaja == "High")
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                             {
 
                                                 if (HandicapP1 > HandicapP3)
@@ -944,7 +944,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             }
 
-                                            if (TipoGolpesVentaja == "Low")
+                                            if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
                                                 if (HandicapP1 < HandicapP3)
@@ -966,7 +966,7 @@ namespace DragonGolfBackEnd.Controllers
                                         if (ScoreHole15_P1 > 0 && ScoreHole15_P2 > 0 && ScoreHole15_P3 > 0 && ScoreHole15_P4 > 0)
                                         {
 
-                                            if (TipoGolpesVentaja == "High")
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                             {
 
                                                 if (HandicapP1 > HandicapP3)
@@ -982,7 +982,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             }
 
-                                            if (TipoGolpesVentaja == "Low")
+                                            if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
                                                 if (HandicapP1 < HandicapP3)
@@ -1003,7 +1003,7 @@ namespace DragonGolfBackEnd.Controllers
                                         if (ScoreHole16_P1 > 0 && ScoreHole16_P2 > 0 && ScoreHole16_P3 > 0 && ScoreHole16_P4 > 0)
                                         {
 
-                                            if (TipoGolpesVentaja == "High")
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                             {
 
                                                 if (HandicapP1 > HandicapP3)
@@ -1019,7 +1019,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             }
 
-                                            if (TipoGolpesVentaja == "Low")
+                                            if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
                                                 if (HandicapP1 < HandicapP3)
@@ -1039,7 +1039,7 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole17_P1 > 0 && ScoreHole17_P2 > 0 && ScoreHole17_P3 > 0 && ScoreHole17_P4 > 0)
                                         {
-                                            if (TipoGolpesVentaja == "High")
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                             {
 
                                                 if (HandicapP1 > HandicapP3)
@@ -1055,7 +1055,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             }
 
-                                            if (TipoGolpesVentaja == "Low")
+                                            if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
                                                 if (HandicapP1 < HandicapP3)
@@ -1076,7 +1076,7 @@ namespace DragonGolfBackEnd.Controllers
                                         if (ScoreHole18_P1 > 0 && ScoreHole18_P2 > 0 && ScoreHole18_P3 > 0 && ScoreHole18_P4 > 0)
                                         {
 
-                                            if (TipoGolpesVentaja == "High")
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                             {
 
                                                 if (HandicapP1 > HandicapP3)
@@ -1092,7 +1092,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             }
 
-                                            if (TipoGolpesVentaja == "Low")
+                                            if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
                                                 if (HandicapP1 < HandicapP3)
@@ -1144,7 +1144,7 @@ namespace DragonGolfBackEnd.Controllers
                                         if (ScoreHole1_P2 > 0 && ScoreHole1_P1 > 0 && ScoreHole1_P3 > 0 && ScoreHole1_P4 > 0)
                                         {
 
-                                            if (TipoGolpesVentaja == "High")
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                             {
                                                 if (HandicapP2 > HandicapP4)
                                                 {
@@ -1159,7 +1159,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             }
 
-                                            if (TipoGolpesVentaja == "Low")
+                                            if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
                                                 if (HandicapP2 < HandicapP4)
@@ -1185,7 +1185,7 @@ namespace DragonGolfBackEnd.Controllers
                                         if (ScoreHole2_P2 > 0 && ScoreHole2_P1 > 0 && ScoreHole2_P3 > 0 && ScoreHole2_P4 > 0)
                                         {
                                             
-                                            if (TipoGolpesVentaja == "High")
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                             {
                                                 if (HandicapP2 > HandicapP4)
                                                 {
@@ -1200,7 +1200,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             }
 
-                                            if (TipoGolpesVentaja == "Low")
+                                            if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
                                                 if (HandicapP2 < HandicapP4)
@@ -1223,7 +1223,7 @@ namespace DragonGolfBackEnd.Controllers
                                         if (ScoreHole3_P2 > 0 && ScoreHole3_P1 > 0 && ScoreHole3_P3 > 0 && ScoreHole3_P4 > 0)
                                         {
                                            
-                                            if (TipoGolpesVentaja == "High")
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                             {
                                                 if (HandicapP2 > HandicapP4)
                                                 {
@@ -1238,7 +1238,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             }
 
-                                            if (TipoGolpesVentaja == "Low")
+                                            if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
                                                 if (HandicapP2 < HandicapP4)
@@ -1260,7 +1260,7 @@ namespace DragonGolfBackEnd.Controllers
                                         if (ScoreHole4_P2 > 0 && ScoreHole4_P1 > 0 && ScoreHole4_P3 > 0 && ScoreHole4_P4 > 0)
                                         {
                                            
-                                            if (TipoGolpesVentaja == "High")
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                             {
                                                 if (HandicapP2 > HandicapP4)
                                                 {
@@ -1275,7 +1275,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             }
 
-                                            if (TipoGolpesVentaja == "Low")
+                                            if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
                                                 if (HandicapP2 < HandicapP4)
@@ -1298,7 +1298,7 @@ namespace DragonGolfBackEnd.Controllers
                                         if (ScoreHole5_P2 > 0 && ScoreHole5_P1 > 0 && ScoreHole5_P3 > 0 && ScoreHole5_P4 > 0)
                                         {
                                            
-                                            if (TipoGolpesVentaja == "High")
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                             {
                                                 if (HandicapP2 > HandicapP4)
                                                 {
@@ -1313,7 +1313,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             }
 
-                                            if (TipoGolpesVentaja == "Low")
+                                            if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
                                                 if (HandicapP2 < HandicapP4)
@@ -1336,7 +1336,7 @@ namespace DragonGolfBackEnd.Controllers
                                         if (ScoreHole6_P2 > 0 && ScoreHole6_P1 > 0 && ScoreHole6_P3 > 0 && ScoreHole6_P4 > 0)
                                         {
                                             
-                                            if (TipoGolpesVentaja == "High")
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                             {
                                                 if (HandicapP2 > HandicapP4)
                                                 {
@@ -1351,7 +1351,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             }
 
-                                            if (TipoGolpesVentaja == "Low")
+                                            if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
                                                 if (HandicapP2 < HandicapP4)
@@ -1375,7 +1375,7 @@ namespace DragonGolfBackEnd.Controllers
                                         {
 
 
-                                            if (TipoGolpesVentaja == "High")
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                             {
                                                 if (HandicapP2 > HandicapP4)
                                                 {
@@ -1390,7 +1390,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             }
 
-                                            if (TipoGolpesVentaja == "Low")
+                                            if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
                                                 if (HandicapP2 < HandicapP4)
@@ -1413,7 +1413,7 @@ namespace DragonGolfBackEnd.Controllers
                                         if (ScoreHole8_P2 > 0 && ScoreHole8_P1 > 0 && ScoreHole8_P3 > 0 && ScoreHole8_P4 > 0)
                                         {
                                             
-                                            if (TipoGolpesVentaja == "High")
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                             {
                                                 if (HandicapP2 > HandicapP4)
                                                 {
@@ -1428,7 +1428,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             }
 
-                                            if (TipoGolpesVentaja == "Low")
+                                            if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
                                                 if (HandicapP2 < HandicapP4)
@@ -1451,7 +1451,7 @@ namespace DragonGolfBackEnd.Controllers
                                         if (ScoreHole9_P2 > 0 && ScoreHole9_P1 > 0 && ScoreHole9_P3 > 0 && ScoreHole9_P4 > 0)
                                         {
                                           
-                                            if (TipoGolpesVentaja == "High")
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                             {
                                                 if (HandicapP2 > HandicapP4)
                                                 {
@@ -1466,7 +1466,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             }
 
-                                            if (TipoGolpesVentaja == "Low")
+                                            if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
                                                 if (HandicapP2 < HandicapP4)
@@ -1490,7 +1490,7 @@ namespace DragonGolfBackEnd.Controllers
                                         {
                                             ScoreHole10_P2 = ScoreHole10_P2 - 1;
 
-                                            if (TipoGolpesVentaja == "High")
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                             {
                                                 if (HandicapP2 > HandicapP4)
                                                 {
@@ -1505,7 +1505,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             }
 
-                                            if (TipoGolpesVentaja == "Low")
+                                            if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
                                                 if (HandicapP2 < HandicapP4)
@@ -1530,7 +1530,7 @@ namespace DragonGolfBackEnd.Controllers
                                             ScoreHole11_P2 = ScoreHole11_P2 - 1;
 
 
-                                            if (TipoGolpesVentaja == "High")
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                             {
                                                 if (HandicapP2 > HandicapP4)
                                                 {
@@ -1545,7 +1545,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             }
 
-                                            if (TipoGolpesVentaja == "Low")
+                                            if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
                                                 if (HandicapP2 < HandicapP4)
@@ -1569,7 +1569,7 @@ namespace DragonGolfBackEnd.Controllers
                                         if (ScoreHole12_P2 > 0 && ScoreHole12_P1 > 0 && ScoreHole12_P3 > 0 && ScoreHole12_P4 > 0)
                                         {
                                             
-                                            if (TipoGolpesVentaja == "High")
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                             {
                                                 if (HandicapP2 > HandicapP4)
                                                 {
@@ -1584,7 +1584,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             }
 
-                                            if (TipoGolpesVentaja == "Low")
+                                            if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
                                                 if (HandicapP2 < HandicapP4)
@@ -1607,7 +1607,7 @@ namespace DragonGolfBackEnd.Controllers
                                         if (ScoreHole13_P2 > 0 && ScoreHole13_P1 > 0 && ScoreHole13_P3 > 0 && ScoreHole13_P4 > 0)
                                         {
                                          
-                                       if (TipoGolpesVentaja == "High")
+                                       if (TipoGolpesVentaja == "Hi Handicap")
                                             {
                                                 if (HandicapP2 > HandicapP4)
                                                 {
@@ -1622,7 +1622,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             }
 
-                                            if (TipoGolpesVentaja == "Low")
+                                            if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
                                                 if (HandicapP2 < HandicapP4)
@@ -1645,7 +1645,7 @@ namespace DragonGolfBackEnd.Controllers
                                         if (ScoreHole14_P2 > 0 && ScoreHole14_P1 > 0 && ScoreHole14_P3 > 0 && ScoreHole14_P4 > 0)
                                         {
                                             
-                                            if (TipoGolpesVentaja == "High")
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                             {
                                                 if (HandicapP2 > HandicapP4)
                                                 {
@@ -1660,7 +1660,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             }
 
-                                            if (TipoGolpesVentaja == "Low")
+                                            if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
                                                 if (HandicapP2 < HandicapP4)
@@ -1683,7 +1683,7 @@ namespace DragonGolfBackEnd.Controllers
                                         if (ScoreHole15_P2 > 0 && ScoreHole15_P1 > 0 && ScoreHole15_P3 > 0 && ScoreHole15_P4 > 0)
                                         {
                                            
-                                            if (TipoGolpesVentaja == "High")
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                             {
                                                 if (HandicapP2 > HandicapP4)
                                                 {
@@ -1698,7 +1698,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             }
 
-                                            if (TipoGolpesVentaja == "Low")
+                                            if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
                                                 if (HandicapP2 < HandicapP4)
@@ -1721,7 +1721,7 @@ namespace DragonGolfBackEnd.Controllers
                                         if (ScoreHole16_P2 > 0 && ScoreHole16_P1 > 0 && ScoreHole16_P3 > 0 && ScoreHole16_P4 > 0)
                                         {
                                            
-                                            if (TipoGolpesVentaja == "High")
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                             {
                                                 if (HandicapP2 > HandicapP4)
                                                 {
@@ -1736,7 +1736,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             }
 
-                                            if (TipoGolpesVentaja == "Low")
+                                            if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
                                                 if (HandicapP2 < HandicapP4)
@@ -1760,7 +1760,7 @@ namespace DragonGolfBackEnd.Controllers
                                         {
                                           
 
-                                            if (TipoGolpesVentaja == "High")
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                             {
                                                 if (HandicapP2 > HandicapP4)
                                                 {
@@ -1775,7 +1775,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             }
 
-                                            if (TipoGolpesVentaja == "Low")
+                                            if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
                                                 if (HandicapP2 < HandicapP4)
@@ -1798,7 +1798,7 @@ namespace DragonGolfBackEnd.Controllers
                                         if (ScoreHole18_P2 > 0 && ScoreHole18_P1 > 0 && ScoreHole18_P3 > 0 && ScoreHole18_P4 > 0)
                                         {
                                             
-                                            if (TipoGolpesVentaja == "High")
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                             {
                                                 if (HandicapP2 > HandicapP4)
                                                 {
@@ -1813,7 +1813,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             }
 
-                                            if (TipoGolpesVentaja == "Low")
+                                            if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
                                                 if (HandicapP2 < HandicapP4)

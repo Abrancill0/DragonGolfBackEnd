@@ -36,8 +36,12 @@ namespace DragonGolfBackEnd.Controllers
             public int IDRonda { get; set; }
             public string Player1 { get; set; }
             public string Player2 { get; set; }
+            public string Player3 { get; set; }
+            public string Player4 { get; set; }
             public int BetD_Player1 { get; set; }
             public int BetD_Player2 { get; set; }
+            public int BetD_Player3 { get; set; }
+            public int BetD_Player4 { get; set; }
             public float BetD_MontoF9 { get; set; }
             public float BetD_MontoB9 { get; set; }
             public float BetD_MontoCalculoF9 { get; set; }
@@ -126,8 +130,12 @@ namespace DragonGolfBackEnd.Controllers
                                 IDRonda = Convert.ToInt32(row["IDRonda"]),
                                 Player1 = Convert.ToString(row["Player1"]),
                                 Player2 = Convert.ToString(row["Player2"]),
+                                Player3 = Convert.ToString(row["Player3"]),
+                                Player4 = Convert.ToString(row["Player4"]),
                                 BetD_Player1 = Convert.ToInt32(row["BetD_Player1"]),
                                 BetD_Player2 = Convert.ToInt32(row["BetD_Player2"]),
+                                BetD_Player3 = Convert.ToInt32(row["BetD_Player3"]),
+                                BetD_Player4 = Convert.ToInt32(row["BetD_Player4"]),
                                 BetD_MontoF9 = Convert.ToSingle(row["BetD_MontoF9"]),
                                 BetD_MontoB9 = Convert.ToSingle(row["BetD_MontoB9"]),
                                 BetD_MontoCalculoF9 = Convert.ToSingle(row["BetD_MontoCalculoF9"]),
