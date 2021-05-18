@@ -76,6 +76,7 @@ namespace DragonGolfBackEnd.Controllers
             public string BetD_B9_7 { get; set; }
             public string BetD_B9_8 { get; set; }
             public string BetD_B9_9 { get; set; }
+            public string set_tmw_adv_strokes { get; set; }
 
         }
 
@@ -170,6 +171,7 @@ namespace DragonGolfBackEnd.Controllers
                                 BetD_B9_7 = Convert.ToString(row["BetD_B9_7"]),
                                 BetD_B9_8 = Convert.ToString(row["BetD_B9_8"]),
                                 BetD_B9_9 = Convert.ToString(row["BetD_B9_9"]),
+                                set_tmw_adv_strokes = Convert.ToString(row["set_tmw_adv_strokes"]),
                             };
 
                             lista.Add(ent);

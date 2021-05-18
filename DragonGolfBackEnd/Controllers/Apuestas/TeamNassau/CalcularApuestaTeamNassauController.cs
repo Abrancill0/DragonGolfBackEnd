@@ -2641,7 +2641,7 @@ namespace DragonGolfBackEnd.Controllers
                             ContadorHoyos = ContadorHoyos - 1;
                         }
 
-                        //Resultado )
+                        //Resultado 9
                         if (Resultado9_H > 0)
                         {
                             ContadorHoyos = ContadorHoyos + 1;
@@ -2695,7 +2695,6 @@ namespace DragonGolfBackEnd.Controllers
                         int Resultado16_L = 0;
                         int Resultado17_L = 0;
                         int Resultado18_L = 0;
-
 
                         int ValidaBack = 0;
 
@@ -3402,7 +3401,6 @@ namespace DragonGolfBackEnd.Controllers
                         {
                             ContadorHoyos = ContadorHoyos - 1;
                         }
-
 
                         //Calculo Medal front
                         int ResultadoTotaB1 = ScoreHole10_P1 + ScoreHole11_P1 + ScoreHole12_P1 + ScoreHole13_P1 + ScoreHole14_P1 + ScoreHole15_P1 + ScoreHole16_P1 + ScoreHole17_P1 + ScoreHole18_P1 + ScoreHole10_P3 + ScoreHole11_P3 + ScoreHole12_P3 + ScoreHole13_P3 + ScoreHole14_P3 + ScoreHole15_P3 + ScoreHole16_P3 + ScoreHole17_P3 + ScoreHole18_P3;
