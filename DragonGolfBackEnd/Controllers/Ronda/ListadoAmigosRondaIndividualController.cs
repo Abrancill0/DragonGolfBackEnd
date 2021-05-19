@@ -308,7 +308,7 @@ namespace DragonGolfBackEnd.Controllers
                             DificultatHoyo17 = Convert.ToInt32(row["Ho_Advantage17"]);//18
                             DificultatHoyo18 = Convert.ToInt32(row["Ho_Advantage18"]);//12
 
-                         
+
                             GolpesVentaja1 = 0;
                             GolpesVentaja2 = 0;
                             GolpesVentaja3 = 0;
@@ -437,6 +437,9 @@ namespace DragonGolfBackEnd.Controllers
                             }
 
                             int Contadorcito = 0;
+                            if (ventaja == Convert.ToInt32(row["PlayerId"]))
+                              {
+                           
                             //Cuando es negativo es ventaja para el player 1
                             if (AdvInverso < 0)
                             {
@@ -836,6 +839,8 @@ namespace DragonGolfBackEnd.Controllers
 
                             }
 
+                        }
+                            
                             int Contador = 0;
 
                            /// Adv1 = Convert.ToDecimal(row["handicapAuto"]);

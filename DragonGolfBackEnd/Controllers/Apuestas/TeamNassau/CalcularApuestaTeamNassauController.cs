@@ -1958,7 +1958,7 @@ namespace DragonGolfBackEnd.Controllers
                                 //Malo vs Malo 
                                 if (ScoreHole1_P1> ScoreHole1_P3)
                                 {
-                                    if (ScoreHole1_P2 > ScoreHole1_P4)
+                                    if (ScoreHole1_P2 >= ScoreHole1_P4)
                                     {
                                         Resultado1_L = ScoreHole1_P2 - ScoreHole1_P1;
                                     }
@@ -1969,7 +1969,7 @@ namespace DragonGolfBackEnd.Controllers
                                 }
                                 else
                                 {
-                                    if (ScoreHole1_P2 > ScoreHole1_P4)
+                                    if (ScoreHole1_P2 >= ScoreHole1_P4)
                                     {
                                         Resultado1_L = ScoreHole1_P2 - ScoreHole1_P3;
                                     }
@@ -1980,9 +1980,9 @@ namespace DragonGolfBackEnd.Controllers
                                 }
 
                                 //Bueno Vs Bueno
-                                if (ScoreHole1_P1 < ScoreHole1_P3)
+                                if (ScoreHole1_P1 <= ScoreHole1_P3)
                                 {
-                                    if (ScoreHole1_P2 < ScoreHole1_P4)
+                                    if (ScoreHole1_P2 <= ScoreHole1_P4)
                                     {
                                         Resultado1_H = ScoreHole1_P4 - ScoreHole1_P3;
                                     }
@@ -1993,7 +1993,7 @@ namespace DragonGolfBackEnd.Controllers
                                 }
                                 else
                                 {
-                                    if (ScoreHole1_P2 < ScoreHole1_P4)
+                                    if (ScoreHole1_P2 <= ScoreHole1_P4)
                                     {
                                         Resultado1_H = ScoreHole1_P4 - ScoreHole1_P1;
                                     }
@@ -2018,7 +2018,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                 if (ScoreHole2_P1 > ScoreHole2_P3)
                                 {
-                                    if (ScoreHole2_P2 > ScoreHole2_P4)
+                                    if (ScoreHole2_P2 >= ScoreHole2_P4)
                                     {
                                         Resultado2_L = ScoreHole2_P2 - ScoreHole2_P1;
                                     }
@@ -2029,7 +2029,7 @@ namespace DragonGolfBackEnd.Controllers
                                 }
                                 else
                                 {
-                                    if (ScoreHole2_P2 > ScoreHole2_P4)
+                                    if (ScoreHole2_P2 >= ScoreHole2_P4)
                                     {
                                         Resultado2_L = ScoreHole2_P2 - ScoreHole2_P3;
                                     }
@@ -2040,9 +2040,9 @@ namespace DragonGolfBackEnd.Controllers
                                 }
 
                                 //Bueno Vs Bueno
-                                if (ScoreHole2_P1 < ScoreHole2_P3)
+                                if (ScoreHole2_P1 <= ScoreHole2_P3)
                                 {
-                                    if (ScoreHole2_P2 < ScoreHole2_P4)
+                                    if (ScoreHole2_P2 <= ScoreHole2_P4)
                                     {
                                         Resultado2_H = ScoreHole2_P4 - ScoreHole2_P3;
                                     }
@@ -2053,7 +2053,7 @@ namespace DragonGolfBackEnd.Controllers
                                 }
                                 else
                                 {
-                                    if (ScoreHole2_P2 < ScoreHole2_P4)
+                                    if (ScoreHole2_P2 <= ScoreHole2_P4)
                                     {
                                         Resultado2_H = ScoreHole2_P4 - ScoreHole2_P1;
                                     }
@@ -2077,9 +2077,9 @@ namespace DragonGolfBackEnd.Controllers
                                 //Resultado3 = ScoreHole3_P2 - ScoreHole3_P1;
 
 
-                                if (ScoreHole3_P1 > ScoreHole3_P3)
+                                if (ScoreHole3_P1 >= ScoreHole3_P3)
                                 {
-                                    if (ScoreHole3_P2 > ScoreHole3_P4)
+                                    if (ScoreHole3_P2 >= ScoreHole3_P4)
                                     {
                                         Resultado3_L = ScoreHole3_P2 - ScoreHole3_P1;
                                     }
@@ -2090,7 +2090,7 @@ namespace DragonGolfBackEnd.Controllers
                                 }
                                 else
                                 {
-                                    if (ScoreHole3_P2 > ScoreHole3_P4)
+                                    if (ScoreHole3_P2 >= ScoreHole3_P4)
                                     {
                                         Resultado3_L = ScoreHole3_P2 - ScoreHole3_P3;
                                     }
@@ -2101,9 +2101,9 @@ namespace DragonGolfBackEnd.Controllers
                                 }
 
                                 //Bueno Vs Bueno
-                                if (ScoreHole3_P1 < ScoreHole3_P3)
+                                if (ScoreHole3_P1 <= ScoreHole3_P3)
                                 {
-                                    if (ScoreHole3_P2 < ScoreHole3_P4)
+                                    if (ScoreHole3_P2 <= ScoreHole3_P4)
                                     {
                                         Resultado3_H = ScoreHole3_P4 - ScoreHole3_P3;
                                     }
@@ -2114,7 +2114,7 @@ namespace DragonGolfBackEnd.Controllers
                                 }
                                 else
                                 {
-                                    if (ScoreHole3_P2 < ScoreHole3_P4)
+                                    if (ScoreHole3_P2 <= ScoreHole3_P4)
                                     {
                                         Resultado3_H = ScoreHole3_P4 - ScoreHole3_P1;
                                     }
@@ -2136,9 +2136,9 @@ namespace DragonGolfBackEnd.Controllers
                             {
                                // Resultado4 = ScoreHole4_P2 - ScoreHole4_P1;
 
-                                if (ScoreHole4_P1 > ScoreHole4_P3)
+                                if (ScoreHole4_P1 >= ScoreHole4_P3)
                                 {
-                                    if (ScoreHole4_P2 > ScoreHole4_P4)
+                                    if (ScoreHole4_P2 >= ScoreHole4_P4)
                                     {
                                         Resultado4_L = ScoreHole4_P2 - ScoreHole4_P1;
                                     }
@@ -2149,7 +2149,7 @@ namespace DragonGolfBackEnd.Controllers
                                 }
                                 else
                                 {
-                                    if (ScoreHole4_P2 > ScoreHole4_P4)
+                                    if (ScoreHole4_P2 >= ScoreHole4_P4)
                                     {
                                         Resultado4_L = ScoreHole4_P2 - ScoreHole4_P3;
                                     }
@@ -2160,9 +2160,9 @@ namespace DragonGolfBackEnd.Controllers
                                 }
 
                                 //Bueno Vs Bueno
-                                if (ScoreHole4_P1 < ScoreHole4_P3)
+                                if (ScoreHole4_P1 <= ScoreHole4_P3)
                                 {
-                                    if (ScoreHole4_P2 < ScoreHole4_P4)
+                                    if (ScoreHole4_P2 <= ScoreHole4_P4)
                                     {
                                         Resultado4_H = ScoreHole4_P4 - ScoreHole4_P3;
                                     }
@@ -2173,7 +2173,7 @@ namespace DragonGolfBackEnd.Controllers
                                 }
                                 else
                                 {
-                                    if (ScoreHole4_P2 < ScoreHole4_P4)
+                                    if (ScoreHole4_P2 <= ScoreHole4_P4)
                                     {
                                         Resultado4_H = ScoreHole4_P4 - ScoreHole4_P1;
                                     }
@@ -2196,9 +2196,9 @@ namespace DragonGolfBackEnd.Controllers
                               //  Resultado5 = ScoreHole5_P2 - ScoreHole5_P1;
 
 
-                                if (ScoreHole5_P1 > ScoreHole5_P3)
+                                if (ScoreHole5_P1 >= ScoreHole5_P3)
                                 {
-                                    if (ScoreHole5_P2 > ScoreHole5_P4)
+                                    if (ScoreHole5_P2 >= ScoreHole5_P4)
                                     {
                                         Resultado5_L = ScoreHole5_P2 - ScoreHole5_P1;
                                     }
@@ -2209,7 +2209,7 @@ namespace DragonGolfBackEnd.Controllers
                                 }
                                 else
                                 {
-                                    if (ScoreHole5_P2 > ScoreHole5_P4)
+                                    if (ScoreHole5_P2 >= ScoreHole5_P4)
                                     {
                                         Resultado5_L = ScoreHole5_P2 - ScoreHole5_P3;
                                     }
@@ -2220,9 +2220,9 @@ namespace DragonGolfBackEnd.Controllers
                                 }
 
                                 //Bueno Vs Bueno
-                                if (ScoreHole5_P1 < ScoreHole5_P3)
+                                if (ScoreHole5_P1 <= ScoreHole5_P3)
                                 {
-                                    if (ScoreHole5_P2 < ScoreHole5_P4)
+                                    if (ScoreHole5_P2 <= ScoreHole5_P4)
                                     {
                                         Resultado5_H = ScoreHole5_P4 - ScoreHole5_P3;
                                     }
@@ -2233,7 +2233,7 @@ namespace DragonGolfBackEnd.Controllers
                                 }
                                 else
                                 {
-                                    if (ScoreHole5_P2 < ScoreHole5_P4)
+                                    if (ScoreHole5_P2 <= ScoreHole5_P4)
                                     {
                                         Resultado5_H = ScoreHole5_P4 - ScoreHole5_P1;
                                     }
@@ -2255,9 +2255,9 @@ namespace DragonGolfBackEnd.Controllers
                             {
                               //  Resultado6 = ScoreHole6_P2 - ScoreHole6_P1;
 
-                                if (ScoreHole6_P1 > ScoreHole6_P3)
+                                if (ScoreHole6_P1 >= ScoreHole6_P3)
                                 {
-                                    if (ScoreHole6_P2 > ScoreHole6_P4)
+                                    if (ScoreHole6_P2 >= ScoreHole6_P4)
                                     {
                                         Resultado6_L = ScoreHole6_P2 - ScoreHole6_P1;
                                     }
@@ -2268,7 +2268,7 @@ namespace DragonGolfBackEnd.Controllers
                                 }
                                 else
                                 {
-                                    if (ScoreHole6_P2 > ScoreHole6_P4)
+                                    if (ScoreHole6_P2 >= ScoreHole6_P4)
                                     {
                                         Resultado6_L = ScoreHole6_P2 - ScoreHole6_P3;
                                     }
@@ -2279,9 +2279,9 @@ namespace DragonGolfBackEnd.Controllers
                                 }
 
                                 //Bueno Vs Bueno
-                                if (ScoreHole6_P1 < ScoreHole6_P3)
+                                if (ScoreHole6_P1 <= ScoreHole6_P3)
                                 {
-                                    if (ScoreHole6_P2 < ScoreHole6_P4)
+                                    if (ScoreHole6_P2 <= ScoreHole6_P4)
                                     {
                                         Resultado6_H = ScoreHole6_P4 - ScoreHole6_P3;
                                     }
@@ -2292,7 +2292,7 @@ namespace DragonGolfBackEnd.Controllers
                                 }
                                 else
                                 {
-                                    if (ScoreHole6_P2 < ScoreHole6_P4)
+                                    if (ScoreHole6_P2 <= ScoreHole6_P4)
                                     {
                                         Resultado6_H = ScoreHole6_P4 - ScoreHole6_P1;
                                     }
@@ -2314,9 +2314,9 @@ namespace DragonGolfBackEnd.Controllers
                             {
                                // Resultado7 = ScoreHole7_P2 - ScoreHole7_P1;
 
-                                if (ScoreHole7_P1 > ScoreHole7_P3)
+                                if (ScoreHole7_P1 >= ScoreHole7_P3)
                                 {
-                                    if (ScoreHole7_P2 > ScoreHole7_P4)
+                                    if (ScoreHole7_P2 >= ScoreHole7_P4)
                                     {
                                         Resultado7_L = ScoreHole7_P2 - ScoreHole7_P1;
                                     }
@@ -2327,7 +2327,7 @@ namespace DragonGolfBackEnd.Controllers
                                 }
                                 else
                                 {
-                                    if (ScoreHole7_P2 > ScoreHole7_P4)
+                                    if (ScoreHole7_P2 >= ScoreHole7_P4)
                                     {
                                         Resultado7_L = ScoreHole7_P2 - ScoreHole7_P3;
                                     }
@@ -2338,9 +2338,9 @@ namespace DragonGolfBackEnd.Controllers
                                 }
 
                                 //Bueno Vs Bueno
-                                if (ScoreHole7_P1 < ScoreHole7_P3)
+                                if (ScoreHole7_P1 <= ScoreHole7_P3)
                                 {
-                                    if (ScoreHole7_P2 < ScoreHole7_P4)
+                                    if (ScoreHole7_P2 <= ScoreHole7_P4)
                                     {
                                         Resultado7_H = ScoreHole7_P4 - ScoreHole7_P3;
                                     }
@@ -2351,7 +2351,7 @@ namespace DragonGolfBackEnd.Controllers
                                 }
                                 else
                                 {
-                                    if (ScoreHole7_P2 < ScoreHole7_P4)
+                                    if (ScoreHole7_P2 <= ScoreHole7_P4)
                                     {
                                         Resultado7_H = ScoreHole7_P4 - ScoreHole7_P1;
                                     }
@@ -2373,9 +2373,9 @@ namespace DragonGolfBackEnd.Controllers
                             {
                                // Resultado8 = ScoreHole8_P2 - ScoreHole8_P1;
 
-                                if (ScoreHole8_P1 > ScoreHole8_P3)
+                                if (ScoreHole8_P1 >= ScoreHole8_P3)
                                 {
-                                    if (ScoreHole8_P2 > ScoreHole8_P4)
+                                    if (ScoreHole8_P2 >= ScoreHole8_P4)
                                     {
                                         Resultado8_L = ScoreHole8_P2 - ScoreHole8_P1;
                                     }
@@ -2386,7 +2386,7 @@ namespace DragonGolfBackEnd.Controllers
                                 }
                                 else
                                 {
-                                    if (ScoreHole8_P2 > ScoreHole8_P4)
+                                    if (ScoreHole8_P2 >= ScoreHole8_P4)
                                     {
                                         Resultado8_L = ScoreHole8_P2 - ScoreHole8_P3;
                                     }
@@ -2397,9 +2397,9 @@ namespace DragonGolfBackEnd.Controllers
                                 }
 
                                 //Bueno Vs Bueno
-                                if (ScoreHole8_P1 < ScoreHole8_P3)
+                                if (ScoreHole8_P1 <= ScoreHole8_P3)
                                 {
-                                    if (ScoreHole8_P2 < ScoreHole8_P4)
+                                    if (ScoreHole8_P2 <= ScoreHole8_P4)
                                     {
                                         Resultado8_H = ScoreHole8_P4 - ScoreHole8_P3;
                                     }
@@ -2410,7 +2410,7 @@ namespace DragonGolfBackEnd.Controllers
                                 }
                                 else
                                 {
-                                    if (ScoreHole8_P2 < ScoreHole8_P4)
+                                    if (ScoreHole8_P2 <= ScoreHole8_P4)
                                     {
                                         Resultado8_H = ScoreHole8_P4 - ScoreHole8_P1;
                                     }
@@ -2432,9 +2432,9 @@ namespace DragonGolfBackEnd.Controllers
                             {
                               //  Resultado9 = ScoreHole9_P2 - ScoreHole9_P1;
 
-                                if (ScoreHole9_P1 > ScoreHole9_P3)
+                                if (ScoreHole9_P1 >= ScoreHole9_P3)
                                 {
-                                    if (ScoreHole9_P2 > ScoreHole9_P4)
+                                    if (ScoreHole9_P2 >= ScoreHole9_P4)
                                     {
                                         Resultado9_L = ScoreHole9_P2 - ScoreHole9_P1;
                                     }
@@ -2445,7 +2445,7 @@ namespace DragonGolfBackEnd.Controllers
                                 }
                                 else
                                 {
-                                    if (ScoreHole9_P2 > ScoreHole9_P4)
+                                    if (ScoreHole9_P2 >= ScoreHole9_P4)
                                     {
                                         Resultado9_L = ScoreHole9_P2 - ScoreHole9_P3;
                                     }
@@ -2456,9 +2456,9 @@ namespace DragonGolfBackEnd.Controllers
                                 }
 
                                 //Bueno Vs Bueno
-                                if (ScoreHole9_P1 < ScoreHole9_P3)
+                                if (ScoreHole9_P1 <= ScoreHole9_P3)
                                 {
-                                    if (ScoreHole9_P2 < ScoreHole9_P4)
+                                    if (ScoreHole9_P2 <= ScoreHole9_P4)
                                     {
                                         Resultado9_H = ScoreHole9_P4 - ScoreHole9_P3;
                                     }
@@ -2469,7 +2469,7 @@ namespace DragonGolfBackEnd.Controllers
                                 }
                                 else
                                 {
-                                    if (ScoreHole9_P2 < ScoreHole9_P4)
+                                    if (ScoreHole9_P2 <= ScoreHole9_P4)
                                     {
                                         Resultado9_H = ScoreHole9_P4 - ScoreHole9_P1;
                                     }

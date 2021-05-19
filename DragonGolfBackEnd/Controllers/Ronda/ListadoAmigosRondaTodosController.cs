@@ -392,7 +392,8 @@ namespace DragonGolfBackEnd.Controllers
                             DificultatHoyo18_tee = Convert.ToInt32(row["DificutadHoyo18"]);//12
 
 
-                            Adv1 = Convert.ToDecimal(row["usu_golpesventaja"]);
+                            //Adv1 = Convert.ToDecimal(row["usu_golpesventaja"]);
+                            Adv1 = Convert.ToDecimal(row["handicapAuto"]);
 
                             int Contador = 0;
 
