@@ -3580,6 +3580,10 @@ namespace DragonGolfBackEnd.Controllers
 
                 if (ResultadoPresionFront[i] == 1)
                 {
+                    if (Presion1<0)
+                    {
+                        Presion1 = 0;
+                    }
 
                     ResultadoInt += 1;
                     Presion1 += 1;
@@ -3677,6 +3681,11 @@ namespace DragonGolfBackEnd.Controllers
                 }
                 else if (ResultadoPresionFront[i] == -1)
                 {
+                    if (Presion1 > 0)
+                    {
+                        Presion1 = 0;
+                    }
+
                     ResultadoInt -= 1;
                     Presion1 -= 1;
 
