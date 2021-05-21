@@ -3597,245 +3597,375 @@ namespace DragonGolfBackEnd.Controllers
             int Resultado1_L, int Resultado2_L, int Resultado3_L, int Resultado4_L, int Resultado5_L, int Resultado6_L, int Resultado7_L, int Resultado8_L, int Resultado9_L,bool ValidaJuegoInicio)
         {
             int[] ResultadoPresionFront_H = new int[10];
+            int[] ResultadoPresionFront_T = new int[10];
             int[] ResultadoPresionFront_L = new int[10];
 
             string[] ResultadoPresionFrontString = new string[10];
 
-            if (Resultado1_H == 0)
+            int Hoyo1 = Resultado1_H + Resultado1_L;
+            int Hoyo2 = Resultado2_H + Resultado2_L;
+            int Hoyo3 = Resultado3_H + Resultado3_L;
+            int Hoyo4 = Resultado4_H + Resultado4_L;
+            int Hoyo5 = Resultado5_H + Resultado5_L;
+            int Hoyo6 = Resultado6_H + Resultado6_L;
+            int Hoyo7 = Resultado7_H + Resultado7_L;
+            int Hoyo8 = Resultado8_H + Resultado8_L;
+            int Hoyo9 = Resultado9_H + Resultado9_L;
+
+            if (Hoyo1 == 0)
             {
-                ResultadoPresionFront_H[1] = 0;
+                ResultadoPresionFront_T[1] = 0;
             }
-            else if (Resultado1_H > 0)
+            else if (Hoyo1 > 0)
             {
-                ResultadoPresionFront_H[1] = 1;
+                ResultadoPresionFront_T[1] = 1;
             }
-            else if (Resultado1_H < 0)
+            else if (Hoyo1 < 0)
             {
-                ResultadoPresionFront_H[1] = -1;
+                ResultadoPresionFront_T[1] = -1;
             }
 
-            if (Resultado2_H == 0)
+            if (Hoyo2 == 0)
             {
-                ResultadoPresionFront_H[2] = 0;
+                ResultadoPresionFront_T[2] = 0;
             }
-            else if (Resultado2_H > 0)
+            else if (Hoyo2 > 0)
             {
-                ResultadoPresionFront_H[2] = 1;
+                ResultadoPresionFront_T[2] = 1;
             }
-            else if (Resultado2_H < 0)
+            else if (Hoyo2 < 0)
             {
-                ResultadoPresionFront_H[2] = -1;
-            }
-
-            if (Resultado3_H == 0)
-            {
-                ResultadoPresionFront_H[3] = 0;
-            }
-            else if (Resultado3_H > 0)
-            {
-                ResultadoPresionFront_H[3] = 1;
-            }
-            else if (Resultado3_H < 0)
-            {
-                ResultadoPresionFront_H[3] = -1;
+                ResultadoPresionFront_T[2] = -1;
             }
 
-            if (Resultado4_H == 0)
+            if (Hoyo3 == 0)
             {
-                ResultadoPresionFront_H[4] = 0;
+                ResultadoPresionFront_T[3] = 0;
             }
-            else if (Resultado4_H > 0)
+            else if (Hoyo3 > 0)
             {
-                ResultadoPresionFront_H[4] = 1;
+                ResultadoPresionFront_T[3] = 1;
             }
-            else if (Resultado4_H < 0)
+            else if (Hoyo3 < 0)
             {
-                ResultadoPresionFront_H[4] = -1;
-            }
-
-            if (Resultado5_H == 0)
-            {
-                ResultadoPresionFront_H[5] = 0;
-            }
-            else if (Resultado5_H > 0)
-            {
-                ResultadoPresionFront_H[5] = 1;
-            }
-            else if (Resultado5_H < 0)
-            {
-                ResultadoPresionFront_H[5] = -1;
+                ResultadoPresionFront_T[3] = -1;
             }
 
-            if (Resultado6_H == 0)
+            if (Hoyo4 == 0)
             {
-                ResultadoPresionFront_H[6] = 0;
+                ResultadoPresionFront_T[4] = 0;
             }
-            else if (Resultado6_H > 0)
+            else if (Hoyo4 > 0)
             {
-                ResultadoPresionFront_H[6] = 1;
+                ResultadoPresionFront_T[4] = 1;
             }
-            else if (Resultado6_H < 0)
+            else if (Hoyo4 < 0)
             {
-                ResultadoPresionFront_H[6] = -1;
-            }
-
-            if (Resultado7_H == 0)
-            {
-                ResultadoPresionFront_H[7] = 0;
-            }
-            else if (Resultado7_H > 0)
-            {
-                ResultadoPresionFront_H[7] = 1;
-            }
-            else if (Resultado7_H < 0)
-            {
-                ResultadoPresionFront_H[7] = -1;
+                ResultadoPresionFront_T[4] = -1;
             }
 
-            if (Resultado8_H == 0)
+            if (Hoyo5 == 0)
             {
-                ResultadoPresionFront_H[8] = 0;
+                ResultadoPresionFront_T[5] = 0;
             }
-            else if (Resultado8_H > 0)
+            else if (Hoyo5 > 0)
             {
-                ResultadoPresionFront_H[8] = 1;
+                ResultadoPresionFront_T[5] = 1;
             }
-            else if (Resultado8_H < 0)
+            else if (Hoyo5 < 0)
             {
-                ResultadoPresionFront_H[8] = -1;
-            }
-
-            if (Resultado9_H == 0)
-            {
-                ResultadoPresionFront_H[9] = 0;
-            }
-            else if (Resultado9_H > 0)
-            {
-                ResultadoPresionFront_H[9] = 1;
-            }
-            else if (Resultado9_H < 0)
-            {
-                ResultadoPresionFront_H[9] = -1;
+                ResultadoPresionFront_T[5] = -1;
             }
 
-
-
-            if (Resultado1_L == 0)
+            if (Hoyo6 == 0)
             {
-                ResultadoPresionFront_L[1] = 0;
+                ResultadoPresionFront_T[6] = 0;
             }
-            else if (Resultado1_L > 0)
+            else if (Hoyo6 > 0)
             {
-                ResultadoPresionFront_L[1] = 1;
+                ResultadoPresionFront_T[6] = 1;
             }
-            else if (Resultado1_L < 0)
+            else if (Hoyo6 < 0)
             {
-                ResultadoPresionFront_L[1] = -1;
+                ResultadoPresionFront_T[6] = -1;
             }
 
-            if (Resultado2_L == 0)
+            if (Hoyo7 == 0)
             {
-                ResultadoPresionFront_L[2] = 0;
+                ResultadoPresionFront_T[7] = 0;
             }
-            else if (Resultado2_L > 0)
+            else if (Hoyo7 > 0)
             {
-                ResultadoPresionFront_L[2] = 1;
+                ResultadoPresionFront_T[7] = 1;
             }
-            else if (Resultado2_L < 0)
+            else if (Hoyo7 < 0)
             {
-                ResultadoPresionFront_L[2] = -1;
-            }
-
-            if (Resultado3_L == 0)
-            {
-                ResultadoPresionFront_L[3] = 0;
-            }
-            else if (Resultado3_L > 0)
-            {
-                ResultadoPresionFront_L[3] = 1;
-            }
-            else if (Resultado3_L < 0)
-            {
-                ResultadoPresionFront_L[3] = -1;
+                ResultadoPresionFront_T[7] = -1;
             }
 
-            if (Resultado4_L == 0)
+            if (Hoyo8 == 0)
             {
-                ResultadoPresionFront_L[4] = 0;
+                ResultadoPresionFront_T[8] = 0;
             }
-            else if (Resultado4_L > 0)
+            else if (Hoyo8 > 0)
             {
-                ResultadoPresionFront_L[4] = 1;
+                ResultadoPresionFront_T[8] = 1;
             }
-            else if (Resultado4_L < 0)
+            else if (Hoyo8 < 0)
             {
-                ResultadoPresionFront_L[4] = -1;
-            }
-
-            if (Resultado5_L == 0)
-            {
-                ResultadoPresionFront_L[5] = 0;
-            }
-            else if (Resultado5_L > 0)
-            {
-                ResultadoPresionFront_L[5] = 1;
-            }
-            else if (Resultado5_L < 0)
-            {
-                ResultadoPresionFront_L[5] = -1;
+                ResultadoPresionFront_T[8] = -1;
             }
 
-            if (Resultado6_L == 0)
+            if (Hoyo9 == 0)
             {
-                ResultadoPresionFront_L[6] = 0;
+                ResultadoPresionFront_T[9] = 0;
             }
-            else if (Resultado6_L > 0)
+            else if (Hoyo9 > 0)
             {
-                ResultadoPresionFront_L[6] = 1;
+                ResultadoPresionFront_T[9] = 1;
             }
-            else if (Resultado6_L < 0)
+            else if (Hoyo9 < 0)
             {
-                ResultadoPresionFront_L[6] = -1;
-            }
-
-            if (Resultado7_L == 0)
-            {
-                ResultadoPresionFront_L[7] = 0;
-            }
-            else if (Resultado7_L > 0)
-            {
-                ResultadoPresionFront_L[7] = 1;
-            }
-            else if (Resultado7_L < 0)
-            {
-                ResultadoPresionFront_L[7] = -1;
+                ResultadoPresionFront_T[9] = -1;
             }
 
-            if (Resultado8_L == 0)
-            {
-                ResultadoPresionFront_L[8] = 0;
-            }
-            else if (Resultado8_L > 0)
-            {
-                ResultadoPresionFront_L[8] = 1;
-            }
-            else if (Resultado8_L < 0)
-            {
-                ResultadoPresionFront_L[8] = -1;
-            }
 
-            if (Resultado9_L == 0)
-            {
-                ResultadoPresionFront_L[9] = 0;
-            }
-            else if (Resultado9_L > 0)
-            {
-                ResultadoPresionFront_L[9] = 1;
-            }
-            else if (Resultado9_L < 0)
-            {
-                ResultadoPresionFront_L[9] = -1;
-            }
+            //
+            //if (Resultado1_H == 0)
+            //{
+            //    ResultadoPresionFront_H[1] = 0;
+            //}
+            //else if (Resultado1_H > 0)
+            //{
+            //    ResultadoPresionFront_H[1] = 1;
+            //}
+            //else if (Resultado1_H < 0)
+            //{
+            //    ResultadoPresionFront_H[1] = -1;
+            //}
+
+            //if (Resultado2_H == 0)
+            //{
+            //    ResultadoPresionFront_H[2] = 0;
+            //}
+            //else if (Resultado2_H > 0)
+            //{
+            //    ResultadoPresionFront_H[2] = 1;
+            //}
+            //else if (Resultado2_H < 0)
+            //{
+            //    ResultadoPresionFront_H[2] = -1;
+            //}
+
+            //if (Resultado3_H == 0)
+            //{
+            //    ResultadoPresionFront_H[3] = 0;
+            //}
+            //else if (Resultado3_H > 0)
+            //{
+            //    ResultadoPresionFront_H[3] = 1;
+            //}
+            //else if (Resultado3_H < 0)
+            //{
+            //    ResultadoPresionFront_H[3] = -1;
+            //}
+
+            //if (Resultado4_H == 0)
+            //{
+            //    ResultadoPresionFront_H[4] = 0;
+            //}
+            //else if (Resultado4_H > 0)
+            //{
+            //    ResultadoPresionFront_H[4] = 1;
+            //}
+            //else if (Resultado4_H < 0)
+            //{
+            //    ResultadoPresionFront_H[4] = -1;
+            //}
+
+            //if (Resultado5_H == 0)
+            //{
+            //    ResultadoPresionFront_H[5] = 0;
+            //}
+            //else if (Resultado5_H > 0)
+            //{
+            //    ResultadoPresionFront_H[5] = 1;
+            //}
+            //else if (Resultado5_H < 0)
+            //{
+            //    ResultadoPresionFront_H[5] = -1;
+            //}
+
+            //if (Resultado6_H == 0)
+            //{
+            //    ResultadoPresionFront_H[6] = 0;
+            //}
+            //else if (Resultado6_H > 0)
+            //{
+            //    ResultadoPresionFront_H[6] = 1;
+            //}
+            //else if (Resultado6_H < 0)
+            //{
+            //    ResultadoPresionFront_H[6] = -1;
+            //}
+
+            //if (Resultado7_H == 0)
+            //{
+            //    ResultadoPresionFront_H[7] = 0;
+            //}
+            //else if (Resultado7_H > 0)
+            //{
+            //    ResultadoPresionFront_H[7] = 1;
+            //}
+            //else if (Resultado7_H < 0)
+            //{
+            //    ResultadoPresionFront_H[7] = -1;
+            //}
+
+            //if (Resultado8_H == 0)
+            //{
+            //    ResultadoPresionFront_H[8] = 0;
+            //}
+            //else if (Resultado8_H > 0)
+            //{
+            //    ResultadoPresionFront_H[8] = 1;
+            //}
+            //else if (Resultado8_H < 0)
+            //{
+            //    ResultadoPresionFront_H[8] = -1;
+            //}
+
+            //if (Resultado9_H == 0)
+            //{
+            //    ResultadoPresionFront_H[9] = 0;
+            //}
+            //else if (Resultado9_H > 0)
+            //{
+            //    ResultadoPresionFront_H[9] = 1;
+            //}
+            //else if (Resultado9_H < 0)
+            //{
+            //    ResultadoPresionFront_H[9] = -1;
+            //}
+
+
+
+            //if (Resultado1_L == 0)
+            //{
+            //    ResultadoPresionFront_L[1] = 0;
+            //}
+            //else if (Resultado1_L > 0)
+            //{
+            //    ResultadoPresionFront_L[1] = 1;
+            //}
+            //else if (Resultado1_L < 0)
+            //{
+            //    ResultadoPresionFront_L[1] = -1;
+            //}
+
+            //if (Resultado2_L == 0)
+            //{
+            //    ResultadoPresionFront_L[2] = 0;
+            //}
+            //else if (Resultado2_L > 0)
+            //{
+            //    ResultadoPresionFront_L[2] = 1;
+            //}
+            //else if (Resultado2_L < 0)
+            //{
+            //    ResultadoPresionFront_L[2] = -1;
+            //}
+
+            //if (Resultado3_L == 0)
+            //{
+            //    ResultadoPresionFront_L[3] = 0;
+            //}
+            //else if (Resultado3_L > 0)
+            //{
+            //    ResultadoPresionFront_L[3] = 1;
+            //}
+            //else if (Resultado3_L < 0)
+            //{
+            //    ResultadoPresionFront_L[3] = -1;
+            //}
+
+            //if (Resultado4_L == 0)
+            //{
+            //    ResultadoPresionFront_L[4] = 0;
+            //}
+            //else if (Resultado4_L > 0)
+            //{
+            //    ResultadoPresionFront_L[4] = 1;
+            //}
+            //else if (Resultado4_L < 0)
+            //{
+            //    ResultadoPresionFront_L[4] = -1;
+            //}
+
+            //if (Resultado5_L == 0)
+            //{
+            //    ResultadoPresionFront_L[5] = 0;
+            //}
+            //else if (Resultado5_L > 0)
+            //{
+            //    ResultadoPresionFront_L[5] = 1;
+            //}
+            //else if (Resultado5_L < 0)
+            //{
+            //    ResultadoPresionFront_L[5] = -1;
+            //}
+
+            //if (Resultado6_L == 0)
+            //{
+            //    ResultadoPresionFront_L[6] = 0;
+            //}
+            //else if (Resultado6_L > 0)
+            //{
+            //    ResultadoPresionFront_L[6] = 1;
+            //}
+            //else if (Resultado6_L < 0)
+            //{
+            //    ResultadoPresionFront_L[6] = -1;
+            //}
+
+            //if (Resultado7_L == 0)
+            //{
+            //    ResultadoPresionFront_L[7] = 0;
+            //}
+            //else if (Resultado7_L > 0)
+            //{
+            //    ResultadoPresionFront_L[7] = 1;
+            //}
+            //else if (Resultado7_L < 0)
+            //{
+            //    ResultadoPresionFront_L[7] = -1;
+            //}
+
+            //if (Resultado8_L == 0)
+            //{
+            //    ResultadoPresionFront_L[8] = 0;
+            //}
+            //else if (Resultado8_L > 0)
+            //{
+            //    ResultadoPresionFront_L[8] = 1;
+            //}
+            //else if (Resultado8_L < 0)
+            //{
+            //    ResultadoPresionFront_L[8] = -1;
+            //}
+
+            //if (Resultado9_L == 0)
+            //{
+            //    ResultadoPresionFront_L[9] = 0;
+            //}
+            //else if (Resultado9_L > 0)
+            //{
+            //    ResultadoPresionFront_L[9] = 1;
+            //}
+            //else if (Resultado9_L < 0)
+            //{
+            //    ResultadoPresionFront_L[9] = -1;
+            //}
 
 
             string ResultadoString = "";
@@ -3856,16 +3986,67 @@ namespace DragonGolfBackEnd.Controllers
             for (int i = 1; i < 10; i++)
             {
 
-                if (ResultadoPresionFront_H[i] == 1)
+                if (ResultadoPresionFront_T[i] == 1)
                 {
+                    //if (Presion1 < 0)
+                    //{
+                    //    Presion1 = 0;
+                    //}
 
-                    if (Presion1 < 0)
+                    int ValorHoyo = 0;
+
+                    switch (i)
                     {
-                        Presion1 = 0;
+                        case 1:
+                            ResultadoInt += (-1 * Hoyo1);
+                            ValorHoyo = Hoyo1;
+                            break;
+                        case 2:
+                            ResultadoInt += (-1 * Hoyo2);
+                            ValorHoyo = Hoyo2;
+                            break;
+                        case 3:
+                            ResultadoInt += (-1 * Hoyo3);
+                            ValorHoyo = Hoyo3;
+                            break;
+                        case 4:
+                            ResultadoInt -= (-1 * Hoyo4);
+                            ValorHoyo = Hoyo4;
+                            break;
+                        case 5:
+                            ResultadoInt += (-1 * Hoyo5);
+                            ValorHoyo = Hoyo5;
+                            break;
+                        case 6:
+                            ResultadoInt += (-1 * Hoyo6);
+                            ValorHoyo = Hoyo6;
+                            break;
+                        case 7:
+                            ResultadoInt += (-1 * Hoyo7);
+                            ValorHoyo = Hoyo7;
+                            break;
+                        case 8:
+                            ResultadoInt += (-1 * Hoyo8);
+                            ValorHoyo = Hoyo8;
+                            break;
+                        case 9:
+                            ResultadoInt += (-1 * Hoyo9);
+                            ValorHoyo = Hoyo9;
+                            break;
+                        default:
+                            Console.WriteLine("Default case");
+                            break;
                     }
 
-                    ResultadoInt += 1;
-                    Presion1 += 1;
+                    if (ValorHoyo > 1)
+                    {
+                        Presion1 += ValorHoyo;
+                    }
+                    else
+                    {
+                        Presion1 += 1;
+                    }
+                   
 
                     ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt);
 
@@ -3889,12 +4070,46 @@ namespace DragonGolfBackEnd.Controllers
                             if (PresionValor1 != "")
                             {
                                 int Presion = Convert.ToInt32(PresionValor1);
-                                Presion += 1;
+                               // Presion += 1;
+
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion += (-1 * Hoyo1); ;
+                                        break;
+                                    case 2:
+                                        Presion += (-1 * Hoyo2); ;
+                                        break;
+                                    case 3:
+                                        Presion += (-1 * Hoyo3); ;
+                                        break;
+                                    case 4:
+                                        Presion += (-1 * Hoyo4); ;
+                                        break;
+                                    case 5:
+                                        Presion += (-1 * Hoyo5); ;
+                                        break;
+                                    case 6:
+                                        Presion += (-1 * Hoyo6); ;
+                                        break;
+                                    case 7:
+                                        Presion += (-1 * Hoyo7); ;
+                                        break;
+                                    case 8:
+                                        Presion += (-1 * Hoyo8); ;
+                                        break;
+                                    case 9:
+                                        Presion += (-1 * Hoyo9); ;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
+
                                 PresionValor1 = Convert.ToString(Presion);
                             }
 
                             ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2;
-
 
                             continue;
                         }
@@ -3908,14 +4123,78 @@ namespace DragonGolfBackEnd.Controllers
                             if (PresionValor1 != "")
                             {
                                 int Presion = Convert.ToInt32(PresionValor1);
-                                Presion += 1;
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion += (-1 * Hoyo1); ;
+                                        break;
+                                    case 2:
+                                        Presion += (-1 * Hoyo2); ;
+                                        break;
+                                    case 3:
+                                        Presion += (-1 * Hoyo3); ;
+                                        break;
+                                    case 4:
+                                        Presion += (-1 * Hoyo4); ;
+                                        break;
+                                    case 5:
+                                        Presion += (-1 * Hoyo5); ;
+                                        break;
+                                    case 6:
+                                        Presion += (-1 * Hoyo6); ;
+                                        break;
+                                    case 7:
+                                        Presion += (-1 * Hoyo7); ;
+                                        break;
+                                    case 8:
+                                        Presion += (-1 * Hoyo8); ;
+                                        break;
+                                    case 9:
+                                        Presion += (-1 * Hoyo9); ;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
                                 PresionValor1 = Convert.ToString(Presion);
                             }
 
                             if (PresionValor2 != "")
                             {
                                 int Presion = Convert.ToInt32(PresionValor2);
-                                Presion += 1;
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion += (-1 * Hoyo1); ;
+                                        break;
+                                    case 2:
+                                        Presion += (-1 * Hoyo2); ;
+                                        break;
+                                    case 3:
+                                        Presion += (-1 * Hoyo3); ;
+                                        break;
+                                    case 4:
+                                        Presion += (-1 * Hoyo4); ;
+                                        break;
+                                    case 5:
+                                        Presion += (-1 * Hoyo5); ;
+                                        break;
+                                    case 6:
+                                        Presion += (-1 * Hoyo6); ;
+                                        break;
+                                    case 7:
+                                        Presion += (-1 * Hoyo7); ;
+                                        break;
+                                    case 8:
+                                        Presion += (-1 * Hoyo8); ;
+                                        break;
+                                    case 9:
+                                        Presion += (-1 * Hoyo9); ;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
                                 PresionValor2 = Convert.ToString(Presion);
                             }
 
@@ -3934,21 +4213,117 @@ namespace DragonGolfBackEnd.Controllers
                             if (PresionValor1 != "")
                             {
                                 int Presion = Convert.ToInt32(PresionValor1);
-                                Presion += 1;
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion += (-1 * Hoyo1); ;
+                                        break;
+                                    case 2:
+                                        Presion += (-1 * Hoyo2); ;
+                                        break;
+                                    case 3:
+                                        Presion += (-1 * Hoyo3); ;
+                                        break;
+                                    case 4:
+                                        Presion += (-1 * Hoyo4); ;
+                                        break;
+                                    case 5:
+                                        Presion += (-1 * Hoyo5); ;
+                                        break;
+                                    case 6:
+                                        Presion += (-1 * Hoyo6); ;
+                                        break;
+                                    case 7:
+                                        Presion += (-1 * Hoyo7); ;
+                                        break;
+                                    case 8:
+                                        Presion += (-1 * Hoyo8); ;
+                                        break;
+                                    case 9:
+                                        Presion += (-1 * Hoyo9); ;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
                                 PresionValor1 = Convert.ToString(Presion);
                             }
 
                             if (PresionValor2 != "")
                             {
                                 int Presion = Convert.ToInt32(PresionValor2);
-                                Presion += 1;
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion += (-1 * Hoyo1); ;
+                                        break;
+                                    case 2:
+                                        Presion += (-1 * Hoyo2); ;
+                                        break;
+                                    case 3:
+                                        Presion += (-1 * Hoyo3); ;
+                                        break;
+                                    case 4:
+                                        Presion += (-1 * Hoyo4); ;
+                                        break;
+                                    case 5:
+                                        Presion += (-1 * Hoyo5); ;
+                                        break;
+                                    case 6:
+                                        Presion += (-1 * Hoyo6); ;
+                                        break;
+                                    case 7:
+                                        Presion += (-1 * Hoyo7); ;
+                                        break;
+                                    case 8:
+                                        Presion += (-1 * Hoyo8); ;
+                                        break;
+                                    case 9:
+                                        Presion += (-1 * Hoyo9); ;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
                                 PresionValor2 = Convert.ToString(Presion);
                             }
 
                             if (PresionValor3 != "")
                             {
                                 int Presion = Convert.ToInt32(PresionValor3);
-                                Presion += 1;
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion += (-1 * Hoyo1); ;
+                                        break;
+                                    case 2:
+                                        Presion += (-1 * Hoyo2); ;
+                                        break;
+                                    case 3:
+                                        Presion += (-1 * Hoyo3); ;
+                                        break;
+                                    case 4:
+                                        Presion += (-1 * Hoyo4); ;
+                                        break;
+                                    case 5:
+                                        Presion += (-1 * Hoyo5); ;
+                                        break;
+                                    case 6:
+                                        Presion += (-1 * Hoyo6); ;
+                                        break;
+                                    case 7:
+                                        Presion += (-1 * Hoyo7); ;
+                                        break;
+                                    case 8:
+                                        Presion += (-1 * Hoyo8); ;
+                                        break;
+                                    case 9:
+                                        Presion += (-1 * Hoyo9); ;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
                                 PresionValor3 = Convert.ToString(Presion);
                             }
 
@@ -3965,28 +4340,159 @@ namespace DragonGolfBackEnd.Controllers
                             if (PresionValor1 != "")
                             {
                                 int Presion = Convert.ToInt32(PresionValor1);
-                                Presion += 1;
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion += (-1 * Hoyo1); ;
+                                        break;
+                                    case 2:
+                                        Presion += (-1 * Hoyo2); ;
+                                        break;
+                                    case 3:
+                                        Presion += (-1 * Hoyo3); ;
+                                        break;
+                                    case 4:
+                                        Presion += (-1 * Hoyo4); ;
+                                        break;
+                                    case 5:
+                                        Presion += (-1 * Hoyo5); ;
+                                        break;
+                                    case 6:
+                                        Presion += (-1 * Hoyo6); ;
+                                        break;
+                                    case 7:
+                                        Presion += (-1 * Hoyo7); ;
+                                        break;
+                                    case 8:
+                                        Presion += (-1 * Hoyo8); ;
+                                        break;
+                                    case 9:
+                                        Presion += (-1 * Hoyo9); ;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
+
                                 PresionValor1 = Convert.ToString(Presion);
                             }
 
                             if (PresionValor2 != "")
                             {
                                 int Presion = Convert.ToInt32(PresionValor2);
-                                Presion += 1;
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion += (-1 * Hoyo1); ;
+                                        break;
+                                    case 2:
+                                        Presion += (-1 * Hoyo2); ;
+                                        break;
+                                    case 3:
+                                        Presion += (-1 * Hoyo3); ;
+                                        break;
+                                    case 4:
+                                        Presion += (-1 * Hoyo4); ;
+                                        break;
+                                    case 5:
+                                        Presion += (-1 * Hoyo5); ;
+                                        break;
+                                    case 6:
+                                        Presion += (-1 * Hoyo6); ;
+                                        break;
+                                    case 7:
+                                        Presion += (-1 * Hoyo7); ;
+                                        break;
+                                    case 8:
+                                        Presion += (-1 * Hoyo8); ;
+                                        break;
+                                    case 9:
+                                        Presion += (-1 * Hoyo9); ;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
                                 PresionValor2 = Convert.ToString(Presion);
                             }
 
                             if (PresionValor3 != "")
                             {
                                 int Presion = Convert.ToInt32(PresionValor3);
-                                Presion += 1;
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion -= (-1 * Hoyo1);
+                                        break;
+                                    case 2:
+                                        Presion -= (-1 * Hoyo2);
+                                        break;
+                                    case 3:
+                                        Presion -= (-1 * Hoyo3);
+                                        break;
+                                    case 4:
+                                        Presion -= (-1 * Hoyo4);
+                                        break;
+                                    case 5:
+                                        Presion -= (-1 * Hoyo5);
+                                        break;
+                                    case 6:
+                                        Presion -= (-1 * Hoyo6);
+                                        break;
+                                    case 7:
+                                        Presion -= (-1 * Hoyo7);
+                                        break;
+                                    case 8:
+                                        Presion -= (-1 * Hoyo8);
+                                        break;
+                                    case 9:
+                                        Presion -= (-1 * Hoyo9);
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
+
                                 PresionValor3 = Convert.ToString(Presion);
                             }
 
                             if (PresionValor4 != "")
                             {
                                 int Presion = Convert.ToInt32(PresionValor4);
-                                Presion += 1;
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion += (-1 * Hoyo1); ;
+                                        break;
+                                    case 2:
+                                        Presion += (-1 * Hoyo2); ;
+                                        break;
+                                    case 3:
+                                        Presion += (-1 * Hoyo3); ;
+                                        break;
+                                    case 4:
+                                        Presion += (-1 * Hoyo4); ;
+                                        break;
+                                    case 5:
+                                        Presion += (-1 * Hoyo5); ;
+                                        break;
+                                    case 6:
+                                        Presion += (-1 * Hoyo6); ;
+                                        break;
+                                    case 7:
+                                        Presion += (-1 * Hoyo7); ;
+                                        break;
+                                    case 8:
+                                        Presion += (-1 * Hoyo8); ;
+                                        break;
+                                    case 9:
+                                        Presion += (-1 * Hoyo9); ;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
+
                                 PresionValor4 = Convert.ToString(Presion);
                             }
 
@@ -3995,227 +4501,7 @@ namespace DragonGolfBackEnd.Controllers
                             continue;
                         }
 
-                        if (PresionValor6 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "" && PresionValor5 != "")
-                        {
-                            PresionValor6 = "0";
-                            Presion1 = 0;
-
-                            if (PresionValor1 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor1);
-                                Presion += 1;
-                                PresionValor1 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor2 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor2);
-                                Presion += 1;
-                                PresionValor2 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor3 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor3);
-                                Presion += 1;
-                                PresionValor3 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor4 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor4);
-                                Presion += 1;
-                                PresionValor4 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor5 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor5);
-                                Presion += 1;
-                                PresionValor5 = Convert.ToString(Presion);
-                            }
-
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6;
-
-                            continue;
-                        }
-
-                        if (PresionValor7 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "" && PresionValor5 != "" && PresionValor6 != "")
-                        {
-                            PresionValor7 = "0";
-                            Presion1 = 0;
-
-                            if (PresionValor1 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor1);
-                                Presion += 1;
-                                PresionValor1 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor2 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor2);
-                                Presion += 1;
-                                PresionValor2 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor3 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor3);
-                                Presion += 1;
-                                PresionValor3 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor4 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor4);
-                                Presion += 1;
-                                PresionValor4 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor5 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor5);
-                                Presion += 1;
-                                PresionValor5 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor6 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor6);
-                                Presion += 1;
-                                PresionValor6 = Convert.ToString(Presion);
-                            }
-
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7;
-
-                            continue;
-                        }
-
-                        if (PresionValor8 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "" && PresionValor5 != "" && PresionValor6 != ""  && PresionValor7 != "")
-                        {
-                            PresionValor8 = "0";
-                            Presion1 = 0;
-
-                            if (PresionValor1 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor1);
-                                Presion += 1;
-                                PresionValor1 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor2 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor2);
-                                Presion += 1;
-                                PresionValor2 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor3 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor3);
-                                Presion += 1;
-                                PresionValor3 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor4 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor4);
-                                Presion += 1;
-                                PresionValor4 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor5 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor5);
-                                Presion += 1;
-                                PresionValor5 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor6 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor6);
-                                Presion += 1;
-                                PresionValor6 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor7 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor7);
-                                Presion += 1;
-                                PresionValor7 = Convert.ToString(Presion);
-                            }
-
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7 + ", " + PresionValor8;
-
-                            continue;
-                        }
-
-                        if (PresionValor9 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "" && PresionValor5 != "" && PresionValor6 != "" && PresionValor7 != "" && PresionValor8 != "")
-                        {
-                            PresionValor9 = "0";
-                            Presion1 = 0;
-
-                            if (PresionValor1 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor1);
-                                Presion += 1;
-                                PresionValor1 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor2 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor2);
-                                Presion += 1;
-                                PresionValor2 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor3 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor3);
-                                Presion += 1;
-                                PresionValor3 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor4 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor4);
-                                Presion += 1;
-                                PresionValor4 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor5 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor5);
-                                Presion += 1;
-                                PresionValor5 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor6 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor6);
-                                Presion += 1;
-                                PresionValor6 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor7 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor7);
-                                Presion += 1;
-                                PresionValor7 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor8 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor8);
-                                Presion += 1;
-                                PresionValor8 = Convert.ToString(Presion);
-                            }
-
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7 + ", " + PresionValor8 + ", " + PresionValor9;
-
-                            continue;
-                        }
+                
 
                     }
                     else
@@ -4223,7 +4509,40 @@ namespace DragonGolfBackEnd.Controllers
                         if (PresionValor1 != "")
                         {
                             int Presion = Convert.ToInt32(PresionValor1);
-                            Presion += 1;
+                            switch (i)
+                            {
+                                case 1:
+                                    Presion += (-1 * Hoyo1); ;
+                                    break;
+                                case 2:
+                                    Presion += (-1 * Hoyo2); ;
+                                    break;
+                                case 3:
+                                    Presion += (-1 * Hoyo3); ;
+                                    break;
+                                case 4:
+                                    Presion += (-1 * Hoyo4); ;
+                                    break;
+                                case 5:
+                                    Presion += (-1 * Hoyo5); ;
+                                    break;
+                                case 6:
+                                    Presion += (-1 * Hoyo6); ;
+                                    break;
+                                case 7:
+                                    Presion += (-1 * Hoyo7); ;
+                                    break;
+                                case 8:
+                                    Presion += (-1 * Hoyo8); ;
+                                    break;
+                                case 9:
+                                    Presion += (-1 * Hoyo9); ;
+                                    break;
+                                default:
+                                    Console.WriteLine("Default case");
+                                    break;
+                            }
+
                             PresionValor1 = Convert.ToString(Presion);
 
                             ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1;
@@ -4232,7 +4551,40 @@ namespace DragonGolfBackEnd.Controllers
                         if (PresionValor2 != "")
                         {
                             int Presion = Convert.ToInt32(PresionValor2);
-                            Presion += 1;
+                            switch (i)
+                            {
+                                case 1:
+                                    Presion += (-1 * Hoyo1); ;
+                                    break;
+                                case 2:
+                                    Presion += (-1 * Hoyo2); ;
+                                    break;
+                                case 3:
+                                    Presion += (-1 * Hoyo3); ;
+                                    break;
+                                case 4:
+                                    Presion += (-1 * Hoyo4); ;
+                                    break;
+                                case 5:
+                                    Presion += (-1 * Hoyo5); ;
+                                    break;
+                                case 6:
+                                    Presion += (-1 * Hoyo6); ;
+                                    break;
+                                case 7:
+                                    Presion += (-1 * Hoyo7); ;
+                                    break;
+                                case 8:
+                                    Presion += (-1 * Hoyo8); ;
+                                    break;
+                                case 9:
+                                    Presion += (-1 * Hoyo9); ;
+                                    break;
+                                default:
+                                    Console.WriteLine("Default case");
+                                    break;
+                            }
+
                             PresionValor2 = Convert.ToString(Presion);
 
                             ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2;
@@ -4241,7 +4593,39 @@ namespace DragonGolfBackEnd.Controllers
                         if (PresionValor3 != "")
                         {
                             int Presion = Convert.ToInt32(PresionValor3);
-                            Presion += 1;
+                            switch (i)
+                            {
+                                case 1:
+                                    Presion += (-1 * Hoyo1); ;
+                                    break;
+                                case 2:
+                                    Presion += (-1 * Hoyo2); ;
+                                    break;
+                                case 3:
+                                    Presion += (-1 * Hoyo3); ;
+                                    break;
+                                case 4:
+                                    Presion += (-1 * Hoyo4); ;
+                                    break;
+                                case 5:
+                                    Presion += (-1 * Hoyo5); ;
+                                    break;
+                                case 6:
+                                    Presion += (-1 * Hoyo6); ;
+                                    break;
+                                case 7:
+                                    Presion += (-1 * Hoyo7); ;
+                                    break;
+                                case 8:
+                                    Presion += (-1 * Hoyo8); ;
+                                    break;
+                                case 9:
+                                    Presion += (-1 * Hoyo9); ;
+                                    break;
+                                default:
+                                    Console.WriteLine("Default case");
+                                    break;
+                            }
                             PresionValor3 = Convert.ToString(Presion);
 
                             ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3;
@@ -4250,7 +4634,39 @@ namespace DragonGolfBackEnd.Controllers
                         if (PresionValor4 != "")
                         {
                             int Presion = Convert.ToInt32(PresionValor4);
-                            Presion += 1;
+                            switch (i)
+                            {
+                                case 1:
+                                    Presion += (-1 * Hoyo1); ;
+                                    break;
+                                case 2:
+                                    Presion += (-1 * Hoyo2); ;
+                                    break;
+                                case 3:
+                                    Presion += (-1 * Hoyo3); ;
+                                    break;
+                                case 4:
+                                    Presion += (-1 * Hoyo4); ;
+                                    break;
+                                case 5:
+                                    Presion += (-1 * Hoyo5); ;
+                                    break;
+                                case 6:
+                                    Presion += (-1 * Hoyo6); ;
+                                    break;
+                                case 7:
+                                    Presion += (-1 * Hoyo7); ;
+                                    break;
+                                case 8:
+                                    Presion += (-1 * Hoyo8); ;
+                                    break;
+                                case 9:
+                                    Presion += (-1 * Hoyo9); ;
+                                    break;
+                                default:
+                                    Console.WriteLine("Default case");
+                                    break;
+                            }
                             PresionValor4 = Convert.ToString(Presion);
 
                             ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4;
@@ -4259,984 +4675,109 @@ namespace DragonGolfBackEnd.Controllers
                         if (PresionValor5 != "")
                         {
                             int Presion = Convert.ToInt32(PresionValor5);
-                            Presion += 1;
+                            switch (i)
+                            {
+                                case 1:
+                                    Presion += (-1 * Hoyo1); ;
+                                    break;
+                                case 2:
+                                    Presion += (-1 * Hoyo2); ;
+                                    break;
+                                case 3:
+                                    Presion += (-1 * Hoyo3); ;
+                                    break;
+                                case 4:
+                                    Presion += (-1 * Hoyo4); ;
+                                    break;
+                                case 5:
+                                    Presion += (-1 * Hoyo5); ;
+                                    break;
+                                case 6:
+                                    Presion += (-1 * Hoyo6); ;
+                                    break;
+                                case 7:
+                                    Presion += (-1 * Hoyo7); ;
+                                    break;
+                                case 8:
+                                    Presion += (-1 * Hoyo8); ;
+                                    break;
+                                case 9:
+                                    Presion += (-1 * Hoyo9); ;
+                                    break;
+                                default:
+                                    Console.WriteLine("Default case");
+                                    break;
+                            }
                             PresionValor5 = Convert.ToString(Presion);
 
                             ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5;
                         }
 
-                        if (PresionValor6 != "")
-                        {
-                            int Presion = Convert.ToInt32(PresionValor6);
-                            Presion += 1;
-                            PresionValor6 = Convert.ToString(Presion);
-
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6;
-                        }
-
-                        if (PresionValor7 != "")
-                        {
-                            int Presion = Convert.ToInt32(PresionValor7);
-                            Presion += 1;
-                            PresionValor7 = Convert.ToString(Presion);
-
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7;
-                        }
-
-                        if (PresionValor8 != "")
-                        {
-                            int Presion = Convert.ToInt32(PresionValor8);
-                            Presion += 1;
-                            PresionValor8 = Convert.ToString(Presion);
-
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7 + ", " + PresionValor8;
-                        }
-
-                        if (PresionValor9 != "")
-                        {
-                            int Presion = Convert.ToInt32(PresionValor9);
-                            Presion += 1;
-                            PresionValor9 = Convert.ToString(Presion);
-
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7 + ", " + PresionValor8 + ", " + PresionValor9;
-                        }
-
+                    
 
                     }
+               
+                }
+                else if (ResultadoPresionFront_T[i] == -1)
+                {
 
-                    //Segunda Vuelta L
-                    if (ResultadoPresionFront_L[i] == 1)
+                    //if (Presion1 > 0)
+                    //{
+                    //    Presion1 = 0;
+                    //}
+                    int ValorHoyo = 0;
+                    //ResultadoInt -= 1;
+                    switch (i)
                     {
-
-                        if (Presion1 < 0)
-                        {
-                            Presion1 = 0;
-                        }
-
-                        ResultadoInt += 1;
-                        Presion1 += 1;
-
-                        ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt);
-
-                        if (Presion1 == 2)
-                        {
-                            if (PresionValor1 == "")
-                            {
-                                PresionValor1 = "0";
-                                Presion1 = 0;
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1;
-
-                                continue;
-                            }
-
-                            if (PresionValor2 == "" && PresionValor1 != "")
-                            {
-                                PresionValor2 = "0";
-                                Presion1 = 0;
-
-                                if (PresionValor1 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor1);
-                                    Presion += 1;
-                                    PresionValor1 = Convert.ToString(Presion);
-                                }
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2;
-
-
-                                continue;
-                            }
-
-                            if (PresionValor3 == "" && PresionValor1 != "" && PresionValor2 != "")
-                            {
-                                PresionValor3 = "0";
-                                Presion1 = 0;
-
-
-                                if (PresionValor1 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor1);
-                                    Presion += 1;
-                                    PresionValor1 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor2 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor2);
-                                    Presion += 1;
-                                    PresionValor2 = Convert.ToString(Presion);
-                                }
-
-                                //  ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3;
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3;
-
-                                continue;
-                            }
-
-                            if (PresionValor4 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "")
-                            {
-                                PresionValor4 = "0";
-                                Presion1 = 0;
-
-                                if (PresionValor1 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor1);
-                                    Presion += 1;
-                                    PresionValor1 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor2 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor2);
-                                    Presion += 1;
-                                    PresionValor2 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor3 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor3);
-                                    Presion += 1;
-                                    PresionValor3 = Convert.ToString(Presion);
-                                }
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4;
-
-                                continue;
-                            }
-
-                            if (PresionValor5 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "")
-                            {
-                                PresionValor5 = "0";
-                                Presion1 = 0;
-
-                                if (PresionValor1 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor1);
-                                    Presion += 1;
-                                    PresionValor1 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor2 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor2);
-                                    Presion += 1;
-                                    PresionValor2 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor3 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor3);
-                                    Presion += 1;
-                                    PresionValor3 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor4 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor4);
-                                    Presion += 1;
-                                    PresionValor4 = Convert.ToString(Presion);
-                                }
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5;
-
-                                continue;
-                            }
-
-                            if (PresionValor6 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "" && PresionValor5 != "")
-                            {
-                                PresionValor6 = "0";
-                                Presion1 = 0;
-
-                                if (PresionValor1 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor1);
-                                    Presion += 1;
-                                    PresionValor1 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor2 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor2);
-                                    Presion += 1;
-                                    PresionValor2 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor3 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor3);
-                                    Presion += 1;
-                                    PresionValor3 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor4 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor4);
-                                    Presion += 1;
-                                    PresionValor4 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor5 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor5);
-                                    Presion += 1;
-                                    PresionValor5 = Convert.ToString(Presion);
-                                }
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6;
-
-                                continue;
-                            }
-
-                            if (PresionValor7 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "" && PresionValor5 != "" && PresionValor6 != "")
-                            {
-                                PresionValor7 = "0";
-                                Presion1 = 0;
-
-                                if (PresionValor1 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor1);
-                                    Presion += 1;
-                                    PresionValor1 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor2 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor2);
-                                    Presion += 1;
-                                    PresionValor2 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor3 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor3);
-                                    Presion += 1;
-                                    PresionValor3 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor4 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor4);
-                                    Presion += 1;
-                                    PresionValor4 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor5 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor5);
-                                    Presion += 1;
-                                    PresionValor5 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor6 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor6);
-                                    Presion += 1;
-                                    PresionValor6 = Convert.ToString(Presion);
-                                }
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7;
-
-                                continue;
-                            }
-
-                            if (PresionValor8 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "" && PresionValor5 != "" && PresionValor6 != "" && PresionValor7 != "")
-                            {
-                                PresionValor8 = "0";
-                                Presion1 = 0;
-
-                                if (PresionValor1 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor1);
-                                    Presion += 1;
-                                    PresionValor1 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor2 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor2);
-                                    Presion += 1;
-                                    PresionValor2 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor3 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor3);
-                                    Presion += 1;
-                                    PresionValor3 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor4 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor4);
-                                    Presion += 1;
-                                    PresionValor4 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor5 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor5);
-                                    Presion += 1;
-                                    PresionValor5 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor6 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor6);
-                                    Presion += 1;
-                                    PresionValor6 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor7 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor7);
-                                    Presion += 1;
-                                    PresionValor7 = Convert.ToString(Presion);
-                                }
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7 + ", " + PresionValor8;
-
-                                continue;
-                            }
-
-                            if (PresionValor9 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "" && PresionValor5 != "" && PresionValor6 != "" && PresionValor7 != "" && PresionValor8 != "")
-                            {
-                                PresionValor9 = "0";
-                                Presion1 = 0;
-
-                                if (PresionValor1 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor1);
-                                    Presion += 1;
-                                    PresionValor1 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor2 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor2);
-                                    Presion += 1;
-                                    PresionValor2 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor3 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor3);
-                                    Presion += 1;
-                                    PresionValor3 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor4 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor4);
-                                    Presion += 1;
-                                    PresionValor4 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor5 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor5);
-                                    Presion += 1;
-                                    PresionValor5 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor6 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor6);
-                                    Presion += 1;
-                                    PresionValor6 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor7 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor7);
-                                    Presion += 1;
-                                    PresionValor7 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor8 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor8);
-                                    Presion += 1;
-                                    PresionValor8 = Convert.ToString(Presion);
-                                }
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7 + ", " + PresionValor8 + ", " + PresionValor9;
-
-                                continue;
-                            }
-
-                        }
-                        else
-                        {
-                            if (PresionValor1 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor1);
-                                Presion += 1;
-                                PresionValor1 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1;
-                            }
-
-                            if (PresionValor2 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor2);
-                                Presion += 1;
-                                PresionValor2 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2;
-                            }
-
-                            if (PresionValor3 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor3);
-                                Presion += 1;
-                                PresionValor3 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3;
-                            }
-
-                            if (PresionValor4 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor4);
-                                Presion += 1;
-                                PresionValor4 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4;
-                            }
-
-                            if (PresionValor5 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor5);
-                                Presion += 1;
-                                PresionValor5 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5;
-                            }
-
-                            if (PresionValor6 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor6);
-                                Presion += 1;
-                                PresionValor6 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6;
-                            }
-
-                            if (PresionValor7 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor7);
-                                Presion += 1;
-                                PresionValor7 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7;
-                            }
-
-                            if (PresionValor8 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor8);
-                                Presion += 1;
-                                PresionValor8 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7 + ", " + PresionValor8;
-                            }
-
-                            if (PresionValor9 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor9);
-                                Presion += 1;
-                                PresionValor9 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7 + ", " + PresionValor8 + ", " + PresionValor9;
-                            }
-
-
-                        }
-
-                        //Segunda Vuelta L
-
-
-                        //
+                        case 1:
+                            ResultadoInt -= (-1 * Hoyo1);
+                            ValorHoyo = Hoyo9;
+                            break;
+                        case 2:
+                            ResultadoInt -= (-1 * Hoyo2);
+                            ValorHoyo = Hoyo9;
+                            break;
+                        case 3:
+                            ResultadoInt -= (-1 * Hoyo3);
+                            ValorHoyo = Hoyo9;
+                            break;
+                        case 4:
+                            ResultadoInt -= (-1 * Hoyo4);
+                            ValorHoyo = Hoyo9;
+                            break;
+                        case 5:
+                            ResultadoInt -= (-1 * Hoyo5);
+                            ValorHoyo = Hoyo9;
+                            break;
+                        case 6:
+                            ResultadoInt -= (-1 * Hoyo6);
+                            ValorHoyo = Hoyo9;
+                            break;
+                        case 7:
+                            ResultadoInt -= (-1 * Hoyo7);
+                            ValorHoyo = Hoyo9;
+                            break;
+                        case 8:
+                            ResultadoInt -= (-1 * Hoyo8);
+                            ValorHoyo = Hoyo9;
+                            break;
+                        case 9:
+                            ResultadoInt -= (-1 * Hoyo9);
+                            ValorHoyo = Hoyo9;
+                            break;
+                        default:
+                            Console.WriteLine("Default case");
+                            break;
                     }
-                    else if (ResultadoPresionFront_L[i] == -1)
+
+                    if (ValorHoyo > 1)
                     {
-                        if (Presion1 > 0)
-                        {
-                            Presion1 = 0;
-                        }
-
-                        ResultadoInt -= 1;
-                        Presion1 -= 1;
-
-                        ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt);
-
-                        if (Presion1 == -2)
-                        {
-                            if (PresionValor1 == "")
-                            {
-                                PresionValor1 = "0";
-                                Presion1 = 0;
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1;
-
-                                continue;
-                            }
-
-                            if (PresionValor2 == "" && PresionValor1 != "")
-                            {
-                                PresionValor2 = "0";
-                                Presion1 = 0;
-
-                                if (PresionValor1 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor1);
-                                    Presion -= 1;
-                                    PresionValor1 = Convert.ToString(Presion);
-                                }
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2;
-
-
-                                continue;
-                            }
-
-                            if (PresionValor3 == "" && PresionValor1 != "" && PresionValor2 != "")
-                            {
-                                PresionValor3 = "0";
-                                Presion1 = 0;
-
-
-                                if (PresionValor1 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor1);
-                                    Presion -= 1;
-                                    PresionValor1 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor2 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor2);
-                                    Presion -= 1;
-                                    PresionValor2 = Convert.ToString(Presion);
-                                }
-
-                                //  ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3;
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3;
-
-                                continue;
-                            }
-
-                            if (PresionValor4 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "")
-                            {
-                                PresionValor4 = "0";
-                                Presion1 = 0;
-
-                                if (PresionValor1 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor1);
-                                    Presion -= 1;
-                                    PresionValor1 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor2 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor2);
-                                    Presion -= 1;
-                                    PresionValor2 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor3 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor3);
-                                    Presion -= 1;
-                                    PresionValor3 = Convert.ToString(Presion);
-                                }
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4;
-
-                                continue;
-                            }
-
-                            if (PresionValor5 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "")
-                            {
-                                PresionValor5 = "0";
-                                Presion1 = 0;
-
-                                if (PresionValor1 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor1);
-                                    Presion -= 1;
-                                    PresionValor1 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor2 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor2);
-                                    Presion -= 1;
-                                    PresionValor2 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor3 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor3);
-                                    Presion -= 1;
-                                    PresionValor3 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor4 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor4);
-                                    Presion -= 1;
-                                    PresionValor4 = Convert.ToString(Presion);
-                                }
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5;
-
-                                continue;
-                            }
-
-                            if (PresionValor6 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "" && PresionValor5 != "")
-                            {
-                                PresionValor6 = "0";
-                                Presion1 = 0;
-
-                                if (PresionValor1 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor1);
-                                    Presion -= 1;
-                                    PresionValor1 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor2 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor2);
-                                    Presion -= 1;
-                                    PresionValor2 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor3 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor3);
-                                    Presion -= 1;
-                                    PresionValor3 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor4 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor4);
-                                    Presion -= 1;
-                                    PresionValor4 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor5 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor5);
-                                    Presion -= 1;
-                                    PresionValor5 = Convert.ToString(Presion);
-                                }
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6;
-
-                                continue;
-                            }
-
-                            if (PresionValor7 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "" && PresionValor5 != "" && PresionValor6 != "")
-                            {
-                                PresionValor7 = "0";
-                                Presion1 = 0;
-
-                                if (PresionValor1 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor1);
-                                    Presion -= 1;
-                                    PresionValor1 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor2 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor2);
-                                    Presion -= 1;
-                                    PresionValor2 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor3 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor3);
-                                    Presion -= 1;
-                                    PresionValor3 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor4 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor4);
-                                    Presion -= 1;
-                                    PresionValor4 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor5 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor5);
-                                    Presion -= 1;
-                                    PresionValor5 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor6 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor6);
-                                    Presion -= 1;
-                                    PresionValor6 = Convert.ToString(Presion);
-                                }
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7;
-
-                                continue;
-                            }
-
-                            if (PresionValor8 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "" && PresionValor5 != "" && PresionValor6 != "" && PresionValor7 != "")
-                            {
-                                PresionValor8 = "0";
-                                Presion1 = 0;
-
-                                if (PresionValor1 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor1);
-                                    Presion -= 1;
-                                    PresionValor1 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor2 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor2);
-                                    Presion -= 1;
-                                    PresionValor2 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor3 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor3);
-                                    Presion -= 1;
-                                    PresionValor3 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor4 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor4);
-                                    Presion -= 1;
-                                    PresionValor4 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor5 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor5);
-                                    Presion -= 1;
-                                    PresionValor5 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor6 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor6);
-                                    Presion -= 1;
-                                    PresionValor6 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor7 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor7);
-                                    Presion -= 1;
-                                    PresionValor7 = Convert.ToString(Presion);
-                                }
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7 + ", " + PresionValor8;
-
-                                continue;
-                            }
-
-                            if (PresionValor9 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "" && PresionValor5 != "" && PresionValor6 != "" && PresionValor7 != "" && PresionValor8 != "")
-                            {
-                                PresionValor9 = "0";
-                                Presion1 = 0;
-
-                                if (PresionValor1 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor1);
-                                    Presion -= 1;
-                                    PresionValor1 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor2 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor2);
-                                    Presion -= 1;
-                                    PresionValor2 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor3 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor3);
-                                    Presion -= 1;
-                                    PresionValor3 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor4 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor4);
-                                    Presion -= 1;
-                                    PresionValor4 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor5 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor5);
-                                    Presion -= 1;
-                                    PresionValor5 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor6 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor6);
-                                    Presion -= 1;
-                                    PresionValor6 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor7 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor7);
-                                    Presion -= 1;
-                                    PresionValor7 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor8 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor8);
-                                    Presion -= 1;
-                                    PresionValor8 = Convert.ToString(Presion);
-                                }
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7 + ", " + PresionValor8 + ", " + PresionValor9;
-
-                                continue;
-                            }
-
-                        }
-                        else
-                        {
-                            if (PresionValor1 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor1);
-                                Presion -= 1;
-                                PresionValor1 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1;
-                            }
-
-                            if (PresionValor2 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor2);
-                                Presion -= 1;
-                                PresionValor2 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2;
-                            }
-
-                            if (PresionValor3 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor3);
-                                Presion -= 1;
-                                PresionValor3 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3;
-                            }
-
-                            if (PresionValor4 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor4);
-                                Presion -= 1;
-                                PresionValor4 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4;
-                            }
-
-                            if (PresionValor5 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor5);
-                                Presion -= 1;
-                                PresionValor5 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5;
-                            }
-
-                            if (PresionValor6 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor6);
-                                Presion -= 1;
-                                PresionValor6 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6;
-                            }
-
-                            if (PresionValor7 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor7);
-                                Presion -= 1;
-                                PresionValor7 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7;
-                            }
-
-                            if (PresionValor8 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor8);
-                                Presion -= 1;
-                                PresionValor8 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7 + ", " + PresionValor8;
-                            }
-
-                            if (PresionValor9 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor9);
-                                Presion -= 1;
-                                PresionValor9 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7 + ", " + PresionValor8 + ", " + PresionValor9;
-                            }
-
-
-
-                        }
+                        Presion1 -= (-1 * ValorHoyo);
                     }
                     else
                     {
-
-                        ResultadoInt += 0;
-                        Presion1 += 0;
-
-                        ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt);
-
-                        if (i > 1)
-                        {
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoPresionFrontString[i - 1]);
-                        }
-                        else
-                        {
-                            ResultadoPresionFrontString[i] = "0";
-                        }
-
-
+                        Presion1 -= 1;
                     }
-                    //
-                }
-                else if (ResultadoPresionFront_H[i] == -1)
-                {
-
-                    if (Presion1 > 0)
-                    {
-                        Presion1 = 0;
-                    }
-
-                    ResultadoInt -= 1;
-                    Presion1 -= 1;
 
                     ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt);
 
@@ -5260,7 +4801,40 @@ namespace DragonGolfBackEnd.Controllers
                             if (PresionValor1 != "")
                             {
                                 int Presion = Convert.ToInt32(PresionValor1);
-                                Presion -= 1;
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion -= (-1 * Hoyo1); ;
+                                        break;
+                                    case 2:
+                                        Presion -= (-1 * Hoyo2); ;
+                                        break;
+                                    case 3:
+                                        Presion -= (-1 * Hoyo3); ;
+                                        break;
+                                    case 4:
+                                        Presion -= (-1 * Hoyo4); ;
+                                        break;
+                                    case 5:
+                                        Presion -= (-1 * Hoyo5); ;
+                                        break;
+                                    case 6:
+                                        Presion -= (-1 * Hoyo6); ;
+                                        break;
+                                    case 7:
+                                        Presion -= (-1 * Hoyo7); ;
+                                        break;
+                                    case 8:
+                                        Presion -= (-1 * Hoyo8); ;
+                                        break;
+                                    case 9:
+                                        Presion -= (-1 * Hoyo9); ;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
+
                                 PresionValor1 = Convert.ToString(Presion);
                             }
 
@@ -5279,14 +4853,78 @@ namespace DragonGolfBackEnd.Controllers
                             if (PresionValor1 != "")
                             {
                                 int Presion = Convert.ToInt32(PresionValor1);
-                                Presion -= 1;
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion -= (-1 * Hoyo1); ;
+                                        break;
+                                    case 2:
+                                        Presion -= (-1 * Hoyo2); ;
+                                        break;
+                                    case 3:
+                                        Presion -= (-1 * Hoyo3); ;
+                                        break;
+                                    case 4:
+                                        Presion -= (-1 * Hoyo4); ;
+                                        break;
+                                    case 5:
+                                        Presion -= (-1 * Hoyo5); ;
+                                        break;
+                                    case 6:
+                                        Presion -= (-1 * Hoyo6); ;
+                                        break;
+                                    case 7:
+                                        Presion -= (-1 * Hoyo7); ;
+                                        break;
+                                    case 8:
+                                        Presion -= (-1 * Hoyo8); ;
+                                        break;
+                                    case 9:
+                                        Presion -= (-1 * Hoyo9); ;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
                                 PresionValor1 = Convert.ToString(Presion);
                             }
 
                             if (PresionValor2 != "")
                             {
                                 int Presion = Convert.ToInt32(PresionValor2);
-                                Presion -= 1;
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion -= (-1 * Hoyo1); ;
+                                        break;
+                                    case 2:
+                                        Presion -= (-1 * Hoyo2); ;
+                                        break;
+                                    case 3:
+                                        Presion -= (-1 * Hoyo3); ;
+                                        break;
+                                    case 4:
+                                        Presion -= (-1 * Hoyo4); ;
+                                        break;
+                                    case 5:
+                                        Presion -= (-1 * Hoyo5); ;
+                                        break;
+                                    case 6:
+                                        Presion -= (-1 * Hoyo6); ;
+                                        break;
+                                    case 7:
+                                        Presion -= (-1 * Hoyo7); ;
+                                        break;
+                                    case 8:
+                                        Presion -= (-1 * Hoyo8); ;
+                                        break;
+                                    case 9:
+                                        Presion -= (-1 * Hoyo9); ;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
                                 PresionValor2 = Convert.ToString(Presion);
                             }
 
@@ -5305,21 +4943,118 @@ namespace DragonGolfBackEnd.Controllers
                             if (PresionValor1 != "")
                             {
                                 int Presion = Convert.ToInt32(PresionValor1);
-                                Presion -= 1;
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion -= (-1 * Hoyo1); ;
+                                        break;
+                                    case 2:
+                                        Presion -= (-1 * Hoyo2); ;
+                                        break;
+                                    case 3:
+                                        Presion -= (-1 * Hoyo3); ;
+                                        break;
+                                    case 4:
+                                        Presion -= (-1 * Hoyo4); ;
+                                        break;
+                                    case 5:
+                                        Presion -= (-1 * Hoyo5); ;
+                                        break;
+                                    case 6:
+                                        Presion -= (-1 * Hoyo6); ;
+                                        break;
+                                    case 7:
+                                        Presion -= (-1 * Hoyo7); ;
+                                        break;
+                                    case 8:
+                                        Presion -= (-1 * Hoyo8); ;
+                                        break;
+                                    case 9:
+                                        Presion -= (-1 * Hoyo9); ;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
+
                                 PresionValor1 = Convert.ToString(Presion);
                             }
 
                             if (PresionValor2 != "")
                             {
                                 int Presion = Convert.ToInt32(PresionValor2);
-                                Presion -= 1;
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion -= (-1 * Hoyo1); ;
+                                        break;
+                                    case 2:
+                                        Presion -= (-1 * Hoyo2); ;
+                                        break;
+                                    case 3:
+                                        Presion -= (-1 * Hoyo3); ;
+                                        break;
+                                    case 4:
+                                        Presion -= (-1 * Hoyo4); ;
+                                        break;
+                                    case 5:
+                                        Presion -= (-1 * Hoyo5); ;
+                                        break;
+                                    case 6:
+                                        Presion -= (-1 * Hoyo6); ;
+                                        break;
+                                    case 7:
+                                        Presion -= (-1 * Hoyo7); ;
+                                        break;
+                                    case 8:
+                                        Presion -= (-1 * Hoyo8); ;
+                                        break;
+                                    case 9:
+                                        Presion -= (-1 * Hoyo9); ;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
                                 PresionValor2 = Convert.ToString(Presion);
                             }
 
                             if (PresionValor3 != "")
                             {
                                 int Presion = Convert.ToInt32(PresionValor3);
-                                Presion -= 1;
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion -= (-1 * Hoyo1); ;
+                                        break;
+                                    case 2:
+                                        Presion -= (-1 * Hoyo2); ;
+                                        break;
+                                    case 3:
+                                        Presion -= (-1 * Hoyo3); ;
+                                        break;
+                                    case 4:
+                                        Presion -= (-1 * Hoyo4); ;
+                                        break;
+                                    case 5:
+                                        Presion -= (-1 * Hoyo5); ;
+                                        break;
+                                    case 6:
+                                        Presion -= (-1 * Hoyo6); ;
+                                        break;
+                                    case 7:
+                                        Presion -= (-1 * Hoyo7); ;
+                                        break;
+                                    case 8:
+                                        Presion -= (-1 * Hoyo8); ;
+                                        break;
+                                    case 9:
+                                        Presion -= (-1 * Hoyo9); ;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
                                 PresionValor3 = Convert.ToString(Presion);
                             }
 
@@ -5336,254 +5071,164 @@ namespace DragonGolfBackEnd.Controllers
                             if (PresionValor1 != "")
                             {
                                 int Presion = Convert.ToInt32(PresionValor1);
-                                Presion -= 1;
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion -= Hoyo1;
+                                        break;
+                                    case 2:
+                                        Presion -= Hoyo2;
+                                        break;
+                                    case 3:
+                                        Presion -= Hoyo3;
+                                        break;
+                                    case 4:
+                                        Presion -= Hoyo4;
+                                        break;
+                                    case 5:
+                                        Presion -= Hoyo5;
+                                        break;
+                                    case 6:
+                                        Presion -= Hoyo6;
+                                        break;
+                                    case 7:
+                                        Presion -= Hoyo7;
+                                        break;
+                                    case 8:
+                                        Presion -= Hoyo8;
+                                        break;
+                                    case 9:
+                                        Presion -= Hoyo9;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
+
                                 PresionValor1 = Convert.ToString(Presion);
                             }
 
                             if (PresionValor2 != "")
                             {
                                 int Presion = Convert.ToInt32(PresionValor2);
-                                Presion -= 1;
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion -= Hoyo1;
+                                        break;
+                                    case 2:
+                                        Presion -= Hoyo2;
+                                        break;
+                                    case 3:
+                                        Presion -= Hoyo3;
+                                        break;
+                                    case 4:
+                                        Presion -= Hoyo4;
+                                        break;
+                                    case 5:
+                                        Presion -= Hoyo5;
+                                        break;
+                                    case 6:
+                                        Presion -= Hoyo6;
+                                        break;
+                                    case 7:
+                                        Presion -= Hoyo7;
+                                        break;
+                                    case 8:
+                                        Presion -= Hoyo8;
+                                        break;
+                                    case 9:
+                                        Presion -= Hoyo9;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
+
                                 PresionValor2 = Convert.ToString(Presion);
                             }
 
                             if (PresionValor3 != "")
                             {
                                 int Presion = Convert.ToInt32(PresionValor3);
-                                Presion -= 1;
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion -= Hoyo1;
+                                        break;
+                                    case 2:
+                                        Presion -= Hoyo2;
+                                        break;
+                                    case 3:
+                                        Presion -= Hoyo3;
+                                        break;
+                                    case 4:
+                                        Presion -= Hoyo4;
+                                        break;
+                                    case 5:
+                                        Presion -= Hoyo5;
+                                        break;
+                                    case 6:
+                                        Presion -= Hoyo6;
+                                        break;
+                                    case 7:
+                                        Presion -= Hoyo7;
+                                        break;
+                                    case 8:
+                                        Presion -= Hoyo8;
+                                        break;
+                                    case 9:
+                                        Presion -= Hoyo9;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
+
                                 PresionValor3 = Convert.ToString(Presion);
                             }
 
                             if (PresionValor4 != "")
                             {
                                 int Presion = Convert.ToInt32(PresionValor4);
-                                Presion -= 1;
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion -= Hoyo1;
+                                        break;
+                                    case 2:
+                                        Presion -= Hoyo2;
+                                        break;
+                                    case 3:
+                                        Presion -= Hoyo3;
+                                        break;
+                                    case 4:
+                                        Presion -= Hoyo4;
+                                        break;
+                                    case 5:
+                                        Presion -= Hoyo5;
+                                        break;
+                                    case 6:
+                                        Presion -= Hoyo6;
+                                        break;
+                                    case 7:
+                                        Presion -= Hoyo7;
+                                        break;
+                                    case 8:
+                                        Presion -= Hoyo8;
+                                        break;
+                                    case 9:
+                                        Presion -= Hoyo9;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
+
                                 PresionValor4 = Convert.ToString(Presion);
                             }
 
                             ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5;
-
-                            continue;
-                        }
-
-                        if (PresionValor6 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "" && PresionValor5 != "")
-                        {
-                            PresionValor6 = "0";
-                            Presion1 = 0;
-
-                            if (PresionValor1 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor1);
-                                Presion -= 1;
-                                PresionValor1 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor2 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor2);
-                                Presion -= 1;
-                                PresionValor2 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor3 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor3);
-                                Presion -= 1;
-                                PresionValor3 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor4 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor4);
-                                Presion -= 1;
-                                PresionValor4 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor5 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor5);
-                                Presion -= 1;
-                                PresionValor5 = Convert.ToString(Presion);
-                            }
-
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6;
-
-                            continue;
-                        }
-
-                        if (PresionValor7 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "" && PresionValor5 != "" && PresionValor6 != "")
-                        {
-                            PresionValor7 = "0";
-                            Presion1 = 0;
-
-                            if (PresionValor1 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor1);
-                                Presion -= 1;
-                                PresionValor1 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor2 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor2);
-                                Presion -= 1;
-                                PresionValor2 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor3 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor3);
-                                Presion -= 1;
-                                PresionValor3 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor4 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor4);
-                                Presion -= 1;
-                                PresionValor4 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor5 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor5);
-                                Presion -= 1;
-                                PresionValor5 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor6 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor6);
-                                Presion -= 1;
-                                PresionValor6 = Convert.ToString(Presion);
-                            }
-
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7;
-
-                            continue;
-                        }
-
-                        if (PresionValor8 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "" && PresionValor5 != "" && PresionValor6 != "" && PresionValor7 != "")
-                        {
-                            PresionValor8 = "0";
-                            Presion1 = 0;
-
-                            if (PresionValor1 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor1);
-                                Presion -= 1;
-                                PresionValor1 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor2 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor2);
-                                Presion -= 1;
-                                PresionValor2 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor3 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor3);
-                                Presion -= 1;
-                                PresionValor3 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor4 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor4);
-                                Presion -= 1;
-                                PresionValor4 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor5 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor5);
-                                Presion -= 1;
-                                PresionValor5 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor6 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor6);
-                                Presion -= 1;
-                                PresionValor6 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor7 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor7);
-                                Presion -= 1;
-                                PresionValor7 = Convert.ToString(Presion);
-                            }
-
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7 + ", " + PresionValor8;
-
-                            continue;
-                        }
-
-                        if (PresionValor9 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "" && PresionValor5 != "" && PresionValor6 != "" && PresionValor7 != "" && PresionValor8 != "")
-                        {
-                            PresionValor9 = "0";
-                            Presion1 = 0;
-
-                            if (PresionValor1 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor1);
-                                Presion -= 1;
-                                PresionValor1 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor2 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor2);
-                                Presion -= 1;
-                                PresionValor2 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor3 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor3);
-                                Presion -= 1;
-                                PresionValor3 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor4 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor4);
-                                Presion -= 1;
-                                PresionValor4 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor5 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor5);
-                                Presion -= 1;
-                                PresionValor5 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor6 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor6);
-                                Presion -= 1;
-                                PresionValor6 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor7 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor7);
-                                Presion -= 1;
-                                PresionValor7 = Convert.ToString(Presion);
-                            }
-
-                            if (PresionValor8 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor8);
-                                Presion -= 1;
-                                PresionValor8 = Convert.ToString(Presion);
-                            }
-
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7 + ", " + PresionValor8 + ", " + PresionValor9;
 
                             continue;
                         }
@@ -5594,7 +5239,39 @@ namespace DragonGolfBackEnd.Controllers
                         if (PresionValor1 != "")
                         {
                             int Presion = Convert.ToInt32(PresionValor1);
-                            Presion -= 1;
+                            switch (i)
+                            {
+                                case 1:
+                                    Presion -= (-1 * Hoyo1); ;
+                                    break;
+                                case 2:
+                                    Presion -= (-1 * Hoyo2); ;
+                                    break;
+                                case 3:
+                                    Presion -= (-1 * Hoyo3); ;
+                                    break;
+                                case 4:
+                                    Presion -= (-1 * Hoyo4); ;
+                                    break;
+                                case 5:
+                                    Presion -= (-1 * Hoyo5); ;
+                                    break;
+                                case 6:
+                                    Presion -= (-1 * Hoyo6); ;
+                                    break;
+                                case 7:
+                                    Presion -= (-1 * Hoyo7); ;
+                                    break;
+                                case 8:
+                                    Presion -= (-1 * Hoyo8); ;
+                                    break;
+                                case 9:
+                                    Presion -= (-1 * Hoyo9); ;
+                                    break;
+                                default:
+                                    Console.WriteLine("Default case");
+                                    break;
+                            }
                             PresionValor1 = Convert.ToString(Presion);
 
                             ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1;
@@ -5603,7 +5280,39 @@ namespace DragonGolfBackEnd.Controllers
                         if (PresionValor2 != "")
                         {
                             int Presion = Convert.ToInt32(PresionValor2);
-                            Presion -= 1;
+                            switch (i)
+                            {
+                                case 1:
+                                    Presion -= (-1 * Hoyo1); ;
+                                    break;
+                                case 2:
+                                    Presion -= (-1 * Hoyo2); ;
+                                    break;
+                                case 3:
+                                    Presion -= (-1 * Hoyo3); ;
+                                    break;
+                                case 4:
+                                    Presion -= (-1 * Hoyo4); ;
+                                    break;
+                                case 5:
+                                    Presion -= (-1 * Hoyo5); ;
+                                    break;
+                                case 6:
+                                    Presion -= (-1 * Hoyo6); ;
+                                    break;
+                                case 7:
+                                    Presion -= (-1 * Hoyo7); ;
+                                    break;
+                                case 8:
+                                    Presion -= (-1 * Hoyo8); ;
+                                    break;
+                                case 9:
+                                    Presion -= (-1 * Hoyo9); ;
+                                    break;
+                                default:
+                                    Console.WriteLine("Default case");
+                                    break;
+                            }
                             PresionValor2 = Convert.ToString(Presion);
 
                             ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2;
@@ -5612,7 +5321,39 @@ namespace DragonGolfBackEnd.Controllers
                         if (PresionValor3 != "")
                         {
                             int Presion = Convert.ToInt32(PresionValor3);
-                            Presion -= 1;
+                            switch (i)
+                            {
+                                case 1:
+                                    Presion -= (-1 * Hoyo1); ;
+                                    break;
+                                case 2:
+                                    Presion -= (-1 * Hoyo2); ;
+                                    break;
+                                case 3:
+                                    Presion -= (-1 * Hoyo3); ;
+                                    break;
+                                case 4:
+                                    Presion -= (-1 * Hoyo4); ;
+                                    break;
+                                case 5:
+                                    Presion -= (-1 * Hoyo5); ;
+                                    break;
+                                case 6:
+                                    Presion -= (-1 * Hoyo6); ;
+                                    break;
+                                case 7:
+                                    Presion -= (-1 * Hoyo7); ;
+                                    break;
+                                case 8:
+                                    Presion -= (-1 * Hoyo8); ;
+                                    break;
+                                case 9:
+                                    Presion -= (-1 * Hoyo9); ;
+                                    break;
+                                default:
+                                    Console.WriteLine("Default case");
+                                    break;
+                            }
                             PresionValor3 = Convert.ToString(Presion);
 
                             ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3;
@@ -5621,7 +5362,39 @@ namespace DragonGolfBackEnd.Controllers
                         if (PresionValor4 != "")
                         {
                             int Presion = Convert.ToInt32(PresionValor4);
-                            Presion -= 1;
+                            switch (i)
+                            {
+                                case 1:
+                                    Presion -= (-1 * Hoyo1); ;
+                                    break;
+                                case 2:
+                                    Presion -= (-1 * Hoyo2); ;
+                                    break;
+                                case 3:
+                                    Presion -= (-1 * Hoyo3); ;
+                                    break;
+                                case 4:
+                                    Presion -= (-1 * Hoyo4); ;
+                                    break;
+                                case 5:
+                                    Presion -= (-1 * Hoyo5); ;
+                                    break;
+                                case 6:
+                                    Presion -= (-1 * Hoyo6); ;
+                                    break;
+                                case 7:
+                                    Presion -= (-1 * Hoyo7); ;
+                                    break;
+                                case 8:
+                                    Presion -= (-1 * Hoyo8); ;
+                                    break;
+                                case 9:
+                                    Presion -= (-1 * Hoyo9); ;
+                                    break;
+                                default:
+                                    Console.WriteLine("Default case");
+                                    break;
+                            }
                             PresionValor4 = Convert.ToString(Presion);
 
                             ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4;
@@ -5630,971 +5403,46 @@ namespace DragonGolfBackEnd.Controllers
                         if (PresionValor5 != "")
                         {
                             int Presion = Convert.ToInt32(PresionValor5);
-                            Presion -= 1;
+                            switch (i)
+                            {
+                                case 1:
+                                    Presion -= (-1 * Hoyo1); ;
+                                    break;
+                                case 2:
+                                    Presion -= (-1 * Hoyo2); ;
+                                    break;
+                                case 3:
+                                    Presion -= (-1 * Hoyo3); ;
+                                    break;
+                                case 4:
+                                    Presion -= (-1 * Hoyo4); ;
+                                    break;
+                                case 5:
+                                    Presion -= (-1 * Hoyo5); ;
+                                    break;
+                                case 6:
+                                    Presion -= (-1 * Hoyo6); ;
+                                    break;
+                                case 7:
+                                    Presion -= (-1 * Hoyo7); ;
+                                    break;
+                                case 8:
+                                    Presion -= (-1 * Hoyo8); ;
+                                    break;
+                                case 9:
+                                    Presion -= (-1 * Hoyo9); ;
+                                    break;
+                                default:
+                                    Console.WriteLine("Default case");
+                                    break;
+                            }
                             PresionValor5 = Convert.ToString(Presion);
 
                             ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5;
                         }
 
-                        if (PresionValor6 != "")
-                        {
-                            int Presion = Convert.ToInt32(PresionValor6);
-                            Presion -= 1;
-                            PresionValor6 = Convert.ToString(Presion);
-
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6;
-                        }
-
-                        if (PresionValor7 != "")
-                        {
-                            int Presion = Convert.ToInt32(PresionValor7);
-                            Presion -= 1;
-                            PresionValor7 = Convert.ToString(Presion);
-
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7;
-                        }
-
-                        if (PresionValor8 != "")
-                        {
-                            int Presion = Convert.ToInt32(PresionValor8);
-                            Presion -= 1;
-                            PresionValor8 = Convert.ToString(Presion);
-
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7 + ", " + PresionValor8;
-                        }
-
-                        if (PresionValor9 != "")
-                        {
-                            int Presion = Convert.ToInt32(PresionValor9);
-                            Presion -= 1;
-                            PresionValor9 = Convert.ToString(Presion);
-
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7 + ", " + PresionValor8 + ", " + PresionValor9;
-                        }
-
-
-
                     }
 
-                    //Segunda Vuelta L
-                    if (ResultadoPresionFront_L[i] == 1)
-                    {
-                        if (Presion1 < 0)
-                        {
-                            Presion1 = 0;
-                        }
-
-                        ResultadoInt += 1;
-                        Presion1 += 1;
-
-                        ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt);
-
-                        if (Presion1 == 2)
-                        {
-                            if (PresionValor1 == "")
-                            {
-                                PresionValor1 = "0";
-                                Presion1 = 0;
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1;
-
-                                continue;
-                            }
-
-                            if (PresionValor2 == "" && PresionValor1 != "")
-                            {
-                                PresionValor2 = "0";
-                                Presion1 = 0;
-
-                                if (PresionValor1 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor1);
-                                    Presion += 1;
-                                    PresionValor1 = Convert.ToString(Presion);
-                                }
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2;
-
-
-                                continue;
-                            }
-
-                            if (PresionValor3 == "" && PresionValor1 != "" && PresionValor2 != "")
-                            {
-                                PresionValor3 = "0";
-                                Presion1 = 0;
-
-
-                                if (PresionValor1 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor1);
-                                    Presion += 1;
-                                    PresionValor1 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor2 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor2);
-                                    Presion += 1;
-                                    PresionValor2 = Convert.ToString(Presion);
-                                }
-
-                                //  ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3;
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3;
-
-                                continue;
-                            }
-
-                            if (PresionValor4 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "")
-                            {
-                                PresionValor4 = "0";
-                                Presion1 = 0;
-
-                                if (PresionValor1 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor1);
-                                    Presion += 1;
-                                    PresionValor1 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor2 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor2);
-                                    Presion += 1;
-                                    PresionValor2 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor3 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor3);
-                                    Presion += 1;
-                                    PresionValor3 = Convert.ToString(Presion);
-                                }
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4;
-
-                                continue;
-                            }
-
-                            if (PresionValor5 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "")
-                            {
-                                PresionValor5 = "0";
-                                Presion1 = 0;
-
-                                if (PresionValor1 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor1);
-                                    Presion += 1;
-                                    PresionValor1 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor2 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor2);
-                                    Presion += 1;
-                                    PresionValor2 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor3 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor3);
-                                    Presion += 1;
-                                    PresionValor3 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor4 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor4);
-                                    Presion += 1;
-                                    PresionValor4 = Convert.ToString(Presion);
-                                }
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5;
-
-                                continue;
-                            }
-
-                            if (PresionValor6 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "" && PresionValor5 != "")
-                            {
-                                PresionValor6 = "0";
-                                Presion1 = 0;
-
-                                if (PresionValor1 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor1);
-                                    Presion += 1;
-                                    PresionValor1 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor2 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor2);
-                                    Presion += 1;
-                                    PresionValor2 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor3 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor3);
-                                    Presion += 1;
-                                    PresionValor3 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor4 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor4);
-                                    Presion += 1;
-                                    PresionValor4 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor5 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor5);
-                                    Presion += 1;
-                                    PresionValor5 = Convert.ToString(Presion);
-                                }
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6;
-
-                                continue;
-                            }
-
-                            if (PresionValor7 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "" && PresionValor5 != "" && PresionValor6 != "")
-                            {
-                                PresionValor7 = "0";
-                                Presion1 = 0;
-
-                                if (PresionValor1 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor1);
-                                    Presion += 1;
-                                    PresionValor1 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor2 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor2);
-                                    Presion += 1;
-                                    PresionValor2 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor3 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor3);
-                                    Presion += 1;
-                                    PresionValor3 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor4 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor4);
-                                    Presion += 1;
-                                    PresionValor4 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor5 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor5);
-                                    Presion += 1;
-                                    PresionValor5 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor6 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor6);
-                                    Presion += 1;
-                                    PresionValor6 = Convert.ToString(Presion);
-                                }
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7;
-
-                                continue;
-                            }
-
-                            if (PresionValor8 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "" && PresionValor5 != "" && PresionValor6 != "" && PresionValor7 != "")
-                            {
-                                PresionValor8 = "0";
-                                Presion1 = 0;
-
-                                if (PresionValor1 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor1);
-                                    Presion += 1;
-                                    PresionValor1 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor2 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor2);
-                                    Presion += 1;
-                                    PresionValor2 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor3 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor3);
-                                    Presion += 1;
-                                    PresionValor3 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor4 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor4);
-                                    Presion += 1;
-                                    PresionValor4 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor5 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor5);
-                                    Presion += 1;
-                                    PresionValor5 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor6 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor6);
-                                    Presion += 1;
-                                    PresionValor6 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor7 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor7);
-                                    Presion += 1;
-                                    PresionValor7 = Convert.ToString(Presion);
-                                }
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7 + ", " + PresionValor8;
-
-                                continue;
-                            }
-
-                            if (PresionValor9 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "" && PresionValor5 != "" && PresionValor6 != "" && PresionValor7 != "" && PresionValor8 != "")
-                            {
-                                PresionValor9 = "0";
-                                Presion1 = 0;
-
-                                if (PresionValor1 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor1);
-                                    Presion += 1;
-                                    PresionValor1 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor2 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor2);
-                                    Presion += 1;
-                                    PresionValor2 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor3 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor3);
-                                    Presion += 1;
-                                    PresionValor3 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor4 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor4);
-                                    Presion += 1;
-                                    PresionValor4 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor5 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor5);
-                                    Presion += 1;
-                                    PresionValor5 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor6 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor6);
-                                    Presion += 1;
-                                    PresionValor6 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor7 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor7);
-                                    Presion += 1;
-                                    PresionValor7 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor8 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor8);
-                                    Presion += 1;
-                                    PresionValor8 = Convert.ToString(Presion);
-                                }
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7 + ", " + PresionValor8 + ", " + PresionValor9;
-
-                                continue;
-                            }
-
-                        }
-                        else
-                        {
-                            if (PresionValor1 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor1);
-                                Presion += 1;
-                                PresionValor1 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1;
-                            }
-
-                            if (PresionValor2 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor2);
-                                Presion += 1;
-                                PresionValor2 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2;
-                            }
-
-                            if (PresionValor3 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor3);
-                                Presion += 1;
-                                PresionValor3 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3;
-                            }
-
-                            if (PresionValor4 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor4);
-                                Presion += 1;
-                                PresionValor4 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4;
-                            }
-
-                            if (PresionValor5 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor5);
-                                Presion += 1;
-                                PresionValor5 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5;
-                            }
-
-                            if (PresionValor6 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor6);
-                                Presion += 1;
-                                PresionValor6 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6;
-                            }
-
-                            if (PresionValor7 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor7);
-                                Presion += 1;
-                                PresionValor7 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7;
-                            }
-
-                            if (PresionValor8 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor8);
-                                Presion += 1;
-                                PresionValor8 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7 + ", " + PresionValor8;
-                            }
-
-                            if (PresionValor9 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor9);
-                                Presion += 1;
-                                PresionValor9 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7 + ", " + PresionValor8 + ", " + PresionValor9;
-                            }
-
-
-                        }
-
-                        //Segunda Vuelta L
-
-
-                        //
-                    }
-                    else if (ResultadoPresionFront_L[i] == -1)
-                    {
-                        if (Presion1 > 0)
-                        {
-                            Presion1 = 0;
-                        }
-
-                        ResultadoInt -= 1;
-                        Presion1 -= 1;
-
-                        ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt);
-
-                        if (Presion1 == -2)
-                        {
-                            if (PresionValor1 == "")
-                            {
-                                PresionValor1 = "0";
-                                Presion1 = 0;
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1;
-
-                                continue;
-                            }
-
-                            if (PresionValor2 == "" && PresionValor1 != "")
-                            {
-                                PresionValor2 = "0";
-                                Presion1 = 0;
-
-                                if (PresionValor1 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor1);
-                                    Presion -= 1;
-                                    PresionValor1 = Convert.ToString(Presion);
-                                }
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2;
-
-
-                                continue;
-                            }
-
-                            if (PresionValor3 == "" && PresionValor1 != "" && PresionValor2 != "")
-                            {
-                                PresionValor3 = "0";
-                                Presion1 = 0;
-
-
-                                if (PresionValor1 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor1);
-                                    Presion -= 1;
-                                    PresionValor1 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor2 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor2);
-                                    Presion -= 1;
-                                    PresionValor2 = Convert.ToString(Presion);
-                                }
-
-                                //  ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3;
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3;
-
-                                continue;
-                            }
-
-                            if (PresionValor4 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "")
-                            {
-                                PresionValor4 = "0";
-                                Presion1 = 0;
-
-                                if (PresionValor1 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor1);
-                                    Presion -= 1;
-                                    PresionValor1 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor2 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor2);
-                                    Presion -= 1;
-                                    PresionValor2 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor3 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor3);
-                                    Presion -= 1;
-                                    PresionValor3 = Convert.ToString(Presion);
-                                }
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4;
-
-                                continue;
-                            }
-
-                            if (PresionValor5 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "")
-                            {
-                                PresionValor5 = "0";
-                                Presion1 = 0;
-
-                                if (PresionValor1 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor1);
-                                    Presion -= 1;
-                                    PresionValor1 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor2 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor2);
-                                    Presion -= 1;
-                                    PresionValor2 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor3 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor3);
-                                    Presion -= 1;
-                                    PresionValor3 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor4 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor4);
-                                    Presion -= 1;
-                                    PresionValor4 = Convert.ToString(Presion);
-                                }
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5;
-
-                                continue;
-                            }
-
-                            if (PresionValor6 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "" && PresionValor5 != "")
-                            {
-                                PresionValor6 = "0";
-                                Presion1 = 0;
-
-                                if (PresionValor1 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor1);
-                                    Presion -= 1;
-                                    PresionValor1 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor2 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor2);
-                                    Presion -= 1;
-                                    PresionValor2 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor3 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor3);
-                                    Presion -= 1;
-                                    PresionValor3 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor4 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor4);
-                                    Presion -= 1;
-                                    PresionValor4 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor5 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor5);
-                                    Presion -= 1;
-                                    PresionValor5 = Convert.ToString(Presion);
-                                }
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6;
-
-                                continue;
-                            }
-
-                            if (PresionValor7 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "" && PresionValor5 != "" && PresionValor6 != "")
-                            {
-                                PresionValor7 = "0";
-                                Presion1 = 0;
-
-                                if (PresionValor1 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor1);
-                                    Presion -= 1;
-                                    PresionValor1 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor2 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor2);
-                                    Presion -= 1;
-                                    PresionValor2 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor3 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor3);
-                                    Presion -= 1;
-                                    PresionValor3 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor4 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor4);
-                                    Presion -= 1;
-                                    PresionValor4 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor5 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor5);
-                                    Presion -= 1;
-                                    PresionValor5 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor6 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor6);
-                                    Presion -= 1;
-                                    PresionValor6 = Convert.ToString(Presion);
-                                }
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7;
-
-                                continue;
-                            }
-
-                            if (PresionValor8 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "" && PresionValor5 != "" && PresionValor6 != "" && PresionValor7 != "")
-                            {
-                                PresionValor8 = "0";
-                                Presion1 = 0;
-
-                                if (PresionValor1 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor1);
-                                    Presion -= 1;
-                                    PresionValor1 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor2 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor2);
-                                    Presion -= 1;
-                                    PresionValor2 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor3 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor3);
-                                    Presion -= 1;
-                                    PresionValor3 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor4 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor4);
-                                    Presion -= 1;
-                                    PresionValor4 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor5 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor5);
-                                    Presion -= 1;
-                                    PresionValor5 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor6 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor6);
-                                    Presion -= 1;
-                                    PresionValor6 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor7 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor7);
-                                    Presion -= 1;
-                                    PresionValor7 = Convert.ToString(Presion);
-                                }
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7 + ", " + PresionValor8;
-
-                                continue;
-                            }
-
-                            if (PresionValor9 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "" && PresionValor5 != "" && PresionValor6 != "" && PresionValor7 != "" && PresionValor8 != "")
-                            {
-                                PresionValor9 = "0";
-                                Presion1 = 0;
-
-                                if (PresionValor1 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor1);
-                                    Presion -= 1;
-                                    PresionValor1 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor2 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor2);
-                                    Presion -= 1;
-                                    PresionValor2 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor3 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor3);
-                                    Presion -= 1;
-                                    PresionValor3 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor4 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor4);
-                                    Presion -= 1;
-                                    PresionValor4 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor5 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor5);
-                                    Presion -= 1;
-                                    PresionValor5 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor6 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor6);
-                                    Presion -= 1;
-                                    PresionValor6 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor7 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor7);
-                                    Presion -= 1;
-                                    PresionValor7 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor8 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor8);
-                                    Presion -= 1;
-                                    PresionValor8 = Convert.ToString(Presion);
-                                }
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7 + ", " + PresionValor8 + ", " + PresionValor9;
-
-                                continue;
-                            }
-
-                        }
-                        else
-                        {
-                            if (PresionValor1 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor1);
-                                Presion -= 1;
-                                PresionValor1 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1;
-                            }
-
-                            if (PresionValor2 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor2);
-                                Presion -= 1;
-                                PresionValor2 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2;
-                            }
-
-                            if (PresionValor3 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor3);
-                                Presion -= 1;
-                                PresionValor3 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3;
-                            }
-
-                            if (PresionValor4 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor4);
-                                Presion -= 1;
-                                PresionValor4 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4;
-                            }
-
-                            if (PresionValor5 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor5);
-                                Presion -= 1;
-                                PresionValor5 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5;
-                            }
-
-                            if (PresionValor6 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor6);
-                                Presion -= 1;
-                                PresionValor6 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6;
-                            }
-
-                            if (PresionValor7 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor7);
-                                Presion -= 1;
-                                PresionValor7 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7;
-                            }
-
-                            if (PresionValor8 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor8);
-                                Presion -= 1;
-                                PresionValor8 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7 + ", " + PresionValor8;
-                            }
-
-                            if (PresionValor9 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor9);
-                                Presion -= 1;
-                                PresionValor9 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7 + ", " + PresionValor8 + ", " + PresionValor9;
-                            }
-
-
-
-                        }
-                    }
-                    else
-                    {
-
-                        ResultadoInt += 0;
-                        Presion1 += 0;
-
-                        if (i > 1)
-                        {
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoPresionFrontString[i - 1]);
-                        }
-                        else
-                        {
-                            ResultadoPresionFrontString[i] = "0";
-                        }
-
-
-                    }
-                    //
                 }
                 else
                 {
@@ -6610,913 +5458,6 @@ namespace DragonGolfBackEnd.Controllers
                     {
                         ResultadoPresionFrontString[i] = "0";
                     }
-
-                    //Segunda Vuelta L
-                    if (ResultadoPresionFront_L[i] == 1)
-                    {
-
-                        ResultadoInt += 1;
-                        Presion1 += 1;
-
-                        ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt);
-
-                        if (Presion1 == 2)
-                        {
-                            if (PresionValor1 == "")
-                            {
-                                PresionValor1 = "0";
-                                Presion1 = 0;
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1;
-
-                                continue;
-                            }
-
-                            if (PresionValor2 == "" && PresionValor1 != "")
-                            {
-                                PresionValor2 = "0";
-                                Presion1 = 0;
-
-                                if (PresionValor1 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor1);
-                                    Presion += 1;
-                                    PresionValor1 = Convert.ToString(Presion);
-                                }
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2;
-
-
-                                continue;
-                            }
-
-                            if (PresionValor3 == "" && PresionValor1 != "" && PresionValor2 != "")
-                            {
-                                PresionValor3 = "0";
-                                Presion1 = 0;
-
-
-                                if (PresionValor1 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor1);
-                                    Presion += 1;
-                                    PresionValor1 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor2 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor2);
-                                    Presion += 1;
-                                    PresionValor2 = Convert.ToString(Presion);
-                                }
-
-                                //  ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3;
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3;
-
-                                continue;
-                            }
-
-                            if (PresionValor4 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "")
-                            {
-                                PresionValor4 = "0";
-                                Presion1 = 0;
-
-                                if (PresionValor1 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor1);
-                                    Presion += 1;
-                                    PresionValor1 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor2 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor2);
-                                    Presion += 1;
-                                    PresionValor2 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor3 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor3);
-                                    Presion += 1;
-                                    PresionValor3 = Convert.ToString(Presion);
-                                }
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4;
-
-                                continue;
-                            }
-
-                            if (PresionValor5 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "")
-                            {
-                                PresionValor5 = "0";
-                                Presion1 = 0;
-
-                                if (PresionValor1 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor1);
-                                    Presion += 1;
-                                    PresionValor1 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor2 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor2);
-                                    Presion += 1;
-                                    PresionValor2 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor3 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor3);
-                                    Presion += 1;
-                                    PresionValor3 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor4 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor4);
-                                    Presion += 1;
-                                    PresionValor4 = Convert.ToString(Presion);
-                                }
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5;
-
-                                continue;
-                            }
-
-                            if (PresionValor6 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "" && PresionValor5 != "")
-                            {
-                                PresionValor6 = "0";
-                                Presion1 = 0;
-
-                                if (PresionValor1 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor1);
-                                    Presion += 1;
-                                    PresionValor1 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor2 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor2);
-                                    Presion += 1;
-                                    PresionValor2 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor3 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor3);
-                                    Presion += 1;
-                                    PresionValor3 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor4 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor4);
-                                    Presion += 1;
-                                    PresionValor4 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor5 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor5);
-                                    Presion += 1;
-                                    PresionValor5 = Convert.ToString(Presion);
-                                }
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6;
-
-                                continue;
-                            }
-
-                            if (PresionValor7 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "" && PresionValor5 != "" && PresionValor6 != "")
-                            {
-                                PresionValor7 = "0";
-                                Presion1 = 0;
-
-                                if (PresionValor1 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor1);
-                                    Presion += 1;
-                                    PresionValor1 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor2 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor2);
-                                    Presion += 1;
-                                    PresionValor2 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor3 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor3);
-                                    Presion += 1;
-                                    PresionValor3 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor4 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor4);
-                                    Presion += 1;
-                                    PresionValor4 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor5 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor5);
-                                    Presion += 1;
-                                    PresionValor5 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor6 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor6);
-                                    Presion += 1;
-                                    PresionValor6 = Convert.ToString(Presion);
-                                }
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7;
-
-                                continue;
-                            }
-
-                            if (PresionValor8 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "" && PresionValor5 != "" && PresionValor6 != "" && PresionValor7 != "")
-                            {
-                                PresionValor8 = "0";
-                                Presion1 = 0;
-
-                                if (PresionValor1 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor1);
-                                    Presion += 1;
-                                    PresionValor1 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor2 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor2);
-                                    Presion += 1;
-                                    PresionValor2 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor3 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor3);
-                                    Presion += 1;
-                                    PresionValor3 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor4 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor4);
-                                    Presion += 1;
-                                    PresionValor4 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor5 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor5);
-                                    Presion += 1;
-                                    PresionValor5 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor6 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor6);
-                                    Presion += 1;
-                                    PresionValor6 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor7 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor7);
-                                    Presion += 1;
-                                    PresionValor7 = Convert.ToString(Presion);
-                                }
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7 + ", " + PresionValor8;
-
-                                continue;
-                            }
-
-                            if (PresionValor9 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "" && PresionValor5 != "" && PresionValor6 != "" && PresionValor7 != "" && PresionValor8 != "")
-                            {
-                                PresionValor9 = "0";
-                                Presion1 = 0;
-
-                                if (PresionValor1 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor1);
-                                    Presion += 1;
-                                    PresionValor1 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor2 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor2);
-                                    Presion += 1;
-                                    PresionValor2 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor3 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor3);
-                                    Presion += 1;
-                                    PresionValor3 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor4 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor4);
-                                    Presion += 1;
-                                    PresionValor4 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor5 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor5);
-                                    Presion += 1;
-                                    PresionValor5 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor6 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor6);
-                                    Presion += 1;
-                                    PresionValor6 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor7 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor7);
-                                    Presion += 1;
-                                    PresionValor7 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor8 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor8);
-                                    Presion += 1;
-                                    PresionValor8 = Convert.ToString(Presion);
-                                }
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7 + ", " + PresionValor8 + ", " + PresionValor9;
-
-                                continue;
-                            }
-
-                        }
-                        else
-                        {
-                            if (PresionValor1 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor1);
-                                Presion += 1;
-                                PresionValor1 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1;
-                            }
-
-                            if (PresionValor2 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor2);
-                                Presion += 1;
-                                PresionValor2 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2;
-                            }
-
-                            if (PresionValor3 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor3);
-                                Presion += 1;
-                                PresionValor3 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3;
-                            }
-
-                            if (PresionValor4 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor4);
-                                Presion += 1;
-                                PresionValor4 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4;
-                            }
-
-                            if (PresionValor5 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor5);
-                                Presion += 1;
-                                PresionValor5 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5;
-                            }
-
-                            if (PresionValor6 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor6);
-                                Presion += 1;
-                                PresionValor6 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6;
-                            }
-
-                            if (PresionValor7 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor7);
-                                Presion += 1;
-                                PresionValor7 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7;
-                            }
-
-                            if (PresionValor8 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor8);
-                                Presion += 1;
-                                PresionValor8 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7 + ", " + PresionValor8;
-                            }
-
-                            if (PresionValor9 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor9);
-                                Presion += 1;
-                                PresionValor9 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7 + ", " + PresionValor8 + ", " + PresionValor9;
-                            }
-
-
-                        }
-
-                    }
-                    else if (ResultadoPresionFront_L[i] == -1)
-                    {
-                        ResultadoInt -= 1;
-                        Presion1 -= 1;
-
-                        ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt);
-
-                        if (Presion1 == -2)
-                        {
-                            if (PresionValor1 == "")
-                            {
-                                PresionValor1 = "0";
-                                Presion1 = 0;
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1;
-
-                                continue;
-                            }
-
-                            if (PresionValor2 == "" && PresionValor1 != "")
-                            {
-                                PresionValor2 = "0";
-                                Presion1 = 0;
-
-                                if (PresionValor1 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor1);
-                                    Presion -= 1;
-                                    PresionValor1 = Convert.ToString(Presion);
-                                }
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2;
-
-
-                                continue;
-                            }
-
-                            if (PresionValor3 == "" && PresionValor1 != "" && PresionValor2 != "")
-                            {
-                                PresionValor3 = "0";
-                                Presion1 = 0;
-
-
-                                if (PresionValor1 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor1);
-                                    Presion -= 1;
-                                    PresionValor1 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor2 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor2);
-                                    Presion -= 1;
-                                    PresionValor2 = Convert.ToString(Presion);
-                                }
-
-                                //  ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3;
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3;
-
-                                continue;
-                            }
-
-                            if (PresionValor4 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "")
-                            {
-                                PresionValor4 = "0";
-                                Presion1 = 0;
-
-                                if (PresionValor1 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor1);
-                                    Presion -= 1;
-                                    PresionValor1 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor2 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor2);
-                                    Presion -= 1;
-                                    PresionValor2 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor3 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor3);
-                                    Presion -= 1;
-                                    PresionValor3 = Convert.ToString(Presion);
-                                }
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4;
-
-                                continue;
-                            }
-
-                            if (PresionValor5 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "")
-                            {
-                                PresionValor5 = "0";
-                                Presion1 = 0;
-
-                                if (PresionValor1 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor1);
-                                    Presion -= 1;
-                                    PresionValor1 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor2 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor2);
-                                    Presion -= 1;
-                                    PresionValor2 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor3 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor3);
-                                    Presion -= 1;
-                                    PresionValor3 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor4 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor4);
-                                    Presion -= 1;
-                                    PresionValor4 = Convert.ToString(Presion);
-                                }
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5;
-
-                                continue;
-                            }
-
-                            if (PresionValor6 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "" && PresionValor5 != "")
-                            {
-                                PresionValor6 = "0";
-                                Presion1 = 0;
-
-                                if (PresionValor1 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor1);
-                                    Presion -= 1;
-                                    PresionValor1 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor2 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor2);
-                                    Presion -= 1;
-                                    PresionValor2 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor3 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor3);
-                                    Presion -= 1;
-                                    PresionValor3 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor4 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor4);
-                                    Presion -= 1;
-                                    PresionValor4 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor5 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor5);
-                                    Presion -= 1;
-                                    PresionValor5 = Convert.ToString(Presion);
-                                }
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6;
-
-                                continue;
-                            }
-
-                            if (PresionValor7 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "" && PresionValor5 != "" && PresionValor6 != "")
-                            {
-                                PresionValor7 = "0";
-                                Presion1 = 0;
-
-                                if (PresionValor1 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor1);
-                                    Presion -= 1;
-                                    PresionValor1 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor2 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor2);
-                                    Presion -= 1;
-                                    PresionValor2 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor3 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor3);
-                                    Presion -= 1;
-                                    PresionValor3 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor4 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor4);
-                                    Presion -= 1;
-                                    PresionValor4 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor5 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor5);
-                                    Presion -= 1;
-                                    PresionValor5 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor6 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor6);
-                                    Presion -= 1;
-                                    PresionValor6 = Convert.ToString(Presion);
-                                }
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7;
-
-                                continue;
-                            }
-
-                            if (PresionValor8 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "" && PresionValor5 != "" && PresionValor6 != "" && PresionValor7 != "")
-                            {
-                                PresionValor8 = "0";
-                                Presion1 = 0;
-
-                                if (PresionValor1 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor1);
-                                    Presion -= 1;
-                                    PresionValor1 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor2 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor2);
-                                    Presion -= 1;
-                                    PresionValor2 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor3 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor3);
-                                    Presion -= 1;
-                                    PresionValor3 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor4 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor4);
-                                    Presion -= 1;
-                                    PresionValor4 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor5 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor5);
-                                    Presion -= 1;
-                                    PresionValor5 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor6 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor6);
-                                    Presion -= 1;
-                                    PresionValor6 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor7 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor7);
-                                    Presion -= 1;
-                                    PresionValor7 = Convert.ToString(Presion);
-                                }
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7 + ", " + PresionValor8;
-
-                                continue;
-                            }
-
-                            if (PresionValor9 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "" && PresionValor5 != "" && PresionValor6 != "" && PresionValor7 != "" && PresionValor8 != "")
-                            {
-                                PresionValor9 = "0";
-                                Presion1 = 0;
-
-                                if (PresionValor1 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor1);
-                                    Presion -= 1;
-                                    PresionValor1 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor2 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor2);
-                                    Presion -= 1;
-                                    PresionValor2 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor3 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor3);
-                                    Presion -= 1;
-                                    PresionValor3 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor4 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor4);
-                                    Presion -= 1;
-                                    PresionValor4 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor5 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor5);
-                                    Presion -= 1;
-                                    PresionValor5 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor6 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor6);
-                                    Presion -= 1;
-                                    PresionValor6 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor7 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor7);
-                                    Presion -= 1;
-                                    PresionValor7 = Convert.ToString(Presion);
-                                }
-
-                                if (PresionValor8 != "")
-                                {
-                                    int Presion = Convert.ToInt32(PresionValor8);
-                                    Presion -= 1;
-                                    PresionValor8 = Convert.ToString(Presion);
-                                }
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7 + ", " + PresionValor8 + ", " + PresionValor9;
-
-                                continue;
-                            }
-
-                        }
-                        else
-                        {
-                            if (PresionValor1 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor1);
-                                Presion -= 1;
-                                PresionValor1 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1;
-                            }
-
-                            if (PresionValor2 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor2);
-                                Presion -= 1;
-                                PresionValor2 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2;
-                            }
-
-                            if (PresionValor3 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor3);
-                                Presion -= 1;
-                                PresionValor3 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3;
-                            }
-
-                            if (PresionValor4 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor4);
-                                Presion -= 1;
-                                PresionValor4 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4;
-                            }
-
-                            if (PresionValor5 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor5);
-                                Presion -= 1;
-                                PresionValor5 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5;
-                            }
-
-                            if (PresionValor6 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor6);
-                                Presion -= 1;
-                                PresionValor6 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6;
-                            }
-
-                            if (PresionValor7 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor7);
-                                Presion -= 1;
-                                PresionValor7 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7;
-                            }
-
-                            if (PresionValor8 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor8);
-                                Presion -= 1;
-                                PresionValor8 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7 + ", " + PresionValor8;
-                            }
-
-                            if (PresionValor9 != "")
-                            {
-                                int Presion = Convert.ToInt32(PresionValor9);
-                                Presion -= 1;
-                                PresionValor9 = Convert.ToString(Presion);
-
-                                ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7 + ", " + PresionValor8 + ", " + PresionValor9;
-                            }
-
-
-
-                        }
-                    }
-                    else
-                    {
-
-                        ResultadoInt += 0;
-                        Presion1 += 0;
-
-                        if (i > 1)
-                        {
-                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoPresionFrontString[i - 1]);
-                        }
-                        else
-                        {
-                            ResultadoPresionFrontString[i] = "0";
-                        }
-
-
-                    }
-                    //
 
                 }
 
