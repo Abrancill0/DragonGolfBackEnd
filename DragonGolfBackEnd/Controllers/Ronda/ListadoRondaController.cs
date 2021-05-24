@@ -35,8 +35,10 @@ namespace DragonGolfBackEnd.Controllers
             public int Ro_SwitchAdventage { get; set; }
             public int IDUsuario { get; set; }
             public string Ro_Date { get; set; }
-            public string Cou_Nombre{ get; set; } 
-        }
+            public string Cou_Nombre { get; set; }
+            public int Cou_Status { get; set; }
+            public string  Cou_StatusName { get; set; }
+}
         public JObject Post(ParametrosEntradas Datos)
         {
             try
@@ -88,6 +90,8 @@ namespace DragonGolfBackEnd.Controllers
                                 IDUsuario = Convert.ToInt32(row["IDUsuario"]),
                                 Ro_Date = Convert.ToString(row["Ro_Date"]),
                                 Cou_Nombre = Convert.ToString(row["Cou_Nombre"]),
+                                Cou_Status = Convert.ToInt32(row["Cou_Status"]),
+                                Cou_StatusName = Convert.ToString(row["Cou_StatusName"]),
                             };
 
                             lista.Add(ent);
