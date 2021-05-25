@@ -3601,6 +3601,266 @@ namespace DragonGolfBackEnd.Controllers
         
             string[] ResultadoPresionFrontString = new string[10];
 
+            if (Resultado1_H > 0)
+            {
+                Resultado1_H = 1;
+            }
+            else if (Resultado1_H < 0)
+            {
+                Resultado1_H = -1;
+            }
+            else
+            {
+                Resultado1_H = 0;
+            }
+
+            if (Resultado1_L > 0)
+            {
+                Resultado1_L = 1;
+            }
+            else if (Resultado1_L < 0)
+            {
+                Resultado1_L = -1;
+            }
+            else
+            {
+                Resultado1_L = 0;
+            }
+
+            if (Resultado2_H > 0)
+            {
+                Resultado2_H = 1;
+            }
+            else if (Resultado2_H < 0)
+            {
+                Resultado2_H = -1;
+            }
+            else
+            {
+                Resultado2_H = 0;
+            }
+
+            if (Resultado2_L > 0)
+            {
+                Resultado2_L = 1;
+            }
+            else if (Resultado2_L < 0)
+            {
+                Resultado2_L = -1;
+            }
+            else
+            {
+                Resultado2_L = 0;
+            }
+
+            if (Resultado3_H > 0)
+            {
+                Resultado3_H = 1;
+            }
+            else if (Resultado3_H < 0)
+            {
+                Resultado3_H = -1;
+            }
+            else
+            {
+                Resultado3_H = 0;
+            }
+
+            if (Resultado3_L > 0)
+            {
+                Resultado3_L = 1;
+            }
+            else if (Resultado3_L < 0)
+            {
+                Resultado3_L = -1;
+            }
+            else
+            {
+                Resultado3_L = 0;
+            }
+
+            if (Resultado4_H > 0)
+            {
+                Resultado4_H = 1;
+            }
+            else if (Resultado4_H < 0)
+            {
+                Resultado4_H = -1;
+            }
+            else
+            {
+                Resultado4_H = 0;
+            }
+
+            if (Resultado4_L > 0)
+            {
+                Resultado4_L = 1;
+            }
+            else if (Resultado4_L < 0)
+            {
+                Resultado4_L = -1;
+            }
+            else
+            {
+                Resultado4_L = 0;
+            }
+
+            if (Resultado4_H > 0)
+            {
+                Resultado4_H = 1;
+            }
+            else if (Resultado4_H < 0)
+            {
+                Resultado4_H = -1;
+            }
+            else
+            {
+                Resultado4_H = 0;
+            }
+
+            if (Resultado4_L > 0)
+            {
+                Resultado4_L = 1;
+            }
+            else if (Resultado4_L < 0)
+            {
+                Resultado4_L = -1;
+            }
+            else
+            {
+                Resultado4_L = 0;
+            }
+
+            if (Resultado5_H > 0)
+            {
+                Resultado5_H = 1;
+            }
+            else if (Resultado5_H < 0)
+            {
+                Resultado5_H = -1;
+            }
+            else
+            {
+                Resultado5_H = 0;
+            }
+
+            if (Resultado5_L > 0)
+            {
+                Resultado5_L = 1;
+            }
+            else if (Resultado5_L < 0)
+            {
+                Resultado5_L = -1;
+            }
+            else
+            {
+                Resultado5_L = 0;
+            }
+
+            if (Resultado6_H > 0)
+            {
+                Resultado6_H = 1;
+            }
+            else if (Resultado6_H < 0)
+            {
+                Resultado6_H = -1;
+            }
+            else
+            {
+                Resultado6_H = 0;
+            }
+
+            if (Resultado6_L > 0)
+            {
+                Resultado6_L = 1;
+            }
+            else if (Resultado6_L < 0)
+            {
+                Resultado6_L = -1;
+            }
+            else
+            {
+                Resultado6_L = 0;
+            }
+
+            if (Resultado7_H > 0)
+            {
+                Resultado7_H = 1;
+            }
+            else if (Resultado7_H < 0)
+            {
+                Resultado7_H = -1;
+            }
+            else
+            {
+                Resultado7_H = 0;
+            }
+
+            if (Resultado7_L > 0)
+            {
+                Resultado7_L = 1;
+            }
+            else if (Resultado7_L < 0)
+            {
+                Resultado7_L = -1;
+            }
+            else
+            {
+                Resultado7_L = 0;
+            }
+
+            if (Resultado8_H > 0)
+            {
+                Resultado8_H = 1;
+            }
+            else if (Resultado8_H < 0)
+            {
+                Resultado8_H = -1;
+            }
+            else
+            {
+                Resultado8_H = 0;
+            }
+
+            if (Resultado8_L > 0)
+            {
+                Resultado8_L = 1;
+            }
+            else if (Resultado8_L < 0)
+            {
+                Resultado8_L = -1;
+            }
+            else
+            {
+                Resultado8_L = 0;
+            }
+
+            if (Resultado9_H > 0)
+            {
+                Resultado9_H = 1;
+            }
+            else if (Resultado9_H < 0)
+            {
+                Resultado9_H = -1;
+            }
+            else
+            {
+                Resultado9_H = 0;
+            }
+
+            if (Resultado9_L > 0)
+            {
+                Resultado9_L = 1;
+            }
+            else if (Resultado9_L < 0)
+            {
+                Resultado9_L = -1;
+            }
+            else
+            {
+                Resultado9_L = 0;
+            }
+
             int Hoyo1 = Resultado1_H + Resultado1_L;
             int Hoyo2 = Resultado2_H + Resultado2_L;
             int Hoyo3 = Resultado3_H + Resultado3_L;
@@ -5302,6 +5562,266 @@ namespace DragonGolfBackEnd.Controllers
             int[] ResultadoPresionFront_T = new int[10];
 
             string[] ResultadoPresionFrontString = new string[10];
+
+            if (Resultado1_H > 0)
+            {
+                Resultado1_H = 1;
+            }
+            else if (Resultado1_H < 0)
+            {
+                Resultado1_H = -1;
+            }
+            else
+            {
+                Resultado1_H = 0;
+            }
+
+            if (Resultado1_L > 0)
+            {
+                Resultado1_L = 1;
+            }
+            else if (Resultado1_L < 0)
+            {
+                Resultado1_L = -1;
+            }
+            else
+            {
+                Resultado1_L = 0;
+            }
+
+            if (Resultado2_H > 0)
+            {
+                Resultado2_H = 1;
+            }
+            else if (Resultado2_H < 0)
+            {
+                Resultado2_H = -1;
+            }
+            else
+            {
+                Resultado2_H = 0;
+            }
+
+            if (Resultado2_L > 0)
+            {
+                Resultado2_L = 1;
+            }
+            else if (Resultado2_L < 0)
+            {
+                Resultado2_L = -1;
+            }
+            else
+            {
+                Resultado2_L = 0;
+            }
+
+            if (Resultado3_H > 0)
+            {
+                Resultado3_H = 1;
+            }
+            else if (Resultado3_H < 0)
+            {
+                Resultado3_H = -1;
+            }
+            else
+            {
+                Resultado3_H = 0;
+            }
+
+            if (Resultado3_L > 0)
+            {
+                Resultado3_L = 1;
+            }
+            else if (Resultado3_L < 0)
+            {
+                Resultado3_L = -1;
+            }
+            else
+            {
+                Resultado3_L = 0;
+            }
+
+            if (Resultado4_H > 0)
+            {
+                Resultado4_H = 1;
+            }
+            else if (Resultado4_H < 0)
+            {
+                Resultado4_H = -1;
+            }
+            else
+            {
+                Resultado4_H = 0;
+            }
+
+            if (Resultado4_L > 0)
+            {
+                Resultado4_L = 1;
+            }
+            else if (Resultado4_L < 0)
+            {
+                Resultado4_L = -1;
+            }
+            else
+            {
+                Resultado4_L = 0;
+            }
+
+            if (Resultado4_H > 0)
+            {
+                Resultado4_H = 1;
+            }
+            else if (Resultado4_H < 0)
+            {
+                Resultado4_H = -1;
+            }
+            else
+            {
+                Resultado4_H = 0;
+            }
+
+            if (Resultado4_L > 0)
+            {
+                Resultado4_L = 1;
+            }
+            else if (Resultado4_L < 0)
+            {
+                Resultado4_L = -1;
+            }
+            else
+            {
+                Resultado4_L = 0;
+            }
+
+            if (Resultado5_H > 0)
+            {
+                Resultado5_H = 1;
+            }
+            else if (Resultado5_H < 0)
+            {
+                Resultado5_H = -1;
+            }
+            else
+            {
+                Resultado5_H = 0;
+            }
+
+            if (Resultado5_L > 0)
+            {
+                Resultado5_L = 1;
+            }
+            else if (Resultado5_L < 0)
+            {
+                Resultado5_L = -1;
+            }
+            else
+            {
+                Resultado5_L = 0;
+            }
+
+            if (Resultado6_H > 0)
+            {
+                Resultado6_H = 1;
+            }
+            else if (Resultado6_H < 0)
+            {
+                Resultado6_H = -1;
+            }
+            else
+            {
+                Resultado6_H = 0;
+            }
+
+            if (Resultado6_L > 0)
+            {
+                Resultado6_L = 1;
+            }
+            else if (Resultado6_L < 0)
+            {
+                Resultado6_L = -1;
+            }
+            else
+            {
+                Resultado6_L = 0;
+            }
+
+            if (Resultado7_H > 0)
+            {
+                Resultado7_H = 1;
+            }
+            else if (Resultado7_H < 0)
+            {
+                Resultado7_H = -1;
+            }
+            else
+            {
+                Resultado7_H = 0;
+            }
+
+            if (Resultado7_L > 0)
+            {
+                Resultado7_L = 1;
+            }
+            else if (Resultado7_L < 0)
+            {
+                Resultado7_L = -1;
+            }
+            else
+            {
+                Resultado7_L = 0;
+            }
+
+            if (Resultado8_H > 0)
+            {
+                Resultado8_H = 1;
+            }
+            else if (Resultado8_H < 0)
+            {
+                Resultado8_H = -1;
+            }
+            else
+            {
+                Resultado8_H = 0;
+            }
+
+            if (Resultado8_L > 0)
+            {
+                Resultado8_L = 1;
+            }
+            else if (Resultado8_L < 0)
+            {
+                Resultado8_L = -1;
+            }
+            else
+            {
+                Resultado8_L = 0;
+            }
+
+            if (Resultado9_H > 0)
+            {
+                Resultado9_H = 1;
+            }
+            else if (Resultado9_H < 0)
+            {
+                Resultado9_H = -1;
+            }
+            else
+            {
+                Resultado9_H = 0;
+            }
+
+            if (Resultado9_L > 0)
+            {
+                Resultado9_L = 1;
+            }
+            else if (Resultado9_L < 0)
+            {
+                Resultado9_L = -1;
+            }
+            else
+            {
+                Resultado9_L = 0;
+            }
 
             int Hoyo1 = Resultado1_H + Resultado1_L;
             int Hoyo2 = Resultado2_H + Resultado2_L;
@@ -7005,6 +7525,266 @@ namespace DragonGolfBackEnd.Controllers
 
             string[] ResultadoPresionFrontString = new string[10];
 
+            if (Resultado1_H > 0)
+            {
+                Resultado1_H = 1;
+            }
+            else if (Resultado1_H < 0)
+            {
+                Resultado1_H = -1;
+            }
+            else
+            {
+                Resultado1_H = 0;
+            }
+
+            if (Resultado1_L > 0)
+            {
+                Resultado1_L = 1;
+            }
+            else if (Resultado1_L < 0)
+            {
+                Resultado1_L = -1;
+            }
+            else
+            {
+                Resultado1_L = 0;
+            }
+
+            if (Resultado2_H > 0)
+            {
+                Resultado2_H = 1;
+            }
+            else if (Resultado2_H < 0)
+            {
+                Resultado2_H = -1;
+            }
+            else
+            {
+                Resultado2_H = 0;
+            }
+
+            if (Resultado2_L > 0)
+            {
+                Resultado2_L = 1;
+            }
+            else if (Resultado2_L < 0)
+            {
+                Resultado2_L = -1;
+            }
+            else
+            {
+                Resultado2_L = 0;
+            }
+
+            if (Resultado3_H > 0)
+            {
+                Resultado3_H = 1;
+            }
+            else if (Resultado3_H < 0)
+            {
+                Resultado3_H = -1;
+            }
+            else
+            {
+                Resultado3_H = 0;
+            }
+
+            if (Resultado3_L > 0)
+            {
+                Resultado3_L = 1;
+            }
+            else if (Resultado3_L < 0)
+            {
+                Resultado3_L = -1;
+            }
+            else
+            {
+                Resultado3_L = 0;
+            }
+
+            if (Resultado4_H > 0)
+            {
+                Resultado4_H = 1;
+            }
+            else if (Resultado4_H < 0)
+            {
+                Resultado4_H = -1;
+            }
+            else
+            {
+                Resultado4_H = 0;
+            }
+
+            if (Resultado4_L > 0)
+            {
+                Resultado4_L = 1;
+            }
+            else if (Resultado4_L < 0)
+            {
+                Resultado4_L = -1;
+            }
+            else
+            {
+                Resultado4_L = 0;
+            }
+
+            if (Resultado4_H > 0)
+            {
+                Resultado4_H = 1;
+            }
+            else if (Resultado4_H < 0)
+            {
+                Resultado4_H = -1;
+            }
+            else
+            {
+                Resultado4_H = 0;
+            }
+
+            if (Resultado4_L > 0)
+            {
+                Resultado4_L = 1;
+            }
+            else if (Resultado4_L < 0)
+            {
+                Resultado4_L = -1;
+            }
+            else
+            {
+                Resultado4_L = 0;
+            }
+
+            if (Resultado5_H > 0)
+            {
+                Resultado5_H = 1;
+            }
+            else if (Resultado5_H < 0)
+            {
+                Resultado5_H = -1;
+            }
+            else
+            {
+                Resultado5_H = 0;
+            }
+
+            if (Resultado5_L > 0)
+            {
+                Resultado5_L = 1;
+            }
+            else if (Resultado5_L < 0)
+            {
+                Resultado5_L = -1;
+            }
+            else
+            {
+                Resultado5_L = 0;
+            }
+
+            if (Resultado6_H > 0)
+            {
+                Resultado6_H = 1;
+            }
+            else if (Resultado6_H < 0)
+            {
+                Resultado6_H = -1;
+            }
+            else
+            {
+                Resultado6_H = 0;
+            }
+
+            if (Resultado6_L > 0)
+            {
+                Resultado6_L = 1;
+            }
+            else if (Resultado6_L < 0)
+            {
+                Resultado6_L = -1;
+            }
+            else
+            {
+                Resultado6_L = 0;
+            }
+
+            if (Resultado7_H > 0)
+            {
+                Resultado7_H = 1;
+            }
+            else if (Resultado7_H < 0)
+            {
+                Resultado7_H = -1;
+            }
+            else
+            {
+                Resultado7_H = 0;
+            }
+
+            if (Resultado7_L > 0)
+            {
+                Resultado7_L = 1;
+            }
+            else if (Resultado7_L < 0)
+            {
+                Resultado7_L = -1;
+            }
+            else
+            {
+                Resultado7_L = 0;
+            }
+
+            if (Resultado8_H > 0)
+            {
+                Resultado8_H = 1;
+            }
+            else if (Resultado8_H < 0)
+            {
+                Resultado8_H = -1;
+            }
+            else
+            {
+                Resultado8_H = 0;
+            }
+
+            if (Resultado8_L > 0)
+            {
+                Resultado8_L = 1;
+            }
+            else if (Resultado8_L < 0)
+            {
+                Resultado8_L = -1;
+            }
+            else
+            {
+                Resultado8_L = 0;
+            }
+
+            if (Resultado9_H > 0)
+            {
+                Resultado9_H = 1;
+            }
+            else if (Resultado9_H < 0)
+            {
+                Resultado9_H = -1;
+            }
+            else
+            {
+                Resultado9_H = 0;
+            }
+
+            if (Resultado9_L > 0)
+            {
+                Resultado9_L = 1;
+            }
+            else if (Resultado9_L < 0)
+            {
+                Resultado9_L = -1;
+            }
+            else
+            {
+                Resultado9_L = 0;
+            }
+
             int Hoyo1 = Resultado1_H + Resultado1_L;
             int Hoyo2 = Resultado2_H + Resultado2_L;
             int Hoyo3 = Resultado3_H + Resultado3_L;
@@ -8707,7 +9487,268 @@ namespace DragonGolfBackEnd.Controllers
 
             string[] ResultadoPresionFrontString = new string[10];
 
-            int Hoyo1 = Resultado1_H + Resultado1_L;
+            if (Resultado1_H > 0)
+            {
+                Resultado1_H = 1;
+            }
+            else if (Resultado1_H < 0)
+            {
+                Resultado1_H = -1;
+            }
+            else
+            {
+                Resultado1_H = 0;
+            }
+
+            if (Resultado1_L > 0)
+            {
+                Resultado1_L = 1;
+            }
+            else if (Resultado1_L < 0)
+            {
+                Resultado1_L = -1;
+            }
+            else
+            {
+                Resultado1_L = 0;
+            }
+
+            if (Resultado2_H > 0)
+            {
+                Resultado2_H = 1;
+            }
+            else if (Resultado2_H < 0)
+            {
+                Resultado2_H = -1;
+            }
+            else
+            {
+                Resultado2_H = 0;
+            }
+
+            if (Resultado2_L > 0)
+            {
+                Resultado2_L = 1;
+            }
+            else if (Resultado2_L < 0)
+            {
+                Resultado2_L = -1;
+            }
+            else
+            {
+                Resultado2_L = 0;
+            }
+
+            if (Resultado3_H > 0)
+            {
+                Resultado3_H = 1;
+            }
+            else if (Resultado3_H < 0)
+            {
+                Resultado3_H = -1;
+            }
+            else
+            {
+                Resultado3_H = 0;
+            }
+
+            if (Resultado3_L > 0)
+            {
+                Resultado3_L = 1;
+            }
+            else if (Resultado3_L < 0)
+            {
+                Resultado3_L = -1;
+            }
+            else
+            {
+                Resultado3_L = 0;
+            }
+
+            if (Resultado4_H > 0)
+            {
+                Resultado4_H = 1;
+            }
+            else if (Resultado4_H < 0)
+            {
+                Resultado4_H = -1;
+            }
+            else
+            {
+                Resultado4_H = 0;
+            }
+
+            if (Resultado4_L > 0)
+            {
+                Resultado4_L = 1;
+            }
+            else if (Resultado4_L < 0)
+            {
+                Resultado4_L = -1;
+            }
+            else
+            {
+                Resultado4_L = 0;
+            }
+
+            if (Resultado4_H > 0)
+            {
+                Resultado4_H = 1;
+            }
+            else if (Resultado4_H < 0)
+            {
+                Resultado4_H = -1;
+            }
+            else
+            {
+                Resultado4_H = 0;
+            }
+
+            if (Resultado4_L > 0)
+            {
+                Resultado4_L = 1;
+            }
+            else if (Resultado4_L < 0)
+            {
+                Resultado4_L = -1;
+            }
+            else
+            {
+                Resultado4_L = 0;
+            }
+
+            if (Resultado5_H > 0)
+            {
+                Resultado5_H = 1;
+            }
+            else if (Resultado5_H < 0)
+            {
+                Resultado5_H = -1;
+            }
+            else
+            {
+                Resultado5_H = 0;
+            }
+
+            if (Resultado5_L > 0)
+            {
+                Resultado5_L = 1;
+            }
+            else if (Resultado5_L < 0)
+            {
+                Resultado5_L = -1;
+            }
+            else
+            {
+                Resultado5_L = 0;
+            }
+
+            if (Resultado6_H > 0)
+            {
+                Resultado6_H = 1;
+            }
+            else if (Resultado6_H < 0)
+            {
+                Resultado6_H = -1;
+            }
+            else
+            {
+                Resultado6_H = 0;
+            }
+
+            if (Resultado6_L > 0)
+            {
+                Resultado6_L = 1;
+            }
+            else if (Resultado6_L < 0)
+            {
+                Resultado6_L = -1;
+            }
+            else
+            {
+                Resultado6_L = 0;
+            }
+
+            if (Resultado7_H > 0)
+            {
+                Resultado7_H = 1;
+            }
+            else if (Resultado7_H < 0)
+            {
+                Resultado7_H = -1;
+            }
+            else
+            {
+                Resultado7_H = 0;
+            }
+
+            if (Resultado7_L > 0)
+            {
+                Resultado7_L = 1;
+            }
+            else if (Resultado7_L < 0)
+            {
+                Resultado7_L = -1;
+            }
+            else
+            {
+                Resultado7_L = 0;
+            }
+
+            if (Resultado8_H > 0)
+            {
+                Resultado8_H = 1;
+            }
+            else if (Resultado8_H < 0)
+            {
+                Resultado8_H = -1;
+            }
+            else
+            {
+                Resultado8_H = 0;
+            }
+
+            if (Resultado8_L > 0)
+            {
+                Resultado8_L = 1;
+            }
+            else if (Resultado8_L < 0)
+            {
+                Resultado8_L = -1;
+            }
+            else
+            {
+                Resultado8_L = 0;
+            }
+
+            if (Resultado9_H > 0)
+            {
+                Resultado9_H = 1;
+            }
+            else if (Resultado9_H < 0)
+            {
+                Resultado9_H = -1;
+            }
+            else
+            {
+                Resultado9_H = 0;
+            }
+
+            if (Resultado9_L > 0)
+            {
+                Resultado9_L = 1;
+            }
+            else if (Resultado9_L < 0)
+            {
+                Resultado9_L = -1;
+            }
+            else
+            {
+                Resultado9_L = 0;
+            }
+
+
+            int Hoyo1 = Resultado1_H  + Resultado1_L;
             int Hoyo2 = Resultado2_H + Resultado2_L;
             int Hoyo3 = Resultado3_H + Resultado3_L;
             int Hoyo4 = Resultado4_H + Resultado4_L;
@@ -10409,6 +11450,267 @@ namespace DragonGolfBackEnd.Controllers
 
             string[] ResultadoPresionFrontString = new string[10];
 
+            if (Resultado1_H > 0)
+            {
+                Resultado1_H = 1;
+            }
+            else if (Resultado1_H < 0)
+            {
+                Resultado1_H = -1;
+            }
+            else
+            {
+                Resultado1_H = 0;
+            }
+
+            if (Resultado1_L > 0)
+            {
+                Resultado1_L = 1;
+            }
+            else if (Resultado1_L < 0)
+            {
+                Resultado1_L = -1;
+            }
+            else
+            {
+                Resultado1_L = 0;
+            }
+
+            if (Resultado2_H > 0)
+            {
+                Resultado2_H = 1;
+            }
+            else if (Resultado2_H < 0)
+            {
+                Resultado2_H = -1;
+            }
+            else
+            {
+                Resultado2_H = 0;
+            }
+
+            if (Resultado2_L > 0)
+            {
+                Resultado2_L = 1;
+            }
+            else if (Resultado2_L < 0)
+            {
+                Resultado2_L = -1;
+            }
+            else
+            {
+                Resultado2_L = 0;
+            }
+
+            if (Resultado3_H > 0)
+            {
+                Resultado3_H = 1;
+            }
+            else if (Resultado3_H < 0)
+            {
+                Resultado3_H = -1;
+            }
+            else
+            {
+                Resultado3_H = 0;
+            }
+
+            if (Resultado3_L > 0)
+            {
+                Resultado3_L = 1;
+            }
+            else if (Resultado3_L < 0)
+            {
+                Resultado3_L = -1;
+            }
+            else
+            {
+                Resultado3_L = 0;
+            }
+
+            if (Resultado4_H > 0)
+            {
+                Resultado4_H = 1;
+            }
+            else if (Resultado4_H < 0)
+            {
+                Resultado4_H = -1;
+            }
+            else
+            {
+                Resultado4_H = 0;
+            }
+
+            if (Resultado4_L > 0)
+            {
+                Resultado4_L = 1;
+            }
+            else if (Resultado4_L < 0)
+            {
+                Resultado4_L = -1;
+            }
+            else
+            {
+                Resultado4_L = 0;
+            }
+
+            if (Resultado4_H > 0)
+            {
+                Resultado4_H = 1;
+            }
+            else if (Resultado4_H < 0)
+            {
+                Resultado4_H = -1;
+            }
+            else
+            {
+                Resultado4_H = 0;
+            }
+
+            if (Resultado4_L > 0)
+            {
+                Resultado4_L = 1;
+            }
+            else if (Resultado4_L < 0)
+            {
+                Resultado4_L = -1;
+            }
+            else
+            {
+                Resultado4_L = 0;
+            }
+
+            if (Resultado5_H > 0)
+            {
+                Resultado5_H = 1;
+            }
+            else if (Resultado5_H < 0)
+            {
+                Resultado5_H = -1;
+            }
+            else
+            {
+                Resultado5_H = 0;
+            }
+
+            if (Resultado5_L > 0)
+            {
+                Resultado5_L = 1;
+            }
+            else if (Resultado5_L < 0)
+            {
+                Resultado5_L = -1;
+            }
+            else
+            {
+                Resultado5_L = 0;
+            }
+
+            if (Resultado6_H > 0)
+            {
+                Resultado6_H = 1;
+            }
+            else if (Resultado6_H < 0)
+            {
+                Resultado6_H = -1;
+            }
+            else
+            {
+                Resultado6_H = 0;
+            }
+
+            if (Resultado6_L > 0)
+            {
+                Resultado6_L = 1;
+            }
+            else if (Resultado6_L < 0)
+            {
+                Resultado6_L = -1;
+            }
+            else
+            {
+                Resultado6_L = 0;
+            }
+
+            if (Resultado7_H > 0)
+            {
+                Resultado7_H = 1;
+            }
+            else if (Resultado7_H < 0)
+            {
+                Resultado7_H = -1;
+            }
+            else
+            {
+                Resultado7_H = 0;
+            }
+
+            if (Resultado7_L > 0)
+            {
+                Resultado7_L = 1;
+            }
+            else if (Resultado7_L < 0)
+            {
+                Resultado7_L = -1;
+            }
+            else
+            {
+                Resultado7_L = 0;
+            }
+
+            if (Resultado8_H > 0)
+            {
+                Resultado8_H = 1;
+            }
+            else if (Resultado8_H < 0)
+            {
+                Resultado8_H = -1;
+            }
+            else
+            {
+                Resultado8_H = 0;
+            }
+
+            if (Resultado8_L > 0)
+            {
+                Resultado8_L = 1;
+            }
+            else if (Resultado8_L < 0)
+            {
+                Resultado8_L = -1;
+            }
+            else
+            {
+                Resultado8_L = 0;
+            }
+
+            if (Resultado9_H > 0)
+            {
+                Resultado9_H = 1;
+            }
+            else if (Resultado9_H < 0)
+            {
+                Resultado9_H = -1;
+            }
+            else
+            {
+                Resultado9_H = 0;
+            }
+
+            if (Resultado9_L > 0)
+            {
+                Resultado9_L = 1;
+            }
+            else if (Resultado9_L < 0)
+            {
+                Resultado9_L = -1;
+            }
+            else
+            {
+                Resultado9_L = 0;
+            }
+
+
             int Hoyo1 = Resultado1_H + Resultado1_L;
             int Hoyo2 = Resultado2_H + Resultado2_L;
             int Hoyo3 = Resultado3_H + Resultado3_L;
@@ -10418,6 +11720,8 @@ namespace DragonGolfBackEnd.Controllers
             int Hoyo7 = Resultado7_H + Resultado7_L;
             int Hoyo8 = Resultado8_H + Resultado8_L;
             int Hoyo9 = Resultado9_H + Resultado9_L;
+
+         
 
             if (Hoyo1 == 0)
             {
@@ -12108,6 +13412,266 @@ namespace DragonGolfBackEnd.Controllers
             int[] ResultadoPresionFront_T = new int[10];
 
             string[] ResultadoPresionFrontString = new string[10];
+
+            if (Resultado1_H > 0)
+            {
+                Resultado1_H = 1;
+            }
+            else if (Resultado1_H < 0)
+            {
+                Resultado1_H = -1;
+            }
+            else
+            {
+                Resultado1_H = 0;
+            }
+
+            if (Resultado1_L > 0)
+            {
+                Resultado1_L = 1;
+            }
+            else if (Resultado1_L < 0)
+            {
+                Resultado1_L = -1;
+            }
+            else
+            {
+                Resultado1_L = 0;
+            }
+
+            if (Resultado2_H > 0)
+            {
+                Resultado2_H = 1;
+            }
+            else if (Resultado2_H < 0)
+            {
+                Resultado2_H = -1;
+            }
+            else
+            {
+                Resultado2_H = 0;
+            }
+
+            if (Resultado2_L > 0)
+            {
+                Resultado2_L = 1;
+            }
+            else if (Resultado2_L < 0)
+            {
+                Resultado2_L = -1;
+            }
+            else
+            {
+                Resultado2_L = 0;
+            }
+
+            if (Resultado3_H > 0)
+            {
+                Resultado3_H = 1;
+            }
+            else if (Resultado3_H < 0)
+            {
+                Resultado3_H = -1;
+            }
+            else
+            {
+                Resultado3_H = 0;
+            }
+
+            if (Resultado3_L > 0)
+            {
+                Resultado3_L = 1;
+            }
+            else if (Resultado3_L < 0)
+            {
+                Resultado3_L = -1;
+            }
+            else
+            {
+                Resultado3_L = 0;
+            }
+
+            if (Resultado4_H > 0)
+            {
+                Resultado4_H = 1;
+            }
+            else if (Resultado4_H < 0)
+            {
+                Resultado4_H = -1;
+            }
+            else
+            {
+                Resultado4_H = 0;
+            }
+
+            if (Resultado4_L > 0)
+            {
+                Resultado4_L = 1;
+            }
+            else if (Resultado4_L < 0)
+            {
+                Resultado4_L = -1;
+            }
+            else
+            {
+                Resultado4_L = 0;
+            }
+
+            if (Resultado4_H > 0)
+            {
+                Resultado4_H = 1;
+            }
+            else if (Resultado4_H < 0)
+            {
+                Resultado4_H = -1;
+            }
+            else
+            {
+                Resultado4_H = 0;
+            }
+
+            if (Resultado4_L > 0)
+            {
+                Resultado4_L = 1;
+            }
+            else if (Resultado4_L < 0)
+            {
+                Resultado4_L = -1;
+            }
+            else
+            {
+                Resultado4_L = 0;
+            }
+
+            if (Resultado5_H > 0)
+            {
+                Resultado5_H = 1;
+            }
+            else if (Resultado5_H < 0)
+            {
+                Resultado5_H = -1;
+            }
+            else
+            {
+                Resultado5_H = 0;
+            }
+
+            if (Resultado5_L > 0)
+            {
+                Resultado5_L = 1;
+            }
+            else if (Resultado5_L < 0)
+            {
+                Resultado5_L = -1;
+            }
+            else
+            {
+                Resultado5_L = 0;
+            }
+
+            if (Resultado6_H > 0)
+            {
+                Resultado6_H = 1;
+            }
+            else if (Resultado6_H < 0)
+            {
+                Resultado6_H = -1;
+            }
+            else
+            {
+                Resultado6_H = 0;
+            }
+
+            if (Resultado6_L > 0)
+            {
+                Resultado6_L = 1;
+            }
+            else if (Resultado6_L < 0)
+            {
+                Resultado6_L = -1;
+            }
+            else
+            {
+                Resultado6_L = 0;
+            }
+
+            if (Resultado7_H > 0)
+            {
+                Resultado7_H = 1;
+            }
+            else if (Resultado7_H < 0)
+            {
+                Resultado7_H = -1;
+            }
+            else
+            {
+                Resultado7_H = 0;
+            }
+
+            if (Resultado7_L > 0)
+            {
+                Resultado7_L = 1;
+            }
+            else if (Resultado7_L < 0)
+            {
+                Resultado7_L = -1;
+            }
+            else
+            {
+                Resultado7_L = 0;
+            }
+
+            if (Resultado8_H > 0)
+            {
+                Resultado8_H = 1;
+            }
+            else if (Resultado8_H < 0)
+            {
+                Resultado8_H = -1;
+            }
+            else
+            {
+                Resultado8_H = 0;
+            }
+
+            if (Resultado8_L > 0)
+            {
+                Resultado8_L = 1;
+            }
+            else if (Resultado8_L < 0)
+            {
+                Resultado8_L = -1;
+            }
+            else
+            {
+                Resultado8_L = 0;
+            }
+
+            if (Resultado9_H > 0)
+            {
+                Resultado9_H = 1;
+            }
+            else if (Resultado9_H < 0)
+            {
+                Resultado9_H = -1;
+            }
+            else
+            {
+                Resultado9_H = 0;
+            }
+
+            if (Resultado9_L > 0)
+            {
+                Resultado9_L = 1;
+            }
+            else if (Resultado9_L < 0)
+            {
+                Resultado9_L = -1;
+            }
+            else
+            {
+                Resultado9_L = 0;
+            }
 
             int Hoyo1 = Resultado1_H + Resultado1_L;
             int Hoyo2 = Resultado2_H + Resultado2_L;
