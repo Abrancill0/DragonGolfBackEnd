@@ -16,37 +16,28 @@ namespace DragonGolfBackEnd.Controllers
 {
 
     [EnableCors(origins: "*", headers: "*", methods: "*", SupportsCredentials = true)]
-    [RoutePrefix("api/ListadoMontoPerdidoGanado")]
-    public class ListadoMontoPerdidoGanadoController : ApiController
+    [RoutePrefix("api/AbrirRonda")]
+    public class AbrirRondaController : ApiController
     {
-
         public class ParametrosEntradas
         {
+       
             public int IDRound { get; set; }
-        }
-        public class ParametrosSalida
-        {
-           
-            public int IDRonda { get; set; }
-            public int IDUsuario { get; set; }
-            public string usu_email { get; set; }
-            public string Tipo { get; set; }
-            public int MontoPerdidoGanadoSingle { get; set; }
-            public int MontoPerdidoGanadoTeam { get; set; }
-            public string usu_nickname { get; set; }
-
+          
         }
         public JObject Post(ParametrosEntradas Datos)
         {
             try
             {
-                SqlCommand comando = new SqlCommand("DragoGolf_LostEarnedAmount");
+                SqlCommand comando = new SqlCommand("DragoGolf_OpenRound");
                 comando.CommandType = CommandType.StoredProcedure;
 
                 //Declaracion de parametros
                 comando.Parameters.Add("@IDRound", SqlDbType.Int);
 
+                //Asignacion de valores a parametros
                 comando.Parameters["@IDRound"].Value = Datos.IDRound;
+
 
                 comando.Connection = new SqlConnection(VariablesGlobales.CadenaConexion);
                 comando.CommandTimeout = 0;
@@ -57,12 +48,9 @@ namespace DragonGolfBackEnd.Controllers
                 comando.Connection.Close();
                 DA.Fill(DT);
 
-                List<ParametrosSalida> lista = new List<ParametrosSalida>();
-
                 string Mensaje = "";
                 int Estatus = 0;
-
-
+               
                 int contador = DT.Rows.Count;
 
                 if (DT.Rows.Count > 0)
@@ -71,32 +59,14 @@ namespace DragonGolfBackEnd.Controllers
                     {
                         Mensaje = Convert.ToString(row["mensaje"]);
                         Estatus = Convert.ToInt32(row["Estatus"]);
-
-                        if (Estatus == 1)
-                        {
-                            ParametrosSalida ent = new ParametrosSalida
-                            {
-
-                                IDRonda = Convert.ToInt32(row["IDRonda"]),
-                                IDUsuario = Convert.ToInt32(row["IDUsuario"]),
-                                usu_email = Convert.ToString(row["usu_email"]),
-                                Tipo = Convert.ToString(row["Tipo"]),
-                                MontoPerdidoGanadoSingle = Convert.ToInt32(row["MontoPerdidoGanadoSingle"]),
-                                MontoPerdidoGanadoTeam = Convert.ToInt32(row["MontoPerdidoGanadoTeam"]),
-                                usu_nickname = Convert.ToString(row["usu_nickname"]),
-
-                            };
-
-                            lista.Add(ent);
-                        }
-
+                     
                     }
 
                     JObject Resultado = JObject.FromObject(new
                     {
                         mensaje = Mensaje,
                         estatus = Estatus,
-                        Result = lista
+                        
                     });
 
                     return Resultado;
