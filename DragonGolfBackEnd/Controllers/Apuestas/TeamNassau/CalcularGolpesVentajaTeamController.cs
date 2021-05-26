@@ -16,8 +16,8 @@ namespace DragonGolfBackEnd.Controllers
 {
 
     [EnableCors(origins: "*", headers: "*", methods: "*", SupportsCredentials = true)]
-    [RoutePrefix("api/ListadoAmigosRondaTeam")]
-    public class ListadoAmigosRondaTeamController : ApiController
+    [RoutePrefix("api/CalcularGolpesVentajaTeam")]
+    public class CalcularGolpesVentajaTeamController : ApiController
     {
 
         public class ParametrosEntradas
@@ -26,14 +26,10 @@ namespace DragonGolfBackEnd.Controllers
             public int PlayerId2 { get; set; }
             public int PlayerId3 { get; set; }
             public int PlayerId4 { get; set; }
+            public int IDRound { get; set; }
 
         }
-        public class ParametrosSalida
-        {
-
-            public decimal usu_golpesventaja { get; set; }
-           
-        }
+     
         public JObject Post(ParametrosEntradas Datos)
         {
             try
@@ -46,11 +42,13 @@ namespace DragonGolfBackEnd.Controllers
                 comando.Parameters.Add("@PlayerId2", SqlDbType.Int);
                 comando.Parameters.Add("@PlayerId3", SqlDbType.Int);
                 comando.Parameters.Add("@PlayerId4", SqlDbType.Int);
+                comando.Parameters.Add("@IDRound", SqlDbType.Int);
 
                 comando.Parameters["@PlayerId1"].Value = Datos.PlayerId1;
                 comando.Parameters["@PlayerId2"].Value = Datos.PlayerId2;
                 comando.Parameters["@PlayerId3"].Value = Datos.PlayerId3;
                 comando.Parameters["@PlayerId4"].Value = Datos.PlayerId4;
+                comando.Parameters["@IDRound"].Value = Datos.IDRound;
 
                 comando.Connection = new SqlConnection(VariablesGlobales.CadenaConexion);
                 comando.CommandTimeout = 0;
@@ -61,10 +59,9 @@ namespace DragonGolfBackEnd.Controllers
                 comando.Connection.Close();
                 DA.Fill(DT);
 
-                List<ParametrosSalida> lista = new List<ParametrosSalida>();
-
                 string Mensaje = "";
                 int Estatus = 0;
+                int Golpesventaja = 0;
 
                 int contador = DT.Rows.Count;
 
@@ -78,7 +75,7 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (Estatus == 1)
                         {
-
+                            Golpesventaja = Convert.ToInt32(row["Golpesventaja"]);
                         }
                     }
 
@@ -86,7 +83,7 @@ namespace DragonGolfBackEnd.Controllers
                     {
                         mensaje = Mensaje,
                         estatus = Estatus,
-                        Result = lista
+                        golpesventaja = Golpesventaja
                     });
 
                     return Resultado;

@@ -453,6 +453,75 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Each")
                                             {
+                                              //El peor de los mejores
+                                                string JugadorMejoresEquipo1 = "";
+                                                string JugadorMejoresEquipo2 = "";
+
+                                                string JugadorPeorEquipo1 = "";
+                                                string JugadorPeorEquipo2 = "";
+
+                                                double JugadorMejoresEquipo1Valor = 0;
+                                                double JugadorMejoresEquipo2Valor = 0;
+
+                                                double JugadorPeorEquipo1Valor = 0;
+                                                double JugadorPeorEquipo2Valor = 0;
+
+                                                if (HandicapP1 <= HandicapP3)
+                                                {
+                                                    JugadorMejoresEquipo1 = "Jugador 1";
+                                                    JugadorMejoresEquipo1Valor = HandicapP1;
+
+                                                    JugadorPeorEquipo1 = "Jugador 3";
+                                                    JugadorPeorEquipo1Valor = HandicapP3;
+                                                }
+                                                else
+                                                {
+                                                    JugadorMejoresEquipo1 = "Jugador 3";
+                                                    JugadorMejoresEquipo1Valor = HandicapP3;
+
+                                                    JugadorPeorEquipo1 = "Jugador 1";
+                                                    JugadorPeorEquipo1Valor = HandicapP1;
+                                                }
+
+                                                if (HandicapP2 <= HandicapP4)
+                                                {
+                                                    JugadorMejoresEquipo2 = "Jugador 2";
+                                                    JugadorMejoresEquipo2Valor = HandicapP2;
+
+                                                    JugadorPeorEquipo2 = "Jugador 4";
+                                                    JugadorPeorEquipo2Valor = HandicapP4;
+
+                                                }
+                                                else
+                                                {
+                                                    JugadorMejoresEquipo2 = "Jugador 4";
+                                                    JugadorMejoresEquipo2Valor = HandicapP4;
+
+                                                    JugadorPeorEquipo2 = "Jugador 2";
+                                                    JugadorPeorEquipo2Valor = HandicapP2;
+                                                }
+
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                {
+                                                    //JugadorMejoresEquipo1
+
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+
+                                                }
+
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                {
+                                                    //JugadorMejoresEquipo1
+
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+
+                                                }
 
                                             }
                                         }
@@ -742,7 +811,7 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole9_P1 > 0 && ScoreHole9_P2 > 0 && ScoreHole9_P3 > 0 && ScoreHole9_P4 > 0)
                                         {
-                                           // ScoreHole9_P1 = ScoreHole9_P1 - 1;
+                                            // ScoreHole9_P1 = ScoreHole9_P1 - 1;
 
 
                                             if (TipoGolpesVentaja == "Hi Handicap")
@@ -1188,7 +1257,7 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole2_P2 > 0 && ScoreHole2_P1 > 0 && ScoreHole2_P3 > 0 && ScoreHole2_P4 > 0)
                                         {
-                                            
+
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
                                                 if (HandicapP2 > HandicapP4)
@@ -1226,7 +1295,7 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole3_P2 > 0 && ScoreHole3_P1 > 0 && ScoreHole3_P3 > 0 && ScoreHole3_P4 > 0)
                                         {
-                                           
+
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
                                                 if (HandicapP2 > HandicapP4)
@@ -1263,7 +1332,7 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole4_P2 > 0 && ScoreHole4_P1 > 0 && ScoreHole4_P3 > 0 && ScoreHole4_P4 > 0)
                                         {
-                                           
+
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
                                                 if (HandicapP2 > HandicapP4)
@@ -1301,7 +1370,7 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole5_P2 > 0 && ScoreHole5_P1 > 0 && ScoreHole5_P3 > 0 && ScoreHole5_P4 > 0)
                                         {
-                                           
+
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
                                                 if (HandicapP2 > HandicapP4)
@@ -1339,7 +1408,7 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole6_P2 > 0 && ScoreHole6_P1 > 0 && ScoreHole6_P3 > 0 && ScoreHole6_P4 > 0)
                                         {
-                                            
+
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
                                                 if (HandicapP2 > HandicapP4)
@@ -1416,7 +1485,7 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole8_P2 > 0 && ScoreHole8_P1 > 0 && ScoreHole8_P3 > 0 && ScoreHole8_P4 > 0)
                                         {
-                                            
+
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
                                                 if (HandicapP2 > HandicapP4)
@@ -1454,7 +1523,7 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole9_P2 > 0 && ScoreHole9_P1 > 0 && ScoreHole9_P3 > 0 && ScoreHole9_P4 > 0)
                                         {
-                                          
+
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
                                                 if (HandicapP2 > HandicapP4)
@@ -1572,7 +1641,7 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole12_P2 > 0 && ScoreHole12_P1 > 0 && ScoreHole12_P3 > 0 && ScoreHole12_P4 > 0)
                                         {
-                                            
+
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
                                                 if (HandicapP2 > HandicapP4)
@@ -1610,8 +1679,8 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole13_P2 > 0 && ScoreHole13_P1 > 0 && ScoreHole13_P3 > 0 && ScoreHole13_P4 > 0)
                                         {
-                                         
-                                       if (TipoGolpesVentaja == "Hi Handicap")
+
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                             {
                                                 if (HandicapP2 > HandicapP4)
                                                 {
@@ -1648,7 +1717,7 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole14_P2 > 0 && ScoreHole14_P1 > 0 && ScoreHole14_P3 > 0 && ScoreHole14_P4 > 0)
                                         {
-                                            
+
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
                                                 if (HandicapP2 > HandicapP4)
@@ -1686,7 +1755,7 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole15_P2 > 0 && ScoreHole15_P1 > 0 && ScoreHole15_P3 > 0 && ScoreHole15_P4 > 0)
                                         {
-                                           
+
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
                                                 if (HandicapP2 > HandicapP4)
@@ -1724,7 +1793,7 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole16_P2 > 0 && ScoreHole16_P1 > 0 && ScoreHole16_P3 > 0 && ScoreHole16_P4 > 0)
                                         {
-                                           
+
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
                                                 if (HandicapP2 > HandicapP4)
@@ -1762,7 +1831,7 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole17_P2 > 0 && ScoreHole17_P1 > 0 && ScoreHole17_P3 > 0 && ScoreHole17_P4 > 0)
                                         {
-                                          
+
 
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
@@ -1801,7 +1870,7 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole18_P2 > 0 && ScoreHole18_P1 > 0 && ScoreHole18_P3 > 0 && ScoreHole18_P4 > 0)
                                         {
-                                            
+
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
                                                 if (HandicapP2 > HandicapP4)
@@ -1956,9 +2025,9 @@ namespace DragonGolfBackEnd.Controllers
                         {
                             if (ValidaFront == 0)
                             {
-                              
+
                                 //Malo vs Malo 
-                                if (ScoreHole1_P1>= ScoreHole1_P3)
+                                if (ScoreHole1_P1 >= ScoreHole1_P3)
                                 {
                                     if (ScoreHole1_P2 >= ScoreHole1_P4)
                                     {
@@ -2015,7 +2084,7 @@ namespace DragonGolfBackEnd.Controllers
                         {
                             if (ValidaFront == 0)
                             {
-                               // Resultado2 = ScoreHole2_P2 - ScoreHole2_P1;
+                                // Resultado2 = ScoreHole2_P2 - ScoreHole2_P1;
 
                                 if (ScoreHole2_P1 > ScoreHole2_P3)
                                 {
@@ -2040,7 +2109,7 @@ namespace DragonGolfBackEnd.Controllers
                                     }
                                 }
 
-                            
+
                                 //Bueno Vs Bueno
                                 if (ScoreHole2_P1 >= ScoreHole2_P3)
                                 {
@@ -2138,7 +2207,7 @@ namespace DragonGolfBackEnd.Controllers
                         {
                             if (ValidaFront == 0)
                             {
-                               // Resultado4 = ScoreHole4_P2 - ScoreHole4_P1;
+                                // Resultado4 = ScoreHole4_P2 - ScoreHole4_P1;
 
                                 if (ScoreHole4_P1 >= ScoreHole4_P3)
                                 {
@@ -2197,7 +2266,7 @@ namespace DragonGolfBackEnd.Controllers
                         {
                             if (ValidaFront == 0)
                             {
-                              //  Resultado5 = ScoreHole5_P2 - ScoreHole5_P1;
+                                //  Resultado5 = ScoreHole5_P2 - ScoreHole5_P1;
 
 
                                 if (ScoreHole5_P1 >= ScoreHole5_P3)
@@ -2257,7 +2326,7 @@ namespace DragonGolfBackEnd.Controllers
                         {
                             if (ValidaFront == 0)
                             {
-                              //  Resultado6 = ScoreHole6_P2 - ScoreHole6_P1;
+                                //  Resultado6 = ScoreHole6_P2 - ScoreHole6_P1;
 
                                 if (ScoreHole6_P1 >= ScoreHole6_P3)
                                 {
@@ -2282,7 +2351,7 @@ namespace DragonGolfBackEnd.Controllers
                                     }
                                 }
 
-                               
+
                                 //Bueno Vs Bueno
                                 if (ScoreHole6_P1 >= ScoreHole6_P3)
                                 {
@@ -2317,7 +2386,7 @@ namespace DragonGolfBackEnd.Controllers
                         {
                             if (ValidaFront == 0)
                             {
-                               // Resultado7 = ScoreHole7_P2 - ScoreHole7_P1;
+                                // Resultado7 = ScoreHole7_P2 - ScoreHole7_P1;
 
                                 if (ScoreHole7_P1 >= ScoreHole7_P3)
                                 {
@@ -2376,7 +2445,7 @@ namespace DragonGolfBackEnd.Controllers
                         {
                             if (ValidaFront == 0)
                             {
-                               // Resultado8 = ScoreHole8_P2 - ScoreHole8_P1;
+                                // Resultado8 = ScoreHole8_P2 - ScoreHole8_P1;
 
                                 if (ScoreHole8_P1 >= ScoreHole8_P3)
                                 {
@@ -2435,7 +2504,7 @@ namespace DragonGolfBackEnd.Controllers
                         {
                             if (ValidaFront == 0)
                             {
-                              //  Resultado9 = ScoreHole9_P2 - ScoreHole9_P1;
+                                //  Resultado9 = ScoreHole9_P2 - ScoreHole9_P1;
 
                                 if (ScoreHole9_P1 >= ScoreHole9_P3)
                                 {
@@ -2491,7 +2560,7 @@ namespace DragonGolfBackEnd.Controllers
                             ValidaFront = 1;
                         }
 
-                        
+
                         //Quien Gano, no lo sabemos
 
                         int ContadorHoyos = 0;
@@ -3058,7 +3127,7 @@ namespace DragonGolfBackEnd.Controllers
                                     }
                                 }
                             }
-                        
+
                         }
                         else
                         {
@@ -3460,7 +3529,7 @@ namespace DragonGolfBackEnd.Controllers
                         string BetD_B9_8 = "";
                         string BetD_B9_9 = "";
 
-                    if (AutoPress == 2)
+                        if (AutoPress == 2)
                         {
                             ResultFront = CalcularApuestaPresionFront2(Resultado1_H, Resultado2_H, Resultado3_H, Resultado4_H, Resultado5_H, Resultado6_H, Resultado7_H, Resultado8_H, Resultado9_H,
                                 Resultado1_L, Resultado2_L, Resultado3_L, Resultado4_L, Resultado5_L, Resultado6_L, Resultado7_L, Resultado8_L, Resultado9_L, ValidaJuegoInicio);
@@ -3498,7 +3567,7 @@ namespace DragonGolfBackEnd.Controllers
                                             ResultBack[1], ResultBack[2], ResultBack[3], ResultBack[4], ResultBack[5], ResultBack[6], ResultBack[7], ResultBack[8], ResultBack[9], 2, ValidaJuegoInicio);
 
                         }
-                    else if (AutoPress == 3)
+                        else if (AutoPress == 3)
                         {
                             ResultFront = CalcularApuestaPresionFront3(Resultado1_H, Resultado2_H, Resultado3_H, Resultado4_H, Resultado5_H, Resultado6_H, Resultado7_H, Resultado8_H, Resultado9_H,
                                 Resultado1_L, Resultado2_L, Resultado3_L, Resultado4_L, Resultado5_L, Resultado6_L, Resultado7_L, Resultado8_L, Resultado9_L, ValidaJuegoInicio);
@@ -3529,7 +3598,7 @@ namespace DragonGolfBackEnd.Controllers
                                             ResultBack[1], ResultBack[2], ResultBack[3], ResultBack[4], ResultBack[5], ResultBack[6], ResultBack[7], ResultBack[8], ResultBack[9], 3, ValidaJuegoInicio);
 
                         }
-                    else if (AutoPress == 4)
+                        else if (AutoPress == 4)
                         {
                             ResultFront = CalcularApuestaPresionFront4(Resultado1_H, Resultado2_H, Resultado3_H, Resultado4_H, Resultado5_H, Resultado6_H, Resultado7_H, Resultado8_H, Resultado9_H,
                                 Resultado1_L, Resultado2_L, Resultado3_L, Resultado4_L, Resultado5_L, Resultado6_L, Resultado7_L, Resultado8_L, Resultado9_L, ValidaJuegoInicio);
@@ -3544,13 +3613,13 @@ namespace DragonGolfBackEnd.Controllers
                             BetD_F9_2 = Convert.ToString(FrontValores[1]);
                             BetD_F9_3 = Convert.ToString(FrontValores[2]);
                             BetD_F9_4 = Convert.ToString(FrontValores[3]);
-                          
+
 
                             BetD_B9_1 = Convert.ToString(BackValores[0]);
                             BetD_B9_2 = Convert.ToString(BackValores[1]);
                             BetD_F9_3 = Convert.ToString(FrontValores[2]);
                             BetD_F9_4 = Convert.ToString(FrontValores[3]);
-                          
+
 
                             ActualizarAPuesta(Datos.IDBetDetail, Datos.IDBet, Datos.IDRonda, PlayerID1, PlayerID2, BetD_F9_1, BetD_F9_2, BetD_F9_3, BetD_F9_4, BetD_F9_5, BetD_F9_6,
                                              BetD_F9_7, BetD_F9_8, BetD_F9_9, BetD_B9_1, BetD_B9_2, BetD_B9_3, BetD_B9_4, BetD_B9_5, BetD_B9_6, BetD_B9_7, BetD_B9_8, BetD_B9_9, ResultadoFinalMedal, ContadorHoyos,
@@ -3596,13 +3665,13 @@ namespace DragonGolfBackEnd.Controllers
             }
         }
 
-   
+
         private string[] CalcularApuestaPresionFront2(int Resultado1_H, int Resultado2_H, int Resultado3_H, int Resultado4_H, int Resultado5_H, int Resultado6_H, int Resultado7_H, int Resultado8_H, int Resultado9_H,
-            int Resultado1_L, int Resultado2_L, int Resultado3_L, int Resultado4_L, int Resultado5_L, int Resultado6_L, int Resultado7_L, int Resultado8_L, int Resultado9_L,bool ValidaJuegoInicio)
+            int Resultado1_L, int Resultado2_L, int Resultado3_L, int Resultado4_L, int Resultado5_L, int Resultado6_L, int Resultado7_L, int Resultado8_L, int Resultado9_L, bool ValidaJuegoInicio)
         {
-           
+
             int[] ResultadoPresionFront_T = new int[10];
-        
+
             string[] ResultadoPresionFrontString = new string[10];
 
             if (Resultado1_H > 0)
@@ -4012,7 +4081,7 @@ namespace DragonGolfBackEnd.Controllers
 
                 if (ResultadoPresionFront_T[i] == 1)
                 {
-                    
+
                     int ValorHoyo = 0;
 
                     switch (i)
@@ -4067,7 +4136,7 @@ namespace DragonGolfBackEnd.Controllers
                     {
                         Presion1 += 1;
                     }
-                   
+
 
                     ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt);
 
@@ -4144,7 +4213,7 @@ namespace DragonGolfBackEnd.Controllers
                             if (PresionValor1 != "")
                             {
                                 int Presion = Convert.ToInt32(PresionValor1);
-                                
+
                                 switch (i)
                                 {
                                     case 1:
@@ -4219,7 +4288,7 @@ namespace DragonGolfBackEnd.Controllers
                                         Console.WriteLine("Default case");
                                         break;
                                 }
-                               
+
                                 PresionValor2 = Convert.ToString(Presion);
                             }
 
@@ -4537,7 +4606,7 @@ namespace DragonGolfBackEnd.Controllers
                             continue;
                         }
 
-                
+
 
                     }
                     else
@@ -4757,10 +4826,10 @@ namespace DragonGolfBackEnd.Controllers
                             ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5;
                         }
 
-                    
+
 
                     }
-               
+
                 }
                 else if (ResultadoPresionFront_T[i] == -1)
                 {
@@ -4975,7 +5044,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                 PresionValor2 = Convert.ToString(Presion);
                             }
-        
+
                             ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3;
 
                             continue;
@@ -5023,7 +5092,7 @@ namespace DragonGolfBackEnd.Controllers
                                         Console.WriteLine("Default case");
                                         break;
                                 }
-                               
+
                                 PresionValor1 = Convert.ToString(Presion);
                             }
 
@@ -7523,7 +7592,8 @@ namespace DragonGolfBackEnd.Controllers
         }
 
         private string[] CalcularApuestaPresionFront3(int Resultado1_H, int Resultado2_H, int Resultado3_H, int Resultado4_H, int Resultado5_H, int Resultado6_H, int Resultado7_H, int Resultado8_H, int Resultado9_H,
-            int Resultado1_L, int Resultado2_L, int Resultado3_L, int Resultado4_L, int Resultado5_L, int Resultado6_L, int Resultado7_L, int Resultado8_L, int Resultado9_L, bool ValidaJuegoInicio){
+            int Resultado1_L, int Resultado2_L, int Resultado3_L, int Resultado4_L, int Resultado5_L, int Resultado6_L, int Resultado7_L, int Resultado8_L, int Resultado9_L, bool ValidaJuegoInicio)
+        {
 
             int[] ResultadoPresionFront_T = new int[10];
 
@@ -9752,7 +9822,7 @@ namespace DragonGolfBackEnd.Controllers
             }
 
 
-            int Hoyo1 = Resultado1_H  + Resultado1_L;
+            int Hoyo1 = Resultado1_H + Resultado1_L;
             int Hoyo2 = Resultado2_H + Resultado2_L;
             int Hoyo3 = Resultado3_H + Resultado3_L;
             int Hoyo4 = Resultado4_H + Resultado4_L;
@@ -11725,7 +11795,7 @@ namespace DragonGolfBackEnd.Controllers
             int Hoyo8 = Resultado8_H + Resultado8_L;
             int Hoyo9 = Resultado9_H + Resultado9_L;
 
-         
+
 
             if (Hoyo1 == 0)
             {

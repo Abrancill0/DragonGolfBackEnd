@@ -109,7 +109,7 @@ namespace DragonGolfBackEnd.Controllers
                                 IDUsuario = Convert.ToInt32(row["IDUsuario"]),
 
                                 set_skins_carry_over = Convert.ToInt32(row["set_skins_carry_over"]),
-                               set_lower_adv_f9 = Convert.ToInt32(row["set_lower_adv_f9"]),
+                                set_lower_adv_f9 = Convert.ToInt32(row["set_lower_adv_f9"]),
                                 set_snw_automatic_press = Convert.ToInt32(row["set_snw_automatic_press"]),
                                 
                                 
@@ -118,8 +118,6 @@ namespace DragonGolfBackEnd.Controllers
                                 set_snw_back_9 = Convert.ToInt32(row["set_snw_back_9"]),
                                 set_snw_match = Convert.ToInt32(row["set_snw_match"]),
                                 set_snw_carry = Convert.ToInt32(row["set_snw_carry"]),
-                                
-                                
                                 
                                 set_snw_medal = Convert.ToInt32(row["set_snw_medal"]),
                                 set_tmw_automatic_press = Convert.ToInt32(row["set_tmw_automatic_press"]),
