@@ -451,6 +451,10 @@ namespace DragonGolfBackEnd.Controllers
 
                                             }
 
+                                            if (TipoGolpesVentaja == "Each")
+                                            {
+
+                                            }
                                         }
 
                                     }

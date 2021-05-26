@@ -193,6 +193,7 @@
     <Compile Include="Controllers\Apuestas\TeamNassau\CalcularApuestaTeamNassauController.cs" />
     <Compile Include="Controllers\Apuestas\TeamNassau\ActualizarDetalleApuestaTeamController.cs" />
     <Compile Include="Controllers\Apuestas\TeamNassau\CrearDetalleApuestaTeamController.cs" />
+    <Compile Include="Controllers\Apuestas\TeamNassau\CalcularGolpesVentajaTeamController.cs" />
     <Compile Include="Controllers\Apuestas\TeamNassau\ListadoAmigosRondaTeamController.cs" />
     <Compile Include="Controllers\Apuestas\TeamNassau\ListadoDetalleApuestaTeamController.cs" />
     <Compile Include="Controllers\Apuestas\TeamNassau\ListadoTeesRondaBetDetailsTeamController.cs" />
