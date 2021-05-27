@@ -275,6 +275,13 @@ namespace DragonGolfBackEnd.Controllers
                     decimal Adv1 = 0;
                     int Adv_tee = 0;
 
+                    double HandicapP1 = 0;
+                    double HandicapP2 = 0;
+                    double HandicapP3 = 0;
+                    double HandicapP4 = 0;
+
+                    string TipoGolpesVentaja = "";
+                    string Player = "";
 
                     foreach (DataRow row in DT.Rows)
                     {
@@ -283,7 +290,7 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (Estatus == 1)
                         {
-
+                            Player = Convert.ToString(row["Player"]);
                             HoyoInicial = Convert.ToInt32(row["HoyoInicial"]);
 
                             string numeroFormato = Convert.ToInt32(row["usu_ghinnumber"]).ToString("D7");
@@ -308,6 +315,13 @@ namespace DragonGolfBackEnd.Controllers
                             DificultatHoyo16 = Convert.ToInt32(row["Ho_Advantage16"]);//17
                             DificultatHoyo17 = Convert.ToInt32(row["Ho_Advantage17"]);//18
                             DificultatHoyo18 = Convert.ToInt32(row["Ho_Advantage18"]);//12
+
+                            TipoGolpesVentaja = Convert.ToString(row["TipoGolpesVentaja"]);
+
+                            HandicapP1 = Convert.ToDouble(row["HandicapP1"]);
+                            HandicapP2 = Convert.ToDouble(row["HandicapP2"]);
+                            HandicapP3 = Convert.ToDouble(row["HandicapP3"]);
+                            HandicapP4 = Convert.ToDouble(row["HandicapP4"]);
 
                             DificultatHoyo1_tee = Convert.ToInt32(row["DificutadHoyo1"]);//7
                             DificultatHoyo2_tee = Convert.ToInt32(row["DificutadHoyo2"]);//1
@@ -838,7 +852,7 @@ namespace DragonGolfBackEnd.Controllers
 
                            // Adv1 = Convert.ToDecimal(row["handicapAuto"]);
                             Adv1 = Convert.ToDecimal(row["usu_golpesventaja"]);
-
+                            //Solo Moverle a esta Cosa de aqui
                             int Contador = 0;
 
                             int Adv = Convert.ToInt32(Decimal.Round(Adv1));
@@ -870,10 +884,96 @@ namespace DragonGolfBackEnd.Controllers
                                         {
                                             if (ScoreHole1 > 0)
                                             {
-                                                GolpesVentaja1 = GolpesVentaja1 + 1;
+                                               // GolpesVentaja1 = GolpesVentaja1 + 1;
+
+                                                if (TipoGolpesVentaja == "Hi Handicap")
+                                                {
+
+                                                    if (HandicapP1 > HandicapP3)
+                                                    {
+                                                        if (Player == "Jugador 1")
+                                                        {
+                                                            GolpesVentaja1 = GolpesVentaja1 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Player == "Jugador 3")
+                                                        {
+                                                            GolpesVentaja1 = GolpesVentaja1 - 1;
+                                                        }
+                                                    }
+
+                                                }
+
+                                                if (TipoGolpesVentaja == "Low Handicap")
+                                                {
+
+                                                    if (HandicapP1 < HandicapP3)
+                                                    {
+                                                        if (Player == "Jugador 2")
+                                                        {
+                                                            GolpesVentaja1 = GolpesVentaja1 - 1;
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Player == "Jugador 4")
+                                                        {
+                                                            GolpesVentaja1 = GolpesVentaja1 - 1;
+                                                        }
+                                                    }
+
+
+                                                }
+
                                             }
 
-                                            GolpesVentaja1_1 = GolpesVentaja1_1 + 1;
+                                            //  GolpesVentaja1_1 = GolpesVentaja1_1 + 1;
+
+                                            if (TipoGolpesVentaja == "Hi Handicap")
+                                            {
+
+                                                if (HandicapP1 > HandicapP3)
+                                                {
+                                                    if (Player == "Jugador 1")
+                                                    {
+                                                        GolpesVentaja1_1 = GolpesVentaja1_1 - 1;
+                                                    }
+                                                  
+                                                }
+                                                else
+                                                {
+                                                    if (Player == "Jugador 3")
+                                                    {
+                                                        GolpesVentaja1_1 = GolpesVentaja1_1 - 1;
+                                                    }
+                                                }
+
+                                            }
+
+                                            if (TipoGolpesVentaja == "Low Handicap")
+                                            {
+
+                                                if (HandicapP1 < HandicapP3)
+                                                {
+                                                    if (Player == "Jugador 2")
+                                                    {
+                                                        GolpesVentaja1_1 = GolpesVentaja1_1 - 1;
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                 if (Player == "Jugador 4")
+                                                    {
+                                                        GolpesVentaja1_1 = GolpesVentaja1_1 - 1;
+                                                    }
+                                                }
+
+
+                                            }
+
                                         }
 
                                         if (DificultatHoyo2 == Contador)
@@ -1070,11 +1170,103 @@ namespace DragonGolfBackEnd.Controllers
                                         if (DificultatHoyo1 == Contador)
                                         {
 
+                                            //if (ScoreHole1 > 0)
+                                            //{
+                                            //    GolpesVentaja1 = GolpesVentaja1 + 1;
+                                            //}
+                                            //GolpesVentaja1_1 = GolpesVentaja1_1 + 1;
+
                                             if (ScoreHole1 > 0)
                                             {
-                                                GolpesVentaja1 = GolpesVentaja1 + 1;
+                                                // GolpesVentaja1 = GolpesVentaja1 + 1;
+
+                                                if (TipoGolpesVentaja == "Hi Handicap")
+                                                {
+
+                                                    if (HandicapP1 > HandicapP3)
+                                                    {
+                                                        if (Player == "Jugador 1")
+                                                        {
+                                                            GolpesVentaja1 = GolpesVentaja1 + 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Player == "Jugador 3")
+                                                        {
+                                                            GolpesVentaja1 = GolpesVentaja1 + 1;
+                                                        }
+                                                    }
+
+                                                }
+
+                                                if (TipoGolpesVentaja == "Low Handicap")
+                                                {
+
+                                                    if (HandicapP1 < HandicapP3)
+                                                    {
+                                                        if (Player == "Jugador 2")
+                                                        {
+                                                            GolpesVentaja1 = GolpesVentaja1 - 1;
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Player == "Jugador 4")
+                                                        {
+                                                            GolpesVentaja1 = GolpesVentaja1 - 1;
+                                                        }
+                                                    }
+
+
+                                                }
+
                                             }
-                                            GolpesVentaja1_1 = GolpesVentaja1_1 + 1;
+
+                                            //  GolpesVentaja1_1 = GolpesVentaja1_1 + 1;
+
+                                            if (TipoGolpesVentaja == "Hi Handicap")
+                                            {
+
+                                                if (HandicapP1 > HandicapP3)
+                                                {
+                                                    if (Player == "Jugador 1")
+                                                    {
+                                                        GolpesVentaja1_1 = GolpesVentaja1_1 + 1;
+                                                    }
+
+                                                }
+                                                else
+                                                {
+                                                    if (Player == "Jugador 3")
+                                                    {
+                                                        GolpesVentaja1_1 = GolpesVentaja1_1 + 1;
+                                                    }
+                                                }
+
+                                            }
+
+                                            if (TipoGolpesVentaja == "Low Handicap")
+                                            {
+
+                                                if (HandicapP1 < HandicapP3)
+                                                {
+                                                    if (Player == "Jugador 2")
+                                                    {
+                                                        GolpesVentaja1_1 = GolpesVentaja1_1 + 1;
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    if (Player == "Jugador 4")
+                                                    {
+                                                        GolpesVentaja1_1 = GolpesVentaja1_1 + 1;
+                                                    }
+                                                }
+
+
+                                            }
 
                                         }
 

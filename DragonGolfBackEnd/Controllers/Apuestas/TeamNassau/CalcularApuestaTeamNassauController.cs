@@ -504,22 +504,54 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
                                                 {
                                                     //JugadorMejoresEquipo1
+                                                    if (JugadorMejoresEquipo1== "Jugador 1")
+                                                    {
+                                                        ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole1_P3 = ScoreHole1_P3 - 1;
 
+                                                    }
                                                 }
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    {
+                                                        ScoreHole1_P2 = ScoreHole1_P2 - 1;
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole1_P4 = ScoreHole1_P4 - 1;
+
+                                                    }
 
                                                 }
 
                                                 if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
                                                 {
-                                                    //JugadorMejoresEquipo1
+                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    {
+                                                        ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                    }
 
                                                 }
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
+                                                    if (JugadorPeorEquipo1 == "Jugador 2")
+                                                    {
+                                                        ScoreHole1_P2 = ScoreHole1_P2 - 1;
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole1_P4 = ScoreHole1_P4 - 1;
+                                                    }
 
                                                 }
 
