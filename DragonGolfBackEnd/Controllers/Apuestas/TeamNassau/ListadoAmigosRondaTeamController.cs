@@ -420,34 +420,34 @@ namespace DragonGolfBackEnd.Controllers
                             int ScoreHole18 = Convert.ToInt32(row["ScoreHole18"]);
                             Adv_tee = Convert.ToInt32(row["adv"]);
 
-                            int ventaja = Convert.ToInt32(row["Ventaja"]); ;
+                            int ventaja = 0;// Convert.ToInt32(row["Ventaja"]); ;
                             int SumaGolpesVentaja = 0;
 
                             int AdvInverso = (-1) * (Adv_tee);
 
-                            if (AdvInverso < 0)
-                            {
-                               if (Convert.ToInt32(row["IDUsuario"]) == Convert.ToInt32(row["PlayerId"]))
-                                {
-                                    SumaGolpesVentaja = AdvInverso;
-                                }
-                                else
-                                {
-                                    SumaGolpesVentaja = Adv_tee;
-                                }
+                            //if (AdvInverso < 0)
+                            //{
+                            //   if (Convert.ToInt32(row["IDUsuario"]) == Convert.ToInt32(row["PlayerId"]))
+                            //    {
+                            //        SumaGolpesVentaja = AdvInverso;
+                            //    }
+                            //    else
+                            //    {
+                            //        SumaGolpesVentaja = Adv_tee;
+                            //    }
 
-                            }
-                            else
-                            {
-                                if (Convert.ToInt32(row["IDUsuario"]) == Convert.ToInt32(row["PlayerId"]))
-                                {
-                                    SumaGolpesVentaja = AdvInverso;
-                                }
-                                else
-                                {
-                                    SumaGolpesVentaja = Adv_tee;
-                                }
-                            }
+                            //}
+                            //else
+                            //{
+                            //    if (Convert.ToInt32(row["IDUsuario"]) == Convert.ToInt32(row["PlayerId"]))
+                            //    {
+                            //        SumaGolpesVentaja = AdvInverso;
+                            //    }
+                            //    else
+                            //    {
+                            //        SumaGolpesVentaja = Adv_tee;
+                            //    }
+                            //}
 
                             int Contadorcito = 0;
                             //Cuando es negativo es ventaja para el player 1
@@ -2087,7 +2087,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (TipoGolpesVentaja == "Hi Handicap")
                                                 {
 
-                                                    if (HandicapP4 > HandicapP2)
+                                                    if (HandicapP2 > HandicapP4)
                                                     {
                                                         if (Player == "Jugador 2")
                                                         {
@@ -2293,8 +2293,8 @@ namespace DragonGolfBackEnd.Controllers
                             Adv1 = Convert.ToDecimal(row["usu_golpesventaja"]);
                             //Solo Moverle a esta Cosa de aqui
                             int Contador = 0;
-
-                            int Adv = Convert.ToInt32(Decimal.Round(Adv1));
+                           // int AdvInverso = (-1) * (Adv_tee);
+                            int Adv = Convert.ToInt32(Decimal.Round(AdvInverso));
 
                             if (Adv < 0)
                             {
@@ -2540,14 +2540,14 @@ namespace DragonGolfBackEnd.Controllers
 
                                                     if (HandicapP1 < HandicapP3)
                                                     {
-                                                        if (Player == "Jugador 2")
+                                                        if (Player == "Jugador 1")
                                                         {
                                                             GolpesVentaja3 = GolpesVentaja3 - 1;
                                                         }
                                                     }
                                                     else
                                                     {
-                                                        if (Player == "Jugador 4")
+                                                        if (Player == "Jugador 3")
                                                         {
                                                             GolpesVentaja3 = GolpesVentaja3 - 1;
                                                         }
@@ -2584,14 +2584,14 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP1 < HandicapP3)
                                                 {
-                                                    if (Player == "Jugador 2")
+                                                    if (Player == "Jugador 1")
                                                     {
                                                         GolpesVentaja3_1 = GolpesVentaja3_1 - 1;
                                                     }
                                                 }
                                                 else
                                                 {
-                                                    if (Player == "Jugador 4")
+                                                    if (Player == "Jugador 3")
                                                     {
                                                         GolpesVentaja3_1 = GolpesVentaja3_1 - 1;
                                                     }
@@ -2635,14 +2635,14 @@ namespace DragonGolfBackEnd.Controllers
 
                                                     if (HandicapP1 < HandicapP3)
                                                     {
-                                                        if (Player == "Jugador 2")
+                                                        if (Player == "Jugador 1")
                                                         {
                                                             GolpesVentaja4 = GolpesVentaja4 - 1;
                                                         }
                                                     }
                                                     else
                                                     {
-                                                        if (Player == "Jugador 4")
+                                                        if (Player == "Jugador 3")
                                                         {
                                                             GolpesVentaja4 = GolpesVentaja4 - 1;
                                                         }
@@ -2679,14 +2679,14 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP1 < HandicapP3)
                                                 {
-                                                    if (Player == "Jugador 2")
+                                                    if (Player == "Jugador 1")
                                                     {
                                                         GolpesVentaja4_1 = GolpesVentaja4_1 - 1;
                                                     }
                                                 }
                                                 else
                                                 {
-                                                    if (Player == "Jugador 4")
+                                                    if (Player == "Jugador 3")
                                                     {
                                                         GolpesVentaja4_1 = GolpesVentaja4_1 - 1;
                                                     }
@@ -2729,14 +2729,14 @@ namespace DragonGolfBackEnd.Controllers
 
                                                     if (HandicapP1 < HandicapP3)
                                                     {
-                                                        if (Player == "Jugador 2")
+                                                        if (Player == "Jugador 1")
                                                         {
                                                             GolpesVentaja5 = GolpesVentaja5 - 1;
                                                         }
                                                     }
                                                     else
                                                     {
-                                                        if (Player == "Jugador 4")
+                                                        if (Player == "Jugador 3")
                                                         {
                                                             GolpesVentaja5 = GolpesVentaja5 - 1;
                                                         }
@@ -2773,14 +2773,14 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP1 < HandicapP3)
                                                 {
-                                                    if (Player == "Jugador 2")
+                                                    if (Player == "Jugador 1")
                                                     {
                                                         GolpesVentaja5_1 = GolpesVentaja5_1 - 1;
                                                     }
                                                 }
                                                 else
                                                 {
-                                                    if (Player == "Jugador 4")
+                                                    if (Player == "Jugador 3")
                                                     {
                                                         GolpesVentaja5_1 = GolpesVentaja5_1 - 1;
                                                     }
@@ -2822,14 +2822,14 @@ namespace DragonGolfBackEnd.Controllers
 
                                                     if (HandicapP1 < HandicapP3)
                                                     {
-                                                        if (Player == "Jugador 2")
+                                                        if (Player == "Jugador 1")
                                                         {
                                                             GolpesVentaja6 = GolpesVentaja6 - 1;
                                                         }
                                                     }
                                                     else
                                                     {
-                                                        if (Player == "Jugador 4")
+                                                        if (Player == "Jugador 3")
                                                         {
                                                             GolpesVentaja6 = GolpesVentaja6 - 1;
                                                         }
@@ -2866,14 +2866,14 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP1 < HandicapP3)
                                                 {
-                                                    if (Player == "Jugador 2")
+                                                    if (Player == "Jugador 1")
                                                     {
                                                         GolpesVentaja6_1 = GolpesVentaja6_1 - 1;
                                                     }
                                                 }
                                                 else
                                                 {
-                                                    if (Player == "Jugador 4")
+                                                    if (Player == "Jugador 3")
                                                     {
                                                         GolpesVentaja6_1 = GolpesVentaja6_1 - 1;
                                                     }
@@ -2915,14 +2915,14 @@ namespace DragonGolfBackEnd.Controllers
 
                                                     if (HandicapP1 < HandicapP3)
                                                     {
-                                                        if (Player == "Jugador 2")
+                                                        if (Player == "Jugador 1")
                                                         {
                                                             GolpesVentaja7 = GolpesVentaja7 - 1;
                                                         }
                                                     }
                                                     else
                                                     {
-                                                        if (Player == "Jugador 4")
+                                                        if (Player == "Jugador 3")
                                                         {
                                                             GolpesVentaja7 = GolpesVentaja7 - 1;
                                                         }
@@ -2959,14 +2959,14 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP1 < HandicapP3)
                                                 {
-                                                    if (Player == "Jugador 2")
+                                                    if (Player == "Jugador 1")
                                                     {
                                                         GolpesVentaja7_1 = GolpesVentaja7_1 - 1;
                                                     }
                                                 }
                                                 else
                                                 {
-                                                    if (Player == "Jugador 4")
+                                                    if (Player == "Jugador 3")
                                                     {
                                                         GolpesVentaja7_1 = GolpesVentaja7_1 - 1;
                                                     }
@@ -3008,14 +3008,14 @@ namespace DragonGolfBackEnd.Controllers
 
                                                     if (HandicapP1 < HandicapP3)
                                                     {
-                                                        if (Player == "Jugador 2")
+                                                        if (Player == "Jugador 1")
                                                         {
                                                             GolpesVentaja8 = GolpesVentaja8 - 1;
                                                         }
                                                     }
                                                     else
                                                     {
-                                                        if (Player == "Jugador 4")
+                                                        if (Player == "Jugador 3")
                                                         {
                                                             GolpesVentaja8 = GolpesVentaja8 - 1;
                                                         }
@@ -3052,14 +3052,14 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP1 < HandicapP3)
                                                 {
-                                                    if (Player == "Jugador 2")
+                                                    if (Player == "Jugador 1")
                                                     {
                                                         GolpesVentaja8_1 = GolpesVentaja8_1 - 1;
                                                     }
                                                 }
                                                 else
                                                 {
-                                                    if (Player == "Jugador 4")
+                                                    if (Player == "Jugador 3")
                                                     {
                                                         GolpesVentaja8_1 = GolpesVentaja8_1 - 1;
                                                     }
@@ -3101,14 +3101,14 @@ namespace DragonGolfBackEnd.Controllers
 
                                                     if (HandicapP1 < HandicapP3)
                                                     {
-                                                        if (Player == "Jugador 2")
+                                                        if (Player == "Jugador 1")
                                                         {
                                                             GolpesVentaja9 = GolpesVentaja9 - 1;
                                                         }
                                                     }
                                                     else
                                                     {
-                                                        if (Player == "Jugador 4")
+                                                        if (Player == "Jugador 3")
                                                         {
                                                             GolpesVentaja9 = GolpesVentaja9 - 1;
                                                         }
@@ -3145,14 +3145,14 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP1 < HandicapP3)
                                                 {
-                                                    if (Player == "Jugador 2")
+                                                    if (Player == "Jugador 1")
                                                     {
                                                         GolpesVentaja9_1 = GolpesVentaja9_1 - 1;
                                                     }
                                                 }
                                                 else
                                                 {
-                                                    if (Player == "Jugador 4")
+                                                    if (Player == "Jugador 3")
                                                     {
                                                         GolpesVentaja9_1 = GolpesVentaja9_1 - 1;
                                                     }
@@ -3194,14 +3194,14 @@ namespace DragonGolfBackEnd.Controllers
 
                                                     if (HandicapP1 < HandicapP3)
                                                     {
-                                                        if (Player == "Jugador 2")
+                                                        if (Player == "Jugador 1")
                                                         {
                                                             GolpesVentaja10 = GolpesVentaja10 - 1;
                                                         }
                                                     }
                                                     else
                                                     {
-                                                        if (Player == "Jugador 4")
+                                                        if (Player == "Jugador 3")
                                                         {
                                                             GolpesVentaja10 = GolpesVentaja10 - 1;
                                                         }
@@ -3238,14 +3238,14 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP1 < HandicapP3)
                                                 {
-                                                    if (Player == "Jugador 2")
+                                                    if (Player == "Jugador 1")
                                                     {
                                                         GolpesVentaja10_1 = GolpesVentaja10_1 - 1;
                                                     }
                                                 }
                                                 else
                                                 {
-                                                    if (Player == "Jugador 4")
+                                                    if (Player == "Jugador 3")
                                                     {
                                                         GolpesVentaja10_1 = GolpesVentaja10_1 - 1;
                                                     }
@@ -3287,14 +3287,14 @@ namespace DragonGolfBackEnd.Controllers
 
                                                     if (HandicapP1 < HandicapP3)
                                                     {
-                                                        if (Player == "Jugador 2")
+                                                        if (Player == "Jugador 1")
                                                         {
                                                             GolpesVentaja11 = GolpesVentaja11 - 1;
                                                         }
                                                     }
                                                     else
                                                     {
-                                                        if (Player == "Jugador 4")
+                                                        if (Player == "Jugador 3")
                                                         {
                                                             GolpesVentaja11 = GolpesVentaja11 - 1;
                                                         }
@@ -3331,14 +3331,14 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP1 < HandicapP3)
                                                 {
-                                                    if (Player == "Jugador 2")
+                                                    if (Player == "Jugador 1")
                                                     {
                                                         GolpesVentaja11_1 = GolpesVentaja11_1 - 1;
                                                     }
                                                 }
                                                 else
                                                 {
-                                                    if (Player == "Jugador 4")
+                                                    if (Player == "Jugador 3")
                                                     {
                                                         GolpesVentaja11_1 = GolpesVentaja11_1 - 1;
                                                     }
@@ -3380,14 +3380,14 @@ namespace DragonGolfBackEnd.Controllers
 
                                                     if (HandicapP1 < HandicapP3)
                                                     {
-                                                        if (Player == "Jugador 2")
+                                                        if (Player == "Jugador 1")
                                                         {
                                                             GolpesVentaja12 = GolpesVentaja12 - 1;
                                                         }
                                                     }
                                                     else
                                                     {
-                                                        if (Player == "Jugador 4")
+                                                        if (Player == "Jugador 3")
                                                         {
                                                             GolpesVentaja12 = GolpesVentaja12 - 1;
                                                         }
@@ -3424,14 +3424,14 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP1 < HandicapP3)
                                                 {
-                                                    if (Player == "Jugador 2")
+                                                    if (Player == "Jugador 1")
                                                     {
                                                         GolpesVentaja12_1 = GolpesVentaja12_1 - 1;
                                                     }
                                                 }
                                                 else
                                                 {
-                                                    if (Player == "Jugador 4")
+                                                    if (Player == "Jugador 3")
                                                     {
                                                         GolpesVentaja12_1 = GolpesVentaja12_1 - 1;
                                                     }
@@ -3473,14 +3473,14 @@ namespace DragonGolfBackEnd.Controllers
 
                                                     if (HandicapP1 < HandicapP3)
                                                     {
-                                                        if (Player == "Jugador 2")
+                                                        if (Player == "Jugador 1")
                                                         {
                                                             GolpesVentaja13 = GolpesVentaja13 - 1;
                                                         }
                                                     }
                                                     else
                                                     {
-                                                        if (Player == "Jugador 4")
+                                                        if (Player == "Jugador 3")
                                                         {
                                                             GolpesVentaja13 = GolpesVentaja13 - 1;
                                                         }
@@ -3517,14 +3517,14 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP1 < HandicapP3)
                                                 {
-                                                    if (Player == "Jugador 2")
+                                                    if (Player == "Jugador 1")
                                                     {
                                                         GolpesVentaja13_1 = GolpesVentaja13_1 - 1;
                                                     }
                                                 }
                                                 else
                                                 {
-                                                    if (Player == "Jugador 4")
+                                                    if (Player == "Jugador 3")
                                                     {
                                                         GolpesVentaja13_1 = GolpesVentaja13_1 - 1;
                                                     }
@@ -3566,14 +3566,14 @@ namespace DragonGolfBackEnd.Controllers
 
                                                     if (HandicapP1 < HandicapP3)
                                                     {
-                                                        if (Player == "Jugador 2")
+                                                        if (Player == "Jugador 1")
                                                         {
                                                             GolpesVentaja14 = GolpesVentaja14 - 1;
                                                         }
                                                     }
                                                     else
                                                     {
-                                                        if (Player == "Jugador 4")
+                                                        if (Player == "Jugador 3")
                                                         {
                                                             GolpesVentaja14 = GolpesVentaja14 - 1;
                                                         }
@@ -3610,14 +3610,14 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP1 < HandicapP3)
                                                 {
-                                                    if (Player == "Jugador 2")
+                                                    if (Player == "Jugador 1")
                                                     {
                                                         GolpesVentaja14_1 = GolpesVentaja14_1 - 1;
                                                     }
                                                 }
                                                 else
                                                 {
-                                                    if (Player == "Jugador 4")
+                                                    if (Player == "Jugador 3")
                                                     {
                                                         GolpesVentaja14_1 = GolpesVentaja14_1 - 1;
                                                     }
@@ -3659,14 +3659,14 @@ namespace DragonGolfBackEnd.Controllers
 
                                                     if (HandicapP1 < HandicapP3)
                                                     {
-                                                        if (Player == "Jugador 2")
+                                                        if (Player == "Jugador 1")
                                                         {
                                                             GolpesVentaja15 = GolpesVentaja15 - 1;
                                                         }
                                                     }
                                                     else
                                                     {
-                                                        if (Player == "Jugador 4")
+                                                        if (Player == "Jugador 3")
                                                         {
                                                             GolpesVentaja15 = GolpesVentaja15 - 1;
                                                         }
@@ -3703,14 +3703,14 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP1 < HandicapP3)
                                                 {
-                                                    if (Player == "Jugador 2")
+                                                    if (Player == "Jugador 1")
                                                     {
                                                         GolpesVentaja15_1 = GolpesVentaja15_1 - 1;
                                                     }
                                                 }
                                                 else
                                                 {
-                                                    if (Player == "Jugador 4")
+                                                    if (Player == "Jugador 3")
                                                     {
                                                         GolpesVentaja15_1 = GolpesVentaja15_1 - 1;
                                                     }
@@ -3722,7 +3722,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                         if (DificultatHoyo16 == Contador)
                                         {
-                                            if (ScoreHole4 > 0)
+                                            if (ScoreHole16 > 0)
                                             {
                                                 // GolpesVentaja1 = GolpesVentaja1 + 1;
 
@@ -3752,14 +3752,14 @@ namespace DragonGolfBackEnd.Controllers
 
                                                     if (HandicapP1 < HandicapP3)
                                                     {
-                                                        if (Player == "Jugador 2")
+                                                        if (Player == "Jugador 1")
                                                         {
                                                             GolpesVentaja16 = GolpesVentaja16 - 1;
                                                         }
                                                     }
                                                     else
                                                     {
-                                                        if (Player == "Jugador 4")
+                                                        if (Player == "Jugador 3")
                                                         {
                                                             GolpesVentaja16 = GolpesVentaja16 - 1;
                                                         }
@@ -3796,14 +3796,14 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP1 < HandicapP3)
                                                 {
-                                                    if (Player == "Jugador 2")
+                                                    if (Player == "Jugador 1")
                                                     {
                                                         GolpesVentaja16_1 = GolpesVentaja16_1 - 1;
                                                     }
                                                 }
                                                 else
                                                 {
-                                                    if (Player == "Jugador 4")
+                                                    if (Player == "Jugador 3")
                                                     {
                                                         GolpesVentaja16_1 = GolpesVentaja16_1 - 1;
                                                     }
@@ -3845,14 +3845,14 @@ namespace DragonGolfBackEnd.Controllers
 
                                                     if (HandicapP1 < HandicapP3)
                                                     {
-                                                        if (Player == "Jugador 2")
+                                                        if (Player == "Jugador 1")
                                                         {
                                                             GolpesVentaja17 = GolpesVentaja17 - 1;
                                                         }
                                                     }
                                                     else
                                                     {
-                                                        if (Player == "Jugador 4")
+                                                        if (Player == "Jugador 3")
                                                         {
                                                             GolpesVentaja17 = GolpesVentaja17 - 1;
                                                         }
@@ -3889,14 +3889,14 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP1 < HandicapP3)
                                                 {
-                                                    if (Player == "Jugador 2")
+                                                    if (Player == "Jugador 1")
                                                     {
                                                         GolpesVentaja17_1 = GolpesVentaja17_1 - 1;
                                                     }
                                                 }
                                                 else
                                                 {
-                                                    if (Player == "Jugador 4")
+                                                    if (Player == "Jugador 3")
                                                     {
                                                         GolpesVentaja17_1 = GolpesVentaja17_1 - 1;
                                                     }
@@ -3938,14 +3938,14 @@ namespace DragonGolfBackEnd.Controllers
 
                                                     if (HandicapP1 < HandicapP3)
                                                     {
-                                                        if (Player == "Jugador 2")
+                                                        if (Player == "Jugador 1")
                                                         {
                                                             GolpesVentaja18 = GolpesVentaja18 - 1;
                                                         }
                                                     }
                                                     else
                                                     {
-                                                        if (Player == "Jugador 4")
+                                                        if (Player == "Jugador 3")
                                                         {
                                                             GolpesVentaja18 = GolpesVentaja18 - 1;
                                                         }
@@ -3982,14 +3982,14 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP1 < HandicapP3)
                                                 {
-                                                    if (Player == "Jugador 2")
+                                                    if (Player == "Jugador 1")
                                                     {
                                                         GolpesVentaja18_1 = GolpesVentaja18_1 - 1;
                                                     }
                                                 }
                                                 else
                                                 {
-                                                    if (Player == "Jugador 4")
+                                                    if (Player == "Jugador 3")
                                                     {
                                                         GolpesVentaja18_1 = GolpesVentaja18_1 - 1;
                                                     }
@@ -4038,19 +4038,19 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (TipoGolpesVentaja == "Hi Handicap")
                                                 {
 
-                                                    if (HandicapP1 > HandicapP3)
+                                                    if (HandicapP2 > HandicapP4)
                                                     {
-                                                        if (Player == "Jugador 1")
+                                                        if (Player == "Jugador 2")
                                                         {
-                                                            GolpesVentaja1 = GolpesVentaja1 + 1;
+                                                            GolpesVentaja1 = GolpesVentaja1 - 1;
                                                         }
 
                                                     }
                                                     else
                                                     {
-                                                        if (Player == "Jugador 3")
+                                                        if (Player == "Jugador 4")
                                                         {
-                                                            GolpesVentaja1 = GolpesVentaja1 + 1;
+                                                            GolpesVentaja1 = GolpesVentaja1 - 1;
                                                         }
                                                     }
 
@@ -4059,18 +4059,18 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (TipoGolpesVentaja == "Low Handicap")
                                                 {
 
-                                                    if (HandicapP1 < HandicapP3)
+                                                    if (HandicapP2 < HandicapP4)
                                                     {
                                                         if (Player == "Jugador 2")
                                                         {
-                                                            GolpesVentaja1 = GolpesVentaja1 + 1;
+                                                            GolpesVentaja1 = GolpesVentaja1 - 1;
                                                         }
                                                     }
                                                     else
                                                     {
                                                         if (Player == "Jugador 4")
                                                         {
-                                                            GolpesVentaja1 = GolpesVentaja1 + 1;
+                                                            GolpesVentaja1 = GolpesVentaja1 - 1;
                                                         }
                                                     }
 
@@ -4082,9 +4082,9 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
 
-                                                if (HandicapP1 > HandicapP3)
+                                                if (HandicapP2 > HandicapP4)
                                                 {
-                                                    if (Player == "Jugador 1")
+                                                    if (Player == "Jugador 2")
                                                     {
                                                         GolpesVentaja1_1 = GolpesVentaja1_1 + 1;
                                                     }
@@ -4092,7 +4092,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 }
                                                 else
                                                 {
-                                                    if (Player == "Jugador 3")
+                                                    if (Player == "Jugador 4")
                                                     {
                                                         GolpesVentaja1_1 = GolpesVentaja1_1 + 1;
                                                     }
@@ -4103,7 +4103,7 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
-                                                if (HandicapP1 < HandicapP3)
+                                                if (HandicapP2 < HandicapP4)
                                                 {
                                                     if (Player == "Jugador 2")
                                                     {
@@ -4131,19 +4131,19 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (TipoGolpesVentaja == "Hi Handicap")
                                                 {
 
-                                                    if (HandicapP1 > HandicapP3)
+                                                    if (HandicapP2 > HandicapP4)
                                                     {
-                                                        if (Player == "Jugador 1")
+                                                        if (Player == "Jugador 2")
                                                         {
-                                                            GolpesVentaja2 = GolpesVentaja2 + 1;
+                                                            GolpesVentaja2 = GolpesVentaja2 - 1;
                                                         }
 
                                                     }
                                                     else
                                                     {
-                                                        if (Player == "Jugador 3")
+                                                        if (Player == "Jugador 4")
                                                         {
-                                                            GolpesVentaja2 = GolpesVentaja2 + 1;
+                                                            GolpesVentaja2 = GolpesVentaja2 - 1;
                                                         }
                                                     }
 
@@ -4152,18 +4152,18 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (TipoGolpesVentaja == "Low Handicap")
                                                 {
 
-                                                    if (HandicapP1 < HandicapP3)
+                                                    if (HandicapP2 < HandicapP4)
                                                     {
                                                         if (Player == "Jugador 2")
                                                         {
-                                                            GolpesVentaja2 = GolpesVentaja2 + 1;
+                                                            GolpesVentaja2 = GolpesVentaja2 - 1;
                                                         }
                                                     }
                                                     else
                                                     {
                                                         if (Player == "Jugador 4")
                                                         {
-                                                            GolpesVentaja2 = GolpesVentaja2 + 1;
+                                                            GolpesVentaja2 = GolpesVentaja2 - 1;
                                                         }
                                                     }
 
@@ -4175,19 +4175,19 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
 
-                                                if (HandicapP1 > HandicapP3)
+                                                if (HandicapP2 > HandicapP4)
                                                 {
-                                                    if (Player == "Jugador 1")
+                                                    if (Player == "Jugador 2")
                                                     {
-                                                        GolpesVentaja2_1 = GolpesVentaja2_1 + 1;
+                                                        GolpesVentaja2_1 = GolpesVentaja2_1 - 1;
                                                     }
 
                                                 }
                                                 else
                                                 {
-                                                    if (Player == "Jugador 3")
+                                                    if (Player == "Jugador 4")
                                                     {
-                                                        GolpesVentaja2_1 = GolpesVentaja2_1 + 1;
+                                                        GolpesVentaja2_1 = GolpesVentaja2_1 - 1;
                                                     }
                                                 }
 
@@ -4196,18 +4196,18 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
-                                                if (HandicapP1 < HandicapP3)
+                                                if (HandicapP2 < HandicapP4)
                                                 {
                                                     if (Player == "Jugador 2")
                                                     {
-                                                        GolpesVentaja2_1 = GolpesVentaja2_1 + 1;
+                                                        GolpesVentaja2_1 = GolpesVentaja2_1 - 1;
                                                     }
                                                 }
                                                 else
                                                 {
                                                     if (Player == "Jugador 4")
                                                     {
-                                                        GolpesVentaja2_1 = GolpesVentaja2_1 + 1;
+                                                        GolpesVentaja2_1 = GolpesVentaja2_1 - 1;
                                                     }
                                                 }
 
@@ -4223,19 +4223,19 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (TipoGolpesVentaja == "Hi Handicap")
                                                 {
 
-                                                    if (HandicapP1 > HandicapP3)
+                                                    if (HandicapP2 > HandicapP4)
                                                     {
-                                                        if (Player == "Jugador 1")
+                                                        if (Player == "Jugador 2")
                                                         {
-                                                            GolpesVentaja3 = GolpesVentaja3 + 1;
+                                                            GolpesVentaja3 = GolpesVentaja3 - 1;
                                                         }
 
                                                     }
                                                     else
                                                     {
-                                                        if (Player == "Jugador 3")
+                                                        if (Player == "Jugador 4")
                                                         {
-                                                            GolpesVentaja3 = GolpesVentaja3 + 1;
+                                                            GolpesVentaja3 = GolpesVentaja3 - 1;
                                                         }
                                                     }
 
@@ -4244,18 +4244,18 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (TipoGolpesVentaja == "Low Handicap")
                                                 {
 
-                                                    if (HandicapP1 < HandicapP3)
+                                                    if (HandicapP2 < HandicapP4)
                                                     {
                                                         if (Player == "Jugador 2")
                                                         {
-                                                            GolpesVentaja3 = GolpesVentaja3 + 1;
+                                                            GolpesVentaja3 = GolpesVentaja3 - 1;
                                                         }
                                                     }
                                                     else
                                                     {
                                                         if (Player == "Jugador 4")
                                                         {
-                                                            GolpesVentaja3 = GolpesVentaja3 + 1;
+                                                            GolpesVentaja3 = GolpesVentaja3 - 1;
                                                         }
                                                     }
 
@@ -4267,19 +4267,19 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
 
-                                                if (HandicapP1 > HandicapP3)
+                                                if (HandicapP2 > HandicapP4)
                                                 {
-                                                    if (Player == "Jugador 1")
+                                                    if (Player == "Jugador 2")
                                                     {
-                                                        GolpesVentaja3_1 = GolpesVentaja3_1 + 1;
+                                                        GolpesVentaja3_1 = GolpesVentaja3_1 - 1;
                                                     }
 
                                                 }
                                                 else
                                                 {
-                                                    if (Player == "Jugador 3")
+                                                    if (Player == "Jugador 4")
                                                     {
-                                                        GolpesVentaja3_1 = GolpesVentaja3_1 + 1;
+                                                        GolpesVentaja3_1 = GolpesVentaja3_1 - 1;
                                                     }
                                                 }
 
@@ -4288,18 +4288,18 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
-                                                if (HandicapP1 < HandicapP3)
+                                                if (HandicapP2 < HandicapP4)
                                                 {
                                                     if (Player == "Jugador 2")
                                                     {
-                                                        GolpesVentaja3_1 = GolpesVentaja3_1 + 1;
+                                                        GolpesVentaja3_1 = GolpesVentaja3_1 - 1;
                                                     }
                                                 }
                                                 else
                                                 {
                                                     if (Player == "Jugador 4")
                                                     {
-                                                        GolpesVentaja3_1 = GolpesVentaja3_1 + 1;
+                                                        GolpesVentaja3_1 = GolpesVentaja3_1 - 1;
                                                     }
                                                 }
 
@@ -4315,19 +4315,19 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (TipoGolpesVentaja == "Hi Handicap")
                                                 {
 
-                                                    if (HandicapP1 > HandicapP3)
+                                                    if (HandicapP2 > HandicapP4)
                                                     {
-                                                        if (Player == "Jugador 1")
+                                                        if (Player == "Jugador 2")
                                                         {
-                                                            GolpesVentaja4 = GolpesVentaja4 + 1;
+                                                            GolpesVentaja4 = GolpesVentaja4 - 1;
                                                         }
 
                                                     }
                                                     else
                                                     {
-                                                        if (Player == "Jugador 3")
+                                                        if (Player == "Jugador 4")
                                                         {
-                                                            GolpesVentaja4 = GolpesVentaja4 + 1;
+                                                            GolpesVentaja4 = GolpesVentaja4 - 1;
                                                         }
                                                     }
 
@@ -4336,18 +4336,18 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (TipoGolpesVentaja == "Low Handicap")
                                                 {
 
-                                                    if (HandicapP1 < HandicapP3)
+                                                    if (HandicapP2 < HandicapP4)
                                                     {
                                                         if (Player == "Jugador 2")
                                                         {
-                                                            GolpesVentaja4 = GolpesVentaja4 + 1;
+                                                            GolpesVentaja4 = GolpesVentaja4 - 1;
                                                         }
                                                     }
                                                     else
                                                     {
                                                         if (Player == "Jugador 4")
                                                         {
-                                                            GolpesVentaja4 = GolpesVentaja4 + 1;
+                                                            GolpesVentaja4 = GolpesVentaja4 - 1;
                                                         }
                                                     }
 
@@ -4359,19 +4359,19 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
 
-                                                if (HandicapP1 > HandicapP3)
+                                                if (HandicapP2 > HandicapP4)
                                                 {
-                                                    if (Player == "Jugador 1")
+                                                    if (Player == "Jugador 2")
                                                     {
-                                                        GolpesVentaja4_1 = GolpesVentaja4_1 + 1;
+                                                        GolpesVentaja4_1 = GolpesVentaja4_1 - 1;
                                                     }
 
                                                 }
                                                 else
                                                 {
-                                                    if (Player == "Jugador 3")
+                                                    if (Player == "Jugador 4")
                                                     {
-                                                        GolpesVentaja4_1 = GolpesVentaja4_1 + 1;
+                                                        GolpesVentaja4_1 = GolpesVentaja4_1 - 1;
                                                     }
                                                 }
 
@@ -4380,18 +4380,18 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
-                                                if (HandicapP1 < HandicapP3)
+                                                if (HandicapP2 < HandicapP4)
                                                 {
                                                     if (Player == "Jugador 2")
                                                     {
-                                                        GolpesVentaja4_1 = GolpesVentaja4_1 + 1;
+                                                        GolpesVentaja4_1 = GolpesVentaja4_1 - 1;
                                                     }
                                                 }
                                                 else
                                                 {
                                                     if (Player == "Jugador 4")
                                                     {
-                                                        GolpesVentaja4_1 = GolpesVentaja4_1 + 1;
+                                                        GolpesVentaja4_1 = GolpesVentaja4_1 - 1;
                                                     }
                                                 }
 
@@ -4407,19 +4407,19 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (TipoGolpesVentaja == "Hi Handicap")
                                                 {
 
-                                                    if (HandicapP1 > HandicapP3)
+                                                    if (HandicapP2 > HandicapP4)
                                                     {
-                                                        if (Player == "Jugador 1")
+                                                        if (Player == "Jugador 2")
                                                         {
-                                                            GolpesVentaja5 = GolpesVentaja5 + 1;
+                                                            GolpesVentaja5 = GolpesVentaja5 - 1;
                                                         }
 
                                                     }
                                                     else
                                                     {
-                                                        if (Player == "Jugador 3")
+                                                        if (Player == "Jugador 4")
                                                         {
-                                                            GolpesVentaja5 = GolpesVentaja5 + 1;
+                                                            GolpesVentaja5 = GolpesVentaja5 - 1;
                                                         }
                                                     }
 
@@ -4428,18 +4428,18 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (TipoGolpesVentaja == "Low Handicap")
                                                 {
 
-                                                    if (HandicapP1 < HandicapP3)
+                                                    if (HandicapP2 < HandicapP4)
                                                     {
                                                         if (Player == "Jugador 2")
                                                         {
-                                                            GolpesVentaja5 = GolpesVentaja5 + 1;
+                                                            GolpesVentaja5 = GolpesVentaja5 - 1;
                                                         }
                                                     }
                                                     else
                                                     {
                                                         if (Player == "Jugador 4")
                                                         {
-                                                            GolpesVentaja5 = GolpesVentaja5 + 1;
+                                                            GolpesVentaja5 = GolpesVentaja5 - 1;
                                                         }
                                                     }
 
@@ -4451,19 +4451,19 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
 
-                                                if (HandicapP1 > HandicapP3)
+                                                if (HandicapP2 > HandicapP4)
                                                 {
-                                                    if (Player == "Jugador 1")
+                                                    if (Player == "Jugador 2")
                                                     {
-                                                        GolpesVentaja5_1 = GolpesVentaja5_1 + 1;
+                                                        GolpesVentaja5_1 = GolpesVentaja5_1 - 1;
                                                     }
 
                                                 }
                                                 else
                                                 {
-                                                    if (Player == "Jugador 3")
+                                                    if (Player == "Jugador 4")
                                                     {
-                                                        GolpesVentaja5_1 = GolpesVentaja5_1 + 1;
+                                                        GolpesVentaja5_1 = GolpesVentaja5_1 - 1;
                                                     }
                                                 }
 
@@ -4472,18 +4472,18 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
-                                                if (HandicapP1 < HandicapP3)
+                                                if (HandicapP2 < HandicapP4)
                                                 {
                                                     if (Player == "Jugador 2")
                                                     {
-                                                        GolpesVentaja5_1 = GolpesVentaja5_1 + 1;
+                                                        GolpesVentaja5_1 = GolpesVentaja5_1 - 1;
                                                     }
                                                 }
                                                 else
                                                 {
                                                     if (Player == "Jugador 4")
                                                     {
-                                                        GolpesVentaja5_1 = GolpesVentaja5_1 + 1;
+                                                        GolpesVentaja5_1 = GolpesVentaja5_1 - 1;
                                                     }
                                                 }
 
@@ -4499,19 +4499,19 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (TipoGolpesVentaja == "Hi Handicap")
                                                 {
 
-                                                    if (HandicapP1 > HandicapP3)
+                                                    if (HandicapP2 > HandicapP4)
                                                     {
-                                                        if (Player == "Jugador 1")
+                                                        if (Player == "Jugador 2")
                                                         {
-                                                            GolpesVentaja6 = GolpesVentaja6 + 1;
+                                                            GolpesVentaja6 = GolpesVentaja6 - 1;
                                                         }
 
                                                     }
                                                     else
                                                     {
-                                                        if (Player == "Jugador 3")
+                                                        if (Player == "Jugador 4")
                                                         {
-                                                            GolpesVentaja6 = GolpesVentaja6 + 1;
+                                                            GolpesVentaja6 = GolpesVentaja6 - 1;
                                                         }
                                                     }
 
@@ -4520,18 +4520,18 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (TipoGolpesVentaja == "Low Handicap")
                                                 {
 
-                                                    if (HandicapP1 < HandicapP3)
+                                                    if (HandicapP2 < HandicapP4)
                                                     {
                                                         if (Player == "Jugador 2")
                                                         {
-                                                            GolpesVentaja6 = GolpesVentaja6 + 1;
+                                                            GolpesVentaja6 = GolpesVentaja6 - 1;
                                                         }
                                                     }
                                                     else
                                                     {
                                                         if (Player == "Jugador 4")
                                                         {
-                                                            GolpesVentaja6 = GolpesVentaja6 + 1;
+                                                            GolpesVentaja6 = GolpesVentaja6 - 1;
                                                         }
                                                     }
 
@@ -4543,19 +4543,19 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
 
-                                                if (HandicapP1 > HandicapP3)
+                                                if (HandicapP2 > HandicapP4)
                                                 {
-                                                    if (Player == "Jugador 1")
+                                                    if (Player == "Jugador 2")
                                                     {
-                                                        GolpesVentaja6_1 = GolpesVentaja6_1 + 1;
+                                                        GolpesVentaja6_1 = GolpesVentaja6_1 - 1;
                                                     }
 
                                                 }
                                                 else
                                                 {
-                                                    if (Player == "Jugador 3")
+                                                    if (Player == "Jugador 4")
                                                     {
-                                                        GolpesVentaja6_1 = GolpesVentaja6_1 + 1;
+                                                        GolpesVentaja6_1 = GolpesVentaja6_1 - 1;
                                                     }
                                                 }
 
@@ -4564,18 +4564,18 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
-                                                if (HandicapP1 < HandicapP3)
+                                                if (HandicapP2 < HandicapP4)
                                                 {
                                                     if (Player == "Jugador 2")
                                                     {
-                                                        GolpesVentaja6_1 = GolpesVentaja6_1 + 1;
+                                                        GolpesVentaja6_1 = GolpesVentaja6_1 - 1;
                                                     }
                                                 }
                                                 else
                                                 {
                                                     if (Player == "Jugador 4")
                                                     {
-                                                        GolpesVentaja6_1 = GolpesVentaja6_1 + 1;
+                                                        GolpesVentaja6_1 = GolpesVentaja6_1 - 1;
                                                     }
                                                 }
 
@@ -4591,19 +4591,19 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (TipoGolpesVentaja == "Hi Handicap")
                                                 {
 
-                                                    if (HandicapP1 > HandicapP3)
+                                                    if (HandicapP2 > HandicapP4)
                                                     {
-                                                        if (Player == "Jugador 1")
+                                                        if (Player == "Jugador 2")
                                                         {
-                                                            GolpesVentaja7 = GolpesVentaja7 + 1;
+                                                            GolpesVentaja7 = GolpesVentaja7 - 1;
                                                         }
 
                                                     }
                                                     else
                                                     {
-                                                        if (Player == "Jugador 3")
+                                                        if (Player == "Jugador 4")
                                                         {
-                                                            GolpesVentaja7 = GolpesVentaja7 + 1;
+                                                            GolpesVentaja7 = GolpesVentaja7 - 1;
                                                         }
                                                     }
 
@@ -4612,18 +4612,18 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (TipoGolpesVentaja == "Low Handicap")
                                                 {
 
-                                                    if (HandicapP1 < HandicapP3)
+                                                    if (HandicapP2 < HandicapP4)
                                                     {
                                                         if (Player == "Jugador 2")
                                                         {
-                                                            GolpesVentaja7 = GolpesVentaja7 + 1;
+                                                            GolpesVentaja7 = GolpesVentaja7 - 1;
                                                         }
                                                     }
                                                     else
                                                     {
                                                         if (Player == "Jugador 4")
                                                         {
-                                                            GolpesVentaja7 = GolpesVentaja7 + 1;
+                                                            GolpesVentaja7 = GolpesVentaja7 - 1;
                                                         }
                                                     }
 
@@ -4635,19 +4635,19 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
 
-                                                if (HandicapP1 > HandicapP3)
+                                                if (HandicapP2 > HandicapP4)
                                                 {
-                                                    if (Player == "Jugador 1")
+                                                    if (Player == "Jugador 2")
                                                     {
-                                                        GolpesVentaja7_1 = GolpesVentaja7_1 + 1;
+                                                        GolpesVentaja7_1 = GolpesVentaja7_1 - 1;
                                                     }
 
                                                 }
                                                 else
                                                 {
-                                                    if (Player == "Jugador 3")
+                                                    if (Player == "Jugador 4")
                                                     {
-                                                        GolpesVentaja7_1 = GolpesVentaja7_1 + 1;
+                                                        GolpesVentaja7_1 = GolpesVentaja7_1 - 1;
                                                     }
                                                 }
 
@@ -4656,18 +4656,18 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
-                                                if (HandicapP1 < HandicapP3)
+                                                if (HandicapP2 < HandicapP4)
                                                 {
                                                     if (Player == "Jugador 2")
                                                     {
-                                                        GolpesVentaja7_1 = GolpesVentaja7_1 + 1;
+                                                        GolpesVentaja7_1 = GolpesVentaja7_1 - 1;
                                                     }
                                                 }
                                                 else
                                                 {
                                                     if (Player == "Jugador 4")
                                                     {
-                                                        GolpesVentaja7_1 = GolpesVentaja7_1 + 1;
+                                                        GolpesVentaja7_1 = GolpesVentaja7_1 - 1;
                                                     }
                                                 }
 
@@ -4683,19 +4683,19 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (TipoGolpesVentaja == "Hi Handicap")
                                                 {
 
-                                                    if (HandicapP1 > HandicapP3)
+                                                    if (HandicapP2 > HandicapP3)
                                                     {
-                                                        if (Player == "Jugador 1")
+                                                        if (Player == "Jugador 2")
                                                         {
-                                                            GolpesVentaja8 = GolpesVentaja8 + 1;
+                                                            GolpesVentaja8 = GolpesVentaja8 - 1;
                                                         }
 
                                                     }
                                                     else
                                                     {
-                                                        if (Player == "Jugador 3")
+                                                        if (Player == "Jugador 4")
                                                         {
-                                                            GolpesVentaja8 = GolpesVentaja8 + 1;
+                                                            GolpesVentaja8 = GolpesVentaja8 - 1;
                                                         }
                                                     }
 
@@ -4704,18 +4704,18 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (TipoGolpesVentaja == "Low Handicap")
                                                 {
 
-                                                    if (HandicapP1 < HandicapP3)
+                                                    if (HandicapP2 < HandicapP4)
                                                     {
                                                         if (Player == "Jugador 2")
                                                         {
-                                                            GolpesVentaja8 = GolpesVentaja8 + 1;
+                                                            GolpesVentaja8 = GolpesVentaja8 - 1;
                                                         }
                                                     }
                                                     else
                                                     {
                                                         if (Player == "Jugador 4")
                                                         {
-                                                            GolpesVentaja8 = GolpesVentaja8 + 1;
+                                                            GolpesVentaja8 = GolpesVentaja8 - 1;
                                                         }
                                                     }
 
@@ -4727,19 +4727,19 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
 
-                                                if (HandicapP1 > HandicapP3)
+                                                if (HandicapP2 > HandicapP4)
                                                 {
-                                                    if (Player == "Jugador 1")
+                                                    if (Player == "Jugador 2")
                                                     {
-                                                        GolpesVentaja8_1 = GolpesVentaja8_1 + 1;
+                                                        GolpesVentaja8_1 = GolpesVentaja8_1 - 1;
                                                     }
 
                                                 }
                                                 else
                                                 {
-                                                    if (Player == "Jugador 3")
+                                                    if (Player == "Jugador 4")
                                                     {
-                                                        GolpesVentaja8_1 = GolpesVentaja8_1 + 1;
+                                                        GolpesVentaja8_1 = GolpesVentaja8_1 - 1;
                                                     }
                                                 }
 
@@ -4748,18 +4748,18 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
-                                                if (HandicapP1 < HandicapP3)
+                                                if (HandicapP2 < HandicapP4)
                                                 {
                                                     if (Player == "Jugador 2")
                                                     {
-                                                        GolpesVentaja8_1 = GolpesVentaja8_1 + 1;
+                                                        GolpesVentaja8_1 = GolpesVentaja8_1 - 1;
                                                     }
                                                 }
                                                 else
                                                 {
                                                     if (Player == "Jugador 4")
                                                     {
-                                                        GolpesVentaja8_1 = GolpesVentaja8_1 + 1;
+                                                        GolpesVentaja8_1 = GolpesVentaja8_1 - 1;
                                                     }
                                                 }
 
@@ -4776,19 +4776,19 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (TipoGolpesVentaja == "Hi Handicap")
                                                 {
 
-                                                    if (HandicapP1 > HandicapP3)
+                                                    if (HandicapP2 > HandicapP4)
                                                     {
-                                                        if (Player == "Jugador 1")
+                                                        if (Player == "Jugador 2")
                                                         {
-                                                            GolpesVentaja8 = GolpesVentaja8 + 1;
+                                                            GolpesVentaja8 = GolpesVentaja8 - 1;
                                                         }
 
                                                     }
                                                     else
                                                     {
-                                                        if (Player == "Jugador 3")
+                                                        if (Player == "Jugador 4")
                                                         {
-                                                            GolpesVentaja8 = GolpesVentaja8 + 1;
+                                                            GolpesVentaja8 = GolpesVentaja8 - 1;
                                                         }
                                                     }
 
@@ -4797,18 +4797,18 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (TipoGolpesVentaja == "Low Handicap")
                                                 {
 
-                                                    if (HandicapP1 < HandicapP3)
+                                                    if (HandicapP2 < HandicapP4)
                                                     {
                                                         if (Player == "Jugador 2")
                                                         {
-                                                            GolpesVentaja8 = GolpesVentaja8 + 1;
+                                                            GolpesVentaja8 = GolpesVentaja8 - 1;
                                                         }
                                                     }
                                                     else
                                                     {
                                                         if (Player == "Jugador 4")
                                                         {
-                                                            GolpesVentaja8 = GolpesVentaja8 + 1;
+                                                            GolpesVentaja8 = GolpesVentaja8 - 1;
                                                         }
                                                     }
 
@@ -4820,19 +4820,19 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
 
-                                                if (HandicapP1 > HandicapP3)
+                                                if (HandicapP2 > HandicapP4)
                                                 {
-                                                    if (Player == "Jugador 1")
+                                                    if (Player == "Jugador 2")
                                                     {
-                                                        GolpesVentaja9_1 = GolpesVentaja9_1 + 1;
+                                                        GolpesVentaja9_1 = GolpesVentaja9_1 - 1;
                                                     }
 
                                                 }
                                                 else
                                                 {
-                                                    if (Player == "Jugador 3")
+                                                    if (Player == "Jugador 4")
                                                     {
-                                                        GolpesVentaja9_1 = GolpesVentaja9_1 + 1;
+                                                        GolpesVentaja9_1 = GolpesVentaja9_1 - 1;
                                                     }
                                                 }
 
@@ -4841,18 +4841,18 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
-                                                if (HandicapP1 < HandicapP3)
+                                                if (HandicapP2 < HandicapP4)
                                                 {
                                                     if (Player == "Jugador 2")
                                                     {
-                                                        GolpesVentaja9_1 = GolpesVentaja9_1 + 1;
+                                                        GolpesVentaja9_1 = GolpesVentaja9_1 - 1;
                                                     }
                                                 }
                                                 else
                                                 {
                                                     if (Player == "Jugador 4")
                                                     {
-                                                        GolpesVentaja9_1 = GolpesVentaja9_1 + 1;
+                                                        GolpesVentaja9_1 = GolpesVentaja9_1 - 1;
                                                     }
                                                 }
 
@@ -4868,19 +4868,19 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (TipoGolpesVentaja == "Hi Handicap")
                                                 {
 
-                                                    if (HandicapP1 > HandicapP3)
+                                                    if (HandicapP2 > HandicapP4)
                                                     {
-                                                        if (Player == "Jugador 1")
+                                                        if (Player == "Jugador 2")
                                                         {
-                                                            GolpesVentaja10 = GolpesVentaja10 + 1;
+                                                            GolpesVentaja10 = GolpesVentaja10 - 1;
                                                         }
 
                                                     }
                                                     else
                                                     {
-                                                        if (Player == "Jugador 3")
+                                                        if (Player == "Jugador 4")
                                                         {
-                                                            GolpesVentaja10 = GolpesVentaja10 + 1;
+                                                            GolpesVentaja10 = GolpesVentaja10 - 1;
                                                         }
                                                     }
 
@@ -4889,18 +4889,18 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (TipoGolpesVentaja == "Low Handicap")
                                                 {
 
-                                                    if (HandicapP1 < HandicapP3)
+                                                    if (HandicapP2 < HandicapP4)
                                                     {
                                                         if (Player == "Jugador 2")
                                                         {
-                                                            GolpesVentaja10 = GolpesVentaja10 + 1;
+                                                            GolpesVentaja10 = GolpesVentaja10 - 1;
                                                         }
                                                     }
                                                     else
                                                     {
                                                         if (Player == "Jugador 4")
                                                         {
-                                                            GolpesVentaja10 = GolpesVentaja10 + 1;
+                                                            GolpesVentaja10 = GolpesVentaja10 - 1;
                                                         }
                                                     }
 
@@ -4912,19 +4912,19 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
 
-                                                if (HandicapP1 > HandicapP3)
+                                                if (HandicapP2 > HandicapP4)
                                                 {
-                                                    if (Player == "Jugador 1")
+                                                    if (Player == "Jugador 2")
                                                     {
-                                                        GolpesVentaja10_1 = GolpesVentaja10_1 + 1;
+                                                        GolpesVentaja10_1 = GolpesVentaja10_1 - 1;
                                                     }
 
                                                 }
                                                 else
                                                 {
-                                                    if (Player == "Jugador 3")
+                                                    if (Player == "Jugador 4")
                                                     {
-                                                        GolpesVentaja10_1 = GolpesVentaja10_1 + 1;
+                                                        GolpesVentaja10_1 = GolpesVentaja10_1 - 1;
                                                     }
                                                 }
 
@@ -4933,18 +4933,18 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
-                                                if (HandicapP1 < HandicapP3)
+                                                if (HandicapP2 < HandicapP4)
                                                 {
                                                     if (Player == "Jugador 2")
                                                     {
-                                                        GolpesVentaja10_1 = GolpesVentaja10_1 + 1;
+                                                        GolpesVentaja10_1 = GolpesVentaja10_1 - 1;
                                                     }
                                                 }
                                                 else
                                                 {
                                                     if (Player == "Jugador 4")
                                                     {
-                                                        GolpesVentaja10_1 = GolpesVentaja10_1 + 1;
+                                                        GolpesVentaja10_1 = GolpesVentaja10_1 - 1;
                                                     }
                                                 }
 
@@ -4960,19 +4960,19 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (TipoGolpesVentaja == "Hi Handicap")
                                                 {
 
-                                                    if (HandicapP1 > HandicapP3)
+                                                    if (HandicapP2 > HandicapP4)
                                                     {
-                                                        if (Player == "Jugador 1")
+                                                        if (Player == "Jugador 2")
                                                         {
-                                                            GolpesVentaja11 = GolpesVentaja11 + 1;
+                                                            GolpesVentaja11 = GolpesVentaja11 - 1;
                                                         }
 
                                                     }
                                                     else
                                                     {
-                                                        if (Player == "Jugador 3")
+                                                        if (Player == "Jugador 4")
                                                         {
-                                                            GolpesVentaja11 = GolpesVentaja11 + 1;
+                                                            GolpesVentaja11 = GolpesVentaja11 - 1;
                                                         }
                                                     }
 
@@ -4981,18 +4981,18 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (TipoGolpesVentaja == "Low Handicap")
                                                 {
 
-                                                    if (HandicapP1 < HandicapP3)
+                                                    if (HandicapP2 < HandicapP4)
                                                     {
                                                         if (Player == "Jugador 2")
                                                         {
-                                                            GolpesVentaja11 = GolpesVentaja11 + 1;
+                                                            GolpesVentaja11 = GolpesVentaja11 - 1;
                                                         }
                                                     }
                                                     else
                                                     {
                                                         if (Player == "Jugador 4")
                                                         {
-                                                            GolpesVentaja11 = GolpesVentaja11 + 1;
+                                                            GolpesVentaja11 = GolpesVentaja11 - 1;
                                                         }
                                                     }
 
@@ -5004,19 +5004,19 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
 
-                                                if (HandicapP1 > HandicapP3)
+                                                if (HandicapP2 > HandicapP4)
                                                 {
-                                                    if (Player == "Jugador 1")
+                                                    if (Player == "Jugador 2")
                                                     {
-                                                        GolpesVentaja11_1 = GolpesVentaja11_1 + 1;
+                                                        GolpesVentaja11_1 = GolpesVentaja11_1 - 1;
                                                     }
 
                                                 }
                                                 else
                                                 {
-                                                    if (Player == "Jugador 3")
+                                                    if (Player == "Jugador 4")
                                                     {
-                                                        GolpesVentaja11_1 = GolpesVentaja11_1 + 1;
+                                                        GolpesVentaja11_1 = GolpesVentaja11_1 - 1;
                                                     }
                                                 }
 
@@ -5029,14 +5029,14 @@ namespace DragonGolfBackEnd.Controllers
                                                 {
                                                     if (Player == "Jugador 2")
                                                     {
-                                                        GolpesVentaja11_1 = GolpesVentaja11_1 + 1;
+                                                        GolpesVentaja11_1 = GolpesVentaja11_1 - 1;
                                                     }
                                                 }
                                                 else
                                                 {
                                                     if (Player == "Jugador 4")
                                                     {
-                                                        GolpesVentaja11_1 = GolpesVentaja11_1 + 1;
+                                                        GolpesVentaja11_1 = GolpesVentaja11_1 - 1;
                                                     }
                                                 }
 
@@ -5052,19 +5052,19 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (TipoGolpesVentaja == "Hi Handicap")
                                                 {
 
-                                                    if (HandicapP1 > HandicapP3)
+                                                    if (HandicapP2 > HandicapP4)
                                                     {
-                                                        if (Player == "Jugador 1")
+                                                        if (Player == "Jugador 2")
                                                         {
-                                                            GolpesVentaja12 = GolpesVentaja12 + 1;
+                                                            GolpesVentaja12 = GolpesVentaja12 - 1;
                                                         }
 
                                                     }
                                                     else
                                                     {
-                                                        if (Player == "Jugador 3")
+                                                        if (Player == "Jugador 4")
                                                         {
-                                                            GolpesVentaja12 = GolpesVentaja12 + 1;
+                                                            GolpesVentaja12 = GolpesVentaja12 - 1;
                                                         }
                                                     }
 
@@ -5073,18 +5073,18 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (TipoGolpesVentaja == "Low Handicap")
                                                 {
 
-                                                    if (HandicapP1 < HandicapP3)
+                                                    if (HandicapP2 < HandicapP4)
                                                     {
                                                         if (Player == "Jugador 2")
                                                         {
-                                                            GolpesVentaja12 = GolpesVentaja12 + 1;
+                                                            GolpesVentaja12 = GolpesVentaja12 - 1;
                                                         }
                                                     }
                                                     else
                                                     {
                                                         if (Player == "Jugador 4")
                                                         {
-                                                            GolpesVentaja12 = GolpesVentaja12 + 1;
+                                                            GolpesVentaja12 = GolpesVentaja12 - 1;
                                                         }
                                                     }
 
@@ -5096,19 +5096,19 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
 
-                                                if (HandicapP1 > HandicapP3)
+                                                if (HandicapP2 > HandicapP4)
                                                 {
-                                                    if (Player == "Jugador 1")
+                                                    if (Player == "Jugador 2")
                                                     {
-                                                        GolpesVentaja12_1 = GolpesVentaja12_1 + 1;
+                                                        GolpesVentaja12_1 = GolpesVentaja12_1 - 1;
                                                     }
 
                                                 }
                                                 else
                                                 {
-                                                    if (Player == "Jugador 3")
+                                                    if (Player == "Jugador 4")
                                                     {
-                                                        GolpesVentaja12_1 = GolpesVentaja12_1 + 1;
+                                                        GolpesVentaja12_1 = GolpesVentaja12_1 - 1;
                                                     }
                                                 }
 
@@ -5117,18 +5117,18 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
-                                                if (HandicapP1 < HandicapP3)
+                                                if (HandicapP2 < HandicapP4)
                                                 {
                                                     if (Player == "Jugador 2")
                                                     {
-                                                        GolpesVentaja13_1 = GolpesVentaja13_1 + 1;
+                                                        GolpesVentaja13_1 = GolpesVentaja13_1 - 1;
                                                     }
                                                 }
                                                 else
                                                 {
                                                     if (Player == "Jugador 4")
                                                     {
-                                                        GolpesVentaja13_1 = GolpesVentaja13_1 + 1;
+                                                        GolpesVentaja13_1 = GolpesVentaja13_1 - 1;
                                                     }
                                                 }
 
@@ -5144,19 +5144,19 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (TipoGolpesVentaja == "Hi Handicap")
                                                 {
 
-                                                    if (HandicapP1 > HandicapP3)
+                                                    if (HandicapP2 > HandicapP4)
                                                     {
-                                                        if (Player == "Jugador 1")
+                                                        if (Player == "Jugador 2")
                                                         {
-                                                            GolpesVentaja13 = GolpesVentaja13 + 1;
+                                                            GolpesVentaja13 = GolpesVentaja13 - 1;
                                                         }
 
                                                     }
                                                     else
                                                     {
-                                                        if (Player == "Jugador 3")
+                                                        if (Player == "Jugador 4")
                                                         {
-                                                            GolpesVentaja13 = GolpesVentaja13 + 1;
+                                                            GolpesVentaja13 = GolpesVentaja13 - 1;
                                                         }
                                                     }
 
@@ -5165,18 +5165,18 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (TipoGolpesVentaja == "Low Handicap")
                                                 {
 
-                                                    if (HandicapP1 < HandicapP3)
+                                                    if (HandicapP2 < HandicapP4)
                                                     {
                                                         if (Player == "Jugador 2")
                                                         {
-                                                            GolpesVentaja13 = GolpesVentaja13 + 1;
+                                                            GolpesVentaja13 = GolpesVentaja13 - 1;
                                                         }
                                                     }
                                                     else
                                                     {
                                                         if (Player == "Jugador 4")
                                                         {
-                                                            GolpesVentaja13 = GolpesVentaja13 + 1;
+                                                            GolpesVentaja13 = GolpesVentaja13 - 1;
                                                         }
                                                     }
 
@@ -5188,19 +5188,19 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
 
-                                                if (HandicapP1 > HandicapP3)
+                                                if (HandicapP2 > HandicapP4)
                                                 {
-                                                    if (Player == "Jugador 1")
+                                                    if (Player == "Jugador 2")
                                                     {
-                                                        GolpesVentaja13_1 = GolpesVentaja13_1 + 1;
+                                                        GolpesVentaja13_1 = GolpesVentaja13_1 - 1;
                                                     }
 
                                                 }
                                                 else
                                                 {
-                                                    if (Player == "Jugador 3")
+                                                    if (Player == "Jugador 4")
                                                     {
-                                                        GolpesVentaja13_1 = GolpesVentaja13_1 + 1;
+                                                        GolpesVentaja13_1 = GolpesVentaja13_1 - 1;
                                                     }
                                                 }
 
@@ -5209,18 +5209,18 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
-                                                if (HandicapP1 < HandicapP3)
+                                                if (HandicapP2 < HandicapP4)
                                                 {
                                                     if (Player == "Jugador 2")
                                                     {
-                                                        GolpesVentaja13_1 = GolpesVentaja13_1 + 1;
+                                                        GolpesVentaja13_1 = GolpesVentaja13_1 - 1;
                                                     }
                                                 }
                                                 else
                                                 {
                                                     if (Player == "Jugador 4")
                                                     {
-                                                        GolpesVentaja13_1 = GolpesVentaja13_1 + 1;
+                                                        GolpesVentaja13_1 = GolpesVentaja13_1 - 1;
                                                     }
                                                 }
 
@@ -5236,19 +5236,19 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (TipoGolpesVentaja == "Hi Handicap")
                                                 {
 
-                                                    if (HandicapP1 > HandicapP3)
+                                                    if (HandicapP2 > HandicapP4)
                                                     {
-                                                        if (Player == "Jugador 1")
+                                                        if (Player == "Jugador 2")
                                                         {
-                                                            GolpesVentaja14 = GolpesVentaja14 + 1;
+                                                            GolpesVentaja14 = GolpesVentaja14 - 1;
                                                         }
 
                                                     }
                                                     else
                                                     {
-                                                        if (Player == "Jugador 3")
+                                                        if (Player == "Jugador 4")
                                                         {
-                                                            GolpesVentaja14 = GolpesVentaja14 + 1;
+                                                            GolpesVentaja14 = GolpesVentaja14 - 1;
                                                         }
                                                     }
 
@@ -5257,18 +5257,18 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (TipoGolpesVentaja == "Low Handicap")
                                                 {
 
-                                                    if (HandicapP1 < HandicapP3)
+                                                    if (HandicapP2 < HandicapP4)
                                                     {
                                                         if (Player == "Jugador 2")
                                                         {
-                                                            GolpesVentaja14 = GolpesVentaja14 + 1;
+                                                            GolpesVentaja14 = GolpesVentaja14 - 1;
                                                         }
                                                     }
                                                     else
                                                     {
                                                         if (Player == "Jugador 4")
                                                         {
-                                                            GolpesVentaja14 = GolpesVentaja14 + 1;
+                                                            GolpesVentaja14 = GolpesVentaja14 - 1;
                                                         }
                                                     }
 
@@ -5280,19 +5280,19 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
 
-                                                if (HandicapP1 > HandicapP3)
+                                                if (HandicapP2 > HandicapP4)
                                                 {
-                                                    if (Player == "Jugador 1")
+                                                    if (Player == "Jugador 2")
                                                     {
-                                                        GolpesVentaja14_1 = GolpesVentaja14_1 + 1;
+                                                        GolpesVentaja14_1 = GolpesVentaja14_1 - 1;
                                                     }
 
                                                 }
                                                 else
                                                 {
-                                                    if (Player == "Jugador 3")
+                                                    if (Player == "Jugador 4")
                                                     {
-                                                        GolpesVentaja14_1 = GolpesVentaja14_1 + 1;
+                                                        GolpesVentaja14_1 = GolpesVentaja14_1 - 1;
                                                     }
                                                 }
 
@@ -5301,18 +5301,18 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
-                                                if (HandicapP1 < HandicapP3)
+                                                if (HandicapP2 < HandicapP4)
                                                 {
                                                     if (Player == "Jugador 2")
                                                     {
-                                                        GolpesVentaja14_1 = GolpesVentaja14_1 + 1;
+                                                        GolpesVentaja14_1 = GolpesVentaja14_1 - 1;
                                                     }
                                                 }
                                                 else
                                                 {
                                                     if (Player == "Jugador 4")
                                                     {
-                                                        GolpesVentaja14_1 = GolpesVentaja14_1 + 1;
+                                                        GolpesVentaja14_1 = GolpesVentaja14_1 - 1;
                                                     }
                                                 }
 
@@ -5328,19 +5328,19 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (TipoGolpesVentaja == "Hi Handicap")
                                                 {
 
-                                                    if (HandicapP1 > HandicapP3)
+                                                    if (HandicapP2 > HandicapP4)
                                                     {
-                                                        if (Player == "Jugador 1")
+                                                        if (Player == "Jugador 2")
                                                         {
-                                                            GolpesVentaja15 = GolpesVentaja15 + 1;
+                                                            GolpesVentaja15 = GolpesVentaja15 - 1;
                                                         }
 
                                                     }
                                                     else
                                                     {
-                                                        if (Player == "Jugador 3")
+                                                        if (Player == "Jugador 4")
                                                         {
-                                                            GolpesVentaja15 = GolpesVentaja15 + 1;
+                                                            GolpesVentaja15 = GolpesVentaja15 - 1;
                                                         }
                                                     }
 
@@ -5349,18 +5349,18 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (TipoGolpesVentaja == "Low Handicap")
                                                 {
 
-                                                    if (HandicapP1 < HandicapP3)
+                                                    if (HandicapP2 < HandicapP4)
                                                     {
                                                         if (Player == "Jugador 2")
                                                         {
-                                                            GolpesVentaja15 = GolpesVentaja15 + 1;
+                                                            GolpesVentaja15 = GolpesVentaja15 - 1;
                                                         }
                                                     }
                                                     else
                                                     {
                                                         if (Player == "Jugador 4")
                                                         {
-                                                            GolpesVentaja15 = GolpesVentaja15 + 1;
+                                                            GolpesVentaja15 = GolpesVentaja15 - 1;
                                                         }
                                                     }
 
@@ -5372,19 +5372,19 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
 
-                                                if (HandicapP1 > HandicapP3)
+                                                if (HandicapP2 > HandicapP4)
                                                 {
-                                                    if (Player == "Jugador 1")
+                                                    if (Player == "Jugador 2")
                                                     {
-                                                        GolpesVentaja15_1 = GolpesVentaja15_1 + 1;
+                                                        GolpesVentaja15_1 = GolpesVentaja15_1 - 1;
                                                     }
 
                                                 }
                                                 else
                                                 {
-                                                    if (Player == "Jugador 3")
+                                                    if (Player == "Jugador 4")
                                                     {
-                                                        GolpesVentaja15_1 = GolpesVentaja15_1 + 1;
+                                                        GolpesVentaja15_1 = GolpesVentaja15_1 - 1;
                                                     }
                                                 }
 
@@ -5393,18 +5393,18 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
-                                                if (HandicapP1 < HandicapP3)
+                                                if (HandicapP2 < HandicapP4)
                                                 {
                                                     if (Player == "Jugador 2")
                                                     {
-                                                        GolpesVentaja15_1 = GolpesVentaja15_1 + 1;
+                                                        GolpesVentaja15_1 = GolpesVentaja15_1 - 1;
                                                     }
                                                 }
                                                 else
                                                 {
                                                     if (Player == "Jugador 4")
                                                     {
-                                                        GolpesVentaja15_1 = GolpesVentaja15_1 + 1;
+                                                        GolpesVentaja15_1 = GolpesVentaja15_1 - 1;
                                                     }
                                                 }
 
@@ -5414,25 +5414,25 @@ namespace DragonGolfBackEnd.Controllers
 
                                         if (DificultatHoyo16 == Contador)
                                         {
-                                            if (ScoreHole17 > 0)
+                                            if (ScoreHole16 > 0)
                                             {
 
                                                 if (TipoGolpesVentaja == "Hi Handicap")
                                                 {
 
-                                                    if (HandicapP1 > HandicapP3)
+                                                    if (HandicapP2 > HandicapP4)
                                                     {
-                                                        if (Player == "Jugador 1")
+                                                        if (Player == "Jugador 2")
                                                         {
-                                                            GolpesVentaja17 = GolpesVentaja17 + 1;
+                                                            GolpesVentaja17 = GolpesVentaja17 - 1;
                                                         }
 
                                                     }
                                                     else
                                                     {
-                                                        if (Player == "Jugador 3")
+                                                        if (Player == "Jugador 4")
                                                         {
-                                                            GolpesVentaja17 = GolpesVentaja17 + 1;
+                                                            GolpesVentaja16 = GolpesVentaja16 - 1;
                                                         }
                                                     }
 
@@ -5441,18 +5441,18 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (TipoGolpesVentaja == "Low Handicap")
                                                 {
 
-                                                    if (HandicapP1 < HandicapP3)
+                                                    if (HandicapP2 < HandicapP4)
                                                     {
                                                         if (Player == "Jugador 2")
                                                         {
-                                                            GolpesVentaja17 = GolpesVentaja17 + 1;
+                                                            GolpesVentaja16 = GolpesVentaja16 - 1;
                                                         }
                                                     }
                                                     else
                                                     {
                                                         if (Player == "Jugador 4")
                                                         {
-                                                            GolpesVentaja17 = GolpesVentaja17 + 1;
+                                                            GolpesVentaja16 = GolpesVentaja16 - 1;
                                                         }
                                                     }
 
@@ -5464,19 +5464,19 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
 
-                                                if (HandicapP1 > HandicapP3)
+                                                if (HandicapP2 > HandicapP4)
                                                 {
-                                                    if (Player == "Jugador 1")
+                                                    if (Player == "Jugador 2")
                                                     {
-                                                        GolpesVentaja17_1 = GolpesVentaja17_1 + 1;
+                                                        GolpesVentaja16_1 = GolpesVentaja16_1 - 1;
                                                     }
 
                                                 }
                                                 else
                                                 {
-                                                    if (Player == "Jugador 3")
+                                                    if (Player == "Jugador 4")
                                                     {
-                                                        GolpesVentaja17_1 = GolpesVentaja17_1 + 1;
+                                                        GolpesVentaja16_1 = GolpesVentaja16_1 - 1;
                                                     }
                                                 }
 
@@ -5485,18 +5485,18 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
-                                                if (HandicapP1 < HandicapP3)
+                                                if (HandicapP2 < HandicapP4)
                                                 {
                                                     if (Player == "Jugador 2")
                                                     {
-                                                        GolpesVentaja17_1 = GolpesVentaja17_1 + 1;
+                                                        GolpesVentaja16_1 = GolpesVentaja16_1 - 1;
                                                     }
                                                 }
                                                 else
                                                 {
                                                     if (Player == "Jugador 4")
                                                     {
-                                                        GolpesVentaja17_1 = GolpesVentaja17_1 + 1;
+                                                        GolpesVentaja16_1 = GolpesVentaja16_1 - 1;
                                                     }
                                                 }
 
@@ -5512,19 +5512,19 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (TipoGolpesVentaja == "Hi Handicap")
                                                 {
 
-                                                    if (HandicapP1 > HandicapP3)
+                                                    if (HandicapP2 > HandicapP4)
                                                     {
-                                                        if (Player == "Jugador 1")
+                                                        if (Player == "Jugador 2")
                                                         {
-                                                            GolpesVentaja17 = GolpesVentaja17 + 1;
+                                                            GolpesVentaja17 = GolpesVentaja17 - 1;
                                                         }
 
                                                     }
                                                     else
                                                     {
-                                                        if (Player == "Jugador 3")
+                                                        if (Player == "Jugador 4")
                                                         {
-                                                            GolpesVentaja17 = GolpesVentaja17 + 1;
+                                                            GolpesVentaja17 = GolpesVentaja17 - 1;
                                                         }
                                                     }
 
@@ -5533,18 +5533,18 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (TipoGolpesVentaja == "Low Handicap")
                                                 {
 
-                                                    if (HandicapP1 < HandicapP3)
+                                                    if (HandicapP2 < HandicapP4)
                                                     {
                                                         if (Player == "Jugador 2")
                                                         {
-                                                            GolpesVentaja17 = GolpesVentaja17 + 1;
+                                                            GolpesVentaja17 = GolpesVentaja17 - 1;
                                                         }
                                                     }
                                                     else
                                                     {
                                                         if (Player == "Jugador 4")
                                                         {
-                                                            GolpesVentaja17 = GolpesVentaja17 + 1;
+                                                            GolpesVentaja17 = GolpesVentaja17 - 1;
                                                         }
                                                     }
 
@@ -5556,19 +5556,19 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
 
-                                                if (HandicapP1 > HandicapP3)
+                                                if (HandicapP2 > HandicapP4)
                                                 {
-                                                    if (Player == "Jugador 1")
+                                                    if (Player == "Jugador 2")
                                                     {
-                                                        GolpesVentaja17_1 = GolpesVentaja17_1 + 1;
+                                                        GolpesVentaja17_1 = GolpesVentaja17_1 - 1;
                                                     }
 
                                                 }
                                                 else
                                                 {
-                                                    if (Player == "Jugador 3")
+                                                    if (Player == "Jugador 4")
                                                     {
-                                                        GolpesVentaja17_1 = GolpesVentaja17_1 + 1;
+                                                        GolpesVentaja17_1 = GolpesVentaja17_1 - 1;
                                                     }
                                                 }
 
@@ -5577,18 +5577,18 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
-                                                if (HandicapP1 < HandicapP3)
+                                                if (HandicapP2 < HandicapP4)
                                                 {
                                                     if (Player == "Jugador 2")
                                                     {
-                                                        GolpesVentaja17_1 = GolpesVentaja17_1 + 1;
+                                                        GolpesVentaja17_1 = GolpesVentaja17_1 - 1;
                                                     }
                                                 }
                                                 else
                                                 {
                                                     if (Player == "Jugador 4")
                                                     {
-                                                        GolpesVentaja17_1 = GolpesVentaja17_1 + 1;
+                                                        GolpesVentaja17_1 = GolpesVentaja17_1 - 1;
                                                     }
                                                 }
 
@@ -5604,19 +5604,19 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (TipoGolpesVentaja == "Hi Handicap")
                                                 {
 
-                                                    if (HandicapP1 > HandicapP3)
+                                                    if (HandicapP2 > HandicapP4)
                                                     {
-                                                        if (Player == "Jugador 1")
+                                                        if (Player == "Jugador 2")
                                                         {
-                                                            GolpesVentaja18 = GolpesVentaja18 + 1;
+                                                            GolpesVentaja18 = GolpesVentaja18 - 1;
                                                         }
 
                                                     }
                                                     else
                                                     {
-                                                        if (Player == "Jugador 3")
+                                                        if (Player == "Jugador 4")
                                                         {
-                                                            GolpesVentaja18 = GolpesVentaja18 + 1;
+                                                            GolpesVentaja18 = GolpesVentaja18 - 1;
                                                         }
                                                     }
 
@@ -5625,18 +5625,18 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (TipoGolpesVentaja == "Low Handicap")
                                                 {
 
-                                                    if (HandicapP1 < HandicapP3)
+                                                    if (HandicapP2 < HandicapP4)
                                                     {
                                                         if (Player == "Jugador 2")
                                                         {
-                                                            GolpesVentaja18 = GolpesVentaja18 + 1;
+                                                            GolpesVentaja18 = GolpesVentaja18 - 1;
                                                         }
                                                     }
                                                     else
                                                     {
                                                         if (Player == "Jugador 4")
                                                         {
-                                                            GolpesVentaja18 = GolpesVentaja18 + 1;
+                                                            GolpesVentaja18 = GolpesVentaja18 - 1;
                                                         }
                                                     }
 
@@ -5650,17 +5650,17 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP1 > HandicapP3)
                                                 {
-                                                    if (Player == "Jugador 1")
+                                                    if (Player == "Jugador 2")
                                                     {
-                                                        GolpesVentaja18_1 = GolpesVentaja18_1 + 1;
+                                                        GolpesVentaja18_1 = GolpesVentaja18_1 - 1;
                                                     }
 
                                                 }
                                                 else
                                                 {
-                                                    if (Player == "Jugador 3")
+                                                    if (Player == "Jugador 4")
                                                     {
-                                                        GolpesVentaja18_1 = GolpesVentaja18_1 + 1;
+                                                        GolpesVentaja18_1 = GolpesVentaja18_1 - 1;
                                                     }
                                                 }
 
@@ -5669,18 +5669,18 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
-                                                if (HandicapP1 < HandicapP3)
+                                                if (HandicapP2 < HandicapP4)
                                                 {
                                                     if (Player == "Jugador 2")
                                                     {
-                                                        GolpesVentaja18_1 = GolpesVentaja18_1 + 1;
+                                                        GolpesVentaja18_1 = GolpesVentaja18_1 - 1;
                                                     }
                                                 }
                                                 else
                                                 {
                                                     if (Player == "Jugador 4")
                                                     {
-                                                        GolpesVentaja18_1 = GolpesVentaja18_1 + 1;
+                                                        GolpesVentaja18_1 = GolpesVentaja18_1 - 1;
                                                     }
                                                 }
 
@@ -5702,9 +5702,19 @@ namespace DragonGolfBackEnd.Controllers
                             int TotalGolpesVentajaFront = 0;
                             int TotalGolpesVentajaBack = 0;
 
+                            TotalGolpesVentajaFront = GolpesVentaja1 + GolpesVentaja2 + GolpesVentaja3 + GolpesVentaja4 + GolpesVentaja5 + GolpesVentaja6 + GolpesVentaja7 + GolpesVentaja8 + GolpesVentaja9;
+                            TotalGolpesVentajaBack = GolpesVentaja10 + GolpesVentaja11 + GolpesVentaja12 + GolpesVentaja13 + GolpesVentaja14 + GolpesVentaja15 + GolpesVentaja16 + GolpesVentaja17 + GolpesVentaja18;
 
-                            if (ventaja == Convert.ToInt32(row["PlayerId"]))
+
+                            
+
+                            if (((-1 * TotalGolpesVentajaFront) + (-1 * TotalGolpesVentajaBack))>0)
                             {
+                                 TotalGolpesVentajaFront = 0;
+                                 TotalGolpesVentajaBack = 0;
+
+                                 ventaja =  PlayerId;
+
                                 switch (HoyoInicial)
                                 {
                                     case 1:
@@ -5825,6 +5835,9 @@ namespace DragonGolfBackEnd.Controllers
                                         break;
                                 }
                             }
+
+                            SumaGolpesVentaja = (-1 * TotalGolpesVentajaFront) + (-1 * TotalGolpesVentajaBack);
+
                             ParametrosSalida ent = new ParametrosSalida
                             {
 
@@ -5903,9 +5916,9 @@ namespace DragonGolfBackEnd.Controllers
                                 IDUsuarioCreo = Convert.ToInt32(row["IDUsuarioCreo"]),
                                 ScoreIn = Convert.ToInt32(row["ScoreIn"]),
                                 ScoreOut = Convert.ToInt32(row["ScoreOut"]),
-                                ScoreInGP = Convert.ToInt32(row["ScoreIn"]) - TotalGolpesVentajaFront,
-                                ScoreOutGP = Convert.ToInt32(row["ScoreOut"]) - TotalGolpesVentajaBack,
-                                TotalScoreGP = Convert.ToInt32(row["TotalScore"]) - TotalGolpesVentajaFront - TotalGolpesVentajaBack,
+                                ScoreInGP = Convert.ToInt32(row["ScoreIn"]) - (-1 * TotalGolpesVentajaFront),
+                                ScoreOutGP = Convert.ToInt32(row["ScoreOut"]) - (-1 * TotalGolpesVentajaBack),
+                                TotalScoreGP = Convert.ToInt32(row["TotalScore"]) - (-1 * TotalGolpesVentajaFront) - (-1 * TotalGolpesVentajaBack),
                                 TotalScore = Convert.ToInt32(row["TotalScore"]),
                                 GolpesVentaja1 = GolpesVentaja1_1,
                                 GolpesVentaja2 = GolpesVentaja2_1,
@@ -5963,7 +5976,7 @@ namespace DragonGolfBackEnd.Controllers
                                 Hoyo16Presion = Convert.ToString(row["Hoyo16Presion"]),
                                 Hoyo17Presion = Convert.ToString(row["Hoyo17Presion"]),
                                 Hoyo18Presion = Convert.ToString(row["Hoyo18Presion"]),
-                                SumaGolpesVentaja = SumaGolpesVentaja,
+                                SumaGolpesVentaja = (-1 * SumaGolpesVentaja),
                                 initHole = Convert.ToInt32(row["initHole"]),
 
                             };
