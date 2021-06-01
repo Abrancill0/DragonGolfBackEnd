@@ -1269,11 +1269,11 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP2 < HandicapP4)
                                                 {
-                                                    ScoreHole1_P2 = ScoreHole1_P4 - 1;
+                                                    ScoreHole1_P2 = ScoreHole1_P2 - 1;
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole1_P2 = ScoreHole1_P4 - 1;
+                                                    ScoreHole1_P4 = ScoreHole1_P4 - 1;
                                                 }
 
 
@@ -1310,11 +1310,11 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP2 < HandicapP4)
                                                 {
-                                                    ScoreHole2_P2 = ScoreHole2_P4 - 1;
+                                                    ScoreHole2_P2 = ScoreHole2_P2 - 1;
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole2_P2 = ScoreHole2_P4 - 1;
+                                                    ScoreHole2_P4 = ScoreHole2_P4 - 1;
                                                 }
 
 
@@ -1348,11 +1348,11 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP2 < HandicapP4)
                                                 {
-                                                    ScoreHole3_P2 = ScoreHole3_P4 - 1;
+                                                    ScoreHole3_P2 = ScoreHole3_P2 - 1;
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole3_P2 = ScoreHole3_P4 - 1;
+                                                    ScoreHole3_P4 = ScoreHole3_P4 - 1;
                                                 }
 
                                             }
@@ -1385,11 +1385,11 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP2 < HandicapP4)
                                                 {
-                                                    ScoreHole4_P2 = ScoreHole4_P4 - 1;
+                                                    ScoreHole4_P2 = ScoreHole4_P2 - 1;
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole4_P2 = ScoreHole4_P4 - 1;
+                                                    ScoreHole4_P4 = ScoreHole4_P4 - 1;
                                                 }
 
 
@@ -1423,11 +1423,11 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP2 < HandicapP4)
                                                 {
-                                                    ScoreHole5_P2 = ScoreHole5_P4 - 1;
+                                                    ScoreHole5_P2 = ScoreHole5_P2 - 1;
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole5_P2 = ScoreHole5_P4 - 1;
+                                                    ScoreHole5_P4 = ScoreHole5_P4 - 1;
                                                 }
 
 
@@ -1461,11 +1461,11 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP2 < HandicapP4)
                                                 {
-                                                    ScoreHole6_P2 = ScoreHole6_P4 - 1;
+                                                    ScoreHole6_P2 = ScoreHole6_P2 - 1;
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole6_P2 = ScoreHole6_P4 - 1;
+                                                    ScoreHole6_P4 = ScoreHole6_P4 - 1;
                                                 }
 
 
@@ -1500,11 +1500,11 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP2 < HandicapP4)
                                                 {
-                                                    ScoreHole7_P2 = ScoreHole7_P4 - 1;
+                                                    ScoreHole7_P2 = ScoreHole7_P2 - 1;
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole7_P2 = ScoreHole7_P4 - 1;
+                                                    ScoreHole7_P4 = ScoreHole7_P4 - 1;
                                                 }
 
 
@@ -1538,11 +1538,11 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP2 < HandicapP4)
                                                 {
-                                                    ScoreHole8_P2 = ScoreHole8_P4 - 1;
+                                                    ScoreHole8_P2 = ScoreHole8_P2 - 1;
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole8_P2 = ScoreHole8_P4 - 1;
+                                                    ScoreHole8_P4 = ScoreHole8_P4 - 1;
                                                 }
 
 
@@ -1576,11 +1576,11 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP2 < HandicapP4)
                                                 {
-                                                    ScoreHole9_P2 = ScoreHole9_P4 - 1;
+                                                    ScoreHole9_P2 = ScoreHole9_P2 - 1;
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole9_P2 = ScoreHole9_P4 - 1;
+                                                    ScoreHole9_P4 = ScoreHole9_P4 - 1;
                                                 }
 
 
@@ -1615,11 +1615,11 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP2 < HandicapP4)
                                                 {
-                                                    ScoreHole10_P2 = ScoreHole10_P4 - 1;
+                                                    ScoreHole10_P2 = ScoreHole10_P2 - 1;
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole10_P2 = ScoreHole10_P4 - 1;
+                                                    ScoreHole10_P4 = ScoreHole10_P4 - 1;
                                                 }
 
 
@@ -1655,11 +1655,11 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP2 < HandicapP4)
                                                 {
-                                                    ScoreHole11_P2 = ScoreHole11_P4 - 1;
+                                                    ScoreHole11_P2 = ScoreHole11_P2 - 1;
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole11_P2 = ScoreHole11_P4 - 1;
+                                                    ScoreHole11_P4 = ScoreHole11_P4 - 1;
                                                 }
 
 
@@ -1694,11 +1694,11 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP2 < HandicapP4)
                                                 {
-                                                    ScoreHole12_P2 = ScoreHole12_P4 - 1;
+                                                    ScoreHole12_P2 = ScoreHole12_P2 - 1;
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole12_P2 = ScoreHole12_P4 - 1;
+                                                    ScoreHole12_P4 = ScoreHole12_P4 - 1;
                                                 }
 
 
@@ -1732,11 +1732,11 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP2 < HandicapP4)
                                                 {
-                                                    ScoreHole13_P2 = ScoreHole13_P4 - 1;
+                                                    ScoreHole13_P2 = ScoreHole13_P2 - 1;
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole13_P2 = ScoreHole13_P4 - 1;
+                                                    ScoreHole13_P4 = ScoreHole13_P4 - 1;
                                                 }
 
 
@@ -1770,11 +1770,11 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP2 < HandicapP4)
                                                 {
-                                                    ScoreHole14_P2 = ScoreHole14_P4 - 1;
+                                                    ScoreHole14_P2 = ScoreHole14_P2 - 1;
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole14_P2 = ScoreHole14_P4 - 1;
+                                                    ScoreHole14_P4 = ScoreHole14_P4 - 1;
                                                 }
 
 
@@ -1808,11 +1808,11 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP2 < HandicapP4)
                                                 {
-                                                    ScoreHole15_P2 = ScoreHole15_P4 - 1;
+                                                    ScoreHole15_P2 = ScoreHole15_P2 - 1;
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole15_P2 = ScoreHole15_P4 - 1;
+                                                    ScoreHole15_P4 = ScoreHole15_P4 - 1;
                                                 }
 
 
@@ -1846,11 +1846,11 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP2 < HandicapP4)
                                                 {
-                                                    ScoreHole16_P2 = ScoreHole16_P4 - 1;
+                                                    ScoreHole16_P2 = ScoreHole16_P2 - 1;
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole16_P2 = ScoreHole16_P4 - 1;
+                                                    ScoreHole16_P4 = ScoreHole16_P4 - 1;
                                                 }
 
 
@@ -1885,11 +1885,11 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP2 < HandicapP4)
                                                 {
-                                                    ScoreHole17_P2 = ScoreHole17_P4 - 1;
+                                                    ScoreHole17_P2 = ScoreHole17_P2 - 1;
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole17_P2 = ScoreHole17_P4 - 1;
+                                                    ScoreHole17_P4 = ScoreHole17_P4 - 1;
                                                 }
 
 
@@ -1923,11 +1923,11 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP2 < HandicapP4)
                                                 {
-                                                    ScoreHole18_P2 = ScoreHole18_P4 - 1;
+                                                    ScoreHole18_P2 = ScoreHole18_P2 - 1;
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole18_P2 = ScoreHole18_P4 - 1;
+                                                    ScoreHole18_P4 = ScoreHole18_P4 - 1;
                                                 }
 
 
