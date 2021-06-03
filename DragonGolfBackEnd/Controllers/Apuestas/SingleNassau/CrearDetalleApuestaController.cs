@@ -39,7 +39,7 @@ namespace DragonGolfBackEnd.Controllers
             public int BetD_Match { get; set; }
             public float BetD_Carry { get; set; }
             public float BetD_Medal { get; set; }
-            public int BetD_AutoPress { get; set; }
+            public double BetD_AutoPress { get; set; }
             public int BetD_ManuallyOverrideAdv { get; set; }
             public int BetD_AdvStrokers { get; set; }
         }
@@ -64,7 +64,7 @@ namespace DragonGolfBackEnd.Controllers
                 comando.Parameters.Add("@BetD_Match", SqlDbType.Int);
                 comando.Parameters.Add("@BetD_Carry", SqlDbType.Float);
                 comando.Parameters.Add("@BetD_Medal", SqlDbType.Float);
-                comando.Parameters.Add("@BetD_AutoPress", SqlDbType.Int);
+                comando.Parameters.Add("@BetD_AutoPress", SqlDbType.Float);
                 comando.Parameters.Add("@BetD_ManuallyOverrideAdv", SqlDbType.Int);
                 comando.Parameters.Add("@BetD_AdvStrokers", SqlDbType.Int);
 

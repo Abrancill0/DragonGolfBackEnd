@@ -99,42 +99,42 @@ namespace DragonGolfBackEnd.Controllers
                 string Mensaje = "";
                 int Estatus = 0;
 
-                int ScoreHole1_P1 = 0;
-                int ScoreHole2_P1 = 0;
-                int ScoreHole3_P1 = 0;
-                int ScoreHole4_P1 = 0;
-                int ScoreHole5_P1 = 0;
-                int ScoreHole6_P1 = 0;
-                int ScoreHole7_P1 = 0;
-                int ScoreHole8_P1 = 0;
-                int ScoreHole9_P1 = 0;
-                int ScoreHole10_P1 = 0;
-                int ScoreHole11_P1 = 0;
-                int ScoreHole12_P1 = 0;
-                int ScoreHole13_P1 = 0;
-                int ScoreHole14_P1 = 0;
-                int ScoreHole15_P1 = 0;
-                int ScoreHole16_P1 = 0;
-                int ScoreHole17_P1 = 0;
-                int ScoreHole18_P1 = 0;
-                int ScoreHole1_P2 = 0;
-                int ScoreHole2_P2 = 0;
-                int ScoreHole3_P2 = 0;
-                int ScoreHole4_P2 = 0;
-                int ScoreHole5_P2 = 0;
-                int ScoreHole6_P2 = 0;
-                int ScoreHole7_P2 = 0;
-                int ScoreHole8_P2 = 0;
-                int ScoreHole9_P2 = 0;
-                int ScoreHole10_P2 = 0;
-                int ScoreHole11_P2 = 0;
-                int ScoreHole12_P2 = 0;
-                int ScoreHole13_P2 = 0;
-                int ScoreHole14_P2 = 0;
-                int ScoreHole15_P2 = 0;
-                int ScoreHole16_P2 = 0;
-                int ScoreHole17_P2 = 0;
-                int ScoreHole18_P2 = 0;
+                double ScoreHole1_P1 = 0;
+                double ScoreHole2_P1 = 0;
+                double ScoreHole3_P1 = 0;
+                double ScoreHole4_P1 = 0;
+                double ScoreHole5_P1 = 0;
+                double ScoreHole6_P1 = 0;
+                double ScoreHole7_P1 = 0;
+                double ScoreHole8_P1 = 0;
+                double ScoreHole9_P1 = 0;
+                double ScoreHole10_P1 = 0;
+                double ScoreHole11_P1 = 0;
+                double ScoreHole12_P1 = 0;
+                double ScoreHole13_P1 = 0;
+                double ScoreHole14_P1 = 0;
+                double ScoreHole15_P1 = 0;
+                double ScoreHole16_P1 = 0;
+                double ScoreHole17_P1 = 0;
+                double ScoreHole18_P1 = 0;
+                double ScoreHole1_P2 = 0;
+                double ScoreHole2_P2 = 0;
+                double ScoreHole3_P2 = 0;
+                double ScoreHole4_P2 = 0;
+                double ScoreHole5_P2 = 0;
+                double ScoreHole6_P2 = 0;
+                double ScoreHole7_P2 = 0;
+                double ScoreHole8_P2 = 0;
+                double ScoreHole9_P2 = 0;
+                double ScoreHole10_P2 = 0;
+                double ScoreHole11_P2 = 0;
+                double ScoreHole12_P2 = 0;
+                double ScoreHole13_P2 = 0;
+                double ScoreHole14_P2 = 0;
+                double ScoreHole15_P2 = 0;
+                double ScoreHole16_P2 = 0;
+                double ScoreHole17_P2 = 0;
+                double ScoreHole18_P2 = 0;
                 int PlayerID1 = 0;
                 int PlayerID2 = 0;
                 int AutoPress = 0;
@@ -189,66 +189,66 @@ namespace DragonGolfBackEnd.Controllers
                             return Res1;
                         }
 
-                        ScoreHole1_P1 = Convert.ToInt32(row["ScoreHole1_P1"]);
-                        ScoreHole2_P1 = Convert.ToInt32(row["ScoreHole2_P1"]);
-                        ScoreHole3_P1 = Convert.ToInt32(row["ScoreHole3_P1"]);
-                        ScoreHole4_P1 = Convert.ToInt32(row["ScoreHole4_P1"]);
-                        ScoreHole5_P1 = Convert.ToInt32(row["ScoreHole5_P1"]);
-                        ScoreHole6_P1 = Convert.ToInt32(row["ScoreHole6_P1"]);
-                        ScoreHole7_P1 = Convert.ToInt32(row["ScoreHole7_P1"]);
-                        ScoreHole8_P1 = Convert.ToInt32(row["ScoreHole8_P1"]);
-                        ScoreHole9_P1 = Convert.ToInt32(row["ScoreHole9_P1"]);
-                        ScoreHole10_P1 = Convert.ToInt32(row["ScoreHole10_P1"]);
-                        ScoreHole11_P1 = Convert.ToInt32(row["ScoreHole11_P1"]);
-                        ScoreHole12_P1 = Convert.ToInt32(row["ScoreHole12_P1"]);
-                        ScoreHole13_P1 = Convert.ToInt32(row["ScoreHole13_P1"]);
-                        ScoreHole14_P1 = Convert.ToInt32(row["ScoreHole14_P1"]);
-                        ScoreHole15_P1 = Convert.ToInt32(row["ScoreHole15_P1"]);
-                        ScoreHole16_P1 = Convert.ToInt32(row["ScoreHole16_P1"]);
-                        ScoreHole17_P1 = Convert.ToInt32(row["ScoreHole17_P1"]);
-                        ScoreHole18_P1 = Convert.ToInt32(row["ScoreHole18_P1"]);
-                        ScoreHole1_P2 = Convert.ToInt32(row["ScoreHole1_P2"]);
-                        ScoreHole2_P2 = Convert.ToInt32(row["ScoreHole2_P2"]);
-                        ScoreHole3_P2 = Convert.ToInt32(row["ScoreHole3_P2"]);
-                        ScoreHole4_P2 = Convert.ToInt32(row["ScoreHole4_P2"]);
-                        ScoreHole5_P2 = Convert.ToInt32(row["ScoreHole5_P2"]);
-                        ScoreHole6_P2 = Convert.ToInt32(row["ScoreHole6_P2"]);
-                        ScoreHole7_P2 = Convert.ToInt32(row["ScoreHole7_P2"]);
-                        ScoreHole8_P2 = Convert.ToInt32(row["ScoreHole8_P2"]);
-                        ScoreHole9_P2 = Convert.ToInt32(row["ScoreHole9_P2"]);
-                        ScoreHole10_P2 = Convert.ToInt32(row["ScoreHole10_P2"]);
-                        ScoreHole11_P2 = Convert.ToInt32(row["ScoreHole11_P2"]);
-                        ScoreHole12_P2 = Convert.ToInt32(row["ScoreHole12_P2"]);
-                        ScoreHole13_P2 = Convert.ToInt32(row["ScoreHole13_P2"]);
-                        ScoreHole14_P2 = Convert.ToInt32(row["ScoreHole14_P2"]);
-                        ScoreHole15_P2 = Convert.ToInt32(row["ScoreHole15_P2"]);
-                        ScoreHole16_P2 = Convert.ToInt32(row["ScoreHole16_P2"]);
-                        ScoreHole17_P2 = Convert.ToInt32(row["ScoreHole17_P2"]);
-                        ScoreHole18_P2 = Convert.ToInt32(row["ScoreHole18_P2"]);
+                        ScoreHole1_P1 = Convert.ToDouble(row["ScoreHole1_P1"]);
+                        ScoreHole2_P1 = Convert.ToDouble(row["ScoreHole2_P1"]);
+                        ScoreHole3_P1 = Convert.ToDouble(row["ScoreHole3_P1"]);
+                        ScoreHole4_P1 = Convert.ToDouble(row["ScoreHole4_P1"]);
+                        ScoreHole5_P1 = Convert.ToDouble(row["ScoreHole5_P1"]);
+                        ScoreHole6_P1 = Convert.ToDouble(row["ScoreHole6_P1"]);
+                        ScoreHole7_P1 = Convert.ToDouble(row["ScoreHole7_P1"]);
+                        ScoreHole8_P1 = Convert.ToDouble(row["ScoreHole8_P1"]);
+                        ScoreHole9_P1 = Convert.ToDouble(row["ScoreHole9_P1"]);
+                        ScoreHole10_P1 = Convert.ToDouble(row["ScoreHole10_P1"]);
+                        ScoreHole11_P1 = Convert.ToDouble(row["ScoreHole11_P1"]);
+                        ScoreHole12_P1 = Convert.ToDouble(row["ScoreHole12_P1"]);
+                        ScoreHole13_P1 = Convert.ToDouble(row["ScoreHole13_P1"]);
+                        ScoreHole14_P1 = Convert.ToDouble(row["ScoreHole14_P1"]);
+                        ScoreHole15_P1 = Convert.ToDouble(row["ScoreHole15_P1"]);
+                        ScoreHole16_P1 = Convert.ToDouble(row["ScoreHole16_P1"]);
+                        ScoreHole17_P1 = Convert.ToDouble(row["ScoreHole17_P1"]);
+                        ScoreHole18_P1 = Convert.ToDouble(row["ScoreHole18_P1"]);
+                        ScoreHole1_P2 = Convert.ToDouble(row["ScoreHole1_P2"]);
+                        ScoreHole2_P2 = Convert.ToDouble(row["ScoreHole2_P2"]);
+                        ScoreHole3_P2 = Convert.ToDouble(row["ScoreHole3_P2"]);
+                        ScoreHole4_P2 = Convert.ToDouble(row["ScoreHole4_P2"]);
+                        ScoreHole5_P2 = Convert.ToDouble(row["ScoreHole5_P2"]);
+                        ScoreHole6_P2 = Convert.ToDouble(row["ScoreHole6_P2"]);
+                        ScoreHole7_P2 = Convert.ToDouble(row["ScoreHole7_P2"]);
+                        ScoreHole8_P2 = Convert.ToDouble(row["ScoreHole8_P2"]);
+                        ScoreHole9_P2 = Convert.ToDouble(row["ScoreHole9_P2"]);
+                        ScoreHole10_P2 = Convert.ToDouble(row["ScoreHole10_P2"]);
+                        ScoreHole11_P2 = Convert.ToDouble(row["ScoreHole11_P2"]);
+                        ScoreHole12_P2 = Convert.ToDouble(row["ScoreHole12_P2"]);
+                        ScoreHole13_P2 = Convert.ToDouble(row["ScoreHole13_P2"]);
+                        ScoreHole14_P2 = Convert.ToDouble(row["ScoreHole14_P2"]);
+                        ScoreHole15_P2 = Convert.ToDouble(row["ScoreHole15_P2"]);
+                        ScoreHole16_P2 = Convert.ToDouble(row["ScoreHole16_P2"]);
+                        ScoreHole17_P2 = Convert.ToDouble(row["ScoreHole17_P2"]);
+                        ScoreHole18_P2 = Convert.ToDouble(row["ScoreHole18_P2"]);
 
                         PlayerID1 = Convert.ToInt32(row["PlayerID1"]);
                         PlayerID2 = Convert.ToInt32(row["PlayerID2"]);
                         AutoPress = Convert.ToInt32(row["AutoPress"]);
                         Adv = Convert.ToInt32(row["Adv"]);
 
-                        DificultatHoyo1 = Convert.ToInt32(row["DificultatHoyo1"]);//7
-                        DificultatHoyo2 = Convert.ToInt32(row["DificultatHoyo2"]);//1
-                        DificultatHoyo3 = Convert.ToInt32(row["DificultatHoyo3"]);//8
-                        DificultatHoyo4 = Convert.ToInt32(row["DificultatHoyo4"]);//5
-                        DificultatHoyo5 = Convert.ToInt32(row["DificultatHoyo5"]);//2
-                        DificultatHoyo6 = Convert.ToInt32(row["DificultatHoyo6"]);//6
-                        DificultatHoyo7 = Convert.ToInt32(row["DificultatHoyo7"]);//4
-                        DificultatHoyo8 = Convert.ToInt32(row["DificultatHoyo8"]);//3
-                        DificultatHoyo9 = Convert.ToInt32(row["DificultatHoyo9"]);//9
-                        DificultatHoyo10 = Convert.ToInt32(row["DificultatHoyo10"]);//10
-                        DificultatHoyo11 = Convert.ToInt32(row["DificultatHoyo11"]);//11
-                        DificultatHoyo12 = Convert.ToInt32(row["DificultatHoyo12"]);//14
-                        DificultatHoyo13 = Convert.ToInt32(row["DificultatHoyo13"]);//15
-                        DificultatHoyo14 = Convert.ToInt32(row["DificultatHoyo14"]);//13
-                        DificultatHoyo15 = Convert.ToInt32(row["DificultatHoyo15"]);//16
-                        DificultatHoyo16 = Convert.ToInt32(row["DificultatHoyo16"]);//17
-                        DificultatHoyo17 = Convert.ToInt32(row["DificultatHoyo17"]);//18
-                        DificultatHoyo18 = Convert.ToInt32(row["DificultatHoyo18"]);//12
+                        DificultatHoyo1 = Convert.ToInt32(row["DificultatHoyo1"]);
+                        DificultatHoyo2 = Convert.ToInt32(row["DificultatHoyo2"]);
+                        DificultatHoyo3 = Convert.ToInt32(row["DificultatHoyo3"]);
+                        DificultatHoyo4 = Convert.ToInt32(row["DificultatHoyo4"]);
+                        DificultatHoyo5 = Convert.ToInt32(row["DificultatHoyo5"]);
+                        DificultatHoyo6 = Convert.ToInt32(row["DificultatHoyo6"]);
+                        DificultatHoyo7 = Convert.ToInt32(row["DificultatHoyo7"]);
+                        DificultatHoyo8 = Convert.ToInt32(row["DificultatHoyo8"]);
+                        DificultatHoyo9 = Convert.ToInt32(row["DificultatHoyo9"]);
+                        DificultatHoyo10 = Convert.ToInt32(row["DificultatHoyo10"]);
+                        DificultatHoyo11 = Convert.ToInt32(row["DificultatHoyo11"]);
+                        DificultatHoyo12 = Convert.ToInt32(row["DificultatHoyo12"]);
+                        DificultatHoyo13 = Convert.ToInt32(row["DificultatHoyo13"]);
+                        DificultatHoyo14 = Convert.ToInt32(row["DificultatHoyo14"]);
+                        DificultatHoyo15 = Convert.ToInt32(row["DificultatHoyo15"]);
+                        DificultatHoyo16 = Convert.ToInt32(row["DificultatHoyo16"]);
+                        DificultatHoyo17 = Convert.ToInt32(row["DificultatHoyo17"]);
+                        DificultatHoyo18 = Convert.ToInt32(row["DificultatHoyo18"]);
 
                         int Contador = 0;
 
@@ -281,7 +281,14 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole1_P1 > 0 && ScoreHole1_P2 > 0)
                                         {
-                                            ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                            if (Contador == AdvPositivo)
+                                            {
+                                                ScoreHole1_P1 = ScoreHole1_P1 - 0.5;
+                                            }
+                                            else
+                                            {
+                                                ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                            }
                                         }
 
                                     }
@@ -290,7 +297,16 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole2_P1 > 0 && ScoreHole2_P2 > 0)
                                         {
-                                            ScoreHole2_P1 = ScoreHole2_P1 - 1;
+                                           
+
+                                            if (Contador == AdvPositivo)
+                                            {
+                                                ScoreHole2_P1 = ScoreHole2_P1 - 0.5;
+                                            }
+                                            else
+                                            {
+                                                ScoreHole2_P1 = ScoreHole2_P1 - 1;
+                                            }
                                         }
 
                                     }
@@ -299,7 +315,16 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole3_P1 > 0 && ScoreHole3_P2 > 0)
                                         {
-                                            ScoreHole3_P1 = ScoreHole3_P1 - 1;
+                                            
+
+                                            if (Contador == AdvPositivo)
+                                            {
+                                                ScoreHole3_P1 = ScoreHole3_P1 - 0.5;
+                                            }
+                                            else
+                                            {
+                                                ScoreHole3_P1 = ScoreHole3_P1 - 1;
+                                            }
                                         }
 
                                     }
@@ -308,7 +333,16 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole4_P1 > 0 && ScoreHole4_P2 > 0)
                                         {
-                                            ScoreHole4_P1 = ScoreHole4_P1 - 1;
+                                           
+                                            if (Contador == AdvPositivo)
+                                            {
+                                                ScoreHole4_P1 = ScoreHole4_P1 - 0.5;
+                                            }
+                                            else
+                                            {
+                                                ScoreHole4_P1 = ScoreHole4_P1 - 1;
+
+                                            }
                                         }
 
                                     }
@@ -317,7 +351,15 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole5_P1 > 0 && ScoreHole5_P2 > 0)
                                         {
-                                            ScoreHole5_P1 = ScoreHole5_P1 - 1;
+                                
+                                            if (Contador == AdvPositivo)
+                                            {
+                                                ScoreHole5_P1 = ScoreHole5_P1 - 0.5;
+                                            }
+                                            else
+                                            {
+                                                ScoreHole5_P1 = ScoreHole5_P1 - 1;
+                                            }
                                         }
 
                                     }
@@ -326,7 +368,16 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole6_P1 > 0 && ScoreHole6_P2 > 0)
                                         {
-                                            ScoreHole6_P1 = ScoreHole6_P1 - 1;
+                                           
+
+                                            if (Contador == AdvPositivo)
+                                            {
+                                                ScoreHole6_P1 = ScoreHole6_P1 - 0.5;
+                                            }
+                                            else
+                                            {
+                                                ScoreHole6_P1 = ScoreHole6_P1 - 1;
+                                            }
                                         }
 
                                     }
@@ -335,7 +386,16 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole7_P1 > 0 && ScoreHole7_P2 > 0)
                                         {
-                                            ScoreHole7_P1 = ScoreHole7_P1 - 1;
+                                           
+
+                                            if (Contador == AdvPositivo)
+                                            {
+                                                ScoreHole7_P1 = ScoreHole7_P1 - 0.5;
+                                            }
+                                            else
+                                            {
+                                                ScoreHole7_P1 = ScoreHole7_P1 - 1;
+                                            }
                                         }
 
                                     }
@@ -344,7 +404,16 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole8_P1 > 0 && ScoreHole8_P2 > 0)
                                         {
-                                            ScoreHole8_P1 = ScoreHole8_P1 - 1;
+                                         
+
+                                            if (Contador == AdvPositivo)
+                                            {
+                                                ScoreHole8_P1 = ScoreHole8_P1 - 0.5;
+                                            }
+                                            else
+                                            {
+                                                ScoreHole8_P1 = ScoreHole8_P1 - 1;
+                                            }
                                         }
 
                                     }
@@ -353,7 +422,16 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole9_P1 > 0 && ScoreHole9_P2 > 0)
                                         {
-                                            ScoreHole9_P1 = ScoreHole9_P1 - 1;
+                                           
+
+                                            if (Contador == AdvPositivo)
+                                            {
+                                                ScoreHole9_P1 = ScoreHole9_P1 - 0.5;
+                                            }
+                                            else
+                                            {
+                                                ScoreHole9_P1 = ScoreHole9_P1 - 1;
+                                            }
                                         }
 
                                     }
@@ -362,7 +440,16 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole10_P1 > 0 && ScoreHole10_P2 > 0)
                                         {
-                                            ScoreHole10_P1 = ScoreHole10_P1 - 1;
+                                           
+
+                                            if (Contador == AdvPositivo)
+                                            {
+                                                ScoreHole10_P1 = ScoreHole10_P1 - 0.5;
+                                            }
+                                            else
+                                            {
+                                                ScoreHole10_P1 = ScoreHole10_P1 - 1;
+                                            }
                                         }
 
                                     }
@@ -371,7 +458,16 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole11_P1 > 0 && ScoreHole11_P2 > 0)
                                         {
-                                            ScoreHole11_P1 = ScoreHole11_P1 - 1;
+                                         
+
+                                            if (Contador == AdvPositivo)
+                                            {
+                                                ScoreHole11_P1 = ScoreHole11_P1 - 0.5;
+                                            }
+                                            else
+                                            {
+                                                ScoreHole11_P1 = ScoreHole11_P1 - 1;
+                                            }
                                         }
 
                                     }
@@ -380,7 +476,16 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole12_P1 > 0 && ScoreHole12_P2 > 0)
                                         {
-                                            ScoreHole12_P1 = ScoreHole12_P1 - 1;
+                                           
+                                            if (Contador == AdvPositivo)
+                                            {
+                                                ScoreHole12_P1 = ScoreHole12_P1 - 0.5;
+                                            }
+                                            else
+                                            {
+
+                                                ScoreHole12_P1 = ScoreHole12_P1 - 1;
+                                            }
                                         }
 
                                     }
@@ -389,7 +494,15 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole13_P1 > 0 && ScoreHole13_P2 > 0)
                                         {
-                                            ScoreHole13_P1 = ScoreHole13_P1 - 1;
+                                           
+                                            if (Contador == AdvPositivo)
+                                            {
+                                                ScoreHole13_P1 = ScoreHole13_P1 - 0.5;
+                                            }
+                                            else
+                                            {
+                                                ScoreHole13_P1 = ScoreHole13_P1 - 1;
+                                            }
                                         }
 
                                     }
@@ -398,7 +511,16 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole14_P1 > 0 && ScoreHole14_P2 > 0)
                                         {
-                                            ScoreHole14_P1 = ScoreHole14_P1 - 1;
+                                           
+
+                                            if (Contador == AdvPositivo)
+                                            {
+                                                ScoreHole14_P1 = ScoreHole14_P1 - 0.5;
+                                            }
+                                            else
+                                            {
+                                                ScoreHole14_P1 = ScoreHole14_P1 - 1;
+                                            }
                                         }
 
                                     }
@@ -407,7 +529,15 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole15_P1 > 0 && ScoreHole15_P2 > 0)
                                         {
-                                            ScoreHole15_P1 = ScoreHole15_P1 - 1;
+                                           
+                                            if (Contador == AdvPositivo)
+                                            {
+                                                ScoreHole15_P1 = ScoreHole15_P1 - 0.5;
+                                            }
+                                            else
+                                            {
+                                                ScoreHole15_P1 = ScoreHole15_P1 - 1;
+                                            }
                                         }
                                     }
 
@@ -415,7 +545,15 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole16_P1 > 0 && ScoreHole16_P2 > 0)
                                         {
-                                            ScoreHole16_P1 = ScoreHole16_P1 - 1;
+                                           
+                                            if (Contador == AdvPositivo)
+                                            {
+                                                ScoreHole16_P1 = ScoreHole16_P1 - 0.5;
+                                            }
+                                            else
+                                            {
+                                                ScoreHole16_P1 = ScoreHole16_P1 - 1;
+                                            }
                                         }
                                     }
 
@@ -423,7 +561,15 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole17_P1 > 0 && ScoreHole17_P2 > 0)
                                         {
-                                            ScoreHole17_P1 = ScoreHole17_P1 - 1;
+                                           
+                                            if (Contador == AdvPositivo)
+                                            {
+                                                ScoreHole17_P1 = ScoreHole17_P1 - 0.5;
+                                            }
+                                            else
+                                            {
+                                                ScoreHole17_P1 = ScoreHole17_P1 - 1;
+                                            }
                                         }
                                     }
 
@@ -431,7 +577,15 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole18_P1 > 0 && ScoreHole18_P2 > 0)
                                         {
-                                            ScoreHole18_P1 = ScoreHole18_P1 - 1;
+                                          
+                                            if (Contador == AdvPositivo)
+                                            {
+                                                ScoreHole18_P1 = ScoreHole18_P1 - 0.5;
+                                            }
+                                            else
+                                            {
+                                                ScoreHole18_P1 = ScoreHole18_P1 - 1;
+                                            }
                                         }
                                     }
 
@@ -470,7 +624,15 @@ namespace DragonGolfBackEnd.Controllers
 
                                         if (ScoreHole1_P2 > 0 && ScoreHole1_P1 > 0)
                                         {
-                                            ScoreHole1_P2 = ScoreHole1_P2 - 1;
+                                            
+                                            if (Contador == AdvInverso)
+                                            {
+                                                ScoreHole1_P2 = ScoreHole1_P2 - 0.5;
+                                            }
+                                            else
+                                            {
+                                                ScoreHole1_P2 = ScoreHole1_P2 - 1;
+                                            }
                                         }
 
 
@@ -480,7 +642,15 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole2_P2 > 0 && ScoreHole2_P1 > 0)
                                         {
-                                            ScoreHole2_P2 = ScoreHole2_P2 - 1;
+                                           
+                                            if (Contador == AdvInverso)
+                                            {
+                                                ScoreHole2_P2 = ScoreHole2_P2 - 0.5;
+                                            }
+                                            else
+                                            {
+                                                ScoreHole2_P2 = ScoreHole2_P2 - 1;
+                                            }
                                         }
 
                                     }
@@ -489,7 +659,15 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole3_P2 > 0 && ScoreHole3_P1 > 0)
                                         {
-                                            ScoreHole3_P2 = ScoreHole3_P2 - 1;
+                                           
+                                            if (Contador == AdvInverso)
+                                            {
+                                                ScoreHole3_P2 = ScoreHole3_P2 - 0.5;
+                                            }
+                                            else
+                                            {
+                                                ScoreHole3_P2 = ScoreHole3_P2 - 1;
+                                            }
                                         }
 
                                     }
@@ -498,7 +676,15 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole4_P2 > 0 && ScoreHole4_P1 > 0)
                                         {
-                                            ScoreHole4_P2 = ScoreHole4_P2 - 1;
+                                           
+                                            if (Contador == AdvInverso)
+                                            {
+                                                ScoreHole4_P2 = ScoreHole4_P2 - 0.5;
+                                            }
+                                            else
+                                            {
+                                                ScoreHole4_P2 = ScoreHole4_P2 - 1;
+                                            }
                                         }
 
                                     }
@@ -507,7 +693,16 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole5_P2 > 0 && ScoreHole5_P1 > 0)
                                         {
-                                            ScoreHole5_P2 = ScoreHole5_P2 - 1;
+                                            
+
+                                            if (Contador == AdvInverso)
+                                            {
+                                                ScoreHole5_P2 = ScoreHole5_P2 - 0.5;
+                                            }
+                                            else
+                                            {
+                                                ScoreHole5_P2 = ScoreHole5_P2 - 1;
+                                            }
                                         }
 
                                     }
@@ -516,7 +711,16 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole6_P2 > 0 && ScoreHole6_P1 > 0)
                                         {
-                                            ScoreHole6_P2 = ScoreHole6_P2 - 1;
+                                          
+
+                                            if (Contador == AdvInverso)
+                                            {
+                                                ScoreHole6_P2 = ScoreHole6_P2 - 0.5;
+                                            }
+                                            else
+                                            {
+                                                ScoreHole6_P2 = ScoreHole6_P2 - 1;
+                                            }
                                         }
 
                                     }
@@ -525,7 +729,16 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole7_P2 > 0 && ScoreHole7_P1 > 0)
                                         {
-                                            ScoreHole7_P2 = ScoreHole7_P2 - 1;
+                                          
+
+                                            if (Contador == AdvInverso)
+                                            {
+                                                ScoreHole7_P2 = ScoreHole7_P2 - 0.5;
+                                            }
+                                            else
+                                            {
+                                                ScoreHole7_P2 = ScoreHole7_P2 - 1;
+                                            }
                                         }
 
                                     }
@@ -534,7 +747,16 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole8_P2 > 0 && ScoreHole8_P1 > 0)
                                         {
-                                            ScoreHole8_P2 = ScoreHole8_P2 - 1;
+                                           
+
+                                            if (Contador == AdvInverso)
+                                            {
+                                                ScoreHole8_P2 = ScoreHole8_P2 - 0.5;
+                                            }
+                                            else
+                                            {
+                                                ScoreHole8_P2 = ScoreHole8_P2 - 1;
+                                            }
                                         }
 
                                     }
@@ -543,7 +765,16 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole9_P2 > 0 && ScoreHole9_P1 > 0)
                                         {
-                                            ScoreHole9_P2 = ScoreHole9_P2 - 1;
+                                           
+
+                                            if (Contador == AdvInverso)
+                                            {
+                                                ScoreHole9_P2 = ScoreHole9_P2 - 0.5;
+                                            }
+                                            else
+                                            {
+                                                ScoreHole9_P2 = ScoreHole9_P2 - 1;
+                                            }
                                         }
 
                                     }
@@ -552,7 +783,16 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole10_P2 > 0 && ScoreHole10_P1 > 0)
                                         {
-                                            ScoreHole10_P2 = ScoreHole10_P2 - 1;
+                                           
+
+                                            if (Contador == AdvInverso)
+                                            {
+                                                ScoreHole10_P2 = ScoreHole10_P2 - 0.5;
+                                            }
+                                            else
+                                            {
+                                                ScoreHole10_P2 = ScoreHole10_P2 - 1;
+                                            }
                                         }
 
                                     }
@@ -561,7 +801,16 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole11_P2 > 0 && ScoreHole11_P1 > 0)
                                         {
-                                            ScoreHole11_P2 = ScoreHole11_P2 - 1;
+                                           
+
+                                            if (Contador == AdvInverso)
+                                            {
+                                                ScoreHole11_P2 = ScoreHole11_P2 - 0.5;
+                                            }
+                                            else
+                                            {
+                                                ScoreHole11_P2 = ScoreHole11_P2 - 1;
+                                            }
                                         }
 
                                     }
@@ -570,7 +819,17 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole12_P2 > 0 && ScoreHole12_P1 > 0)
                                         {
-                                            ScoreHole12_P2 = ScoreHole12_P2 - 1;
+                                           
+                                            if (Contador == AdvInverso)
+                                            {
+                                                ScoreHole12_P2 = ScoreHole12_P2 - 0.5;
+                                            }
+                                            else
+                                            {
+
+                                                ScoreHole12_P2 = ScoreHole12_P2 - 1;
+
+                                            }
                                         }
 
                                     }
@@ -579,7 +838,16 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole13_P2 > 0 && ScoreHole13_P1 > 0)
                                         {
-                                            ScoreHole13_P2 = ScoreHole13_P2 - 1;
+                                          
+
+                                            if (Contador == AdvInverso)
+                                            {
+                                                ScoreHole13_P2 = ScoreHole13_P2 - 0.5;
+                                            }
+                                            else
+                                            {
+                                                ScoreHole13_P2 = ScoreHole13_P2 - 1;
+                                            }
                                         }
 
                                     }
@@ -588,7 +856,17 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole14_P2 > 0 && ScoreHole14_P1 > 0)
                                         {
-                                            ScoreHole14_P2 = ScoreHole14_P2 - 1;
+                                           
+
+                                            if (Contador == AdvInverso)
+                                            {
+                                                ScoreHole14_P2 = ScoreHole14_P2 - 0.5;
+                                            }
+                                            else
+                                            {
+                                                ScoreHole14_P2 = ScoreHole14_P2 - 1;
+
+                                            }
                                         }
 
                                     }
@@ -597,7 +875,16 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole15_P2 > 0 && ScoreHole15_P1 > 0)
                                         {
-                                            ScoreHole15_P2 = ScoreHole15_P2 - 1;
+                                           
+
+                                            if (Contador == AdvInverso)
+                                            {
+                                                ScoreHole15_P2 = ScoreHole15_P2 - 0.5;
+                                            }
+                                            else
+                                            {
+                                                ScoreHole15_P2 = ScoreHole15_P2 - 1;
+                                            }
                                         }
 
                                     }
@@ -606,7 +893,16 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole16_P2 > 0 && ScoreHole16_P1 > 0)
                                         {
-                                            ScoreHole16_P2 = ScoreHole16_P2 - 1;
+                                           
+
+                                            if (Contador == AdvInverso)
+                                            {
+                                                ScoreHole16_P2 = ScoreHole16_P2 - 0.5;
+                                            }
+                                            else
+                                            {
+                                                ScoreHole16_P2 = ScoreHole16_P2 - 1;
+                                            }
                                         }
 
                                     }
@@ -615,7 +911,17 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole17_P2 > 0 && ScoreHole17_P1 > 0)
                                         {
-                                            ScoreHole17_P2 = ScoreHole17_P2 - 1;
+                                           
+
+                                            if (Contador == AdvInverso)
+                                            {
+                                                ScoreHole17_P2 = ScoreHole17_P2 - 0.5;
+                                            }
+                                            else
+                                            {
+                                                ScoreHole17_P2 = ScoreHole17_P2 - 1;
+
+                                            }
                                         }
 
                                     }
@@ -624,11 +930,19 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole18_P2 > 0 && ScoreHole18_P1 > 0)
                                         {
-                                            ScoreHole18_P2 = ScoreHole18_P2 - 1;
+                                           
+
+                                            if (Contador == AdvInverso)
+                                            {
+                                                ScoreHole18_P2 = ScoreHole18_P2 - 0.5;
+                                            }
+                                            else
+                                            {
+                                                ScoreHole18_P2 = ScoreHole18_P2 - 1;
+                                            }
                                         }
 
                                     }
-
 
                                 }
                                 else
@@ -641,7 +955,7 @@ namespace DragonGolfBackEnd.Controllers
                         }
 
                         //Cambio de hoyo
-                        int[] CambioHoyos = new int[38];
+                        double[] CambioHoyos = new double[38];
 
                         CambioHoyos = HoyoInicialCambio(ScoreHole1_P1, ScoreHole2_P1, ScoreHole3_P1, ScoreHole4_P1, ScoreHole5_P1, ScoreHole6_P1, ScoreHole7_P1, ScoreHole8_P1, ScoreHole9_P1, ScoreHole10_P1, ScoreHole11_P1, ScoreHole12_P1, ScoreHole13_P1, ScoreHole14_P1, ScoreHole15_P1, ScoreHole16_P1, ScoreHole17_P1, ScoreHole18_P1,
                             ScoreHole1_P2, ScoreHole2_P2, ScoreHole3_P2, ScoreHole4_P2, ScoreHole5_P2, ScoreHole6_P2, ScoreHole7_P2, ScoreHole8_P2, ScoreHole9_P2, ScoreHole10_P2, ScoreHole11_P2, ScoreHole12_P2, ScoreHole13_P2, ScoreHole14_P2, ScoreHole15_P2, ScoreHole16_P2, ScoreHole17_P2, ScoreHole18_P2, HoyoInicial);
@@ -685,15 +999,15 @@ namespace DragonGolfBackEnd.Controllers
                         ScoreHole18_P2 = CambioHoyos[36];
                         //Termina cambio de hoyo
 
-                        int Resultado1 = 0;
-                        int Resultado2 = 0;
-                        int Resultado3 = 0;
-                        int Resultado4 = 0;
-                        int Resultado5 = 0;
-                        int Resultado6 = 0;
-                        int Resultado7 = 0;
-                        int Resultado8 = 0;
-                        int Resultado9 = 0;
+                        double Resultado1 = 0;
+                        double Resultado2 = 0;
+                        double Resultado3 = 0;
+                        double Resultado4 = 0;
+                        double Resultado5 = 0;
+                        double Resultado6 = 0;
+                        double Resultado7 = 0;
+                        double Resultado8 = 0;
+                        double Resultado9 = 0;
 
                         int ValidaFront = 0;
 
@@ -889,8 +1203,8 @@ namespace DragonGolfBackEnd.Controllers
                         }
 
                         //Calculo Medal front
-                        int ResultadoTotaF1 = ScoreHole1_P1 + ScoreHole2_P1 + ScoreHole3_P1 + ScoreHole4_P1 + ScoreHole5_P1 + ScoreHole6_P1 + ScoreHole7_P1 + ScoreHole8_P1 + ScoreHole9_P1;
-                        int ResultadoTotaF2 = ScoreHole1_P2 + ScoreHole2_P2 + ScoreHole3_P2 + ScoreHole4_P2 + ScoreHole5_P2 + ScoreHole6_P2 + ScoreHole7_P2 + ScoreHole8_P2 + ScoreHole9_P2;
+                        double ResultadoTotaF1 = ScoreHole1_P1 + ScoreHole2_P1 + ScoreHole3_P1 + ScoreHole4_P1 + ScoreHole5_P1 + ScoreHole6_P1 + ScoreHole7_P1 + ScoreHole8_P1 + ScoreHole9_P1;
+                        double ResultadoTotaF2 = ScoreHole1_P2 + ScoreHole2_P2 + ScoreHole3_P2 + ScoreHole4_P2 + ScoreHole5_P2 + ScoreHole6_P2 + ScoreHole7_P2 + ScoreHole8_P2 + ScoreHole9_P2;
 
                         bool ValidaJuegoInicio = false;
 
@@ -904,15 +1218,15 @@ namespace DragonGolfBackEnd.Controllers
                         }
 
 
-                        int Resultado10 = 0;
-                        int Resultado11 = 0;
-                        int Resultado12 = 0;
-                        int Resultado13 = 0;
-                        int Resultado14 = 0;
-                        int Resultado15 = 0;
-                        int Resultado16 = 0;
-                        int Resultado17 = 0;
-                        int Resultado18 = 0;
+                        double Resultado10 = 0;
+                        double Resultado11 = 0;
+                        double Resultado12 = 0;
+                        double Resultado13 = 0;
+                        double Resultado14 = 0;
+                        double Resultado15 = 0;
+                        double Resultado16 = 0;
+                        double Resultado17 = 0;
+                        double Resultado18 = 0;
 
 
                         int ValidaBack = 0;
@@ -1106,15 +1420,15 @@ namespace DragonGolfBackEnd.Controllers
 
 
                         //Calculo Medal front
-                        int ResultadoTotaB1 = ScoreHole10_P1 + ScoreHole11_P1 + ScoreHole12_P1 + ScoreHole13_P1 + ScoreHole14_P1 + ScoreHole15_P1 + ScoreHole16_P1 + ScoreHole17_P1 + ScoreHole18_P1;
-                        int ResultadoTotaB2 = ScoreHole10_P2 + ScoreHole11_P2 + ScoreHole12_P2 + ScoreHole13_P2 + ScoreHole14_P2 + ScoreHole15_P2 + ScoreHole16_P2 + ScoreHole17_P2 + ScoreHole18_P2;
+                        double ResultadoTotaB1 = ScoreHole10_P1 + ScoreHole11_P1 + ScoreHole12_P1 + ScoreHole13_P1 + ScoreHole14_P1 + ScoreHole15_P1 + ScoreHole16_P1 + ScoreHole17_P1 + ScoreHole18_P1;
+                        double ResultadoTotaB2 = ScoreHole10_P2 + ScoreHole11_P2 + ScoreHole12_P2 + ScoreHole13_P2 + ScoreHole14_P2 + ScoreHole15_P2 + ScoreHole16_P2 + ScoreHole17_P2 + ScoreHole18_P2;
 
                         //Valida Medal
 
                         int ResultadoFinalMedal = 0;
 
-                        int GolpesTotalesJugador1 = ResultadoTotaF1 + ResultadoTotaB1;
-                        int GolpesTotalesJugador2 = ResultadoTotaF2 + ResultadoTotaB2;
+                        double GolpesTotalesJugador1 = ResultadoTotaF1 + ResultadoTotaB1;
+                        double GolpesTotalesJugador2 = ResultadoTotaF2 + ResultadoTotaB2;
 
                         if (GolpesTotalesJugador1 < GolpesTotalesJugador2)
                         {
@@ -1285,7 +1599,7 @@ namespace DragonGolfBackEnd.Controllers
             }
         }
 
-        private string[] CalcularApuestaPresionFront1(int Resultado1, int Resultado2, int Resultado3, int Resultado4, int Resultado5, int Resultado6, int Resultado7, int Resultado8, int Resultado9, bool ValidaJuegoInicio)
+        private string[] CalcularApuestaPresionFront1(double Resultado1, double Resultado2, double Resultado3, double Resultado4, double Resultado5, double Resultado6, double Resultado7, double Resultado8, double Resultado9, bool ValidaJuegoInicio)
         {
 
             int[] ResultadoPresionFront = new int[10];
@@ -1808,7 +2122,7 @@ namespace DragonGolfBackEnd.Controllers
             return ResultadoFinal;
         }
 
-        private string[] CalcularApuestaPresionBack1(int Resultado1, int Resultado2, int Resultado3, int Resultado4, int Resultado5, int Resultado6, int Resultado7, int Resultado8, int Resultado9, bool ValidaJuegoInicio)
+        private string[] CalcularApuestaPresionBack1(double Resultado1, double Resultado2, double Resultado3, double Resultado4, double Resultado5, double Resultado6, double Resultado7, double Resultado8, double Resultado9, bool ValidaJuegoInicio)
         {
             int[] ResultadoPresionFront = new int[10];
 
@@ -2329,7 +2643,7 @@ namespace DragonGolfBackEnd.Controllers
 
         }
 
-        private string[] CalcularApuestaPresionFront2(int Resultado1, int Resultado2, int Resultado3, int Resultado4, int Resultado5, int Resultado6, int Resultado7, int Resultado8, int Resultado9, bool ValidaJuegoInicio)
+        private string[] CalcularApuestaPresionFront2(double Resultado1, double Resultado2, double Resultado3, double Resultado4, double Resultado5, double Resultado6, double Resultado7, double Resultado8, double Resultado9, bool ValidaJuegoInicio)
         {
             int[] ResultadoPresionFront = new int[10];
 
@@ -2886,7 +3200,7 @@ namespace DragonGolfBackEnd.Controllers
 
         }
 
-        private string[] CalcularApuestaPresionBack2(int Resultado1, int Resultado2, int Resultado3, int Resultado4, int Resultado5, int Resultado6, int Resultado7, int Resultado8, int Resultado9, bool ValidaJuegoInicio)
+        private string[] CalcularApuestaPresionBack2(double Resultado1, double Resultado2, double Resultado3, double Resultado4, double Resultado5, double Resultado6, double Resultado7, double Resultado8, double Resultado9, bool ValidaJuegoInicio)
         {
             int[] ResultadoPresionFront = new int[10];
 
@@ -3442,7 +3756,7 @@ namespace DragonGolfBackEnd.Controllers
 
         }
 
-        private string[] CalcularApuestaPresionFront3(int Resultado1, int Resultado2, int Resultado3, int Resultado4, int Resultado5, int Resultado6, int Resultado7, int Resultado8, int Resultado9, bool ValidaJuegoInicio)
+        private string[] CalcularApuestaPresionFront3(double Resultado1, double Resultado2, double Resultado3, double Resultado4, double Resultado5, double Resultado6, double Resultado7, double Resultado8, double Resultado9, bool ValidaJuegoInicio)
         {
 
             int[] ResultadoPresionFront = new int[10];
@@ -3828,7 +4142,7 @@ namespace DragonGolfBackEnd.Controllers
             return ResultadoFinal;
         }
 
-        private string[] CalcularApuestaPresionBack3(int Resultado1, int Resultado2, int Resultado3, int Resultado4, int Resultado5, int Resultado6, int Resultado7, int Resultado8, int Resultado9, bool ValidaJuegoInicio)
+        private string[] CalcularApuestaPresionBack3(double Resultado1, double Resultado2, double Resultado3, double Resultado4, double Resultado5, double Resultado6, double Resultado7, double Resultado8, double Resultado9, bool ValidaJuegoInicio)
         {
             int[] ResultadoPresionFront = new int[10];
 
@@ -4329,14 +4643,14 @@ namespace DragonGolfBackEnd.Controllers
         }
 
 
-        private int[] HoyoInicialCambio(int hole1_P1, int hole2_P1, int hole3_P1, int hole4_P1, int hole5_P1, int hole6_P1, int hole7_P1, int hole8_P1, int hole9_P1, int hole10_P1, int hole11_P1, int hole12_P1, int hole13_P1, int hole14_P1, int hole15_P1, int hole16_P1, int hole17_P1, int hole18_P1,
-            int hole1_P2, int hole2_P2, int hole3_P2, int hole4_P2, int hole5_P2, int hole6_P2, int hole7_P2, int hole8_P2, int hole9_P2, int hole10_P2, int hole11_P2, int hole12_P2, int hole13_P2, int hole14_P2, int hole15_P2, int hole16_P2, int hole17_P2, int hole18_P2, int HoyoInicial)
+        private double[] HoyoInicialCambio(double hole1_P1, double hole2_P1, double hole3_P1, double hole4_P1, double hole5_P1, double hole6_P1, double hole7_P1, double hole8_P1, double hole9_P1, double hole10_P1, double hole11_P1, double hole12_P1, double hole13_P1, double hole14_P1, double hole15_P1, double hole16_P1, double hole17_P1, double hole18_P1,
+            double hole1_P2, double hole2_P2, double hole3_P2, double hole4_P2, double hole5_P2, double hole6_P2, double hole7_P2, double hole8_P2, double hole9_P2, double hole10_P2, double hole11_P2, double hole12_P2, double hole13_P2, double hole14_P2, double hole15_P2, double hole16_P2, double hole17_P2, double hole18_P2, int HoyoInicial)
         {
 
-            int[] SwitchHoles_P1 = new int[19];
-            int[] SwitchHoles_P2 = new int[19];
+            double[] SwitchHoles_P1 = new double[19];
+            double[] SwitchHoles_P2 = new double[19];
 
-            int[] SwitchHoles = new int[38];
+            double[] SwitchHoles = new double[38];
 
 
             switch (HoyoInicial)
