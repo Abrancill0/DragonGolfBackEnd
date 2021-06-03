@@ -161,7 +161,7 @@ namespace DragonGolfBackEnd.Controllers
             public string Hoyo16Presion { get; set; }
             public string Hoyo17Presion { get; set; }
             public string Hoyo18Presion { get; set; }
-            public int SumaGolpesVentaja { get; set; }
+            public double SumaGolpesVentaja { get; set; }
             public int initHole { get; set; }
 
         }
@@ -273,7 +273,7 @@ namespace DragonGolfBackEnd.Controllers
                     int HoyoInicial = 0;
 
                     decimal Adv1 = 0;
-                    int Adv_tee = 0;
+                    double Adv_tee = 0;
 
 
                     foreach (DataRow row in DT.Rows)
@@ -405,12 +405,12 @@ namespace DragonGolfBackEnd.Controllers
                             int ScoreHole16 = Convert.ToInt32(row["ScoreHole16"]);
                             int ScoreHole17 = Convert.ToInt32(row["ScoreHole17"]);
                             int ScoreHole18 = Convert.ToInt32(row["ScoreHole18"]);
-                            Adv_tee = Convert.ToInt32(row["adv"]);
+                            Adv_tee = Convert.ToDouble(row["adv"]);
 
                             int ventaja = Convert.ToInt32(row["Ventaja"]); ;
-                            int SumaGolpesVentaja = 0;
+                            double SumaGolpesVentaja = 0;
 
-                            int AdvInverso = (-1) * (Adv_tee);
+                            double AdvInverso = (-1) * (Adv_tee);
 
                             if (AdvInverso < 0)
                             {
@@ -443,7 +443,11 @@ namespace DragonGolfBackEnd.Controllers
                                 //Cuando es negativo es ventaja para el player 1
                                 if (AdvInverso < 0)
                                 {
-                                    int AdvPositivo = (-1) * (AdvInverso);
+
+                                    int AdvPositivo = (-1) * (Convert.ToInt32(AdvInverso));
+
+                                    if (AdvPositivo > Adv_tee)
+                                    { }
 
                                     int CicloFor = 18;
 
@@ -803,7 +807,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                     if (AdvInverso > 18)
                                     {
-                                        CicloFor = AdvInverso;
+                                        CicloFor = Convert.ToInt32(AdvInverso);
                                     }
 
                                     for (int i = 0; i < CicloFor; i++)
@@ -1166,7 +1170,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             /// Adv1 = Convert.ToDecimal(row["handicapAuto"]);
                             //Convert.ToDecimal(row["usu_golpesventaja"]),
-                            int Adv = Convert.ToInt32(Decimal.Round(Adv_tee));
+                            int Adv = Convert.ToInt32(Adv_tee);
 
                             if (Adv < 0)
                             {

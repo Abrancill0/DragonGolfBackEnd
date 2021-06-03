@@ -42,7 +42,7 @@ namespace DragonGolfBackEnd.Controllers
             public float BetD_Medal { get; set; }
             public int BetD_AutoPress { get; set; }
             public int BetD_ManuallyOverrideAdv { get; set; }
-            public int BetD_AdvStrokers { get; set; }
+            public double BetD_AdvStrokers { get; set; }
         }
 
 
@@ -68,7 +68,7 @@ namespace DragonGolfBackEnd.Controllers
                 comando.Parameters.Add("@BetD_Medal", SqlDbType.Float);
                 comando.Parameters.Add("@BetD_AutoPress", SqlDbType.Int);
                 comando.Parameters.Add("@BetD_ManuallyOverrideAdv", SqlDbType.Int);
-                comando.Parameters.Add("@BetD_AdvStrokers", SqlDbType.Int);
+                comando.Parameters.Add("@BetD_AdvStrokers", SqlDbType.Float);
 
                 //Asignacion de valores a parametros
                 comando.Parameters["@IDBet"].Value = Datos.IDBet;
