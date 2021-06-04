@@ -447,7 +447,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                     int AdvPositivo = (-1) * (Convert.ToInt32(AdvInverso));
 
-                                    if (AdvPositivo > Adv_tee)
+                                    if (Adv_tee >= AdvPositivo)
                                     {
                                         ValCompleto = 0.5;
                                     }
@@ -810,10 +810,13 @@ namespace DragonGolfBackEnd.Controllers
                                     int AdvInverso2 = (-1) * (Convert.ToInt32(Adv_tee));
 
 
-                                    if (AdvInverso2 > Adv_tee)
+                                    if (AdvInverso > AdvInverso2)
+                                    {
+                                        ValCompleto = 0.5;
+                                    }
+                                    else
                                     {
                                         AdvInverso = AdvInverso2;
-                                        ValCompleto = 0.5;
                                     }
 
                                     int CicloFor = 18;
@@ -1188,8 +1191,9 @@ namespace DragonGolfBackEnd.Controllers
                             if (Adv < 0)
                             {
                                 int AdvPositivo = (-1) * (Adv);
+                                double AdvPositivo2 = (-1) * (Adv_tee);
 
-                                if (AdvPositivo > Adv_tee)
+                                if (AdvPositivo2 >= AdvPositivo)
                                 {
                                     ValCompleto = 0.5;
                                 }
@@ -1661,9 +1665,9 @@ namespace DragonGolfBackEnd.Controllers
                             else if (Adv > 0)
                             {
 
-                                int AdvInverso2 = (-1) * (Convert.ToInt32(Adv));
+                                int AdvInverso2 =  (Convert.ToInt32(Adv));
 
-                                if (AdvInverso2 > Adv_tee)
+                                if (Adv_tee >= AdvInverso2  )
                                 {
                                     Adv = AdvInverso2;
                                     ValCompleto = 0.5;
