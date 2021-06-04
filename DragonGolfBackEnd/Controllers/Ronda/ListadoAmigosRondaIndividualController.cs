@@ -97,24 +97,24 @@ namespace DragonGolfBackEnd.Controllers
             public int Ho_Advantage16 { get; set; }
             public int Ho_Advantage17 { get; set; }
             public int Ho_Advantage18 { get; set; }
-            public int GolpesVentaja1 { get; set; }
-            public int GolpesVentaja2 { get; set; }
-            public int GolpesVentaja3 { get; set; }
-            public int GolpesVentaja4 { get; set; }
-            public int GolpesVentaja5 { get; set; }
-            public int GolpesVentaja6 { get; set; }
-            public int GolpesVentaja7 { get; set; }
-            public int GolpesVentaja8 { get; set; }
-            public int GolpesVentaja9 { get; set; }
-            public int GolpesVentaja10 { get; set; }
-            public int GolpesVentaja11 { get; set; }
-            public int GolpesVentaja12 { get; set; }
-            public int GolpesVentaja13 { get; set; }
-            public int GolpesVentaja14 { get; set; }
-            public int GolpesVentaja15 { get; set; }
-            public int GolpesVentaja16 { get; set; }
-            public int GolpesVentaja17 { get; set; }
-            public int GolpesVentaja18 { get; set; }
+            public double GolpesVentaja1 { get; set; }
+            public double GolpesVentaja2 { get; set; }
+            public double GolpesVentaja3 { get; set; }
+            public double GolpesVentaja4 { get; set; }
+            public double GolpesVentaja5 { get; set; }
+            public double GolpesVentaja6 { get; set; }
+            public double GolpesVentaja7 { get; set; }
+            public double GolpesVentaja8 { get; set; }
+            public double GolpesVentaja9 { get; set; }
+            public double GolpesVentaja10 { get; set; }
+            public double GolpesVentaja11 { get; set; }
+            public double GolpesVentaja12 { get; set; }
+            public double GolpesVentaja13 { get; set; }
+            public double GolpesVentaja14 { get; set; }
+            public double GolpesVentaja15 { get; set; }
+            public double GolpesVentaja16 { get; set; }
+            public double GolpesVentaja17 { get; set; }
+            public double GolpesVentaja18 { get; set; }
 
             public double GolpesVentaja1_tee { get; set; }
             public double GolpesVentaja2_tee { get; set; }
@@ -137,12 +137,12 @@ namespace DragonGolfBackEnd.Controllers
             public decimal usu_handicapindex { get; set; }
             public int ValidaUsuarioCreo { get; set; }
             public int IDUsuarioCreo { get; set; }
-            public int ScoreIn { get; set; }
-            public int ScoreOut { get; set; }
-            public int ScoreInGP { get; set; }
-            public int ScoreOutGP { get; set; }
-            public int TotalScore { get; set; }
-            public int TotalScoreGP { get; set; }
+            public double ScoreIn { get; set; }
+            public double ScoreOut { get; set; }
+            public double ScoreInGP { get; set; }
+            public double ScoreOutGP { get; set; }
+            public double TotalScore { get; set; }
+            public double TotalScoreGP { get; set; }
             public string Hoyo1Presion { get; set; }
             public string Hoyo2Presion { get; set; }
             public string Hoyo3Presion { get; set; }
@@ -233,44 +233,44 @@ namespace DragonGolfBackEnd.Controllers
                     int DificultatHoyo17_tee = 0;
                     int DificultatHoyo18_tee = 0;
 
-                    int GolpesVentaja1 = 0;
-                    int GolpesVentaja2 = 0;
-                    int GolpesVentaja3 = 0;
-                    int GolpesVentaja4 = 0;
-                    int GolpesVentaja5 = 0;
-                    int GolpesVentaja6 = 0;
-                    int GolpesVentaja7 = 0;
-                    int GolpesVentaja8 = 0;
-                    int GolpesVentaja9 = 0;
-                    int GolpesVentaja10 = 0;
-                    int GolpesVentaja11 = 0;
-                    int GolpesVentaja12 = 0;
-                    int GolpesVentaja13 = 0;
-                    int GolpesVentaja14 = 0;
-                    int GolpesVentaja15 = 0;
-                    int GolpesVentaja16 = 0;
-                    int GolpesVentaja17 = 0;
-                    int GolpesVentaja18 = 0;
+                    double GolpesVentaja1 = 0;
+                    double GolpesVentaja2 = 0;
+                    double GolpesVentaja3 = 0;
+                    double GolpesVentaja4 = 0;
+                    double GolpesVentaja5 = 0;
+                    double GolpesVentaja6 = 0;
+                    double GolpesVentaja7 = 0;
+                    double GolpesVentaja8 = 0;
+                    double GolpesVentaja9 = 0;
+                    double GolpesVentaja10 = 0;
+                    double GolpesVentaja11 = 0;
+                    double GolpesVentaja12 = 0;
+                    double GolpesVentaja13 = 0;
+                    double GolpesVentaja14 = 0;
+                    double GolpesVentaja15 = 0;
+                    double GolpesVentaja16 = 0;
+                    double GolpesVentaja17 = 0;
+                    double GolpesVentaja18 = 0;
 
-                    int GolpesVentaja1_1 = 0;
-                    int GolpesVentaja2_1 = 0;
-                    int GolpesVentaja3_1 = 0;
-                    int GolpesVentaja4_1 = 0;
-                    int GolpesVentaja5_1 = 0;
-                    int GolpesVentaja6_1 = 0;
-                    int GolpesVentaja7_1 = 0;
-                    int GolpesVentaja8_1 = 0;
-                    int GolpesVentaja9_1 = 0;
-                    int GolpesVentaja10_1 = 0;
-                    int GolpesVentaja11_1 = 0;
-                    int GolpesVentaja12_1 = 0;
-                    int GolpesVentaja13_1 = 0;
-                    int GolpesVentaja14_1 = 0;
-                    int GolpesVentaja15_1 = 0;
-                    int GolpesVentaja16_1 = 0;
-                    int GolpesVentaja17_1 = 0;
-                    int GolpesVentaja18_1 = 0;
-                    int HoyoInicial = 0;
+                    double GolpesVentaja1_1 = 0;
+                    double GolpesVentaja2_1 = 0;
+                    double GolpesVentaja3_1 = 0;
+                    double GolpesVentaja4_1 = 0;
+                    double GolpesVentaja5_1 = 0;
+                    double GolpesVentaja6_1 = 0;
+                    double GolpesVentaja7_1 = 0;
+                    double GolpesVentaja8_1 = 0;
+                    double GolpesVentaja9_1 = 0;
+                    double GolpesVentaja10_1 = 0;
+                    double GolpesVentaja11_1 = 0;
+                    double GolpesVentaja12_1 = 0;
+                    double GolpesVentaja13_1 = 0;
+                    double GolpesVentaja14_1 = 0;
+                    double GolpesVentaja15_1 = 0;
+                    double GolpesVentaja16_1 = 0;
+                    double GolpesVentaja17_1 = 0;
+                    double GolpesVentaja18_1 = 0;
+                    double HoyoInicial = 0;
 
                     decimal Adv1 = 0;
                     double Adv_tee = 0;
@@ -411,6 +411,8 @@ namespace DragonGolfBackEnd.Controllers
                             double SumaGolpesVentaja = 0;
 
                             double AdvInverso = (-1) * (Adv_tee);
+                            double ValCompleto = 0;
+                           // int AdvInverso2 = (-1) * (Convert.ToInt32(Adv_tee));
 
                             if (AdvInverso < 0)
                             {
@@ -439,7 +441,6 @@ namespace DragonGolfBackEnd.Controllers
                             int Contadorcito = 0;
                             if (ventaja == Convert.ToInt32(row["PlayerId"]))
                             {
-
                                 //Cuando es negativo es ventaja para el player 1
                                 if (AdvInverso < 0)
                                 {
@@ -447,7 +448,9 @@ namespace DragonGolfBackEnd.Controllers
                                     int AdvPositivo = (-1) * (Convert.ToInt32(AdvInverso));
 
                                     if (AdvPositivo > Adv_tee)
-                                    { }
+                                    {
+                                        ValCompleto = 0.5;
+                                    }
 
                                     int CicloFor = 18;
 
@@ -474,7 +477,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 {
                                                     if (Contadorcito == AdvPositivo)
                                                     {
-                                                        GolpesVentaja1_tee = GolpesVentaja1_tee + 0.5;
+                                                        GolpesVentaja1_tee = GolpesVentaja1_tee + 0.5 + ValCompleto;
                                                     }
                                                     else
                                                     {
@@ -492,7 +495,7 @@ namespace DragonGolfBackEnd.Controllers
                                                     
                                                     if (Contadorcito == AdvPositivo)
                                                     {
-                                                        GolpesVentaja2_tee = GolpesVentaja2_tee + 0.5;
+                                                        GolpesVentaja2_tee = GolpesVentaja2_tee + 0.5 + ValCompleto;
                                                     }
                                                     else
                                                     {
@@ -509,7 +512,7 @@ namespace DragonGolfBackEnd.Controllers
                                                   
                                                     if (Contadorcito == AdvPositivo)
                                                     {
-                                                        GolpesVentaja3_tee = GolpesVentaja3_tee + 0.5;
+                                                        GolpesVentaja3_tee = GolpesVentaja3_tee + 0.5 + ValCompleto;
                                                     }
                                                     else
                                                     {
@@ -528,7 +531,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                                     if (Contadorcito == AdvPositivo)
                                                     {
-                                                        GolpesVentaja4_tee = GolpesVentaja4_tee + 0.5;
+                                                        GolpesVentaja4_tee = GolpesVentaja4_tee + 0.5 + ValCompleto;
                                                     }
                                                     else
                                                     {
@@ -547,7 +550,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                                     if (Contadorcito == AdvPositivo)
                                                     {
-                                                        GolpesVentaja5_tee = GolpesVentaja5_tee + 0.5;
+                                                        GolpesVentaja5_tee = GolpesVentaja5_tee + 0.5 + ValCompleto;
                                                     }
                                                     else
                                                     {
@@ -566,7 +569,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                                     if (Contadorcito == AdvPositivo)
                                                     {
-                                                        GolpesVentaja6_tee = GolpesVentaja6_tee + 0.5;
+                                                        GolpesVentaja6_tee = GolpesVentaja6_tee + 0.5 + ValCompleto;
                                                     }
                                                     else
                                                     {
@@ -584,7 +587,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                                     if (Contadorcito == AdvPositivo)
                                                     {
-                                                        GolpesVentaja7_tee = GolpesVentaja7_tee + 0.5;
+                                                        GolpesVentaja7_tee = GolpesVentaja7_tee + 0.5 + ValCompleto;
                                                     }
                                                     else
                                                     {
@@ -602,7 +605,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                                     if (Contadorcito == AdvPositivo)
                                                     {
-                                                        GolpesVentaja8_tee = GolpesVentaja8_tee + 0.5;
+                                                        GolpesVentaja8_tee = GolpesVentaja8_tee + 0.5 + ValCompleto;
                                                     }
                                                     else
                                                     {
@@ -620,7 +623,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                                     if (Contadorcito == AdvPositivo)
                                                     {
-                                                        GolpesVentaja9_tee = GolpesVentaja9_tee + 0.5;
+                                                        GolpesVentaja9_tee = GolpesVentaja9_tee + 0.5 + ValCompleto;
                                                     }
                                                     else
                                                     {
@@ -638,7 +641,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                                     if (Contadorcito == AdvPositivo)
                                                     {
-                                                        GolpesVentaja10_tee = GolpesVentaja10_tee + 0.5;
+                                                        GolpesVentaja10_tee = GolpesVentaja10_tee + 0.5 + ValCompleto;
                                                     }
                                                     else
                                                     {
@@ -656,7 +659,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                                     if (Contadorcito == AdvPositivo)
                                                     {
-                                                        GolpesVentaja11_tee = GolpesVentaja11_tee + 0.5;
+                                                        GolpesVentaja11_tee = GolpesVentaja11_tee + 0.5 + ValCompleto;
                                                     }
                                                     else
                                                     {
@@ -674,7 +677,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                                     if (Contadorcito == AdvPositivo)
                                                     {
-                                                        GolpesVentaja12_tee = GolpesVentaja12_tee + 0.5;
+                                                        GolpesVentaja12_tee = GolpesVentaja12_tee + 0.5 + ValCompleto;
                                                     }
                                                     else
                                                     {
@@ -692,7 +695,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                                     if (Contadorcito == AdvPositivo)
                                                     {
-                                                        GolpesVentaja13_tee = GolpesVentaja13_tee + 0.5;
+                                                        GolpesVentaja13_tee = GolpesVentaja13_tee + 0.5 + ValCompleto;
                                                     }
                                                     else
                                                     {
@@ -710,7 +713,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                                     if (Contadorcito == AdvPositivo)
                                                     {
-                                                        GolpesVentaja14_tee = GolpesVentaja14_tee + 0.5;
+                                                        GolpesVentaja14_tee = GolpesVentaja14_tee + 0.5 + ValCompleto;
                                                     }
                                                     else
                                                     {
@@ -728,7 +731,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                                     if (Contadorcito == AdvPositivo)
                                                     {
-                                                        GolpesVentaja15_tee = GolpesVentaja15_tee + 0.5;
+                                                        GolpesVentaja15_tee = GolpesVentaja15_tee + 0.5 + ValCompleto;
                                                     }
                                                     else
                                                     {
@@ -746,7 +749,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                                     if (Contadorcito == AdvPositivo)
                                                     {
-                                                        GolpesVentaja16_tee = GolpesVentaja16_tee + 0.5;
+                                                        GolpesVentaja16_tee = GolpesVentaja16_tee + 0.5 + ValCompleto;
                                                     }
                                                     else
                                                     {
@@ -764,7 +767,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                                     if (Contadorcito == AdvPositivo)
                                                     {
-                                                        GolpesVentaja17_tee = GolpesVentaja17_tee + 0.5;
+                                                        GolpesVentaja17_tee = GolpesVentaja17_tee + 0.5 + ValCompleto;
                                                     }
                                                     else
                                                     {
@@ -782,7 +785,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                                     if (Contadorcito == AdvPositivo)
                                                     {
-                                                        GolpesVentaja18_tee = GolpesVentaja18_tee + 0.5;
+                                                        GolpesVentaja18_tee = GolpesVentaja18_tee + 0.5 + ValCompleto;
                                                     }
                                                     else
                                                     {
@@ -803,6 +806,16 @@ namespace DragonGolfBackEnd.Controllers
                                 }
                                 else if (AdvInverso > 0)
                                 {
+
+                                    int AdvInverso2 = (-1) * (Convert.ToInt32(Adv_tee));
+
+
+                                    if (AdvInverso2 > Adv_tee)
+                                    {
+                                        AdvInverso = AdvInverso2;
+                                        ValCompleto = 0.5;
+                                    }
+
                                     int CicloFor = 18;
 
                                     if (AdvInverso > 18)
@@ -831,7 +844,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                                     if (Contadorcito == AdvInverso)
                                                     {
-                                                        GolpesVentaja1_tee = GolpesVentaja1_tee + 0.5;
+                                                        GolpesVentaja1_tee = GolpesVentaja1_tee + 0.5 + ValCompleto;
                                                     }
                                                     else
                                                     {
@@ -848,7 +861,7 @@ namespace DragonGolfBackEnd.Controllers
                                                    
                                                     if (Contadorcito == AdvInverso)
                                                     {
-                                                        GolpesVentaja2_tee = GolpesVentaja2_tee + 0.5;
+                                                        GolpesVentaja2_tee = GolpesVentaja2_tee + 0.5 + ValCompleto; ;
                                                     }
                                                     else
                                                     {
@@ -866,7 +879,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                                     if (Contadorcito == AdvInverso)
                                                     {
-                                                        GolpesVentaja3_tee = GolpesVentaja3_tee + 0.5;
+                                                        GolpesVentaja3_tee = GolpesVentaja3_tee + 0.5 + ValCompleto; ;
                                                     }
                                                     else
                                                     {
@@ -884,7 +897,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                                     if (Contadorcito == AdvInverso)
                                                     {
-                                                        GolpesVentaja4_tee = GolpesVentaja4_tee + 0.5;
+                                                        GolpesVentaja4_tee = GolpesVentaja4_tee + 0.5 + ValCompleto; ;
                                                     }
                                                     else
                                                     {
@@ -901,7 +914,7 @@ namespace DragonGolfBackEnd.Controllers
                                                    
                                                     if (Contadorcito == AdvInverso)
                                                     {
-                                                        GolpesVentaja5_tee = GolpesVentaja5_tee + 0.5;
+                                                        GolpesVentaja5_tee = GolpesVentaja5_tee + 0.5 + ValCompleto; ;
 
                                                     }
                                                     else
@@ -920,7 +933,7 @@ namespace DragonGolfBackEnd.Controllers
                                                     
                                                     if (Contadorcito == AdvInverso)
                                                     {
-                                                        GolpesVentaja6_tee = GolpesVentaja6_tee + 0.5;
+                                                        GolpesVentaja6_tee = GolpesVentaja6_tee + 0.5 + ValCompleto; ;
 
                                                     }
                                                     else
@@ -940,7 +953,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                                     if (Contadorcito == AdvInverso)
                                                     {
-                                                        GolpesVentaja7_tee = GolpesVentaja7_tee + 0.5;
+                                                        GolpesVentaja7_tee = GolpesVentaja7_tee + 0.5 + ValCompleto; ;
                                                     }
                                                     else
                                                     {
@@ -958,7 +971,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                                     if (Contadorcito == AdvInverso)
                                                     {
-                                                        GolpesVentaja8_tee = GolpesVentaja8_tee + 0.5;
+                                                        GolpesVentaja8_tee = GolpesVentaja8_tee + 0.5 + ValCompleto; ;
                                                     }
                                                     else
                                                     {
@@ -977,7 +990,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                                     if (Contadorcito == AdvInverso)
                                                     {
-                                                        GolpesVentaja9_tee = GolpesVentaja9_tee + 0.5;
+                                                        GolpesVentaja9_tee = GolpesVentaja9_tee + 0.5 + ValCompleto; ;
                                                     }
                                                     else
                                                     {
@@ -995,7 +1008,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                                     if (Contadorcito == AdvInverso)
                                                     {
-                                                        GolpesVentaja10_tee = GolpesVentaja10_tee + 0.5;
+                                                        GolpesVentaja10_tee = GolpesVentaja10_tee + 0.5 + ValCompleto; ;
                                                     }
                                                     else
                                                     {
@@ -1013,7 +1026,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                                     if (Contadorcito == AdvInverso)
                                                     {
-                                                        GolpesVentaja11_tee = GolpesVentaja11_tee + 0.5;
+                                                        GolpesVentaja11_tee = GolpesVentaja11_tee + 0.5 + ValCompleto; ;
                                                     }
                                                     else
                                                     {
@@ -1031,7 +1044,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                                     if (Contadorcito == AdvInverso)
                                                     {
-                                                        GolpesVentaja12_tee = GolpesVentaja12_tee + 0.5;
+                                                        GolpesVentaja12_tee = GolpesVentaja12_tee + 0.5 + ValCompleto; ;
                                                     }
                                                     else
                                                     {
@@ -1050,7 +1063,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                                     if (Contadorcito == AdvInverso)
                                                     {
-                                                        GolpesVentaja13_tee = GolpesVentaja13_tee + 0.5;
+                                                        GolpesVentaja13_tee = GolpesVentaja13_tee + 0.5 + ValCompleto; ;
                                                     }
                                                     else
                                                     {
@@ -1069,7 +1082,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                                     if (Contadorcito == AdvInverso)
                                                     {
-                                                        GolpesVentaja14_tee = GolpesVentaja14_tee + 0.5;
+                                                        GolpesVentaja14_tee = GolpesVentaja14_tee + 0.5 + ValCompleto; ;
                                                     }
                                                     else
                                                     {
@@ -1088,7 +1101,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                                     if (Contadorcito == AdvInverso)
                                                     {
-                                                        GolpesVentaja15_tee = GolpesVentaja15_tee + 0.5;
+                                                        GolpesVentaja15_tee = GolpesVentaja15_tee + 0.5 + ValCompleto; ;
                                                     }
                                                     else
                                                     {
@@ -1106,7 +1119,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                                     if (Contadorcito == AdvInverso)
                                                     {
-                                                        GolpesVentaja16_tee = GolpesVentaja16_tee + 0.5;
+                                                        GolpesVentaja16_tee = GolpesVentaja16_tee + 0.5 + ValCompleto; ;
                                                     }
                                                     else
                                                     {
@@ -1125,7 +1138,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                                     if (Contadorcito == AdvInverso)
                                                     {
-                                                        GolpesVentaja17_tee = GolpesVentaja17_tee + 0.5;
+                                                        GolpesVentaja17_tee = GolpesVentaja17_tee + 0.5 + ValCompleto; ;
                                                     }
                                                     else
                                                     {
@@ -1143,7 +1156,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                                     if (Contadorcito == AdvInverso)
                                                     {
-                                                        GolpesVentaja18_tee = GolpesVentaja18_tee + 0.5;
+                                                        GolpesVentaja18_tee = GolpesVentaja18_tee + 0.5 + ValCompleto; ;
                                                     }
                                                     else
                                                     {
@@ -1171,10 +1184,15 @@ namespace DragonGolfBackEnd.Controllers
                             /// Adv1 = Convert.ToDecimal(row["handicapAuto"]);
                             //Convert.ToDecimal(row["usu_golpesventaja"]),
                             int Adv = Convert.ToInt32(Adv_tee);
-
+                            ValCompleto = 0;
                             if (Adv < 0)
                             {
                                 int AdvPositivo = (-1) * (Adv);
+
+                                if (AdvPositivo > Adv_tee)
+                                {
+                                    ValCompleto = 0.5;
+                                }
 
                                 int CicloFor = 18;
 
@@ -1199,20 +1217,49 @@ namespace DragonGolfBackEnd.Controllers
                                         {
                                             if (ScoreHole1 > 0)
                                             {
-                                                GolpesVentaja1 = GolpesVentaja1 + 1;
+                                                if (Contador == AdvPositivo)
+                                                {
+                                                    GolpesVentaja1 = GolpesVentaja1 + 0.5 + ValCompleto;
+                                                }
+                                                else
+                                                {
+                                                    GolpesVentaja1 = GolpesVentaja1 + 1;
+                                                }
                                             }
 
-                                            GolpesVentaja1_1 = GolpesVentaja1_1 + 1;
+                                            if (Contador == AdvPositivo)
+                                            {
+                                                GolpesVentaja1_1 = GolpesVentaja1_1 + 0.5 + ValCompleto;
+                                            }
+                                            else
+                                            {
+                                                GolpesVentaja1_1 = GolpesVentaja1_1 + 1;
+                                            }
+
                                         }
 
                                         if (DificultatHoyo2 == Contador)
                                         {
                                             if (ScoreHole2 > 0)
                                             {
-                                                GolpesVentaja2 = GolpesVentaja2 + 1;
+                                                if (Contador == AdvPositivo)
+                                                {
+                                                    GolpesVentaja2 = GolpesVentaja2 + 0.5 + ValCompleto;
+                                                }
+                                                else
+                                                {
+                                                    GolpesVentaja2 = GolpesVentaja2 + 1;
+                                                }
                                             }
 
-                                            GolpesVentaja2_1 = GolpesVentaja2_1 + 1;
+                                            if (Contador == AdvPositivo)
+                                            {
+                                                GolpesVentaja2_1 = GolpesVentaja2_1 + 0.5 + ValCompleto;
+                                            }
+                                            else
+                                            {
+                                                GolpesVentaja2_1 = GolpesVentaja2_1 + 1;
+                                            }
 
                                         }
 
@@ -1220,10 +1267,24 @@ namespace DragonGolfBackEnd.Controllers
                                         {
                                             if (ScoreHole3 > 0)
                                             {
-                                                GolpesVentaja3 = GolpesVentaja3 + 1;
+                                                if (Contador == AdvPositivo)
+                                                {
+                                                    GolpesVentaja3 = GolpesVentaja3 + 0.5 + ValCompleto;
+                                                }
+                                                else
+                                                {
+                                                    GolpesVentaja3 = GolpesVentaja3 + 1;
+                                                }
                                             }
 
-                                            GolpesVentaja3_1 = GolpesVentaja3_1 + 1;
+                                            if (Contador == AdvPositivo)
+                                            {
+                                                GolpesVentaja3_1 = GolpesVentaja3_1 + 0.5 + ValCompleto;
+                                            }
+                                            else
+                                            {
+                                                GolpesVentaja3_1 = GolpesVentaja3_1 + 1;
+                                            }
 
                                         }
 
@@ -1232,138 +1293,360 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (ScoreHole4 > 0)
                                             {
-                                                GolpesVentaja4 = GolpesVentaja4 + 1;
+                                                if (Contador == AdvPositivo)
+                                                {
+                                                    GolpesVentaja4 = GolpesVentaja4 + 0.5 + ValCompleto;
+                                                }
+                                                else
+                                                {
+                                                    GolpesVentaja4 = GolpesVentaja4 + 1;
+                                                }
                                             }
 
-                                            GolpesVentaja4_1 = GolpesVentaja4_1 + 1;
+                                            if (Contador == AdvPositivo)
+                                            {
+                                                GolpesVentaja4_1 = GolpesVentaja4_1 + 0.5 + ValCompleto;
+                                            }
+                                            else
+                                            {
+                                                GolpesVentaja4_1 = GolpesVentaja4_1 + 1;
+                                            }
                                         }
 
                                         if (DificultatHoyo5 == Contador)
                                         {
-                                            if (ScoreHole5 > 0)
+                                            if (ScoreHole1 > 0)
                                             {
-                                                GolpesVentaja5 = GolpesVentaja5 + 1;
+                                                if (Contador == AdvPositivo)
+                                                {
+                                                    GolpesVentaja5 = GolpesVentaja5 + 0.5 + ValCompleto;
+                                                }
+                                                else
+                                                {
+                                                    GolpesVentaja5 = GolpesVentaja5 + 1;
+                                                }
                                             }
 
-                                            GolpesVentaja5_1 = GolpesVentaja5_1 + 1;
+                                            if (Contador == AdvPositivo)
+                                            {
+                                                GolpesVentaja5_1 = GolpesVentaja5_1 + 0.5 + ValCompleto;
+                                            }
+                                            else
+                                            {
+                                                GolpesVentaja5_1 = GolpesVentaja5_1 + 1;
+                                            }
                                         }
 
                                         if (DificultatHoyo6 == Contador)
                                         {
                                             if (ScoreHole6 > 0)
                                             {
-                                                GolpesVentaja6 = GolpesVentaja6 + 1;
+                                                if (Contador == AdvPositivo)
+                                                {
+                                                    GolpesVentaja6 = GolpesVentaja6 + 0.5 + ValCompleto;
+                                                }
+                                                else
+                                                {
+                                                    GolpesVentaja6 = GolpesVentaja6 + 1;
+                                                }
                                             }
-                                            GolpesVentaja6_1 = GolpesVentaja6_1 + 1;
+
+                                            if (Contador == AdvPositivo)
+                                            {
+                                                GolpesVentaja6_1 = GolpesVentaja6_1 + 0.5 + ValCompleto;
+                                            }
+                                            else
+                                            {
+                                                GolpesVentaja6_1 = GolpesVentaja6_1 + 1;
+                                            }
                                         }
 
                                         if (DificultatHoyo7 == Contador)
                                         {
                                             if (ScoreHole7 > 0)
                                             {
-                                                GolpesVentaja7 = GolpesVentaja7 + 1;
+                                                if (Contador == AdvPositivo)
+                                                {
+                                                    GolpesVentaja7 = GolpesVentaja7 + 0.5 + ValCompleto;
+                                                }
+                                                else
+                                                {
+                                                    GolpesVentaja7 = GolpesVentaja7 + 1;
+                                                }
                                             }
-                                            GolpesVentaja7_1 = GolpesVentaja7_1 + 1;
+
+                                            if (Contador == AdvPositivo)
+                                            {
+                                                GolpesVentaja7_1 = GolpesVentaja7_1 + 0.5 + ValCompleto;
+                                            }
+                                            else
+                                            {
+                                                GolpesVentaja7_1 = GolpesVentaja7_1 + 1;
+                                            }
                                         }
 
                                         if (DificultatHoyo8 == Contador)
                                         {
                                             if (ScoreHole8 > 0)
                                             {
-                                                GolpesVentaja8 = GolpesVentaja8 + 1;
+                                                if (Contador == AdvPositivo)
+                                                {
+                                                    GolpesVentaja8 = GolpesVentaja8 + 0.5 + ValCompleto;
+                                                }
+                                                else
+                                                {
+                                                    GolpesVentaja8 = GolpesVentaja8 + 1;
+                                                }
                                             }
-                                            GolpesVentaja8_1 = GolpesVentaja8_1 + 1;
+
+                                            if (Contador == AdvPositivo)
+                                            {
+                                                GolpesVentaja8_1 = GolpesVentaja8_1 + 0.5 + ValCompleto;
+                                            }
+                                            else
+                                            {
+                                                GolpesVentaja8_1 = GolpesVentaja8_1 + 1;
+                                            }
                                         }
 
                                         if (DificultatHoyo9 == Contador)
                                         {
                                             if (ScoreHole9 > 0)
                                             {
-                                                GolpesVentaja9 = GolpesVentaja9 + 1;
+                                                if (Contador == AdvPositivo)
+                                                {
+                                                    GolpesVentaja9 = GolpesVentaja9 + 0.5 + ValCompleto;
+                                                }
+                                                else
+                                                {
+                                                    GolpesVentaja9 = GolpesVentaja9 + 1;
+                                                }
                                             }
-                                            GolpesVentaja9_1 = GolpesVentaja9_1 + 1;
+
+                                            if (Contador == AdvPositivo)
+                                            {
+                                                GolpesVentaja9_1 = GolpesVentaja9_1 + 0.5 + ValCompleto;
+                                            }
+                                            else
+                                            {
+                                                GolpesVentaja9_1 = GolpesVentaja9_1 + 1;
+                                            }
                                         }
 
                                         if (DificultatHoyo10 == Contador)
                                         {
                                             if (ScoreHole10 > 0)
                                             {
-                                                GolpesVentaja10 = GolpesVentaja10 + 1;
+                                                if (Contador == AdvPositivo)
+                                                {
+                                                    GolpesVentaja10 = GolpesVentaja10 + 0.5 + ValCompleto;
+                                                }
+                                                else
+                                                {
+                                                    GolpesVentaja10 = GolpesVentaja10 + 1;
+                                                }
                                             }
-                                            GolpesVentaja10_1 = GolpesVentaja10_1 + 1;
+
+                                            if (Contador == AdvPositivo)
+                                            {
+                                                GolpesVentaja10_1 = GolpesVentaja10_1 + 0.5 + ValCompleto;
+                                            }
+                                            else
+                                            {
+                                                GolpesVentaja10_1 = GolpesVentaja10_1 + 1;
+                                            }
                                         }
 
                                         if (DificultatHoyo11 == Contador)
                                         {
                                             if (ScoreHole11 > 0)
                                             {
-                                                GolpesVentaja11 = GolpesVentaja11 + 1;
+                                                if (Contador == AdvPositivo)
+                                                {
+                                                    GolpesVentaja11 = GolpesVentaja11 + 0.5 + ValCompleto;
+                                                }
+                                                else
+                                                {
+                                                    GolpesVentaja11 = GolpesVentaja11 + 1;
+                                                }
                                             }
-                                            GolpesVentaja11_1 = GolpesVentaja11_1 + 1;
+
+                                            if (Contador == AdvPositivo)
+                                            {
+                                                GolpesVentaja11_1 = GolpesVentaja11_1 + 0.5 + ValCompleto;
+                                            }
+                                            else
+                                            {
+                                                GolpesVentaja11_1 = GolpesVentaja11_1 + 1;
+                                            }
                                         }
 
                                         if (DificultatHoyo12 == Contador)
                                         {
                                             if (ScoreHole12 > 0)
                                             {
-                                                GolpesVentaja12 = GolpesVentaja12 + 1;
+                                                if (Contador == AdvPositivo)
+                                                {
+                                                    GolpesVentaja12 = GolpesVentaja12 + 0.5 + ValCompleto;
+                                                }
+                                                else
+                                                {
+                                                    GolpesVentaja12 = GolpesVentaja12 + 1;
+                                                }
                                             }
-                                            GolpesVentaja12_1 = GolpesVentaja12_1 + 1;
+
+                                            if (Contador == AdvPositivo)
+                                            {
+                                                GolpesVentaja12_1 = GolpesVentaja12_1 + 0.5 + ValCompleto;
+                                            }
+                                            else
+                                            {
+                                                GolpesVentaja12_1 = GolpesVentaja12_1 + 1;
+                                            }
                                         }
 
                                         if (DificultatHoyo13 == Contador)
                                         {
                                             if (ScoreHole13 > 0)
                                             {
-                                                GolpesVentaja13 = GolpesVentaja13 + 1;
+                                                if (Contador == AdvPositivo)
+                                                {
+                                                    GolpesVentaja13 = GolpesVentaja13 + 0.5 + ValCompleto;
+                                                }
+                                                else
+                                                {
+                                                    GolpesVentaja13 = GolpesVentaja13 + 1;
+                                                }
                                             }
-                                            GolpesVentaja13_1 = GolpesVentaja13_1 + 1;
+
+                                            if (Contador == AdvPositivo)
+                                            {
+                                                GolpesVentaja13_1 = GolpesVentaja13_1 + 0.5 + ValCompleto;
+                                            }
+                                            else
+                                            {
+                                                GolpesVentaja13_1 = GolpesVentaja13_1 + 1;
+                                            }
                                         }
 
                                         if (DificultatHoyo14 == Contador)
                                         {
                                             if (ScoreHole14 > 0)
                                             {
-                                                GolpesVentaja14 = GolpesVentaja14 + 1;
+                                                if (Contador == AdvPositivo)
+                                                {
+                                                    GolpesVentaja14 = GolpesVentaja14 + 0.5 + ValCompleto;
+                                                }
+                                                else
+                                                {
+                                                    GolpesVentaja14 = GolpesVentaja14 + 1;
+                                                }
                                             }
-                                            GolpesVentaja14_1 = GolpesVentaja14_1 + 1;
+
+                                            if (Contador == AdvPositivo)
+                                            {
+                                                GolpesVentaja14_1 = GolpesVentaja14_1 + 0.5 + ValCompleto;
+                                            }
+                                            else
+                                            {
+                                                GolpesVentaja14_1 = GolpesVentaja14_1 + 1;
+                                            }
                                         }
 
                                         if (DificultatHoyo15 == Contador)
                                         {
                                             if (ScoreHole15 > 0)
                                             {
-                                                GolpesVentaja15 = GolpesVentaja15 + 1;
+                                                if (Contador == AdvPositivo)
+                                                {
+                                                    GolpesVentaja15 = GolpesVentaja15 + 0.5 + ValCompleto;
+                                                }
+                                                else
+                                                {
+                                                    GolpesVentaja15 = GolpesVentaja15 + 1;
+                                                }
                                             }
-                                            GolpesVentaja15_1 = GolpesVentaja15_1 + 1;
+
+                                            if (Contador == AdvPositivo)
+                                            {
+                                                GolpesVentaja15_1 = GolpesVentaja15_1 + 0.5 + ValCompleto;
+                                            }
+                                            else
+                                            {
+                                                GolpesVentaja15_1 = GolpesVentaja15_1 + 1;
+                                            }
                                         }
 
                                         if (DificultatHoyo16 == Contador)
                                         {
                                             if (ScoreHole16 > 0)
                                             {
-                                                GolpesVentaja16 = GolpesVentaja16 + 1;
+                                                if (Contador == AdvPositivo)
+                                                {
+                                                    GolpesVentaja16 = GolpesVentaja16 + 0.5 + ValCompleto;
+                                                }
+                                                else
+                                                {
+                                                    GolpesVentaja16 = GolpesVentaja1 + 1;
+                                                }
                                             }
-                                            GolpesVentaja16_1 = GolpesVentaja16_1 + 1;
+
+                                            if (Contador == AdvPositivo)
+                                            {
+                                                GolpesVentaja16_1 = GolpesVentaja16_1 + 0.5 + ValCompleto;
+                                            }
+                                            else
+                                            {
+                                                GolpesVentaja16_1 = GolpesVentaja16_1 + 1;
+                                            }
                                         }
 
                                         if (DificultatHoyo17 == Contador)
                                         {
                                             if (ScoreHole17 > 0)
                                             {
-                                                GolpesVentaja17 = GolpesVentaja17 + 1;
+                                                if (Contador == AdvPositivo)
+                                                {
+                                                    GolpesVentaja17 = GolpesVentaja17 + 0.5 + ValCompleto;
+                                                }
+                                                else
+                                                {
+                                                    GolpesVentaja17 = GolpesVentaja17 + 1;
+                                                }
                                             }
-                                            GolpesVentaja17_1 = GolpesVentaja17_1 + 1;
+
+                                            if (Contador == AdvPositivo)
+                                            {
+                                                GolpesVentaja17_1 = GolpesVentaja17_1 + 0.5 + ValCompleto;
+                                            }
+                                            else
+                                            {
+                                                GolpesVentaja17_1 = GolpesVentaja17_1 + 1;
+                                            }
                                         }
 
                                         if (DificultatHoyo18 == Contador)
                                         {
                                             if (ScoreHole18 > 0)
                                             {
-                                                GolpesVentaja18 = GolpesVentaja18 + 1;
+                                                if (Contador == AdvPositivo)
+                                                {
+                                                    GolpesVentaja18 = GolpesVentaja18 + 0.5 + ValCompleto;
+                                                }
+                                                else
+                                                {
+                                                    GolpesVentaja18 = GolpesVentaja18 + 1;
+                                                }
                                             }
 
-                                            GolpesVentaja18_1 = GolpesVentaja18_1 + 1;
+                                            if (Contador == AdvPositivo)
+                                            {
+                                                GolpesVentaja18_1 = GolpesVentaja18_1 + 0.5 + ValCompleto;
+                                            }
+                                            else
+                                            {
+                                                GolpesVentaja18_1 = GolpesVentaja18_1 + 1;
+                                            }
                                         }
 
                                     }
@@ -1377,6 +1660,16 @@ namespace DragonGolfBackEnd.Controllers
                             }
                             else if (Adv > 0)
                             {
+
+                                int AdvInverso2 = (-1) * (Convert.ToInt32(Adv));
+
+                                if (AdvInverso2 > Adv_tee)
+                                {
+                                    Adv = AdvInverso2;
+                                    ValCompleto = 0.5;
+                                }
+
+
                                 int CicloFor = 18;
 
                                 if (Adv > 18)
@@ -1398,12 +1691,26 @@ namespace DragonGolfBackEnd.Controllers
 
                                         if (DificultatHoyo1 == Contador)
                                         {
-
                                             if (ScoreHole1 > 0)
                                             {
-                                                GolpesVentaja1 = GolpesVentaja1 + 1;
+                                                if (Contador == Adv)
+                                                {
+                                                    GolpesVentaja1 = GolpesVentaja1 + 0.5 + ValCompleto;
+                                                }
+                                                else
+                                                {
+                                                    GolpesVentaja1 = GolpesVentaja1 + 1;
+                                                }
                                             }
-                                            GolpesVentaja1_1 = GolpesVentaja1_1 + 1;
+
+                                            if (Contador == Adv)
+                                            {
+                                                GolpesVentaja1_1 = GolpesVentaja1_1 + 0.5 + ValCompleto;
+                                            }
+                                            else
+                                            {
+                                                GolpesVentaja1_1 = GolpesVentaja1_1 + 1;
+                                            }
 
                                         }
 
@@ -1411,162 +1718,411 @@ namespace DragonGolfBackEnd.Controllers
                                         {
                                             if (ScoreHole2 > 0)
                                             {
-                                                GolpesVentaja2 = GolpesVentaja2 + 1;
+                                                if (Contador == Adv)
+                                                {
+                                                    GolpesVentaja2 = GolpesVentaja2 + 0.5 + ValCompleto;
+                                                }
+                                                else
+                                                {
+                                                    GolpesVentaja2 = GolpesVentaja2 + 1;
+                                                }
                                             }
-                                            GolpesVentaja2_1 = GolpesVentaja2_1 + 1;
+
+                                            if (Contador == Adv)
+                                            {
+                                                GolpesVentaja2_1 = GolpesVentaja2_1 + 0.5 + ValCompleto;
+                                            }
+                                            else
+                                            {
+                                                GolpesVentaja2_1 = GolpesVentaja2_1 + 1;
+                                            }
+
                                         }
 
                                         if (DificultatHoyo3 == Contador)
                                         {
                                             if (ScoreHole3 > 0)
                                             {
-                                                GolpesVentaja3 = GolpesVentaja3 + 1;
+                                                if (Contador == Adv)
+                                                {
+                                                    GolpesVentaja3 = GolpesVentaja3 + 0.5 + ValCompleto;
+                                                }
+                                                else
+                                                {
+                                                    GolpesVentaja3 = GolpesVentaja3 + 1;
+                                                }
                                             }
-                                            GolpesVentaja3_1 = GolpesVentaja3_1 + 1;
+
+                                            if (Contador == Adv)
+                                            {
+                                                GolpesVentaja3_1 = GolpesVentaja3_1 + 0.5 + ValCompleto;
+                                            }
+                                            else
+                                            {
+                                                GolpesVentaja3_1 = GolpesVentaja3_1 + 1;
+                                            }
+
                                         }
 
                                         if (DificultatHoyo4 == Contador)
                                         {
+
                                             if (ScoreHole4 > 0)
                                             {
-                                                GolpesVentaja4 = GolpesVentaja4 + 1;
+                                                if (Contador == Adv)
+                                                {
+                                                    GolpesVentaja4 = GolpesVentaja4 + 0.5 + ValCompleto;
+                                                }
+                                                else
+                                                {
+                                                    GolpesVentaja4 = GolpesVentaja4 + 1;
+                                                }
                                             }
-                                            GolpesVentaja4_1 = GolpesVentaja4_1 + 1;
+
+                                            if (Contador == Adv)
+                                            {
+                                                GolpesVentaja4_1 = GolpesVentaja4_1 + 0.5 + ValCompleto;
+                                            }
+                                            else
+                                            {
+                                                GolpesVentaja4_1 = GolpesVentaja4_1 + 1;
+                                            }
                                         }
 
                                         if (DificultatHoyo5 == Contador)
                                         {
-                                            if (ScoreHole5 > 0)
+                                            if (ScoreHole1 > 0)
                                             {
-                                                GolpesVentaja5 = GolpesVentaja5 + 1;
+                                                if (Contador == Adv)
+                                                {
+                                                    GolpesVentaja5 = GolpesVentaja5 + 0.5 + ValCompleto;
+                                                }
+                                                else
+                                                {
+                                                    GolpesVentaja5 = GolpesVentaja5 + 1;
+                                                }
                                             }
-                                            GolpesVentaja5_1 = GolpesVentaja5_1 + 1;
+
+                                            if (Contador == Adv)
+                                            {
+                                                GolpesVentaja5_1 = GolpesVentaja5_1 + 0.5 + ValCompleto;
+                                            }
+                                            else
+                                            {
+                                                GolpesVentaja5_1 = GolpesVentaja5_1 + 1;
+                                            }
                                         }
 
                                         if (DificultatHoyo6 == Contador)
                                         {
                                             if (ScoreHole6 > 0)
                                             {
-                                                GolpesVentaja6 = GolpesVentaja6 + 1;
+                                                if (Contador == Adv)
+                                                {
+                                                    GolpesVentaja6 = GolpesVentaja6 + 0.5 + ValCompleto;
+                                                }
+                                                else
+                                                {
+                                                    GolpesVentaja6 = GolpesVentaja6 + 1;
+                                                }
                                             }
-                                            GolpesVentaja6_1 = GolpesVentaja6_1 + 1;
+
+                                            if (Contador == Adv)
+                                            {
+                                                GolpesVentaja6_1 = GolpesVentaja6_1 + 0.5 + ValCompleto;
+                                            }
+                                            else
+                                            {
+                                                GolpesVentaja6_1 = GolpesVentaja6_1 + 1;
+                                            }
                                         }
 
                                         if (DificultatHoyo7 == Contador)
                                         {
                                             if (ScoreHole7 > 0)
                                             {
-                                                GolpesVentaja7 = GolpesVentaja7 + 1;
+                                                if (Contador == Adv)
+                                                {
+                                                    GolpesVentaja7 = GolpesVentaja7 + 0.5 + ValCompleto;
+                                                }
+                                                else
+                                                {
+                                                    GolpesVentaja7 = GolpesVentaja7 + 1;
+                                                }
                                             }
-                                            GolpesVentaja7_1 = GolpesVentaja7_1 + 1;
+
+                                            if (Contador == Adv)
+                                            {
+                                                GolpesVentaja7_1 = GolpesVentaja7_1 + 0.5 + ValCompleto;
+                                            }
+                                            else
+                                            {
+                                                GolpesVentaja7_1 = GolpesVentaja7_1 + 1;
+                                            }
                                         }
 
                                         if (DificultatHoyo8 == Contador)
                                         {
                                             if (ScoreHole8 > 0)
                                             {
-                                                GolpesVentaja8 = GolpesVentaja8 + 1;
+                                                if (Contador == Adv)
+                                                {
+                                                    GolpesVentaja8 = GolpesVentaja8 + 0.5 + ValCompleto;
+                                                }
+                                                else
+                                                {
+                                                    GolpesVentaja8 = GolpesVentaja8 + 1;
+                                                }
                                             }
-                                            GolpesVentaja8_1 = GolpesVentaja8_1 + 1;
 
+                                            if (Contador == Adv)
+                                            {
+                                                GolpesVentaja8_1 = GolpesVentaja8_1 + 0.5 + ValCompleto;
+                                            }
+                                            else
+                                            {
+                                                GolpesVentaja8_1 = GolpesVentaja8_1 + 1;
+                                            }
                                         }
 
                                         if (DificultatHoyo9 == Contador)
                                         {
                                             if (ScoreHole9 > 0)
                                             {
-                                                GolpesVentaja9 = GolpesVentaja9 + 1;
+                                                if (Contador == Adv)
+                                                {
+                                                    GolpesVentaja9 = GolpesVentaja9 + 0.5 + ValCompleto;
+                                                }
+                                                else
+                                                {
+                                                    GolpesVentaja9 = GolpesVentaja9 + 1;
+                                                }
                                             }
 
-                                            GolpesVentaja9_1 = GolpesVentaja9_1 + 1;
+                                            if (Contador == Adv)
+                                            {
+                                                GolpesVentaja9_1 = GolpesVentaja9_1 + 0.5 + ValCompleto;
+                                            }
+                                            else
+                                            {
+                                                GolpesVentaja9_1 = GolpesVentaja9_1 + 1;
+                                            }
                                         }
 
                                         if (DificultatHoyo10 == Contador)
                                         {
                                             if (ScoreHole10 > 0)
                                             {
-                                                GolpesVentaja10 = GolpesVentaja10 + 1;
+                                                if (Contador == Adv)
+                                                {
+                                                    GolpesVentaja10 = GolpesVentaja10 + 0.5 + ValCompleto;
+                                                }
+                                                else
+                                                {
+                                                    GolpesVentaja10 = GolpesVentaja10 + 1;
+                                                }
                                             }
-                                            GolpesVentaja10_1 = GolpesVentaja10_1 + 1;
+
+                                            if (Contador == Adv)
+                                            {
+                                                GolpesVentaja10_1 = GolpesVentaja10_1 + 0.5 + ValCompleto;
+                                            }
+                                            else
+                                            {
+                                                GolpesVentaja10_1 = GolpesVentaja10_1 + 1;
+                                            }
                                         }
 
                                         if (DificultatHoyo11 == Contador)
                                         {
                                             if (ScoreHole11 > 0)
                                             {
-                                                GolpesVentaja11 = GolpesVentaja11 + 1;
+                                                if (Contador == Adv)
+                                                {
+                                                    GolpesVentaja11 = GolpesVentaja11 + 0.5 + ValCompleto;
+                                                }
+                                                else
+                                                {
+                                                    GolpesVentaja11 = GolpesVentaja11 + 1;
+                                                }
                                             }
-                                            GolpesVentaja11_1 = GolpesVentaja11_1 + 1;
+
+                                            if (Contador == Adv)
+                                            {
+                                                GolpesVentaja11_1 = GolpesVentaja11_1 + 0.5 + ValCompleto;
+                                            }
+                                            else
+                                            {
+                                                GolpesVentaja11_1 = GolpesVentaja11_1 + 1;
+                                            }
                                         }
 
                                         if (DificultatHoyo12 == Contador)
                                         {
                                             if (ScoreHole12 > 0)
                                             {
-                                                GolpesVentaja12 = GolpesVentaja12 + 1;
+                                                if (Contador == Adv)
+                                                {
+                                                    GolpesVentaja12 = GolpesVentaja12 + 0.5 + ValCompleto;
+                                                }
+                                                else
+                                                {
+                                                    GolpesVentaja12 = GolpesVentaja12 + 1;
+                                                }
                                             }
 
-                                            GolpesVentaja12_1 = GolpesVentaja12_1 + 1;
+                                            if (Contador == Adv)
+                                            {
+                                                GolpesVentaja12_1 = GolpesVentaja12_1 + 0.5 + ValCompleto;
+                                            }
+                                            else
+                                            {
+                                                GolpesVentaja12_1 = GolpesVentaja12_1 + 1;
+                                            }
                                         }
 
                                         if (DificultatHoyo13 == Contador)
                                         {
                                             if (ScoreHole13 > 0)
                                             {
-                                                GolpesVentaja13 = GolpesVentaja13 + 1;
+                                                if (Contador == Adv)
+                                                {
+                                                    GolpesVentaja13 = GolpesVentaja13 + 0.5 + ValCompleto;
+                                                }
+                                                else
+                                                {
+                                                    GolpesVentaja13 = GolpesVentaja13 + 1;
+                                                }
                                             }
 
-                                            GolpesVentaja13_1 = GolpesVentaja13_1 + 1;
+                                            if (Contador == Adv)
+                                            {
+                                                GolpesVentaja13_1 = GolpesVentaja13_1 + 0.5 + ValCompleto;
+                                            }
+                                            else
+                                            {
+                                                GolpesVentaja13_1 = GolpesVentaja13_1 + 1;
+                                            }
                                         }
 
                                         if (DificultatHoyo14 == Contador)
                                         {
                                             if (ScoreHole14 > 0)
                                             {
-                                                GolpesVentaja14 = GolpesVentaja14 + 1;
+                                                if (Contador == Adv)
+                                                {
+                                                    GolpesVentaja14 = GolpesVentaja14 + 0.5 + ValCompleto;
+                                                }
+                                                else
+                                                {
+                                                    GolpesVentaja14 = GolpesVentaja14 + 1;
+                                                }
                                             }
 
-                                            GolpesVentaja14_1 = GolpesVentaja14_1 + 1;
+                                            if (Contador == Adv)
+                                            {
+                                                GolpesVentaja14_1 = GolpesVentaja14_1 + 0.5 + ValCompleto;
+                                            }
+                                            else
+                                            {
+                                                GolpesVentaja14_1 = GolpesVentaja14_1 + 1;
+                                            }
                                         }
 
                                         if (DificultatHoyo15 == Contador)
                                         {
                                             if (ScoreHole15 > 0)
                                             {
-                                                GolpesVentaja15 = GolpesVentaja15 + 1;
+                                                if (Contador == Adv)
+                                                {
+                                                    GolpesVentaja15 = GolpesVentaja15 + 0.5 + ValCompleto;
+                                                }
+                                                else
+                                                {
+                                                    GolpesVentaja15 = GolpesVentaja15 + 1;
+                                                }
                                             }
 
-                                            GolpesVentaja15_1 = GolpesVentaja15_1 + 1;
+                                            if (Contador == Adv)
+                                            {
+                                                GolpesVentaja15_1 = GolpesVentaja15_1 + 0.5 + ValCompleto;
+                                            }
+                                            else
+                                            {
+                                                GolpesVentaja15_1 = GolpesVentaja15_1 + 1;
+                                            }
                                         }
 
                                         if (DificultatHoyo16 == Contador)
                                         {
                                             if (ScoreHole16 > 0)
                                             {
-                                                GolpesVentaja16 = GolpesVentaja16 + 1;
+                                                if (Contador == Adv)
+                                                {
+                                                    GolpesVentaja16 = GolpesVentaja16 + 0.5 + ValCompleto;
+                                                }
+                                                else
+                                                {
+                                                    GolpesVentaja16 = GolpesVentaja1 + 1;
+                                                }
                                             }
 
-                                            GolpesVentaja16_1 = GolpesVentaja16_1 + 1;
+                                            if (Contador == Adv)
+                                            {
+                                                GolpesVentaja16_1 = GolpesVentaja16_1 + 0.5 + ValCompleto;
+                                            }
+                                            else
+                                            {
+                                                GolpesVentaja16_1 = GolpesVentaja16_1 + 1;
+                                            }
                                         }
 
                                         if (DificultatHoyo17 == Contador)
                                         {
                                             if (ScoreHole17 > 0)
                                             {
-                                                GolpesVentaja17 = GolpesVentaja17 + 1;
+                                                if (Contador == Adv)
+                                                {
+                                                    GolpesVentaja17 = GolpesVentaja17 + 0.5 + ValCompleto;
+                                                }
+                                                else
+                                                {
+                                                    GolpesVentaja17 = GolpesVentaja17 + 1;
+                                                }
                                             }
 
-                                            GolpesVentaja17_1 = GolpesVentaja17_1 + 1;
+                                            if (Contador == Adv)
+                                            {
+                                                GolpesVentaja17_1 = GolpesVentaja17_1 + 0.5 + ValCompleto;
+                                            }
+                                            else
+                                            {
+                                                GolpesVentaja17_1 = GolpesVentaja17_1 + 1;
+                                            }
                                         }
 
                                         if (DificultatHoyo18 == Contador)
                                         {
                                             if (ScoreHole18 > 0)
                                             {
-                                                GolpesVentaja18 = GolpesVentaja18 + 1;
+                                                if (Contador == Adv)
+                                                {
+                                                    GolpesVentaja18 = GolpesVentaja18 + 0.5 + ValCompleto;
+                                                }
+                                                else
+                                                {
+                                                    GolpesVentaja18 = GolpesVentaja18 + 1;
+                                                }
                                             }
 
-                                            GolpesVentaja18_1 = GolpesVentaja18_1 + 1;
+                                            if (Contador == Adv)
+                                            {
+                                                GolpesVentaja18_1 = GolpesVentaja18_1 + 0.5 + ValCompleto;
+                                            }
+                                            else
+                                            {
+                                                GolpesVentaja18_1 = GolpesVentaja18_1 + 1;
+                                            }
                                         }
 
 
@@ -1580,8 +2136,8 @@ namespace DragonGolfBackEnd.Controllers
 
                             }
 
-                            int TotalGolpesVentajaFront = 0;
-                            int TotalGolpesVentajaBack = 0;
+                            double TotalGolpesVentajaFront = 0;
+                            double TotalGolpesVentajaBack = 0;
 
                             if (ventaja == Convert.ToInt32(row["PlayerId"]))
                             {
@@ -1785,9 +2341,9 @@ namespace DragonGolfBackEnd.Controllers
                                 IDUsuarioCreo = Convert.ToInt32(row["IDUsuarioCreo"]),
                                 ScoreIn = Convert.ToInt32(row["ScoreIn"]),
                                 ScoreOut = Convert.ToInt32(row["ScoreOut"]),
-                                ScoreInGP = Convert.ToInt32(row["ScoreIn"]) - TotalGolpesVentajaFront,
-                                ScoreOutGP = Convert.ToInt32(row["ScoreOut"]) - TotalGolpesVentajaBack,
-                                TotalScoreGP = Convert.ToInt32(row["TotalScore"]) - TotalGolpesVentajaFront - TotalGolpesVentajaBack,
+                                ScoreInGP = Convert.ToDouble(row["ScoreIn"]) - TotalGolpesVentajaFront,
+                                ScoreOutGP = Convert.ToDouble(row["ScoreOut"]) - TotalGolpesVentajaBack,
+                                TotalScoreGP = Convert.ToDouble(row["TotalScore"]) - TotalGolpesVentajaFront - TotalGolpesVentajaBack,
                                 TotalScore = Convert.ToInt32(row["TotalScore"]),
                                 GolpesVentaja1 = GolpesVentaja1_1,
                                 GolpesVentaja2 = GolpesVentaja2_1,
