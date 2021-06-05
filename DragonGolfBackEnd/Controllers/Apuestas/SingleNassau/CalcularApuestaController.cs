@@ -257,6 +257,15 @@ namespace DragonGolfBackEnd.Controllers
 
                         double ValCompleto = 0;
 
+                        if (Adv == 0.5)
+                        {
+                            AdvInverso = 1;
+                        }
+                        else if (Adv == -0.5)
+                        {
+                            AdvInverso = -1;
+                        }
+
                         if (AdvInverso < 0)
                         {
 

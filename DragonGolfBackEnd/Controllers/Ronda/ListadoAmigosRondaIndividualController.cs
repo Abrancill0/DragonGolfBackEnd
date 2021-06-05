@@ -447,6 +447,11 @@ namespace DragonGolfBackEnd.Controllers
 
                                     int AdvPositivo = (-1) * (Convert.ToInt32(AdvInverso));
 
+                                    if (AdvInverso == -0.5)
+                                    {
+                                        AdvPositivo = 1;
+                                    }
+
                                     if (Adv_tee >= AdvPositivo)
                                     {
                                         ValCompleto = 0.5;
@@ -1187,6 +1192,12 @@ namespace DragonGolfBackEnd.Controllers
                             /// Adv1 = Convert.ToDecimal(row["handicapAuto"]);
                             //Convert.ToDecimal(row["usu_golpesventaja"]),
                             int Adv = Convert.ToInt32(Adv_tee);
+
+                            if (Adv_tee == 0.5)
+                            {
+                                Adv = -1;
+                            }
+
                             ValCompleto = 0;
                             if (Adv < 0)
                             {
