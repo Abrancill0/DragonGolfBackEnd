@@ -253,26 +253,37 @@ namespace DragonGolfBackEnd.Controllers
                         int Contador = 0;
 
                         int AdvInverso = (-1) * (Convert.ToInt32(Adv));
-                        double AdvInverso2 = (-1) * (Adv);
+                        int AdvInverso2 = 0; //(-1) * (Adv);
+
+                        if (Adv > 0)
+                        {
+                            AdvInverso2 = Convert.ToInt32(Math.Ceiling(Adv));
+                            AdvInverso = (-1) * Convert.ToInt32(Math.Ceiling(Adv));
+                        }
+                        else if (Adv < 0)
+                        {
+                            AdvInverso2 = Convert.ToInt32(Math.Floor(Adv));
+                            AdvInverso = (-1) * Convert.ToInt32(Math.Floor(Adv));
+                        }
 
                         double ValCompleto = 0;
 
-                        if (Adv == 0.5)
-                        {
-                            AdvInverso = 1;
-                        }
-                        else if (Adv == -0.5)
-                        {
-                            AdvInverso = -1;
-                        }
+                        //if (Adv == 0.5)
+                        //{
+                        //    AdvInverso = 1;
+                        //}
+                        //else if (Adv == -0.5)
+                        //{
+                        //    AdvInverso = -1;
+                        //}
 
                         if (AdvInverso < 0)
                         {
 
-                            double AdvPositivo2 = (-1) * (AdvInverso2);
-                            int AdvPositivo = (-1) * (AdvInverso);
+                            // double AdvPositivo2 = (-1) * (AdvInverso);
+                            int AdvPositivo = (AdvInverso2);
 
-                            if (AdvPositivo2 >= AdvPositivo)
+                            if (Adv >= AdvInverso2)
                             {
                                 //AdvPositivo = AdvPositivo;
 
@@ -281,9 +292,9 @@ namespace DragonGolfBackEnd.Controllers
 
                             int CicloFor = 18;
 
-                            if (AdvPositivo > 18)
+                            if (AdvInverso2 > 18)
                             {
-                                CicloFor = AdvPositivo;
+                                CicloFor = AdvInverso2;
                             }
 
                             for (int i = 0; i < CicloFor; i++)
@@ -293,6 +304,7 @@ namespace DragonGolfBackEnd.Controllers
                                 if (Contador > 18)
                                 {
                                     Contador = 1;
+                                    AdvPositivo = AdvPositivo - 18;
                                 }
 
                                 if (Contador <= AdvPositivo)
@@ -621,10 +633,10 @@ namespace DragonGolfBackEnd.Controllers
                         }
                         else if (AdvInverso > 0)
                         {
-                            //   double AdvPositivo2 = (-1) * (AdvInverso2);
-                            //   int AdvPositivo = (-1) * (AdvInverso);
+                            double AdvPositivo = (-1) * (Adv);
+                            int AdvPositivo2 = (-1) * (AdvInverso2);
 
-                            if (AdvInverso2 >= AdvInverso)
+                            if (AdvPositivo >= AdvPositivo2)
                             {
                                 ValCompleto = 0.5;
                             }
@@ -643,6 +655,7 @@ namespace DragonGolfBackEnd.Controllers
                                 if (Contador > 18)
                                 {
                                     Contador = 1;
+                                    AdvInverso = AdvInverso - 18;
                                 }
 
                                 if (Contador <= AdvInverso)
