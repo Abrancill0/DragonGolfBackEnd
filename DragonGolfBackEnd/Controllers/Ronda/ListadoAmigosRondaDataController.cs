@@ -46,10 +46,10 @@ namespace DragonGolfBackEnd.Controllers
             public int set_tmw_match { get; set; }
             public int set_tmw_carry { get; set; }
             public int set_tmw_medal { get; set; }
-            public int set_tmw_adv_strokes { get; set; }
+            public double set_tmw_adv_strokes { get; set; }
             public int set_eb_wager { get; set; }
             public int set_bbt_wager_f9 { get; set; }
-            public int set_golpesventaja { get; set; }
+            public double set_golpesventaja { get; set; }
             public int set_diferenciatee { get; set; }
             public int ScoreIn { get; set; }
             public int ScoreOut { get; set; }
@@ -128,10 +128,10 @@ namespace DragonGolfBackEnd.Controllers
                                 set_tmw_match = Convert.ToInt32(row["set_tmw_match"]),
                                 set_tmw_carry = Convert.ToInt32(row["set_tmw_carry"]),
                                 set_tmw_medal = Convert.ToInt32(row["set_tmw_medal"]),
-                                set_tmw_adv_strokes = Convert.ToInt32(row["set_tmw_adv_strokes"]),
+                                set_tmw_adv_strokes = Convert.ToDouble(row["set_tmw_adv_strokes"]),
                                 set_eb_wager = Convert.ToInt32(row["set_eb_wager"]),
                                 set_bbt_wager_f9 = Convert.ToInt32(row["set_bbt_wager_f9"]),
-                                set_golpesventaja = Convert.ToInt32(row["set_golpesventaja"]),
+                                set_golpesventaja = Convert.ToDouble(row["set_golpesventaja"]),
                                 set_diferenciatee = Convert.ToInt32(row["set_diferenciatee"]),
 
                                 ScoreIn = Convert.ToInt32(row["ScoreIn"]),

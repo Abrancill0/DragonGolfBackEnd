@@ -412,8 +412,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             double AdvInverso = (-1) * (Adv_tee);
                             double ValCompleto = 0;
-                           // int AdvInverso2 = (-1) * (Convert.ToInt32(Adv_tee));
-
+                          
                             if (AdvInverso < 0)
                             {
                                 if (Convert.ToInt32(row["IDUsuario"]) == Convert.ToInt32(row["PlayerId"]))
@@ -444,8 +443,8 @@ namespace DragonGolfBackEnd.Controllers
                                 //Cuando es negativo es ventaja para el player 1
                                 if (AdvInverso < 0)
                                 {
-
-                                    int AdvPositivo = (-1) * (Convert.ToInt32(AdvInverso));
+                                    double AdvInverso3 = Math.Floor(AdvInverso);
+                                    int AdvPositivo = (-1) * Convert.ToInt32(AdvInverso3);
 
                                     if (AdvInverso == -0.5)
                                     {
@@ -471,6 +470,7 @@ namespace DragonGolfBackEnd.Controllers
                                         if (Contadorcito > 18)
                                         {
                                             Contadorcito = 1;
+                                            AdvPositivo = AdvPositivo - 18;
                                         }
 
                                         if (Contadorcito <= AdvPositivo)
@@ -814,6 +814,15 @@ namespace DragonGolfBackEnd.Controllers
 
                                     int AdvInverso2 = (-1) * (Convert.ToInt32(Adv_tee));
 
+                                    if (AdvInverso == 0.5)
+                                    {
+                                        AdvInverso2 = 1;
+                                    }
+                                    //else if (Adv_tee == -0.5)
+                                    //{
+                                    //    AdvInverso2 = -1;
+                                    //}
+
 
                                     if (AdvInverso > AdvInverso2)
                                     {
@@ -829,6 +838,7 @@ namespace DragonGolfBackEnd.Controllers
                                     if (AdvInverso > 18)
                                     {
                                         CicloFor = Convert.ToInt32(AdvInverso);
+                                      
                                     }
 
                                     for (int i = 0; i < CicloFor; i++)
@@ -838,6 +848,7 @@ namespace DragonGolfBackEnd.Controllers
                                         if (Contadorcito > 18)
                                         {
                                             Contadorcito = 1;
+                                            AdvInverso = AdvInverso - 18;
                                         }
 
                                         if (Contadorcito <= AdvInverso)
@@ -1189,11 +1200,23 @@ namespace DragonGolfBackEnd.Controllers
 
                             int Contador = 0;
 
-                            /// Adv1 = Convert.ToDecimal(row["handicapAuto"]);
-                            //Convert.ToDecimal(row["usu_golpesventaja"]),
-                            int Adv = Convert.ToInt32(Adv_tee);
+                            int Adv = 0;
+                                
+                                if (Adv_tee > 0)
+                            {
+                                Adv = Convert.ToInt32(Math.Ceiling(Adv_tee));
+                            }
+                                else if (Adv_tee < 0)
+                            {
+                                Adv = Convert.ToInt32(Math.Floor(Adv_tee));
+                            }
+                                //Convert.ToInt32(Adv_tee);
 
                             if (Adv_tee == 0.5)
+                            {
+                                Adv = 1;
+                            }
+                            else if (Adv_tee == -0.5)
                             {
                                 Adv = -1;
                             }
