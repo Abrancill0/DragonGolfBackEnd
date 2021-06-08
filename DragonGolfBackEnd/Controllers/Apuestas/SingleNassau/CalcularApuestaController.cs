@@ -285,8 +285,6 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (Adv >= AdvInverso2)
                             {
-                                //AdvPositivo = AdvPositivo;
-
                                 ValCompleto = 0.5;
                             }
 

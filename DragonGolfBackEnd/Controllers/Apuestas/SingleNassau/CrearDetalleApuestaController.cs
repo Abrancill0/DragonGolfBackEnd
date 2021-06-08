@@ -27,7 +27,6 @@ namespace DragonGolfBackEnd.Controllers
             public int IDBetDetail { get; set; }
         }
 
-
         public class ParametrosEntrada
         {
             public int IDBet { get; set; }
@@ -43,8 +42,6 @@ namespace DragonGolfBackEnd.Controllers
             public int BetD_ManuallyOverrideAdv { get; set; }
             public double BetD_AdvStrokers { get; set; }
         }
-
-
 
         public JObject Post(ParametrosEntrada Datos)
         {

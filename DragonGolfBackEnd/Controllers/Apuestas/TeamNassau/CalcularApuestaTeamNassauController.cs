@@ -1,16 +1,11 @@
 ﻿using DragonGolfBackEnd.Clases;
 using Newtonsoft.Json.Linq;
 using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Cors;
-using System.Security.Cryptography;
-using System.Text;
+
 
 namespace DragonGolfBackEnd.Controllers
 {
@@ -245,7 +240,7 @@ namespace DragonGolfBackEnd.Controllers
 
                 string TipoGolpesVentaja = "";
 
-                int Adv = 0;
+                double Adv = 0;
 
                 string[] ResultFront = new string[9];
                 string[] ResultBack = new string[9];
@@ -360,7 +355,7 @@ namespace DragonGolfBackEnd.Controllers
                         PlayerID3 = Convert.ToInt32(row["PlayerID3"]);
                         PlayerID4 = Convert.ToInt32(row["PlayerID4"]);
                         AutoPress = Convert.ToInt32(row["AutoPress"]);
-                        Adv = Convert.ToInt32(row["Adv"]);
+                        Adv = Convert.ToDouble(row["Adv"]);
 
                         DificultatHoyo1 = Convert.ToInt32(row["DificultatHoyo1"]);//7
                         DificultatHoyo2 = Convert.ToInt32(row["DificultatHoyo2"]);//1
@@ -390,17 +385,38 @@ namespace DragonGolfBackEnd.Controllers
 
                         int Contador = 0;
 
-                        int AdvInverso = (-1) * (Adv);
+                     
+                        int AdvInverso = (-1) * (Convert.ToInt32(Adv));
+                        int AdvInverso2 = 0; //(-1) * (Adv);
+
+                        if (Adv > 0)
+                        {
+                            AdvInverso2 = Convert.ToInt32(Math.Ceiling(Adv));
+                            AdvInverso = (-1) * Convert.ToInt32(Math.Ceiling(Adv));
+                        }
+                        else if (Adv < 0)
+                        {
+                            AdvInverso2 = Convert.ToInt32(Math.Floor(Adv));
+                            AdvInverso = (-1) * Convert.ToInt32(Math.Floor(Adv));
+                        }
+
+                        double ValCompleto = 0;
 
                         if (AdvInverso < 0)
                         {
-                            int AdvPositivo = (-1) * (AdvInverso);
+                            //int AdvPositivo = (-1) * (AdvInverso);
+                            int AdvPositivo = (AdvInverso2);
+
+                            if (Adv >= AdvInverso2)
+                            {
+                                ValCompleto = 0.5;
+                            }
 
                             int CicloFor = 18;
 
-                            if (AdvPositivo > 18)
+                            if (AdvInverso2 > 18)
                             {
-                                CicloFor = AdvPositivo;
+                                CicloFor = AdvInverso2;
                             }
 
                             for (int i = 0; i < CicloFor; i++)
@@ -410,6 +426,7 @@ namespace DragonGolfBackEnd.Controllers
                                 if (Contador > 18)
                                 {
                                     Contador = 1;
+                                    AdvPositivo = AdvPositivo - 18;
                                 }
 
                                 if (Contador <= AdvPositivo)
@@ -1226,9 +1243,12 @@ namespace DragonGolfBackEnd.Controllers
                         {
                             int CicloFor = 18;
 
-                            if (AdvInverso > 18)
+                            double AdvPositivo = (-1) * (Adv);
+                            int AdvPositivo2 = (-1) * (AdvInverso2);
+
+                            if (AdvPositivo >= AdvPositivo2)
                             {
-                                CicloFor = AdvInverso;
+                                ValCompleto = 0.5;
                             }
 
                             for (int i = 0; i < CicloFor; i++)
@@ -1238,6 +1258,7 @@ namespace DragonGolfBackEnd.Controllers
                                 if (Contador > 18)
                                 {
                                     Contador = 1;
+                                    AdvInverso = AdvInverso - 18;
                                 }
 
                                 if (Contador <= AdvInverso)
