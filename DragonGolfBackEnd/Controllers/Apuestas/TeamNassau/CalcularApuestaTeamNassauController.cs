@@ -132,81 +132,81 @@ namespace DragonGolfBackEnd.Controllers
                 string Mensaje = "";
                 int Estatus = 0;
 
-                int ScoreHole1_P1 = 0;
-                int ScoreHole2_P1 = 0;
-                int ScoreHole3_P1 = 0;
-                int ScoreHole4_P1 = 0;
-                int ScoreHole5_P1 = 0;
-                int ScoreHole6_P1 = 0;
-                int ScoreHole7_P1 = 0;
-                int ScoreHole8_P1 = 0;
-                int ScoreHole9_P1 = 0;
-                int ScoreHole10_P1 = 0;
-                int ScoreHole11_P1 = 0;
-                int ScoreHole12_P1 = 0;
-                int ScoreHole13_P1 = 0;
-                int ScoreHole14_P1 = 0;
-                int ScoreHole15_P1 = 0;
-                int ScoreHole16_P1 = 0;
-                int ScoreHole17_P1 = 0;
-                int ScoreHole18_P1 = 0;
+                double ScoreHole1_P1 = 0;
+                double ScoreHole2_P1 = 0;
+                double ScoreHole3_P1 = 0;
+                double ScoreHole4_P1 = 0;
+                double ScoreHole5_P1 = 0;
+                double ScoreHole6_P1 = 0;
+                double ScoreHole7_P1 = 0;
+                double ScoreHole8_P1 = 0;
+                double ScoreHole9_P1 = 0;
+                double ScoreHole10_P1 = 0;
+                double ScoreHole11_P1 = 0;
+                double ScoreHole12_P1 = 0;
+                double ScoreHole13_P1 = 0;
+                double ScoreHole14_P1 = 0;
+                double ScoreHole15_P1 = 0;
+                double ScoreHole16_P1 = 0;
+                double ScoreHole17_P1 = 0;
+                double ScoreHole18_P1 = 0;
 
-                int ScoreHole1_P2 = 0;
-                int ScoreHole2_P2 = 0;
-                int ScoreHole3_P2 = 0;
-                int ScoreHole4_P2 = 0;
-                int ScoreHole5_P2 = 0;
-                int ScoreHole6_P2 = 0;
-                int ScoreHole7_P2 = 0;
-                int ScoreHole8_P2 = 0;
-                int ScoreHole9_P2 = 0;
-                int ScoreHole10_P2 = 0;
-                int ScoreHole11_P2 = 0;
-                int ScoreHole12_P2 = 0;
-                int ScoreHole13_P2 = 0;
-                int ScoreHole14_P2 = 0;
-                int ScoreHole15_P2 = 0;
-                int ScoreHole16_P2 = 0;
-                int ScoreHole17_P2 = 0;
-                int ScoreHole18_P2 = 0;
+                double ScoreHole1_P2 = 0;
+                double ScoreHole2_P2 = 0;
+                double ScoreHole3_P2 = 0;
+                double ScoreHole4_P2 = 0;
+                double ScoreHole5_P2 = 0;
+                double ScoreHole6_P2 = 0;
+                double ScoreHole7_P2 = 0;
+                double ScoreHole8_P2 = 0;
+                double ScoreHole9_P2 = 0;
+                double ScoreHole10_P2 = 0;
+                double ScoreHole11_P2 = 0;
+                double ScoreHole12_P2 = 0;
+                double ScoreHole13_P2 = 0;
+                double ScoreHole14_P2 = 0;
+                double ScoreHole15_P2 = 0;
+                double ScoreHole16_P2 = 0;
+                double ScoreHole17_P2 = 0;
+                double ScoreHole18_P2 = 0;
 
-                int ScoreHole1_P3 = 0;
-                int ScoreHole2_P3 = 0;
-                int ScoreHole3_P3 = 0;
-                int ScoreHole4_P3 = 0;
-                int ScoreHole5_P3 = 0;
-                int ScoreHole6_P3 = 0;
-                int ScoreHole7_P3 = 0;
-                int ScoreHole8_P3 = 0;
-                int ScoreHole9_P3 = 0;
-                int ScoreHole10_P3 = 0;
-                int ScoreHole11_P3 = 0;
-                int ScoreHole12_P3 = 0;
-                int ScoreHole13_P3 = 0;
-                int ScoreHole14_P3 = 0;
-                int ScoreHole15_P3 = 0;
-                int ScoreHole16_P3 = 0;
-                int ScoreHole17_P3 = 0;
-                int ScoreHole18_P3 = 0;
+                double ScoreHole1_P3 = 0;
+                double ScoreHole2_P3 = 0;
+                double ScoreHole3_P3 = 0;
+                double ScoreHole4_P3 = 0;
+                double ScoreHole5_P3 = 0;
+                double ScoreHole6_P3 = 0;
+                double ScoreHole7_P3 = 0;
+                double ScoreHole8_P3 = 0;
+                double ScoreHole9_P3 = 0;
+                double ScoreHole10_P3 = 0;
+                double ScoreHole11_P3 = 0;
+                double ScoreHole12_P3 = 0;
+                double ScoreHole13_P3 = 0;
+                double ScoreHole14_P3 = 0;
+                double ScoreHole15_P3 = 0;
+                double ScoreHole16_P3 = 0;
+                double ScoreHole17_P3 = 0;
+                double ScoreHole18_P3 = 0;
 
-                int ScoreHole1_P4 = 0;
-                int ScoreHole2_P4 = 0;
-                int ScoreHole3_P4 = 0;
-                int ScoreHole4_P4 = 0;
-                int ScoreHole5_P4 = 0;
-                int ScoreHole6_P4 = 0;
-                int ScoreHole7_P4 = 0;
-                int ScoreHole8_P4 = 0;
-                int ScoreHole9_P4 = 0;
-                int ScoreHole10_P4 = 0;
-                int ScoreHole11_P4 = 0;
-                int ScoreHole12_P4 = 0;
-                int ScoreHole13_P4 = 0;
-                int ScoreHole14_P4 = 0;
-                int ScoreHole15_P4 = 0;
-                int ScoreHole16_P4 = 0;
-                int ScoreHole17_P4 = 0;
-                int ScoreHole18_P4 = 0;
+                double ScoreHole1_P4 = 0;
+                double ScoreHole2_P4 = 0;
+                double ScoreHole3_P4 = 0;
+                double ScoreHole4_P4 = 0;
+                double ScoreHole5_P4 = 0;
+                double ScoreHole6_P4 = 0;
+                double ScoreHole7_P4 = 0;
+                double ScoreHole8_P4 = 0;
+                double ScoreHole9_P4 = 0;
+                double ScoreHole10_P4 = 0;
+                double ScoreHole11_P4 = 0;
+                double ScoreHole12_P4 = 0;
+                double ScoreHole13_P4 = 0;
+                double ScoreHole14_P4 = 0;
+                double ScoreHole15_P4 = 0;
+                double ScoreHole16_P4 = 0;
+                double ScoreHole17_P4 = 0;
+                double ScoreHole18_P4 = 0;
 
                 int PlayerID1 = 0;
                 int PlayerID2 = 0;
@@ -274,81 +274,81 @@ namespace DragonGolfBackEnd.Controllers
                             return Res1;
                         }
 
-                        ScoreHole1_P1 = Convert.ToInt32(row["ScoreHole1_P1"]);
-                        ScoreHole2_P1 = Convert.ToInt32(row["ScoreHole2_P1"]);
-                        ScoreHole3_P1 = Convert.ToInt32(row["ScoreHole3_P1"]);
-                        ScoreHole4_P1 = Convert.ToInt32(row["ScoreHole4_P1"]);
-                        ScoreHole5_P1 = Convert.ToInt32(row["ScoreHole5_P1"]);
-                        ScoreHole6_P1 = Convert.ToInt32(row["ScoreHole6_P1"]);
-                        ScoreHole7_P1 = Convert.ToInt32(row["ScoreHole7_P1"]);
-                        ScoreHole8_P1 = Convert.ToInt32(row["ScoreHole8_P1"]);
-                        ScoreHole9_P1 = Convert.ToInt32(row["ScoreHole9_P1"]);
-                        ScoreHole10_P1 = Convert.ToInt32(row["ScoreHole10_P1"]);
-                        ScoreHole11_P1 = Convert.ToInt32(row["ScoreHole11_P1"]);
-                        ScoreHole12_P1 = Convert.ToInt32(row["ScoreHole12_P1"]);
-                        ScoreHole13_P1 = Convert.ToInt32(row["ScoreHole13_P1"]);
-                        ScoreHole14_P1 = Convert.ToInt32(row["ScoreHole14_P1"]);
-                        ScoreHole15_P1 = Convert.ToInt32(row["ScoreHole15_P1"]);
-                        ScoreHole16_P1 = Convert.ToInt32(row["ScoreHole16_P1"]);
-                        ScoreHole17_P1 = Convert.ToInt32(row["ScoreHole17_P1"]);
-                        ScoreHole18_P1 = Convert.ToInt32(row["ScoreHole18_P1"]);
+                        ScoreHole1_P1 = Convert.ToDouble(row["ScoreHole1_P1"]);
+                        ScoreHole2_P1 = Convert.ToDouble(row["ScoreHole2_P1"]);
+                        ScoreHole3_P1 = Convert.ToDouble(row["ScoreHole3_P1"]);
+                        ScoreHole4_P1 = Convert.ToDouble(row["ScoreHole4_P1"]);
+                        ScoreHole5_P1 = Convert.ToDouble(row["ScoreHole5_P1"]);
+                        ScoreHole6_P1 = Convert.ToDouble(row["ScoreHole6_P1"]);
+                        ScoreHole7_P1 = Convert.ToDouble(row["ScoreHole7_P1"]);
+                        ScoreHole8_P1 = Convert.ToDouble(row["ScoreHole8_P1"]);
+                        ScoreHole9_P1 = Convert.ToDouble(row["ScoreHole9_P1"]);
+                        ScoreHole10_P1 = Convert.ToDouble(row["ScoreHole10_P1"]);
+                        ScoreHole11_P1 = Convert.ToDouble(row["ScoreHole11_P1"]);
+                        ScoreHole12_P1 = Convert.ToDouble(row["ScoreHole12_P1"]);
+                        ScoreHole13_P1 = Convert.ToDouble(row["ScoreHole13_P1"]);
+                        ScoreHole14_P1 = Convert.ToDouble(row["ScoreHole14_P1"]);
+                        ScoreHole15_P1 = Convert.ToDouble(row["ScoreHole15_P1"]);
+                        ScoreHole16_P1 = Convert.ToDouble(row["ScoreHole16_P1"]);
+                        ScoreHole17_P1 = Convert.ToDouble(row["ScoreHole17_P1"]);
+                        ScoreHole18_P1 = Convert.ToDouble(row["ScoreHole18_P1"]);
 
-                        ScoreHole1_P2 = Convert.ToInt32(row["ScoreHole1_P2"]);
-                        ScoreHole2_P2 = Convert.ToInt32(row["ScoreHole2_P2"]);
-                        ScoreHole3_P2 = Convert.ToInt32(row["ScoreHole3_P2"]);
-                        ScoreHole4_P2 = Convert.ToInt32(row["ScoreHole4_P2"]);
-                        ScoreHole5_P2 = Convert.ToInt32(row["ScoreHole5_P2"]);
-                        ScoreHole6_P2 = Convert.ToInt32(row["ScoreHole6_P2"]);
-                        ScoreHole7_P2 = Convert.ToInt32(row["ScoreHole7_P2"]);
-                        ScoreHole8_P2 = Convert.ToInt32(row["ScoreHole8_P2"]);
-                        ScoreHole9_P2 = Convert.ToInt32(row["ScoreHole9_P2"]);
-                        ScoreHole10_P2 = Convert.ToInt32(row["ScoreHole10_P2"]);
-                        ScoreHole11_P2 = Convert.ToInt32(row["ScoreHole11_P2"]);
-                        ScoreHole12_P2 = Convert.ToInt32(row["ScoreHole12_P2"]);
-                        ScoreHole13_P2 = Convert.ToInt32(row["ScoreHole13_P2"]);
-                        ScoreHole14_P2 = Convert.ToInt32(row["ScoreHole14_P2"]);
-                        ScoreHole15_P2 = Convert.ToInt32(row["ScoreHole15_P2"]);
-                        ScoreHole16_P2 = Convert.ToInt32(row["ScoreHole16_P2"]);
-                        ScoreHole17_P2 = Convert.ToInt32(row["ScoreHole17_P2"]);
-                        ScoreHole18_P2 = Convert.ToInt32(row["ScoreHole18_P2"]);
+                        ScoreHole1_P2 = Convert.ToDouble(row["ScoreHole1_P2"]);
+                        ScoreHole2_P2 = Convert.ToDouble(row["ScoreHole2_P2"]);
+                        ScoreHole3_P2 = Convert.ToDouble(row["ScoreHole3_P2"]);
+                        ScoreHole4_P2 = Convert.ToDouble(row["ScoreHole4_P2"]);
+                        ScoreHole5_P2 = Convert.ToDouble(row["ScoreHole5_P2"]);
+                        ScoreHole6_P2 = Convert.ToDouble(row["ScoreHole6_P2"]);
+                        ScoreHole7_P2 = Convert.ToDouble(row["ScoreHole7_P2"]);
+                        ScoreHole8_P2 = Convert.ToDouble(row["ScoreHole8_P2"]);
+                        ScoreHole9_P2 = Convert.ToDouble(row["ScoreHole9_P2"]);
+                        ScoreHole10_P2 = Convert.ToDouble(row["ScoreHole10_P2"]);
+                        ScoreHole11_P2 = Convert.ToDouble(row["ScoreHole11_P2"]);
+                        ScoreHole12_P2 = Convert.ToDouble(row["ScoreHole12_P2"]);
+                        ScoreHole13_P2 = Convert.ToDouble(row["ScoreHole13_P2"]);
+                        ScoreHole14_P2 = Convert.ToDouble(row["ScoreHole14_P2"]);
+                        ScoreHole15_P2 = Convert.ToDouble(row["ScoreHole15_P2"]);
+                        ScoreHole16_P2 = Convert.ToDouble(row["ScoreHole16_P2"]);
+                        ScoreHole17_P2 = Convert.ToDouble(row["ScoreHole17_P2"]);
+                        ScoreHole18_P2 = Convert.ToDouble(row["ScoreHole18_P2"]);
 
-                        ScoreHole1_P3 = Convert.ToInt32(row["ScoreHole1_P3"]);
-                        ScoreHole2_P3 = Convert.ToInt32(row["ScoreHole2_P3"]);
-                        ScoreHole3_P3 = Convert.ToInt32(row["ScoreHole3_P3"]);
-                        ScoreHole4_P3 = Convert.ToInt32(row["ScoreHole4_P3"]);
-                        ScoreHole5_P3 = Convert.ToInt32(row["ScoreHole5_P3"]);
-                        ScoreHole6_P3 = Convert.ToInt32(row["ScoreHole6_P3"]);
-                        ScoreHole7_P3 = Convert.ToInt32(row["ScoreHole7_P3"]);
-                        ScoreHole8_P3 = Convert.ToInt32(row["ScoreHole8_P3"]);
-                        ScoreHole9_P3 = Convert.ToInt32(row["ScoreHole9_P3"]);
-                        ScoreHole10_P3 = Convert.ToInt32(row["ScoreHole10_P3"]);
-                        ScoreHole11_P3 = Convert.ToInt32(row["ScoreHole11_P3"]);
-                        ScoreHole12_P3 = Convert.ToInt32(row["ScoreHole12_P3"]);
-                        ScoreHole13_P3 = Convert.ToInt32(row["ScoreHole13_P3"]);
-                        ScoreHole14_P3 = Convert.ToInt32(row["ScoreHole14_P3"]);
-                        ScoreHole15_P3 = Convert.ToInt32(row["ScoreHole15_P3"]);
-                        ScoreHole16_P3 = Convert.ToInt32(row["ScoreHole16_P3"]);
-                        ScoreHole17_P3 = Convert.ToInt32(row["ScoreHole17_P3"]);
-                        ScoreHole18_P3 = Convert.ToInt32(row["ScoreHole18_P3"]);
+                        ScoreHole1_P3 = Convert.ToDouble(row["ScoreHole1_P3"]);
+                        ScoreHole2_P3 = Convert.ToDouble(row["ScoreHole2_P3"]);
+                        ScoreHole3_P3 = Convert.ToDouble(row["ScoreHole3_P3"]);
+                        ScoreHole4_P3 = Convert.ToDouble(row["ScoreHole4_P3"]);
+                        ScoreHole5_P3 = Convert.ToDouble(row["ScoreHole5_P3"]);
+                        ScoreHole6_P3 = Convert.ToDouble(row["ScoreHole6_P3"]);
+                        ScoreHole7_P3 = Convert.ToDouble(row["ScoreHole7_P3"]);
+                        ScoreHole8_P3 = Convert.ToDouble(row["ScoreHole8_P3"]);
+                        ScoreHole9_P3 = Convert.ToDouble(row["ScoreHole9_P3"]);
+                        ScoreHole10_P3 = Convert.ToDouble(row["ScoreHole10_P3"]);
+                        ScoreHole11_P3 = Convert.ToDouble(row["ScoreHole11_P3"]);
+                        ScoreHole12_P3 = Convert.ToDouble(row["ScoreHole12_P3"]);
+                        ScoreHole13_P3 = Convert.ToDouble(row["ScoreHole13_P3"]);
+                        ScoreHole14_P3 = Convert.ToDouble(row["ScoreHole14_P3"]);
+                        ScoreHole15_P3 = Convert.ToDouble(row["ScoreHole15_P3"]);
+                        ScoreHole16_P3 = Convert.ToDouble(row["ScoreHole16_P3"]);
+                        ScoreHole17_P3 = Convert.ToDouble(row["ScoreHole17_P3"]);
+                        ScoreHole18_P3 = Convert.ToDouble(row["ScoreHole18_P3"]);
 
-                        ScoreHole1_P4 = Convert.ToInt32(row["ScoreHole1_P4"]);
-                        ScoreHole2_P4 = Convert.ToInt32(row["ScoreHole2_P4"]);
-                        ScoreHole3_P4 = Convert.ToInt32(row["ScoreHole3_P4"]);
-                        ScoreHole4_P4 = Convert.ToInt32(row["ScoreHole4_P4"]);
-                        ScoreHole5_P4 = Convert.ToInt32(row["ScoreHole5_P4"]);
-                        ScoreHole6_P4 = Convert.ToInt32(row["ScoreHole6_P4"]);
-                        ScoreHole7_P4 = Convert.ToInt32(row["ScoreHole7_P4"]);
-                        ScoreHole8_P4 = Convert.ToInt32(row["ScoreHole8_P4"]);
-                        ScoreHole9_P4 = Convert.ToInt32(row["ScoreHole9_P4"]);
-                        ScoreHole10_P4 = Convert.ToInt32(row["ScoreHole10_P4"]);
-                        ScoreHole11_P4 = Convert.ToInt32(row["ScoreHole11_P4"]);
-                        ScoreHole12_P4 = Convert.ToInt32(row["ScoreHole12_P4"]);
-                        ScoreHole13_P4 = Convert.ToInt32(row["ScoreHole13_P4"]);
-                        ScoreHole14_P4 = Convert.ToInt32(row["ScoreHole14_P4"]);
-                        ScoreHole15_P4 = Convert.ToInt32(row["ScoreHole15_P4"]);
-                        ScoreHole16_P4 = Convert.ToInt32(row["ScoreHole16_P4"]);
-                        ScoreHole17_P4 = Convert.ToInt32(row["ScoreHole17_P4"]);
-                        ScoreHole18_P4 = Convert.ToInt32(row["ScoreHole18_P4"]);
+                        ScoreHole1_P4 = Convert.ToDouble(row["ScoreHole1_P4"]);
+                        ScoreHole2_P4 = Convert.ToDouble(row["ScoreHole2_P4"]);
+                        ScoreHole3_P4 = Convert.ToDouble(row["ScoreHole3_P4"]);
+                        ScoreHole4_P4 = Convert.ToDouble(row["ScoreHole4_P4"]);
+                        ScoreHole5_P4 = Convert.ToDouble(row["ScoreHole5_P4"]);
+                        ScoreHole6_P4 = Convert.ToDouble(row["ScoreHole6_P4"]);
+                        ScoreHole7_P4 = Convert.ToDouble(row["ScoreHole7_P4"]);
+                        ScoreHole8_P4 = Convert.ToDouble(row["ScoreHole8_P4"]);
+                        ScoreHole9_P4 = Convert.ToDouble(row["ScoreHole9_P4"]);
+                        ScoreHole10_P4 = Convert.ToDouble(row["ScoreHole10_P4"]);
+                        ScoreHole11_P4 = Convert.ToDouble(row["ScoreHole11_P4"]);
+                        ScoreHole12_P4 = Convert.ToDouble(row["ScoreHole12_P4"]);
+                        ScoreHole13_P4 = Convert.ToDouble(row["ScoreHole13_P4"]);
+                        ScoreHole14_P4 = Convert.ToDouble(row["ScoreHole14_P4"]);
+                        ScoreHole15_P4 = Convert.ToDouble(row["ScoreHole15_P4"]);
+                        ScoreHole16_P4 = Convert.ToDouble(row["ScoreHole16_P4"]);
+                        ScoreHole17_P4 = Convert.ToDouble(row["ScoreHole17_P4"]);
+                        ScoreHole18_P4 = Convert.ToDouble(row["ScoreHole18_P4"]);
 
                         PlayerID1 = Convert.ToInt32(row["PlayerID1"]);
                         PlayerID2 = Convert.ToInt32(row["PlayerID2"]);
@@ -443,12 +443,29 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (HandicapP1 > HandicapP3)
                                                 {
 
-                                                    ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                   //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole1_P1 = ScoreHole1_P1 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                    }
+
                                                 }
                                                 else
                                                 {
-
-                                                    ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole1_P3 = ScoreHole1_P3 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                    }
+                                                  
                                                 }
 
                                             }
@@ -458,11 +475,27 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP1 < HandicapP3)
                                                 {
-                                                    ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                   //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole1_P1 = ScoreHole1_P1 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole1_P3 = ScoreHole1_P3 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                    }
                                                 }
 
 
@@ -589,6 +622,16 @@ namespace DragonGolfBackEnd.Controllers
                                                 {
 
                                                     ScoreHole2_P1 = ScoreHole2_P1 - 1;
+
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole1_P1 = ScoreHole1_P1 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
@@ -15613,18 +15656,18 @@ namespace DragonGolfBackEnd.Controllers
         }
 
 
-        private int[] HoyoInicialCambio(int hole1_P1, int hole2_P1, int hole3_P1, int hole4_P1, int hole5_P1, int hole6_P1, int hole7_P1, int hole8_P1, int hole9_P1, int hole10_P1, int hole11_P1, int hole12_P1, int hole13_P1, int hole14_P1, int hole15_P1, int hole16_P1, int hole17_P1, int hole18_P1,
-            int hole1_P2, int hole2_P2, int hole3_P2, int hole4_P2, int hole5_P2, int hole6_P2, int hole7_P2, int hole8_P2, int hole9_P2, int hole10_P2, int hole11_P2, int hole12_P2, int hole13_P2, int hole14_P2, int hole15_P2, int hole16_P2, int hole17_P2, int hole18_P2,
-            int hole1_P3, int hole2_P3, int hole3_P3, int hole4_P3, int hole5_P3, int hole6_P3, int hole7_P3, int hole8_P3, int hole9_P3, int hole10_P3, int hole11_P3, int hole12_P3, int hole13_P3, int hole14_P3, int hole15_P3, int hole16_P3, int hole17_P3, int hole18_P3,
-            int hole1_P4, int hole2_P4, int hole3_P4, int hole4_P4, int hole5_P4, int hole6_P4, int hole7_P4, int hole8_P4, int hole9_P4, int hole10_P4, int hole11_P4, int hole12_P4, int hole13_P4, int hole14_P4, int hole15_P4, int hole16_P4, int hole17_P4, int hole18_P4, int HoyoInicial)
+        private int[] HoyoInicialCambio(double hole1_P1, double hole2_P1, double hole3_P1, double hole4_P1, double hole5_P1, double hole6_P1, double hole7_P1, double hole8_P1, double hole9_P1, double hole10_P1, double hole11_P1, double hole12_P1, double hole13_P1, double hole14_P1, double hole15_P1, double hole16_P1, double hole17_P1, double hole18_P1,
+            double hole1_P2, double hole2_P2, double hole3_P2, double hole4_P2, double hole5_P2, double hole6_P2, double hole7_P2, double hole8_P2, double hole9_P2, double hole10_P2, double hole11_P2, double hole12_P2, double hole13_P2, double hole14_P2, double hole15_P2, double hole16_P2, double hole17_P2, double hole18_P2,
+            double hole1_P3, double hole2_P3, double hole3_P3, double hole4_P3, double hole5_P3, double hole6_P3, double hole7_P3, double hole8_P3, double hole9_P3, double hole10_P3, double hole11_P3, double hole12_P3, double hole13_P3, double hole14_P3, double hole15_P3, double hole16_P3, double hole17_P3, double hole18_P3,
+            double hole1_P4, double hole2_P4, double hole3_P4, double hole4_P4, double hole5_P4, double hole6_P4, double hole7_P4, double hole8_P4, double hole9_P4, double hole10_P4, double hole11_P4, double hole12_P4, double hole13_P4, double hole14_P4, double hole15_P4, double hole16_P4, double hole17_P4, double hole18_P4, int HoyoInicial)
         {
 
-            int[] SwitchHoles_P1 = new int[19];
-            int[] SwitchHoles_P2 = new int[19];
-            int[] SwitchHoles_P3 = new int[19];
-            int[] SwitchHoles_P4 = new int[19];
+            double[] SwitchHoles_P1 = new double[19];
+            double[] SwitchHoles_P2 = new double[19];
+            double[] SwitchHoles_P3 = new double[19];
+            double[] SwitchHoles_P4 = new double[19];
 
-            int[] SwitchHoles = new int[76];
+            double[] SwitchHoles = new double[76];
 
 
             switch (HoyoInicial)
