@@ -1722,6 +1722,7 @@ namespace DragonGolfBackEnd.Controllers
                                     if (Contador > 18)
                                     {
                                         Contador = 1;
+                                        Adv=Adv-18;
                                     }
 
                                     if (Contador <= Adv)
