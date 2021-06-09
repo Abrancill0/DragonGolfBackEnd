@@ -621,22 +621,28 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (HandicapP1 > HandicapP3)
                                                 {
 
-                                                    ScoreHole2_P1 = ScoreHole2_P1 - 1;
-
                                                     //Validafinalizacion
                                                     if (Contador == AdvPositivo)
                                                     {
-                                                        ScoreHole1_P1 = ScoreHole1_P1 - (0.5 + ValCompleto);
+                                                        ScoreHole2_P1 = ScoreHole2_P1 - (0.5 + ValCompleto);
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                        ScoreHole2_P1 = ScoreHole2_P1 - 1;
                                                     }
                                                 }
                                                 else
                                                 {
 
-                                                    ScoreHole2_P3 = ScoreHole2_P3 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole2_P3 = ScoreHole2_P3 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole2_P3 = ScoreHole2_P3 - 1;
+                                                    }
                                                 }
 
                                             }
@@ -646,11 +652,28 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP1 < HandicapP3)
                                                 {
-                                                    ScoreHole2_P1 = ScoreHole2_P1 - 1;
+                                                  
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole2_P1 = ScoreHole2_P1 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole2_P1 = ScoreHole2_P1 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole2_P3 = ScoreHole2_P3 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole2_P3 = ScoreHole2_P3 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole2_P3 = ScoreHole2_P3 - 1;
+                                                    }
                                                 }
 
 
@@ -664,7 +687,6 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole3_P1 > 0 && ScoreHole3_P2 > 0 && ScoreHole3_P3 > 0 && ScoreHole4_P4 > 0)
                                         {
-                                            ScoreHole3_P1 = ScoreHole3_P1 - 1;
 
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
@@ -672,12 +694,28 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (HandicapP1 > HandicapP3)
                                                 {
 
-                                                    ScoreHole3_P1 = ScoreHole3_P1 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole3_P1 = ScoreHole3_P1 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole3_P1 = ScoreHole3_P1 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
 
-                                                    ScoreHole3_P3 = ScoreHole3_P3 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole3_P3 = ScoreHole3_P3 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole3_P3 = ScoreHole3_P3 - 1;
+                                                    }
                                                 }
 
                                             }
@@ -687,11 +725,28 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP1 < HandicapP3)
                                                 {
-                                                    ScoreHole3_P1 = ScoreHole3_P1 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole3_P1 = ScoreHole3_P1 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole3_P1 = ScoreHole3_P1 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole3_P3 = ScoreHole3_P3 - 1;
+
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole3_P3 = ScoreHole3_P3 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole3_P3 = ScoreHole3_P3 - 1;
+                                                    }
                                                 }
 
 
@@ -713,12 +768,28 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (HandicapP1 > HandicapP3)
                                                 {
 
-                                                    ScoreHole4_P1 = ScoreHole4_P1 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole4_P1 = ScoreHole4_P1 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole4_P1 = ScoreHole4_P1 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
 
-                                                    ScoreHole4_P3 = ScoreHole4_P3 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole4_P3 = ScoreHole4_P3 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole4_P3 = ScoreHole4_P3 - 1;
+                                                    }
                                                 }
 
                                             }
@@ -728,13 +799,28 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP1 < HandicapP3)
                                                 {
-                                                    ScoreHole4_P1 = ScoreHole4_P1 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole4_P1 = ScoreHole4_P1 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole4_P1 = ScoreHole4_P1 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole4_P3 = ScoreHole4_P3 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole4_P3 = ScoreHole4_P3 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole4_P3 = ScoreHole4_P3 - 1;
+                                                    }
                                                 }
-
 
                                             }
                                         }
@@ -750,13 +836,27 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP1 > HandicapP3)
                                                 {
-
-                                                    ScoreHole5_P1 = ScoreHole5_P1 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole5_P1 = ScoreHole5_P1 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole5_P1 = ScoreHole5_P1 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
-
-                                                    ScoreHole5_P3 = ScoreHole5_P3 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole5_P3 = ScoreHole5_P3 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole5_P3 = ScoreHole5_P3 - 1;
+                                                    }
                                                 }
 
                                             }
@@ -766,11 +866,28 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP1 < HandicapP3)
                                                 {
-                                                    ScoreHole5_P1 = ScoreHole5_P1 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole5_P1 = ScoreHole5_P1 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole5_P1 = ScoreHole5_P1 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole5_P3 = ScoreHole5_P3 - 1;
+                                                    
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole5_P3 = ScoreHole5_P3 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole5_P3 = ScoreHole5_P3 - 1;
+                                                    }
                                                 }
 
 
@@ -790,13 +907,28 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP1 > HandicapP3)
                                                 {
-
-                                                    ScoreHole6_P1 = ScoreHole6_P1 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole6_P1 = ScoreHole6_P1 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole6_P1 = ScoreHole6_P1 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
 
-                                                    ScoreHole6_P3 = ScoreHole6_P3 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole6_P3 = ScoreHole6_P3 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole6_P3 = ScoreHole6_P3 - 1;
+                                                    }
                                                 }
 
                                             }
@@ -806,11 +938,30 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP1 < HandicapP3)
                                                 {
-                                                    ScoreHole6_P1 = ScoreHole6_P1 - 1;
+                                              
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole6_P1 = ScoreHole6_P1 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole6_P1 = ScoreHole6_P1 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
                                                     ScoreHole6_P3 = ScoreHole6_P3 - 1;
+
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole6_P3 = ScoreHole6_P3 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole6_P3 = ScoreHole6_P3 - 1;
+                                                    }
                                                 }
 
 
@@ -830,12 +981,28 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (HandicapP1 > HandicapP3)
                                                 {
 
-                                                    ScoreHole7_P1 = ScoreHole7_P1 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole7_P1 = ScoreHole7_P1 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole7_P1 = ScoreHole7_P1 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
 
-                                                    ScoreHole7_P3 = ScoreHole7_P3 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole7_P3 = ScoreHole7_P3 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole7_P3 = ScoreHole7_P3 - 1;
+                                                    }
                                                 }
 
                                             }
@@ -845,11 +1012,29 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP1 < HandicapP3)
                                                 {
-                                                    ScoreHole7_P1 = ScoreHole7_P1 - 1;
+
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole7_P1 = ScoreHole7_P1 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole7_P1 = ScoreHole7_P1 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole7_P3 = ScoreHole7_P3 - 1;
+
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole7_P3 = ScoreHole7_P3 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole7_P3 = ScoreHole7_P3 - 1;
+                                                    }
                                                 }
 
 
@@ -869,13 +1054,27 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP1 > HandicapP3)
                                                 {
-
-                                                    ScoreHole8_P1 = ScoreHole8_P1 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole8_P1 = ScoreHole8_P1 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole8_P1 = ScoreHole8_P1 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
-
-                                                    ScoreHole8_P3 = ScoreHole8_P3 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole8_P3 = ScoreHole8_P3 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole8_P3 = ScoreHole8_P3 - 1;
+                                                    }
                                                 }
 
                                             }
@@ -885,11 +1084,27 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP1 < HandicapP3)
                                                 {
-                                                    ScoreHole8_P1 = ScoreHole8_P1 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole8_P1 = ScoreHole8_P1 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole8_P1 = ScoreHole8_P1 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole8_P3 = ScoreHole8_P3 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole8_P3 = ScoreHole8_P3 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole8_P3 = ScoreHole8_P3 - 1;
+                                                    }
                                                 }
 
                                             }
@@ -912,12 +1127,28 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (HandicapP1 > HandicapP3)
                                                 {
 
-                                                    ScoreHole9_P1 = ScoreHole9_P1 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole9_P1 = ScoreHole9_P1 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole9_P1 = ScoreHole9_P1 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
 
-                                                    ScoreHole9_P3 = ScoreHole9_P3 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole9_P3 = ScoreHole9_P3 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole9_P3 = ScoreHole9_P3 - 1;
+                                                    }
                                                 }
 
                                             }
@@ -927,11 +1158,28 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP1 < HandicapP3)
                                                 {
-                                                    ScoreHole9_P1 = ScoreHole9_P1 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole9_P1 = ScoreHole9_P1 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole9_P1 = ScoreHole9_P1 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole9_P3 = ScoreHole9_P3 - 1;
+                                                    
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole9_P3 = ScoreHole9_P3 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole9_P3 = ScoreHole9_P3 - 1;
+                                                    }
                                                 }
 
                                             }
@@ -950,12 +1198,27 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (HandicapP1 > HandicapP3)
                                                 {
 
-                                                    ScoreHole10_P1 = ScoreHole10_P1 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole10_P1 = ScoreHole10_P1 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole10_P1 = ScoreHole10_P1 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
-
-                                                    ScoreHole10_P3 = ScoreHole10_P3 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole10_P3 = ScoreHole10_P3 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole10_P3 = ScoreHole10_P3 - 1;
+                                                    }
                                                 }
 
                                             }
@@ -965,11 +1228,27 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP1 < HandicapP3)
                                                 {
-                                                    ScoreHole10_P1 = ScoreHole10_P1 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole10_P1 = ScoreHole10_P1 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole10_P1 = ScoreHole10_P1 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole10_P3 = ScoreHole10_P3 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole10_P3 = ScoreHole10_P3 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole10_P3 = ScoreHole10_P3 - 1;
+                                                    }
                                                 }
 
                                             }
@@ -987,11 +1266,27 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP1 > HandicapP3)
                                                 {
-                                                    ScoreHole11_P1 = ScoreHole11_P1 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole11_P1 = ScoreHole11_P1 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole11_P1 = ScoreHole11_P1 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole11_P3 = ScoreHole11_P3 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole11_P3 = ScoreHole11_P3 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole11_P3 = ScoreHole11_P3 - 1;
+                                                    }
                                                 }
 
                                             }
@@ -1001,11 +1296,27 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP1 < HandicapP3)
                                                 {
-                                                    ScoreHole11_P1 = ScoreHole11_P1 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole11_P1 = ScoreHole11_P1 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole11_P1 = ScoreHole11_P1 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole11_P3 = ScoreHole11_P3 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole11_P3 = ScoreHole11_P3 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole11_P3 = ScoreHole11_P3 - 1;
+                                                    }
                                                 }
 
                                             }
@@ -1024,12 +1335,28 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (HandicapP1 > HandicapP3)
                                                 {
 
-                                                    ScoreHole12_P1 = ScoreHole12_P1 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole12_P1 = ScoreHole12_P1 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole12_P1 = ScoreHole12_P1 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
 
-                                                    ScoreHole12_P3 = ScoreHole12_P3 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole12_P3 = ScoreHole12_P3 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole12_P3 = ScoreHole12_P3 - 1;
+                                                    }
                                                 }
 
                                             }
@@ -1039,11 +1366,27 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP1 < HandicapP3)
                                                 {
-                                                    ScoreHole12_P1 = ScoreHole12_P1 - 1;
+                                                   //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole12_P1 = ScoreHole12_P1 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole12_P1 = ScoreHole12_P1 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole12_P3 = ScoreHole12_P3 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole12_P3 = ScoreHole12_P3 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole12_P3 = ScoreHole12_P3 - 1;
+                                                    }
                                                 }
 
                                             }
@@ -1060,13 +1403,29 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP1 > HandicapP3)
                                                 {
-
-                                                    ScoreHole13_P1 = ScoreHole13_P1 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole13_P1 = ScoreHole13_P1 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole13_P1 = ScoreHole13_P1 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
 
-                                                    ScoreHole13_P3 = ScoreHole13_P3 - 1;
+
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole13_P3 = ScoreHole13_P3 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole13_P3 = ScoreHole13_P3 - 1;
+                                                    }
                                                 }
 
                                             }
@@ -1076,11 +1435,29 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP1 < HandicapP3)
                                                 {
-                                                    ScoreHole13_P1 = ScoreHole13_P1 - 1;
+
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole13_P1 = ScoreHole13_P1 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole13_P1 = ScoreHole13_P1 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole13_P3 = ScoreHole13_P3 - 1;
+
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole13_P1 = ScoreHole13_P1 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole13_P1 = ScoreHole13_P1 - 1;
+                                                    }
                                                 }
 
                                             }
@@ -1099,12 +1476,28 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (HandicapP1 > HandicapP3)
                                                 {
 
-                                                    ScoreHole14_P1 = ScoreHole14_P1 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole14_P1 = ScoreHole14_P1 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole14_P1 = ScoreHole14_P1 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
 
-                                                    ScoreHole14_P3 = ScoreHole14_P3 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole14_P3 = ScoreHole14_P3 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole14_P3 = ScoreHole14_P3 - 1;
+                                                    }
                                                 }
 
                                             }
@@ -1114,11 +1507,29 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP1 < HandicapP3)
                                                 {
-                                                    ScoreHole14_P1 = ScoreHole14_P1 - 1;
+                                                    
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole14_P1 = ScoreHole14_P1 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole14_P1 = ScoreHole14_P1 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole14_P3 = ScoreHole14_P3 - 1;
+                                                    
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole14_P3 = ScoreHole14_P3 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole14_P3 = ScoreHole14_P3 - 1;
+                                                    }
                                                 }
 
                                             }
@@ -1137,12 +1548,28 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (HandicapP1 > HandicapP3)
                                                 {
 
-                                                    ScoreHole15_P1 = ScoreHole15_P1 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole15_P1 = ScoreHole15_P1 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole15_P1 = ScoreHole15_P1 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
 
-                                                    ScoreHole15_P3 = ScoreHole15_P3 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole15_P3 = ScoreHole15_P3 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole15_P3 = ScoreHole15_P3 - 1;
+                                                    }
                                                 }
 
                                             }
@@ -1152,11 +1579,29 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP1 < HandicapP3)
                                                 {
-                                                    ScoreHole15_P1 = ScoreHole15_P1 - 1;
+
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole15_P1 = ScoreHole15_P1 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole15_P1 = ScoreHole15_P1 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole15_P3 = ScoreHole15_P3 - 1;
+
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole15_P3 = ScoreHole15_P3 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole15_P3 = ScoreHole15_P3 - 1;
+                                                    }
                                                 }
 
                                             }
@@ -1174,12 +1619,28 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (HandicapP1 > HandicapP3)
                                                 {
 
-                                                    ScoreHole16_P1 = ScoreHole16_P1 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole16_P1 = ScoreHole16_P1 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole16_P1 = ScoreHole16_P1 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
 
-                                                    ScoreHole16_P3 = ScoreHole16_P3 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole16_P3 = ScoreHole16_P3 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole16_P3 = ScoreHole16_P3 - 1;
+                                                    }
                                                 }
 
                                             }
@@ -1189,11 +1650,28 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP1 < HandicapP3)
                                                 {
-                                                    ScoreHole16_P1 = ScoreHole16_P1 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole16_P3 = ScoreHole16_P3 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole16_P3 = ScoreHole16_P3 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole16_P3 = ScoreHole16_P3 - 1;
+
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole16_P3 = ScoreHole16_P3 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole16_P3 = ScoreHole16_P3 - 1;
+                                                    }
                                                 }
 
                                             }
@@ -1210,12 +1688,30 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (HandicapP1 > HandicapP3)
                                                 {
 
-                                                    ScoreHole17_P1 = ScoreHole17_P1 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole17_P1 = ScoreHole17_P1 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole17_P1 = ScoreHole17_P1 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
 
                                                     ScoreHole17_P3 = ScoreHole17_P3 - 1;
+
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole17_P3 = ScoreHole17_P3 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole17_P3 = ScoreHole17_P3 - 1;
+                                                    }
                                                 }
 
                                             }
@@ -1225,11 +1721,29 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP1 < HandicapP3)
                                                 {
-                                                    ScoreHole17_P1 = ScoreHole17_P1 - 1;
+                                                  
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole17_P1 = ScoreHole16_P1 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole17_P1 = ScoreHole17_P1 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole17_P3 = ScoreHole17_P3 - 1;
+                                                    
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole17_P3 = ScoreHole17_P3 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole17_P3 = ScoreHole17_P3 - 1;
+                                                    }
                                                 }
 
                                             }
@@ -1247,12 +1761,30 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (HandicapP1 > HandicapP3)
                                                 {
 
-                                                    ScoreHole18_P1 = ScoreHole18_P1 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole18_P1 = ScoreHole18_P1 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole18_P1 = ScoreHole18_P1 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
 
                                                     ScoreHole18_P3 = ScoreHole18_P3 - 1;
+
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole18_P3 = ScoreHole18_P3 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole18_P3 = ScoreHole18_P3 - 1;
+                                                    }
                                                 }
 
                                             }
@@ -1262,11 +1794,28 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP1 < HandicapP3)
                                                 {
-                                                    ScoreHole18_P1 = ScoreHole18_P1 - 1;
+
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole18_P1 = ScoreHole18_P1 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole18_P1 = ScoreHole18_P1 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole18_P3 = ScoreHole18_P3 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole18_P3 = ScoreHole18_P3 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole18_P3 = ScoreHole18_P3 - 1;
+                                                    }
                                                 }
 
                                             }
@@ -1318,12 +1867,28 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (HandicapP2 > HandicapP4)
                                                 {
 
-                                                    ScoreHole1_P2 = ScoreHole1_P2 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole1_P2 = ScoreHole1_P2 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole1_P2 = ScoreHole1_P2 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
 
-                                                    ScoreHole1_P4 = ScoreHole1_P4 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole1_P4 = ScoreHole1_P4 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole1_P4 = ScoreHole1_P4 - 1;
+                                                    }
                                                 }
 
                                             }
@@ -1333,11 +1898,29 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP2 < HandicapP4)
                                                 {
-                                                    ScoreHole1_P2 = ScoreHole1_P2 - 1;
+                                                    
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole1_P2 = ScoreHole1_P2 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole1_P2 = ScoreHole1_P2 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole1_P4 = ScoreHole1_P4 - 1;
+                                                    
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole1_P4 = ScoreHole1_P4 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole1_P4 = ScoreHole1_P4 - 1;
+                                                    }
                                                 }
 
 
@@ -1359,12 +1942,28 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (HandicapP2 > HandicapP4)
                                                 {
 
-                                                    ScoreHole2_P2 = ScoreHole2_P2 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole2_P2 = ScoreHole2_P2 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole2_P2 = ScoreHole2_P2 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
 
-                                                    ScoreHole2_P4 = ScoreHole2_P4 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole2_P4 = ScoreHole2_P4 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole2_P4 = ScoreHole2_P4 - 1;
+                                                    }
                                                 }
 
                                             }
@@ -1374,11 +1973,29 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP2 < HandicapP4)
                                                 {
-                                                    ScoreHole2_P2 = ScoreHole2_P2 - 1;
+                                                    
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole2_P2 = ScoreHole2_P2 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole2_P2 = ScoreHole2_P2 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole2_P4 = ScoreHole2_P4 - 1;
+                                                    
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole2_P4 = ScoreHole2_P4 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole2_P4 = ScoreHole2_P4 - 1;
+                                                    }
                                                 }
 
 
@@ -1397,12 +2014,28 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (HandicapP2 > HandicapP4)
                                                 {
 
-                                                    ScoreHole3_P2 = ScoreHole3_P2 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole3_P2 = ScoreHole3_P2 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole3_P2 = ScoreHole3_P2 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
 
-                                                    ScoreHole3_P4 = ScoreHole3_P4 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole3_P4 = ScoreHole3_P4 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole3_P4 = ScoreHole3_P4 - 1;
+                                                    }
                                                 }
 
                                             }
@@ -1412,11 +2045,29 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP2 < HandicapP4)
                                                 {
-                                                    ScoreHole3_P2 = ScoreHole3_P2 - 1;
+                                                    
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole3_P2 = ScoreHole3_P2 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole3_P2 = ScoreHole3_P2 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole3_P4 = ScoreHole3_P4 - 1;
+                                                    
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole3_P4 = ScoreHole3_P4 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole3_P4 = ScoreHole3_P4 - 1;
+                                                    }
                                                 }
 
                                             }
@@ -1434,12 +2085,28 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (HandicapP2 > HandicapP4)
                                                 {
 
-                                                    ScoreHole4_P2 = ScoreHole4_P2 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole4_P2 = ScoreHole4_P2 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole4_P2 = ScoreHole4_P2 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
 
-                                                    ScoreHole4_P4 = ScoreHole4_P4 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole4_P4 = ScoreHole4_P4 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole4_P4 = ScoreHole4_P4 - 1;
+                                                    }
                                                 }
 
                                             }
@@ -1449,11 +2116,29 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP2 < HandicapP4)
                                                 {
-                                                    ScoreHole4_P2 = ScoreHole4_P2 - 1;
+
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole4_P2 = ScoreHole4_P2 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole4_P2 = ScoreHole4_P2 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole4_P4 = ScoreHole4_P4 - 1;
+
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole4_P4 = ScoreHole4_P4 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole4_P4 = ScoreHole4_P4 - 1;
+                                                    }
                                                 }
 
 
@@ -1472,12 +2157,28 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (HandicapP2 > HandicapP4)
                                                 {
 
-                                                    ScoreHole5_P2 = ScoreHole5_P2 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole5_P2 = ScoreHole5_P2 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole5_P2 = ScoreHole5_P2 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
 
-                                                    ScoreHole5_P4 = ScoreHole5_P4 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole5_P4 = ScoreHole5_P4 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole5_P4 = ScoreHole5_P4 - 1;
+                                                    }
                                                 }
 
                                             }
@@ -1487,11 +2188,30 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP2 < HandicapP4)
                                                 {
-                                                    ScoreHole5_P2 = ScoreHole5_P2 - 1;
+                                                    
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole5_P2 = ScoreHole5_P2 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole5_P2 = ScoreHole5_P2 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
                                                     ScoreHole5_P4 = ScoreHole5_P4 - 1;
+
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole5_P4 = ScoreHole5_P4 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole5_P4 = ScoreHole5_P4 - 1;
+                                                    }
                                                 }
 
 
@@ -1510,12 +2230,28 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (HandicapP2 > HandicapP4)
                                                 {
 
-                                                    ScoreHole6_P2 = ScoreHole6_P2 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole6_P2 = ScoreHole6_P2 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole6_P2 = ScoreHole6_P2 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
 
-                                                    ScoreHole6_P4 = ScoreHole6_P4 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole6_P4 = ScoreHole6_P4 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole6_P4 = ScoreHole6_P4 - 1;
+                                                    }
                                                 }
 
                                             }
@@ -1525,11 +2261,29 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP2 < HandicapP4)
                                                 {
-                                                    ScoreHole6_P2 = ScoreHole6_P2 - 1;
+
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole6_P2 = ScoreHole6_P2 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole6_P2 = ScoreHole6_P2 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole6_P4 = ScoreHole6_P4 - 1;
+
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole6_P4 = ScoreHole6_P4 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole6_P4 = ScoreHole6_P4 - 1;
+                                                    }
                                                 }
 
 
@@ -1543,18 +2297,33 @@ namespace DragonGolfBackEnd.Controllers
                                         if (ScoreHole7_P2 > 0 && ScoreHole7_P1 > 0 && ScoreHole7_P3 > 0 && ScoreHole7_P4 > 0)
                                         {
 
-
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
                                                 if (HandicapP2 > HandicapP4)
                                                 {
 
-                                                    ScoreHole7_P2 = ScoreHole7_P2 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole7_P2 = ScoreHole7_P2 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole7_P2 = ScoreHole7_P2 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
 
-                                                    ScoreHole7_P4 = ScoreHole7_P4 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole7_P4 = ScoreHole7_P4 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole7_P4 = ScoreHole7_P4 - 1;
+                                                    }
                                                 }
 
                                             }
@@ -1564,11 +2333,29 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP2 < HandicapP4)
                                                 {
-                                                    ScoreHole7_P2 = ScoreHole7_P2 - 1;
+
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole7_P2 = ScoreHole7_P2 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole7_P2 = ScoreHole7_P2 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole7_P4 = ScoreHole7_P4 - 1;
+                                                    
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole7_P4 = ScoreHole7_P4 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole7_P4 = ScoreHole7_P4 - 1;
+                                                    }
                                                 }
 
 
@@ -1587,12 +2374,28 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (HandicapP2 > HandicapP4)
                                                 {
 
-                                                    ScoreHole8_P2 = ScoreHole8_P2 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole8_P2 = ScoreHole8_P2 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole8_P2 = ScoreHole8_P2 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
 
-                                                    ScoreHole8_P4 = ScoreHole8_P4 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole8_P4 = ScoreHole8_P4 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole8_P4 = ScoreHole8_P4 - 1;
+                                                    }
                                                 }
 
                                             }
@@ -1602,11 +2405,28 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP2 < HandicapP4)
                                                 {
-                                                    ScoreHole8_P2 = ScoreHole8_P2 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole8_P2 = ScoreHole8_P2 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole8_P2 = ScoreHole8_P2 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole8_P4 = ScoreHole8_P4 - 1;
+                                                    
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole8_P4 = ScoreHole8_P4 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole8_P4 = ScoreHole8_P4 - 1;
+                                                    }
                                                 }
 
 
@@ -1624,13 +2444,28 @@ namespace DragonGolfBackEnd.Controllers
                                             {
                                                 if (HandicapP2 > HandicapP4)
                                                 {
-
-                                                    ScoreHole9_P2 = ScoreHole9_P2 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole9_P2 = ScoreHole9_P2 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole9_P2 = ScoreHole9_P2 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
 
-                                                    ScoreHole9_P4 = ScoreHole9_P4 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole9_P4 = ScoreHole9_P4 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole9_P4 = ScoreHole9_P4 - 1;
+                                                    }
                                                 }
 
                                             }
@@ -1640,11 +2475,29 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP2 < HandicapP4)
                                                 {
-                                                    ScoreHole9_P2 = ScoreHole9_P2 - 1;
+
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole9_P2 = ScoreHole9_P2 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole9_P2 = ScoreHole9_P2 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole9_P4 = ScoreHole9_P4 - 1;
+
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole9_P4 = ScoreHole9_P4 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole9_P4 = ScoreHole9_P4 - 1;
+                                                    }
                                                 }
 
 
@@ -1657,19 +2510,34 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole10_P2 > 0 && ScoreHole10_P1 > 0 && ScoreHole10_P3 > 0 && ScoreHole10_P4 > 0)
                                         {
-                                            ScoreHole10_P2 = ScoreHole10_P2 - 1;
-
+                                          
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
                                                 if (HandicapP2 > HandicapP4)
                                                 {
 
-                                                    ScoreHole10_P2 = ScoreHole10_P2 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole10_P2 = ScoreHole10_P2 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole10_P2 = ScoreHole10_P2 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
 
-                                                    ScoreHole10_P4 = ScoreHole10_P4 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole10_P4 = ScoreHole10_P4 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole10_P4 = ScoreHole10_P4 - 1;
+                                                    }
                                                 }
 
                                             }
@@ -1679,11 +2547,29 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP2 < HandicapP4)
                                                 {
-                                                    ScoreHole10_P2 = ScoreHole10_P2 - 1;
+                                                    
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole10_P2 = ScoreHole10_P2 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole10_P2 = ScoreHole10_P2 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole10_P4 = ScoreHole10_P4 - 1;
+                                                    
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole10_P2 = ScoreHole10_P2 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole10_P2 = ScoreHole10_P2 - 1;
+                                                    }
                                                 }
 
 
@@ -1696,20 +2582,34 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole11_P2 > 0 && ScoreHole11_P1 > 0 && ScoreHole11_P3 > 0 && ScoreHole11_P4 > 0)
                                         {
-                                            ScoreHole11_P2 = ScoreHole11_P2 - 1;
-
-
+                                           
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
                                                 if (HandicapP2 > HandicapP4)
                                                 {
 
-                                                    ScoreHole11_P2 = ScoreHole11_P2 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole11_P2 = ScoreHole11_P2 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole11_P2 = ScoreHole11_P2 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
 
-                                                    ScoreHole11_P4 = ScoreHole11_P4 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole11_P4 = ScoreHole11_P4 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole11_P4 = ScoreHole11_P4 - 1;
+                                                    }
                                                 }
 
                                             }
@@ -1719,11 +2619,27 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP2 < HandicapP4)
                                                 {
-                                                    ScoreHole11_P2 = ScoreHole11_P2 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole11_P2 = ScoreHole11_P2 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole11_P2 = ScoreHole11_P2 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole11_P4 = ScoreHole11_P4 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole11_P4 = ScoreHole11_P4 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole11_P4 = ScoreHole11_P4 - 1;
+                                                    }
                                                 }
 
 
@@ -1743,12 +2659,28 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (HandicapP2 > HandicapP4)
                                                 {
 
-                                                    ScoreHole12_P2 = ScoreHole12_P2 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole12_P2 = ScoreHole12_P2 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole12_P2 = ScoreHole12_P2 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
 
-                                                    ScoreHole12_P4 = ScoreHole12_P4 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole12_P4 = ScoreHole12_P4 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole12_P4 = ScoreHole12_P4 - 1;
+                                                    }
                                                 }
 
                                             }
@@ -1758,11 +2690,29 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP2 < HandicapP4)
                                                 {
-                                                    ScoreHole12_P2 = ScoreHole12_P2 - 1;
+                                                    
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole12_P2 = ScoreHole12_P2 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole12_P2 = ScoreHole12_P2 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole12_P4 = ScoreHole12_P4 - 1;
+
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole12_P4 = ScoreHole12_P4 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole12_P4 = ScoreHole12_P4 - 1;
+                                                    }
                                                 }
 
 
@@ -1781,12 +2731,28 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (HandicapP2 > HandicapP4)
                                                 {
 
-                                                    ScoreHole13_P2 = ScoreHole13_P2 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole13_P2 = ScoreHole13_P2 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole13_P2 = ScoreHole13_P2 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
 
-                                                    ScoreHole13_P4 = ScoreHole13_P4 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole13_P4 = ScoreHole13_P4 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole13_P4 = ScoreHole13_P4 - 1;
+                                                    }
                                                 }
 
                                             }
@@ -1796,11 +2762,29 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP2 < HandicapP4)
                                                 {
-                                                    ScoreHole13_P2 = ScoreHole13_P2 - 1;
+                                                    
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole13_P2 = ScoreHole13_P2 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole13_P2 = ScoreHole13_P2 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole13_P4 = ScoreHole13_P4 - 1;
+                                                    
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole13_P4 = ScoreHole13_P4 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole13_P4 = ScoreHole13_P4 - 1;
+                                                    }
                                                 }
 
 
@@ -1818,13 +2802,28 @@ namespace DragonGolfBackEnd.Controllers
                                             {
                                                 if (HandicapP2 > HandicapP4)
                                                 {
-
-                                                    ScoreHole14_P2 = ScoreHole14_P2 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole14_P2 = ScoreHole14_P2 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole14_P2 = ScoreHole14_P2 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
 
-                                                    ScoreHole14_P4 = ScoreHole14_P4 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole14_P4 = ScoreHole14_P4 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole14_P4 = ScoreHole14_P4 - 1;
+                                                    }
                                                 }
 
                                             }
@@ -1834,11 +2833,28 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP2 < HandicapP4)
                                                 {
-                                                    ScoreHole14_P2 = ScoreHole14_P2 - 1;
+                                                  
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole14_P2 = ScoreHole14_P2 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole14_P2 = ScoreHole14_P2 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole14_P4 = ScoreHole14_P4 - 1;
+                                                   //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole14_P4 = ScoreHole14_P4 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole14_P4 = ScoreHole14_P4 - 1;
+                                                    }
                                                 }
 
 
@@ -1856,13 +2872,29 @@ namespace DragonGolfBackEnd.Controllers
                                             {
                                                 if (HandicapP2 > HandicapP4)
                                                 {
-
-                                                    ScoreHole15_P2 = ScoreHole15_P2 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole15_P2 = ScoreHole15_P2 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole15_P2 = ScoreHole15_P2 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
 
-                                                    ScoreHole15_P4 = ScoreHole15_P4 - 1;
+
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole15_P4 = ScoreHole15_P4 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole15_P4 = ScoreHole15_P4 - 1;
+                                                    }
                                                 }
 
                                             }
@@ -1872,11 +2904,29 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP2 < HandicapP4)
                                                 {
-                                                    ScoreHole15_P2 = ScoreHole15_P2 - 1;
+
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole15_P2 = ScoreHole15_P2 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole15_P2 = ScoreHole15_P2 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole15_P4 = ScoreHole15_P4 - 1;
+                                                    
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole15_P4 = ScoreHole15_P4 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole15_P4 = ScoreHole15_P4 - 1;
+                                                    }
                                                 }
 
 
@@ -1895,12 +2945,27 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (HandicapP2 > HandicapP4)
                                                 {
 
-                                                    ScoreHole16_P2 = ScoreHole16_P2 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole16_P2 = ScoreHole16_P2 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole16_P2 = ScoreHole16_P2 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
-
-                                                    ScoreHole16_P4 = ScoreHole16_P4 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole16_P4 = ScoreHole16_P4 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole16_P4 = ScoreHole16_P4 - 1;
+                                                    }
                                                 }
 
                                             }
@@ -1910,11 +2975,27 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP2 < HandicapP4)
                                                 {
-                                                    ScoreHole16_P2 = ScoreHole16_P2 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole16_P2 = ScoreHole16_P2 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole16_P2 = ScoreHole16_P2 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole16_P4 = ScoreHole16_P4 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole16_P4 = ScoreHole16_P4 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole16_P4 = ScoreHole16_P4 - 1;
+                                                    }
                                                 }
 
 
@@ -1928,18 +3009,33 @@ namespace DragonGolfBackEnd.Controllers
                                         if (ScoreHole17_P2 > 0 && ScoreHole17_P1 > 0 && ScoreHole17_P3 > 0 && ScoreHole17_P4 > 0)
                                         {
 
-
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
                                                 if (HandicapP2 > HandicapP4)
                                                 {
 
-                                                    ScoreHole17_P2 = ScoreHole17_P2 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole17_P2 = ScoreHole17_P2 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole17_P2 = ScoreHole17_P2 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
 
-                                                    ScoreHole17_P4 = ScoreHole17_P4 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole17_P4 = ScoreHole17_P4 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole17_P4 = ScoreHole17_P4 - 1;
+                                                    }
                                                 }
 
                                             }
@@ -1949,11 +3045,29 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP2 < HandicapP4)
                                                 {
-                                                    ScoreHole17_P2 = ScoreHole17_P2 - 1;
+                                                    
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole17_P2 = ScoreHole17_P2 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole17_P2 = ScoreHole17_P2 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole17_P4 = ScoreHole17_P4 - 1;
+                                                    
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole17_P4 = ScoreHole17_P4 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole17_P4 = ScoreHole17_P4 - 1;
+                                                    }
                                                 }
 
 
@@ -1971,13 +3085,27 @@ namespace DragonGolfBackEnd.Controllers
                                             {
                                                 if (HandicapP2 > HandicapP4)
                                                 {
-
-                                                    ScoreHole18_P2 = ScoreHole18_P2 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole18_P2 = ScoreHole18_P2 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole18_P2 = ScoreHole18_P2 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
-
-                                                    ScoreHole18_P4 = ScoreHole18_P4 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole18_P4 = ScoreHole18_P4 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole18_P4 = ScoreHole18_P4 - 1;
+                                                    }
                                                 }
 
                                             }
@@ -1987,11 +3115,28 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (HandicapP2 < HandicapP4)
                                                 {
-                                                    ScoreHole18_P2 = ScoreHole18_P2 - 1;
+                                                    
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole18_P2 = ScoreHole18_P2 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole18_P2 = ScoreHole18_P2 - 1;
+                                                    }
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole18_P4 = ScoreHole18_P4 - 1;
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvInverso)
+                                                    {
+                                                        ScoreHole18_P4 = ScoreHole18_P4 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole18_P4 = ScoreHole18_P4 - 1;
+                                                    }
                                                 }
 
 
@@ -2011,7 +3156,7 @@ namespace DragonGolfBackEnd.Controllers
                         }
 
                         //Cambio de hoyo
-                        int[] CambioHoyos = new int[76];
+                        double[] CambioHoyos = new double[76];
 
                         CambioHoyos = HoyoInicialCambio(ScoreHole1_P1, ScoreHole2_P1, ScoreHole3_P1, ScoreHole4_P1, ScoreHole5_P1, ScoreHole6_P1, ScoreHole7_P1, ScoreHole8_P1, ScoreHole9_P1, ScoreHole10_P1, ScoreHole11_P1, ScoreHole12_P1, ScoreHole13_P1, ScoreHole14_P1, ScoreHole15_P1, ScoreHole16_P1, ScoreHole17_P1, ScoreHole18_P1,
                             ScoreHole1_P2, ScoreHole2_P2, ScoreHole3_P2, ScoreHole4_P2, ScoreHole5_P2, ScoreHole6_P2, ScoreHole7_P2, ScoreHole8_P2, ScoreHole9_P2, ScoreHole10_P2, ScoreHole11_P2, ScoreHole12_P2, ScoreHole13_P2, ScoreHole14_P2, ScoreHole15_P2, ScoreHole16_P2, ScoreHole17_P2, ScoreHole18_P2,
@@ -2095,25 +3240,25 @@ namespace DragonGolfBackEnd.Controllers
                         ScoreHole18_P4 = CambioHoyos[72];
                         //Termina cambio de hoyo
 
-                        int Resultado1_H = 0;
-                        int Resultado2_H = 0;
-                        int Resultado3_H = 0;
-                        int Resultado4_H = 0;
-                        int Resultado5_H = 0;
-                        int Resultado6_H = 0;
-                        int Resultado7_H = 0;
-                        int Resultado8_H = 0;
-                        int Resultado9_H = 0;
+                        double Resultado1_H = 0;
+                        double Resultado2_H = 0;
+                        double Resultado3_H = 0;
+                        double Resultado4_H = 0;
+                        double Resultado5_H = 0;
+                        double Resultado6_H = 0;
+                        double Resultado7_H = 0;
+                        double Resultado8_H = 0;
+                        double Resultado9_H = 0;
 
-                        int Resultado1_L = 0;
-                        int Resultado2_L = 0;
-                        int Resultado3_L = 0;
-                        int Resultado4_L = 0;
-                        int Resultado5_L = 0;
-                        int Resultado6_L = 0;
-                        int Resultado7_L = 0;
-                        int Resultado8_L = 0;
-                        int Resultado9_L = 0;
+                        double Resultado1_L = 0;
+                        double Resultado2_L = 0;
+                        double Resultado3_L = 0;
+                        double Resultado4_L = 0;
+                        double Resultado5_L = 0;
+                        double Resultado6_L = 0;
+                        double Resultado7_L = 0;
+                        double Resultado8_L = 0;
+                        double Resultado9_L = 0;
 
                         int ValidaFront = 0;
 
@@ -2831,8 +3976,8 @@ namespace DragonGolfBackEnd.Controllers
                         }
 
                         //Calculo Medal front
-                        int ResultadoTotaF1 = ScoreHole1_P1 + ScoreHole2_P1 + ScoreHole3_P1 + ScoreHole4_P1 + ScoreHole5_P1 + ScoreHole6_P1 + ScoreHole7_P1 + ScoreHole8_P1 + ScoreHole9_P1 + ScoreHole1_P3 + ScoreHole2_P3 + ScoreHole3_P3 + ScoreHole4_P3 + ScoreHole5_P3 + ScoreHole6_P3 + ScoreHole7_P3 + ScoreHole8_P3 + ScoreHole9_P3;
-                        int ResultadoTotaF2 = ScoreHole1_P2 + ScoreHole2_P2 + ScoreHole3_P2 + ScoreHole4_P2 + ScoreHole5_P2 + ScoreHole6_P2 + ScoreHole7_P2 + ScoreHole8_P2 + ScoreHole9_P2 + ScoreHole1_P4 + ScoreHole2_P4 + ScoreHole3_P4 + ScoreHole4_P4 + ScoreHole5_P4 + ScoreHole6_P4 + ScoreHole7_P4 + ScoreHole8_P4 + ScoreHole9_P4;
+                        double ResultadoTotaF1 = ScoreHole1_P1 + ScoreHole2_P1 + ScoreHole3_P1 + ScoreHole4_P1 + ScoreHole5_P1 + ScoreHole6_P1 + ScoreHole7_P1 + ScoreHole8_P1 + ScoreHole9_P1 + ScoreHole1_P3 + ScoreHole2_P3 + ScoreHole3_P3 + ScoreHole4_P3 + ScoreHole5_P3 + ScoreHole6_P3 + ScoreHole7_P3 + ScoreHole8_P3 + ScoreHole9_P3;
+                        double ResultadoTotaF2 = ScoreHole1_P2 + ScoreHole2_P2 + ScoreHole3_P2 + ScoreHole4_P2 + ScoreHole5_P2 + ScoreHole6_P2 + ScoreHole7_P2 + ScoreHole8_P2 + ScoreHole9_P2 + ScoreHole1_P4 + ScoreHole2_P4 + ScoreHole3_P4 + ScoreHole4_P4 + ScoreHole5_P4 + ScoreHole6_P4 + ScoreHole7_P4 + ScoreHole8_P4 + ScoreHole9_P4;
 
                         bool ValidaJuegoInicio = false;
 
@@ -2846,25 +3991,25 @@ namespace DragonGolfBackEnd.Controllers
                         }
 
 
-                        int Resultado10_H = 0;
-                        int Resultado11_H = 0;
-                        int Resultado12_H = 0;
-                        int Resultado13_H = 0;
-                        int Resultado14_H = 0;
-                        int Resultado15_H = 0;
-                        int Resultado16_H = 0;
-                        int Resultado17_H = 0;
-                        int Resultado18_H = 0;
+                        double Resultado10_H = 0;
+                        double Resultado11_H = 0;
+                        double Resultado12_H = 0;
+                        double Resultado13_H = 0;
+                        double Resultado14_H = 0;
+                        double Resultado15_H = 0;
+                        double Resultado16_H = 0;
+                        double Resultado17_H = 0;
+                        double Resultado18_H = 0;
 
-                        int Resultado10_L = 0;
-                        int Resultado11_L = 0;
-                        int Resultado12_L = 0;
-                        int Resultado13_L = 0;
-                        int Resultado14_L = 0;
-                        int Resultado15_L = 0;
-                        int Resultado16_L = 0;
-                        int Resultado17_L = 0;
-                        int Resultado18_L = 0;
+                        double Resultado10_L = 0;
+                        double Resultado11_L = 0;
+                        double Resultado12_L = 0;
+                        double Resultado13_L = 0;
+                        double Resultado14_L = 0;
+                        double Resultado15_L = 0;
+                        double Resultado16_L = 0;
+                        double Resultado17_L = 0;
+                        double Resultado18_L = 0;
 
                         int ValidaBack = 0;
 
@@ -3583,15 +4728,15 @@ namespace DragonGolfBackEnd.Controllers
                         }
 
                         //Calculo Medal front
-                        int ResultadoTotaB1 = ScoreHole10_P1 + ScoreHole11_P1 + ScoreHole12_P1 + ScoreHole13_P1 + ScoreHole14_P1 + ScoreHole15_P1 + ScoreHole16_P1 + ScoreHole17_P1 + ScoreHole18_P1 + ScoreHole10_P3 + ScoreHole11_P3 + ScoreHole12_P3 + ScoreHole13_P3 + ScoreHole14_P3 + ScoreHole15_P3 + ScoreHole16_P3 + ScoreHole17_P3 + ScoreHole18_P3;
-                        int ResultadoTotaB2 = ScoreHole10_P2 + ScoreHole11_P2 + ScoreHole12_P2 + ScoreHole13_P2 + ScoreHole14_P2 + ScoreHole15_P2 + ScoreHole16_P2 + ScoreHole17_P2 + ScoreHole18_P2 + ScoreHole10_P4 + ScoreHole11_P4 + ScoreHole12_P4 + ScoreHole13_P4 + ScoreHole14_P4 + ScoreHole15_P4 + ScoreHole16_P4 + ScoreHole17_P4 + ScoreHole18_P4;
+                        double ResultadoTotaB1 = ScoreHole10_P1 + ScoreHole11_P1 + ScoreHole12_P1 + ScoreHole13_P1 + ScoreHole14_P1 + ScoreHole15_P1 + ScoreHole16_P1 + ScoreHole17_P1 + ScoreHole18_P1 + ScoreHole10_P3 + ScoreHole11_P3 + ScoreHole12_P3 + ScoreHole13_P3 + ScoreHole14_P3 + ScoreHole15_P3 + ScoreHole16_P3 + ScoreHole17_P3 + ScoreHole18_P3;
+                        double ResultadoTotaB2 = ScoreHole10_P2 + ScoreHole11_P2 + ScoreHole12_P2 + ScoreHole13_P2 + ScoreHole14_P2 + ScoreHole15_P2 + ScoreHole16_P2 + ScoreHole17_P2 + ScoreHole18_P2 + ScoreHole10_P4 + ScoreHole11_P4 + ScoreHole12_P4 + ScoreHole13_P4 + ScoreHole14_P4 + ScoreHole15_P4 + ScoreHole16_P4 + ScoreHole17_P4 + ScoreHole18_P4;
 
                         //Valida Medal
 
                         int ResultadoFinalMedal = 0;
 
-                        int GolpesTotalesJugador1 = ResultadoTotaF1 + ResultadoTotaB1;
-                        int GolpesTotalesJugador2 = ResultadoTotaF2 + ResultadoTotaB2;
+                        double GolpesTotalesJugador1 = ResultadoTotaF1 + ResultadoTotaB1;
+                        double GolpesTotalesJugador2 = ResultadoTotaF2 + ResultadoTotaB2;
 
                         if (GolpesTotalesJugador1 < GolpesTotalesJugador2)
                         {
@@ -3762,11 +4907,11 @@ namespace DragonGolfBackEnd.Controllers
         }
 
 
-        private string[] CalcularApuestaPresionFront2(int Resultado1_H, int Resultado2_H, int Resultado3_H, int Resultado4_H, int Resultado5_H, int Resultado6_H, int Resultado7_H, int Resultado8_H, int Resultado9_H,
-            int Resultado1_L, int Resultado2_L, int Resultado3_L, int Resultado4_L, int Resultado5_L, int Resultado6_L, int Resultado7_L, int Resultado8_L, int Resultado9_L, bool ValidaJuegoInicio)
+        private string[] CalcularApuestaPresionFront2(double Resultado1_H, double Resultado2_H, double Resultado3_H, double Resultado4_H, double Resultado5_H, double Resultado6_H, double Resultado7_H, double Resultado8_H, double Resultado9_H,
+            double Resultado1_L, double Resultado2_L, double Resultado3_L, double Resultado4_L, double Resultado5_L, double Resultado6_L, double Resultado7_L, double Resultado8_L, double Resultado9_L, bool ValidaJuegoInicio)
         {
 
-            int[] ResultadoPresionFront_T = new int[10];
+            double[] ResultadoPresionFront_T = new double[10];
 
             string[] ResultadoPresionFrontString = new string[10];
 
@@ -4030,15 +5175,15 @@ namespace DragonGolfBackEnd.Controllers
                 Resultado9_L = 0;
             }
 
-            int Hoyo1 = Resultado1_H + Resultado1_L;
-            int Hoyo2 = Resultado2_H + Resultado2_L;
-            int Hoyo3 = Resultado3_H + Resultado3_L;
-            int Hoyo4 = Resultado4_H + Resultado4_L;
-            int Hoyo5 = Resultado5_H + Resultado5_L;
-            int Hoyo6 = Resultado6_H + Resultado6_L;
-            int Hoyo7 = Resultado7_H + Resultado7_L;
-            int Hoyo8 = Resultado8_H + Resultado8_L;
-            int Hoyo9 = Resultado9_H + Resultado9_L;
+            double Hoyo1 = Resultado1_H + Resultado1_L;
+            double Hoyo2 = Resultado2_H + Resultado2_L;
+            double Hoyo3 = Resultado3_H + Resultado3_L;
+            double Hoyo4 = Resultado4_H + Resultado4_L;
+            double Hoyo5 = Resultado5_H + Resultado5_L;
+            double Hoyo6 = Resultado6_H + Resultado6_L;
+            double Hoyo7 = Resultado7_H + Resultado7_L;
+            double Hoyo8 = Resultado8_H + Resultado8_L;
+            double Hoyo9 = Resultado9_H + Resultado9_L;
 
             if (Hoyo1 == 0)
             {
@@ -4158,9 +5303,9 @@ namespace DragonGolfBackEnd.Controllers
             }
 
             string ResultadoString = "";
-            int ResultadoInt = 0;
+            double ResultadoInt = 0;
 
-            int Presion1 = 0;
+            double Presion1 = 0;
 
             string PresionValor1 = "";
             string PresionValor2 = "";
@@ -4178,7 +5323,7 @@ namespace DragonGolfBackEnd.Controllers
                 if (ResultadoPresionFront_T[i] == 1)
                 {
 
-                    int ValorHoyo = 0;
+                    double ValorHoyo = 0;
 
                     switch (i)
                     {
@@ -4255,7 +5400,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor1 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor1);
+                                double Presion = Convert.ToInt32(PresionValor1);
                                 // Presion += 1;
 
                                 switch (i)
@@ -4308,7 +5453,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor1 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor1);
+                                double Presion = Convert.ToInt32(PresionValor1);
 
                                 switch (i)
                                 {
@@ -4349,7 +5494,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor2 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor2);
+                                double Presion = Convert.ToInt32(PresionValor2);
 
                                 switch (i)
                                 {
@@ -4402,7 +5547,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor1 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor1);
+                                double Presion = Convert.ToInt32(PresionValor1);
 
                                 switch (i)
                                 {
@@ -4443,7 +5588,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor2 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor2);
+                                double Presion = Convert.ToInt32(PresionValor2);
 
                                 switch (i)
                                 {
@@ -4484,7 +5629,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor3 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor3);
+                                double Presion = Convert.ToInt32(PresionValor3);
 
                                 switch (i)
                                 {
@@ -4535,7 +5680,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor1 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor1);
+                                double Presion = Convert.ToInt32(PresionValor1);
 
                                 switch (i)
                                 {
@@ -4576,7 +5721,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor2 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor2);
+                                double Presion = Convert.ToInt32(PresionValor2);
 
                                 switch (i)
                                 {
@@ -4617,7 +5762,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor3 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor3);
+                                double Presion = Convert.ToInt32(PresionValor3);
 
                                 switch (i)
                                 {
@@ -4658,7 +5803,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor4 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor4);
+                                double Presion = Convert.ToInt32(PresionValor4);
 
                                 switch (i)
                                 {
@@ -4709,7 +5854,7 @@ namespace DragonGolfBackEnd.Controllers
                     {
                         if (PresionValor1 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor1);
+                            double Presion = Convert.ToInt32(PresionValor1);
 
                             switch (i)
                             {
@@ -4752,7 +5897,7 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (PresionValor2 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor2);
+                            double Presion = Convert.ToInt32(PresionValor2);
 
                             switch (i)
                             {
@@ -4795,7 +5940,7 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (PresionValor3 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor3);
+                            double Presion = Convert.ToInt32(PresionValor3);
 
                             switch (i)
                             {
@@ -4838,7 +5983,7 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (PresionValor4 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor4);
+                            double Presion = Convert.ToInt32(PresionValor4);
 
                             switch (i)
                             {
@@ -4881,7 +6026,7 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (PresionValor5 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor5);
+                            double Presion = Convert.ToInt32(PresionValor5);
 
                             switch (i)
                             {
@@ -4934,7 +6079,7 @@ namespace DragonGolfBackEnd.Controllers
                     //{
                     //    Presion1 = 0;
                     //}
-                    int ValorHoyo = 0;
+                    double ValorHoyo = 0;
                     //ResultadoInt -= 1;
                     switch (i)
                     {
@@ -5009,7 +6154,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor1 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor1);
+                                double Presion = Convert.ToInt32(PresionValor1);
 
                                 switch (i)
                                 {
@@ -5061,7 +6206,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor1 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor1);
+                                double Presion = Convert.ToInt32(PresionValor1);
 
                                 switch (i)
                                 {
@@ -5102,7 +6247,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor2 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor2);
+                                double Presion = Convert.ToInt32(PresionValor2);
 
                                 switch (i)
                                 {
@@ -5153,7 +6298,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor1 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor1);
+                                double Presion = Convert.ToInt32(PresionValor1);
 
                                 switch (i)
                                 {
@@ -5194,7 +6339,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor2 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor2);
+                                double Presion = Convert.ToInt32(PresionValor2);
 
                                 switch (i)
                                 {
@@ -5234,7 +6379,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor3 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor3);
+                                double Presion = Convert.ToInt32(PresionValor3);
 
                                 switch (i)
                                 {
@@ -5284,7 +6429,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor1 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor1);
+                                double Presion = Convert.ToInt32(PresionValor1);
 
                                 switch (i)
                                 {
@@ -5325,7 +6470,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor2 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor2);
+                                double Presion = Convert.ToInt32(PresionValor2);
 
                                 switch (i)
                                 {
@@ -5366,7 +6511,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor3 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor3);
+                                double Presion = Convert.ToInt32(PresionValor3);
 
                                 switch (i)
                                 {
@@ -5407,7 +6552,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor4 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor4);
+                                double Presion = Convert.ToInt32(PresionValor4);
 
                                 switch (i)
                                 {
@@ -5456,7 +6601,7 @@ namespace DragonGolfBackEnd.Controllers
                     {
                         if (PresionValor1 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor1);
+                            double Presion = Convert.ToInt32(PresionValor1);
 
                             switch (i)
                             {
@@ -5500,7 +6645,7 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (PresionValor2 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor2);
+                            double Presion = Convert.ToInt32(PresionValor2);
 
                             switch (i)
                             {
@@ -5542,7 +6687,7 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (PresionValor3 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor3);
+                            double Presion = Convert.ToInt32(PresionValor3);
 
                             switch (i)
                             {
@@ -5585,7 +6730,7 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (PresionValor4 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor4);
+                            double Presion = Convert.ToInt32(PresionValor4);
 
                             switch (i)
                             {
@@ -5628,7 +6773,7 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (PresionValor5 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor5);
+                            double Presion = Convert.ToInt32(PresionValor5);
 
                             switch (i)
                             {
@@ -5724,11 +6869,11 @@ namespace DragonGolfBackEnd.Controllers
 
         }
 
-        private string[] CalcularApuestaPresionBack2(int Resultado1_H, int Resultado2_H, int Resultado3_H, int Resultado4_H, int Resultado5_H, int Resultado6_H, int Resultado7_H, int Resultado8_H, int Resultado9_H,
-            int Resultado1_L, int Resultado2_L, int Resultado3_L, int Resultado4_L, int Resultado5_L, int Resultado6_L, int Resultado7_L, int Resultado8_L, int Resultado9_L, bool ValidaJuegoInicio)
+        private string[] CalcularApuestaPresionBack2(double Resultado1_H, double Resultado2_H, double Resultado3_H, double Resultado4_H, double Resultado5_H, double Resultado6_H, double Resultado7_H, double Resultado8_H, double Resultado9_H,
+            double Resultado1_L, double Resultado2_L, double Resultado3_L, double Resultado4_L, double Resultado5_L, double Resultado6_L, double Resultado7_L, double Resultado8_L, double Resultado9_L, bool ValidaJuegoInicio)
         {
 
-            int[] ResultadoPresionFront_T = new int[10];
+            double[] ResultadoPresionFront_T = new double[10];
 
             string[] ResultadoPresionFrontString = new string[10];
 
@@ -5992,15 +7137,15 @@ namespace DragonGolfBackEnd.Controllers
                 Resultado9_L = 0;
             }
 
-            int Hoyo1 = Resultado1_H + Resultado1_L;
-            int Hoyo2 = Resultado2_H + Resultado2_L;
-            int Hoyo3 = Resultado3_H + Resultado3_L;
-            int Hoyo4 = Resultado4_H + Resultado4_L;
-            int Hoyo5 = Resultado5_H + Resultado5_L;
-            int Hoyo6 = Resultado6_H + Resultado6_L;
-            int Hoyo7 = Resultado7_H + Resultado7_L;
-            int Hoyo8 = Resultado8_H + Resultado8_L;
-            int Hoyo9 = Resultado9_H + Resultado9_L;
+            double Hoyo1 = Resultado1_H + Resultado1_L;
+            double Hoyo2 = Resultado2_H + Resultado2_L;
+            double Hoyo3 = Resultado3_H + Resultado3_L;
+            double Hoyo4 = Resultado4_H + Resultado4_L;
+            double Hoyo5 = Resultado5_H + Resultado5_L;
+            double Hoyo6 = Resultado6_H + Resultado6_L;
+            double Hoyo7 = Resultado7_H + Resultado7_L;
+            double Hoyo8 = Resultado8_H + Resultado8_L;
+            double Hoyo9 = Resultado9_H + Resultado9_L;
 
             if (Hoyo1 == 0)
             {
@@ -6120,9 +7265,9 @@ namespace DragonGolfBackEnd.Controllers
             }
 
             string ResultadoString = "";
-            int ResultadoInt = 0;
+            double ResultadoInt = 0;
 
-            int Presion1 = 0;
+            double Presion1 = 0;
 
             string PresionValor1 = "";
             string PresionValor2 = "";
@@ -6140,7 +7285,7 @@ namespace DragonGolfBackEnd.Controllers
                 if (ResultadoPresionFront_T[i] == 1)
                 {
 
-                    int ValorHoyo = 0;
+                    double ValorHoyo = 0;
 
                     switch (i)
                     {
@@ -6217,7 +7362,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor1 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor1);
+                                double Presion = Convert.ToInt32(PresionValor1);
                                 // Presion += 1;
 
                                 switch (i)
@@ -6270,7 +7415,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor1 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor1);
+                                double Presion = Convert.ToInt32(PresionValor1);
 
                                 switch (i)
                                 {
@@ -6311,7 +7456,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor2 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor2);
+                                double Presion = Convert.ToInt32(PresionValor2);
 
                                 switch (i)
                                 {
@@ -6364,7 +7509,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor1 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor1);
+                                double Presion = Convert.ToInt32(PresionValor1);
 
                                 switch (i)
                                 {
@@ -6405,7 +7550,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor2 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor2);
+                                double Presion = Convert.ToInt32(PresionValor2);
 
                                 switch (i)
                                 {
@@ -6446,7 +7591,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor3 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor3);
+                                double Presion = Convert.ToInt32(PresionValor3);
 
                                 switch (i)
                                 {
@@ -6497,7 +7642,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor1 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor1);
+                                double Presion = Convert.ToInt32(PresionValor1);
 
                                 switch (i)
                                 {
@@ -6538,7 +7683,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor2 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor2);
+                                double Presion = Convert.ToInt32(PresionValor2);
 
                                 switch (i)
                                 {
@@ -6579,7 +7724,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor3 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor3);
+                                double Presion = Convert.ToInt32(PresionValor3);
 
                                 switch (i)
                                 {
@@ -6620,7 +7765,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor4 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor4);
+                                double Presion = Convert.ToInt32(PresionValor4);
 
                                 switch (i)
                                 {
@@ -6671,7 +7816,7 @@ namespace DragonGolfBackEnd.Controllers
                     {
                         if (PresionValor1 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor1);
+                            double Presion = Convert.ToInt32(PresionValor1);
 
                             switch (i)
                             {
@@ -6714,7 +7859,7 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (PresionValor2 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor2);
+                            double Presion = Convert.ToInt32(PresionValor2);
 
                             switch (i)
                             {
@@ -6757,7 +7902,7 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (PresionValor3 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor3);
+                            double Presion = Convert.ToInt32(PresionValor3);
 
                             switch (i)
                             {
@@ -6800,7 +7945,7 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (PresionValor4 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor4);
+                            double Presion = Convert.ToInt32(PresionValor4);
 
                             switch (i)
                             {
@@ -6843,7 +7988,7 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (PresionValor5 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor5);
+                            double Presion = Convert.ToInt32(PresionValor5);
 
                             switch (i)
                             {
@@ -6896,7 +8041,7 @@ namespace DragonGolfBackEnd.Controllers
                     //{
                     //    Presion1 = 0;
                     //}
-                    int ValorHoyo = 0;
+                    double ValorHoyo = 0;
                     //ResultadoInt -= 1;
                     switch (i)
                     {
@@ -6971,7 +8116,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor1 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor1);
+                                double Presion = Convert.ToInt32(PresionValor1);
 
                                 switch (i)
                                 {
@@ -7023,7 +8168,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor1 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor1);
+                                double Presion = Convert.ToInt32(PresionValor1);
 
                                 switch (i)
                                 {
@@ -7064,7 +8209,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor2 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor2);
+                                double Presion = Convert.ToInt32(PresionValor2);
 
                                 switch (i)
                                 {
@@ -7115,7 +8260,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor1 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor1);
+                                double Presion = Convert.ToInt32(PresionValor1);
 
                                 switch (i)
                                 {
@@ -7156,7 +8301,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor2 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor2);
+                                double Presion = Convert.ToInt32(PresionValor2);
 
                                 switch (i)
                                 {
@@ -7196,7 +8341,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor3 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor3);
+                                double Presion = Convert.ToInt32(PresionValor3);
 
                                 switch (i)
                                 {
@@ -7246,7 +8391,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor1 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor1);
+                                double Presion = Convert.ToInt32(PresionValor1);
 
                                 switch (i)
                                 {
@@ -7287,7 +8432,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor2 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor2);
+                                double Presion = Convert.ToInt32(PresionValor2);
 
                                 switch (i)
                                 {
@@ -7328,7 +8473,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor3 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor3);
+                                double Presion = Convert.ToInt32(PresionValor3);
 
                                 switch (i)
                                 {
@@ -7369,7 +8514,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor4 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor4);
+                                double Presion = Convert.ToInt32(PresionValor4);
 
                                 switch (i)
                                 {
@@ -7418,7 +8563,7 @@ namespace DragonGolfBackEnd.Controllers
                     {
                         if (PresionValor1 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor1);
+                            double Presion = Convert.ToInt32(PresionValor1);
 
                             switch (i)
                             {
@@ -7462,7 +8607,7 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (PresionValor2 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor2);
+                            double Presion = Convert.ToInt32(PresionValor2);
 
                             switch (i)
                             {
@@ -7504,7 +8649,7 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (PresionValor3 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor3);
+                            double Presion = Convert.ToInt32(PresionValor3);
 
                             switch (i)
                             {
@@ -7547,7 +8692,7 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (PresionValor4 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor4);
+                            double Presion = Convert.ToInt32(PresionValor4);
 
                             switch (i)
                             {
@@ -7590,7 +8735,7 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (PresionValor5 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor5);
+                            double Presion = Convert.ToInt32(PresionValor5);
 
                             switch (i)
                             {
@@ -7687,11 +8832,11 @@ namespace DragonGolfBackEnd.Controllers
 
         }
 
-        private string[] CalcularApuestaPresionFront3(int Resultado1_H, int Resultado2_H, int Resultado3_H, int Resultado4_H, int Resultado5_H, int Resultado6_H, int Resultado7_H, int Resultado8_H, int Resultado9_H,
-            int Resultado1_L, int Resultado2_L, int Resultado3_L, int Resultado4_L, int Resultado5_L, int Resultado6_L, int Resultado7_L, int Resultado8_L, int Resultado9_L, bool ValidaJuegoInicio)
+        private string[] CalcularApuestaPresionFront3(double Resultado1_H, double Resultado2_H, double Resultado3_H, double Resultado4_H, double Resultado5_H, double Resultado6_H, double Resultado7_H, double Resultado8_H, double Resultado9_H,
+            double Resultado1_L, double Resultado2_L, double Resultado3_L, double Resultado4_L, double Resultado5_L, double Resultado6_L, double Resultado7_L, double Resultado8_L, double Resultado9_L, bool ValidaJuegoInicio)
         {
 
-            int[] ResultadoPresionFront_T = new int[10];
+            double[] ResultadoPresionFront_T = new double[10];
 
             string[] ResultadoPresionFrontString = new string[10];
 
@@ -7955,15 +9100,15 @@ namespace DragonGolfBackEnd.Controllers
                 Resultado9_L = 0;
             }
 
-            int Hoyo1 = Resultado1_H + Resultado1_L;
-            int Hoyo2 = Resultado2_H + Resultado2_L;
-            int Hoyo3 = Resultado3_H + Resultado3_L;
-            int Hoyo4 = Resultado4_H + Resultado4_L;
-            int Hoyo5 = Resultado5_H + Resultado5_L;
-            int Hoyo6 = Resultado6_H + Resultado6_L;
-            int Hoyo7 = Resultado7_H + Resultado7_L;
-            int Hoyo8 = Resultado8_H + Resultado8_L;
-            int Hoyo9 = Resultado9_H + Resultado9_L;
+            double Hoyo1 = Resultado1_H + Resultado1_L;
+            double Hoyo2 = Resultado2_H + Resultado2_L;
+            double Hoyo3 = Resultado3_H + Resultado3_L;
+            double Hoyo4 = Resultado4_H + Resultado4_L;
+            double Hoyo5 = Resultado5_H + Resultado5_L;
+            double Hoyo6 = Resultado6_H + Resultado6_L;
+            double Hoyo7 = Resultado7_H + Resultado7_L;
+            double Hoyo8 = Resultado8_H + Resultado8_L;
+            double Hoyo9 = Resultado9_H + Resultado9_L;
 
             if (Hoyo1 == 0)
             {
@@ -8083,9 +9228,9 @@ namespace DragonGolfBackEnd.Controllers
             }
 
             string ResultadoString = "";
-            int ResultadoInt = 0;
+            double ResultadoInt = 0;
 
-            int Presion1 = 0;
+            double Presion1 = 0;
 
             string PresionValor1 = "";
             string PresionValor2 = "";
@@ -8103,7 +9248,7 @@ namespace DragonGolfBackEnd.Controllers
                 if (ResultadoPresionFront_T[i] == 1)
                 {
 
-                    int ValorHoyo = 0;
+                    double ValorHoyo = 0;
 
                     switch (i)
                     {
@@ -8180,7 +9325,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor1 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor1);
+                                double Presion = Convert.ToInt32(PresionValor1);
                                 // Presion += 1;
 
                                 switch (i)
@@ -8233,7 +9378,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor1 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor1);
+                                double Presion = Convert.ToInt32(PresionValor1);
 
                                 switch (i)
                                 {
@@ -8274,7 +9419,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor2 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor2);
+                                double Presion = Convert.ToInt32(PresionValor2);
 
                                 switch (i)
                                 {
@@ -8327,7 +9472,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor1 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor1);
+                                double Presion = Convert.ToInt32(PresionValor1);
 
                                 switch (i)
                                 {
@@ -8368,7 +9513,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor2 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor2);
+                                double Presion = Convert.ToInt32(PresionValor2);
 
                                 switch (i)
                                 {
@@ -8409,7 +9554,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor3 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor3);
+                                double Presion = Convert.ToInt32(PresionValor3);
 
                                 switch (i)
                                 {
@@ -8460,7 +9605,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor1 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor1);
+                                double Presion = Convert.ToInt32(PresionValor1);
 
                                 switch (i)
                                 {
@@ -8501,7 +9646,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor2 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor2);
+                                double Presion = Convert.ToInt32(PresionValor2);
 
                                 switch (i)
                                 {
@@ -8542,7 +9687,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor3 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor3);
+                                double Presion = Convert.ToInt32(PresionValor3);
 
                                 switch (i)
                                 {
@@ -8583,7 +9728,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor4 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor4);
+                                double Presion = Convert.ToInt32(PresionValor4);
 
                                 switch (i)
                                 {
@@ -8634,7 +9779,7 @@ namespace DragonGolfBackEnd.Controllers
                     {
                         if (PresionValor1 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor1);
+                            double Presion = Convert.ToInt32(PresionValor1);
 
                             switch (i)
                             {
@@ -8677,7 +9822,7 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (PresionValor2 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor2);
+                            double Presion = Convert.ToInt32(PresionValor2);
 
                             switch (i)
                             {
@@ -8720,7 +9865,7 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (PresionValor3 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor3);
+                            double Presion = Convert.ToInt32(PresionValor3);
 
                             switch (i)
                             {
@@ -8763,7 +9908,7 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (PresionValor4 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor4);
+                            double Presion = Convert.ToInt32(PresionValor4);
 
                             switch (i)
                             {
@@ -8806,7 +9951,7 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (PresionValor5 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor5);
+                            double Presion = Convert.ToInt32(PresionValor5);
 
                             switch (i)
                             {
@@ -8859,7 +10004,7 @@ namespace DragonGolfBackEnd.Controllers
                     //{
                     //    Presion1 = 0;
                     //}
-                    int ValorHoyo = 0;
+                    double ValorHoyo = 0;
                     //ResultadoInt -= 1;
                     switch (i)
                     {
@@ -8934,7 +10079,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor1 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor1);
+                                double Presion = Convert.ToInt32(PresionValor1);
 
                                 switch (i)
                                 {
@@ -8986,7 +10131,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor1 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor1);
+                                double Presion = Convert.ToInt32(PresionValor1);
 
                                 switch (i)
                                 {
@@ -9027,7 +10172,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor2 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor2);
+                                double Presion = Convert.ToInt32(PresionValor2);
 
                                 switch (i)
                                 {
@@ -9078,7 +10223,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor1 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor1);
+                                double Presion = Convert.ToInt32(PresionValor1);
 
                                 switch (i)
                                 {
@@ -9119,7 +10264,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor2 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor2);
+                                double Presion = Convert.ToInt32(PresionValor2);
 
                                 switch (i)
                                 {
@@ -9159,7 +10304,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor3 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor3);
+                                double Presion = Convert.ToInt32(PresionValor3);
 
                                 switch (i)
                                 {
@@ -9209,7 +10354,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor1 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor1);
+                                double Presion = Convert.ToInt32(PresionValor1);
 
                                 switch (i)
                                 {
@@ -9250,7 +10395,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor2 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor2);
+                                double Presion = Convert.ToInt32(PresionValor2);
 
                                 switch (i)
                                 {
@@ -9291,7 +10436,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor3 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor3);
+                                double Presion = Convert.ToInt32(PresionValor3);
 
                                 switch (i)
                                 {
@@ -9332,7 +10477,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor4 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor4);
+                                double Presion = Convert.ToInt32(PresionValor4);
 
                                 switch (i)
                                 {
@@ -9381,7 +10526,7 @@ namespace DragonGolfBackEnd.Controllers
                     {
                         if (PresionValor1 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor1);
+                            double Presion = Convert.ToInt32(PresionValor1);
 
                             switch (i)
                             {
@@ -9425,7 +10570,7 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (PresionValor2 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor2);
+                            double Presion = Convert.ToInt32(PresionValor2);
 
                             switch (i)
                             {
@@ -9467,7 +10612,7 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (PresionValor3 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor3);
+                            double Presion = Convert.ToInt32(PresionValor3);
 
                             switch (i)
                             {
@@ -9510,7 +10655,7 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (PresionValor4 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor4);
+                            double Presion = Convert.ToInt32(PresionValor4);
 
                             switch (i)
                             {
@@ -9553,7 +10698,7 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (PresionValor5 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor5);
+                            double Presion = Convert.ToInt32(PresionValor5);
 
                             switch (i)
                             {
@@ -9649,11 +10794,11 @@ namespace DragonGolfBackEnd.Controllers
 
         }
 
-        private string[] CalcularApuestaPresionBack3(int Resultado1_H, int Resultado2_H, int Resultado3_H, int Resultado4_H, int Resultado5_H, int Resultado6_H, int Resultado7_H, int Resultado8_H, int Resultado9_H,
-            int Resultado1_L, int Resultado2_L, int Resultado3_L, int Resultado4_L, int Resultado5_L, int Resultado6_L, int Resultado7_L, int Resultado8_L, int Resultado9_L, bool ValidaJuegoInicio)
+        private string[] CalcularApuestaPresionBack3(double Resultado1_H, double Resultado2_H, double Resultado3_H, double Resultado4_H, double Resultado5_H, double Resultado6_H, double Resultado7_H, double Resultado8_H, double Resultado9_H,
+            double Resultado1_L, double Resultado2_L, double Resultado3_L, double Resultado4_L, double Resultado5_L, double Resultado6_L, double Resultado7_L, double Resultado8_L, double Resultado9_L, bool ValidaJuegoInicio)
         {
 
-            int[] ResultadoPresionFront_T = new int[10];
+            double[] ResultadoPresionFront_T = new double[10];
 
             string[] ResultadoPresionFrontString = new string[10];
 
@@ -9918,15 +11063,15 @@ namespace DragonGolfBackEnd.Controllers
             }
 
 
-            int Hoyo1 = Resultado1_H + Resultado1_L;
-            int Hoyo2 = Resultado2_H + Resultado2_L;
-            int Hoyo3 = Resultado3_H + Resultado3_L;
-            int Hoyo4 = Resultado4_H + Resultado4_L;
-            int Hoyo5 = Resultado5_H + Resultado5_L;
-            int Hoyo6 = Resultado6_H + Resultado6_L;
-            int Hoyo7 = Resultado7_H + Resultado7_L;
-            int Hoyo8 = Resultado8_H + Resultado8_L;
-            int Hoyo9 = Resultado9_H + Resultado9_L;
+            double Hoyo1 = Resultado1_H + Resultado1_L;
+            double Hoyo2 = Resultado2_H + Resultado2_L;
+            double Hoyo3 = Resultado3_H + Resultado3_L;
+            double Hoyo4 = Resultado4_H + Resultado4_L;
+            double Hoyo5 = Resultado5_H + Resultado5_L;
+            double Hoyo6 = Resultado6_H + Resultado6_L;
+            double Hoyo7 = Resultado7_H + Resultado7_L;
+            double Hoyo8 = Resultado8_H + Resultado8_L;
+            double Hoyo9 = Resultado9_H + Resultado9_L;
 
             if (Hoyo1 == 0)
             {
@@ -10046,9 +11191,9 @@ namespace DragonGolfBackEnd.Controllers
             }
 
             string ResultadoString = "";
-            int ResultadoInt = 0;
+            double ResultadoInt = 0;
 
-            int Presion1 = 0;
+            double Presion1 = 0;
 
             string PresionValor1 = "";
             string PresionValor2 = "";
@@ -10066,7 +11211,7 @@ namespace DragonGolfBackEnd.Controllers
                 if (ResultadoPresionFront_T[i] == 1)
                 {
 
-                    int ValorHoyo = 0;
+                    double ValorHoyo = 0;
 
                     switch (i)
                     {
@@ -10143,7 +11288,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor1 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor1);
+                                double Presion = Convert.ToInt32(PresionValor1);
                                 // Presion += 1;
 
                                 switch (i)
@@ -10196,7 +11341,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor1 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor1);
+                                double Presion = Convert.ToInt32(PresionValor1);
 
                                 switch (i)
                                 {
@@ -10237,7 +11382,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor2 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor2);
+                                double Presion = Convert.ToInt32(PresionValor2);
 
                                 switch (i)
                                 {
@@ -10290,7 +11435,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor1 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor1);
+                                double Presion = Convert.ToInt32(PresionValor1);
 
                                 switch (i)
                                 {
@@ -10331,7 +11476,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor2 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor2);
+                                double Presion = Convert.ToInt32(PresionValor2);
 
                                 switch (i)
                                 {
@@ -10372,7 +11517,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor3 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor3);
+                                double Presion = Convert.ToInt32(PresionValor3);
 
                                 switch (i)
                                 {
@@ -10423,7 +11568,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor1 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor1);
+                                double Presion = Convert.ToInt32(PresionValor1);
 
                                 switch (i)
                                 {
@@ -10464,7 +11609,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor2 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor2);
+                                double Presion = Convert.ToInt32(PresionValor2);
 
                                 switch (i)
                                 {
@@ -10505,7 +11650,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor3 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor3);
+                                double Presion = Convert.ToInt32(PresionValor3);
 
                                 switch (i)
                                 {
@@ -10546,7 +11691,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor4 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor4);
+                                double Presion = Convert.ToInt32(PresionValor4);
 
                                 switch (i)
                                 {
@@ -10597,7 +11742,7 @@ namespace DragonGolfBackEnd.Controllers
                     {
                         if (PresionValor1 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor1);
+                            double Presion = Convert.ToInt32(PresionValor1);
 
                             switch (i)
                             {
@@ -10640,7 +11785,7 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (PresionValor2 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor2);
+                            double Presion = Convert.ToInt32(PresionValor2);
 
                             switch (i)
                             {
@@ -10683,7 +11828,7 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (PresionValor3 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor3);
+                            double Presion = Convert.ToInt32(PresionValor3);
 
                             switch (i)
                             {
@@ -10726,7 +11871,7 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (PresionValor4 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor4);
+                            double Presion = Convert.ToInt32(PresionValor4);
 
                             switch (i)
                             {
@@ -10769,7 +11914,7 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (PresionValor5 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor5);
+                            double Presion = Convert.ToInt32(PresionValor5);
 
                             switch (i)
                             {
@@ -10823,7 +11968,7 @@ namespace DragonGolfBackEnd.Controllers
                     //{
                     //    Presion1 = 0;
                     //}
-                    int ValorHoyo = 0;
+                    double ValorHoyo = 0;
                     //ResultadoInt -= 1;
                     switch (i)
                     {
@@ -10898,7 +12043,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor1 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor1);
+                                double Presion = Convert.ToInt32(PresionValor1);
 
                                 switch (i)
                                 {
@@ -10950,7 +12095,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor1 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor1);
+                                double Presion = Convert.ToInt32(PresionValor1);
 
                                 switch (i)
                                 {
@@ -10991,7 +12136,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor2 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor2);
+                                double Presion = Convert.ToInt32(PresionValor2);
 
                                 switch (i)
                                 {
@@ -11042,7 +12187,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor1 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor1);
+                                double Presion = Convert.ToInt32(PresionValor1);
 
                                 switch (i)
                                 {
@@ -11083,7 +12228,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor2 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor2);
+                                double Presion = Convert.ToInt32(PresionValor2);
 
                                 switch (i)
                                 {
@@ -11123,7 +12268,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor3 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor3);
+                                double Presion = Convert.ToInt32(PresionValor3);
 
                                 switch (i)
                                 {
@@ -11173,7 +12318,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor1 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor1);
+                                double Presion = Convert.ToInt32(PresionValor1);
 
                                 switch (i)
                                 {
@@ -11214,7 +12359,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor2 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor2);
+                                double Presion = Convert.ToInt32(PresionValor2);
 
                                 switch (i)
                                 {
@@ -11255,7 +12400,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor3 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor3);
+                                double Presion = Convert.ToInt32(PresionValor3);
 
                                 switch (i)
                                 {
@@ -11296,7 +12441,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor4 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor4);
+                                double Presion = Convert.ToInt32(PresionValor4);
 
                                 switch (i)
                                 {
@@ -11345,7 +12490,7 @@ namespace DragonGolfBackEnd.Controllers
                     {
                         if (PresionValor1 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor1);
+                            double Presion = Convert.ToInt32(PresionValor1);
 
                             switch (i)
                             {
@@ -11389,7 +12534,7 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (PresionValor2 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor2);
+                            double Presion = Convert.ToInt32(PresionValor2);
 
                             switch (i)
                             {
@@ -11431,7 +12576,7 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (PresionValor3 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor3);
+                            double Presion = Convert.ToInt32(PresionValor3);
 
                             switch (i)
                             {
@@ -11474,7 +12619,7 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (PresionValor4 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor4);
+                            double Presion = Convert.ToInt32(PresionValor4);
 
                             switch (i)
                             {
@@ -11517,7 +12662,7 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (PresionValor5 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor5);
+                            double Presion = Convert.ToInt32(PresionValor5);
 
                             switch (i)
                             {
@@ -11613,10 +12758,10 @@ namespace DragonGolfBackEnd.Controllers
 
         }
 
-        private string[] CalcularApuestaPresionFront4(int Resultado1_H, int Resultado2_H, int Resultado3_H, int Resultado4_H, int Resultado5_H, int Resultado6_H, int Resultado7_H, int Resultado8_H, int Resultado9_H,
-           int Resultado1_L, int Resultado2_L, int Resultado3_L, int Resultado4_L, int Resultado5_L, int Resultado6_L, int Resultado7_L, int Resultado8_L, int Resultado9_L, bool ValidaJuegoInicio)
+        private string[] CalcularApuestaPresionFront4(double Resultado1_H, double Resultado2_H, double Resultado3_H, double Resultado4_H, double Resultado5_H, double Resultado6_H, double Resultado7_H, double Resultado8_H, double Resultado9_H,
+           double Resultado1_L, double Resultado2_L, double Resultado3_L, double Resultado4_L, double Resultado5_L, double Resultado6_L, double Resultado7_L, double Resultado8_L, double Resultado9_L, bool ValidaJuegoInicio)
         {
-            int[] ResultadoPresionFront_T = new int[10];
+            double[] ResultadoPresionFront_T = new double[10];
 
             string[] ResultadoPresionFrontString = new string[10];
 
@@ -11881,15 +13026,15 @@ namespace DragonGolfBackEnd.Controllers
             }
 
 
-            int Hoyo1 = Resultado1_H + Resultado1_L;
-            int Hoyo2 = Resultado2_H + Resultado2_L;
-            int Hoyo3 = Resultado3_H + Resultado3_L;
-            int Hoyo4 = Resultado4_H + Resultado4_L;
-            int Hoyo5 = Resultado5_H + Resultado5_L;
-            int Hoyo6 = Resultado6_H + Resultado6_L;
-            int Hoyo7 = Resultado7_H + Resultado7_L;
-            int Hoyo8 = Resultado8_H + Resultado8_L;
-            int Hoyo9 = Resultado9_H + Resultado9_L;
+            double Hoyo1 = Resultado1_H + Resultado1_L;
+            double Hoyo2 = Resultado2_H + Resultado2_L;
+            double Hoyo3 = Resultado3_H + Resultado3_L;
+            double Hoyo4 = Resultado4_H + Resultado4_L;
+            double Hoyo5 = Resultado5_H + Resultado5_L;
+            double Hoyo6 = Resultado6_H + Resultado6_L;
+            double Hoyo7 = Resultado7_H + Resultado7_L;
+            double Hoyo8 = Resultado8_H + Resultado8_L;
+            double Hoyo9 = Resultado9_H + Resultado9_L;
 
 
 
@@ -12011,9 +13156,9 @@ namespace DragonGolfBackEnd.Controllers
             }
 
             string ResultadoString = "";
-            int ResultadoInt = 0;
+            double ResultadoInt = 0;
 
-            int Presion1 = 0;
+            double Presion1 = 0;
 
             string PresionValor1 = "";
             string PresionValor2 = "";
@@ -12031,7 +13176,7 @@ namespace DragonGolfBackEnd.Controllers
                 if (ResultadoPresionFront_T[i] == 1)
                 {
 
-                    int ValorHoyo = 0;
+                    double ValorHoyo = 0;
 
                     switch (i)
                     {
@@ -12108,7 +13253,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor1 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor1);
+                                double Presion = Convert.ToInt32(PresionValor1);
                                 // Presion += 1;
 
                                 switch (i)
@@ -12161,7 +13306,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor1 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor1);
+                                double Presion = Convert.ToInt32(PresionValor1);
 
                                 switch (i)
                                 {
@@ -12202,7 +13347,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor2 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor2);
+                                double Presion = Convert.ToInt32(PresionValor2);
 
                                 switch (i)
                                 {
@@ -12255,7 +13400,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor1 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor1);
+                                double Presion = Convert.ToInt32(PresionValor1);
 
                                 switch (i)
                                 {
@@ -12296,7 +13441,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor2 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor2);
+                                double Presion = Convert.ToInt32(PresionValor2);
 
                                 switch (i)
                                 {
@@ -12337,7 +13482,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor3 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor3);
+                                double Presion = Convert.ToInt32(PresionValor3);
 
                                 switch (i)
                                 {
@@ -12388,7 +13533,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor1 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor1);
+                                double Presion = Convert.ToInt32(PresionValor1);
 
                                 switch (i)
                                 {
@@ -12429,7 +13574,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor2 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor2);
+                                double Presion = Convert.ToInt32(PresionValor2);
 
                                 switch (i)
                                 {
@@ -12470,7 +13615,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor3 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor3);
+                                double Presion = Convert.ToInt32(PresionValor3);
 
                                 switch (i)
                                 {
@@ -12511,7 +13656,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor4 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor4);
+                                double Presion = Convert.ToInt32(PresionValor4);
 
                                 switch (i)
                                 {
@@ -12560,7 +13705,7 @@ namespace DragonGolfBackEnd.Controllers
                     {
                         if (PresionValor1 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor1);
+                            double Presion = Convert.ToInt32(PresionValor1);
 
                             switch (i)
                             {
@@ -12603,7 +13748,7 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (PresionValor2 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor2);
+                            double Presion = Convert.ToInt32(PresionValor2);
 
                             switch (i)
                             {
@@ -12646,7 +13791,7 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (PresionValor3 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor3);
+                            double Presion = Convert.ToInt32(PresionValor3);
 
                             switch (i)
                             {
@@ -12689,7 +13834,7 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (PresionValor4 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor4);
+                            double Presion = Convert.ToInt32(PresionValor4);
 
                             switch (i)
                             {
@@ -12732,7 +13877,7 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (PresionValor5 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor5);
+                            double Presion = Convert.ToInt32(PresionValor5);
 
                             switch (i)
                             {
@@ -12785,7 +13930,7 @@ namespace DragonGolfBackEnd.Controllers
                     //{
                     //    Presion1 = 0;
                     //}
-                    int ValorHoyo = 0;
+                    double ValorHoyo = 0;
                     //ResultadoInt -= 1;
                     switch (i)
                     {
@@ -12860,7 +14005,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor1 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor1);
+                                double Presion = Convert.ToInt32(PresionValor1);
 
                                 switch (i)
                                 {
@@ -12912,7 +14057,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor1 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor1);
+                                double Presion = Convert.ToInt32(PresionValor1);
 
                                 switch (i)
                                 {
@@ -12953,7 +14098,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor2 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor2);
+                                double Presion = Convert.ToInt32(PresionValor2);
 
                                 switch (i)
                                 {
@@ -13004,7 +14149,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor1 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor1);
+                                double Presion = Convert.ToInt32(PresionValor1);
 
                                 switch (i)
                                 {
@@ -13045,7 +14190,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor2 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor2);
+                                double Presion = Convert.ToInt32(PresionValor2);
 
                                 switch (i)
                                 {
@@ -13085,7 +14230,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor3 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor3);
+                                double Presion = Convert.ToInt32(PresionValor3);
 
                                 switch (i)
                                 {
@@ -13135,7 +14280,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor1 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor1);
+                                double Presion = Convert.ToInt32(PresionValor1);
 
                                 switch (i)
                                 {
@@ -13176,7 +14321,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor2 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor2);
+                                double Presion = Convert.ToInt32(PresionValor2);
 
                                 switch (i)
                                 {
@@ -13217,7 +14362,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor3 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor3);
+                                double Presion = Convert.ToInt32(PresionValor3);
 
                                 switch (i)
                                 {
@@ -13258,7 +14403,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor4 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor4);
+                                double Presion = Convert.ToInt32(PresionValor4);
 
                                 switch (i)
                                 {
@@ -13307,7 +14452,7 @@ namespace DragonGolfBackEnd.Controllers
                     {
                         if (PresionValor1 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor1);
+                            double Presion = Convert.ToInt32(PresionValor1);
 
                             switch (i)
                             {
@@ -13351,7 +14496,7 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (PresionValor2 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor2);
+                            double Presion = Convert.ToInt32(PresionValor2);
 
                             switch (i)
                             {
@@ -13393,7 +14538,7 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (PresionValor3 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor3);
+                            double Presion = Convert.ToInt32(PresionValor3);
 
                             switch (i)
                             {
@@ -13436,7 +14581,7 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (PresionValor4 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor4);
+                            double Presion = Convert.ToInt32(PresionValor4);
 
                             switch (i)
                             {
@@ -13479,7 +14624,7 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (PresionValor5 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor5);
+                            double Presion = Convert.ToInt32(PresionValor5);
 
                             switch (i)
                             {
@@ -13576,10 +14721,10 @@ namespace DragonGolfBackEnd.Controllers
 
         }
 
-        private string[] CalcularApuestaPresionBack4(int Resultado1_H, int Resultado2_H, int Resultado3_H, int Resultado4_H, int Resultado5_H, int Resultado6_H, int Resultado7_H, int Resultado8_H, int Resultado9_H,
-            int Resultado1_L, int Resultado2_L, int Resultado3_L, int Resultado4_L, int Resultado5_L, int Resultado6_L, int Resultado7_L, int Resultado8_L, int Resultado9_L, bool ValidaJuegoInicio)
+        private string[] CalcularApuestaPresionBack4(double Resultado1_H, double Resultado2_H, double Resultado3_H, double Resultado4_H, double Resultado5_H, double Resultado6_H, double Resultado7_H, double Resultado8_H, double Resultado9_H,
+            double Resultado1_L, double Resultado2_L, double Resultado3_L, double Resultado4_L, double Resultado5_L, double Resultado6_L, double Resultado7_L, double Resultado8_L, double Resultado9_L, bool ValidaJuegoInicio)
         {
-            int[] ResultadoPresionFront_T = new int[10];
+            double[] ResultadoPresionFront_T = new double[10];
 
             string[] ResultadoPresionFrontString = new string[10];
 
@@ -13843,15 +14988,15 @@ namespace DragonGolfBackEnd.Controllers
                 Resultado9_L = 0;
             }
 
-            int Hoyo1 = Resultado1_H + Resultado1_L;
-            int Hoyo2 = Resultado2_H + Resultado2_L;
-            int Hoyo3 = Resultado3_H + Resultado3_L;
-            int Hoyo4 = Resultado4_H + Resultado4_L;
-            int Hoyo5 = Resultado5_H + Resultado5_L;
-            int Hoyo6 = Resultado6_H + Resultado6_L;
-            int Hoyo7 = Resultado7_H + Resultado7_L;
-            int Hoyo8 = Resultado8_H + Resultado8_L;
-            int Hoyo9 = Resultado9_H + Resultado9_L;
+            double Hoyo1 = Resultado1_H + Resultado1_L;
+            double Hoyo2 = Resultado2_H + Resultado2_L;
+            double Hoyo3 = Resultado3_H + Resultado3_L;
+            double Hoyo4 = Resultado4_H + Resultado4_L;
+            double Hoyo5 = Resultado5_H + Resultado5_L;
+            double Hoyo6 = Resultado6_H + Resultado6_L;
+            double Hoyo7 = Resultado7_H + Resultado7_L;
+            double Hoyo8 = Resultado8_H + Resultado8_L;
+            double Hoyo9 = Resultado9_H + Resultado9_L;
 
             if (Hoyo1 == 0)
             {
@@ -13971,9 +15116,9 @@ namespace DragonGolfBackEnd.Controllers
             }
 
             string ResultadoString = "";
-            int ResultadoInt = 0;
+            double ResultadoInt = 0;
 
-            int Presion1 = 0;
+            double Presion1 = 0;
 
             string PresionValor1 = "";
             string PresionValor2 = "";
@@ -13991,7 +15136,7 @@ namespace DragonGolfBackEnd.Controllers
                 if (ResultadoPresionFront_T[i] == 1)
                 {
 
-                    int ValorHoyo = 0;
+                    double ValorHoyo = 0;
 
                     switch (i)
                     {
@@ -14068,7 +15213,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor1 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor1);
+                                double Presion = Convert.ToInt32(PresionValor1);
                                 // Presion += 1;
 
                                 switch (i)
@@ -14121,7 +15266,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor1 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor1);
+                                double Presion = Convert.ToInt32(PresionValor1);
 
                                 switch (i)
                                 {
@@ -14162,7 +15307,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor2 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor2);
+                                double Presion = Convert.ToInt32(PresionValor2);
 
                                 switch (i)
                                 {
@@ -14215,7 +15360,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor1 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor1);
+                                double Presion = Convert.ToInt32(PresionValor1);
 
                                 switch (i)
                                 {
@@ -14256,7 +15401,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor2 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor2);
+                                double Presion = Convert.ToInt32(PresionValor2);
 
                                 switch (i)
                                 {
@@ -14297,7 +15442,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor3 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor3);
+                                double Presion = Convert.ToInt32(PresionValor3);
 
                                 switch (i)
                                 {
@@ -14348,7 +15493,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor1 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor1);
+                                double Presion = Convert.ToInt32(PresionValor1);
 
                                 switch (i)
                                 {
@@ -14389,7 +15534,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor2 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor2);
+                                double Presion = Convert.ToInt32(PresionValor2);
 
                                 switch (i)
                                 {
@@ -14430,7 +15575,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor3 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor3);
+                                double Presion = Convert.ToInt32(PresionValor3);
 
                                 switch (i)
                                 {
@@ -14471,7 +15616,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor4 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor4);
+                                double Presion = Convert.ToInt32(PresionValor4);
 
                                 switch (i)
                                 {
@@ -14520,7 +15665,7 @@ namespace DragonGolfBackEnd.Controllers
                     {
                         if (PresionValor1 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor1);
+                            double Presion = Convert.ToInt32(PresionValor1);
 
                             switch (i)
                             {
@@ -14563,7 +15708,7 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (PresionValor2 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor2);
+                            double Presion = Convert.ToInt32(PresionValor2);
 
                             switch (i)
                             {
@@ -14606,7 +15751,7 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (PresionValor3 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor3);
+                            double Presion = Convert.ToInt32(PresionValor3);
 
                             switch (i)
                             {
@@ -14649,7 +15794,7 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (PresionValor4 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor4);
+                            double Presion = Convert.ToInt32(PresionValor4);
 
                             switch (i)
                             {
@@ -14692,7 +15837,7 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (PresionValor5 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor5);
+                            double Presion = Convert.ToInt32(PresionValor5);
 
                             switch (i)
                             {
@@ -14745,7 +15890,7 @@ namespace DragonGolfBackEnd.Controllers
                     //{
                     //    Presion1 = 0;
                     //}
-                    int ValorHoyo = 0;
+                    double ValorHoyo = 0;
                     //ResultadoInt -= 1;
                     switch (i)
                     {
@@ -14820,7 +15965,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor1 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor1);
+                                double Presion = Convert.ToInt32(PresionValor1);
 
                                 switch (i)
                                 {
@@ -14872,7 +16017,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor1 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor1);
+                                double Presion = Convert.ToInt32(PresionValor1);
 
                                 switch (i)
                                 {
@@ -14913,7 +16058,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor2 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor2);
+                                double Presion = Convert.ToInt32(PresionValor2);
 
                                 switch (i)
                                 {
@@ -14964,7 +16109,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor1 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor1);
+                                double Presion = Convert.ToInt32(PresionValor1);
 
                                 switch (i)
                                 {
@@ -15005,7 +16150,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor2 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor2);
+                                double Presion = Convert.ToInt32(PresionValor2);
 
                                 switch (i)
                                 {
@@ -15045,7 +16190,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor3 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor3);
+                                double Presion = Convert.ToInt32(PresionValor3);
 
                                 switch (i)
                                 {
@@ -15095,7 +16240,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor1 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor1);
+                                double Presion = Convert.ToInt32(PresionValor1);
 
                                 switch (i)
                                 {
@@ -15136,7 +16281,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor2 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor2);
+                                double Presion = Convert.ToInt32(PresionValor2);
 
                                 switch (i)
                                 {
@@ -15177,7 +16322,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor3 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor3);
+                                double Presion = Convert.ToInt32(PresionValor3);
 
                                 switch (i)
                                 {
@@ -15218,7 +16363,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             if (PresionValor4 != "")
                             {
-                                int Presion = Convert.ToInt32(PresionValor4);
+                                double Presion = Convert.ToInt32(PresionValor4);
 
                                 switch (i)
                                 {
@@ -15267,7 +16412,7 @@ namespace DragonGolfBackEnd.Controllers
                     {
                         if (PresionValor1 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor1);
+                            double Presion = Convert.ToInt32(PresionValor1);
 
                             switch (i)
                             {
@@ -15311,7 +16456,7 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (PresionValor2 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor2);
+                            double Presion = Convert.ToInt32(PresionValor2);
 
                             switch (i)
                             {
@@ -15353,7 +16498,7 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (PresionValor3 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor3);
+                            double Presion = Convert.ToInt32(PresionValor3);
 
                             switch (i)
                             {
@@ -15396,7 +16541,7 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (PresionValor4 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor4);
+                            double Presion = Convert.ToInt32(PresionValor4);
 
                             switch (i)
                             {
@@ -15439,7 +16584,7 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (PresionValor5 != "")
                         {
-                            int Presion = Convert.ToInt32(PresionValor5);
+                            double Presion = Convert.ToInt32(PresionValor5);
 
                             switch (i)
                             {
@@ -15539,7 +16684,7 @@ namespace DragonGolfBackEnd.Controllers
                                       string BetD_B9_1, string BetD_B9_2, string BetD_B9_3, string BetD_B9_4, string BetD_B9_5, string BetD_B9_6, string BetD_B9_7, string BetD_B9_8, string BetD_B9_9, int ResultadoFinalMedal, int Match,
                                       string Hoyo_1, string Hoyo_2, string Hoyo_3, string Hoyo_4, string Hoyo_5, string Hoyo_6, string Hoyo_7, string Hoyo_8, string Hoyo_9,
                                       string Hoyo_10, string Hoyo_11, string Hoyo_12, string Hoyo_13, string Hoyo_14, string Hoyo_15, string Hoyo_16, string Hoyo_17, string Hoyo_18
-                                      , int Presion, bool ValidaJuegoInicio)
+                                      , double Presion, bool ValidaJuegoInicio)
         {
 
 
@@ -15656,7 +16801,7 @@ namespace DragonGolfBackEnd.Controllers
         }
 
 
-        private int[] HoyoInicialCambio(double hole1_P1, double hole2_P1, double hole3_P1, double hole4_P1, double hole5_P1, double hole6_P1, double hole7_P1, double hole8_P1, double hole9_P1, double hole10_P1, double hole11_P1, double hole12_P1, double hole13_P1, double hole14_P1, double hole15_P1, double hole16_P1, double hole17_P1, double hole18_P1,
+        private double[] HoyoInicialCambio(double hole1_P1, double hole2_P1, double hole3_P1, double hole4_P1, double hole5_P1, double hole6_P1, double hole7_P1, double hole8_P1, double hole9_P1, double hole10_P1, double hole11_P1, double hole12_P1, double hole13_P1, double hole14_P1, double hole15_P1, double hole16_P1, double hole17_P1, double hole18_P1,
             double hole1_P2, double hole2_P2, double hole3_P2, double hole4_P2, double hole5_P2, double hole6_P2, double hole7_P2, double hole8_P2, double hole9_P2, double hole10_P2, double hole11_P2, double hole12_P2, double hole13_P2, double hole14_P2, double hole15_P2, double hole16_P2, double hole17_P2, double hole18_P2,
             double hole1_P3, double hole2_P3, double hole3_P3, double hole4_P3, double hole5_P3, double hole6_P3, double hole7_P3, double hole8_P3, double hole9_P3, double hole10_P3, double hole11_P3, double hole12_P3, double hole13_P3, double hole14_P3, double hole15_P3, double hole16_P3, double hole17_P3, double hole18_P3,
             double hole1_P4, double hole2_P4, double hole3_P4, double hole4_P4, double hole5_P4, double hole6_P4, double hole7_P4, double hole8_P4, double hole9_P4, double hole10_P4, double hole11_P4, double hole12_P4, double hole13_P4, double hole14_P4, double hole15_P4, double hole16_P4, double hole17_P4, double hole18_P4, int HoyoInicial)

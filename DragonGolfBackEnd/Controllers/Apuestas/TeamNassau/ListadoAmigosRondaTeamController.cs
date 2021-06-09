@@ -142,24 +142,24 @@ namespace DragonGolfBackEnd.Controllers
             public string Hoyo16Presion { get; set; }
             public string Hoyo17Presion { get; set; }
             public string Hoyo18Presion { get; set; }
-            public int GolpesVentaja1_tee { get; set; }
-            public int GolpesVentaja2_tee { get; set; }
-            public int GolpesVentaja3_tee { get; set; }
-            public int GolpesVentaja4_tee { get; set; }
-            public int GolpesVentaja5_tee { get; set; }
-            public int GolpesVentaja6_tee { get; set; }
-            public int GolpesVentaja7_tee { get; set; }
-            public int GolpesVentaja8_tee { get; set; }
-            public int GolpesVentaja9_tee { get; set; }
-            public int GolpesVentaja10_tee { get; set; }
-            public int GolpesVentaja11_tee { get; set; }
-            public int GolpesVentaja12_tee { get; set; }
-            public int GolpesVentaja13_tee { get; set; }
-            public int GolpesVentaja14_tee { get; set; }
-            public int GolpesVentaja15_tee { get; set; }
-            public int GolpesVentaja16_tee { get; set; }
-            public int GolpesVentaja17_tee { get; set; }
-            public int GolpesVentaja18_tee { get; set; }
+            public double GolpesVentaja1_tee { get; set; }
+            public double GolpesVentaja2_tee { get; set; }
+            public double GolpesVentaja3_tee { get; set; }
+            public double GolpesVentaja4_tee { get; set; }
+            public double GolpesVentaja5_tee { get; set; }
+            public double GolpesVentaja6_tee { get; set; }
+            public double GolpesVentaja7_tee { get; set; }
+            public double GolpesVentaja8_tee { get; set; }
+            public double GolpesVentaja9_tee { get; set; }
+            public double GolpesVentaja10_tee { get; set; }
+            public double GolpesVentaja11_tee { get; set; }
+            public double GolpesVentaja12_tee { get; set; }
+            public double GolpesVentaja13_tee { get; set; }
+            public double GolpesVentaja14_tee { get; set; }
+            public double GolpesVentaja15_tee { get; set; }
+            public double GolpesVentaja16_tee { get; set; }
+            public double GolpesVentaja17_tee { get; set; }
+            public double GolpesVentaja18_tee { get; set; }
             public int ventaja { get; set; }
             public int SumaGolpesVentaja { get; set; }
             public int initHole { get; set; }
@@ -273,7 +273,7 @@ namespace DragonGolfBackEnd.Controllers
                     int HoyoInicial = 0;
 
                     decimal Adv1 = 0;
-                    int Adv_tee = 0;
+                    double Adv_tee = 0;
 
                     double HandicapP1 = 0;
                     double HandicapP2 = 0;
@@ -381,81 +381,79 @@ namespace DragonGolfBackEnd.Controllers
                             GolpesVentaja18_1 = 0;
 
 
-                            int GolpesVentaja1_tee = 0;
-                            int GolpesVentaja2_tee = 0;
-                            int GolpesVentaja3_tee = 0;
-                            int GolpesVentaja4_tee = 0;
-                            int GolpesVentaja5_tee = 0;
-                            int GolpesVentaja6_tee = 0;
-                            int GolpesVentaja7_tee = 0;
-                            int GolpesVentaja8_tee = 0;
-                            int GolpesVentaja9_tee = 0;
-                            int GolpesVentaja10_tee = 0;
-                            int GolpesVentaja11_tee = 0;
-                            int GolpesVentaja12_tee = 0;
-                            int GolpesVentaja13_tee = 0;
-                            int GolpesVentaja14_tee = 0;
-                            int GolpesVentaja15_tee = 0;
-                            int GolpesVentaja16_tee = 0;
-                            int GolpesVentaja17_tee = 0;
-                            int GolpesVentaja18_tee = 0;
+                            double GolpesVentaja1_tee = 0;
+                            double GolpesVentaja2_tee = 0;
+                            double GolpesVentaja3_tee = 0;
+                            double GolpesVentaja4_tee = 0;
+                            double GolpesVentaja5_tee = 0;
+                            double GolpesVentaja6_tee = 0;
+                            double GolpesVentaja7_tee = 0;
+                            double GolpesVentaja8_tee = 0;
+                            double GolpesVentaja9_tee = 0;
+                            double GolpesVentaja10_tee = 0;
+                            double GolpesVentaja11_tee = 0;
+                            double GolpesVentaja12_tee = 0;
+                            double GolpesVentaja13_tee = 0;
+                            double GolpesVentaja14_tee = 0;
+                            double GolpesVentaja15_tee = 0;
+                            double GolpesVentaja16_tee = 0;
+                            double GolpesVentaja17_tee = 0;
+                            double GolpesVentaja18_tee = 0;
 
-                            int ScoreHole1 = Convert.ToInt32(row["ScoreHole1"]);
-                            int ScoreHole2 = Convert.ToInt32(row["ScoreHole2"]);
-                            int ScoreHole3 = Convert.ToInt32(row["ScoreHole3"]);
-                            int ScoreHole4 = Convert.ToInt32(row["ScoreHole4"]);
-                            int ScoreHole5 = Convert.ToInt32(row["ScoreHole5"]);
-                            int ScoreHole6 = Convert.ToInt32(row["ScoreHole6"]);
-                            int ScoreHole7 = Convert.ToInt32(row["ScoreHole7"]);
-                            int ScoreHole8 = Convert.ToInt32(row["ScoreHole8"]);
-                            int ScoreHole9 = Convert.ToInt32(row["ScoreHole9"]);
-                            int ScoreHole10 = Convert.ToInt32(row["ScoreHole10"]);
-                            int ScoreHole11 = Convert.ToInt32(row["ScoreHole11"]);
-                            int ScoreHole12 = Convert.ToInt32(row["ScoreHole12"]);
-                            int ScoreHole13 = Convert.ToInt32(row["ScoreHole13"]);
-                            int ScoreHole14 = Convert.ToInt32(row["ScoreHole14"]);
-                            int ScoreHole15 = Convert.ToInt32(row["ScoreHole15"]);
-                            int ScoreHole16 = Convert.ToInt32(row["ScoreHole16"]);
-                            int ScoreHole17 = Convert.ToInt32(row["ScoreHole17"]);
-                            int ScoreHole18 = Convert.ToInt32(row["ScoreHole18"]);
-                            Adv_tee = Convert.ToInt32(row["adv"]);
+                            double ScoreHole1 = Convert.ToDouble(row["ScoreHole1"]);
+                            double ScoreHole2 = Convert.ToDouble(row["ScoreHole2"]);
+                            double ScoreHole3 = Convert.ToDouble(row["ScoreHole3"]);
+                            double ScoreHole4 = Convert.ToDouble(row["ScoreHole4"]);
+                            double ScoreHole5 = Convert.ToDouble(row["ScoreHole5"]);
+                            double ScoreHole6 = Convert.ToDouble(row["ScoreHole6"]);
+                            double ScoreHole7 = Convert.ToDouble(row["ScoreHole7"]);
+                            double ScoreHole8 = Convert.ToDouble(row["ScoreHole8"]);
+                            double ScoreHole9 = Convert.ToDouble(row["ScoreHole9"]);
+                            double ScoreHole10 = Convert.ToDouble(row["ScoreHole10"]);
+                            double ScoreHole11 = Convert.ToDouble(row["ScoreHole11"]);
+                            double ScoreHole12 = Convert.ToDouble(row["ScoreHole12"]);
+                            double ScoreHole13 = Convert.ToDouble(row["ScoreHole13"]);
+                            double ScoreHole14 = Convert.ToDouble(row["ScoreHole14"]);
+                            double ScoreHole15 = Convert.ToDouble(row["ScoreHole15"]);
+                            double ScoreHole16 = Convert.ToDouble(row["ScoreHole16"]);
+                            double ScoreHole17 = Convert.ToDouble(row["ScoreHole17"]);
+                            double ScoreHole18 = Convert.ToDouble(row["ScoreHole18"]);
+                            Adv_tee = Convert.ToDouble(row["adv"]);
 
                             int ventaja = 0;// Convert.ToInt32(row["Ventaja"]); ;
                             int SumaGolpesVentaja = 0;
 
-                            int AdvInverso = (-1) * (Adv_tee);
+                          //  double AdvInverso = (-1) * (Adv_tee);
 
-                            //if (AdvInverso < 0)
-                            //{
-                            //   if (Convert.ToInt32(row["IDUsuario"]) == Convert.ToInt32(row["PlayerId"]))
-                            //    {
-                            //        SumaGolpesVentaja = AdvInverso;
-                            //    }
-                            //    else
-                            //    {
-                            //        SumaGolpesVentaja = Adv_tee;
-                            //    }
+                            int AdvInverso = (-1) * (Convert.ToInt32(Adv_tee));
+                            int AdvInverso2 = 0; //(-1) * (Adv);
 
-                            //}
-                            //else
-                            //{
-                            //    if (Convert.ToInt32(row["IDUsuario"]) == Convert.ToInt32(row["PlayerId"]))
-                            //    {
-                            //        SumaGolpesVentaja = AdvInverso;
-                            //    }
-                            //    else
-                            //    {
-                            //        SumaGolpesVentaja = Adv_tee;
-                            //    }
-                            //}
+                            if (Adv_tee > 0)
+                            {
+                                AdvInverso2 = Convert.ToInt32(Math.Ceiling(Adv_tee));
+                                AdvInverso = (-1) * Convert.ToInt32(Math.Ceiling(Adv_tee));
+                            }
+                            else if (Adv_tee < 0)
+                            {
+                                AdvInverso2 = Convert.ToInt32(Math.Floor(Adv_tee));
+                                AdvInverso = (-1) * Convert.ToInt32(Math.Floor(Adv_tee));
+                            }
 
                             int Contadorcito = 0;
+                            double ValCompleto = 0;
                             //Cuando es negativo es ventaja para el player 1
                             if (AdvInverso < 0)
                             {
-                                int AdvPositivo = (-1) * (AdvInverso);
+                               // double AdvPositivo = (-1) * (AdvInverso);
 
-                                int CicloFor = 18;
+                                int AdvPositivo = (AdvInverso2);
+
+                                if (Adv_tee >= AdvInverso2)
+                                {
+                                    ValCompleto = 0.5;
+                                }
+
+                                double CicloFor = 18;
 
                                 if (AdvPositivo > 18)
                                 {
@@ -469,6 +467,7 @@ namespace DragonGolfBackEnd.Controllers
                                     if (Contadorcito > 18)
                                     {
                                         Contadorcito = 1;
+                                        AdvPositivo = AdvPositivo - 18;
                                     }
 
                                     if (Contadorcito <= AdvPositivo)
@@ -485,7 +484,15 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 1")
                                                         {
-                                                            GolpesVentaja1_tee = GolpesVentaja1_tee - 1;
+                                                          
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja1_tee = GolpesVentaja1_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja1_tee = GolpesVentaja1_tee - 1;
+                                                            }
                                                         }
 
                                                     }
@@ -493,7 +500,14 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 3")
                                                         {
-                                                            GolpesVentaja1_tee = GolpesVentaja1_tee - 1;
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja1_tee = GolpesVentaja1_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja1_tee = GolpesVentaja1_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -506,14 +520,30 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 1")
                                                         {
-                                                            GolpesVentaja1_tee = GolpesVentaja1_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja1_tee = GolpesVentaja1_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja1_tee = GolpesVentaja1_tee - 1;
+                                                            }
                                                         }
                                                     }
                                                     else
                                                     {
                                                         if (Player == "Jugador 3")
                                                         {
-                                                            GolpesVentaja1_tee = GolpesVentaja1_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja1_tee = GolpesVentaja1_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja1_tee = GolpesVentaja1_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -534,7 +564,15 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 1")
                                                         {
-                                                            GolpesVentaja2_tee = GolpesVentaja2_tee - 1;
+                                                            
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja2_tee = GolpesVentaja2_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja2_tee = GolpesVentaja2_tee - 1;
+                                                            }
                                                         }
 
                                                     }
@@ -542,7 +580,15 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 3")
                                                         {
-                                                            GolpesVentaja2_tee = GolpesVentaja2_tee - 1;
+                                                            
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja2_tee = GolpesVentaja2_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja2_tee = GolpesVentaja2_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -555,14 +601,30 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 1")
                                                         {
-                                                            GolpesVentaja2_tee = GolpesVentaja2_tee - 1;
+                                                            
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja2_tee = GolpesVentaja2_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja2_tee = GolpesVentaja2_tee - 1;
+                                                            }
                                                         }
                                                     }
                                                     else
                                                     {
                                                         if (Player == "Jugador 3")
                                                         {
-                                                            GolpesVentaja2_tee = GolpesVentaja2_tee - 1;
+                                                            
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja2_tee = GolpesVentaja2_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja2_tee = GolpesVentaja2_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -582,7 +644,14 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 1")
                                                         {
-                                                            GolpesVentaja3_tee = GolpesVentaja3_tee - 1;
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja3_tee = GolpesVentaja3_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja3_tee = GolpesVentaja3_tee - 1;
+                                                            }
                                                         }
 
                                                     }
@@ -590,7 +659,15 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 3")
                                                         {
-                                                            GolpesVentaja3_tee = GolpesVentaja3_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja3_tee = GolpesVentaja3_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja3_tee = GolpesVentaja3_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -603,14 +680,29 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 1")
                                                         {
-                                                            GolpesVentaja3_tee = GolpesVentaja3_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja3_tee = GolpesVentaja3_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja3_tee = GolpesVentaja3_tee - 1;
+                                                            }
                                                         }
                                                     }
                                                     else
                                                     {
                                                         if (Player == "Jugador 3")
                                                         {
-                                                            GolpesVentaja3_tee = GolpesVentaja3_tee - 1;
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja3_tee = GolpesVentaja3_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja3_tee = GolpesVentaja3_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -632,7 +724,15 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 1")
                                                         {
-                                                            GolpesVentaja4_tee = GolpesVentaja4_tee - 1;
+                                                            
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja4_tee = GolpesVentaja4_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja4_tee = GolpesVentaja4_tee - 1;
+                                                            }
                                                         }
 
                                                     }
@@ -640,7 +740,15 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 3")
                                                         {
-                                                            GolpesVentaja4_tee = GolpesVentaja4_tee - 1;
+                                                            
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja4_tee = GolpesVentaja4_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja4_tee = GolpesVentaja4_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -653,14 +761,30 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 1")
                                                         {
-                                                            GolpesVentaja4_tee = GolpesVentaja4_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja4_tee = GolpesVentaja4_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja4_tee = GolpesVentaja4_tee - 1;
+                                                            }
                                                         }
                                                     }
                                                     else
                                                     {
                                                         if (Player == "Jugador 3")
                                                         {
-                                                            GolpesVentaja4_tee = GolpesVentaja4_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja4_tee = GolpesVentaja4_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja4_tee = GolpesVentaja4_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -681,7 +805,15 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 1")
                                                         {
-                                                            GolpesVentaja5_tee = GolpesVentaja5_tee - 1;
+                                                            
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja5_tee = GolpesVentaja5_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja5_tee = GolpesVentaja5_tee - 1;
+                                                            }
                                                         }
 
                                                     }
@@ -689,7 +821,15 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 3")
                                                         {
-                                                            GolpesVentaja5_tee = GolpesVentaja5_tee - 1;
+                                                            
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja5_tee = GolpesVentaja5_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja5_tee = GolpesVentaja5_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -702,14 +842,30 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 1")
                                                         {
-                                                            GolpesVentaja5_tee = GolpesVentaja5_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja5_tee = GolpesVentaja5_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja5_tee = GolpesVentaja5_tee - 1;
+                                                            }
                                                         }
                                                     }
                                                     else
                                                     {
                                                         if (Player == "Jugador 3")
                                                         {
-                                                            GolpesVentaja5_tee = GolpesVentaja5_tee - 1;
+                                                            
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja5_tee = GolpesVentaja5_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja5_tee = GolpesVentaja5_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -730,7 +886,15 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 1")
                                                         {
-                                                            GolpesVentaja6_tee = GolpesVentaja6_tee - 1;
+                                                            
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja6_tee = GolpesVentaja6_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja6_tee = GolpesVentaja6_tee - 1;
+                                                            }
                                                         }
 
                                                     }
@@ -738,7 +902,15 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 3")
                                                         {
-                                                            GolpesVentaja6_tee = GolpesVentaja6_tee - 1;
+                                                            
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja6_tee = GolpesVentaja6_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja6_tee = GolpesVentaja6_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -751,14 +923,30 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 1")
                                                         {
-                                                            GolpesVentaja6_tee = GolpesVentaja6_tee - 1;
+                                                            
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja6_tee = GolpesVentaja6_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja6_tee = GolpesVentaja6_tee - 1;
+                                                            }
                                                         }
                                                     }
                                                     else
                                                     {
                                                         if (Player == "Jugador 3")
                                                         {
-                                                            GolpesVentaja6_tee = GolpesVentaja6_tee - 1;
+                                                            
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja6_tee = GolpesVentaja6_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja6_tee = GolpesVentaja6_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -779,7 +967,15 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 1")
                                                         {
-                                                            GolpesVentaja7_tee = GolpesVentaja7_tee - 1;
+                                                            
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja7_tee = GolpesVentaja7_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja7_tee = GolpesVentaja7_tee - 1;
+                                                            }
                                                         }
 
                                                     }
@@ -787,7 +983,15 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 3")
                                                         {
-                                                            GolpesVentaja7_tee = GolpesVentaja7_tee - 1;
+                                                            
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja7_tee = GolpesVentaja7_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja7_tee = GolpesVentaja7_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -800,14 +1004,30 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 1")
                                                         {
-                                                            GolpesVentaja7_tee = GolpesVentaja7_tee - 1;
+                                                            
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja7_tee = GolpesVentaja7_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja7_tee = GolpesVentaja7_tee - 1;
+                                                            }
                                                         }
                                                     }
                                                     else
                                                     {
                                                         if (Player == "Jugador 3")
                                                         {
-                                                            GolpesVentaja7_tee = GolpesVentaja7_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja7_tee = GolpesVentaja7_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja7_tee = GolpesVentaja7_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -829,7 +1049,15 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 1")
                                                         {
-                                                            GolpesVentaja8_tee = GolpesVentaja8_tee - 1;
+                                                            
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja8_tee = GolpesVentaja8_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja8_tee = GolpesVentaja8_tee - 1;
+                                                            }
                                                         }
 
                                                     }
@@ -837,7 +1065,15 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 3")
                                                         {
-                                                            GolpesVentaja8_tee = GolpesVentaja8_tee - 1;
+                                                            
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja8_tee = GolpesVentaja8_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja8_tee = GolpesVentaja8_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -850,14 +1086,30 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 1")
                                                         {
-                                                            GolpesVentaja8_tee = GolpesVentaja8_tee - 1;
+                                                            
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja8_tee = GolpesVentaja8_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja8_tee = GolpesVentaja8_tee - 1;
+                                                            }
                                                         }
                                                     }
                                                     else
                                                     {
                                                         if (Player == "Jugador 3")
                                                         {
-                                                            GolpesVentaja8_tee = GolpesVentaja8_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja8_tee = GolpesVentaja8_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja8_tee = GolpesVentaja8_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -879,7 +1131,15 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 1")
                                                         {
-                                                            GolpesVentaja9_tee = GolpesVentaja9_tee - 1;
+                                                            
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja9_tee = GolpesVentaja9_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja9_tee = GolpesVentaja9_tee - 1;
+                                                            }
                                                         }
 
                                                     }
@@ -887,7 +1147,15 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 3")
                                                         {
-                                                            GolpesVentaja9_tee = GolpesVentaja9_tee - 1;
+                                                            
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja9_tee = GolpesVentaja9_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja9_tee = GolpesVentaja9_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -900,14 +1168,30 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 1")
                                                         {
-                                                            GolpesVentaja9_tee = GolpesVentaja9_tee - 1;
+                                                            
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja9_tee = GolpesVentaja9_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja9_tee = GolpesVentaja9_tee - 1;
+                                                            }
                                                         }
                                                     }
                                                     else
                                                     {
                                                         if (Player == "Jugador 3")
                                                         {
-                                                            GolpesVentaja9_tee = GolpesVentaja9_tee - 1;
+                                                            
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja9_tee = GolpesVentaja9_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja9_tee = GolpesVentaja9_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -928,7 +1212,15 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 1")
                                                         {
-                                                            GolpesVentaja10_tee = GolpesVentaja10_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja10_tee = GolpesVentaja10_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja10_tee = GolpesVentaja10_tee - 1;
+                                                            }
                                                         }
 
                                                     }
@@ -936,7 +1228,15 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 3")
                                                         {
-                                                            GolpesVentaja10_tee = GolpesVentaja10_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja10_tee = GolpesVentaja10_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja10_tee = GolpesVentaja10_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -949,14 +1249,30 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 1")
                                                         {
-                                                            GolpesVentaja10_tee = GolpesVentaja10_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja10_tee = GolpesVentaja10_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja10_tee = GolpesVentaja10_tee - 1;
+                                                            }
                                                         }
                                                     }
                                                     else
                                                     {
                                                         if (Player == "Jugador 3")
                                                         {
-                                                            GolpesVentaja10_tee = GolpesVentaja10_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja10_tee = GolpesVentaja10_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja10_tee = GolpesVentaja10_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -977,7 +1293,15 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 1")
                                                         {
-                                                            GolpesVentaja11_tee = GolpesVentaja11_tee - 1;
+                                                            
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja11_tee = GolpesVentaja11_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja11_tee = GolpesVentaja11_tee - 1;
+                                                            }
                                                         }
 
                                                     }
@@ -985,7 +1309,15 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 3")
                                                         {
-                                                            GolpesVentaja11_tee = GolpesVentaja11_tee - 1;
+                                                            
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja11_tee = GolpesVentaja11_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja11_tee = GolpesVentaja11_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -998,14 +1330,30 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 1")
                                                         {
-                                                            GolpesVentaja11_tee = GolpesVentaja11_tee - 1;
+                                                            
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja11_tee = GolpesVentaja11_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja11_tee = GolpesVentaja11_tee - 1;
+                                                            }
                                                         }
                                                     }
                                                     else
                                                     {
                                                         if (Player == "Jugador 3")
                                                         {
-                                                            GolpesVentaja11_tee = GolpesVentaja11_tee - 1;
+                                                            
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja11_tee = GolpesVentaja11_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja11_tee = GolpesVentaja11_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -1027,7 +1375,15 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 1")
                                                         {
-                                                            GolpesVentaja12_tee = GolpesVentaja12_tee - 1;
+                                                            
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja12_tee = GolpesVentaja12_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja12_tee = GolpesVentaja12_tee - 1;
+                                                            }
                                                         }
 
                                                     }
@@ -1035,7 +1391,15 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 3")
                                                         {
-                                                            GolpesVentaja12_tee = GolpesVentaja12_tee - 1;
+                                                            
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja12_tee = GolpesVentaja12_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja12_tee = GolpesVentaja12_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -1048,14 +1412,30 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 1")
                                                         {
-                                                            GolpesVentaja12_tee = GolpesVentaja12_tee - 1;
+                                                            
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja12_tee = GolpesVentaja12_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja12_tee = GolpesVentaja12_tee - 1;
+                                                            }
                                                         }
                                                     }
                                                     else
                                                     {
                                                         if (Player == "Jugador 3")
                                                         {
-                                                            GolpesVentaja12_tee = GolpesVentaja12_tee - 1;
+                                                            
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja12_tee = GolpesVentaja12_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja12_tee = GolpesVentaja12_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -1077,7 +1457,15 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 1")
                                                         {
-                                                            GolpesVentaja13_tee = GolpesVentaja13_tee - 1;
+                                                            
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja13_tee = GolpesVentaja13_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja13_tee = GolpesVentaja13_tee - 1;
+                                                            }
                                                         }
 
                                                     }
@@ -1085,7 +1473,15 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 3")
                                                         {
-                                                            GolpesVentaja13_tee = GolpesVentaja13_tee - 1;
+                                                           
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja13_tee = GolpesVentaja13_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja13_tee = GolpesVentaja13_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -1098,14 +1494,30 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 1")
                                                         {
-                                                            GolpesVentaja13_tee = GolpesVentaja13_tee - 1;
+                                                            
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja13_tee = GolpesVentaja13_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja13_tee = GolpesVentaja13_tee - 1;
+                                                            }
                                                         }
                                                     }
                                                     else
                                                     {
                                                         if (Player == "Jugador 3")
                                                         {
-                                                            GolpesVentaja13_tee = GolpesVentaja13_tee - 1;
+                                                            
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja13_tee = GolpesVentaja13_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja13_tee = GolpesVentaja13_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -1127,7 +1539,15 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 1")
                                                         {
-                                                            GolpesVentaja14_tee = GolpesVentaja14_tee - 1;
+                                                            
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja14_tee = GolpesVentaja14_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja14_tee = GolpesVentaja14_tee - 1;
+                                                            }
                                                         }
 
                                                     }
@@ -1135,7 +1555,15 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 3")
                                                         {
-                                                            GolpesVentaja14_tee = GolpesVentaja14_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja14_tee = GolpesVentaja14_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja14_tee = GolpesVentaja14_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -1148,14 +1576,30 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 1")
                                                         {
-                                                            GolpesVentaja14_tee = GolpesVentaja14_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja14_tee = GolpesVentaja14_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja14_tee = GolpesVentaja14_tee - 1;
+                                                            }
                                                         }
                                                     }
                                                     else
                                                     {
                                                         if (Player == "Jugador 3")
                                                         {
-                                                            GolpesVentaja14_tee = GolpesVentaja14_tee - 1;
+                                                            
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja14_tee = GolpesVentaja14_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja14_tee = GolpesVentaja14_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -1175,7 +1619,15 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 1")
                                                         {
-                                                            GolpesVentaja15_tee = GolpesVentaja15_tee - 1;
+                                                            
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja15_tee = GolpesVentaja15_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja15_tee = GolpesVentaja15_tee - 1;
+                                                            }
                                                         }
 
                                                     }
@@ -1183,7 +1635,15 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 3")
                                                         {
-                                                            GolpesVentaja15_tee = GolpesVentaja15_tee - 1;
+                                                            
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja15_tee = GolpesVentaja15_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja15_tee = GolpesVentaja15_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -1196,14 +1656,30 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 1")
                                                         {
-                                                            GolpesVentaja15_tee = GolpesVentaja15_tee - 1;
+                                                            
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja15_tee = GolpesVentaja15_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja15_tee = GolpesVentaja15_tee - 1;
+                                                            }
                                                         }
                                                     }
                                                     else
                                                     {
                                                         if (Player == "Jugador 3")
                                                         {
-                                                            GolpesVentaja15_tee = GolpesVentaja15_tee - 1;
+                                                            
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja15_tee = GolpesVentaja15_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja15_tee = GolpesVentaja15_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -1225,7 +1701,15 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 1")
                                                         {
-                                                            GolpesVentaja16_tee = GolpesVentaja16_tee - 1;
+                                                            
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja16_tee = GolpesVentaja16_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja16_tee = GolpesVentaja16_tee - 1;
+                                                            }
                                                         }
 
                                                     }
@@ -1233,7 +1717,15 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 3")
                                                         {
-                                                            GolpesVentaja16_tee = GolpesVentaja16_tee - 1;
+                                                            
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja16_tee = GolpesVentaja16_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja16_tee = GolpesVentaja16_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -1246,14 +1738,30 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 1")
                                                         {
-                                                            GolpesVentaja16_tee = GolpesVentaja16_tee - 1;
+                                                            
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja16_tee = GolpesVentaja16_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja16_tee = GolpesVentaja16_tee - 1;
+                                                            }
                                                         }
                                                     }
                                                     else
                                                     {
                                                         if (Player == "Jugador 3")
                                                         {
-                                                            GolpesVentaja16_tee = GolpesVentaja16_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja16_tee = GolpesVentaja16_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja16_tee = GolpesVentaja16_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -1274,7 +1782,15 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 1")
                                                         {
-                                                            GolpesVentaja17_tee = GolpesVentaja17_tee - 1;
+                                                            
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja17_tee = GolpesVentaja17_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja17_tee = GolpesVentaja17_tee - 1;
+                                                            }
                                                         }
 
                                                     }
@@ -1282,7 +1798,15 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 3")
                                                         {
-                                                            GolpesVentaja17_tee = GolpesVentaja17_tee - 1;
+                                                            
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja17_tee = GolpesVentaja17_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja17_tee = GolpesVentaja17_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -1295,14 +1819,30 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 1")
                                                         {
-                                                            GolpesVentaja17_tee = GolpesVentaja17_tee - 1;
+                                                            
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja17_tee = GolpesVentaja17_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja17_tee = GolpesVentaja17_tee - 1;
+                                                            }
                                                         }
                                                     }
                                                     else
                                                     {
                                                         if (Player == "Jugador 3")
                                                         {
-                                                            GolpesVentaja17_tee = GolpesVentaja10_tee - 1;
+                                                            
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja17_tee = GolpesVentaja17_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja17_tee = GolpesVentaja17_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -1322,7 +1862,15 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 1")
                                                         {
-                                                            GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
 
                                                     }
@@ -1330,7 +1878,15 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 3")
                                                         {
-                                                            GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -1343,14 +1899,30 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 1")
                                                         {
-                                                            GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
                                                     else
                                                     {
                                                         if (Player == "Jugador 3")
                                                         {
-                                                            GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -1371,7 +1943,17 @@ namespace DragonGolfBackEnd.Controllers
                             }
                             else if (AdvInverso > 0)
                             {
-                                int CicloFor = 18;
+
+                                double AdvPositivo = (-1) * (Adv_tee);
+                                int AdvPositivo2 = (-1) * (AdvInverso2);
+
+                                if (AdvPositivo >= AdvPositivo2)
+                                {
+                                    ValCompleto = 0.5;
+                                }
+
+
+                                double CicloFor = 18;
 
                                 if (AdvInverso > 18)
                                 {
@@ -1385,6 +1967,7 @@ namespace DragonGolfBackEnd.Controllers
                                     if (Contadorcito > 18)
                                     {
                                         Contadorcito = 1;
+                                        AdvInverso = AdvInverso - 18;
                                     }
 
                                     if (Contadorcito <= AdvInverso)
@@ -1403,6 +1986,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 2")
                                                         {
                                                             GolpesVentaja1_tee = GolpesVentaja1_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
 
                                                     }
@@ -1411,6 +2003,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 4")
                                                         {
                                                             GolpesVentaja1_tee = GolpesVentaja1_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -1424,6 +2025,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 2")
                                                         {
                                                             GolpesVentaja1_tee = GolpesVentaja1_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
                                                     else
@@ -1431,6 +2041,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 4")
                                                         {
                                                             GolpesVentaja1_tee = GolpesVentaja1_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -1452,6 +2071,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 2")
                                                         {
                                                             GolpesVentaja2_tee = GolpesVentaja2_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
 
                                                     }
@@ -1460,6 +2088,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 4")
                                                         {
                                                             GolpesVentaja2_tee = GolpesVentaja2_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -1473,6 +2110,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 2")
                                                         {
                                                             GolpesVentaja2_tee = GolpesVentaja2_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
                                                     else
@@ -1480,6 +2126,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 4")
                                                         {
                                                             GolpesVentaja2_tee = GolpesVentaja2_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -1501,6 +2156,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 2")
                                                         {
                                                             GolpesVentaja3_tee = GolpesVentaja3_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
 
                                                     }
@@ -1509,6 +2173,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 4")
                                                         {
                                                             GolpesVentaja3_tee = GolpesVentaja3_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -1522,6 +2195,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 2")
                                                         {
                                                             GolpesVentaja3_tee = GolpesVentaja3_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
                                                     else
@@ -1529,6 +2211,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 4")
                                                         {
                                                             GolpesVentaja3_tee = GolpesVentaja3_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -1550,6 +2241,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 2")
                                                         {
                                                             GolpesVentaja4_tee = GolpesVentaja4_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
 
                                                     }
@@ -1558,6 +2258,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 4")
                                                         {
                                                             GolpesVentaja4_tee = GolpesVentaja4_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -1571,6 +2280,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 2")
                                                         {
                                                             GolpesVentaja4_tee = GolpesVentaja4_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
                                                     else
@@ -1578,6 +2296,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 4")
                                                         {
                                                             GolpesVentaja4_tee = GolpesVentaja4_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -1599,6 +2326,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 2")
                                                         {
                                                             GolpesVentaja5_tee = GolpesVentaja5_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
 
                                                     }
@@ -1607,6 +2343,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 4")
                                                         {
                                                             GolpesVentaja5_tee = GolpesVentaja5_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -1620,6 +2365,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 2")
                                                         {
                                                             GolpesVentaja5_tee = GolpesVentaja5_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
                                                     else
@@ -1627,6 +2381,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 4")
                                                         {
                                                             GolpesVentaja5_tee = GolpesVentaja5_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -1648,6 +2411,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 2")
                                                         {
                                                             GolpesVentaja6_tee = GolpesVentaja6_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
 
                                                     }
@@ -1656,6 +2428,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 4")
                                                         {
                                                             GolpesVentaja6_tee = GolpesVentaja6_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -1669,6 +2450,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 2")
                                                         {
                                                             GolpesVentaja6_tee = GolpesVentaja6_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
                                                     else
@@ -1676,6 +2466,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 4")
                                                         {
                                                             GolpesVentaja6_tee = GolpesVentaja6_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -1697,6 +2496,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 2")
                                                         {
                                                             GolpesVentaja7_tee = GolpesVentaja7_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
 
                                                     }
@@ -1705,6 +2513,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 4")
                                                         {
                                                             GolpesVentaja7_tee = GolpesVentaja7_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -1718,6 +2535,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 2")
                                                         {
                                                             GolpesVentaja7_tee = GolpesVentaja7_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
                                                     else
@@ -1725,6 +2551,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 4")
                                                         {
                                                             GolpesVentaja7_tee = GolpesVentaja7_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -1746,6 +2581,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 2")
                                                         {
                                                             GolpesVentaja8_tee = GolpesVentaja8_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
 
                                                     }
@@ -1754,6 +2598,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 4")
                                                         {
                                                             GolpesVentaja8_tee = GolpesVentaja8_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -1767,6 +2620,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 2")
                                                         {
                                                             GolpesVentaja8_tee = GolpesVentaja8_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
                                                     else
@@ -1774,6 +2636,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 4")
                                                         {
                                                             GolpesVentaja8_tee = GolpesVentaja8_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -1796,6 +2667,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 2")
                                                         {
                                                             GolpesVentaja8_tee = GolpesVentaja8_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
 
                                                     }
@@ -1804,6 +2684,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 4")
                                                         {
                                                             GolpesVentaja8_tee = GolpesVentaja8_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -1817,6 +2706,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 2")
                                                         {
                                                             GolpesVentaja9_tee = GolpesVentaja9_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
                                                     else
@@ -1824,6 +2722,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 4")
                                                         {
                                                             GolpesVentaja9_tee = GolpesVentaja9_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -1844,7 +2751,17 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 2")
                                                         {
+
                                                             GolpesVentaja10_tee = GolpesVentaja10_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
 
                                                     }
@@ -1853,6 +2770,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 4")
                                                         {
                                                             GolpesVentaja10_tee = GolpesVentaja10_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -1866,6 +2792,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 2")
                                                         {
                                                             GolpesVentaja10_tee = GolpesVentaja10_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
                                                     else
@@ -1873,6 +2808,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 4")
                                                         {
                                                             GolpesVentaja10_tee = GolpesVentaja10_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -1894,6 +2838,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 2")
                                                         {
                                                             GolpesVentaja11_tee = GolpesVentaja11_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
 
                                                     }
@@ -1902,6 +2855,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 4")
                                                         {
                                                             GolpesVentaja11_tee = GolpesVentaja11_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -1915,6 +2877,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 2")
                                                         {
                                                             GolpesVentaja11_tee = GolpesVentaja11_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
                                                     else
@@ -1922,6 +2893,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 4")
                                                         {
                                                             GolpesVentaja11_tee = GolpesVentaja11_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -1943,6 +2923,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 2")
                                                         {
                                                             GolpesVentaja12_tee = GolpesVentaja12_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
 
                                                     }
@@ -1951,6 +2940,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 4")
                                                         {
                                                             GolpesVentaja12_tee = GolpesVentaja12_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -1964,6 +2962,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 2")
                                                         {
                                                             GolpesVentaja12_tee = GolpesVentaja12_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
                                                     else
@@ -1971,6 +2978,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 4")
                                                         {
                                                             GolpesVentaja12_tee = GolpesVentaja12_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -1993,6 +3009,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 2")
                                                         {
                                                             GolpesVentaja13_tee = GolpesVentaja13_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
 
                                                     }
@@ -2001,6 +3026,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 4")
                                                         {
                                                             GolpesVentaja13_tee = GolpesVentaja13_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -2014,6 +3048,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 2")
                                                         {
                                                             GolpesVentaja13_tee = GolpesVentaja13_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
                                                     else
@@ -2021,6 +3064,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 4")
                                                         {
                                                             GolpesVentaja13_tee = GolpesVentaja13_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -2043,6 +3095,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 2")
                                                         {
                                                             GolpesVentaja14_tee = GolpesVentaja14_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
 
                                                     }
@@ -2051,6 +3112,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 4")
                                                         {
                                                             GolpesVentaja14_tee = GolpesVentaja14_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -2064,6 +3134,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 2")
                                                         {
                                                             GolpesVentaja14_tee = GolpesVentaja14_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
                                                     else
@@ -2071,6 +3150,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 4")
                                                         {
                                                             GolpesVentaja14_tee = GolpesVentaja14_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -2092,6 +3180,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 2")
                                                         {
                                                             GolpesVentaja15_tee = GolpesVentaja15_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
 
                                                     }
@@ -2100,6 +3197,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 4")
                                                         {
                                                             GolpesVentaja15_tee = GolpesVentaja15_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -2113,6 +3219,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 2")
                                                         {
                                                             GolpesVentaja15_tee = GolpesVentaja15_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
                                                     else
@@ -2120,6 +3235,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 4")
                                                         {
                                                             GolpesVentaja15_tee = GolpesVentaja15_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -2141,6 +3265,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 2")
                                                         {
                                                             GolpesVentaja16_tee = GolpesVentaja16_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
 
                                                     }
@@ -2149,6 +3282,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 4")
                                                         {
                                                             GolpesVentaja16_tee = GolpesVentaja16_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -2162,6 +3304,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 2")
                                                         {
                                                             GolpesVentaja16_tee = GolpesVentaja16_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
                                                     else
@@ -2169,6 +3320,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 4")
                                                         {
                                                             GolpesVentaja16_tee = GolpesVentaja16_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -2191,6 +3351,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 2")
                                                         {
                                                             GolpesVentaja17_tee = GolpesVentaja17_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
 
                                                     }
@@ -2199,6 +3368,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 4")
                                                         {
                                                             GolpesVentaja17_tee = GolpesVentaja17_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -2212,6 +3390,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 2")
                                                         {
                                                             GolpesVentaja17_tee = GolpesVentaja17_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
                                                     else
@@ -2219,6 +3406,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 4")
                                                         {
                                                             GolpesVentaja17_tee = GolpesVentaja17_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -2240,6 +3436,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 2")
                                                         {
                                                             GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
 
                                                     }
@@ -2248,6 +3453,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 4")
                                                         {
                                                             GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -2261,6 +3475,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 2")
                                                         {
                                                             GolpesVentaja18_tee = GolpesVentaja8_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
                                                     else
@@ -2268,6 +3491,15 @@ namespace DragonGolfBackEnd.Controllers
                                                         if (Player == "Jugador 4")
                                                         {
                                                             GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+
+                                                            if (Contadorcito == AdvPositivo)
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                            }
                                                         }
                                                     }
 
@@ -2294,13 +3526,15 @@ namespace DragonGolfBackEnd.Controllers
                             //Solo Moverle a esta Cosa de aqui
                             int Contador = 0;
                            // int AdvInverso = (-1) * (Adv_tee);
-                            int Adv = Convert.ToInt32(Decimal.Round(AdvInverso));
+                            //double Adv = Convert.ToInt32(Decimal.Round(AdvInverso));
+
+                            double Adv = Convert.ToInt32(AdvInverso);
 
                             if (Adv < 0)
                             {
-                                int AdvPositivo = (-1) * (Adv);
+                                double AdvPositivo = (-1) * (Adv);
 
-                                int CicloFor = 18;
+                                double CicloFor = 18;
 
                                 if (AdvPositivo > 18)
                                 {
@@ -4010,7 +5244,7 @@ namespace DragonGolfBackEnd.Controllers
                             }
                             else if (Adv > 0)
                             {
-                                int CicloFor = 18;
+                                double CicloFor = 18;
 
                                 if (Adv > 18)
                                 {
@@ -5704,9 +6938,6 @@ namespace DragonGolfBackEnd.Controllers
 
                             TotalGolpesVentajaFront = GolpesVentaja1 + GolpesVentaja2 + GolpesVentaja3 + GolpesVentaja4 + GolpesVentaja5 + GolpesVentaja6 + GolpesVentaja7 + GolpesVentaja8 + GolpesVentaja9;
                             TotalGolpesVentajaBack = GolpesVentaja10 + GolpesVentaja11 + GolpesVentaja12 + GolpesVentaja13 + GolpesVentaja14 + GolpesVentaja15 + GolpesVentaja16 + GolpesVentaja17 + GolpesVentaja18;
-
-
-                            
 
                             if (((-1 * TotalGolpesVentajaFront) + (-1 * TotalGolpesVentajaBack))>0)
                             {
