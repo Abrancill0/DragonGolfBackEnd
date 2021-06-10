@@ -57,7 +57,7 @@ namespace DragonGolfBackEnd.Controllers
             public float BetD_Medal { get; set; }
             public int BetD_AutoPress { get; set; }
             public int BetD_ManuallyOverrideAdv { get; set; }
-            public int BetD_AdvStrokers { get; set; }
+            public double BetD_AdvStrokers { get; set; }
             public string BetD_F9_1 { get; set; }
             public string BetD_F9_2 { get; set; }
             public string BetD_F9_3 { get; set; }
@@ -154,7 +154,7 @@ namespace DragonGolfBackEnd.Controllers
                                 BetD_Medal = Convert.ToSingle(row["BetD_Medal"]),
                                 BetD_AutoPress = Convert.ToInt32(row["BetD_AutoPress"]),
                                 BetD_ManuallyOverrideAdv = Convert.ToInt32(row["BetD_ManuallyOverrideAdv"]),
-                                BetD_AdvStrokers = Convert.ToInt32(row["BetD_AdvStrokers"]),
+                                BetD_AdvStrokers = Convert.ToDouble(row["BetD_AdvStrokers"]),
                                 BetD_F9_1 = Convert.ToString(row["BetD_F9_1"]),
                                 BetD_F9_2 = Convert.ToString(row["BetD_F9_2"]),
                                 BetD_F9_3 = Convert.ToString(row["BetD_F9_3"]),
