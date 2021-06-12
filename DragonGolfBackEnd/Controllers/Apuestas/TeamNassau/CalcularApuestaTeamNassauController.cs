@@ -4539,7 +4539,7 @@ namespace DragonGolfBackEnd.Controllers
                                 }
                                 else
                                 {
-                                    if (ScoreHole18_P2 >= ScoreHole16_P4)
+                                    if (ScoreHole18_P2 >= ScoreHole18_P4)
                                     {
                                         Resultado18_H = ScoreHole18_P4 - ScoreHole18_P1;
                                     }
@@ -6872,7 +6872,6 @@ namespace DragonGolfBackEnd.Controllers
         private string[] CalcularApuestaPresionBack2(double Resultado1_H, double Resultado2_H, double Resultado3_H, double Resultado4_H, double Resultado5_H, double Resultado6_H, double Resultado7_H, double Resultado8_H, double Resultado9_H,
             double Resultado1_L, double Resultado2_L, double Resultado3_L, double Resultado4_L, double Resultado5_L, double Resultado6_L, double Resultado7_L, double Resultado8_L, double Resultado9_L, bool ValidaJuegoInicio)
         {
-
             double[] ResultadoPresionFront_T = new double[10];
 
             string[] ResultadoPresionFrontString = new string[10];
@@ -8828,7 +8827,6 @@ namespace DragonGolfBackEnd.Controllers
             ResultadoFinal[9] = ResultadoPresionFrontString[9];
 
             return ResultadoFinal;
-
 
         }
 

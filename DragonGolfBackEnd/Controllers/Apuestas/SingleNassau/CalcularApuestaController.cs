@@ -314,7 +314,7 @@ namespace DragonGolfBackEnd.Controllers
                                         {
                                             if (Contador == AdvPositivo)
                                             {
-                                                ScoreHole1_P1 = ScoreHole1_P1 - 0.5 + ValCompleto;
+                                                ScoreHole1_P1 = ScoreHole1_P1 - (0.5 + ValCompleto);
                                             }
                                             else
                                             {
@@ -332,7 +332,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (Contador == AdvPositivo)
                                             {
-                                                ScoreHole2_P1 = ScoreHole2_P1 - 0.5 + ValCompleto;
+                                                ScoreHole2_P1 = ScoreHole2_P1 - (0.5 + ValCompleto);
                                             }
                                             else
                                             {
@@ -350,7 +350,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (Contador == AdvPositivo)
                                             {
-                                                ScoreHole3_P1 = ScoreHole3_P1 - 0.5 + ValCompleto;
+                                                ScoreHole3_P1 = ScoreHole3_P1 - (0.5 + ValCompleto);
                                             }
                                             else
                                             {
@@ -367,7 +367,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (Contador == AdvPositivo)
                                             {
-                                                ScoreHole4_P1 = ScoreHole4_P1 - 0.5 + ValCompleto;
+                                                ScoreHole4_P1 = ScoreHole4_P1 - (0.5 + ValCompleto);
                                             }
                                             else
                                             {
@@ -403,7 +403,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (Contador == AdvPositivo)
                                             {
-                                                ScoreHole6_P1 = ScoreHole6_P1 - 0.5 + ValCompleto;
+                                                ScoreHole6_P1 = ScoreHole6_P1 - (0.5 + ValCompleto);
                                             }
                                             else
                                             {
@@ -421,7 +421,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (Contador == AdvPositivo)
                                             {
-                                                ScoreHole7_P1 = ScoreHole7_P1 - 0.5 + ValCompleto;
+                                                ScoreHole7_P1 = ScoreHole7_P1 - (0.5 + ValCompleto);
                                             }
                                             else
                                             {
@@ -439,7 +439,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (Contador == AdvPositivo)
                                             {
-                                                ScoreHole8_P1 = ScoreHole8_P1 - 0.5 + ValCompleto;
+                                                ScoreHole8_P1 = ScoreHole8_P1 - (0.5 + ValCompleto);
                                             }
                                             else
                                             {
@@ -457,7 +457,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (Contador == AdvPositivo)
                                             {
-                                                ScoreHole9_P1 = ScoreHole9_P1 - 0.5 + ValCompleto;
+                                                ScoreHole9_P1 = ScoreHole9_P1 - (0.5 + ValCompleto);
                                             }
                                             else
                                             {
@@ -475,7 +475,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (Contador == AdvPositivo)
                                             {
-                                                ScoreHole10_P1 = ScoreHole10_P1 - 0.5 + ValCompleto;
+                                                ScoreHole10_P1 = ScoreHole10_P1 - (0.5 + ValCompleto);
                                             }
                                             else
                                             {
@@ -493,7 +493,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (Contador == AdvPositivo)
                                             {
-                                                ScoreHole11_P1 = ScoreHole11_P1 - 0.5 + ValCompleto;
+                                                ScoreHole11_P1 = ScoreHole11_P1 - (0.5 + ValCompleto);
                                             }
                                             else
                                             {
@@ -510,7 +510,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (Contador == AdvPositivo)
                                             {
-                                                ScoreHole12_P1 = ScoreHole12_P1 - 0.5 + ValCompleto;
+                                                ScoreHole12_P1 = ScoreHole12_P1 - (0.5 + ValCompleto);
                                             }
                                             else
                                             {
@@ -528,7 +528,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (Contador == AdvPositivo)
                                             {
-                                                ScoreHole13_P1 = ScoreHole13_P1 - 0.5 + ValCompleto;
+                                                ScoreHole13_P1 = ScoreHole13_P1 - (0.5 + ValCompleto);
                                             }
                                             else
                                             {
@@ -546,7 +546,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (Contador == AdvPositivo)
                                             {
-                                                ScoreHole14_P1 = ScoreHole14_P1 - 0.5 + ValCompleto;
+                                                ScoreHole14_P1 = ScoreHole14_P1 - (0.5 + ValCompleto);
                                             }
                                             else
                                             {
@@ -563,7 +563,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (Contador == AdvPositivo)
                                             {
-                                                ScoreHole15_P1 = ScoreHole15_P1 - 0.5 + ValCompleto;
+                                                ScoreHole15_P1 = ScoreHole15_P1 - (0.5 + ValCompleto);
                                             }
                                             else
                                             {
@@ -579,7 +579,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (Contador == AdvPositivo)
                                             {
-                                                ScoreHole16_P1 = ScoreHole16_P1 - 0.5 + ValCompleto;
+                                                ScoreHole16_P1 = ScoreHole16_P1 - (0.5 + ValCompleto);
                                             }
                                             else
                                             {
@@ -595,7 +595,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (Contador == AdvPositivo)
                                             {
-                                                ScoreHole17_P1 = ScoreHole17_P1 - 0.5 + ValCompleto;
+                                                ScoreHole17_P1 = ScoreHole17_P1 - (0.5 + ValCompleto);
                                             }
                                             else
                                             {
@@ -611,7 +611,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (Contador == AdvPositivo)
                                             {
-                                                ScoreHole18_P1 = ScoreHole18_P1 - 0.5 + ValCompleto;
+                                                ScoreHole18_P1 = ScoreHole18_P1 - (0.5 + ValCompleto);
                                             }
                                             else
                                             {
@@ -667,7 +667,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (Contador == AdvInverso)
                                             {
-                                                ScoreHole1_P2 = ScoreHole1_P2 - (0.5 + ValCompleto);
+                                                ScoreHole1_P2 = ScoreHole1_P2 - ((0.5 + ValCompleto));
                                             }
                                             else
                                             {
