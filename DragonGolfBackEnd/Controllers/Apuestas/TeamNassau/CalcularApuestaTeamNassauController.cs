@@ -1653,11 +1653,11 @@ namespace DragonGolfBackEnd.Controllers
                                                     //Validafinalizacion
                                                     if (Contador == AdvPositivo)
                                                     {
-                                                        ScoreHole16_P3 = ScoreHole16_P3 - (0.5 + ValCompleto);
+                                                        ScoreHole16_P1 = ScoreHole16_P1 - (0.5 + ValCompleto);
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole16_P3 = ScoreHole16_P3 - 1;
+                                                        ScoreHole16_P1 = ScoreHole16_P1 - 1;
                                                     }
                                                 }
                                                 else
@@ -1700,8 +1700,6 @@ namespace DragonGolfBackEnd.Controllers
                                                 }
                                                 else
                                                 {
-
-                                                    ScoreHole17_P3 = ScoreHole17_P3 - 1;
 
                                                     //Validafinalizacion
                                                     if (Contador == AdvPositivo)
