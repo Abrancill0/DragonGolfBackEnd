@@ -6112,7 +6112,7 @@ namespace DragonGolfBackEnd.Controllers
                             ValorHoyo = Hoyo7;
                             break;
                         case 8:
-                            ResultadoInt = ResultadoInt - Hoyo8;
+                            ResultadoInt = ResultadoInt + Hoyo8;
                             ValorHoyo = Hoyo8;
                             break;
                         case 9:
@@ -6434,31 +6434,31 @@ namespace DragonGolfBackEnd.Controllers
                                 switch (i)
                                 {
                                     case 1:
-                                        Presion = Presion - Hoyo1;
+                                        Presion = Presion + Hoyo1;
                                         break;
                                     case 2:
-                                        Presion = Presion - Hoyo2;
+                                        Presion = Presion + Hoyo2;
                                         break;
                                     case 3:
-                                        Presion = Presion - Hoyo3;
+                                        Presion = Presion + Hoyo3;
                                         break;
                                     case 4:
-                                        Presion = Presion - Hoyo4;
+                                        Presion = Presion + Hoyo4;
                                         break;
                                     case 5:
-                                        Presion = Presion - Hoyo5;
+                                        Presion = Presion + Hoyo5;
                                         break;
                                     case 6:
-                                        Presion = Presion - Hoyo6;
+                                        Presion = Presion + Hoyo6;
                                         break;
                                     case 7:
-                                        Presion = Presion - Hoyo7;
+                                        Presion = Presion + Hoyo7;
                                         break;
                                     case 8:
-                                        Presion = Presion - Hoyo8;
+                                        Presion = Presion + Hoyo8;
                                         break;
                                     case 9:
-                                        Presion = Presion - Hoyo9;
+                                        Presion = Presion + Hoyo9;
                                         break;
                                     default:
                                         Console.WriteLine("Default case");
@@ -6475,31 +6475,31 @@ namespace DragonGolfBackEnd.Controllers
                                 switch (i)
                                 {
                                     case 1:
-                                        Presion = Presion - Hoyo1;
+                                        Presion = Presion + Hoyo1;
                                         break;
                                     case 2:
-                                        Presion = Presion - Hoyo2;
+                                        Presion = Presion + Hoyo2;
                                         break;
                                     case 3:
-                                        Presion = Presion - Hoyo3;
+                                        Presion = Presion + Hoyo3;
                                         break;
                                     case 4:
-                                        Presion = Presion - Hoyo4;
+                                        Presion = Presion + Hoyo4;
                                         break;
                                     case 5:
-                                        Presion = Presion - Hoyo5;
+                                        Presion = Presion + Hoyo5;
                                         break;
                                     case 6:
-                                        Presion = Presion - Hoyo6;
+                                        Presion = Presion + Hoyo6;
                                         break;
                                     case 7:
-                                        Presion = Presion - Hoyo7;
+                                        Presion = Presion + Hoyo7;
                                         break;
                                     case 8:
-                                        Presion = Presion - Hoyo8;
+                                        Presion = Presion + Hoyo8;
                                         break;
                                     case 9:
-                                        Presion = Presion - Hoyo9;
+                                        Presion = Presion + Hoyo9;
                                         break;
                                     default:
                                         Console.WriteLine("Default case");
@@ -6516,31 +6516,31 @@ namespace DragonGolfBackEnd.Controllers
                                 switch (i)
                                 {
                                     case 1:
-                                        Presion = Presion - Hoyo1;
+                                        Presion = Presion + Hoyo1;
                                         break;
                                     case 2:
-                                        Presion = Presion - Hoyo2;
+                                        Presion = Presion + Hoyo2;
                                         break;
                                     case 3:
-                                        Presion = Presion - Hoyo3;
+                                        Presion = Presion + Hoyo3;
                                         break;
                                     case 4:
-                                        Presion = Presion - Hoyo4;
+                                        Presion = Presion + Hoyo4;
                                         break;
                                     case 5:
-                                        Presion = Presion - Hoyo5;
+                                        Presion = Presion + Hoyo5;
                                         break;
                                     case 6:
-                                        Presion = Presion - Hoyo6;
+                                        Presion = Presion + Hoyo6;
                                         break;
                                     case 7:
-                                        Presion = Presion - Hoyo7;
+                                        Presion = Presion + Hoyo7;
                                         break;
                                     case 8:
-                                        Presion = Presion - Hoyo8;
+                                        Presion = Presion + Hoyo8;
                                         break;
                                     case 9:
-                                        Presion = Presion - Hoyo9;
+                                        Presion = Presion + Hoyo9;
                                         break;
                                     default:
                                         Console.WriteLine("Default case");
@@ -6557,31 +6557,31 @@ namespace DragonGolfBackEnd.Controllers
                                 switch (i)
                                 {
                                     case 1:
-                                        Presion = Presion - Hoyo1;
+                                        Presion = Presion + Hoyo1;
                                         break;
                                     case 2:
-                                        Presion = Presion - Hoyo2;
+                                        Presion = Presion + Hoyo2;
                                         break;
                                     case 3:
-                                        Presion = Presion - Hoyo3;
+                                        Presion = Presion + Hoyo3;
                                         break;
                                     case 4:
-                                        Presion = Presion - Hoyo4;
+                                        Presion = Presion + Hoyo4;
                                         break;
                                     case 5:
-                                        Presion = Presion - Hoyo5;
+                                        Presion = Presion + Hoyo5;
                                         break;
                                     case 6:
-                                        Presion = Presion - Hoyo6;
+                                        Presion = Presion + Hoyo6;
                                         break;
                                     case 7:
-                                        Presion = Presion - Hoyo7;
+                                        Presion = Presion + Hoyo7;
                                         break;
                                     case 8:
-                                        Presion = Presion - Hoyo8;
+                                        Presion = Presion + Hoyo8;
                                         break;
                                     case 9:
-                                        Presion = Presion - Hoyo9;
+                                        Presion = Presion + Hoyo9;
                                         break;
                                     default:
                                         Console.WriteLine("Default case");
@@ -6778,31 +6778,31 @@ namespace DragonGolfBackEnd.Controllers
                             switch (i)
                             {
                                 case 1:
-                                    Presion = Presion - Hoyo1;
+                                    Presion = Presion + Hoyo1;
                                     break;
                                 case 2:
-                                    Presion = Presion - Hoyo2;
+                                    Presion = Presion + Hoyo2;
                                     break;
                                 case 3:
-                                    Presion = Presion - Hoyo3;
+                                    Presion = Presion + Hoyo3;
                                     break;
                                 case 4:
-                                    Presion = Presion - Hoyo4;
+                                    Presion = Presion + Hoyo4;
                                     break;
                                 case 5:
-                                    Presion = Presion - Hoyo5;
+                                    Presion = Presion + Hoyo5;
                                     break;
                                 case 6:
-                                    Presion = Presion - Hoyo6;
+                                    Presion = Presion + Hoyo6;
                                     break;
                                 case 7:
-                                    Presion = Presion - Hoyo7;
+                                    Presion = Presion + Hoyo7;
                                     break;
                                 case 8:
-                                    Presion = Presion - Hoyo8;
+                                    Presion = Presion + Hoyo8;
                                     break;
                                 case 9:
-                                    Presion = Presion - Hoyo9;
+                                    Presion = Presion + Hoyo9;
                                     break;
                                 default:
                                     Console.WriteLine("Default case");
@@ -8395,31 +8395,31 @@ namespace DragonGolfBackEnd.Controllers
                                 switch (i)
                                 {
                                     case 1:
-                                        Presion = Presion - Hoyo1;
+                                        Presion = Presion + Hoyo1;
                                         break;
                                     case 2:
-                                        Presion = Presion - Hoyo2;
+                                        Presion = Presion + Hoyo2;
                                         break;
                                     case 3:
-                                        Presion = Presion - Hoyo3;
+                                        Presion = Presion + Hoyo3;
                                         break;
                                     case 4:
-                                        Presion = Presion - Hoyo4;
+                                        Presion = Presion + Hoyo4;
                                         break;
                                     case 5:
-                                        Presion = Presion - Hoyo5;
+                                        Presion = Presion + Hoyo5;
                                         break;
                                     case 6:
-                                        Presion = Presion - Hoyo6;
+                                        Presion = Presion + Hoyo6;
                                         break;
                                     case 7:
-                                        Presion = Presion - Hoyo7;
+                                        Presion = Presion + Hoyo7;
                                         break;
                                     case 8:
-                                        Presion = Presion - Hoyo8;
+                                        Presion = Presion + Hoyo8;
                                         break;
                                     case 9:
-                                        Presion = Presion - Hoyo9;
+                                        Presion = Presion + Hoyo9;
                                         break;
                                     default:
                                         Console.WriteLine("Default case");
@@ -8436,31 +8436,31 @@ namespace DragonGolfBackEnd.Controllers
                                 switch (i)
                                 {
                                     case 1:
-                                        Presion = Presion - Hoyo1;
+                                        Presion = Presion + Hoyo1;
                                         break;
                                     case 2:
-                                        Presion = Presion - Hoyo2;
+                                        Presion = Presion + Hoyo2;
                                         break;
                                     case 3:
-                                        Presion = Presion - Hoyo3;
+                                        Presion = Presion + Hoyo3;
                                         break;
                                     case 4:
-                                        Presion = Presion - Hoyo4;
+                                        Presion = Presion + Hoyo4;
                                         break;
                                     case 5:
-                                        Presion = Presion - Hoyo5;
+                                        Presion = Presion + Hoyo5;
                                         break;
                                     case 6:
-                                        Presion = Presion - Hoyo6;
+                                        Presion = Presion + Hoyo6;
                                         break;
                                     case 7:
-                                        Presion = Presion - Hoyo7;
+                                        Presion = Presion + Hoyo7;
                                         break;
                                     case 8:
-                                        Presion = Presion - Hoyo8;
+                                        Presion = Presion + Hoyo8;
                                         break;
                                     case 9:
-                                        Presion = Presion - Hoyo9;
+                                        Presion = Presion + Hoyo9;
                                         break;
                                     default:
                                         Console.WriteLine("Default case");
@@ -8477,31 +8477,31 @@ namespace DragonGolfBackEnd.Controllers
                                 switch (i)
                                 {
                                     case 1:
-                                        Presion = Presion - Hoyo1;
+                                        Presion = Presion + Hoyo1;
                                         break;
                                     case 2:
-                                        Presion = Presion - Hoyo2;
+                                        Presion = Presion + Hoyo2;
                                         break;
                                     case 3:
-                                        Presion = Presion - Hoyo3;
+                                        Presion = Presion + Hoyo3;
                                         break;
                                     case 4:
-                                        Presion = Presion - Hoyo4;
+                                        Presion = Presion + Hoyo4;
                                         break;
                                     case 5:
-                                        Presion = Presion - Hoyo5;
+                                        Presion = Presion + Hoyo5;
                                         break;
                                     case 6:
-                                        Presion = Presion - Hoyo6;
+                                        Presion = Presion + Hoyo6;
                                         break;
                                     case 7:
-                                        Presion = Presion - Hoyo7;
+                                        Presion = Presion + Hoyo7;
                                         break;
                                     case 8:
-                                        Presion = Presion - Hoyo8;
+                                        Presion = Presion + Hoyo8;
                                         break;
                                     case 9:
-                                        Presion = Presion - Hoyo9;
+                                        Presion = Presion + Hoyo9;
                                         break;
                                     default:
                                         Console.WriteLine("Default case");
@@ -8518,31 +8518,31 @@ namespace DragonGolfBackEnd.Controllers
                                 switch (i)
                                 {
                                     case 1:
-                                        Presion = Presion - Hoyo1;
+                                        Presion = Presion + Hoyo1;
                                         break;
                                     case 2:
-                                        Presion = Presion - Hoyo2;
+                                        Presion = Presion + Hoyo2;
                                         break;
                                     case 3:
-                                        Presion = Presion - Hoyo3;
+                                        Presion = Presion + Hoyo3;
                                         break;
                                     case 4:
-                                        Presion = Presion - Hoyo4;
+                                        Presion = Presion + Hoyo4;
                                         break;
                                     case 5:
-                                        Presion = Presion - Hoyo5;
+                                        Presion = Presion + Hoyo5;
                                         break;
                                     case 6:
-                                        Presion = Presion - Hoyo6;
+                                        Presion = Presion + Hoyo6;
                                         break;
                                     case 7:
-                                        Presion = Presion - Hoyo7;
+                                        Presion = Presion + Hoyo7;
                                         break;
                                     case 8:
-                                        Presion = Presion - Hoyo8;
+                                        Presion = Presion + Hoyo8;
                                         break;
                                     case 9:
-                                        Presion = Presion - Hoyo9;
+                                        Presion = Presion + Hoyo9;
                                         break;
                                     default:
                                         Console.WriteLine("Default case");
@@ -8739,31 +8739,31 @@ namespace DragonGolfBackEnd.Controllers
                             switch (i)
                             {
                                 case 1:
-                                    Presion = Presion - Hoyo1;
+                                    Presion = Presion + Hoyo1;
                                     break;
                                 case 2:
-                                    Presion = Presion - Hoyo2;
+                                    Presion = Presion + Hoyo2;
                                     break;
                                 case 3:
-                                    Presion = Presion - Hoyo3;
+                                    Presion = Presion + Hoyo3;
                                     break;
                                 case 4:
-                                    Presion = Presion - Hoyo4;
+                                    Presion = Presion + Hoyo4;
                                     break;
                                 case 5:
-                                    Presion = Presion - Hoyo5;
+                                    Presion = Presion + Hoyo5;
                                     break;
                                 case 6:
-                                    Presion = Presion - Hoyo6;
+                                    Presion = Presion + Hoyo6;
                                     break;
                                 case 7:
-                                    Presion = Presion - Hoyo7;
+                                    Presion = Presion + Hoyo7;
                                     break;
                                 case 8:
-                                    Presion = Presion - Hoyo8;
+                                    Presion = Presion + Hoyo8;
                                     break;
                                 case 9:
-                                    Presion = Presion - Hoyo9;
+                                    Presion = Presion + Hoyo9;
                                     break;
                                 default:
                                     Console.WriteLine("Default case");
@@ -8796,7 +8796,6 @@ namespace DragonGolfBackEnd.Controllers
                 }
 
             }
-
 
             string ResultadointFinal = "";
 
@@ -10357,31 +10356,31 @@ namespace DragonGolfBackEnd.Controllers
                                 switch (i)
                                 {
                                     case 1:
-                                        Presion = Presion - Hoyo1;
+                                        Presion = Presion + Hoyo1;
                                         break;
                                     case 2:
-                                        Presion = Presion - Hoyo2;
+                                        Presion = Presion + Hoyo2;
                                         break;
                                     case 3:
-                                        Presion = Presion - Hoyo3;
+                                        Presion = Presion + Hoyo3;
                                         break;
                                     case 4:
-                                        Presion = Presion - Hoyo4;
+                                        Presion = Presion + Hoyo4;
                                         break;
                                     case 5:
-                                        Presion = Presion - Hoyo5;
+                                        Presion = Presion + Hoyo5;
                                         break;
                                     case 6:
-                                        Presion = Presion - Hoyo6;
+                                        Presion = Presion + Hoyo6;
                                         break;
                                     case 7:
-                                        Presion = Presion - Hoyo7;
+                                        Presion = Presion + Hoyo7;
                                         break;
                                     case 8:
-                                        Presion = Presion - Hoyo8;
+                                        Presion = Presion + Hoyo8;
                                         break;
                                     case 9:
-                                        Presion = Presion - Hoyo9;
+                                        Presion = Presion + Hoyo9;
                                         break;
                                     default:
                                         Console.WriteLine("Default case");
@@ -10398,31 +10397,31 @@ namespace DragonGolfBackEnd.Controllers
                                 switch (i)
                                 {
                                     case 1:
-                                        Presion = Presion - Hoyo1;
+                                        Presion = Presion + Hoyo1;
                                         break;
                                     case 2:
-                                        Presion = Presion - Hoyo2;
+                                        Presion = Presion + Hoyo2;
                                         break;
                                     case 3:
-                                        Presion = Presion - Hoyo3;
+                                        Presion = Presion + Hoyo3;
                                         break;
                                     case 4:
-                                        Presion = Presion - Hoyo4;
+                                        Presion = Presion + Hoyo4;
                                         break;
                                     case 5:
-                                        Presion = Presion - Hoyo5;
+                                        Presion = Presion + Hoyo5;
                                         break;
                                     case 6:
-                                        Presion = Presion - Hoyo6;
+                                        Presion = Presion + Hoyo6;
                                         break;
                                     case 7:
-                                        Presion = Presion - Hoyo7;
+                                        Presion = Presion + Hoyo7;
                                         break;
                                     case 8:
-                                        Presion = Presion - Hoyo8;
+                                        Presion = Presion + Hoyo8;
                                         break;
                                     case 9:
-                                        Presion = Presion - Hoyo9;
+                                        Presion = Presion + Hoyo9;
                                         break;
                                     default:
                                         Console.WriteLine("Default case");
@@ -10439,31 +10438,31 @@ namespace DragonGolfBackEnd.Controllers
                                 switch (i)
                                 {
                                     case 1:
-                                        Presion = Presion - Hoyo1;
+                                        Presion = Presion + Hoyo1;
                                         break;
                                     case 2:
-                                        Presion = Presion - Hoyo2;
+                                        Presion = Presion + Hoyo2;
                                         break;
                                     case 3:
-                                        Presion = Presion - Hoyo3;
+                                        Presion = Presion + Hoyo3;
                                         break;
                                     case 4:
-                                        Presion = Presion - Hoyo4;
+                                        Presion = Presion + Hoyo4;
                                         break;
                                     case 5:
-                                        Presion = Presion - Hoyo5;
+                                        Presion = Presion + Hoyo5;
                                         break;
                                     case 6:
-                                        Presion = Presion - Hoyo6;
+                                        Presion = Presion + Hoyo6;
                                         break;
                                     case 7:
-                                        Presion = Presion - Hoyo7;
+                                        Presion = Presion + Hoyo7;
                                         break;
                                     case 8:
-                                        Presion = Presion - Hoyo8;
+                                        Presion = Presion + Hoyo8;
                                         break;
                                     case 9:
-                                        Presion = Presion - Hoyo9;
+                                        Presion = Presion + Hoyo9;
                                         break;
                                     default:
                                         Console.WriteLine("Default case");
@@ -10480,31 +10479,31 @@ namespace DragonGolfBackEnd.Controllers
                                 switch (i)
                                 {
                                     case 1:
-                                        Presion = Presion - Hoyo1;
+                                        Presion = Presion + Hoyo1;
                                         break;
                                     case 2:
-                                        Presion = Presion - Hoyo2;
+                                        Presion = Presion + Hoyo2;
                                         break;
                                     case 3:
-                                        Presion = Presion - Hoyo3;
+                                        Presion = Presion + Hoyo3;
                                         break;
                                     case 4:
-                                        Presion = Presion - Hoyo4;
+                                        Presion = Presion + Hoyo4;
                                         break;
                                     case 5:
-                                        Presion = Presion - Hoyo5;
+                                        Presion = Presion + Hoyo5;
                                         break;
                                     case 6:
-                                        Presion = Presion - Hoyo6;
+                                        Presion = Presion + Hoyo6;
                                         break;
                                     case 7:
-                                        Presion = Presion - Hoyo7;
+                                        Presion = Presion + Hoyo7;
                                         break;
                                     case 8:
-                                        Presion = Presion - Hoyo8;
+                                        Presion = Presion + Hoyo8;
                                         break;
                                     case 9:
-                                        Presion = Presion - Hoyo9;
+                                        Presion = Presion + Hoyo9;
                                         break;
                                     default:
                                         Console.WriteLine("Default case");
@@ -10701,31 +10700,31 @@ namespace DragonGolfBackEnd.Controllers
                             switch (i)
                             {
                                 case 1:
-                                    Presion = Presion - Hoyo1;
+                                    Presion = Presion + Hoyo1;
                                     break;
                                 case 2:
-                                    Presion = Presion - Hoyo2;
+                                    Presion = Presion + Hoyo2;
                                     break;
                                 case 3:
-                                    Presion = Presion - Hoyo3;
+                                    Presion = Presion + Hoyo3;
                                     break;
                                 case 4:
-                                    Presion = Presion - Hoyo4;
+                                    Presion = Presion + Hoyo4;
                                     break;
                                 case 5:
-                                    Presion = Presion - Hoyo5;
+                                    Presion = Presion + Hoyo5;
                                     break;
                                 case 6:
-                                    Presion = Presion - Hoyo6;
+                                    Presion = Presion + Hoyo6;
                                     break;
                                 case 7:
-                                    Presion = Presion - Hoyo7;
+                                    Presion = Presion + Hoyo7;
                                     break;
                                 case 8:
-                                    Presion = Presion - Hoyo8;
+                                    Presion = Presion + Hoyo8;
                                     break;
                                 case 9:
-                                    Presion = Presion - Hoyo9;
+                                    Presion = Presion + Hoyo9;
                                     break;
                                 default:
                                     Console.WriteLine("Default case");
@@ -12321,31 +12320,31 @@ namespace DragonGolfBackEnd.Controllers
                                 switch (i)
                                 {
                                     case 1:
-                                        Presion = Presion - Hoyo1;
+                                        Presion = Presion + Hoyo1;
                                         break;
                                     case 2:
-                                        Presion = Presion - Hoyo2;
+                                        Presion = Presion + Hoyo2;
                                         break;
                                     case 3:
-                                        Presion = Presion - Hoyo3;
+                                        Presion = Presion + Hoyo3;
                                         break;
                                     case 4:
-                                        Presion = Presion - Hoyo4;
+                                        Presion = Presion + Hoyo4;
                                         break;
                                     case 5:
-                                        Presion = Presion - Hoyo5;
+                                        Presion = Presion + Hoyo5;
                                         break;
                                     case 6:
-                                        Presion = Presion - Hoyo6;
+                                        Presion = Presion + Hoyo6;
                                         break;
                                     case 7:
-                                        Presion = Presion - Hoyo7;
+                                        Presion = Presion + Hoyo7;
                                         break;
                                     case 8:
-                                        Presion = Presion - Hoyo8;
+                                        Presion = Presion + Hoyo8;
                                         break;
                                     case 9:
-                                        Presion = Presion - Hoyo9;
+                                        Presion = Presion + Hoyo9;
                                         break;
                                     default:
                                         Console.WriteLine("Default case");
@@ -12362,31 +12361,31 @@ namespace DragonGolfBackEnd.Controllers
                                 switch (i)
                                 {
                                     case 1:
-                                        Presion = Presion - Hoyo1;
+                                        Presion = Presion + Hoyo1;
                                         break;
                                     case 2:
-                                        Presion = Presion - Hoyo2;
+                                        Presion = Presion + Hoyo2;
                                         break;
                                     case 3:
-                                        Presion = Presion - Hoyo3;
+                                        Presion = Presion + Hoyo3;
                                         break;
                                     case 4:
-                                        Presion = Presion - Hoyo4;
+                                        Presion = Presion + Hoyo4;
                                         break;
                                     case 5:
-                                        Presion = Presion - Hoyo5;
+                                        Presion = Presion + Hoyo5;
                                         break;
                                     case 6:
-                                        Presion = Presion - Hoyo6;
+                                        Presion = Presion + Hoyo6;
                                         break;
                                     case 7:
-                                        Presion = Presion - Hoyo7;
+                                        Presion = Presion + Hoyo7;
                                         break;
                                     case 8:
-                                        Presion = Presion - Hoyo8;
+                                        Presion = Presion + Hoyo8;
                                         break;
                                     case 9:
-                                        Presion = Presion - Hoyo9;
+                                        Presion = Presion + Hoyo9;
                                         break;
                                     default:
                                         Console.WriteLine("Default case");
@@ -12403,31 +12402,31 @@ namespace DragonGolfBackEnd.Controllers
                                 switch (i)
                                 {
                                     case 1:
-                                        Presion = Presion - Hoyo1;
+                                        Presion = Presion + Hoyo1;
                                         break;
                                     case 2:
-                                        Presion = Presion - Hoyo2;
+                                        Presion = Presion + Hoyo2;
                                         break;
                                     case 3:
-                                        Presion = Presion - Hoyo3;
+                                        Presion = Presion + Hoyo3;
                                         break;
                                     case 4:
-                                        Presion = Presion - Hoyo4;
+                                        Presion = Presion + Hoyo4;
                                         break;
                                     case 5:
-                                        Presion = Presion - Hoyo5;
+                                        Presion = Presion + Hoyo5;
                                         break;
                                     case 6:
-                                        Presion = Presion - Hoyo6;
+                                        Presion = Presion + Hoyo6;
                                         break;
                                     case 7:
-                                        Presion = Presion - Hoyo7;
+                                        Presion = Presion + Hoyo7;
                                         break;
                                     case 8:
-                                        Presion = Presion - Hoyo8;
+                                        Presion = Presion + Hoyo8;
                                         break;
                                     case 9:
-                                        Presion = Presion - Hoyo9;
+                                        Presion = Presion + Hoyo9;
                                         break;
                                     default:
                                         Console.WriteLine("Default case");
@@ -12444,31 +12443,31 @@ namespace DragonGolfBackEnd.Controllers
                                 switch (i)
                                 {
                                     case 1:
-                                        Presion = Presion - Hoyo1;
+                                        Presion = Presion + Hoyo1;
                                         break;
                                     case 2:
-                                        Presion = Presion - Hoyo2;
+                                        Presion = Presion + Hoyo2;
                                         break;
                                     case 3:
-                                        Presion = Presion - Hoyo3;
+                                        Presion = Presion + Hoyo3;
                                         break;
                                     case 4:
-                                        Presion = Presion - Hoyo4;
+                                        Presion = Presion + Hoyo4;
                                         break;
                                     case 5:
-                                        Presion = Presion - Hoyo5;
+                                        Presion = Presion + Hoyo5;
                                         break;
                                     case 6:
-                                        Presion = Presion - Hoyo6;
+                                        Presion = Presion + Hoyo6;
                                         break;
                                     case 7:
-                                        Presion = Presion - Hoyo7;
+                                        Presion = Presion + Hoyo7;
                                         break;
                                     case 8:
-                                        Presion = Presion - Hoyo8;
+                                        Presion = Presion + Hoyo8;
                                         break;
                                     case 9:
-                                        Presion = Presion - Hoyo9;
+                                        Presion = Presion + Hoyo9;
                                         break;
                                     default:
                                         Console.WriteLine("Default case");
@@ -12665,31 +12664,31 @@ namespace DragonGolfBackEnd.Controllers
                             switch (i)
                             {
                                 case 1:
-                                    Presion = Presion - Hoyo1;
+                                    Presion = Presion + Hoyo1;
                                     break;
                                 case 2:
-                                    Presion = Presion - Hoyo2;
+                                    Presion = Presion + Hoyo2;
                                     break;
                                 case 3:
-                                    Presion = Presion - Hoyo3;
+                                    Presion = Presion + Hoyo3;
                                     break;
                                 case 4:
-                                    Presion = Presion - Hoyo4;
+                                    Presion = Presion + Hoyo4;
                                     break;
                                 case 5:
-                                    Presion = Presion - Hoyo5;
+                                    Presion = Presion + Hoyo5;
                                     break;
                                 case 6:
-                                    Presion = Presion - Hoyo6;
+                                    Presion = Presion + Hoyo6;
                                     break;
                                 case 7:
-                                    Presion = Presion - Hoyo7;
+                                    Presion = Presion + Hoyo7;
                                     break;
                                 case 8:
-                                    Presion = Presion - Hoyo8;
+                                    Presion = Presion + Hoyo8;
                                     break;
                                 case 9:
-                                    Presion = Presion - Hoyo9;
+                                    Presion = Presion + Hoyo9;
                                     break;
                                 default:
                                     Console.WriteLine("Default case");
@@ -14283,31 +14282,31 @@ namespace DragonGolfBackEnd.Controllers
                                 switch (i)
                                 {
                                     case 1:
-                                        Presion = Presion - Hoyo1;
+                                        Presion = Presion + Hoyo1;
                                         break;
                                     case 2:
-                                        Presion = Presion - Hoyo2;
+                                        Presion = Presion + Hoyo2;
                                         break;
                                     case 3:
-                                        Presion = Presion - Hoyo3;
+                                        Presion = Presion + Hoyo3;
                                         break;
                                     case 4:
-                                        Presion = Presion - Hoyo4;
+                                        Presion = Presion + Hoyo4;
                                         break;
                                     case 5:
-                                        Presion = Presion - Hoyo5;
+                                        Presion = Presion + Hoyo5;
                                         break;
                                     case 6:
-                                        Presion = Presion - Hoyo6;
+                                        Presion = Presion + Hoyo6;
                                         break;
                                     case 7:
-                                        Presion = Presion - Hoyo7;
+                                        Presion = Presion + Hoyo7;
                                         break;
                                     case 8:
-                                        Presion = Presion - Hoyo8;
+                                        Presion = Presion + Hoyo8;
                                         break;
                                     case 9:
-                                        Presion = Presion - Hoyo9;
+                                        Presion = Presion + Hoyo9;
                                         break;
                                     default:
                                         Console.WriteLine("Default case");
@@ -14324,31 +14323,31 @@ namespace DragonGolfBackEnd.Controllers
                                 switch (i)
                                 {
                                     case 1:
-                                        Presion = Presion - Hoyo1;
+                                        Presion = Presion + Hoyo1;
                                         break;
                                     case 2:
-                                        Presion = Presion - Hoyo2;
+                                        Presion = Presion + Hoyo2;
                                         break;
                                     case 3:
-                                        Presion = Presion - Hoyo3;
+                                        Presion = Presion + Hoyo3;
                                         break;
                                     case 4:
-                                        Presion = Presion - Hoyo4;
+                                        Presion = Presion + Hoyo4;
                                         break;
                                     case 5:
-                                        Presion = Presion - Hoyo5;
+                                        Presion = Presion + Hoyo5;
                                         break;
                                     case 6:
-                                        Presion = Presion - Hoyo6;
+                                        Presion = Presion + Hoyo6;
                                         break;
                                     case 7:
-                                        Presion = Presion - Hoyo7;
+                                        Presion = Presion + Hoyo7;
                                         break;
                                     case 8:
-                                        Presion = Presion - Hoyo8;
+                                        Presion = Presion + Hoyo8;
                                         break;
                                     case 9:
-                                        Presion = Presion - Hoyo9;
+                                        Presion = Presion + Hoyo9;
                                         break;
                                     default:
                                         Console.WriteLine("Default case");
@@ -14365,31 +14364,31 @@ namespace DragonGolfBackEnd.Controllers
                                 switch (i)
                                 {
                                     case 1:
-                                        Presion = Presion - Hoyo1;
+                                        Presion = Presion + Hoyo1;
                                         break;
                                     case 2:
-                                        Presion = Presion - Hoyo2;
+                                        Presion = Presion + Hoyo2;
                                         break;
                                     case 3:
-                                        Presion = Presion - Hoyo3;
+                                        Presion = Presion + Hoyo3;
                                         break;
                                     case 4:
-                                        Presion = Presion - Hoyo4;
+                                        Presion = Presion + Hoyo4;
                                         break;
                                     case 5:
-                                        Presion = Presion - Hoyo5;
+                                        Presion = Presion + Hoyo5;
                                         break;
                                     case 6:
-                                        Presion = Presion - Hoyo6;
+                                        Presion = Presion + Hoyo6;
                                         break;
                                     case 7:
-                                        Presion = Presion - Hoyo7;
+                                        Presion = Presion + Hoyo7;
                                         break;
                                     case 8:
-                                        Presion = Presion - Hoyo8;
+                                        Presion = Presion + Hoyo8;
                                         break;
                                     case 9:
-                                        Presion = Presion - Hoyo9;
+                                        Presion = Presion + Hoyo9;
                                         break;
                                     default:
                                         Console.WriteLine("Default case");
@@ -14406,31 +14405,31 @@ namespace DragonGolfBackEnd.Controllers
                                 switch (i)
                                 {
                                     case 1:
-                                        Presion = Presion - Hoyo1;
+                                        Presion = Presion + Hoyo1;
                                         break;
                                     case 2:
-                                        Presion = Presion - Hoyo2;
+                                        Presion = Presion + Hoyo2;
                                         break;
                                     case 3:
-                                        Presion = Presion - Hoyo3;
+                                        Presion = Presion + Hoyo3;
                                         break;
                                     case 4:
-                                        Presion = Presion - Hoyo4;
+                                        Presion = Presion + Hoyo4;
                                         break;
                                     case 5:
-                                        Presion = Presion - Hoyo5;
+                                        Presion = Presion + Hoyo5;
                                         break;
                                     case 6:
-                                        Presion = Presion - Hoyo6;
+                                        Presion = Presion + Hoyo6;
                                         break;
                                     case 7:
-                                        Presion = Presion - Hoyo7;
+                                        Presion = Presion + Hoyo7;
                                         break;
                                     case 8:
-                                        Presion = Presion - Hoyo8;
+                                        Presion = Presion + Hoyo8;
                                         break;
                                     case 9:
-                                        Presion = Presion - Hoyo9;
+                                        Presion = Presion + Hoyo9;
                                         break;
                                     default:
                                         Console.WriteLine("Default case");
@@ -14627,31 +14626,31 @@ namespace DragonGolfBackEnd.Controllers
                             switch (i)
                             {
                                 case 1:
-                                    Presion = Presion - Hoyo1;
+                                    Presion = Presion + Hoyo1;
                                     break;
                                 case 2:
-                                    Presion = Presion - Hoyo2;
+                                    Presion = Presion + Hoyo2;
                                     break;
                                 case 3:
-                                    Presion = Presion - Hoyo3;
+                                    Presion = Presion + Hoyo3;
                                     break;
                                 case 4:
-                                    Presion = Presion - Hoyo4;
+                                    Presion = Presion + Hoyo4;
                                     break;
                                 case 5:
-                                    Presion = Presion - Hoyo5;
+                                    Presion = Presion + Hoyo5;
                                     break;
                                 case 6:
-                                    Presion = Presion - Hoyo6;
+                                    Presion = Presion + Hoyo6;
                                     break;
                                 case 7:
-                                    Presion = Presion - Hoyo7;
+                                    Presion = Presion + Hoyo7;
                                     break;
                                 case 8:
-                                    Presion = Presion - Hoyo8;
+                                    Presion = Presion + Hoyo8;
                                     break;
                                 case 9:
-                                    Presion = Presion - Hoyo9;
+                                    Presion = Presion + Hoyo9;
                                     break;
                                 default:
                                     Console.WriteLine("Default case");
@@ -16243,31 +16242,31 @@ namespace DragonGolfBackEnd.Controllers
                                 switch (i)
                                 {
                                     case 1:
-                                        Presion = Presion - Hoyo1;
+                                        Presion = Presion + Hoyo1;
                                         break;
                                     case 2:
-                                        Presion = Presion - Hoyo2;
+                                        Presion = Presion + Hoyo2;
                                         break;
                                     case 3:
-                                        Presion = Presion - Hoyo3;
+                                        Presion = Presion + Hoyo3;
                                         break;
                                     case 4:
-                                        Presion = Presion - Hoyo4;
+                                        Presion = Presion + Hoyo4;
                                         break;
                                     case 5:
-                                        Presion = Presion - Hoyo5;
+                                        Presion = Presion + Hoyo5;
                                         break;
                                     case 6:
-                                        Presion = Presion - Hoyo6;
+                                        Presion = Presion + Hoyo6;
                                         break;
                                     case 7:
-                                        Presion = Presion - Hoyo7;
+                                        Presion = Presion + Hoyo7;
                                         break;
                                     case 8:
-                                        Presion = Presion - Hoyo8;
+                                        Presion = Presion + Hoyo8;
                                         break;
                                     case 9:
-                                        Presion = Presion - Hoyo9;
+                                        Presion = Presion + Hoyo9;
                                         break;
                                     default:
                                         Console.WriteLine("Default case");
@@ -16284,31 +16283,31 @@ namespace DragonGolfBackEnd.Controllers
                                 switch (i)
                                 {
                                     case 1:
-                                        Presion = Presion - Hoyo1;
+                                        Presion = Presion + Hoyo1;
                                         break;
                                     case 2:
-                                        Presion = Presion - Hoyo2;
+                                        Presion = Presion + Hoyo2;
                                         break;
                                     case 3:
-                                        Presion = Presion - Hoyo3;
+                                        Presion = Presion + Hoyo3;
                                         break;
                                     case 4:
-                                        Presion = Presion - Hoyo4;
+                                        Presion = Presion + Hoyo4;
                                         break;
                                     case 5:
-                                        Presion = Presion - Hoyo5;
+                                        Presion = Presion + Hoyo5;
                                         break;
                                     case 6:
-                                        Presion = Presion - Hoyo6;
+                                        Presion = Presion + Hoyo6;
                                         break;
                                     case 7:
-                                        Presion = Presion - Hoyo7;
+                                        Presion = Presion + Hoyo7;
                                         break;
                                     case 8:
-                                        Presion = Presion - Hoyo8;
+                                        Presion = Presion + Hoyo8;
                                         break;
                                     case 9:
-                                        Presion = Presion - Hoyo9;
+                                        Presion = Presion + Hoyo9;
                                         break;
                                     default:
                                         Console.WriteLine("Default case");
@@ -16325,31 +16324,31 @@ namespace DragonGolfBackEnd.Controllers
                                 switch (i)
                                 {
                                     case 1:
-                                        Presion = Presion - Hoyo1;
+                                        Presion = Presion + Hoyo1;
                                         break;
                                     case 2:
-                                        Presion = Presion - Hoyo2;
+                                        Presion = Presion + Hoyo2;
                                         break;
                                     case 3:
-                                        Presion = Presion - Hoyo3;
+                                        Presion = Presion + Hoyo3;
                                         break;
                                     case 4:
-                                        Presion = Presion - Hoyo4;
+                                        Presion = Presion + Hoyo4;
                                         break;
                                     case 5:
-                                        Presion = Presion - Hoyo5;
+                                        Presion = Presion + Hoyo5;
                                         break;
                                     case 6:
-                                        Presion = Presion - Hoyo6;
+                                        Presion = Presion + Hoyo6;
                                         break;
                                     case 7:
-                                        Presion = Presion - Hoyo7;
+                                        Presion = Presion + Hoyo7;
                                         break;
                                     case 8:
-                                        Presion = Presion - Hoyo8;
+                                        Presion = Presion + Hoyo8;
                                         break;
                                     case 9:
-                                        Presion = Presion - Hoyo9;
+                                        Presion = Presion + Hoyo9;
                                         break;
                                     default:
                                         Console.WriteLine("Default case");
@@ -16366,31 +16365,31 @@ namespace DragonGolfBackEnd.Controllers
                                 switch (i)
                                 {
                                     case 1:
-                                        Presion = Presion - Hoyo1;
+                                        Presion = Presion + Hoyo1;
                                         break;
                                     case 2:
-                                        Presion = Presion - Hoyo2;
+                                        Presion = Presion + Hoyo2;
                                         break;
                                     case 3:
-                                        Presion = Presion - Hoyo3;
+                                        Presion = Presion + Hoyo3;
                                         break;
                                     case 4:
-                                        Presion = Presion - Hoyo4;
+                                        Presion = Presion + Hoyo4;
                                         break;
                                     case 5:
-                                        Presion = Presion - Hoyo5;
+                                        Presion = Presion + Hoyo5;
                                         break;
                                     case 6:
-                                        Presion = Presion - Hoyo6;
+                                        Presion = Presion + Hoyo6;
                                         break;
                                     case 7:
-                                        Presion = Presion - Hoyo7;
+                                        Presion = Presion + Hoyo7;
                                         break;
                                     case 8:
-                                        Presion = Presion - Hoyo8;
+                                        Presion = Presion + Hoyo8;
                                         break;
                                     case 9:
-                                        Presion = Presion - Hoyo9;
+                                        Presion = Presion + Hoyo9;
                                         break;
                                     default:
                                         Console.WriteLine("Default case");
@@ -16587,31 +16586,31 @@ namespace DragonGolfBackEnd.Controllers
                             switch (i)
                             {
                                 case 1:
-                                    Presion = Presion - Hoyo1;
+                                    Presion = Presion + Hoyo1;
                                     break;
                                 case 2:
-                                    Presion = Presion - Hoyo2;
+                                    Presion = Presion + Hoyo2;
                                     break;
                                 case 3:
-                                    Presion = Presion - Hoyo3;
+                                    Presion = Presion + Hoyo3;
                                     break;
                                 case 4:
-                                    Presion = Presion - Hoyo4;
+                                    Presion = Presion + Hoyo4;
                                     break;
                                 case 5:
-                                    Presion = Presion - Hoyo5;
+                                    Presion = Presion + Hoyo5;
                                     break;
                                 case 6:
-                                    Presion = Presion - Hoyo6;
+                                    Presion = Presion + Hoyo6;
                                     break;
                                 case 7:
-                                    Presion = Presion - Hoyo7;
+                                    Presion = Presion + Hoyo7;
                                     break;
                                 case 8:
-                                    Presion = Presion - Hoyo8;
+                                    Presion = Presion + Hoyo8;
                                     break;
                                 case 9:
-                                    Presion = Presion - Hoyo9;
+                                    Presion = Presion + Hoyo9;
                                     break;
                                 default:
                                     Console.WriteLine("Default case");
