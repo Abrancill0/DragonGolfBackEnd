@@ -1246,6 +1246,8 @@ namespace DragonGolfBackEnd.Controllers
                         double ResultadoTotaF1 = ScoreHole1_P1 + ScoreHole2_P1 + ScoreHole3_P1 + ScoreHole4_P1 + ScoreHole5_P1 + ScoreHole6_P1 + ScoreHole7_P1 + ScoreHole8_P1 + ScoreHole9_P1;
                         double ResultadoTotaF2 = ScoreHole1_P2 + ScoreHole2_P2 + ScoreHole3_P2 + ScoreHole4_P2 + ScoreHole5_P2 + ScoreHole6_P2 + ScoreHole7_P2 + ScoreHole8_P2 + ScoreHole9_P2;
 
+
+
                         bool ValidaJuegoInicio = false;
 
                         if ((ResultadoTotaF1 + ResultadoTotaF2) > 0)
@@ -1470,6 +1472,8 @@ namespace DragonGolfBackEnd.Controllers
                         double GolpesTotalesJugador1 = ResultadoTotaF1 + ResultadoTotaB1;
                         double GolpesTotalesJugador2 = ResultadoTotaF2 + ResultadoTotaB2;
 
+                        double TotalMeldal = GolpesTotalesJugador1 - GolpesTotalesJugador2;
+
                         if (GolpesTotalesJugador1 < GolpesTotalesJugador2)
                         {
                             ResultadoFinalMedal = 1;
@@ -1536,7 +1540,7 @@ namespace DragonGolfBackEnd.Controllers
                             ActualizarAPuesta(Datos.IDBetDetail, Datos.IDBet, Datos.IDRonda, PlayerID1, PlayerID2, BetD_F9_1, BetD_F9_2, BetD_F9_3, BetD_F9_4, BetD_F9_5, BetD_F9_6,
                                             BetD_F9_7, BetD_F9_8, BetD_F9_9, BetD_B9_1, BetD_B9_2, BetD_B9_3, BetD_B9_4, BetD_B9_5, BetD_B9_6, BetD_B9_7, BetD_B9_8, BetD_B9_9, ResultadoFinalMedal, ContadorHoyos,
                                             ResultFront[1], ResultFront[2], ResultFront[3], ResultFront[4], ResultFront[5], ResultFront[6], ResultFront[7], ResultFront[8], ResultFront[9],
-                                            ResultBack[1], ResultBack[2], ResultBack[3], ResultBack[4], ResultBack[5], ResultBack[6], ResultBack[7], ResultBack[8], ResultBack[9], 1, ValidaJuegoInicio);
+                                            ResultBack[1], ResultBack[2], ResultBack[3], ResultBack[4], ResultBack[5], ResultBack[6], ResultBack[7], ResultBack[8], ResultBack[9], 1, ValidaJuegoInicio, TotalMeldal);
 
                         }
                         else if (AutoPress == 2)
@@ -1564,7 +1568,7 @@ namespace DragonGolfBackEnd.Controllers
                             ActualizarAPuesta(Datos.IDBetDetail, Datos.IDBet, Datos.IDRonda, PlayerID1, PlayerID2, BetD_F9_1, BetD_F9_2, BetD_F9_3, BetD_F9_4, BetD_F9_5, BetD_F9_6,
                                               BetD_F9_7, BetD_F9_8, BetD_F9_9, BetD_B9_1, BetD_B9_2, BetD_B9_3, BetD_B9_4, BetD_B9_5, BetD_B9_6, BetD_B9_7, BetD_B9_8, BetD_B9_9, ResultadoFinalMedal, ContadorHoyos,
                                               ResultFront[1], ResultFront[2], ResultFront[3], ResultFront[4], ResultFront[5], ResultFront[6], ResultFront[7], ResultFront[8], ResultFront[9],
-                                            ResultBack[1], ResultBack[2], ResultBack[3], ResultBack[4], ResultBack[5], ResultBack[6], ResultBack[7], ResultBack[8], ResultBack[9], 2, ValidaJuegoInicio);
+                                            ResultBack[1], ResultBack[2], ResultBack[3], ResultBack[4], ResultBack[5], ResultBack[6], ResultBack[7], ResultBack[8], ResultBack[9], 2, ValidaJuegoInicio, TotalMeldal);
 
                         }
                         else if (AutoPress == 3)
@@ -1589,7 +1593,7 @@ namespace DragonGolfBackEnd.Controllers
                             ActualizarAPuesta(Datos.IDBetDetail, Datos.IDBet, Datos.IDRonda, PlayerID1, PlayerID2, BetD_F9_1, BetD_F9_2, BetD_F9_3, BetD_F9_4, BetD_F9_5, BetD_F9_6,
                                              BetD_F9_7, BetD_F9_8, BetD_F9_9, BetD_B9_1, BetD_B9_2, BetD_B9_3, BetD_B9_4, BetD_B9_5, BetD_B9_6, BetD_B9_7, BetD_B9_8, BetD_B9_9, ResultadoFinalMedal, ContadorHoyos,
                                            ResultFront[1], ResultFront[2], ResultFront[3], ResultFront[4], ResultFront[5], ResultFront[6], ResultFront[7], ResultFront[8], ResultFront[9],
-                                            (ResultBack[1]), ResultBack[2], ResultBack[3], ResultBack[4], ResultBack[5], ResultBack[6], ResultBack[7], ResultBack[8], ResultBack[9], 3, ValidaJuegoInicio);
+                                            (ResultBack[1]), ResultBack[2], ResultBack[3], ResultBack[4], ResultBack[5], ResultBack[6], ResultBack[7], ResultBack[8], ResultBack[9], 3, ValidaJuegoInicio, TotalMeldal);
 
                         }
                         else
@@ -1598,7 +1602,7 @@ namespace DragonGolfBackEnd.Controllers
                             ActualizarAPuesta(Datos.IDBetDetail, Datos.IDBet, Datos.IDRonda, PlayerID1, PlayerID2, Convert.ToString(Resultado1), Convert.ToString(Resultado2), Convert.ToString(Resultado3), Convert.ToString(Resultado4), Convert.ToString(Resultado5), Convert.ToString(Resultado6),
                                             Convert.ToString(Resultado7), Convert.ToString(Resultado8), Convert.ToString(Resultado9), Convert.ToString(Resultado10), Convert.ToString(Resultado11), Convert.ToString(Resultado12), Convert.ToString(Resultado13), Convert.ToString(Resultado14), Convert.ToString(Resultado15), Convert.ToString(Resultado16), Convert.ToString(Resultado17), Convert.ToString(Resultado18), ResultadoFinalMedal, ContadorHoyos,
                                            ResultFront[1], ResultFront[2], ResultFront[3], ResultFront[4], ResultFront[5], ResultFront[6], ResultFront[7], ResultFront[8], ResultFront[9],
-                                            ResultBack[1], ResultBack[2], ResultBack[3], ResultBack[4], ResultBack[5], ResultBack[6], ResultBack[7], ResultBack[8], ResultBack[9], 1, ValidaJuegoInicio);
+                                            ResultBack[1], ResultBack[2], ResultBack[3], ResultBack[4], ResultBack[5], ResultBack[6], ResultBack[7], ResultBack[8], ResultBack[9], 1, ValidaJuegoInicio, TotalMeldal);
 
                         }
 
@@ -4562,7 +4566,7 @@ namespace DragonGolfBackEnd.Controllers
                                       string BetD_B9_1, string BetD_B9_2, string BetD_B9_3, string BetD_B9_4, string BetD_B9_5, string BetD_B9_6, string BetD_B9_7, string BetD_B9_8, string BetD_B9_9, int ResultadoFinalMedal, int Match,
                                       string Hoyo_1, string Hoyo_2, string Hoyo_3, string Hoyo_4, string Hoyo_5, string Hoyo_6, string Hoyo_7, string Hoyo_8, string Hoyo_9,
                                       string Hoyo_10, string Hoyo_11, string Hoyo_12, string Hoyo_13, string Hoyo_14, string Hoyo_15, string Hoyo_16, string Hoyo_17, string Hoyo_18
-                                      , int Presion, bool ValidaJuegoInicio)
+                                      , int Presion, bool ValidaJuegoInicio, double TotalMeldal)
         {
 
 
@@ -4617,6 +4621,7 @@ namespace DragonGolfBackEnd.Controllers
             comando.Parameters.Add("@Medal", SqlDbType.Int);
             comando.Parameters.Add("@Match", SqlDbType.Int);
             comando.Parameters.Add("@ValidaJuegoInicio", SqlDbType.Bit);
+            comando.Parameters.Add("@TotalMeldal", SqlDbType.Float);
 
 
             //Asignacion de valores a parametros
@@ -4667,6 +4672,7 @@ namespace DragonGolfBackEnd.Controllers
             comando.Parameters["@Medal"].Value = ResultadoFinalMedal;
             comando.Parameters["@Match"].Value = Match;
             comando.Parameters["@ValidaJuegoInicio"].Value = ValidaJuegoInicio;
+            comando.Parameters["@TotalMeldal"].Value = TotalMeldal;
 
 
             comando.Connection = new SqlConnection(VariablesGlobales.CadenaConexion);

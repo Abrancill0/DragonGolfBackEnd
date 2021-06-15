@@ -61,7 +61,7 @@ namespace DragonGolfBackEnd.Controllers
 
                 string Mensaje = "";
                 int Estatus = 0;
-                int Golpesventaja = 0;
+                double Golpesventaja = 0;
 
                 int contador = DT.Rows.Count;
 
@@ -75,7 +75,7 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (Estatus == 1)
                         {
-                            Golpesventaja = Convert.ToInt32(row["Golpesventaja"]);
+                            Golpesventaja = Convert.ToDouble(row["Golpesventaja"]);
                         }
                     }
 

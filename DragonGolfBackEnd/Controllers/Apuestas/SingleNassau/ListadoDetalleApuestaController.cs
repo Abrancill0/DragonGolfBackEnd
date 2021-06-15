@@ -72,7 +72,7 @@ namespace DragonGolfBackEnd.Controllers
             public string BetD_B9_7 { get; set; }
             public string BetD_B9_8 { get; set; }
             public string BetD_B9_9 { get; set; }
-            public int BetD_MedalInt { get; set; }
+            public double BetD_MedalInt { get; set; }
             public int BetD_MachInt { get; set; }
             public int ConsecutivosApuesta { get; set; }
 
@@ -165,7 +165,7 @@ namespace DragonGolfBackEnd.Controllers
                                 BetD_B9_7 = Convert.ToString(row["BetD_B9_7"]),
                                 BetD_B9_8 = Convert.ToString(row["BetD_B9_8"]),
                                 BetD_B9_9 = Convert.ToString(row["BetD_B9_9"]),
-                                BetD_MedalInt = Convert.ToInt32(row["BetD_MedalInt"]),
+                                BetD_MedalInt = Convert.ToDouble(row["BetD_MedalInt"]),
                                 BetD_MachInt = Convert.ToInt32(row["BetD_MachInt"]),
                                 ConsecutivosApuesta = Convert.ToInt32(row["ConsecutivosApuesta"]),
                             };
