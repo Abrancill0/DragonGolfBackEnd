@@ -1952,6 +1952,11 @@ namespace DragonGolfBackEnd.Controllers
                                 if (AdvPositivo >= AdvPositivo2)
                                 {
                                     ValCompleto = 0.5;
+                                    AdvPositivo = Convert.ToInt32(Math.Ceiling(AdvPositivo));
+                                }
+                                else
+                                {
+                                    AdvPositivo = Convert.ToInt32(Math.Ceiling(AdvPositivo));
                                 }
 
 
@@ -3748,7 +3753,7 @@ namespace DragonGolfBackEnd.Controllers
                                 Hoyo16Presion = Convert.ToString(row["Hoyo16Presion"]),
                                 Hoyo17Presion = Convert.ToString(row["Hoyo17Presion"]),
                                 Hoyo18Presion = Convert.ToString(row["Hoyo18Presion"]),
-                                SumaGolpesVentaja = (-1 * SumaGolpesVentaja),
+                                SumaGolpesVentaja = SumaGolpesVentaja,
                                 initHole = Convert.ToInt32(row["initHole"]),
 
                             };
