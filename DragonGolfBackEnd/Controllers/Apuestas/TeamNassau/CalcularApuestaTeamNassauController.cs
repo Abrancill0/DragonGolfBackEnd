@@ -1772,8 +1772,6 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
 
-                                                    ScoreHole18_P3 = ScoreHole18_P3 - 1;
-
                                                     //Validafinalizacion
                                                     if (Contador == AdvPositivo)
                                                     {
@@ -17822,6 +17820,25 @@ namespace DragonGolfBackEnd.Controllers
             SqlDataAdapter DA = new SqlDataAdapter(comando);
             comando.Connection.Close();
             DA.Fill(DT);
+
+
+            int MB;
+            int MF;
+            int FM;
+            int BM;
+
+            if (DT.Rows.Count > 0)
+            {
+                foreach (DataRow row in DT.Rows)
+                {
+                    MB = Convert.ToInt32(row["MB"]);
+                    MF = Convert.ToInt32(row["MF"]);
+                    FM = Convert.ToInt32(row["FM"]);
+                    BM = Convert.ToInt32(row["BM"]);
+
+                }
+
+            }
 
 
             return 0;
