@@ -477,492 +477,492 @@ namespace DragonGolfBackEnd.Controllers
 
                                         if (DificultatHoyo1_tee == Contadorcito)
                                         {
-                                            if (ScoreHole1 > 0)
+                                            //  if (ScoreHole1 > 0)
+                                            // {
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                             {
-                                                if (TipoGolpesVentaja == "Hi Handicap")
+
+                                                if (HandicapP1 > HandicapP3)
                                                 {
-
-                                                    if (HandicapP1 > HandicapP3)
+                                                    if (Player == "Jugador 1")
                                                     {
-                                                        if (Player == "Jugador 1")
-                                                        {
 
-                                                            if (Contadorcito == AdvPositivo)
-                                                            {
-                                                                GolpesVentaja1_tee = GolpesVentaja1_tee - (0.5 + ValCompleto);
-                                                            }
-                                                            else
-                                                            {
-                                                                GolpesVentaja1_tee = GolpesVentaja1_tee - 1;
-                                                            }
+                                                        if (Contadorcito == AdvPositivo)
+                                                        {
+                                                            GolpesVentaja1_tee = GolpesVentaja1_tee - (0.5 + ValCompleto);
                                                         }
-
-                                                    }
-                                                    else
-                                                    {
-                                                        if (Player == "Jugador 3")
+                                                        else
                                                         {
-                                                            if (Contadorcito == AdvPositivo)
-                                                            {
-                                                                GolpesVentaja1_tee = GolpesVentaja1_tee - (0.5 + ValCompleto);
-                                                            }
-                                                            else
-                                                            {
-                                                                GolpesVentaja1_tee = GolpesVentaja1_tee - 1;
-                                                            }
+                                                            GolpesVentaja1_tee = GolpesVentaja1_tee - 1;
                                                         }
                                                     }
 
                                                 }
-
-                                                if (TipoGolpesVentaja == "Low Handicap")
+                                                else
                                                 {
-
-                                                    if (HandicapP1 < HandicapP3)
+                                                    if (Player == "Jugador 3")
                                                     {
-                                                        if (Player == "Jugador 1")
+                                                        if (Contadorcito == AdvPositivo)
                                                         {
-
-                                                            if (Contadorcito == AdvPositivo)
-                                                            {
-                                                                GolpesVentaja1_tee = GolpesVentaja1_tee - (0.5 + ValCompleto);
-                                                            }
-                                                            else
-                                                            {
-                                                                GolpesVentaja1_tee = GolpesVentaja1_tee - 1;
-                                                            }
+                                                            GolpesVentaja1_tee = GolpesVentaja1_tee - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            GolpesVentaja1_tee = GolpesVentaja1_tee - 1;
                                                         }
                                                     }
-                                                    else
-                                                    {
-                                                        if (Player == "Jugador 3")
-                                                        {
-
-                                                            if (Contadorcito == AdvPositivo)
-                                                            {
-                                                                GolpesVentaja1_tee = GolpesVentaja1_tee - (0.5 + ValCompleto);
-                                                            }
-                                                            else
-                                                            {
-                                                                GolpesVentaja1_tee = GolpesVentaja1_tee - 1;
-                                                            }
-                                                        }
-                                                    }
-
-
                                                 }
+
                                             }
+
+                                            if (TipoGolpesVentaja == "Low Handicap")
+                                            {
+
+                                                if (HandicapP1 < HandicapP3)
+                                                {
+                                                    if (Player == "Jugador 1")
+                                                    {
+
+                                                        if (Contadorcito == AdvPositivo)
+                                                        {
+                                                            GolpesVentaja1_tee = GolpesVentaja1_tee - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            GolpesVentaja1_tee = GolpesVentaja1_tee - 1;
+                                                        }
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    if (Player == "Jugador 3")
+                                                    {
+
+                                                        if (Contadorcito == AdvPositivo)
+                                                        {
+                                                            GolpesVentaja1_tee = GolpesVentaja1_tee - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            GolpesVentaja1_tee = GolpesVentaja1_tee - 1;
+                                                        }
+                                                    }
+                                                }
+
+
+                                            }
+                                            //  }
 
                                         }
 
                                         if (DificultatHoyo2_tee == Contadorcito)
                                         {
-                                            if (ScoreHole2 > 0)
+                                            // if (ScoreHole2 > 0)
+                                            // {
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                             {
-                                                if (TipoGolpesVentaja == "Hi Handicap")
+
+                                                if (HandicapP1 > HandicapP3)
                                                 {
-
-                                                    if (HandicapP1 > HandicapP3)
+                                                    if (Player == "Jugador 1")
                                                     {
-                                                        if (Player == "Jugador 1")
-                                                        {
 
-                                                            if (Contadorcito == AdvPositivo)
-                                                            {
-                                                                GolpesVentaja2_tee = GolpesVentaja2_tee - (0.5 + ValCompleto);
-                                                            }
-                                                            else
-                                                            {
-                                                                GolpesVentaja2_tee = GolpesVentaja2_tee - 1;
-                                                            }
+                                                        if (Contadorcito == AdvPositivo)
+                                                        {
+                                                            GolpesVentaja2_tee = GolpesVentaja2_tee - (0.5 + ValCompleto);
                                                         }
-
-                                                    }
-                                                    else
-                                                    {
-                                                        if (Player == "Jugador 3")
+                                                        else
                                                         {
-
-                                                            if (Contadorcito == AdvPositivo)
-                                                            {
-                                                                GolpesVentaja2_tee = GolpesVentaja2_tee - (0.5 + ValCompleto);
-                                                            }
-                                                            else
-                                                            {
-                                                                GolpesVentaja2_tee = GolpesVentaja2_tee - 1;
-                                                            }
+                                                            GolpesVentaja2_tee = GolpesVentaja2_tee - 1;
                                                         }
                                                     }
 
                                                 }
-
-                                                if (TipoGolpesVentaja == "Low Handicap")
+                                                else
                                                 {
-
-                                                    if (HandicapP1 < HandicapP3)
+                                                    if (Player == "Jugador 3")
                                                     {
-                                                        if (Player == "Jugador 1")
-                                                        {
 
-                                                            if (Contadorcito == AdvPositivo)
-                                                            {
-                                                                GolpesVentaja2_tee = GolpesVentaja2_tee - (0.5 + ValCompleto);
-                                                            }
-                                                            else
-                                                            {
-                                                                GolpesVentaja2_tee = GolpesVentaja2_tee - 1;
-                                                            }
+                                                        if (Contadorcito == AdvPositivo)
+                                                        {
+                                                            GolpesVentaja2_tee = GolpesVentaja2_tee - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            GolpesVentaja2_tee = GolpesVentaja2_tee - 1;
                                                         }
                                                     }
-                                                    else
-                                                    {
-                                                        if (Player == "Jugador 3")
-                                                        {
-
-                                                            if (Contadorcito == AdvPositivo)
-                                                            {
-                                                                GolpesVentaja2_tee = GolpesVentaja2_tee - (0.5 + ValCompleto);
-                                                            }
-                                                            else
-                                                            {
-                                                                GolpesVentaja2_tee = GolpesVentaja2_tee - 1;
-                                                            }
-                                                        }
-                                                    }
-
-
                                                 }
+
                                             }
+
+                                            if (TipoGolpesVentaja == "Low Handicap")
+                                            {
+
+                                                if (HandicapP1 < HandicapP3)
+                                                {
+                                                    if (Player == "Jugador 1")
+                                                    {
+
+                                                        if (Contadorcito == AdvPositivo)
+                                                        {
+                                                            GolpesVentaja2_tee = GolpesVentaja2_tee - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            GolpesVentaja2_tee = GolpesVentaja2_tee - 1;
+                                                        }
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    if (Player == "Jugador 3")
+                                                    {
+
+                                                        if (Contadorcito == AdvPositivo)
+                                                        {
+                                                            GolpesVentaja2_tee = GolpesVentaja2_tee - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            GolpesVentaja2_tee = GolpesVentaja2_tee - 1;
+                                                        }
+                                                    }
+                                                }
+
+
+                                            }
+                                            //  }
                                         }
 
                                         if (DificultatHoyo3_tee == Contadorcito)
                                         {
-                                            if (ScoreHole3 > 0)
+                                            //  if (ScoreHole3 > 0)
+                                            //  {
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                             {
-                                                if (TipoGolpesVentaja == "Hi Handicap")
+
+                                                if (HandicapP1 > HandicapP3)
                                                 {
-
-                                                    if (HandicapP1 > HandicapP3)
+                                                    if (Player == "Jugador 1")
                                                     {
-                                                        if (Player == "Jugador 1")
+                                                        if (Contadorcito == AdvPositivo)
                                                         {
-                                                            if (Contadorcito == AdvPositivo)
-                                                            {
-                                                                GolpesVentaja3_tee = GolpesVentaja3_tee - (0.5 + ValCompleto);
-                                                            }
-                                                            else
-                                                            {
-                                                                GolpesVentaja3_tee = GolpesVentaja3_tee - 1;
-                                                            }
+                                                            GolpesVentaja3_tee = GolpesVentaja3_tee - (0.5 + ValCompleto);
                                                         }
-
-                                                    }
-                                                    else
-                                                    {
-                                                        if (Player == "Jugador 3")
+                                                        else
                                                         {
-
-                                                            if (Contadorcito == AdvPositivo)
-                                                            {
-                                                                GolpesVentaja3_tee = GolpesVentaja3_tee - (0.5 + ValCompleto);
-                                                            }
-                                                            else
-                                                            {
-                                                                GolpesVentaja3_tee = GolpesVentaja3_tee - 1;
-                                                            }
+                                                            GolpesVentaja3_tee = GolpesVentaja3_tee - 1;
                                                         }
                                                     }
 
                                                 }
-
-                                                if (TipoGolpesVentaja == "Low Handicap")
+                                                else
                                                 {
-
-                                                    if (HandicapP1 < HandicapP3)
+                                                    if (Player == "Jugador 3")
                                                     {
-                                                        if (Player == "Jugador 1")
-                                                        {
 
-                                                            if (Contadorcito == AdvPositivo)
-                                                            {
-                                                                GolpesVentaja3_tee = GolpesVentaja3_tee - (0.5 + ValCompleto);
-                                                            }
-                                                            else
-                                                            {
-                                                                GolpesVentaja3_tee = GolpesVentaja3_tee - 1;
-                                                            }
+                                                        if (Contadorcito == AdvPositivo)
+                                                        {
+                                                            GolpesVentaja3_tee = GolpesVentaja3_tee - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            GolpesVentaja3_tee = GolpesVentaja3_tee - 1;
                                                         }
                                                     }
-                                                    else
-                                                    {
-                                                        if (Player == "Jugador 3")
-                                                        {
-                                                            if (Contadorcito == AdvPositivo)
-                                                            {
-                                                                GolpesVentaja3_tee = GolpesVentaja3_tee - (0.5 + ValCompleto);
-                                                            }
-                                                            else
-                                                            {
-                                                                GolpesVentaja3_tee = GolpesVentaja3_tee - 1;
-                                                            }
-                                                        }
-                                                    }
-
-
                                                 }
+
                                             }
+
+                                            if (TipoGolpesVentaja == "Low Handicap")
+                                            {
+
+                                                if (HandicapP1 < HandicapP3)
+                                                {
+                                                    if (Player == "Jugador 1")
+                                                    {
+
+                                                        if (Contadorcito == AdvPositivo)
+                                                        {
+                                                            GolpesVentaja3_tee = GolpesVentaja3_tee - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            GolpesVentaja3_tee = GolpesVentaja3_tee - 1;
+                                                        }
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    if (Player == "Jugador 3")
+                                                    {
+                                                        if (Contadorcito == AdvPositivo)
+                                                        {
+                                                            GolpesVentaja3_tee = GolpesVentaja3_tee - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            GolpesVentaja3_tee = GolpesVentaja3_tee - 1;
+                                                        }
+                                                    }
+                                                }
+
+
+                                            }
+                                            //  }
 
                                         }
 
                                         if (DificultatHoyo4_tee == Contadorcito)
                                         {
 
-                                            if (ScoreHole4 > 0)
+                                            //  if (ScoreHole4 > 0)
+                                            //  {
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                             {
-                                                if (TipoGolpesVentaja == "Hi Handicap")
+
+                                                if (HandicapP1 > HandicapP3)
                                                 {
-
-                                                    if (HandicapP1 > HandicapP3)
+                                                    if (Player == "Jugador 1")
                                                     {
-                                                        if (Player == "Jugador 1")
-                                                        {
 
-                                                            if (Contadorcito == AdvPositivo)
-                                                            {
-                                                                GolpesVentaja4_tee = GolpesVentaja4_tee - (0.5 + ValCompleto);
-                                                            }
-                                                            else
-                                                            {
-                                                                GolpesVentaja4_tee = GolpesVentaja4_tee - 1;
-                                                            }
+                                                        if (Contadorcito == AdvPositivo)
+                                                        {
+                                                            GolpesVentaja4_tee = GolpesVentaja4_tee - (0.5 + ValCompleto);
                                                         }
-
-                                                    }
-                                                    else
-                                                    {
-                                                        if (Player == "Jugador 3")
+                                                        else
                                                         {
-
-                                                            if (Contadorcito == AdvPositivo)
-                                                            {
-                                                                GolpesVentaja4_tee = GolpesVentaja4_tee - (0.5 + ValCompleto);
-                                                            }
-                                                            else
-                                                            {
-                                                                GolpesVentaja4_tee = GolpesVentaja4_tee - 1;
-                                                            }
+                                                            GolpesVentaja4_tee = GolpesVentaja4_tee - 1;
                                                         }
                                                     }
 
                                                 }
-
-                                                if (TipoGolpesVentaja == "Low Handicap")
+                                                else
                                                 {
-
-                                                    if (HandicapP1 < HandicapP3)
+                                                    if (Player == "Jugador 3")
                                                     {
-                                                        if (Player == "Jugador 1")
-                                                        {
 
-                                                            if (Contadorcito == AdvPositivo)
-                                                            {
-                                                                GolpesVentaja4_tee = GolpesVentaja4_tee - (0.5 + ValCompleto);
-                                                            }
-                                                            else
-                                                            {
-                                                                GolpesVentaja4_tee = GolpesVentaja4_tee - 1;
-                                                            }
+                                                        if (Contadorcito == AdvPositivo)
+                                                        {
+                                                            GolpesVentaja4_tee = GolpesVentaja4_tee - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            GolpesVentaja4_tee = GolpesVentaja4_tee - 1;
                                                         }
                                                     }
-                                                    else
-                                                    {
-                                                        if (Player == "Jugador 3")
-                                                        {
-
-                                                            if (Contadorcito == AdvPositivo)
-                                                            {
-                                                                GolpesVentaja4_tee = GolpesVentaja4_tee - (0.5 + ValCompleto);
-                                                            }
-                                                            else
-                                                            {
-                                                                GolpesVentaja4_tee = GolpesVentaja4_tee - 1;
-                                                            }
-                                                        }
-                                                    }
-
-
                                                 }
+
                                             }
+
+                                            if (TipoGolpesVentaja == "Low Handicap")
+                                            {
+
+                                                if (HandicapP1 < HandicapP3)
+                                                {
+                                                    if (Player == "Jugador 1")
+                                                    {
+
+                                                        if (Contadorcito == AdvPositivo)
+                                                        {
+                                                            GolpesVentaja4_tee = GolpesVentaja4_tee - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            GolpesVentaja4_tee = GolpesVentaja4_tee - 1;
+                                                        }
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    if (Player == "Jugador 3")
+                                                    {
+
+                                                        if (Contadorcito == AdvPositivo)
+                                                        {
+                                                            GolpesVentaja4_tee = GolpesVentaja4_tee - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            GolpesVentaja4_tee = GolpesVentaja4_tee - 1;
+                                                        }
+                                                    }
+                                                }
+
+
+                                            }
+                                            //  }
 
                                         }
 
                                         if (DificultatHoyo5_tee == Contadorcito)
                                         {
-                                            if (ScoreHole5 > 0)
+                                            //    if (ScoreHole5 > 0)
+                                            //    {
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                             {
-                                                if (TipoGolpesVentaja == "Hi Handicap")
+
+                                                if (HandicapP1 > HandicapP3)
                                                 {
-
-                                                    if (HandicapP1 > HandicapP3)
+                                                    if (Player == "Jugador 1")
                                                     {
-                                                        if (Player == "Jugador 1")
-                                                        {
 
-                                                            if (Contadorcito == AdvPositivo)
-                                                            {
-                                                                GolpesVentaja5_tee = GolpesVentaja5_tee - (0.5 + ValCompleto);
-                                                            }
-                                                            else
-                                                            {
-                                                                GolpesVentaja5_tee = GolpesVentaja5_tee - 1;
-                                                            }
+                                                        if (Contadorcito == AdvPositivo)
+                                                        {
+                                                            GolpesVentaja5_tee = GolpesVentaja5_tee - (0.5 + ValCompleto);
                                                         }
-
-                                                    }
-                                                    else
-                                                    {
-                                                        if (Player == "Jugador 3")
+                                                        else
                                                         {
-
-                                                            if (Contadorcito == AdvPositivo)
-                                                            {
-                                                                GolpesVentaja5_tee = GolpesVentaja5_tee - (0.5 + ValCompleto);
-                                                            }
-                                                            else
-                                                            {
-                                                                GolpesVentaja5_tee = GolpesVentaja5_tee - 1;
-                                                            }
+                                                            GolpesVentaja5_tee = GolpesVentaja5_tee - 1;
                                                         }
                                                     }
 
                                                 }
-
-                                                if (TipoGolpesVentaja == "Low Handicap")
+                                                else
                                                 {
-
-                                                    if (HandicapP1 < HandicapP3)
+                                                    if (Player == "Jugador 3")
                                                     {
-                                                        if (Player == "Jugador 1")
-                                                        {
 
-                                                            if (Contadorcito == AdvPositivo)
-                                                            {
-                                                                GolpesVentaja5_tee = GolpesVentaja5_tee - (0.5 + ValCompleto);
-                                                            }
-                                                            else
-                                                            {
-                                                                GolpesVentaja5_tee = GolpesVentaja5_tee - 1;
-                                                            }
+                                                        if (Contadorcito == AdvPositivo)
+                                                        {
+                                                            GolpesVentaja5_tee = GolpesVentaja5_tee - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            GolpesVentaja5_tee = GolpesVentaja5_tee - 1;
                                                         }
                                                     }
-                                                    else
-                                                    {
-                                                        if (Player == "Jugador 3")
-                                                        {
-
-                                                            if (Contadorcito == AdvPositivo)
-                                                            {
-                                                                GolpesVentaja5_tee = GolpesVentaja5_tee - (0.5 + ValCompleto);
-                                                            }
-                                                            else
-                                                            {
-                                                                GolpesVentaja5_tee = GolpesVentaja5_tee - 1;
-                                                            }
-                                                        }
-                                                    }
-
-
                                                 }
+
                                             }
+
+                                            if (TipoGolpesVentaja == "Low Handicap")
+                                            {
+
+                                                if (HandicapP1 < HandicapP3)
+                                                {
+                                                    if (Player == "Jugador 1")
+                                                    {
+
+                                                        if (Contadorcito == AdvPositivo)
+                                                        {
+                                                            GolpesVentaja5_tee = GolpesVentaja5_tee - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            GolpesVentaja5_tee = GolpesVentaja5_tee - 1;
+                                                        }
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    if (Player == "Jugador 3")
+                                                    {
+
+                                                        if (Contadorcito == AdvPositivo)
+                                                        {
+                                                            GolpesVentaja5_tee = GolpesVentaja5_tee - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            GolpesVentaja5_tee = GolpesVentaja5_tee - 1;
+                                                        }
+                                                    }
+                                                }
+
+
+                                            }
+                                            //    }
 
                                         }
 
                                         if (DificultatHoyo6_tee == Contadorcito)
                                         {
-                                            if (ScoreHole6 > 0)
+                                            //  if (ScoreHole6 > 0)
+                                            //  {
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                             {
-                                                if (TipoGolpesVentaja == "Hi Handicap")
+
+                                                if (HandicapP1 > HandicapP3)
                                                 {
-
-                                                    if (HandicapP1 > HandicapP3)
+                                                    if (Player == "Jugador 1")
                                                     {
-                                                        if (Player == "Jugador 1")
-                                                        {
 
-                                                            if (Contadorcito == AdvPositivo)
-                                                            {
-                                                                GolpesVentaja6_tee = GolpesVentaja6_tee - (0.5 + ValCompleto);
-                                                            }
-                                                            else
-                                                            {
-                                                                GolpesVentaja6_tee = GolpesVentaja6_tee - 1;
-                                                            }
+                                                        if (Contadorcito == AdvPositivo)
+                                                        {
+                                                            GolpesVentaja6_tee = GolpesVentaja6_tee - (0.5 + ValCompleto);
                                                         }
-
-                                                    }
-                                                    else
-                                                    {
-                                                        if (Player == "Jugador 3")
+                                                        else
                                                         {
-
-                                                            if (Contadorcito == AdvPositivo)
-                                                            {
-                                                                GolpesVentaja6_tee = GolpesVentaja6_tee - (0.5 + ValCompleto);
-                                                            }
-                                                            else
-                                                            {
-                                                                GolpesVentaja6_tee = GolpesVentaja6_tee - 1;
-                                                            }
+                                                            GolpesVentaja6_tee = GolpesVentaja6_tee - 1;
                                                         }
                                                     }
 
                                                 }
-
-                                                if (TipoGolpesVentaja == "Low Handicap")
+                                                else
                                                 {
-
-                                                    if (HandicapP1 < HandicapP3)
+                                                    if (Player == "Jugador 3")
                                                     {
-                                                        if (Player == "Jugador 1")
-                                                        {
 
-                                                            if (Contadorcito == AdvPositivo)
-                                                            {
-                                                                GolpesVentaja6_tee = GolpesVentaja6_tee - (0.5 + ValCompleto);
-                                                            }
-                                                            else
-                                                            {
-                                                                GolpesVentaja6_tee = GolpesVentaja6_tee - 1;
-                                                            }
+                                                        if (Contadorcito == AdvPositivo)
+                                                        {
+                                                            GolpesVentaja6_tee = GolpesVentaja6_tee - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            GolpesVentaja6_tee = GolpesVentaja6_tee - 1;
                                                         }
                                                     }
-                                                    else
-                                                    {
-                                                        if (Player == "Jugador 3")
-                                                        {
-
-                                                            if (Contadorcito == AdvPositivo)
-                                                            {
-                                                                GolpesVentaja6_tee = GolpesVentaja6_tee - (0.5 + ValCompleto);
-                                                            }
-                                                            else
-                                                            {
-                                                                GolpesVentaja6_tee = GolpesVentaja6_tee - 1;
-                                                            }
-                                                        }
-                                                    }
-
-
                                                 }
+
                                             }
+
+                                            if (TipoGolpesVentaja == "Low Handicap")
+                                            {
+
+                                                if (HandicapP1 < HandicapP3)
+                                                {
+                                                    if (Player == "Jugador 1")
+                                                    {
+
+                                                        if (Contadorcito == AdvPositivo)
+                                                        {
+                                                            GolpesVentaja6_tee = GolpesVentaja6_tee - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            GolpesVentaja6_tee = GolpesVentaja6_tee - 1;
+                                                        }
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    if (Player == "Jugador 3")
+                                                    {
+
+                                                        if (Contadorcito == AdvPositivo)
+                                                        {
+                                                            GolpesVentaja6_tee = GolpesVentaja6_tee - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            GolpesVentaja6_tee = GolpesVentaja6_tee - 1;
+                                                        }
+                                                    }
+                                                }
+
+
+                                            }
+                                            //   }
 
                                         }
 
                                         if (DificultatHoyo7_tee == Contadorcito)
                                         {
-                                            if (ScoreHole7 > 0)
-                                            {
-                                                if (TipoGolpesVentaja == "Hi Handicap")
+                                            //  if (ScoreHole7 > 0)
+                                            //  {
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                                 {
 
                                                     if (HandicapP1 > HandicapP3)
@@ -1035,16 +1035,16 @@ namespace DragonGolfBackEnd.Controllers
 
 
                                                 }
-                                            }
+                                            //   }
 
 
                                         }
 
                                         if (DificultatHoyo8_tee == Contadorcito)
                                         {
-                                            if (ScoreHole8 > 0)
-                                            {
-                                                if (TipoGolpesVentaja == "Hi Handicap")
+                                            //if (ScoreHole8 > 0)
+                                            // {
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                                 {
 
                                                     if (HandicapP1 > HandicapP3)
@@ -1117,16 +1117,16 @@ namespace DragonGolfBackEnd.Controllers
 
 
                                                 }
-                                            }
+                                            //  }
 
 
                                         }
 
                                         if (DificultatHoyo9_tee == Contadorcito)
                                         {
-                                            if (ScoreHole9 > 0)
-                                            {
-                                                if (TipoGolpesVentaja == "Hi Handicap")
+                                            //  if (ScoreHole9 > 0)
+                                            //  {
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                                 {
 
                                                     if (HandicapP1 > HandicapP3)
@@ -1199,15 +1199,15 @@ namespace DragonGolfBackEnd.Controllers
 
 
                                                 }
-                                            }
+                                            //  }
 
                                         }
 
                                         if (DificultatHoyo10_tee == Contadorcito)
                                         {
-                                            if (ScoreHole10 > 0)
-                                            {
-                                                if (TipoGolpesVentaja == "Hi Handicap")
+                                            //if (ScoreHole10 > 0)
+                                            // {
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                                 {
 
                                                     if (HandicapP1 > HandicapP3)
@@ -1280,15 +1280,15 @@ namespace DragonGolfBackEnd.Controllers
 
 
                                                 }
-                                            }
+                                            //  }
 
                                         }
 
                                         if (DificultatHoyo11_tee == Contadorcito)
                                         {
-                                            if (ScoreHole11 > 0)
-                                            {
-                                                if (TipoGolpesVentaja == "Hi Handicap")
+                                            //    if (ScoreHole11 > 0)
+                                            //    {
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                                 {
 
                                                     if (HandicapP1 > HandicapP3)
@@ -1361,16 +1361,16 @@ namespace DragonGolfBackEnd.Controllers
 
 
                                                 }
-                                            }
+                                            //    }
 
 
                                         }
 
                                         if (DificultatHoyo12_tee == Contadorcito)
                                         {
-                                            if (ScoreHole12 > 0)
-                                            {
-                                                if (TipoGolpesVentaja == "Hi Handicap")
+                                            //  if (ScoreHole12 > 0)
+                                            //  {
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                                 {
 
                                                     if (HandicapP1 > HandicapP3)
@@ -1443,16 +1443,16 @@ namespace DragonGolfBackEnd.Controllers
 
 
                                                 }
-                                            }
+                                            //   }
 
 
                                         }
 
                                         if (DificultatHoyo13_tee == Contadorcito)
                                         {
-                                            if (ScoreHole13 > 0)
-                                            {
-                                                if (TipoGolpesVentaja == "Hi Handicap")
+                                            //  if (ScoreHole13 > 0)
+                                            //   {
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                                 {
 
                                                     if (HandicapP1 > HandicapP3)
@@ -1525,16 +1525,16 @@ namespace DragonGolfBackEnd.Controllers
 
 
                                                 }
-                                            }
+                                            //   }
 
 
                                         }
 
                                         if (DificultatHoyo14_tee == Contadorcito)
                                         {
-                                            if (ScoreHole14 > 0)
-                                            {
-                                                if (TipoGolpesVentaja == "Hi Handicap")
+                                            //  if (ScoreHole14 > 0)
+                                            //  {
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                                 {
 
                                                     if (HandicapP1 > HandicapP3)
@@ -1607,14 +1607,14 @@ namespace DragonGolfBackEnd.Controllers
 
 
                                                 }
-                                            }
+                                            //  }
                                         }
 
                                         if (DificultatHoyo15_tee == Contadorcito)
                                         {
-                                            if (ScoreHole15 > 0)
-                                            {
-                                                if (TipoGolpesVentaja == "Hi Handicap")
+                                            //   if (ScoreHole15 > 0)
+                                            //   {
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                                 {
 
                                                     if (HandicapP1 > HandicapP3)
@@ -1687,16 +1687,16 @@ namespace DragonGolfBackEnd.Controllers
 
 
                                                 }
-                                            }
+                                            //   }
 
 
                                         }
 
                                         if (DificultatHoyo16_tee == Contadorcito)
                                         {
-                                            if (ScoreHole16 > 0)
-                                            {
-                                                if (TipoGolpesVentaja == "Hi Handicap")
+                                            //   if (ScoreHole16 > 0)
+                                            //   {
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                                 {
 
                                                     if (HandicapP1 > HandicapP3)
@@ -1769,15 +1769,15 @@ namespace DragonGolfBackEnd.Controllers
 
 
                                                 }
-                                            }
+                                            //   }
 
                                         }
 
                                         if (DificultatHoyo17_tee == Contadorcito)
                                         {
-                                            if (ScoreHole17 > 0)
-                                            {
-                                                if (TipoGolpesVentaja == "Hi Handicap")
+                                            //    if (ScoreHole17 > 0)
+                                            //    {
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                                 {
 
                                                     if (HandicapP1 > HandicapP3)
@@ -1850,14 +1850,14 @@ namespace DragonGolfBackEnd.Controllers
 
 
                                                 }
-                                            }
+                                            //   }
                                         }
 
                                         if (DificultatHoyo18_tee == Contadorcito)
                                         {
-                                            if (ScoreHole18 > 0)
-                                            {
-                                                if (TipoGolpesVentaja == "Hi Handicap")
+                                            //   if (ScoreHole18 > 0)
+                                            // {
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                                 {
 
                                                     if (HandicapP1 > HandicapP3)
@@ -1930,7 +1930,7 @@ namespace DragonGolfBackEnd.Controllers
 
 
                                                 }
-                                            }
+                                            //   }
 
                                         }
 
@@ -1983,9 +1983,9 @@ namespace DragonGolfBackEnd.Controllers
                                         if (DificultatHoyo1_tee == Contadorcito)
                                         {
 
-                                            if (ScoreHole1 > 0)
-                                            {
-                                                if (TipoGolpesVentaja == "Hi Handicap")
+                                            //  if (ScoreHole1 > 0)
+                                            // {
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                                 {
 
                                                     if (HandicapP2 > HandicapP4)
@@ -2058,15 +2058,15 @@ namespace DragonGolfBackEnd.Controllers
 
 
                                                 }
-                                            }
+                                            //  }
 
                                         }
 
                                         if (DificultatHoyo2_tee == Contadorcito)
                                         {
-                                            if (ScoreHole2 > 0)
-                                            {
-                                                if (TipoGolpesVentaja == "Hi Handicap")
+                                            //  if (ScoreHole2 > 0)
+                                            //  {
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                                 {
 
                                                     if (HandicapP2 > HandicapP4)
@@ -2139,15 +2139,15 @@ namespace DragonGolfBackEnd.Controllers
 
 
                                                 }
-                                            }
+                                            //   }
 
                                         }
 
                                         if (DificultatHoyo3_tee == Contadorcito)
                                         {
-                                            if (ScoreHole3 > 0)
-                                            {
-                                                if (TipoGolpesVentaja == "Hi Handicap")
+                                            //  if (ScoreHole3 > 0)
+                                            //  {
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                                 {
                                                     if (HandicapP2 > HandicapP4)
                                                     {
@@ -2220,15 +2220,15 @@ namespace DragonGolfBackEnd.Controllers
 
 
                                                 }
-                                            }
+                                            //  }
 
                                         }
 
                                         if (DificultatHoyo4_tee == Contadorcito)
                                         {
-                                            if (ScoreHole4 > 0)
-                                            {
-                                                if (TipoGolpesVentaja == "Hi Handicap")
+                                            //   if (ScoreHole4 > 0)
+                                            //   {
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                                 {
 
                                                     if (HandicapP2 > HandicapP4)
@@ -2301,15 +2301,15 @@ namespace DragonGolfBackEnd.Controllers
 
 
                                                 }
-                                            }
+                                            //    }
 
                                         }
 
                                         if (DificultatHoyo5_tee == Contadorcito)
                                         {
-                                            if (ScoreHole5 > 0)
-                                            {
-                                                if (TipoGolpesVentaja == "Hi Handicap")
+                                            //   if (ScoreHole5 > 0)
+                                            //   {
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                                 {
 
                                                     if (HandicapP2 > HandicapP4)
@@ -2382,15 +2382,15 @@ namespace DragonGolfBackEnd.Controllers
 
 
                                                 }
-                                            }
+                                            //   }
 
                                         }
 
                                         if (DificultatHoyo6_tee == Contadorcito)
                                         {
-                                            if (ScoreHole6 > 0)
-                                            {
-                                                if (TipoGolpesVentaja == "Hi Handicap")
+                                            //  if (ScoreHole6 > 0)
+                                            //  {
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                                 {
 
                                                     if (HandicapP2 > HandicapP4)
@@ -2464,15 +2464,15 @@ namespace DragonGolfBackEnd.Controllers
 
 
                                                 }
-                                            }
+                                            //  }
 
                                         }
 
                                         if (DificultatHoyo7_tee == Contadorcito)
                                         {
-                                            if (ScoreHole7 > 0)
-                                            {
-                                                if (TipoGolpesVentaja == "Hi Handicap")
+                                            //  if (ScoreHole7 > 0)
+                                            //  {
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                                 {
 
                                                     if (HandicapP2 > HandicapP4)
@@ -2545,22 +2545,22 @@ namespace DragonGolfBackEnd.Controllers
 
 
                                                 }
-                                            }
+                                            //   }
 
                                         }
 
                                         if (DificultatHoyo8_tee == Contadorcito)
                                         {
-                                            if (ScoreHole8 > 0)
-                                            {
-                                                if (TipoGolpesVentaja == "Hi Handicap")
+                                            //  if (ScoreHole8 > 0)
+                                            //   {
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                                 {
 
                                                     if (HandicapP2 > HandicapP4)
                                                     {
                                                         if (Player == "Jugador 2")
                                                         {
-                                                         
+
                                                             if (Contadorcito == AdvPositivo)
                                                             {
                                                                 GolpesVentaja8_tee = GolpesVentaja8_tee - (0.5 + ValCompleto);
@@ -2626,16 +2626,16 @@ namespace DragonGolfBackEnd.Controllers
 
 
                                                 }
-                                            }
+                                            //   }
 
 
                                         }
 
                                         if (DificultatHoyo9_tee == Contadorcito)
                                         {
-                                            if (ScoreHole9 > 0)
-                                            {
-                                                if (TipoGolpesVentaja == "Hi Handicap")
+                                            //  if (ScoreHole9 > 0)
+                                            //  {
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                                 {
 
                                                     if (HandicapP2 > HandicapP4)
@@ -2708,15 +2708,15 @@ namespace DragonGolfBackEnd.Controllers
 
 
                                                 }
-                                            }
+                                            //  }
 
                                         }
 
                                         if (DificultatHoyo10_tee == Contadorcito)
                                         {
-                                            if (ScoreHole10 > 0)
-                                            {
-                                                if (TipoGolpesVentaja == "Hi Handicap")
+                                            // if (ScoreHole10 > 0)
+                                            // {
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                                 {
 
                                                     if (HandicapP2 > HandicapP4)
@@ -2790,15 +2790,15 @@ namespace DragonGolfBackEnd.Controllers
 
 
                                                 }
-                                            }
+                                            // }
 
                                         }
 
                                         if (DificultatHoyo11_tee == Contadorcito)
                                         {
-                                            if (ScoreHole11 > 0)
-                                            {
-                                                if (TipoGolpesVentaja == "Hi Handicap")
+                                            //  if (ScoreHole11 > 0)
+                                            //  {
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                                 {
 
                                                     if (HandicapP2 > HandicapP4)
@@ -2871,15 +2871,15 @@ namespace DragonGolfBackEnd.Controllers
 
 
                                                 }
-                                            }
+                                            //  }
 
                                         }
 
                                         if (DificultatHoyo12_tee == Contadorcito)
                                         {
-                                            if (ScoreHole12 > 0)
-                                            {
-                                                if (TipoGolpesVentaja == "Hi Handicap")
+                                            //  if (ScoreHole12 > 0)
+                                            //  {
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                                 {
 
                                                     if (HandicapP2 > HandicapP4)
@@ -2952,16 +2952,16 @@ namespace DragonGolfBackEnd.Controllers
 
 
                                                 }
-                                            }
+                                            //  }
 
 
                                         }
 
                                         if (DificultatHoyo13_tee == Contadorcito)
                                         {
-                                            if (ScoreHole13 > 0)
-                                            {
-                                                if (TipoGolpesVentaja == "Hi Handicap")
+                                            //  if (ScoreHole13 > 0)
+                                            //  {
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                                 {
 
                                                     if (HandicapP2 > HandicapP4)
@@ -3034,16 +3034,16 @@ namespace DragonGolfBackEnd.Controllers
 
 
                                                 }
-                                            }
+                                            //  }
 
 
                                         }
 
                                         if (DificultatHoyo14_tee == Contadorcito)
                                         {
-                                            if (ScoreHole14 > 0)
-                                            {
-                                                if (TipoGolpesVentaja == "Hi Handicap")
+                                            //   if (ScoreHole14 > 0)
+                                            //   {
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                                 {
 
                                                     if (HandicapP2 > HandicapP4)
@@ -3116,15 +3116,15 @@ namespace DragonGolfBackEnd.Controllers
 
 
                                                 }
-                                            }
+                                            //   }
 
                                         }
 
                                         if (DificultatHoyo15_tee == Contadorcito)
                                         {
-                                            if (ScoreHole15 > 0)
-                                            {
-                                                if (TipoGolpesVentaja == "Hi Handicap")
+                                            //  if (ScoreHole15 > 0)
+                                            //   {
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                                 {
 
                                                     if (HandicapP2 > HandicapP4)
@@ -3197,15 +3197,15 @@ namespace DragonGolfBackEnd.Controllers
 
 
                                                 }
-                                            }
+                                            //   }
 
                                         }
 
                                         if (DificultatHoyo16_tee == Contadorcito)
                                         {
-                                            if (ScoreHole16 > 0)
-                                            {
-                                                if (TipoGolpesVentaja == "Hi Handicap")
+                                            // if (ScoreHole16 > 0)
+                                            //  {
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                                 {
 
                                                     if (HandicapP2 > HandicapP4)
@@ -3278,23 +3278,23 @@ namespace DragonGolfBackEnd.Controllers
 
 
                                                 }
-                                            }
+                                            //  }
 
 
                                         }
 
                                         if (DificultatHoyo17_tee == Contadorcito)
                                         {
-                                            if (ScoreHole17 > 0)
-                                            {
-                                                if (TipoGolpesVentaja == "Hi Handicap")
+                                            //  if (ScoreHole17 > 0)
+                                            //  {
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                                 {
 
                                                     if (HandicapP2 > HandicapP4)
                                                     {
                                                         if (Player == "Jugador 2")
                                                         {
-                                                         
+
                                                             if (Contadorcito == AdvPositivo)
                                                             {
                                                                 GolpesVentaja17_tee = GolpesVentaja17_tee - (0.5 + ValCompleto);
@@ -3360,15 +3360,15 @@ namespace DragonGolfBackEnd.Controllers
 
 
                                                 }
-                                            }
+                                            //  }
 
                                         }
 
                                         if (DificultatHoyo18_tee == Contadorcito)
                                         {
-                                            if (ScoreHole18 > 0)
-                                            {
-                                                if (TipoGolpesVentaja == "Hi Handicap")
+                                            // if (ScoreHole18 > 0)
+                                            //  {
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                                 {
 
                                                     if (HandicapP2 > HandicapP4)
@@ -3441,7 +3441,7 @@ namespace DragonGolfBackEnd.Controllers
 
 
                                                 }
-                                            }
+                                            //  }
 
                                         }
 
@@ -3476,7 +3476,7 @@ namespace DragonGolfBackEnd.Controllers
                             GolpesVentaja17 = GolpesVentaja17_tee;
                             GolpesVentaja18 = GolpesVentaja18_tee;
 
-                        
+
                             double TotalGolpesVentajaFront = 0;
                             double TotalGolpesVentajaBack = 0;
 

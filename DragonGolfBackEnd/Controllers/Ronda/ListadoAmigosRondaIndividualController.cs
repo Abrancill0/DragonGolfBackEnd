@@ -412,7 +412,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             double AdvInverso = (-1) * (Adv_tee);
                             double ValCompleto = 0;
-                          
+
                             if (AdvInverso < 0)
                             {
                                 if (Convert.ToInt32(row["IDUsuario"]) == Convert.ToInt32(row["PlayerId"]))
@@ -478,325 +478,323 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (DificultatHoyo1_tee == Contadorcito)
                                             {
-                                                if (ScoreHole1 > 0)
+                                                //  if (ScoreHole1 > 0)
+                                                // {
+                                                if (Contadorcito == AdvPositivo)
                                                 {
-                                                    if (Contadorcito == AdvPositivo)
-                                                    {
-                                                        GolpesVentaja1_tee = GolpesVentaja1_tee + 0.5 + ValCompleto;
-                                                    }
-                                                    else
-                                                    {
-                                                        GolpesVentaja1_tee = GolpesVentaja1_tee + 1;
-                                                    }
-
+                                                    GolpesVentaja1_tee = GolpesVentaja1_tee + 0.5 + ValCompleto;
                                                 }
+                                                else
+                                                {
+                                                    GolpesVentaja1_tee = GolpesVentaja1_tee + 1;
+                                                }
+
+                                                //  }
 
                                             }
 
                                             if (DificultatHoyo2_tee == Contadorcito)
                                             {
-                                                if (ScoreHole2 > 0)
+                                                //   if (ScoreHole2 > 0)
+                                                //   {
+
+                                                if (Contadorcito == AdvPositivo)
                                                 {
-                                                    
-                                                    if (Contadorcito == AdvPositivo)
-                                                    {
-                                                        GolpesVentaja2_tee = GolpesVentaja2_tee + 0.5 + ValCompleto;
-                                                    }
-                                                    else
-                                                    {
-                                                        GolpesVentaja2_tee = GolpesVentaja2_tee + 1;
-                                                    }
+                                                    GolpesVentaja2_tee = GolpesVentaja2_tee + 0.5 + ValCompleto;
                                                 }
+                                                else
+                                                {
+                                                    GolpesVentaja2_tee = GolpesVentaja2_tee + 1;
+                                                }
+                                                //  }
 
                                             }
 
                                             if (DificultatHoyo3_tee == Contadorcito)
                                             {
-                                                if (ScoreHole3 > 0)
+                                                //   if (ScoreHole3 > 0)
+                                                //   {
+
+                                                if (Contadorcito == AdvPositivo)
                                                 {
-                                                  
-                                                    if (Contadorcito == AdvPositivo)
-                                                    {
-                                                        GolpesVentaja3_tee = GolpesVentaja3_tee + 0.5 + ValCompleto;
-                                                    }
-                                                    else
-                                                    {
-                                                        GolpesVentaja3_tee = GolpesVentaja3_tee + 1;
-                                                    }
+                                                    GolpesVentaja3_tee = GolpesVentaja3_tee + 0.5 + ValCompleto;
                                                 }
+                                                else
+                                                {
+                                                    GolpesVentaja3_tee = GolpesVentaja3_tee + 1;
+                                                }
+                                                //  }
 
                                             }
 
                                             if (DificultatHoyo4_tee == Contadorcito)
                                             {
 
-                                                if (ScoreHole4 > 0)
-                                                {
-                                                   
+                                                //    if (ScoreHole4 > 0)
+                                                //    {
 
-                                                    if (Contadorcito == AdvPositivo)
-                                                    {
-                                                        GolpesVentaja4_tee = GolpesVentaja4_tee + 0.5 + ValCompleto;
-                                                    }
-                                                    else
-                                                    {
-                                                        GolpesVentaja4_tee = GolpesVentaja4_tee + 1;
-                                                    }
+
+                                                if (Contadorcito == AdvPositivo)
+                                                {
+                                                    GolpesVentaja4_tee = GolpesVentaja4_tee + 0.5 + ValCompleto;
                                                 }
+                                                else
+                                                {
+                                                    GolpesVentaja4_tee = GolpesVentaja4_tee + 1;
+                                                }
+                                                //    }
 
 
                                             }
 
                                             if (DificultatHoyo5_tee == Contadorcito)
                                             {
-                                                if (ScoreHole5 > 0)
-                                                {
-                                                   
+                                                //  if (ScoreHole5 > 0)
+                                                //  {
 
-                                                    if (Contadorcito == AdvPositivo)
-                                                    {
-                                                        GolpesVentaja5_tee = GolpesVentaja5_tee + 0.5 + ValCompleto;
-                                                    }
-                                                    else
-                                                    {
-                                                        GolpesVentaja5_tee = GolpesVentaja5_tee + 1;
-                                                    }
+
+                                                if (Contadorcito == AdvPositivo)
+                                                {
+                                                    GolpesVentaja5_tee = GolpesVentaja5_tee + 0.5 + ValCompleto;
                                                 }
+                                                else
+                                                {
+                                                    GolpesVentaja5_tee = GolpesVentaja5_tee + 1;
+                                                }
+                                                //   }
 
 
                                             }
 
                                             if (DificultatHoyo6_tee == Contadorcito)
                                             {
-                                                if (ScoreHole6 > 0)
-                                                {
-                                                    
+                                                //   if (ScoreHole6 > 0)
+                                                //   {
 
-                                                    if (Contadorcito == AdvPositivo)
-                                                    {
-                                                        GolpesVentaja6_tee = GolpesVentaja6_tee + 0.5 + ValCompleto;
-                                                    }
-                                                    else
-                                                    {
-                                                        GolpesVentaja6_tee = GolpesVentaja6_tee + 1;
-                                                    }
+
+                                                if (Contadorcito == AdvPositivo)
+                                                {
+                                                    GolpesVentaja6_tee = GolpesVentaja6_tee + 0.5 + ValCompleto;
                                                 }
+                                                else
+                                                {
+                                                    GolpesVentaja6_tee = GolpesVentaja6_tee + 1;
+                                                }
+                                                //  }
 
                                             }
 
                                             if (DificultatHoyo7_tee == Contadorcito)
                                             {
-                                                if (ScoreHole7 > 0)
+                                                //  if (ScoreHole7 > 0)
+                                                //  {
+                                                if (Contadorcito == AdvPositivo)
                                                 {
-                                                    
-
-                                                    if (Contadorcito == AdvPositivo)
-                                                    {
-                                                        GolpesVentaja7_tee = GolpesVentaja7_tee + 0.5 + ValCompleto;
-                                                    }
-                                                    else
-                                                    {
-                                                        GolpesVentaja7_tee = GolpesVentaja7_tee + 1;
-                                                    }
+                                                    GolpesVentaja7_tee = GolpesVentaja7_tee + 0.5 + ValCompleto;
                                                 }
+                                                else
+                                                {
+                                                    GolpesVentaja7_tee = GolpesVentaja7_tee + 1;
+                                                }
+                                                //   }
 
                                             }
 
                                             if (DificultatHoyo8_tee == Contadorcito)
                                             {
-                                                if (ScoreHole8 > 0)
-                                                {
-                                                   
+                                                //    if (ScoreHole8 > 0)
+                                                //    {
 
-                                                    if (Contadorcito == AdvPositivo)
-                                                    {
-                                                        GolpesVentaja8_tee = GolpesVentaja8_tee + 0.5 + ValCompleto;
-                                                    }
-                                                    else
-                                                    {
-                                                        GolpesVentaja8_tee = GolpesVentaja8_tee + 1;
-                                                    }
+
+                                                if (Contadorcito == AdvPositivo)
+                                                {
+                                                    GolpesVentaja8_tee = GolpesVentaja8_tee + 0.5 + ValCompleto;
                                                 }
+                                                else
+                                                {
+                                                    GolpesVentaja8_tee = GolpesVentaja8_tee + 1;
+                                                }
+                                                //  }
 
                                             }
 
                                             if (DificultatHoyo9_tee == Contadorcito)
                                             {
-                                                if (ScoreHole9 > 0)
-                                                {
-                                                   
+                                                //    if (ScoreHole9 > 0)
+                                                //    {
 
-                                                    if (Contadorcito == AdvPositivo)
-                                                    {
-                                                        GolpesVentaja9_tee = GolpesVentaja9_tee + 0.5 + ValCompleto;
-                                                    }
-                                                    else
-                                                    {
-                                                        GolpesVentaja9_tee = GolpesVentaja9_tee + 1;
-                                                    }
+
+                                                if (Contadorcito == AdvPositivo)
+                                                {
+                                                    GolpesVentaja9_tee = GolpesVentaja9_tee + 0.5 + ValCompleto;
                                                 }
+                                                else
+                                                {
+                                                    GolpesVentaja9_tee = GolpesVentaja9_tee + 1;
+                                                }
+                                                //   }
 
                                             }
 
                                             if (DificultatHoyo10_tee == Contadorcito)
                                             {
-                                                if (ScoreHole10 > 0)
-                                                {
-                                                    
+                                                //    if (ScoreHole10 > 0)
+                                                //    {
 
-                                                    if (Contadorcito == AdvPositivo)
-                                                    {
-                                                        GolpesVentaja10_tee = GolpesVentaja10_tee + 0.5 + ValCompleto;
-                                                    }
-                                                    else
-                                                    {
-                                                        GolpesVentaja10_tee = GolpesVentaja10_tee + 1;
-                                                    }
+
+                                                if (Contadorcito == AdvPositivo)
+                                                {
+                                                    GolpesVentaja10_tee = GolpesVentaja10_tee + 0.5 + ValCompleto;
                                                 }
+                                                else
+                                                {
+                                                    GolpesVentaja10_tee = GolpesVentaja10_tee + 1;
+                                                }
+                                                //    }
 
                                             }
 
                                             if (DificultatHoyo11_tee == Contadorcito)
                                             {
-                                                if (ScoreHole11 > 0)
-                                                {
-                                                   
+                                                //     if (ScoreHole11 > 0)
+                                                //     {
 
-                                                    if (Contadorcito == AdvPositivo)
-                                                    {
-                                                        GolpesVentaja11_tee = GolpesVentaja11_tee + 0.5 + ValCompleto;
-                                                    }
-                                                    else
-                                                    {
-                                                        GolpesVentaja11_tee = GolpesVentaja11_tee + 1;
-                                                    }
+
+                                                if (Contadorcito == AdvPositivo)
+                                                {
+                                                    GolpesVentaja11_tee = GolpesVentaja11_tee + 0.5 + ValCompleto;
                                                 }
+                                                else
+                                                {
+                                                    GolpesVentaja11_tee = GolpesVentaja11_tee + 1;
+                                                }
+                                                //       }
 
                                             }
 
                                             if (DificultatHoyo12_tee == Contadorcito)
                                             {
-                                                if (ScoreHole12 > 0)
-                                                {
-                                                    
+                                                //    if (ScoreHole12 > 0)
+                                                //    {
 
-                                                    if (Contadorcito == AdvPositivo)
-                                                    {
-                                                        GolpesVentaja12_tee = GolpesVentaja12_tee + 0.5 + ValCompleto;
-                                                    }
-                                                    else
-                                                    {
-                                                        GolpesVentaja12_tee = GolpesVentaja12_tee + 1;
-                                                    }
+
+                                                if (Contadorcito == AdvPositivo)
+                                                {
+                                                    GolpesVentaja12_tee = GolpesVentaja12_tee + 0.5 + ValCompleto;
                                                 }
+                                                else
+                                                {
+                                                    GolpesVentaja12_tee = GolpesVentaja12_tee + 1;
+                                                }
+                                                //   }
 
                                             }
 
                                             if (DificultatHoyo13_tee == Contadorcito)
                                             {
-                                                if (ScoreHole13 > 0)
-                                                {
-                                                   
+                                                //  if (ScoreHole13 > 0)
+                                                //  {
 
-                                                    if (Contadorcito == AdvPositivo)
-                                                    {
-                                                        GolpesVentaja13_tee = GolpesVentaja13_tee + 0.5 + ValCompleto;
-                                                    }
-                                                    else
-                                                    {
-                                                        GolpesVentaja13_tee = GolpesVentaja13_tee + 1;
-                                                    }
+
+                                                if (Contadorcito == AdvPositivo)
+                                                {
+                                                    GolpesVentaja13_tee = GolpesVentaja13_tee + 0.5 + ValCompleto;
                                                 }
+                                                else
+                                                {
+                                                    GolpesVentaja13_tee = GolpesVentaja13_tee + 1;
+                                                }
+                                                //  }
 
                                             }
 
                                             if (DificultatHoyo14_tee == Contadorcito)
                                             {
-                                                if (ScoreHole14 > 0)
-                                                {
-                                                   
+                                                //  if (ScoreHole14 > 0)
+                                                //   {
 
-                                                    if (Contadorcito == AdvPositivo)
-                                                    {
-                                                        GolpesVentaja14_tee = GolpesVentaja14_tee + 0.5 + ValCompleto;
-                                                    }
-                                                    else
-                                                    {
-                                                        GolpesVentaja14_tee = GolpesVentaja14_tee + 1;
-                                                    }
+
+                                                if (Contadorcito == AdvPositivo)
+                                                {
+                                                    GolpesVentaja14_tee = GolpesVentaja14_tee + 0.5 + ValCompleto;
                                                 }
+                                                else
+                                                {
+                                                    GolpesVentaja14_tee = GolpesVentaja14_tee + 1;
+                                                }
+                                                //  }
 
                                             }
 
                                             if (DificultatHoyo15_tee == Contadorcito)
                                             {
-                                                if (ScoreHole15 > 0)
-                                                {
-                                                   
+                                                //  if (ScoreHole15 > 0)
+                                                //   {
 
-                                                    if (Contadorcito == AdvPositivo)
-                                                    {
-                                                        GolpesVentaja15_tee = GolpesVentaja15_tee + 0.5 + ValCompleto;
-                                                    }
-                                                    else
-                                                    {
-                                                        GolpesVentaja15_tee = GolpesVentaja15_tee + 1;
-                                                    }
+
+                                                if (Contadorcito == AdvPositivo)
+                                                {
+                                                    GolpesVentaja15_tee = GolpesVentaja15_tee + 0.5 + ValCompleto;
                                                 }
+                                                else
+                                                {
+                                                    GolpesVentaja15_tee = GolpesVentaja15_tee + 1;
+                                                }
+                                                // }
 
                                             }
 
                                             if (DificultatHoyo16_tee == Contadorcito)
                                             {
-                                                if (ScoreHole16 > 0)
-                                                {
-                                                    
+                                                //  if (ScoreHole16 > 0)
+                                                //  {
 
-                                                    if (Contadorcito == AdvPositivo)
-                                                    {
-                                                        GolpesVentaja16_tee = GolpesVentaja16_tee + 0.5 + ValCompleto;
-                                                    }
-                                                    else
-                                                    {
-                                                        GolpesVentaja16_tee = GolpesVentaja16_tee + 1;
-                                                    }
+
+                                                if (Contadorcito == AdvPositivo)
+                                                {
+                                                    GolpesVentaja16_tee = GolpesVentaja16_tee + 0.5 + ValCompleto;
                                                 }
+                                                else
+                                                {
+                                                    GolpesVentaja16_tee = GolpesVentaja16_tee + 1;
+                                                }
+                                                //  }
 
                                             }
 
                                             if (DificultatHoyo17_tee == Contadorcito)
                                             {
-                                                if (ScoreHole17 > 0)
-                                                {
-                                                    
+                                                //   if (ScoreHole17 > 0)
+                                                //   {
 
-                                                    if (Contadorcito == AdvPositivo)
-                                                    {
-                                                        GolpesVentaja17_tee = GolpesVentaja17_tee + 0.5 + ValCompleto;
-                                                    }
-                                                    else
-                                                    {
-                                                        GolpesVentaja17_tee = GolpesVentaja17_tee + 1;
-                                                    }
+
+                                                if (Contadorcito == AdvPositivo)
+                                                {
+                                                    GolpesVentaja17_tee = GolpesVentaja17_tee + 0.5 + ValCompleto;
                                                 }
+                                                else
+                                                {
+                                                    GolpesVentaja17_tee = GolpesVentaja17_tee + 1;
+                                                }
+                                                //  }
 
                                             }
 
                                             if (DificultatHoyo18_tee == Contadorcito)
                                             {
-                                                if (ScoreHole18 > 0)
-                                                {
-                                                    
+                                                //   if (ScoreHole18 > 0)
+                                                //   {
 
-                                                    if (Contadorcito == AdvPositivo)
-                                                    {
-                                                        GolpesVentaja18_tee = GolpesVentaja18_tee + 0.5 + ValCompleto;
-                                                    }
-                                                    else
-                                                    {
-                                                        GolpesVentaja18_tee = GolpesVentaja18_tee + 1;
-                                                    }
+
+                                                if (Contadorcito == AdvPositivo)
+                                                {
+                                                    GolpesVentaja18_tee = GolpesVentaja18_tee + 0.5 + ValCompleto;
                                                 }
+                                                else
+                                                {
+                                                    GolpesVentaja18_tee = GolpesVentaja18_tee + 1;
+                                                }
+                                                //   }
 
                                             }
 
@@ -838,7 +836,7 @@ namespace DragonGolfBackEnd.Controllers
                                     if (AdvInverso > 18)
                                     {
                                         CicloFor = Convert.ToInt32(AdvInverso);
-                                      
+
                                     }
 
                                     for (int i = 0; i < CicloFor; i++)
@@ -857,331 +855,331 @@ namespace DragonGolfBackEnd.Controllers
                                             if (DificultatHoyo1_tee == Contadorcito)
                                             {
 
-                                                if (ScoreHole1 > 0)
-                                                {
-                                                    
+                                                //       if (ScoreHole1 > 0)
+                                                //       {
 
-                                                    if (Contadorcito == AdvInverso)
-                                                    {
-                                                        GolpesVentaja1_tee = GolpesVentaja1_tee + 0.5 + ValCompleto;
-                                                    }
-                                                    else
-                                                    {
-                                                        GolpesVentaja1_tee = GolpesVentaja1_tee + 1;
-                                                    }
+
+                                                if (Contadorcito == AdvInverso)
+                                                {
+                                                    GolpesVentaja1_tee = GolpesVentaja1_tee + 0.5 + ValCompleto;
                                                 }
+                                                else
+                                                {
+                                                    GolpesVentaja1_tee = GolpesVentaja1_tee + 1;
+                                                }
+                                                //    }
 
                                             }
 
                                             if (DificultatHoyo2_tee == Contadorcito)
                                             {
-                                                if (ScoreHole2 > 0)
+                                                //      if (ScoreHole2 > 0)
+                                                //      {
+
+                                                if (Contadorcito == AdvInverso)
                                                 {
-                                                   
-                                                    if (Contadorcito == AdvInverso)
-                                                    {
-                                                        GolpesVentaja2_tee = GolpesVentaja2_tee + 0.5 + ValCompleto; ;
-                                                    }
-                                                    else
-                                                    {
-                                                        GolpesVentaja2_tee = GolpesVentaja2_tee + 1;
-                                                    }
+                                                    GolpesVentaja2_tee = GolpesVentaja2_tee + 0.5 + ValCompleto; ;
                                                 }
+                                                else
+                                                {
+                                                    GolpesVentaja2_tee = GolpesVentaja2_tee + 1;
+                                                }
+                                                //     }
 
                                             }
 
                                             if (DificultatHoyo3_tee == Contadorcito)
                                             {
-                                                if (ScoreHole3 > 0)
-                                                {
-                                                    
+                                                //    if (ScoreHole3 > 0)
+                                                //    {
 
-                                                    if (Contadorcito == AdvInverso)
-                                                    {
-                                                        GolpesVentaja3_tee = GolpesVentaja3_tee + 0.5 + ValCompleto; ;
-                                                    }
-                                                    else
-                                                    {
-                                                        GolpesVentaja3_tee = GolpesVentaja3_tee + 1;
-                                                    }
+
+                                                if (Contadorcito == AdvInverso)
+                                                {
+                                                    GolpesVentaja3_tee = GolpesVentaja3_tee + 0.5 + ValCompleto; ;
                                                 }
+                                                else
+                                                {
+                                                    GolpesVentaja3_tee = GolpesVentaja3_tee + 1;
+                                                }
+                                                //  }
 
                                             }
 
                                             if (DificultatHoyo4_tee == Contadorcito)
                                             {
-                                                if (ScoreHole4 > 0)
+                                                //   if (ScoreHole4 > 0)
+                                                //   {
+
+
+                                                if (Contadorcito == AdvInverso)
                                                 {
-
-
-                                                    if (Contadorcito == AdvInverso)
-                                                    {
-                                                        GolpesVentaja4_tee = GolpesVentaja4_tee + 0.5 + ValCompleto; ;
-                                                    }
-                                                    else
-                                                    {
-                                                        GolpesVentaja4_tee = GolpesVentaja4_tee + 1;
-                                                    }
+                                                    GolpesVentaja4_tee = GolpesVentaja4_tee + 0.5 + ValCompleto; ;
                                                 }
+                                                else
+                                                {
+                                                    GolpesVentaja4_tee = GolpesVentaja4_tee + 1;
+                                                }
+                                                //   }
 
                                             }
 
                                             if (DificultatHoyo5_tee == Contadorcito)
                                             {
-                                                if (ScoreHole5 > 0)
+                                                //   if (ScoreHole5 > 0)
+                                                //   {
+
+                                                if (Contadorcito == AdvInverso)
                                                 {
-                                                   
-                                                    if (Contadorcito == AdvInverso)
-                                                    {
-                                                        GolpesVentaja5_tee = GolpesVentaja5_tee + 0.5 + ValCompleto; ;
+                                                    GolpesVentaja5_tee = GolpesVentaja5_tee + 0.5 + ValCompleto; ;
 
-                                                    }
-                                                    else
-                                                    {
-                                                        GolpesVentaja5_tee = GolpesVentaja5_tee + 1;
-
-                                                    }
                                                 }
+                                                else
+                                                {
+                                                    GolpesVentaja5_tee = GolpesVentaja5_tee + 1;
+
+                                                }
+                                                // }
 
                                             }
 
                                             if (DificultatHoyo6_tee == Contadorcito)
                                             {
-                                                if (ScoreHole6 > 0)
+                                                //   if (ScoreHole6 > 0)
+                                                //   {
+
+                                                if (Contadorcito == AdvInverso)
                                                 {
-                                                    
-                                                    if (Contadorcito == AdvInverso)
-                                                    {
-                                                        GolpesVentaja6_tee = GolpesVentaja6_tee + 0.5 + ValCompleto; ;
+                                                    GolpesVentaja6_tee = GolpesVentaja6_tee + 0.5 + ValCompleto; ;
 
-                                                    }
-                                                    else
-                                                    {
-                                                        GolpesVentaja6_tee = GolpesVentaja6_tee + 1;
-
-                                                    }
                                                 }
+                                                else
+                                                {
+                                                    GolpesVentaja6_tee = GolpesVentaja6_tee + 1;
+
+                                                }
+                                                //  }
 
                                             }
 
                                             if (DificultatHoyo7_tee == Contadorcito)
                                             {
-                                                if (ScoreHole7 > 0)
+                                                //    if (ScoreHole7 > 0)
+                                                //    {
+
+
+                                                if (Contadorcito == AdvInverso)
                                                 {
-
-
-                                                    if (Contadorcito == AdvInverso)
-                                                    {
-                                                        GolpesVentaja7_tee = GolpesVentaja7_tee + 0.5 + ValCompleto; ;
-                                                    }
-                                                    else
-                                                    {
-                                                        GolpesVentaja7_tee = GolpesVentaja7_tee + 1;
-                                                    }
+                                                    GolpesVentaja7_tee = GolpesVentaja7_tee + 0.5 + ValCompleto; ;
                                                 }
+                                                else
+                                                {
+                                                    GolpesVentaja7_tee = GolpesVentaja7_tee + 1;
+                                                }
+                                                //    }
 
                                             }
 
                                             if (DificultatHoyo8_tee == Contadorcito)
                                             {
-                                                if (ScoreHole8 > 0)
-                                                {
-                                                   
+                                                //   if (ScoreHole8 > 0)
+                                                //   {
 
-                                                    if (Contadorcito == AdvInverso)
-                                                    {
-                                                        GolpesVentaja8_tee = GolpesVentaja8_tee + 0.5 + ValCompleto; ;
-                                                    }
-                                                    else
-                                                    {
-                                                        GolpesVentaja8_tee = GolpesVentaja8_tee + 1;
-                                                    }
+
+                                                if (Contadorcito == AdvInverso)
+                                                {
+                                                    GolpesVentaja8_tee = GolpesVentaja8_tee + 0.5 + ValCompleto; ;
                                                 }
+                                                else
+                                                {
+                                                    GolpesVentaja8_tee = GolpesVentaja8_tee + 1;
+                                                }
+                                                //   }
 
 
                                             }
 
                                             if (DificultatHoyo9_tee == Contadorcito)
                                             {
-                                                if (ScoreHole9 > 0)
+                                                //  if (ScoreHole9 > 0)
+                                                //   {
+
+
+                                                if (Contadorcito == AdvInverso)
                                                 {
-
-
-                                                    if (Contadorcito == AdvInverso)
-                                                    {
-                                                        GolpesVentaja9_tee = GolpesVentaja9_tee + 0.5 + ValCompleto; ;
-                                                    }
-                                                    else
-                                                    {
-                                                        GolpesVentaja9_tee = GolpesVentaja9_tee + 1;
-                                                    }
+                                                    GolpesVentaja9_tee = GolpesVentaja9_tee + 0.5 + ValCompleto; ;
                                                 }
+                                                else
+                                                {
+                                                    GolpesVentaja9_tee = GolpesVentaja9_tee + 1;
+                                                }
+                                                //   }
 
                                             }
 
                                             if (DificultatHoyo10_tee == Contadorcito)
                                             {
-                                                if (ScoreHole10 > 0)
-                                                {
-                                                   
+                                                //    if (ScoreHole10 > 0)
+                                                //    {
 
-                                                    if (Contadorcito == AdvInverso)
-                                                    {
-                                                        GolpesVentaja10_tee = GolpesVentaja10_tee + 0.5 + ValCompleto; ;
-                                                    }
-                                                    else
-                                                    {
-                                                        GolpesVentaja10_tee = GolpesVentaja10_tee + 1;
-                                                    }
+
+                                                if (Contadorcito == AdvInverso)
+                                                {
+                                                    GolpesVentaja10_tee = GolpesVentaja10_tee + 0.5 + ValCompleto; ;
                                                 }
+                                                else
+                                                {
+                                                    GolpesVentaja10_tee = GolpesVentaja10_tee + 1;
+                                                }
+                                                //    }
 
                                             }
 
                                             if (DificultatHoyo11_tee == Contadorcito)
                                             {
-                                                if (ScoreHole11 > 0)
-                                                {
-                                                   
+                                                //  if (ScoreHole11 > 0)
+                                                //  {
 
-                                                    if (Contadorcito == AdvInverso)
-                                                    {
-                                                        GolpesVentaja11_tee = GolpesVentaja11_tee + 0.5 + ValCompleto; ;
-                                                    }
-                                                    else
-                                                    {
-                                                        GolpesVentaja11_tee = GolpesVentaja11_tee + 1;
-                                                    }
+
+                                                if (Contadorcito == AdvInverso)
+                                                {
+                                                    GolpesVentaja11_tee = GolpesVentaja11_tee + 0.5 + ValCompleto; ;
                                                 }
+                                                else
+                                                {
+                                                    GolpesVentaja11_tee = GolpesVentaja11_tee + 1;
+                                                }
+                                                //  }
 
                                             }
 
                                             if (DificultatHoyo12_tee == Contadorcito)
                                             {
-                                                if (ScoreHole12 > 0)
+                                                //   if (ScoreHole12 > 0)
+                                                //   {
+
+
+                                                if (Contadorcito == AdvInverso)
                                                 {
-
-
-                                                    if (Contadorcito == AdvInverso)
-                                                    {
-                                                        GolpesVentaja12_tee = GolpesVentaja12_tee + 0.5 + ValCompleto; ;
-                                                    }
-                                                    else
-                                                    {
-                                                        GolpesVentaja12_tee = GolpesVentaja12_tee + 1;
-                                                    }
+                                                    GolpesVentaja12_tee = GolpesVentaja12_tee + 0.5 + ValCompleto; ;
                                                 }
+                                                else
+                                                {
+                                                    GolpesVentaja12_tee = GolpesVentaja12_tee + 1;
+                                                }
+                                                //    }
 
 
                                             }
 
                                             if (DificultatHoyo13_tee == Contadorcito)
                                             {
-                                                if (ScoreHole13 > 0)
+                                                //   if (ScoreHole13 > 0)
+                                                //   {
+
+
+                                                if (Contadorcito == AdvInverso)
                                                 {
-
-
-                                                    if (Contadorcito == AdvInverso)
-                                                    {
-                                                        GolpesVentaja13_tee = GolpesVentaja13_tee + 0.5 + ValCompleto; ;
-                                                    }
-                                                    else
-                                                    {
-                                                        GolpesVentaja13_tee = GolpesVentaja13_tee + 1;
-                                                    }
+                                                    GolpesVentaja13_tee = GolpesVentaja13_tee + 0.5 + ValCompleto; ;
                                                 }
+                                                else
+                                                {
+                                                    GolpesVentaja13_tee = GolpesVentaja13_tee + 1;
+                                                }
+                                                //  }
 
 
                                             }
 
                                             if (DificultatHoyo14_tee == Contadorcito)
                                             {
-                                                if (ScoreHole14 > 0)
-                                                {
-                                                   
+                                                //  if (ScoreHole14 > 0)
+                                                //   {
 
-                                                    if (Contadorcito == AdvInverso)
-                                                    {
-                                                        GolpesVentaja14_tee = GolpesVentaja14_tee + 0.5 + ValCompleto; ;
-                                                    }
-                                                    else
-                                                    {
-                                                        GolpesVentaja14_tee = GolpesVentaja14_tee + 1;
-                                                    }
+
+                                                if (Contadorcito == AdvInverso)
+                                                {
+                                                    GolpesVentaja14_tee = GolpesVentaja14_tee + 0.5 + ValCompleto; ;
                                                 }
+                                                else
+                                                {
+                                                    GolpesVentaja14_tee = GolpesVentaja14_tee + 1;
+                                                }
+                                                //  }
 
 
                                             }
 
                                             if (DificultatHoyo15_tee == Contadorcito)
                                             {
-                                                if (ScoreHole15 > 0)
-                                                {
-                                                   
+                                                //  if (ScoreHole15 > 0)
+                                                //  {
 
-                                                    if (Contadorcito == AdvInverso)
-                                                    {
-                                                        GolpesVentaja15_tee = GolpesVentaja15_tee + 0.5 + ValCompleto; ;
-                                                    }
-                                                    else
-                                                    {
-                                                        GolpesVentaja15_tee = GolpesVentaja15_tee + 1;
-                                                    }
+
+                                                if (Contadorcito == AdvInverso)
+                                                {
+                                                    GolpesVentaja15_tee = GolpesVentaja15_tee + 0.5 + ValCompleto; ;
                                                 }
+                                                else
+                                                {
+                                                    GolpesVentaja15_tee = GolpesVentaja15_tee + 1;
+                                                }
+                                                //  }
 
                                             }
 
                                             if (DificultatHoyo16_tee == Contadorcito)
                                             {
-                                                if (ScoreHole16 > 0)
-                                                {
-                                                   
+                                                //  if (ScoreHole16 > 0)
+                                                //  {
 
-                                                    if (Contadorcito == AdvInverso)
-                                                    {
-                                                        GolpesVentaja16_tee = GolpesVentaja16_tee + 0.5 + ValCompleto; ;
-                                                    }
-                                                    else
-                                                    {
-                                                        GolpesVentaja16_tee = GolpesVentaja16_tee + 1;
-                                                    }
+
+                                                if (Contadorcito == AdvInverso)
+                                                {
+                                                    GolpesVentaja16_tee = GolpesVentaja16_tee + 0.5 + ValCompleto; ;
                                                 }
+                                                else
+                                                {
+                                                    GolpesVentaja16_tee = GolpesVentaja16_tee + 1;
+                                                }
+                                                // }
 
 
                                             }
 
                                             if (DificultatHoyo17_tee == Contadorcito)
                                             {
-                                                if (ScoreHole17 > 0)
-                                                {
-                                                  
+                                                //  if (ScoreHole17 > 0)
+                                                //  {
 
-                                                    if (Contadorcito == AdvInverso)
-                                                    {
-                                                        GolpesVentaja17_tee = GolpesVentaja17_tee + 0.5 + ValCompleto; ;
-                                                    }
-                                                    else
-                                                    {
-                                                        GolpesVentaja17_tee = GolpesVentaja17_tee + 1;
-                                                    }
+
+                                                if (Contadorcito == AdvInverso)
+                                                {
+                                                    GolpesVentaja17_tee = GolpesVentaja17_tee + 0.5 + ValCompleto; ;
                                                 }
+                                                else
+                                                {
+                                                    GolpesVentaja17_tee = GolpesVentaja17_tee + 1;
+                                                }
+                                                //   }
 
                                             }
 
                                             if (DificultatHoyo18_tee == Contadorcito)
                                             {
-                                                if (ScoreHole18 > 0)
-                                                {
-                                                    
+                                                //   if (ScoreHole18 > 0)
+                                                //   {
 
-                                                    if (Contadorcito == AdvInverso)
-                                                    {
-                                                        GolpesVentaja18_tee = GolpesVentaja18_tee + 0.5 + ValCompleto; ;
-                                                    }
-                                                    else
-                                                    {
-                                                        GolpesVentaja18_tee = GolpesVentaja18_tee + 1;
-                                                    }
+
+                                                if (Contadorcito == AdvInverso)
+                                                {
+                                                    GolpesVentaja18_tee = GolpesVentaja18_tee + 0.5 + ValCompleto; ;
                                                 }
+                                                else
+                                                {
+                                                    GolpesVentaja18_tee = GolpesVentaja18_tee + 1;
+                                                }
+                                                //  }
 
                                             }
 
@@ -1201,16 +1199,16 @@ namespace DragonGolfBackEnd.Controllers
                             int Contador = 0;
 
                             int Adv = 0;
-                                
-                                if (Adv_tee > 0)
+
+                            if (Adv_tee > 0)
                             {
                                 Adv = Convert.ToInt32(Math.Ceiling(Adv_tee));
                             }
-                                else if (Adv_tee < 0)
+                            else if (Adv_tee < 0)
                             {
                                 Adv = Convert.ToInt32(Math.Floor(Adv_tee));
                             }
-                                //Convert.ToInt32(Adv_tee);
+                            //Convert.ToInt32(Adv_tee);
 
                             if (Adv_tee == 0.5)
                             {
@@ -1699,9 +1697,9 @@ namespace DragonGolfBackEnd.Controllers
                             else if (Adv > 0)
                             {
 
-                                int AdvInverso2 =  (Convert.ToInt32(Adv));
+                                int AdvInverso2 = (Convert.ToInt32(Adv));
 
-                                if (Adv_tee >= AdvInverso2  )
+                                if (Adv_tee >= AdvInverso2)
                                 {
                                     Adv = AdvInverso2;
                                     ValCompleto = 0.5;
@@ -1722,7 +1720,7 @@ namespace DragonGolfBackEnd.Controllers
                                     if (Contador > 18)
                                     {
                                         Contador = 1;
-                                        Adv=Adv-18;
+                                        Adv = Adv - 18;
                                     }
 
                                     if (Contador <= Adv)
