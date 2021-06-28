@@ -183,6 +183,7 @@
     <Compile Include="Controllers\Amigos\QuitarAmigosController.cs" />
     <Compile Include="Controllers\Amigos\AltaAmigosController.cs" />
     <Compile Include="Controllers\Amigos\ListaAmigosController.cs" />
+    <Compile Include="Controllers\Apuestas\ActualizarOrdenApuestaController.cs" />
     <Compile Include="Controllers\Apuestas\SingleNassau\CalcularApuestaController.cs" />
     <Compile Include="Controllers\Apuestas\SingleNassau\ActualizarDetalleApuestaController.cs" />
     <Compile Include="Controllers\Apuestas\SingleNassau\EliminaApuestaController.cs" />

@@ -288,6 +288,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             int PlayerId = Convert.ToInt32(row["PlayerId"]);
                             HoyoInicial = Convert.ToInt32(row["HoyoInicial"]);
+                            string Jugador = Convert.ToString(row["Player"]);
 
                             DificultatHoyo1 = Convert.ToInt32(row["Ho_Advantage1"]);//7
                             DificultatHoyo2 = Convert.ToInt32(row["Ho_Advantage2"]);//1
@@ -408,26 +409,26 @@ namespace DragonGolfBackEnd.Controllers
                             Adv_tee = Convert.ToDouble(row["adv"]);
 
                             int ventaja = Convert.ToInt32(row["Ventaja"]); ;
-                            double SumaGolpesVentaja = 0;
+                            double SumaGolpesVentaja = Adv_tee;
 
                             double AdvInverso = (-1) * (Adv_tee);
                             double ValCompleto = 0;
 
-                            if (AdvInverso < 0)
+                            if (Adv_tee > 0)
                             {
-                                if (Convert.ToInt32(row["IDUsuario"]) == Convert.ToInt32(row["PlayerId"]))
+                                if (Jugador== "Jugador1")
                                 {
-                                    SumaGolpesVentaja = AdvInverso;
+                                    SumaGolpesVentaja = Adv_tee;
                                 }
                                 else
                                 {
-                                    SumaGolpesVentaja = Adv_tee;
+                                    SumaGolpesVentaja = AdvInverso;
                                 }
 
                             }
                             else
                             {
-                                if (Convert.ToInt32(row["IDUsuario"]) == Convert.ToInt32(row["PlayerId"]))
+                                if (Jugador == "Jugador2")
                                 {
                                     SumaGolpesVentaja = AdvInverso;
                                 }
