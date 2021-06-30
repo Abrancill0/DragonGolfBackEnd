@@ -73,9 +73,28 @@ namespace DragonGolfBackEnd.Controllers
                         Mensaje = Convert.ToString(row["mensaje"]);
                         Estatus = Convert.ToInt32(row["Estatus"]);
 
+                        int golpes = Convert.ToInt32(row["Golpesventaja"]);
+                        double golpes2 = Convert.ToDouble(row["Golpesventaja"]);
+
                         if (Estatus == 1)
                         {
-                            Golpesventaja = Convert.ToDouble(row["Golpesventaja"]);
+                            double Restante = golpes - golpes2;
+
+                            if (Restante == 0.5)
+                            {
+                                Golpesventaja = Convert.ToDouble(row["Golpesventaja"]);
+                            }
+                            else if (Restante > 0.5)
+                            {
+
+                                Golpesventaja = Convert.ToInt32(Math.Ceiling(Convert.ToDouble(row["Golpesventaja"])));
+
+                            }
+                            else
+                            {
+                                Golpesventaja = Convert.ToDouble(row["Golpesventaja"]);
+                            }
+
                         }
                     }
 

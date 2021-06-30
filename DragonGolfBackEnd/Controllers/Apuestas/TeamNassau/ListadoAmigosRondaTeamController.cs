@@ -2153,8 +2153,7 @@ namespace DragonGolfBackEnd.Controllers
                                                     {
                                                         if (Player == "Jugador 2")
                                                         {
-                                                            GolpesVentaja3_tee = GolpesVentaja3_tee - 1;
-
+                                                           
                                                             if (Contadorcito == AdvPositivo)
                                                             {
                                                                 GolpesVentaja3_tee = GolpesVentaja3_tee - (0.5 + ValCompleto);
