@@ -1174,7 +1174,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (Contadorcito == AdvInverso)
                                                 {
-                                                    GolpesVentaja18_tee = GolpesVentaja18_tee + 0.5 + ValCompleto; ;
+                                                    GolpesVentaja18_tee = GolpesVentaja18_tee + 0.5 + ValCompleto;
                                                 }
                                                 else
                                                 {

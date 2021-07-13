@@ -559,6 +559,54 @@ namespace DragonGolfBackEnd.Controllers
 
                         double ValCompleto = 0;
 
+                        //El peor de los mejores
+                        string JugadorMejoresEquipo1 = "";
+                        string JugadorMejoresEquipo2 = "";
+
+                        string JugadorPeorEquipo1 = "";
+                        string JugadorPeorEquipo2 = "";
+
+                        double JugadorMejoresEquipo1Valor = 0;
+                        double JugadorMejoresEquipo2Valor = 0;
+
+                        double JugadorPeorEquipo1Valor = 0;
+                        double JugadorPeorEquipo2Valor = 0;
+
+                        if (HandicapP1 <= HandicapP3)
+                        {
+                            JugadorMejoresEquipo1 = "Jugador 1";
+                            JugadorMejoresEquipo1Valor = HandicapP1;
+
+                            JugadorPeorEquipo1 = "Jugador 3";
+                            JugadorPeorEquipo1Valor = HandicapP3;
+                        }
+                        else
+                        {
+                            JugadorMejoresEquipo1 = "Jugador 3";
+                            JugadorMejoresEquipo1Valor = HandicapP3;
+
+                            JugadorPeorEquipo1 = "Jugador 1";
+                            JugadorPeorEquipo1Valor = HandicapP1;
+                        }
+
+                        if (HandicapP2 <= HandicapP4)
+                        {
+                            JugadorMejoresEquipo2 = "Jugador 2";
+                            JugadorMejoresEquipo2Valor = HandicapP2;
+
+                            JugadorPeorEquipo2 = "Jugador 4";
+                            JugadorPeorEquipo2Valor = HandicapP4;
+
+                        }
+                        else
+                        {
+                            JugadorMejoresEquipo2 = "Jugador 4";
+                            JugadorMejoresEquipo2Valor = HandicapP4;
+
+                            JugadorPeorEquipo2 = "Jugador 2";
+                            JugadorPeorEquipo2Valor = HandicapP2;
+                        }
+
                         if (AdvInverso < 0)
                         {
                             //int AdvPositivo = (-1) * (AdvInverso);
@@ -660,77 +708,61 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Each")
                                             {
-                                                //El peor de los mejores
-                                                string JugadorMejoresEquipo1 = "";
-                                                string JugadorMejoresEquipo2 = "";
-
-                                                string JugadorPeorEquipo1 = "";
-                                                string JugadorPeorEquipo2 = "";
-
-                                                double JugadorMejoresEquipo1Valor = 0;
-                                                double JugadorMejoresEquipo2Valor = 0;
-
-                                                double JugadorPeorEquipo1Valor = 0;
-                                                double JugadorPeorEquipo2Valor = 0;
-
-                                                if (HandicapP1 <= HandicapP3)
-                                                {
-                                                    JugadorMejoresEquipo1 = "Jugador 1";
-                                                    JugadorMejoresEquipo1Valor = HandicapP1;
-
-                                                    JugadorPeorEquipo1 = "Jugador 3";
-                                                    JugadorPeorEquipo1Valor = HandicapP3;
-                                                }
-                                                else
-                                                {
-                                                    JugadorMejoresEquipo1 = "Jugador 3";
-                                                    JugadorMejoresEquipo1Valor = HandicapP3;
-
-                                                    JugadorPeorEquipo1 = "Jugador 1";
-                                                    JugadorPeorEquipo1Valor = HandicapP1;
-                                                }
-
-                                                if (HandicapP2 <= HandicapP4)
-                                                {
-                                                    JugadorMejoresEquipo2 = "Jugador 2";
-                                                    JugadorMejoresEquipo2Valor = HandicapP2;
-
-                                                    JugadorPeorEquipo2 = "Jugador 4";
-                                                    JugadorPeorEquipo2Valor = HandicapP4;
-
-                                                }
-                                                else
-                                                {
-                                                    JugadorMejoresEquipo2 = "Jugador 4";
-                                                    JugadorMejoresEquipo2Valor = HandicapP4;
-
-                                                    JugadorPeorEquipo2 = "Jugador 2";
-                                                    JugadorPeorEquipo2Valor = HandicapP2;
-                                                }
-
                                                 if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
                                                 {
-                                                    //JugadorMejoresEquipo1
-                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    //Se le da la ventaja al peor de ese equipo
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
                                                     {
-                                                        ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P4 = ScoreHole1_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P4 = ScoreHole1_P4 - 1;
+                                                        }
+
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P2 = ScoreHole1_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P2 = ScoreHole1_P2 - 1;
+                                                        }
 
                                                     }
                                                 }
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
                                                     {
-                                                        ScoreHole1_P2 = ScoreHole1_P2 - 1;
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                        }
+
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole1_P4 = ScoreHole1_P4 - 1;
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                        }
 
                                                     }
 
@@ -738,31 +770,61 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
                                                 {
-                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    if (JugadorPeorEquipo2 == "Jugador 2")
                                                     {
-                                                        ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P2 = ScoreHole1_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P2 = ScoreHole1_P2 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P4 = ScoreHole1_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P4 = ScoreHole1_P4 - 1;
+                                                        }
                                                     }
 
                                                 }
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorPeorEquipo1 == "Jugador 2")
+                                                    if (JugadorPeorEquipo1 == "Jugador 1")
                                                     {
-                                                        ScoreHole1_P2 = ScoreHole1_P2 - 1;
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                        }
+
+
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole1_P4 = ScoreHole1_P4 - 1;
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                        }
                                                     }
 
                                                 }
-
                                             }
+
                                         }
 
                                     }
@@ -836,6 +898,125 @@ namespace DragonGolfBackEnd.Controllers
 
                                             }
 
+                                            if (TipoGolpesVentaja == "Each")
+                                            {
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                {
+                                                    //Se le da la ventaja al peor de ese equipo
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole2_P4 = ScoreHole2_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole2_P4 = ScoreHole2_P4 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole2_P2 = ScoreHole2_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole2_P2 = ScoreHole2_P2 - 1;
+                                                        }
+
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole2_P3 = ScoreHole2_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole2_P3 = ScoreHole2_P3 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole2_P1 = ScoreHole2_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole2_P1 = ScoreHole2_P1 - 1;
+                                                        }
+
+                                                    }
+
+                                                }
+
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                {
+                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole2_P2 = ScoreHole2_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole2_P2 = ScoreHole2_P2 - 1;
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole2_P4 = ScoreHole2_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole2_P4 = ScoreHole2_P4 - 1;
+                                                        }
+                                                    }
+
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole2_P1 = ScoreHole2_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole2_P1 = ScoreHole2_P1 - 1;
+                                                        }
+
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole2_P3 = ScoreHole2_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole2_P3 = ScoreHole2_P3 - 1;
+                                                        }
+                                                    }
+
+                                                }
+
+                                            }
                                         }
 
                                     }
@@ -909,6 +1090,125 @@ namespace DragonGolfBackEnd.Controllers
 
                                             }
 
+                                            if (TipoGolpesVentaja == "Each")
+                                            {
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                {
+                                                    //Se le da la ventaja al peor de ese equipo
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole3_P4 = ScoreHole3_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole3_P4 = ScoreHole3_P4 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole3_P2 = ScoreHole3_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole3_P2 = ScoreHole3_P2 - 1;
+                                                        }
+
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole3_P3 = ScoreHole3_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole3_P3 = ScoreHole3_P3 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole3_P1 = ScoreHole3_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole3_P1 = ScoreHole3_P1 - 1;
+                                                        }
+
+                                                    }
+
+                                                }
+
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                {
+                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole3_P2 = ScoreHole3_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole3_P2 = ScoreHole3_P2 - 1;
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole3_P4 = ScoreHole3_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole3_P4 = ScoreHole3_P4 - 1;
+                                                        }
+                                                    }
+
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole3_P1 = ScoreHole3_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole3_P1 = ScoreHole3_P1 - 1;
+                                                        }
+
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole3_P3 = ScoreHole3_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole3_P3 = ScoreHole3_P3 - 1;
+                                                        }
+                                                    }
+
+                                                }
+
+                                            }
 
                                         }
 
@@ -980,6 +1280,127 @@ namespace DragonGolfBackEnd.Controllers
                                                 }
 
                                             }
+
+                                            if (TipoGolpesVentaja == "Each")
+                                            {
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                {
+                                                    //Se le da la ventaja al peor de ese equipo
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole4_P4 = ScoreHole4_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole4_P4 = ScoreHole4_P4 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole4_P2 = ScoreHole4_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole4_P2 = ScoreHole4_P2 - 1;
+                                                        }
+
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole4_P3 = ScoreHole4_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole4_P3 = ScoreHole4_P3 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole4_P1 = ScoreHole4_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole4_P1 = ScoreHole4_P1 - 1;
+                                                        }
+
+                                                    }
+
+                                                }
+
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                {
+                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole4_P2 = ScoreHole4_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole4_P2 = ScoreHole4_P2 - 1;
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole4_P4 = ScoreHole4_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole4_P4 = ScoreHole4_P4 - 1;
+                                                        }
+                                                    }
+
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole4_P1 = ScoreHole4_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole4_P1 = ScoreHole4_P1 - 1;
+                                                        }
+
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole4_P3 = ScoreHole4_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole4_P3 = ScoreHole4_P3 - 1;
+                                                        }
+                                                    }
+
+                                                }
+
+                                            }
+
                                         }
 
                                     }
@@ -1050,13 +1471,133 @@ namespace DragonGolfBackEnd.Controllers
 
                                             }
 
+                                            if (TipoGolpesVentaja == "Each")
+                                            {
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                {
+                                                    //Se le da la ventaja al peor de ese equipo
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole5_P4 = ScoreHole5_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole5_P4 = ScoreHole5_P4 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole5_P2 = ScoreHole5_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole5_P2 = ScoreHole5_P2 - 1;
+                                                        }
+
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole5_P3 = ScoreHole5_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole5_P3 = ScoreHole5_P3 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole5_P1 = ScoreHole5_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole5_P1 = ScoreHole5_P1 - 1;
+                                                        }
+
+                                                    }
+
+                                                }
+
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                {
+                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole5_P2 = ScoreHole5_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole5_P2 = ScoreHole5_P2 - 1;
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole5_P4 = ScoreHole5_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole5_P4 = ScoreHole5_P4 - 1;
+                                                        }
+                                                    }
+
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole5_P1 = ScoreHole5_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole5_P1 = ScoreHole5_P1 - 1;
+                                                        }
+
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole5_P3 = ScoreHole5_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole5_P3 = ScoreHole5_P3 - 1;
+                                                        }
+                                                    }
+
+                                                }
+
+                                            }
+
                                         }
 
                                     }
 
                                     if (DificultatHoyo6 == Contador)
                                     {
-                                        if (ScoreHole6_P1 > 0 && ScoreHole6_P2 > 0 && ScoreHole5_P3 > 0 && ScoreHole5_P4 > 0)
+                                        if (ScoreHole6_P1 > 0 && ScoreHole6_P2 > 0 && ScoreHole6_P3 > 0 && ScoreHole6_P4 > 0)
                                         {
 
                                             if (TipoGolpesVentaja == "Hi Handicap")
@@ -1123,6 +1664,128 @@ namespace DragonGolfBackEnd.Controllers
 
 
                                             }
+
+                                            if (TipoGolpesVentaja == "Each")
+                                            {
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                {
+                                                    //Se le da la ventaja al peor de ese equipo
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole6_P4 = ScoreHole6_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole6_P4 = ScoreHole6_P4 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole6_P2 = ScoreHole6_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole6_P2 = ScoreHole6_P2 - 1;
+                                                        }
+
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole6_P3 = ScoreHole6_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole6_P3 = ScoreHole6_P3 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole6_P1 = ScoreHole6_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole6_P1 = ScoreHole6_P1 - 1;
+                                                        }
+
+                                                    }
+
+                                                }
+
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                {
+                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole6_P2 = ScoreHole6_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole6_P2 = ScoreHole6_P2 - 1;
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole6_P4 = ScoreHole6_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole6_P4 = ScoreHole6_P4 - 1;
+                                                        }
+                                                    }
+
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole6_P1 = ScoreHole6_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole6_P1 = ScoreHole6_P1 - 1;
+                                                        }
+
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole6_P3 = ScoreHole6_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole6_P3 = ScoreHole6_P3 - 1;
+                                                        }
+                                                    }
+
+                                                }
+
+                                            }
+
+
                                         }
 
                                     }
@@ -1197,6 +1860,126 @@ namespace DragonGolfBackEnd.Controllers
 
                                             }
 
+                                            if (TipoGolpesVentaja == "Each")
+                                            {
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                {
+                                                    //Se le da la ventaja al peor de ese equipo
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole7_P4 = ScoreHole7_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole7_P4 = ScoreHole7_P4 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole7_P2 = ScoreHole7_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole7_P2 = ScoreHole7_P2 - 1;
+                                                        }
+
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole7_P3 = ScoreHole7_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole7_P3 = ScoreHole7_P3 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole7_P1 = ScoreHole7_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole7_P1 = ScoreHole7_P1 - 1;
+                                                        }
+
+                                                    }
+
+                                                }
+
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                {
+                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole7_P2 = ScoreHole7_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole7_P2 = ScoreHole7_P2 - 1;
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole7_P4 = ScoreHole7_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole7_P4 = ScoreHole7_P4 - 1;
+                                                        }
+                                                    }
+
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole7_P1 = ScoreHole7_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole7_P1 = ScoreHole7_P1 - 1;
+                                                        }
+
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole7_P3 = ScoreHole7_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole7_P3 = ScoreHole7_P3 - 1;
+                                                        }
+                                                    }
+
+                                                }
+
+                                            }
+
                                         }
 
                                     }
@@ -1266,6 +2049,125 @@ namespace DragonGolfBackEnd.Controllers
 
                                             }
 
+                                            if (TipoGolpesVentaja == "Each")
+                                            {
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                {
+                                                    //Se le da la ventaja al peor de ese equipo
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole8_P4 = ScoreHole8_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole8_P4 = ScoreHole8_P4 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole8_P2 = ScoreHole8_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole8_P2 = ScoreHole8_P2 - 1;
+                                                        }
+
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole8_P3 = ScoreHole8_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole8_P3 = ScoreHole8_P3 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole8_P1 = ScoreHole8_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole8_P1 = ScoreHole8_P1 - 1;
+                                                        }
+
+                                                    }
+
+                                                }
+
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                {
+                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole8_P2 = ScoreHole8_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole8_P2 = ScoreHole8_P2 - 1;
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole8_P4 = ScoreHole8_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole8_P4 = ScoreHole8_P4 - 1;
+                                                        }
+                                                    }
+
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole8_P1 = ScoreHole8_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole8_P1 = ScoreHole8_P1 - 1;
+                                                        }
+
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole8_P3 = ScoreHole8_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole8_P3 = ScoreHole8_P3 - 1;
+                                                        }
+                                                    }
+
+                                                }
+
+                                            }
 
                                         }
 
@@ -1340,6 +2242,127 @@ namespace DragonGolfBackEnd.Controllers
                                                 }
 
                                             }
+
+                                            if (TipoGolpesVentaja == "Each")
+                                            {
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                {
+                                                    //Se le da la ventaja al peor de ese equipo
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole9_P4 = ScoreHole9_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole9_P4 = ScoreHole9_P4 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole9_P2 = ScoreHole9_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole9_P2 = ScoreHole9_P2 - 1;
+                                                        }
+
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole9_P3 = ScoreHole9_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole9_P3 = ScoreHole9_P3 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole9_P1 = ScoreHole9_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole9_P1 = ScoreHole9_P1 - 1;
+                                                        }
+
+                                                    }
+
+                                                }
+
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                {
+                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole9_P2 = ScoreHole9_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole9_P2 = ScoreHole9_P2 - 1;
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole9_P4 = ScoreHole9_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole9_P4 = ScoreHole9_P4 - 1;
+                                                        }
+                                                    }
+
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole9_P1 = ScoreHole9_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole9_P1 = ScoreHole9_P1 - 1;
+                                                        }
+
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole9_P3 = ScoreHole9_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole9_P3 = ScoreHole9_P3 - 1;
+                                                        }
+                                                    }
+
+                                                }
+
+                                            }
+
                                         }
 
                                     }
@@ -1409,6 +2432,127 @@ namespace DragonGolfBackEnd.Controllers
                                                 }
 
                                             }
+
+                                            if (TipoGolpesVentaja == "Each")
+                                            {
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                {
+                                                    //Se le da la ventaja al peor de ese equipo
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole10_P4 = ScoreHole10_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole10_P4 = ScoreHole10_P4 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole10_P2 = ScoreHole10_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole10_P2 = ScoreHole10_P2 - 1;
+                                                        }
+
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole10_P3 = ScoreHole10_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole10_P3 = ScoreHole10_P3 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole10_P1 = ScoreHole10_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole10_P1 = ScoreHole10_P1 - 1;
+                                                        }
+
+                                                    }
+
+                                                }
+
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                {
+                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole10_P2 = ScoreHole10_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole10_P2 = ScoreHole10_P2 - 1;
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole10_P4 = ScoreHole10_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole10_P4 = ScoreHole10_P4 - 1;
+                                                        }
+                                                    }
+
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole10_P1 = ScoreHole10_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole10_P1 = ScoreHole10_P1 - 1;
+                                                        }
+
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole10_P3 = ScoreHole10_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole10_P3 = ScoreHole10_P3 - 1;
+                                                        }
+                                                    }
+
+                                                }
+
+                                            }
+
                                         }
 
                                     }
@@ -1477,6 +2621,128 @@ namespace DragonGolfBackEnd.Controllers
                                                 }
 
                                             }
+
+                                            if (TipoGolpesVentaja == "Each")
+                                            {
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                {
+                                                    //Se le da la ventaja al peor de ese equipo
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole11_P4 = ScoreHole11_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole11_P4 = ScoreHole11_P4 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole11_P2 = ScoreHole11_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole11_P2 = ScoreHole11_P2 - 1;
+                                                        }
+
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole11_P3 = ScoreHole11_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole11_P3 = ScoreHole11_P3 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole11_P1 = ScoreHole11_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole11_P1 = ScoreHole11_P1 - 1;
+                                                        }
+
+                                                    }
+
+                                                }
+
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                {
+                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole11_P2 = ScoreHole11_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole11_P2 = ScoreHole11_P2 - 1;
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole11_P4 = ScoreHole11_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole11_P4 = ScoreHole11_P4 - 1;
+                                                        }
+                                                    }
+
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole11_P1 = ScoreHole11_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole11_P1 = ScoreHole11_P1 - 1;
+                                                        }
+
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole11_P3 = ScoreHole11_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole11_P3 = ScoreHole11_P3 - 1;
+                                                        }
+                                                    }
+
+                                                }
+
+                                            }
+
+
                                         }
 
                                     }
@@ -1547,6 +2813,127 @@ namespace DragonGolfBackEnd.Controllers
                                                 }
 
                                             }
+
+                                            if (TipoGolpesVentaja == "Each")
+                                            {
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                {
+                                                    //Se le da la ventaja al peor de ese equipo
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole12_P4 = ScoreHole12_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole12_P4 = ScoreHole12_P4 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole12_P2 = ScoreHole12_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole12_P2 = ScoreHole12_P2 - 1;
+                                                        }
+
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole12_P3 = ScoreHole12_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole12_P3 = ScoreHole12_P3 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole12_P1 = ScoreHole12_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole12_P1 = ScoreHole12_P1 - 1;
+                                                        }
+
+                                                    }
+
+                                                }
+
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                {
+                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole12_P2 = ScoreHole12_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole12_P2 = ScoreHole12_P2 - 1;
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole12_P4 = ScoreHole12_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole12_P4 = ScoreHole12_P4 - 1;
+                                                        }
+                                                    }
+
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole12_P1 = ScoreHole12_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole12_P1 = ScoreHole12_P1 - 1;
+                                                        }
+
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole12_P3 = ScoreHole12_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole12_P3 = ScoreHole12_P3 - 1;
+                                                        }
+                                                    }
+
+                                                }
+
+                                            }
+
                                         }
 
                                     }
@@ -1618,6 +3005,128 @@ namespace DragonGolfBackEnd.Controllers
                                                 }
 
                                             }
+
+                                            if (TipoGolpesVentaja == "Each")
+                                            {
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                {
+                                                    //Se le da la ventaja al peor de ese equipo
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole13_P4 = ScoreHole13_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole13_P4 = ScoreHole13_P4 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole13_P2 = ScoreHole13_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole13_P2 = ScoreHole13_P2 - 1;
+                                                        }
+
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole13_P3 = ScoreHole13_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole13_P3 = ScoreHole13_P3 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole13_P1 = ScoreHole13_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole13_P1 = ScoreHole13_P1 - 1;
+                                                        }
+
+                                                    }
+
+                                                }
+
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                {
+                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole13_P2 = ScoreHole13_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole13_P2 = ScoreHole13_P2 - 1;
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole13_P4 = ScoreHole13_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole13_P4 = ScoreHole13_P4 - 1;
+                                                        }
+                                                    }
+
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole13_P1 = ScoreHole13_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole13_P1 = ScoreHole13_P1 - 1;
+                                                        }
+
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole13_P3 = ScoreHole13_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole13_P3 = ScoreHole13_P3 - 1;
+                                                        }
+                                                    }
+
+                                                }
+
+                                            }
+
+
                                         }
 
                                     }
@@ -1690,6 +3199,128 @@ namespace DragonGolfBackEnd.Controllers
                                                 }
 
                                             }
+
+                                            if (TipoGolpesVentaja == "Each")
+                                            {
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                {
+                                                    //Se le da la ventaja al peor de ese equipo
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole14_P4 = ScoreHole14_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole14_P4 = ScoreHole14_P4 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole14_P2 = ScoreHole14_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole14_P2 = ScoreHole14_P2 - 1;
+                                                        }
+
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole14_P3 = ScoreHole14_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole14_P3 = ScoreHole14_P3 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole14_P1 = ScoreHole14_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole14_P1 = ScoreHole14_P1 - 1;
+                                                        }
+
+                                                    }
+
+                                                }
+
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                {
+                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole14_P2 = ScoreHole14_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole14_P2 = ScoreHole14_P2 - 1;
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole14_P4 = ScoreHole14_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole14_P4 = ScoreHole14_P4 - 1;
+                                                        }
+                                                    }
+
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole14_P1 = ScoreHole14_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole14_P1 = ScoreHole14_P1 - 1;
+                                                        }
+
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole14_P3 = ScoreHole14_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole14_P3 = ScoreHole14_P3 - 1;
+                                                        }
+                                                    }
+
+                                                }
+
+                                            }
+
+
                                         }
 
                                     }
@@ -1762,6 +3393,128 @@ namespace DragonGolfBackEnd.Controllers
                                                 }
 
                                             }
+
+                                            if (TipoGolpesVentaja == "Each")
+                                            {
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                {
+                                                    //Se le da la ventaja al peor de ese equipo
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole15_P4 = ScoreHole15_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole15_P4 = ScoreHole15_P4 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole15_P2 = ScoreHole15_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole15_P2 = ScoreHole15_P2 - 1;
+                                                        }
+
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole15_P3 = ScoreHole15_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole15_P3 = ScoreHole15_P3 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole15_P1 = ScoreHole15_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole15_P1 = ScoreHole15_P1 - 1;
+                                                        }
+
+                                                    }
+
+                                                }
+
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                {
+                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole15_P2 = ScoreHole15_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole15_P2 = ScoreHole15_P2 - 1;
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole15_P4 = ScoreHole15_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole15_P4 = ScoreHole15_P4 - 1;
+                                                        }
+                                                    }
+
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole15_P1 = ScoreHole15_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole15_P1 = ScoreHole15_P1 - 1;
+                                                        }
+
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole15_P3 = ScoreHole15_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole15_P3 = ScoreHole15_P3 - 1;
+                                                        }
+                                                    }
+
+                                                }
+
+                                            }
+
+
                                         }
                                     }
 
@@ -1832,6 +3585,128 @@ namespace DragonGolfBackEnd.Controllers
                                                 }
 
                                             }
+
+                                            if (TipoGolpesVentaja == "Each")
+                                            {
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                {
+                                                    //Se le da la ventaja al peor de ese equipo
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole16_P4 = ScoreHole16_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole16_P4 = ScoreHole16_P4 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole16_P2 = ScoreHole16_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole16_P2 = ScoreHole16_P2 - 1;
+                                                        }
+
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole16_P3 = ScoreHole16_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole16_P3 = ScoreHole16_P3 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole16_P1 = ScoreHole16_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole16_P1 = ScoreHole16_P1 - 1;
+                                                        }
+
+                                                    }
+
+                                                }
+
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                {
+                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole16_P2 = ScoreHole16_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole16_P2 = ScoreHole16_P2 - 1;
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole16_P4 = ScoreHole16_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole16_P4 = ScoreHole16_P4 - 1;
+                                                        }
+                                                    }
+
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole16_P1 = ScoreHole16_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole16_P1 = ScoreHole16_P1 - 1;
+                                                        }
+
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole16_P3 = ScoreHole16_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole16_P3 = ScoreHole16_P3 - 1;
+                                                        }
+                                                    }
+
+                                                }
+
+                                            }
+
+
                                         }
                                     }
 
@@ -1902,6 +3777,128 @@ namespace DragonGolfBackEnd.Controllers
                                                 }
 
                                             }
+
+                                            if (TipoGolpesVentaja == "Each")
+                                            {
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                {
+                                                    //Se le da la ventaja al peor de ese equipo
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole17_P4 = ScoreHole17_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole17_P4 = ScoreHole17_P4 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole17_P2 = ScoreHole17_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole17_P2 = ScoreHole17_P2 - 1;
+                                                        }
+
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole17_P3 = ScoreHole17_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole17_P3 = ScoreHole17_P3 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole17_P1 = ScoreHole17_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole17_P1 = ScoreHole17_P1 - 1;
+                                                        }
+
+                                                    }
+
+                                                }
+
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                {
+                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole17_P2 = ScoreHole17_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole17_P2 = ScoreHole17_P2 - 1;
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole17_P4 = ScoreHole17_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole17_P4 = ScoreHole17_P4 - 1;
+                                                        }
+                                                    }
+
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole17_P1 = ScoreHole17_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole17_P1 = ScoreHole17_P1 - 1;
+                                                        }
+
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole17_P3 = ScoreHole17_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole17_P3 = ScoreHole17_P3 - 1;
+                                                        }
+                                                    }
+
+                                                }
+
+                                            }
+
+
                                         }
                                     }
 
@@ -1972,6 +3969,128 @@ namespace DragonGolfBackEnd.Controllers
                                                 }
 
                                             }
+
+                                            if (TipoGolpesVentaja == "Each")
+                                            {
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                {
+                                                    //Se le da la ventaja al peor de ese equipo
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole18_P4 = ScoreHole18_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole18_P4 = ScoreHole18_P4 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole18_P2 = ScoreHole18_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole18_P2 = ScoreHole18_P2 - 1;
+                                                        }
+
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole18_P3 = ScoreHole18_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole18_P3 = ScoreHole18_P3 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole18_P1 = ScoreHole18_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole18_P1 = ScoreHole18_P1 - 1;
+                                                        }
+
+                                                    }
+
+                                                }
+
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                {
+                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole18_P2 = ScoreHole18_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole18_P2 = ScoreHole18_P2 - 1;
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole18_P4 = ScoreHole18_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole18_P4 = ScoreHole18_P4 - 1;
+                                                        }
+                                                    }
+
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole18_P1 = ScoreHole18_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole18_P1 = ScoreHole18_P1 - 1;
+                                                        }
+
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole18_P3 = ScoreHole18_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole18_P3 = ScoreHole18_P3 - 1;
+                                                        }
+                                                    }
+
+                                                }
+
+                                            }
+
+
                                         }
                                     }
 
@@ -2079,6 +4198,124 @@ namespace DragonGolfBackEnd.Controllers
 
                                             }
 
+                                            if (TipoGolpesVentaja == "Each")
+                                            {
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                {
+                                                    //Se le da la ventaja al peor de ese equipo
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P4 = ScoreHole1_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P4 = ScoreHole1_P4 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P2 = ScoreHole1_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P2 = ScoreHole1_P2 - 1;
+                                                        }
+
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                        }
+
+                                                    }
+
+                                                }
+
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                {
+                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P2 = ScoreHole1_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P2 = ScoreHole1_P2 - 1;
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P4 = ScoreHole1_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P4 = ScoreHole1_P4 - 1;
+                                                        }
+                                                    }
+
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                        }
+
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                        }
+                                                    }
+
+                                                }
+                                            }
 
                                         }
 
@@ -2153,6 +4390,127 @@ namespace DragonGolfBackEnd.Controllers
 
 
                                             }
+
+                                            if (TipoGolpesVentaja == "Each")
+                                            {
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                {
+                                                    //Se le da la ventaja al peor de ese equipo
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole2_P4 = ScoreHole2_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole2_P4 = ScoreHole2_P4 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole2_P2 = ScoreHole2_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole2_P2 = ScoreHole2_P2 - 1;
+                                                        }
+
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole2_P3 = ScoreHole2_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole2_P3 = ScoreHole2_P3 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole2_P1 = ScoreHole2_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole2_P1 = ScoreHole2_P1 - 1;
+                                                        }
+
+                                                    }
+
+                                                }
+
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                {
+                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole2_P2 = ScoreHole2_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole2_P2 = ScoreHole2_P2 - 1;
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole2_P4 = ScoreHole2_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole2_P4 = ScoreHole2_P4 - 1;
+                                                        }
+                                                    }
+
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole2_P1 = ScoreHole2_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole2_P1 = ScoreHole2_P1 - 1;
+                                                        }
+
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole2_P3 = ScoreHole2_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole2_P3 = ScoreHole2_P3 - 1;
+                                                        }
+                                                    }
+
+                                                }
+
+                                            }
+
                                         }
 
                                     }
@@ -2224,6 +4582,127 @@ namespace DragonGolfBackEnd.Controllers
                                                 }
 
                                             }
+
+                                            if (TipoGolpesVentaja == "Each")
+                                            {
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                {
+                                                    //Se le da la ventaja al peor de ese equipo
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole3_P4 = ScoreHole3_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole3_P4 = ScoreHole3_P4 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole3_P2 = ScoreHole3_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole3_P2 = ScoreHole3_P2 - 1;
+                                                        }
+
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole3_P3 = ScoreHole3_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole3_P3 = ScoreHole3_P3 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole3_P1 = ScoreHole3_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole3_P1 = ScoreHole3_P1 - 1;
+                                                        }
+
+                                                    }
+
+                                                }
+
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                {
+                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole3_P2 = ScoreHole3_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole3_P2 = ScoreHole3_P2 - 1;
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole3_P4 = ScoreHole3_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole3_P4 = ScoreHole3_P4 - 1;
+                                                        }
+                                                    }
+
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole3_P1 = ScoreHole3_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole3_P1 = ScoreHole3_P1 - 1;
+                                                        }
+
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole3_P3 = ScoreHole3_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole3_P3 = ScoreHole3_P3 - 1;
+                                                        }
+                                                    }
+
+                                                }
+
+                                            }
+
                                         }
 
                                     }
@@ -2296,6 +4775,127 @@ namespace DragonGolfBackEnd.Controllers
 
 
                                             }
+
+                                            if (TipoGolpesVentaja == "Each")
+                                            {
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                {
+                                                    //Se le da la ventaja al peor de ese equipo
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole4_P4 = ScoreHole4_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole4_P4 = ScoreHole4_P4 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole4_P2 = ScoreHole4_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole4_P2 = ScoreHole4_P2 - 1;
+                                                        }
+
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole4_P3 = ScoreHole4_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole4_P3 = ScoreHole4_P3 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole4_P1 = ScoreHole4_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole4_P1 = ScoreHole4_P1 - 1;
+                                                        }
+
+                                                    }
+
+                                                }
+
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                {
+                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole4_P2 = ScoreHole4_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole4_P2 = ScoreHole4_P2 - 1;
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole4_P4 = ScoreHole4_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole4_P4 = ScoreHole4_P4 - 1;
+                                                        }
+                                                    }
+
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole4_P1 = ScoreHole4_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole4_P1 = ScoreHole4_P1 - 1;
+                                                        }
+
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole4_P3 = ScoreHole4_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole4_P3 = ScoreHole4_P3 - 1;
+                                                        }
+                                                    }
+
+                                                }
+
+                                            }
+
                                         }
 
                                     }
@@ -2369,6 +4969,127 @@ namespace DragonGolfBackEnd.Controllers
 
 
                                             }
+
+                                            if (TipoGolpesVentaja == "Each")
+                                            {
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                {
+                                                    //Se le da la ventaja al peor de ese equipo
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole5_P4 = ScoreHole5_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole5_P4 = ScoreHole5_P4 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole5_P2 = ScoreHole5_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole5_P2 = ScoreHole5_P2 - 1;
+                                                        }
+
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole5_P3 = ScoreHole5_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole5_P3 = ScoreHole5_P3 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole5_P1 = ScoreHole5_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole5_P1 = ScoreHole5_P1 - 1;
+                                                        }
+
+                                                    }
+
+                                                }
+
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                {
+                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole5_P2 = ScoreHole5_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole5_P2 = ScoreHole5_P2 - 1;
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole5_P4 = ScoreHole5_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole5_P4 = ScoreHole5_P4 - 1;
+                                                        }
+                                                    }
+
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole5_P1 = ScoreHole5_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole5_P1 = ScoreHole5_P1 - 1;
+                                                        }
+
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole5_P3 = ScoreHole5_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole5_P3 = ScoreHole5_P3 - 1;
+                                                        }
+                                                    }
+
+                                                }
+
+                                            }
+
                                         }
 
                                     }
@@ -2441,6 +5162,127 @@ namespace DragonGolfBackEnd.Controllers
 
 
                                             }
+
+                                            if (TipoGolpesVentaja == "Each")
+                                            {
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                {
+                                                    //Se le da la ventaja al peor de ese equipo
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole6_P4 = ScoreHole6_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole6_P4 = ScoreHole6_P4 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole6_P2 = ScoreHole6_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole6_P2 = ScoreHole6_P2 - 1;
+                                                        }
+
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole6_P3 = ScoreHole6_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole6_P3 = ScoreHole6_P3 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole6_P1 = ScoreHole6_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole6_P1 = ScoreHole6_P1 - 1;
+                                                        }
+
+                                                    }
+
+                                                }
+
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                {
+                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole6_P2 = ScoreHole6_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole6_P2 = ScoreHole6_P2 - 1;
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole6_P4 = ScoreHole6_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole6_P4 = ScoreHole6_P4 - 1;
+                                                        }
+                                                    }
+
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole6_P1 = ScoreHole6_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole6_P1 = ScoreHole6_P1 - 1;
+                                                        }
+
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole6_P3 = ScoreHole6_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole6_P3 = ScoreHole6_P3 - 1;
+                                                        }
+                                                    }
+
+                                                }
+
+                                            }
+
                                         }
 
                                     }
@@ -2513,6 +5355,127 @@ namespace DragonGolfBackEnd.Controllers
 
 
                                             }
+
+                                            if (TipoGolpesVentaja == "Each")
+                                            {
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                {
+                                                    //Se le da la ventaja al peor de ese equipo
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole7_P4 = ScoreHole7_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole7_P4 = ScoreHole7_P4 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole7_P2 = ScoreHole7_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole7_P2 = ScoreHole7_P2 - 1;
+                                                        }
+
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole7_P3 = ScoreHole7_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole7_P3 = ScoreHole7_P3 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole7_P1 = ScoreHole7_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole7_P1 = ScoreHole7_P1 - 1;
+                                                        }
+
+                                                    }
+
+                                                }
+
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                {
+                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole7_P2 = ScoreHole7_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole7_P2 = ScoreHole7_P2 - 1;
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole7_P4 = ScoreHole7_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole7_P4 = ScoreHole7_P4 - 1;
+                                                        }
+                                                    }
+
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole7_P1 = ScoreHole7_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole7_P1 = ScoreHole7_P1 - 1;
+                                                        }
+
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole7_P3 = ScoreHole7_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole7_P3 = ScoreHole7_P3 - 1;
+                                                        }
+                                                    }
+
+                                                }
+
+                                            }
+
                                         }
 
                                     }
@@ -2584,6 +5547,127 @@ namespace DragonGolfBackEnd.Controllers
 
 
                                             }
+
+                                            if (TipoGolpesVentaja == "Each")
+                                            {
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                {
+                                                    //Se le da la ventaja al peor de ese equipo
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole8_P4 = ScoreHole8_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole8_P4 = ScoreHole8_P4 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole8_P2 = ScoreHole8_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole8_P2 = ScoreHole8_P2 - 1;
+                                                        }
+
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole8_P3 = ScoreHole8_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole8_P3 = ScoreHole8_P3 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole8_P1 = ScoreHole8_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole8_P1 = ScoreHole8_P1 - 1;
+                                                        }
+
+                                                    }
+
+                                                }
+
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                {
+                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole8_P2 = ScoreHole8_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole8_P2 = ScoreHole8_P2 - 1;
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole8_P4 = ScoreHole8_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole8_P4 = ScoreHole8_P4 - 1;
+                                                        }
+                                                    }
+
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole8_P1 = ScoreHole8_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole8_P1 = ScoreHole8_P1 - 1;
+                                                        }
+
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole8_P3 = ScoreHole8_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole8_P3 = ScoreHole8_P3 - 1;
+                                                        }
+                                                    }
+
+                                                }
+
+                                            }
+
                                         }
 
                                     }
@@ -2655,6 +5739,127 @@ namespace DragonGolfBackEnd.Controllers
 
 
                                             }
+
+                                            if (TipoGolpesVentaja == "Each")
+                                            {
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                {
+                                                    //Se le da la ventaja al peor de ese equipo
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole9_P4 = ScoreHole9_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole9_P4 = ScoreHole9_P4 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole9_P2 = ScoreHole9_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole9_P2 = ScoreHole9_P2 - 1;
+                                                        }
+
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole9_P3 = ScoreHole9_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole9_P3 = ScoreHole9_P3 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole9_P1 = ScoreHole9_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole9_P1 = ScoreHole9_P1 - 1;
+                                                        }
+
+                                                    }
+
+                                                }
+
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                {
+                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole9_P2 = ScoreHole9_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole9_P2 = ScoreHole9_P2 - 1;
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole9_P4 = ScoreHole9_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole9_P4 = ScoreHole9_P4 - 1;
+                                                        }
+                                                    }
+
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole9_P1 = ScoreHole9_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole9_P1 = ScoreHole9_P1 - 1;
+                                                        }
+
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole9_P3 = ScoreHole9_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole9_P3 = ScoreHole9_P3 - 1;
+                                                        }
+                                                    }
+
+                                                }
+
+                                            }
+
                                         }
 
                                     }
@@ -2727,6 +5932,127 @@ namespace DragonGolfBackEnd.Controllers
 
 
                                             }
+
+                                            if (TipoGolpesVentaja == "Each")
+                                            {
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                {
+                                                    //Se le da la ventaja al peor de ese equipo
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole10_P4 = ScoreHole10_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole10_P4 = ScoreHole10_P4 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole10_P2 = ScoreHole10_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole10_P2 = ScoreHole10_P2 - 1;
+                                                        }
+
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole10_P3 = ScoreHole10_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole10_P3 = ScoreHole10_P3 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole10_P1 = ScoreHole10_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole10_P1 = ScoreHole10_P1 - 1;
+                                                        }
+
+                                                    }
+
+                                                }
+
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                {
+                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole10_P2 = ScoreHole10_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole10_P2 = ScoreHole10_P2 - 1;
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole10_P4 = ScoreHole10_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole10_P4 = ScoreHole10_P4 - 1;
+                                                        }
+                                                    }
+
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole10_P1 = ScoreHole10_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole10_P1 = ScoreHole10_P1 - 1;
+                                                        }
+
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole10_P3 = ScoreHole10_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole10_P3 = ScoreHole10_P3 - 1;
+                                                        }
+                                                    }
+
+                                                }
+
+                                            }
+
                                         }
 
                                     }
@@ -2797,6 +6123,127 @@ namespace DragonGolfBackEnd.Controllers
 
 
                                             }
+
+                                            if (TipoGolpesVentaja == "Each")
+                                            {
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                {
+                                                    //Se le da la ventaja al peor de ese equipo
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole11_P4 = ScoreHole11_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole11_P4 = ScoreHole11_P4 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole11_P2 = ScoreHole11_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole11_P2 = ScoreHole11_P2 - 1;
+                                                        }
+
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole11_P3 = ScoreHole11_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole11_P3 = ScoreHole11_P3 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole11_P1 = ScoreHole11_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole11_P1 = ScoreHole11_P1 - 1;
+                                                        }
+
+                                                    }
+
+                                                }
+
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                {
+                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole11_P2 = ScoreHole11_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole11_P2 = ScoreHole11_P2 - 1;
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole11_P4 = ScoreHole11_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole11_P4 = ScoreHole11_P4 - 1;
+                                                        }
+                                                    }
+
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole11_P1 = ScoreHole11_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole11_P1 = ScoreHole11_P1 - 1;
+                                                        }
+
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole11_P3 = ScoreHole11_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole11_P3 = ScoreHole11_P3 - 1;
+                                                        }
+                                                    }
+
+                                                }
+
+                                            }
+
 
                                         }
 
@@ -2870,6 +6317,127 @@ namespace DragonGolfBackEnd.Controllers
 
 
                                             }
+
+                                            if (TipoGolpesVentaja == "Each")
+                                            {
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                {
+                                                    //Se le da la ventaja al peor de ese equipo
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole12_P4 = ScoreHole12_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole12_P4 = ScoreHole12_P4 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole12_P2 = ScoreHole12_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole12_P2 = ScoreHole12_P2 - 1;
+                                                        }
+
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole12_P3 = ScoreHole12_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole12_P3 = ScoreHole12_P3 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole12_P1 = ScoreHole12_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole12_P1 = ScoreHole12_P1 - 1;
+                                                        }
+
+                                                    }
+
+                                                }
+
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                {
+                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole12_P2 = ScoreHole12_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole12_P2 = ScoreHole12_P2 - 1;
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole12_P4 = ScoreHole12_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole12_P4 = ScoreHole12_P4 - 1;
+                                                        }
+                                                    }
+
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole12_P1 = ScoreHole12_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole12_P1 = ScoreHole12_P1 - 1;
+                                                        }
+
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole12_P3 = ScoreHole12_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole12_P3 = ScoreHole12_P3 - 1;
+                                                        }
+                                                    }
+
+                                                }
+
+                                            }
+
                                         }
 
                                     }
@@ -2942,6 +6510,127 @@ namespace DragonGolfBackEnd.Controllers
 
 
                                             }
+
+                                            if (TipoGolpesVentaja == "Each")
+                                            {
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                {
+                                                    //Se le da la ventaja al peor de ese equipo
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole13_P4 = ScoreHole13_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole13_P4 = ScoreHole13_P4 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole13_P2 = ScoreHole13_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole13_P2 = ScoreHole13_P2 - 1;
+                                                        }
+
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole13_P3 = ScoreHole13_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole13_P3 = ScoreHole13_P3 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole13_P1 = ScoreHole13_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole13_P1 = ScoreHole13_P1 - 1;
+                                                        }
+
+                                                    }
+
+                                                }
+
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                {
+                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole13_P2 = ScoreHole13_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole13_P2 = ScoreHole13_P2 - 1;
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole13_P4 = ScoreHole13_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole13_P4 = ScoreHole13_P4 - 1;
+                                                        }
+                                                    }
+
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole13_P1 = ScoreHole13_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole13_P1 = ScoreHole13_P1 - 1;
+                                                        }
+
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole13_P3 = ScoreHole13_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole13_P3 = ScoreHole13_P3 - 1;
+                                                        }
+                                                    }
+
+                                                }
+
+                                            }
+
                                         }
 
                                     }
@@ -3012,6 +6701,127 @@ namespace DragonGolfBackEnd.Controllers
 
 
                                             }
+
+                                            if (TipoGolpesVentaja == "Each")
+                                            {
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                {
+                                                    //Se le da la ventaja al peor de ese equipo
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole14_P4 = ScoreHole14_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole14_P4 = ScoreHole14_P4 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole14_P2 = ScoreHole14_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole14_P2 = ScoreHole14_P2 - 1;
+                                                        }
+
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole14_P3 = ScoreHole14_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole14_P3 = ScoreHole14_P3 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole14_P1 = ScoreHole14_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole14_P1 = ScoreHole14_P1 - 1;
+                                                        }
+
+                                                    }
+
+                                                }
+
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                {
+                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole14_P2 = ScoreHole14_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole14_P2 = ScoreHole14_P2 - 1;
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole14_P4 = ScoreHole14_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole14_P4 = ScoreHole14_P4 - 1;
+                                                        }
+                                                    }
+
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole14_P1 = ScoreHole14_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole14_P1 = ScoreHole14_P1 - 1;
+                                                        }
+
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole14_P3 = ScoreHole14_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole14_P3 = ScoreHole14_P3 - 1;
+                                                        }
+                                                    }
+
+                                                }
+
+                                            }
+
                                         }
 
                                     }
@@ -3084,6 +6894,127 @@ namespace DragonGolfBackEnd.Controllers
 
 
                                             }
+
+                                            if (TipoGolpesVentaja == "Each")
+                                            {
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                {
+                                                    //Se le da la ventaja al peor de ese equipo
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole15_P4 = ScoreHole15_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole15_P4 = ScoreHole15_P4 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole15_P2 = ScoreHole15_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole15_P2 = ScoreHole15_P2 - 1;
+                                                        }
+
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole15_P3 = ScoreHole15_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole15_P3 = ScoreHole15_P3 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole15_P1 = ScoreHole15_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole15_P1 = ScoreHole15_P1 - 1;
+                                                        }
+
+                                                    }
+
+                                                }
+
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                {
+                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole15_P2 = ScoreHole15_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole15_P2 = ScoreHole15_P2 - 1;
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole15_P4 = ScoreHole15_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole15_P4 = ScoreHole15_P4 - 1;
+                                                        }
+                                                    }
+
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole15_P1 = ScoreHole15_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole15_P1 = ScoreHole15_P1 - 1;
+                                                        }
+
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole15_P3 = ScoreHole15_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole15_P3 = ScoreHole15_P3 - 1;
+                                                        }
+                                                    }
+
+                                                }
+
+                                            }
+
                                         }
 
                                     }
@@ -3153,6 +7084,127 @@ namespace DragonGolfBackEnd.Controllers
 
 
                                             }
+
+                                            if (TipoGolpesVentaja == "Each")
+                                            {
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                {
+                                                    //Se le da la ventaja al peor de ese equipo
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole16_P4 = ScoreHole16_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole16_P4 = ScoreHole16_P4 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole16_P2 = ScoreHole16_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole16_P2 = ScoreHole16_P2 - 1;
+                                                        }
+
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole16_P3 = ScoreHole16_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole16_P3 = ScoreHole16_P3 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole16_P1 = ScoreHole16_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole16_P1 = ScoreHole16_P1 - 1;
+                                                        }
+
+                                                    }
+
+                                                }
+
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                {
+                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole16_P2 = ScoreHole16_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole16_P2 = ScoreHole16_P2 - 1;
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole16_P4 = ScoreHole16_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole16_P4 = ScoreHole16_P4 - 1;
+                                                        }
+                                                    }
+
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole16_P1 = ScoreHole16_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole16_P1 = ScoreHole16_P1 - 1;
+                                                        }
+
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole16_P3 = ScoreHole16_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole16_P3 = ScoreHole16_P3 - 1;
+                                                        }
+                                                    }
+
+                                                }
+
+                                            }
+
                                         }
 
                                     }
@@ -3225,6 +7277,127 @@ namespace DragonGolfBackEnd.Controllers
 
 
                                             }
+
+                                            if (TipoGolpesVentaja == "Each")
+                                            {
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                {
+                                                    //Se le da la ventaja al peor de ese equipo
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole17_P4 = ScoreHole17_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole17_P4 = ScoreHole17_P4 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole17_P2 = ScoreHole17_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole17_P2 = ScoreHole17_P2 - 1;
+                                                        }
+
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole17_P3 = ScoreHole17_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole17_P3 = ScoreHole17_P3 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole17_P1 = ScoreHole17_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole17_P1 = ScoreHole17_P1 - 1;
+                                                        }
+
+                                                    }
+
+                                                }
+
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                {
+                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole17_P2 = ScoreHole17_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole17_P2 = ScoreHole17_P2 - 1;
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole17_P4 = ScoreHole17_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole17_P4 = ScoreHole17_P4 - 1;
+                                                        }
+                                                    }
+
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole17_P1 = ScoreHole17_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole17_P1 = ScoreHole17_P1 - 1;
+                                                        }
+
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole17_P3 = ScoreHole17_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole17_P3 = ScoreHole17_P3 - 1;
+                                                        }
+                                                    }
+
+                                                }
+
+                                            }
+
                                         }
 
                                     }
@@ -3294,6 +7467,128 @@ namespace DragonGolfBackEnd.Controllers
 
 
                                             }
+
+                                            if (TipoGolpesVentaja == "Each")
+                                            {
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                {
+                                                    //Se le da la ventaja al peor de ese equipo
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole18_P4 = ScoreHole18_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole18_P4 = ScoreHole18_P4 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole18_P2 = ScoreHole18_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole18_P2 = ScoreHole18_P2 - 1;
+                                                        }
+
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole18_P3 = ScoreHole18_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole18_P3 = ScoreHole18_P3 - 1;
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole18_P1 = ScoreHole18_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole18_P1 = ScoreHole18_P1 - 1;
+                                                        }
+
+                                                    }
+
+                                                }
+
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                {
+                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole18_P2 = ScoreHole18_P2 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole18_P2 = ScoreHole18_P2 - 1;
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole18_P4 = ScoreHole18_P4 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole18_P4 = ScoreHole18_P4 - 1;
+                                                        }
+                                                    }
+
+                                                }
+                                                else
+                                                {
+                                                    //JugadorMejoresEquipo2
+                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole18_P1 = ScoreHole18_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole18_P1 = ScoreHole18_P1 - 1;
+                                                        }
+
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole18_P3 = ScoreHole18_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole18_P3 = ScoreHole18_P3 - 1;
+                                                        }
+                                                    }
+
+                                                }
+
+                                            }
+
+
                                         }
 
                                     }
