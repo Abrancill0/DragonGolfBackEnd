@@ -90,8 +90,16 @@ namespace DragonGolfBackEnd.Controllers
                                 Golpesventaja = Convert.ToInt32(Math.Ceiling(Convert.ToDouble(row["Golpesventaja"])));
 
                             }
-                            else
+                            else if (Restante==-0.5)
                             {
+                                Golpesventaja = Convert.ToDouble(row["Golpesventaja"]);
+                            }
+                                else if (Restante > -0.5)
+                            {
+                                Golpesventaja = Convert.ToInt32(Math.Floor(Convert.ToDouble(row["Golpesventaja"])));
+                            }
+                            else
+                                    {
                                 Golpesventaja = Convert.ToDouble(row["Golpesventaja"]);
                             }
 

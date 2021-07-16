@@ -82,7 +82,7 @@ namespace DragonGolfBackEnd.Controllers
             try
             {
                 //DragoGolf_ListDetailBet_Lite
-                SqlCommand comandoLite = new SqlCommand("DragoGolf_ListDetailBet");
+                SqlCommand comandoLite = new SqlCommand("DragoGolf_ListDetailBet_Lite");
                 comandoLite.CommandType = CommandType.StoredProcedure;
                 //Declaracion de parametros
                 comandoLite.Parameters.Add("@IDBet", SqlDbType.Int);
@@ -150,7 +150,7 @@ namespace DragonGolfBackEnd.Controllers
 
                     int contador = DT.Rows.Count;
 
-                    foreach (DataRow row in DT1.Rows)
+                    foreach (DataRow row in DT.Rows)
                     {
                         Mensaje = Convert.ToString(row["mensaje"]);
                         Estatus = Convert.ToInt32(row["Estatus"]);
