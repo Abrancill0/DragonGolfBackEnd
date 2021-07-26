@@ -82,6 +82,35 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (Estatus == 1)
                         {
+                            double Golpesventaja = 0;
+                            int golpes = Convert.ToInt32(row["P1vsP2Strokes"]);
+                            double golpes2 = Convert.ToDouble(row["P1vsP2Strokes"]);
+
+                            double Restante = golpes - golpes2;
+
+                            if (Restante == 0.5)
+                            {
+                                Golpesventaja = Convert.ToDouble(row["P1vsP2Strokes"]);
+                            }
+                            else if (Restante > 0.5)
+                            {
+
+                                Golpesventaja = Convert.ToInt32(Math.Ceiling(Convert.ToDouble(row["P1vsP2Strokes"])));
+
+                            }
+                            else if (Restante == -0.5)
+                            {
+                                Golpesventaja = Convert.ToDouble(row["P1vsP2Strokes"]);
+                            }
+                            else if (Restante > -0.5)
+                            {
+                                Golpesventaja = Convert.ToInt32(Math.Floor(Convert.ToDouble(row["P1vsP2Strokes"])));
+                            }
+                            else
+                            {
+                                Golpesventaja = Convert.ToDouble(row["P1vsP2Strokes"]);
+                            }
+
                             ParametrosSalida ent = new ParametrosSalida
                             {
 
@@ -89,7 +118,7 @@ namespace DragonGolfBackEnd.Controllers
                                 RoundId = Convert.ToInt32(row["RoundId"]),
                                 Player2Id = Convert.ToInt32(row["Player2Id"]),
                                 Player1Id= Convert.ToInt32(row["Player1Id"]),
-                                P1vsP2Strokes = Convert.ToDecimal(row["P1vsP2Strokes"]),
+                                P1vsP2Strokes = Convert.ToDecimal(Golpesventaja),
                                 usu_nombre = Convert.ToString(row["usu_nombre"]),
                                 usu_apellido_paterno = Convert.ToString(row["usu_apellido_paterno"]),
                                 usu_apellido_materno = Convert.ToString(row["usu_apellido_materno"]),
