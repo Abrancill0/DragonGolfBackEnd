@@ -606,7 +606,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (Contador == AdvPositivo)
                                             {
-                                                ScoreHole5_P1 = ScoreHole5_P1 - 0.5;
+                                                ScoreHole5_P1 = ScoreHole5_P1 - (0.5 + ValCompleto);
                                             }
                                             else
                                             {
@@ -1195,7 +1195,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (Contador == AdvInverso)
                                             {
-                                                ScoreHole18_P2 = ScoreHole18_P2 - (0.5 - ValCompleto);
+                                                ScoreHole18_P2 = ScoreHole18_P2 - (0.5 + ValCompleto);
                                             }
                                             else
                                             {
