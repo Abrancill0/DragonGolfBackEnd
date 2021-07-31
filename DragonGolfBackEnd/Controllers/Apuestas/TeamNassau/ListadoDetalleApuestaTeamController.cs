@@ -4107,6 +4107,11 @@ namespace DragonGolfBackEnd.Controllers
                         {
                             int CicloFor = 18;
 
+                            if (AdvInverso > 18)
+                            {
+                                CicloFor = AdvInverso;
+                            }
+
                             double AdvPositivo = (-1) * (Adv);
                             int AdvPositivo2 = (-1) * (AdvInverso2);
 
@@ -10764,6 +10769,135 @@ namespace DragonGolfBackEnd.Controllers
                             ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6;
                         }
 
+                        if (PresionValor7 != "")
+                        {
+                            double Presion = Convert.ToInt32(PresionValor7);
+
+                            switch (i)
+                            {
+                                case 1:
+                                    Presion = Presion + Hoyo1;
+                                    break;
+                                case 2:
+                                    Presion = Presion + Hoyo2;
+                                    break;
+                                case 3:
+                                    Presion = Presion + Hoyo3;
+                                    break;
+                                case 4:
+                                    Presion = Presion + Hoyo4;
+                                    break;
+                                case 5:
+                                    Presion = Presion + Hoyo5;
+                                    break;
+                                case 6:
+                                    Presion = Presion + Hoyo6;
+                                    break;
+                                case 7:
+                                    Presion = Presion + Hoyo7;
+                                    break;
+                                case 8:
+                                    Presion = Presion + Hoyo8;
+                                    break;
+                                case 9:
+                                    Presion = Presion + Hoyo9;
+                                    break;
+                                default:
+                                    Console.WriteLine("Default case");
+                                    break;
+                            }
+
+                            PresionValor7 = Convert.ToString(Presion);
+
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7;
+                        }
+
+                        if (PresionValor8 != "")
+                        {
+                            double Presion = Convert.ToInt32(PresionValor8);
+
+                            switch (i)
+                            {
+                                case 1:
+                                    Presion = Presion + Hoyo1;
+                                    break;
+                                case 2:
+                                    Presion = Presion + Hoyo2;
+                                    break;
+                                case 3:
+                                    Presion = Presion + Hoyo3;
+                                    break;
+                                case 4:
+                                    Presion = Presion + Hoyo4;
+                                    break;
+                                case 5:
+                                    Presion = Presion + Hoyo5;
+                                    break;
+                                case 6:
+                                    Presion = Presion + Hoyo6;
+                                    break;
+                                case 7:
+                                    Presion = Presion + Hoyo7;
+                                    break;
+                                case 8:
+                                    Presion = Presion + Hoyo8;
+                                    break;
+                                case 9:
+                                    Presion = Presion + Hoyo9;
+                                    break;
+                                default:
+                                    Console.WriteLine("Default case");
+                                    break;
+                            }
+
+                            PresionValor8 = Convert.ToString(Presion);
+
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7 + ", " + PresionValor8;
+                        }
+
+                        if (PresionValor9 != "")
+                        {
+                            double Presion = Convert.ToInt32(PresionValor9);
+
+                            switch (i)
+                            {
+                                case 1:
+                                    Presion = Presion + Hoyo1;
+                                    break;
+                                case 2:
+                                    Presion = Presion + Hoyo2;
+                                    break;
+                                case 3:
+                                    Presion = Presion + Hoyo3;
+                                    break;
+                                case 4:
+                                    Presion = Presion + Hoyo4;
+                                    break;
+                                case 5:
+                                    Presion = Presion + Hoyo5;
+                                    break;
+                                case 6:
+                                    Presion = Presion + Hoyo6;
+                                    break;
+                                case 7:
+                                    Presion = Presion + Hoyo7;
+                                    break;
+                                case 8:
+                                    Presion = Presion + Hoyo8;
+                                    break;
+                                case 9:
+                                    Presion = Presion + Hoyo9;
+                                    break;
+                                default:
+                                    Console.WriteLine("Default case");
+                                    break;
+                            }
+
+                            PresionValor9 = Convert.ToString(Presion);
+
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7 + ", " + PresionValor8 + ", " + PresionValor9;
+                        }
+
                     }
 
                 }
@@ -11507,6 +11641,1276 @@ namespace DragonGolfBackEnd.Controllers
                             continue;
                         }
 
+                        if (PresionValor7 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "" && PresionValor5 != "" && PresionValor6 != "")
+                        {
+                            PresionValor7 = "0";
+                            Presion1 = 0;
+
+                            if (PresionValor1 != "")
+                            {
+                                double Presion = Convert.ToInt32(PresionValor1);
+
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion = Presion + Hoyo1;
+                                        break;
+                                    case 2:
+                                        Presion = Presion + Hoyo2;
+                                        break;
+                                    case 3:
+                                        Presion = Presion + Hoyo3;
+                                        break;
+                                    case 4:
+                                        Presion = Presion + Hoyo4;
+                                        break;
+                                    case 5:
+                                        Presion = Presion + Hoyo5;
+                                        break;
+                                    case 6:
+                                        Presion = Presion + Hoyo6;
+                                        break;
+                                    case 7:
+                                        Presion = Presion + Hoyo7;
+                                        break;
+                                    case 8:
+                                        Presion = Presion + Hoyo8;
+                                        break;
+                                    case 9:
+                                        Presion = Presion + Hoyo9;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
+
+                                PresionValor1 = Convert.ToString(Presion);
+                            }
+
+                            if (PresionValor2 != "")
+                            {
+                                double Presion = Convert.ToInt32(PresionValor2);
+
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion = Presion + Hoyo1;
+                                        break;
+                                    case 2:
+                                        Presion = Presion + Hoyo2;
+                                        break;
+                                    case 3:
+                                        Presion = Presion + Hoyo3;
+                                        break;
+                                    case 4:
+                                        Presion = Presion + Hoyo4;
+                                        break;
+                                    case 5:
+                                        Presion = Presion + Hoyo5;
+                                        break;
+                                    case 6:
+                                        Presion = Presion + Hoyo6;
+                                        break;
+                                    case 7:
+                                        Presion = Presion + Hoyo7;
+                                        break;
+                                    case 8:
+                                        Presion = Presion + Hoyo8;
+                                        break;
+                                    case 9:
+                                        Presion = Presion + Hoyo9;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
+
+                                PresionValor2 = Convert.ToString(Presion);
+                            }
+
+                            if (PresionValor3 != "")
+                            {
+                                double Presion = Convert.ToInt32(PresionValor3);
+
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion = Presion + Hoyo1;
+                                        break;
+                                    case 2:
+                                        Presion = Presion + Hoyo2;
+                                        break;
+                                    case 3:
+                                        Presion = Presion + Hoyo3;
+                                        break;
+                                    case 4:
+                                        Presion = Presion + Hoyo4;
+                                        break;
+                                    case 5:
+                                        Presion = Presion + Hoyo5;
+                                        break;
+                                    case 6:
+                                        Presion = Presion + Hoyo6;
+                                        break;
+                                    case 7:
+                                        Presion = Presion + Hoyo7;
+                                        break;
+                                    case 8:
+                                        Presion = Presion + Hoyo8;
+                                        break;
+                                    case 9:
+                                        Presion = Presion + Hoyo9;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
+
+                                PresionValor3 = Convert.ToString(Presion);
+                            }
+
+                            if (PresionValor4 != "")
+                            {
+                                double Presion = Convert.ToInt32(PresionValor4);
+
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion = Presion + Hoyo1;
+                                        break;
+                                    case 2:
+                                        Presion = Presion + Hoyo2;
+                                        break;
+                                    case 3:
+                                        Presion = Presion + Hoyo3;
+                                        break;
+                                    case 4:
+                                        Presion = Presion + Hoyo4;
+                                        break;
+                                    case 5:
+                                        Presion = Presion + Hoyo5;
+                                        break;
+                                    case 6:
+                                        Presion = Presion + Hoyo6;
+                                        break;
+                                    case 7:
+                                        Presion = Presion + Hoyo7;
+                                        break;
+                                    case 8:
+                                        Presion = Presion + Hoyo8;
+                                        break;
+                                    case 9:
+                                        Presion = Presion + Hoyo9;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
+
+                                PresionValor4 = Convert.ToString(Presion);
+                            }
+
+                            if (PresionValor5 != "")
+                            {
+                                double Presion = Convert.ToInt32(PresionValor5);
+
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion = Presion + Hoyo1;
+                                        break;
+                                    case 2:
+                                        Presion = Presion + Hoyo2;
+                                        break;
+                                    case 3:
+                                        Presion = Presion + Hoyo3;
+                                        break;
+                                    case 4:
+                                        Presion = Presion + Hoyo4;
+                                        break;
+                                    case 5:
+                                        Presion = Presion + Hoyo5;
+                                        break;
+                                    case 6:
+                                        Presion = Presion + Hoyo6;
+                                        break;
+                                    case 7:
+                                        Presion = Presion + Hoyo7;
+                                        break;
+                                    case 8:
+                                        Presion = Presion + Hoyo8;
+                                        break;
+                                    case 9:
+                                        Presion = Presion + Hoyo9;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
+
+                                PresionValor5 = Convert.ToString(Presion);
+                            }
+
+                            if (PresionValor6 != "")
+                            {
+                                double Presion = Convert.ToInt32(PresionValor6);
+
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion = Presion + Hoyo1;
+                                        break;
+                                    case 2:
+                                        Presion = Presion + Hoyo2;
+                                        break;
+                                    case 3:
+                                        Presion = Presion + Hoyo3;
+                                        break;
+                                    case 4:
+                                        Presion = Presion + Hoyo4;
+                                        break;
+                                    case 5:
+                                        Presion = Presion + Hoyo5;
+                                        break;
+                                    case 6:
+                                        Presion = Presion + Hoyo6;
+                                        break;
+                                    case 7:
+                                        Presion = Presion + Hoyo7;
+                                        break;
+                                    case 8:
+                                        Presion = Presion + Hoyo8;
+                                        break;
+                                    case 9:
+                                        Presion = Presion + Hoyo9;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
+
+                                PresionValor6 = Convert.ToString(Presion);
+                            }
+
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7;
+
+                            continue;
+                        }
+
+                        if (PresionValor8 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "" && PresionValor5 != "" && PresionValor6 != "" && PresionValor7 != "")
+                        {
+                            PresionValor8 = "0";
+                            Presion1 = 0;
+
+                            if (PresionValor1 != "")
+                            {
+                                double Presion = Convert.ToInt32(PresionValor1);
+
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion = Presion + Hoyo1;
+                                        break;
+                                    case 2:
+                                        Presion = Presion + Hoyo2;
+                                        break;
+                                    case 3:
+                                        Presion = Presion + Hoyo3;
+                                        break;
+                                    case 4:
+                                        Presion = Presion + Hoyo4;
+                                        break;
+                                    case 5:
+                                        Presion = Presion + Hoyo5;
+                                        break;
+                                    case 6:
+                                        Presion = Presion + Hoyo6;
+                                        break;
+                                    case 7:
+                                        Presion = Presion + Hoyo7;
+                                        break;
+                                    case 8:
+                                        Presion = Presion + Hoyo8;
+                                        break;
+                                    case 9:
+                                        Presion = Presion + Hoyo9;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
+
+                                PresionValor1 = Convert.ToString(Presion);
+                            }
+
+                            if (PresionValor2 != "")
+                            {
+                                double Presion = Convert.ToInt32(PresionValor2);
+
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion = Presion + Hoyo1;
+                                        break;
+                                    case 2:
+                                        Presion = Presion + Hoyo2;
+                                        break;
+                                    case 3:
+                                        Presion = Presion + Hoyo3;
+                                        break;
+                                    case 4:
+                                        Presion = Presion + Hoyo4;
+                                        break;
+                                    case 5:
+                                        Presion = Presion + Hoyo5;
+                                        break;
+                                    case 6:
+                                        Presion = Presion + Hoyo6;
+                                        break;
+                                    case 7:
+                                        Presion = Presion + Hoyo7;
+                                        break;
+                                    case 8:
+                                        Presion = Presion + Hoyo8;
+                                        break;
+                                    case 9:
+                                        Presion = Presion + Hoyo9;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
+
+                                PresionValor2 = Convert.ToString(Presion);
+                            }
+
+                            if (PresionValor3 != "")
+                            {
+                                double Presion = Convert.ToInt32(PresionValor3);
+
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion = Presion + Hoyo1;
+                                        break;
+                                    case 2:
+                                        Presion = Presion + Hoyo2;
+                                        break;
+                                    case 3:
+                                        Presion = Presion + Hoyo3;
+                                        break;
+                                    case 4:
+                                        Presion = Presion + Hoyo4;
+                                        break;
+                                    case 5:
+                                        Presion = Presion + Hoyo5;
+                                        break;
+                                    case 6:
+                                        Presion = Presion + Hoyo6;
+                                        break;
+                                    case 7:
+                                        Presion = Presion + Hoyo7;
+                                        break;
+                                    case 8:
+                                        Presion = Presion + Hoyo8;
+                                        break;
+                                    case 9:
+                                        Presion = Presion + Hoyo9;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
+
+                                PresionValor3 = Convert.ToString(Presion);
+                            }
+
+                            if (PresionValor4 != "")
+                            {
+                                double Presion = Convert.ToInt32(PresionValor4);
+
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion = Presion + Hoyo1;
+                                        break;
+                                    case 2:
+                                        Presion = Presion + Hoyo2;
+                                        break;
+                                    case 3:
+                                        Presion = Presion + Hoyo3;
+                                        break;
+                                    case 4:
+                                        Presion = Presion + Hoyo4;
+                                        break;
+                                    case 5:
+                                        Presion = Presion + Hoyo5;
+                                        break;
+                                    case 6:
+                                        Presion = Presion + Hoyo6;
+                                        break;
+                                    case 7:
+                                        Presion = Presion + Hoyo7;
+                                        break;
+                                    case 8:
+                                        Presion = Presion + Hoyo8;
+                                        break;
+                                    case 9:
+                                        Presion = Presion + Hoyo9;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
+
+                                PresionValor4 = Convert.ToString(Presion);
+                            }
+
+                            if (PresionValor5 != "")
+                            {
+                                double Presion = Convert.ToInt32(PresionValor5);
+
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion = Presion + Hoyo1;
+                                        break;
+                                    case 2:
+                                        Presion = Presion + Hoyo2;
+                                        break;
+                                    case 3:
+                                        Presion = Presion + Hoyo3;
+                                        break;
+                                    case 4:
+                                        Presion = Presion + Hoyo4;
+                                        break;
+                                    case 5:
+                                        Presion = Presion + Hoyo5;
+                                        break;
+                                    case 6:
+                                        Presion = Presion + Hoyo6;
+                                        break;
+                                    case 7:
+                                        Presion = Presion + Hoyo7;
+                                        break;
+                                    case 8:
+                                        Presion = Presion + Hoyo8;
+                                        break;
+                                    case 9:
+                                        Presion = Presion + Hoyo9;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
+
+                                PresionValor5 = Convert.ToString(Presion);
+                            }
+
+                            if (PresionValor6 != "")
+                            {
+                                double Presion = Convert.ToInt32(PresionValor6);
+
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion = Presion + Hoyo1;
+                                        break;
+                                    case 2:
+                                        Presion = Presion + Hoyo2;
+                                        break;
+                                    case 3:
+                                        Presion = Presion + Hoyo3;
+                                        break;
+                                    case 4:
+                                        Presion = Presion + Hoyo4;
+                                        break;
+                                    case 5:
+                                        Presion = Presion + Hoyo5;
+                                        break;
+                                    case 6:
+                                        Presion = Presion + Hoyo6;
+                                        break;
+                                    case 7:
+                                        Presion = Presion + Hoyo7;
+                                        break;
+                                    case 8:
+                                        Presion = Presion + Hoyo8;
+                                        break;
+                                    case 9:
+                                        Presion = Presion + Hoyo9;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
+
+                                PresionValor6 = Convert.ToString(Presion);
+                            }
+
+                            if (PresionValor7 != "")
+                            {
+                                double Presion = Convert.ToInt32(PresionValor7);
+
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion = Presion + Hoyo1;
+                                        break;
+                                    case 2:
+                                        Presion = Presion + Hoyo2;
+                                        break;
+                                    case 3:
+                                        Presion = Presion + Hoyo3;
+                                        break;
+                                    case 4:
+                                        Presion = Presion + Hoyo4;
+                                        break;
+                                    case 5:
+                                        Presion = Presion + Hoyo5;
+                                        break;
+                                    case 6:
+                                        Presion = Presion + Hoyo6;
+                                        break;
+                                    case 7:
+                                        Presion = Presion + Hoyo7;
+                                        break;
+                                    case 8:
+                                        Presion = Presion + Hoyo8;
+                                        break;
+                                    case 9:
+                                        Presion = Presion + Hoyo9;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
+
+                                PresionValor7 = Convert.ToString(Presion);
+                            }
+
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7 + ", " + PresionValor8;
+
+                            continue;
+                        }
+
+                        if (PresionValor9 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "" && PresionValor5 != "" && PresionValor6 != "" && PresionValor7 != "" && PresionValor8 != "")
+                        {
+                            PresionValor9 = "0";
+                            Presion1 = 0;
+
+                            if (PresionValor1 != "")
+                            {
+                                double Presion = Convert.ToInt32(PresionValor1);
+
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion = Presion + Hoyo1;
+                                        break;
+                                    case 2:
+                                        Presion = Presion + Hoyo2;
+                                        break;
+                                    case 3:
+                                        Presion = Presion + Hoyo3;
+                                        break;
+                                    case 4:
+                                        Presion = Presion + Hoyo4;
+                                        break;
+                                    case 5:
+                                        Presion = Presion + Hoyo5;
+                                        break;
+                                    case 6:
+                                        Presion = Presion + Hoyo6;
+                                        break;
+                                    case 7:
+                                        Presion = Presion + Hoyo7;
+                                        break;
+                                    case 8:
+                                        Presion = Presion + Hoyo8;
+                                        break;
+                                    case 9:
+                                        Presion = Presion + Hoyo9;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
+
+                                PresionValor1 = Convert.ToString(Presion);
+                            }
+
+                            if (PresionValor2 != "")
+                            {
+                                double Presion = Convert.ToInt32(PresionValor2);
+
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion = Presion + Hoyo1;
+                                        break;
+                                    case 2:
+                                        Presion = Presion + Hoyo2;
+                                        break;
+                                    case 3:
+                                        Presion = Presion + Hoyo3;
+                                        break;
+                                    case 4:
+                                        Presion = Presion + Hoyo4;
+                                        break;
+                                    case 5:
+                                        Presion = Presion + Hoyo5;
+                                        break;
+                                    case 6:
+                                        Presion = Presion + Hoyo6;
+                                        break;
+                                    case 7:
+                                        Presion = Presion + Hoyo7;
+                                        break;
+                                    case 8:
+                                        Presion = Presion + Hoyo8;
+                                        break;
+                                    case 9:
+                                        Presion = Presion + Hoyo9;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
+
+                                PresionValor2 = Convert.ToString(Presion);
+                            }
+
+                            if (PresionValor3 != "")
+                            {
+                                double Presion = Convert.ToInt32(PresionValor3);
+
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion = Presion + Hoyo1;
+                                        break;
+                                    case 2:
+                                        Presion = Presion + Hoyo2;
+                                        break;
+                                    case 3:
+                                        Presion = Presion + Hoyo3;
+                                        break;
+                                    case 4:
+                                        Presion = Presion + Hoyo4;
+                                        break;
+                                    case 5:
+                                        Presion = Presion + Hoyo5;
+                                        break;
+                                    case 6:
+                                        Presion = Presion + Hoyo6;
+                                        break;
+                                    case 7:
+                                        Presion = Presion + Hoyo7;
+                                        break;
+                                    case 8:
+                                        Presion = Presion + Hoyo8;
+                                        break;
+                                    case 9:
+                                        Presion = Presion + Hoyo9;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
+
+                                PresionValor3 = Convert.ToString(Presion);
+                            }
+
+                            if (PresionValor4 != "")
+                            {
+                                double Presion = Convert.ToInt32(PresionValor4);
+
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion = Presion + Hoyo1;
+                                        break;
+                                    case 2:
+                                        Presion = Presion + Hoyo2;
+                                        break;
+                                    case 3:
+                                        Presion = Presion + Hoyo3;
+                                        break;
+                                    case 4:
+                                        Presion = Presion + Hoyo4;
+                                        break;
+                                    case 5:
+                                        Presion = Presion + Hoyo5;
+                                        break;
+                                    case 6:
+                                        Presion = Presion + Hoyo6;
+                                        break;
+                                    case 7:
+                                        Presion = Presion + Hoyo7;
+                                        break;
+                                    case 8:
+                                        Presion = Presion + Hoyo8;
+                                        break;
+                                    case 9:
+                                        Presion = Presion + Hoyo9;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
+
+                                PresionValor4 = Convert.ToString(Presion);
+                            }
+
+                            if (PresionValor5 != "")
+                            {
+                                double Presion = Convert.ToInt32(PresionValor5);
+
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion = Presion + Hoyo1;
+                                        break;
+                                    case 2:
+                                        Presion = Presion + Hoyo2;
+                                        break;
+                                    case 3:
+                                        Presion = Presion + Hoyo3;
+                                        break;
+                                    case 4:
+                                        Presion = Presion + Hoyo4;
+                                        break;
+                                    case 5:
+                                        Presion = Presion + Hoyo5;
+                                        break;
+                                    case 6:
+                                        Presion = Presion + Hoyo6;
+                                        break;
+                                    case 7:
+                                        Presion = Presion + Hoyo7;
+                                        break;
+                                    case 8:
+                                        Presion = Presion + Hoyo8;
+                                        break;
+                                    case 9:
+                                        Presion = Presion + Hoyo9;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
+
+                                PresionValor5 = Convert.ToString(Presion);
+                            }
+
+                            if (PresionValor6 != "")
+                            {
+                                double Presion = Convert.ToInt32(PresionValor6);
+
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion = Presion + Hoyo1;
+                                        break;
+                                    case 2:
+                                        Presion = Presion + Hoyo2;
+                                        break;
+                                    case 3:
+                                        Presion = Presion + Hoyo3;
+                                        break;
+                                    case 4:
+                                        Presion = Presion + Hoyo4;
+                                        break;
+                                    case 5:
+                                        Presion = Presion + Hoyo5;
+                                        break;
+                                    case 6:
+                                        Presion = Presion + Hoyo6;
+                                        break;
+                                    case 7:
+                                        Presion = Presion + Hoyo7;
+                                        break;
+                                    case 8:
+                                        Presion = Presion + Hoyo8;
+                                        break;
+                                    case 9:
+                                        Presion = Presion + Hoyo9;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
+
+                                PresionValor6 = Convert.ToString(Presion);
+                            }
+
+                            if (PresionValor7 != "")
+                            {
+                                double Presion = Convert.ToInt32(PresionValor7);
+
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion = Presion + Hoyo1;
+                                        break;
+                                    case 2:
+                                        Presion = Presion + Hoyo2;
+                                        break;
+                                    case 3:
+                                        Presion = Presion + Hoyo3;
+                                        break;
+                                    case 4:
+                                        Presion = Presion + Hoyo4;
+                                        break;
+                                    case 5:
+                                        Presion = Presion + Hoyo5;
+                                        break;
+                                    case 6:
+                                        Presion = Presion + Hoyo6;
+                                        break;
+                                    case 7:
+                                        Presion = Presion + Hoyo7;
+                                        break;
+                                    case 8:
+                                        Presion = Presion + Hoyo8;
+                                        break;
+                                    case 9:
+                                        Presion = Presion + Hoyo9;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
+
+                                PresionValor7 = Convert.ToString(Presion);
+                            }
+
+                            if (PresionValor8 != "")
+                            {
+                                double Presion = Convert.ToInt32(PresionValor8);
+
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion = Presion + Hoyo1;
+                                        break;
+                                    case 2:
+                                        Presion = Presion + Hoyo2;
+                                        break;
+                                    case 3:
+                                        Presion = Presion + Hoyo3;
+                                        break;
+                                    case 4:
+                                        Presion = Presion + Hoyo4;
+                                        break;
+                                    case 5:
+                                        Presion = Presion + Hoyo5;
+                                        break;
+                                    case 6:
+                                        Presion = Presion + Hoyo6;
+                                        break;
+                                    case 7:
+                                        Presion = Presion + Hoyo7;
+                                        break;
+                                    case 8:
+                                        Presion = Presion + Hoyo8;
+                                        break;
+                                    case 9:
+                                        Presion = Presion + Hoyo9;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
+
+                                PresionValor8 = Convert.ToString(Presion);
+                            }
+
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7 + ", " + PresionValor8 + ", " + PresionValor9;
+
+                            continue;
+                        }
+
+                        //if (PresionValor10 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "" && PresionValor5 != "" && PresionValor6 != "" && PresionValor7 != "" && PresionValor8 != "" && PresionValor9 != "")
+                        //{
+                        //    PresionValor10 = "0";
+                        //    Presion1 = 0;
+
+                        //    if (PresionValor1 != "")
+                        //    {
+                        //        double Presion = Convert.ToInt32(PresionValor1);
+
+                        //        switch (i)
+                        //        {
+                        //            case 1:
+                        //                Presion = Presion + Hoyo1;
+                        //                break;
+                        //            case 2:
+                        //                Presion = Presion + Hoyo2;
+                        //                break;
+                        //            case 3:
+                        //                Presion = Presion + Hoyo3;
+                        //                break;
+                        //            case 4:
+                        //                Presion = Presion + Hoyo4;
+                        //                break;
+                        //            case 5:
+                        //                Presion = Presion + Hoyo5;
+                        //                break;
+                        //            case 6:
+                        //                Presion = Presion + Hoyo6;
+                        //                break;
+                        //            case 7:
+                        //                Presion = Presion + Hoyo7;
+                        //                break;
+                        //            case 8:
+                        //                Presion = Presion + Hoyo8;
+                        //                break;
+                        //            case 9:
+                        //                Presion = Presion + Hoyo9;
+                        //                break;
+                        //            default:
+                        //                Console.WriteLine("Default case");
+                        //                break;
+                        //        }
+
+                        //        PresionValor1 = Convert.ToString(Presion);
+                        //    }
+
+                        //    if (PresionValor2 != "")
+                        //    {
+                        //        double Presion = Convert.ToInt32(PresionValor2);
+
+                        //        switch (i)
+                        //        {
+                        //            case 1:
+                        //                Presion = Presion + Hoyo1;
+                        //                break;
+                        //            case 2:
+                        //                Presion = Presion + Hoyo2;
+                        //                break;
+                        //            case 3:
+                        //                Presion = Presion + Hoyo3;
+                        //                break;
+                        //            case 4:
+                        //                Presion = Presion + Hoyo4;
+                        //                break;
+                        //            case 5:
+                        //                Presion = Presion + Hoyo5;
+                        //                break;
+                        //            case 6:
+                        //                Presion = Presion + Hoyo6;
+                        //                break;
+                        //            case 7:
+                        //                Presion = Presion + Hoyo7;
+                        //                break;
+                        //            case 8:
+                        //                Presion = Presion + Hoyo8;
+                        //                break;
+                        //            case 9:
+                        //                Presion = Presion + Hoyo9;
+                        //                break;
+                        //            default:
+                        //                Console.WriteLine("Default case");
+                        //                break;
+                        //        }
+
+                        //        PresionValor2 = Convert.ToString(Presion);
+                        //    }
+
+                        //    if (PresionValor3 != "")
+                        //    {
+                        //        double Presion = Convert.ToInt32(PresionValor3);
+
+                        //        switch (i)
+                        //        {
+                        //            case 1:
+                        //                Presion = Presion + Hoyo1;
+                        //                break;
+                        //            case 2:
+                        //                Presion = Presion + Hoyo2;
+                        //                break;
+                        //            case 3:
+                        //                Presion = Presion + Hoyo3;
+                        //                break;
+                        //            case 4:
+                        //                Presion = Presion + Hoyo4;
+                        //                break;
+                        //            case 5:
+                        //                Presion = Presion + Hoyo5;
+                        //                break;
+                        //            case 6:
+                        //                Presion = Presion + Hoyo6;
+                        //                break;
+                        //            case 7:
+                        //                Presion = Presion + Hoyo7;
+                        //                break;
+                        //            case 8:
+                        //                Presion = Presion + Hoyo8;
+                        //                break;
+                        //            case 9:
+                        //                Presion = Presion + Hoyo9;
+                        //                break;
+                        //            default:
+                        //                Console.WriteLine("Default case");
+                        //                break;
+                        //        }
+
+                        //        PresionValor3 = Convert.ToString(Presion);
+                        //    }
+
+                        //    if (PresionValor4 != "")
+                        //    {
+                        //        double Presion = Convert.ToInt32(PresionValor4);
+
+                        //        switch (i)
+                        //        {
+                        //            case 1:
+                        //                Presion = Presion + Hoyo1;
+                        //                break;
+                        //            case 2:
+                        //                Presion = Presion + Hoyo2;
+                        //                break;
+                        //            case 3:
+                        //                Presion = Presion + Hoyo3;
+                        //                break;
+                        //            case 4:
+                        //                Presion = Presion + Hoyo4;
+                        //                break;
+                        //            case 5:
+                        //                Presion = Presion + Hoyo5;
+                        //                break;
+                        //            case 6:
+                        //                Presion = Presion + Hoyo6;
+                        //                break;
+                        //            case 7:
+                        //                Presion = Presion + Hoyo7;
+                        //                break;
+                        //            case 8:
+                        //                Presion = Presion + Hoyo8;
+                        //                break;
+                        //            case 9:
+                        //                Presion = Presion + Hoyo9;
+                        //                break;
+                        //            default:
+                        //                Console.WriteLine("Default case");
+                        //                break;
+                        //        }
+
+                        //        PresionValor4 = Convert.ToString(Presion);
+                        //    }
+
+                        //    if (PresionValor5 != "")
+                        //    {
+                        //        double Presion = Convert.ToInt32(PresionValor5);
+
+                        //        switch (i)
+                        //        {
+                        //            case 1:
+                        //                Presion = Presion + Hoyo1;
+                        //                break;
+                        //            case 2:
+                        //                Presion = Presion + Hoyo2;
+                        //                break;
+                        //            case 3:
+                        //                Presion = Presion + Hoyo3;
+                        //                break;
+                        //            case 4:
+                        //                Presion = Presion + Hoyo4;
+                        //                break;
+                        //            case 5:
+                        //                Presion = Presion + Hoyo5;
+                        //                break;
+                        //            case 6:
+                        //                Presion = Presion + Hoyo6;
+                        //                break;
+                        //            case 7:
+                        //                Presion = Presion + Hoyo7;
+                        //                break;
+                        //            case 8:
+                        //                Presion = Presion + Hoyo8;
+                        //                break;
+                        //            case 9:
+                        //                Presion = Presion + Hoyo9;
+                        //                break;
+                        //            default:
+                        //                Console.WriteLine("Default case");
+                        //                break;
+                        //        }
+
+                        //        PresionValor5 = Convert.ToString(Presion);
+                        //    }
+
+                        //    if (PresionValor6 != "")
+                        //    {
+                        //        double Presion = Convert.ToInt32(PresionValor6);
+
+                        //        switch (i)
+                        //        {
+                        //            case 1:
+                        //                Presion = Presion + Hoyo1;
+                        //                break;
+                        //            case 2:
+                        //                Presion = Presion + Hoyo2;
+                        //                break;
+                        //            case 3:
+                        //                Presion = Presion + Hoyo3;
+                        //                break;
+                        //            case 4:
+                        //                Presion = Presion + Hoyo4;
+                        //                break;
+                        //            case 5:
+                        //                Presion = Presion + Hoyo5;
+                        //                break;
+                        //            case 6:
+                        //                Presion = Presion + Hoyo6;
+                        //                break;
+                        //            case 7:
+                        //                Presion = Presion + Hoyo7;
+                        //                break;
+                        //            case 8:
+                        //                Presion = Presion + Hoyo8;
+                        //                break;
+                        //            case 9:
+                        //                Presion = Presion + Hoyo9;
+                        //                break;
+                        //            default:
+                        //                Console.WriteLine("Default case");
+                        //                break;
+                        //        }
+
+                        //        PresionValor6 = Convert.ToString(Presion);
+                        //    }
+
+                        //    if (PresionValor7 != "")
+                        //    {
+                        //        double Presion = Convert.ToInt32(PresionValor7);
+
+                        //        switch (i)
+                        //        {
+                        //            case 1:
+                        //                Presion = Presion + Hoyo1;
+                        //                break;
+                        //            case 2:
+                        //                Presion = Presion + Hoyo2;
+                        //                break;
+                        //            case 3:
+                        //                Presion = Presion + Hoyo3;
+                        //                break;
+                        //            case 4:
+                        //                Presion = Presion + Hoyo4;
+                        //                break;
+                        //            case 5:
+                        //                Presion = Presion + Hoyo5;
+                        //                break;
+                        //            case 6:
+                        //                Presion = Presion + Hoyo6;
+                        //                break;
+                        //            case 7:
+                        //                Presion = Presion + Hoyo7;
+                        //                break;
+                        //            case 8:
+                        //                Presion = Presion + Hoyo8;
+                        //                break;
+                        //            case 9:
+                        //                Presion = Presion + Hoyo9;
+                        //                break;
+                        //            default:
+                        //                Console.WriteLine("Default case");
+                        //                break;
+                        //        }
+
+                        //        PresionValor7 = Convert.ToString(Presion);
+                        //    }
+
+                        //    if (PresionValor8 != "")
+                        //    {
+                        //        double Presion = Convert.ToInt32(PresionValor8);
+
+                        //        switch (i)
+                        //        {
+                        //            case 1:
+                        //                Presion = Presion + Hoyo1;
+                        //                break;
+                        //            case 2:
+                        //                Presion = Presion + Hoyo2;
+                        //                break;
+                        //            case 3:
+                        //                Presion = Presion + Hoyo3;
+                        //                break;
+                        //            case 4:
+                        //                Presion = Presion + Hoyo4;
+                        //                break;
+                        //            case 5:
+                        //                Presion = Presion + Hoyo5;
+                        //                break;
+                        //            case 6:
+                        //                Presion = Presion + Hoyo6;
+                        //                break;
+                        //            case 7:
+                        //                Presion = Presion + Hoyo7;
+                        //                break;
+                        //            case 8:
+                        //                Presion = Presion + Hoyo8;
+                        //                break;
+                        //            case 9:
+                        //                Presion = Presion + Hoyo9;
+                        //                break;
+                        //            default:
+                        //                Console.WriteLine("Default case");
+                        //                break;
+                        //        }
+
+                        //        PresionValor8 = Convert.ToString(Presion);
+                        //    }
+
+                        //    if (PresionValor9 != "")
+                        //    {
+                        //        double Presion = Convert.ToInt32(PresionValor9);
+
+                        //        switch (i)
+                        //        {
+                        //            case 1:
+                        //                Presion = Presion + Hoyo1;
+                        //                break;
+                        //            case 2:
+                        //                Presion = Presion + Hoyo2;
+                        //                break;
+                        //            case 3:
+                        //                Presion = Presion + Hoyo3;
+                        //                break;
+                        //            case 4:
+                        //                Presion = Presion + Hoyo4;
+                        //                break;
+                        //            case 5:
+                        //                Presion = Presion + Hoyo5;
+                        //                break;
+                        //            case 6:
+                        //                Presion = Presion + Hoyo6;
+                        //                break;
+                        //            case 7:
+                        //                Presion = Presion + Hoyo7;
+                        //                break;
+                        //            case 8:
+                        //                Presion = Presion + Hoyo8;
+                        //                break;
+                        //            case 9:
+                        //                Presion = Presion + Hoyo9;
+                        //                break;
+                        //            default:
+                        //                Console.WriteLine("Default case");
+                        //                break;
+                        //        }
+
+                        //        PresionValor9 = Convert.ToString(Presion);
+                        //    }
+
+                        //    ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7 + ", " + PresionValor8 + ", " + PresionValor9 + ", " + PresionValor10;
+
+                        //    continue;
+                        //}
+
                     }
                     else
                     {
@@ -11547,7 +12951,6 @@ namespace DragonGolfBackEnd.Controllers
                                     Console.WriteLine("Default case");
                                     break;
                             }
-
 
                             PresionValor1 = Convert.ToString(Presion);
 
@@ -11767,6 +13170,136 @@ namespace DragonGolfBackEnd.Controllers
 
                             ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6;
                         }
+
+                        if (PresionValor7 != "")
+                        {
+                            double Presion = Convert.ToInt32(PresionValor7);
+
+                            switch (i)
+                            {
+                                case 1:
+                                    Presion = Presion + Hoyo1;
+                                    break;
+                                case 2:
+                                    Presion = Presion + Hoyo2;
+                                    break;
+                                case 3:
+                                    Presion = Presion + Hoyo3;
+                                    break;
+                                case 4:
+                                    Presion = Presion + Hoyo4;
+                                    break;
+                                case 5:
+                                    Presion = Presion + Hoyo5;
+                                    break;
+                                case 6:
+                                    Presion = Presion + Hoyo6;
+                                    break;
+                                case 7:
+                                    Presion = Presion + Hoyo7;
+                                    break;
+                                case 8:
+                                    Presion = Presion + Hoyo8;
+                                    break;
+                                case 9:
+                                    Presion = Presion + Hoyo9;
+                                    break;
+                                default:
+                                    Console.WriteLine("Default case");
+                                    break;
+                            }
+
+                            PresionValor7 = Convert.ToString(Presion);
+
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7;
+                        }
+
+                        if (PresionValor8 != "")
+                        {
+                            double Presion = Convert.ToInt32(PresionValor8);
+
+                            switch (i)
+                            {
+                                case 1:
+                                    Presion = Presion + Hoyo1;
+                                    break;
+                                case 2:
+                                    Presion = Presion + Hoyo2;
+                                    break;
+                                case 3:
+                                    Presion = Presion + Hoyo3;
+                                    break;
+                                case 4:
+                                    Presion = Presion + Hoyo4;
+                                    break;
+                                case 5:
+                                    Presion = Presion + Hoyo5;
+                                    break;
+                                case 6:
+                                    Presion = Presion + Hoyo6;
+                                    break;
+                                case 7:
+                                    Presion = Presion + Hoyo7;
+                                    break;
+                                case 8:
+                                    Presion = Presion + Hoyo8;
+                                    break;
+                                case 9:
+                                    Presion = Presion + Hoyo9;
+                                    break;
+                                default:
+                                    Console.WriteLine("Default case");
+                                    break;
+                            }
+
+                            PresionValor8 = Convert.ToString(Presion);
+
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7 + ", " + PresionValor8;
+                        }
+
+                        if (PresionValor9 != "")
+                        {
+                            double Presion = Convert.ToInt32(PresionValor9);
+
+                            switch (i)
+                            {
+                                case 1:
+                                    Presion = Presion + Hoyo1;
+                                    break;
+                                case 2:
+                                    Presion = Presion + Hoyo2;
+                                    break;
+                                case 3:
+                                    Presion = Presion + Hoyo3;
+                                    break;
+                                case 4:
+                                    Presion = Presion + Hoyo4;
+                                    break;
+                                case 5:
+                                    Presion = Presion + Hoyo5;
+                                    break;
+                                case 6:
+                                    Presion = Presion + Hoyo6;
+                                    break;
+                                case 7:
+                                    Presion = Presion + Hoyo7;
+                                    break;
+                                case 8:
+                                    Presion = Presion + Hoyo8;
+                                    break;
+                                case 9:
+                                    Presion = Presion + Hoyo9;
+                                    break;
+                                default:
+                                    Console.WriteLine("Default case");
+                                    break;
+                            }
+
+                            PresionValor9 = Convert.ToString(Presion);
+
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7 + ", " + PresionValor8 + ", " + PresionValor9;
+                        }
+                    
                     }
 
                 }
@@ -11823,8 +13356,9 @@ namespace DragonGolfBackEnd.Controllers
         }
 
         private string[] CalcularApuestaPresionBack2(double Resultado1_H, double Resultado2_H, double Resultado3_H, double Resultado4_H, double Resultado5_H, double Resultado6_H, double Resultado7_H, double Resultado8_H, double Resultado9_H,
-            double Resultado1_L, double Resultado2_L, double Resultado3_L, double Resultado4_L, double Resultado5_L, double Resultado6_L, double Resultado7_L, double Resultado8_L, double Resultado9_L, bool ValidaJuegoInicio)
+           double Resultado1_L, double Resultado2_L, double Resultado3_L, double Resultado4_L, double Resultado5_L, double Resultado6_L, double Resultado7_L, double Resultado8_L, double Resultado9_L, bool ValidaJuegoInicio)
         {
+
             double[] ResultadoPresionFront_T = new double[10];
 
             string[] ResultadoPresionFrontString = new string[10];
@@ -13239,6 +14773,135 @@ namespace DragonGolfBackEnd.Controllers
                             ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6;
                         }
 
+                        if (PresionValor7 != "")
+                        {
+                            double Presion = Convert.ToInt32(PresionValor7);
+
+                            switch (i)
+                            {
+                                case 1:
+                                    Presion = Presion + Hoyo1;
+                                    break;
+                                case 2:
+                                    Presion = Presion + Hoyo2;
+                                    break;
+                                case 3:
+                                    Presion = Presion + Hoyo3;
+                                    break;
+                                case 4:
+                                    Presion = Presion + Hoyo4;
+                                    break;
+                                case 5:
+                                    Presion = Presion + Hoyo5;
+                                    break;
+                                case 6:
+                                    Presion = Presion + Hoyo6;
+                                    break;
+                                case 7:
+                                    Presion = Presion + Hoyo7;
+                                    break;
+                                case 8:
+                                    Presion = Presion + Hoyo8;
+                                    break;
+                                case 9:
+                                    Presion = Presion + Hoyo9;
+                                    break;
+                                default:
+                                    Console.WriteLine("Default case");
+                                    break;
+                            }
+
+                            PresionValor7 = Convert.ToString(Presion);
+
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7;
+                        }
+
+                        if (PresionValor8 != "")
+                        {
+                            double Presion = Convert.ToInt32(PresionValor8);
+
+                            switch (i)
+                            {
+                                case 1:
+                                    Presion = Presion + Hoyo1;
+                                    break;
+                                case 2:
+                                    Presion = Presion + Hoyo2;
+                                    break;
+                                case 3:
+                                    Presion = Presion + Hoyo3;
+                                    break;
+                                case 4:
+                                    Presion = Presion + Hoyo4;
+                                    break;
+                                case 5:
+                                    Presion = Presion + Hoyo5;
+                                    break;
+                                case 6:
+                                    Presion = Presion + Hoyo6;
+                                    break;
+                                case 7:
+                                    Presion = Presion + Hoyo7;
+                                    break;
+                                case 8:
+                                    Presion = Presion + Hoyo8;
+                                    break;
+                                case 9:
+                                    Presion = Presion + Hoyo9;
+                                    break;
+                                default:
+                                    Console.WriteLine("Default case");
+                                    break;
+                            }
+
+                            PresionValor8 = Convert.ToString(Presion);
+
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7 + ", " + PresionValor8;
+                        }
+
+                        if (PresionValor9 != "")
+                        {
+                            double Presion = Convert.ToInt32(PresionValor9);
+
+                            switch (i)
+                            {
+                                case 1:
+                                    Presion = Presion + Hoyo1;
+                                    break;
+                                case 2:
+                                    Presion = Presion + Hoyo2;
+                                    break;
+                                case 3:
+                                    Presion = Presion + Hoyo3;
+                                    break;
+                                case 4:
+                                    Presion = Presion + Hoyo4;
+                                    break;
+                                case 5:
+                                    Presion = Presion + Hoyo5;
+                                    break;
+                                case 6:
+                                    Presion = Presion + Hoyo6;
+                                    break;
+                                case 7:
+                                    Presion = Presion + Hoyo7;
+                                    break;
+                                case 8:
+                                    Presion = Presion + Hoyo8;
+                                    break;
+                                case 9:
+                                    Presion = Presion + Hoyo9;
+                                    break;
+                                default:
+                                    Console.WriteLine("Default case");
+                                    break;
+                            }
+
+                            PresionValor9 = Convert.ToString(Presion);
+
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7 + ", " + PresionValor8 + ", " + PresionValor9;
+                        }
+
                     }
 
                 }
@@ -13982,6 +15645,1276 @@ namespace DragonGolfBackEnd.Controllers
                             continue;
                         }
 
+                        if (PresionValor7 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "" && PresionValor5 != "" && PresionValor6 != "")
+                        {
+                            PresionValor7 = "0";
+                            Presion1 = 0;
+
+                            if (PresionValor1 != "")
+                            {
+                                double Presion = Convert.ToInt32(PresionValor1);
+
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion = Presion + Hoyo1;
+                                        break;
+                                    case 2:
+                                        Presion = Presion + Hoyo2;
+                                        break;
+                                    case 3:
+                                        Presion = Presion + Hoyo3;
+                                        break;
+                                    case 4:
+                                        Presion = Presion + Hoyo4;
+                                        break;
+                                    case 5:
+                                        Presion = Presion + Hoyo5;
+                                        break;
+                                    case 6:
+                                        Presion = Presion + Hoyo6;
+                                        break;
+                                    case 7:
+                                        Presion = Presion + Hoyo7;
+                                        break;
+                                    case 8:
+                                        Presion = Presion + Hoyo8;
+                                        break;
+                                    case 9:
+                                        Presion = Presion + Hoyo9;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
+
+                                PresionValor1 = Convert.ToString(Presion);
+                            }
+
+                            if (PresionValor2 != "")
+                            {
+                                double Presion = Convert.ToInt32(PresionValor2);
+
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion = Presion + Hoyo1;
+                                        break;
+                                    case 2:
+                                        Presion = Presion + Hoyo2;
+                                        break;
+                                    case 3:
+                                        Presion = Presion + Hoyo3;
+                                        break;
+                                    case 4:
+                                        Presion = Presion + Hoyo4;
+                                        break;
+                                    case 5:
+                                        Presion = Presion + Hoyo5;
+                                        break;
+                                    case 6:
+                                        Presion = Presion + Hoyo6;
+                                        break;
+                                    case 7:
+                                        Presion = Presion + Hoyo7;
+                                        break;
+                                    case 8:
+                                        Presion = Presion + Hoyo8;
+                                        break;
+                                    case 9:
+                                        Presion = Presion + Hoyo9;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
+
+                                PresionValor2 = Convert.ToString(Presion);
+                            }
+
+                            if (PresionValor3 != "")
+                            {
+                                double Presion = Convert.ToInt32(PresionValor3);
+
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion = Presion + Hoyo1;
+                                        break;
+                                    case 2:
+                                        Presion = Presion + Hoyo2;
+                                        break;
+                                    case 3:
+                                        Presion = Presion + Hoyo3;
+                                        break;
+                                    case 4:
+                                        Presion = Presion + Hoyo4;
+                                        break;
+                                    case 5:
+                                        Presion = Presion + Hoyo5;
+                                        break;
+                                    case 6:
+                                        Presion = Presion + Hoyo6;
+                                        break;
+                                    case 7:
+                                        Presion = Presion + Hoyo7;
+                                        break;
+                                    case 8:
+                                        Presion = Presion + Hoyo8;
+                                        break;
+                                    case 9:
+                                        Presion = Presion + Hoyo9;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
+
+                                PresionValor3 = Convert.ToString(Presion);
+                            }
+
+                            if (PresionValor4 != "")
+                            {
+                                double Presion = Convert.ToInt32(PresionValor4);
+
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion = Presion + Hoyo1;
+                                        break;
+                                    case 2:
+                                        Presion = Presion + Hoyo2;
+                                        break;
+                                    case 3:
+                                        Presion = Presion + Hoyo3;
+                                        break;
+                                    case 4:
+                                        Presion = Presion + Hoyo4;
+                                        break;
+                                    case 5:
+                                        Presion = Presion + Hoyo5;
+                                        break;
+                                    case 6:
+                                        Presion = Presion + Hoyo6;
+                                        break;
+                                    case 7:
+                                        Presion = Presion + Hoyo7;
+                                        break;
+                                    case 8:
+                                        Presion = Presion + Hoyo8;
+                                        break;
+                                    case 9:
+                                        Presion = Presion + Hoyo9;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
+
+                                PresionValor4 = Convert.ToString(Presion);
+                            }
+
+                            if (PresionValor5 != "")
+                            {
+                                double Presion = Convert.ToInt32(PresionValor5);
+
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion = Presion + Hoyo1;
+                                        break;
+                                    case 2:
+                                        Presion = Presion + Hoyo2;
+                                        break;
+                                    case 3:
+                                        Presion = Presion + Hoyo3;
+                                        break;
+                                    case 4:
+                                        Presion = Presion + Hoyo4;
+                                        break;
+                                    case 5:
+                                        Presion = Presion + Hoyo5;
+                                        break;
+                                    case 6:
+                                        Presion = Presion + Hoyo6;
+                                        break;
+                                    case 7:
+                                        Presion = Presion + Hoyo7;
+                                        break;
+                                    case 8:
+                                        Presion = Presion + Hoyo8;
+                                        break;
+                                    case 9:
+                                        Presion = Presion + Hoyo9;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
+
+                                PresionValor5 = Convert.ToString(Presion);
+                            }
+
+                            if (PresionValor6 != "")
+                            {
+                                double Presion = Convert.ToInt32(PresionValor6);
+
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion = Presion + Hoyo1;
+                                        break;
+                                    case 2:
+                                        Presion = Presion + Hoyo2;
+                                        break;
+                                    case 3:
+                                        Presion = Presion + Hoyo3;
+                                        break;
+                                    case 4:
+                                        Presion = Presion + Hoyo4;
+                                        break;
+                                    case 5:
+                                        Presion = Presion + Hoyo5;
+                                        break;
+                                    case 6:
+                                        Presion = Presion + Hoyo6;
+                                        break;
+                                    case 7:
+                                        Presion = Presion + Hoyo7;
+                                        break;
+                                    case 8:
+                                        Presion = Presion + Hoyo8;
+                                        break;
+                                    case 9:
+                                        Presion = Presion + Hoyo9;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
+
+                                PresionValor6 = Convert.ToString(Presion);
+                            }
+
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7;
+
+                            continue;
+                        }
+
+                        if (PresionValor8 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "" && PresionValor5 != "" && PresionValor6 != "" && PresionValor7 != "")
+                        {
+                            PresionValor8 = "0";
+                            Presion1 = 0;
+
+                            if (PresionValor1 != "")
+                            {
+                                double Presion = Convert.ToInt32(PresionValor1);
+
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion = Presion + Hoyo1;
+                                        break;
+                                    case 2:
+                                        Presion = Presion + Hoyo2;
+                                        break;
+                                    case 3:
+                                        Presion = Presion + Hoyo3;
+                                        break;
+                                    case 4:
+                                        Presion = Presion + Hoyo4;
+                                        break;
+                                    case 5:
+                                        Presion = Presion + Hoyo5;
+                                        break;
+                                    case 6:
+                                        Presion = Presion + Hoyo6;
+                                        break;
+                                    case 7:
+                                        Presion = Presion + Hoyo7;
+                                        break;
+                                    case 8:
+                                        Presion = Presion + Hoyo8;
+                                        break;
+                                    case 9:
+                                        Presion = Presion + Hoyo9;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
+
+                                PresionValor1 = Convert.ToString(Presion);
+                            }
+
+                            if (PresionValor2 != "")
+                            {
+                                double Presion = Convert.ToInt32(PresionValor2);
+
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion = Presion + Hoyo1;
+                                        break;
+                                    case 2:
+                                        Presion = Presion + Hoyo2;
+                                        break;
+                                    case 3:
+                                        Presion = Presion + Hoyo3;
+                                        break;
+                                    case 4:
+                                        Presion = Presion + Hoyo4;
+                                        break;
+                                    case 5:
+                                        Presion = Presion + Hoyo5;
+                                        break;
+                                    case 6:
+                                        Presion = Presion + Hoyo6;
+                                        break;
+                                    case 7:
+                                        Presion = Presion + Hoyo7;
+                                        break;
+                                    case 8:
+                                        Presion = Presion + Hoyo8;
+                                        break;
+                                    case 9:
+                                        Presion = Presion + Hoyo9;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
+
+                                PresionValor2 = Convert.ToString(Presion);
+                            }
+
+                            if (PresionValor3 != "")
+                            {
+                                double Presion = Convert.ToInt32(PresionValor3);
+
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion = Presion + Hoyo1;
+                                        break;
+                                    case 2:
+                                        Presion = Presion + Hoyo2;
+                                        break;
+                                    case 3:
+                                        Presion = Presion + Hoyo3;
+                                        break;
+                                    case 4:
+                                        Presion = Presion + Hoyo4;
+                                        break;
+                                    case 5:
+                                        Presion = Presion + Hoyo5;
+                                        break;
+                                    case 6:
+                                        Presion = Presion + Hoyo6;
+                                        break;
+                                    case 7:
+                                        Presion = Presion + Hoyo7;
+                                        break;
+                                    case 8:
+                                        Presion = Presion + Hoyo8;
+                                        break;
+                                    case 9:
+                                        Presion = Presion + Hoyo9;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
+
+                                PresionValor3 = Convert.ToString(Presion);
+                            }
+
+                            if (PresionValor4 != "")
+                            {
+                                double Presion = Convert.ToInt32(PresionValor4);
+
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion = Presion + Hoyo1;
+                                        break;
+                                    case 2:
+                                        Presion = Presion + Hoyo2;
+                                        break;
+                                    case 3:
+                                        Presion = Presion + Hoyo3;
+                                        break;
+                                    case 4:
+                                        Presion = Presion + Hoyo4;
+                                        break;
+                                    case 5:
+                                        Presion = Presion + Hoyo5;
+                                        break;
+                                    case 6:
+                                        Presion = Presion + Hoyo6;
+                                        break;
+                                    case 7:
+                                        Presion = Presion + Hoyo7;
+                                        break;
+                                    case 8:
+                                        Presion = Presion + Hoyo8;
+                                        break;
+                                    case 9:
+                                        Presion = Presion + Hoyo9;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
+
+                                PresionValor4 = Convert.ToString(Presion);
+                            }
+
+                            if (PresionValor5 != "")
+                            {
+                                double Presion = Convert.ToInt32(PresionValor5);
+
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion = Presion + Hoyo1;
+                                        break;
+                                    case 2:
+                                        Presion = Presion + Hoyo2;
+                                        break;
+                                    case 3:
+                                        Presion = Presion + Hoyo3;
+                                        break;
+                                    case 4:
+                                        Presion = Presion + Hoyo4;
+                                        break;
+                                    case 5:
+                                        Presion = Presion + Hoyo5;
+                                        break;
+                                    case 6:
+                                        Presion = Presion + Hoyo6;
+                                        break;
+                                    case 7:
+                                        Presion = Presion + Hoyo7;
+                                        break;
+                                    case 8:
+                                        Presion = Presion + Hoyo8;
+                                        break;
+                                    case 9:
+                                        Presion = Presion + Hoyo9;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
+
+                                PresionValor5 = Convert.ToString(Presion);
+                            }
+
+                            if (PresionValor6 != "")
+                            {
+                                double Presion = Convert.ToInt32(PresionValor6);
+
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion = Presion + Hoyo1;
+                                        break;
+                                    case 2:
+                                        Presion = Presion + Hoyo2;
+                                        break;
+                                    case 3:
+                                        Presion = Presion + Hoyo3;
+                                        break;
+                                    case 4:
+                                        Presion = Presion + Hoyo4;
+                                        break;
+                                    case 5:
+                                        Presion = Presion + Hoyo5;
+                                        break;
+                                    case 6:
+                                        Presion = Presion + Hoyo6;
+                                        break;
+                                    case 7:
+                                        Presion = Presion + Hoyo7;
+                                        break;
+                                    case 8:
+                                        Presion = Presion + Hoyo8;
+                                        break;
+                                    case 9:
+                                        Presion = Presion + Hoyo9;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
+
+                                PresionValor6 = Convert.ToString(Presion);
+                            }
+
+                            if (PresionValor7 != "")
+                            {
+                                double Presion = Convert.ToInt32(PresionValor7);
+
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion = Presion + Hoyo1;
+                                        break;
+                                    case 2:
+                                        Presion = Presion + Hoyo2;
+                                        break;
+                                    case 3:
+                                        Presion = Presion + Hoyo3;
+                                        break;
+                                    case 4:
+                                        Presion = Presion + Hoyo4;
+                                        break;
+                                    case 5:
+                                        Presion = Presion + Hoyo5;
+                                        break;
+                                    case 6:
+                                        Presion = Presion + Hoyo6;
+                                        break;
+                                    case 7:
+                                        Presion = Presion + Hoyo7;
+                                        break;
+                                    case 8:
+                                        Presion = Presion + Hoyo8;
+                                        break;
+                                    case 9:
+                                        Presion = Presion + Hoyo9;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
+
+                                PresionValor7 = Convert.ToString(Presion);
+                            }
+
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7 + ", " + PresionValor8;
+
+                            continue;
+                        }
+
+                        if (PresionValor9 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "" && PresionValor5 != "" && PresionValor6 != "" && PresionValor7 != "" && PresionValor8 != "")
+                        {
+                            PresionValor9 = "0";
+                            Presion1 = 0;
+
+                            if (PresionValor1 != "")
+                            {
+                                double Presion = Convert.ToInt32(PresionValor1);
+
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion = Presion + Hoyo1;
+                                        break;
+                                    case 2:
+                                        Presion = Presion + Hoyo2;
+                                        break;
+                                    case 3:
+                                        Presion = Presion + Hoyo3;
+                                        break;
+                                    case 4:
+                                        Presion = Presion + Hoyo4;
+                                        break;
+                                    case 5:
+                                        Presion = Presion + Hoyo5;
+                                        break;
+                                    case 6:
+                                        Presion = Presion + Hoyo6;
+                                        break;
+                                    case 7:
+                                        Presion = Presion + Hoyo7;
+                                        break;
+                                    case 8:
+                                        Presion = Presion + Hoyo8;
+                                        break;
+                                    case 9:
+                                        Presion = Presion + Hoyo9;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
+
+                                PresionValor1 = Convert.ToString(Presion);
+                            }
+
+                            if (PresionValor2 != "")
+                            {
+                                double Presion = Convert.ToInt32(PresionValor2);
+
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion = Presion + Hoyo1;
+                                        break;
+                                    case 2:
+                                        Presion = Presion + Hoyo2;
+                                        break;
+                                    case 3:
+                                        Presion = Presion + Hoyo3;
+                                        break;
+                                    case 4:
+                                        Presion = Presion + Hoyo4;
+                                        break;
+                                    case 5:
+                                        Presion = Presion + Hoyo5;
+                                        break;
+                                    case 6:
+                                        Presion = Presion + Hoyo6;
+                                        break;
+                                    case 7:
+                                        Presion = Presion + Hoyo7;
+                                        break;
+                                    case 8:
+                                        Presion = Presion + Hoyo8;
+                                        break;
+                                    case 9:
+                                        Presion = Presion + Hoyo9;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
+
+                                PresionValor2 = Convert.ToString(Presion);
+                            }
+
+                            if (PresionValor3 != "")
+                            {
+                                double Presion = Convert.ToInt32(PresionValor3);
+
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion = Presion + Hoyo1;
+                                        break;
+                                    case 2:
+                                        Presion = Presion + Hoyo2;
+                                        break;
+                                    case 3:
+                                        Presion = Presion + Hoyo3;
+                                        break;
+                                    case 4:
+                                        Presion = Presion + Hoyo4;
+                                        break;
+                                    case 5:
+                                        Presion = Presion + Hoyo5;
+                                        break;
+                                    case 6:
+                                        Presion = Presion + Hoyo6;
+                                        break;
+                                    case 7:
+                                        Presion = Presion + Hoyo7;
+                                        break;
+                                    case 8:
+                                        Presion = Presion + Hoyo8;
+                                        break;
+                                    case 9:
+                                        Presion = Presion + Hoyo9;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
+
+                                PresionValor3 = Convert.ToString(Presion);
+                            }
+
+                            if (PresionValor4 != "")
+                            {
+                                double Presion = Convert.ToInt32(PresionValor4);
+
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion = Presion + Hoyo1;
+                                        break;
+                                    case 2:
+                                        Presion = Presion + Hoyo2;
+                                        break;
+                                    case 3:
+                                        Presion = Presion + Hoyo3;
+                                        break;
+                                    case 4:
+                                        Presion = Presion + Hoyo4;
+                                        break;
+                                    case 5:
+                                        Presion = Presion + Hoyo5;
+                                        break;
+                                    case 6:
+                                        Presion = Presion + Hoyo6;
+                                        break;
+                                    case 7:
+                                        Presion = Presion + Hoyo7;
+                                        break;
+                                    case 8:
+                                        Presion = Presion + Hoyo8;
+                                        break;
+                                    case 9:
+                                        Presion = Presion + Hoyo9;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
+
+                                PresionValor4 = Convert.ToString(Presion);
+                            }
+
+                            if (PresionValor5 != "")
+                            {
+                                double Presion = Convert.ToInt32(PresionValor5);
+
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion = Presion + Hoyo1;
+                                        break;
+                                    case 2:
+                                        Presion = Presion + Hoyo2;
+                                        break;
+                                    case 3:
+                                        Presion = Presion + Hoyo3;
+                                        break;
+                                    case 4:
+                                        Presion = Presion + Hoyo4;
+                                        break;
+                                    case 5:
+                                        Presion = Presion + Hoyo5;
+                                        break;
+                                    case 6:
+                                        Presion = Presion + Hoyo6;
+                                        break;
+                                    case 7:
+                                        Presion = Presion + Hoyo7;
+                                        break;
+                                    case 8:
+                                        Presion = Presion + Hoyo8;
+                                        break;
+                                    case 9:
+                                        Presion = Presion + Hoyo9;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
+
+                                PresionValor5 = Convert.ToString(Presion);
+                            }
+
+                            if (PresionValor6 != "")
+                            {
+                                double Presion = Convert.ToInt32(PresionValor6);
+
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion = Presion + Hoyo1;
+                                        break;
+                                    case 2:
+                                        Presion = Presion + Hoyo2;
+                                        break;
+                                    case 3:
+                                        Presion = Presion + Hoyo3;
+                                        break;
+                                    case 4:
+                                        Presion = Presion + Hoyo4;
+                                        break;
+                                    case 5:
+                                        Presion = Presion + Hoyo5;
+                                        break;
+                                    case 6:
+                                        Presion = Presion + Hoyo6;
+                                        break;
+                                    case 7:
+                                        Presion = Presion + Hoyo7;
+                                        break;
+                                    case 8:
+                                        Presion = Presion + Hoyo8;
+                                        break;
+                                    case 9:
+                                        Presion = Presion + Hoyo9;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
+
+                                PresionValor6 = Convert.ToString(Presion);
+                            }
+
+                            if (PresionValor7 != "")
+                            {
+                                double Presion = Convert.ToInt32(PresionValor7);
+
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion = Presion + Hoyo1;
+                                        break;
+                                    case 2:
+                                        Presion = Presion + Hoyo2;
+                                        break;
+                                    case 3:
+                                        Presion = Presion + Hoyo3;
+                                        break;
+                                    case 4:
+                                        Presion = Presion + Hoyo4;
+                                        break;
+                                    case 5:
+                                        Presion = Presion + Hoyo5;
+                                        break;
+                                    case 6:
+                                        Presion = Presion + Hoyo6;
+                                        break;
+                                    case 7:
+                                        Presion = Presion + Hoyo7;
+                                        break;
+                                    case 8:
+                                        Presion = Presion + Hoyo8;
+                                        break;
+                                    case 9:
+                                        Presion = Presion + Hoyo9;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
+
+                                PresionValor7 = Convert.ToString(Presion);
+                            }
+
+                            if (PresionValor8 != "")
+                            {
+                                double Presion = Convert.ToInt32(PresionValor8);
+
+                                switch (i)
+                                {
+                                    case 1:
+                                        Presion = Presion + Hoyo1;
+                                        break;
+                                    case 2:
+                                        Presion = Presion + Hoyo2;
+                                        break;
+                                    case 3:
+                                        Presion = Presion + Hoyo3;
+                                        break;
+                                    case 4:
+                                        Presion = Presion + Hoyo4;
+                                        break;
+                                    case 5:
+                                        Presion = Presion + Hoyo5;
+                                        break;
+                                    case 6:
+                                        Presion = Presion + Hoyo6;
+                                        break;
+                                    case 7:
+                                        Presion = Presion + Hoyo7;
+                                        break;
+                                    case 8:
+                                        Presion = Presion + Hoyo8;
+                                        break;
+                                    case 9:
+                                        Presion = Presion + Hoyo9;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Default case");
+                                        break;
+                                }
+
+                                PresionValor8 = Convert.ToString(Presion);
+                            }
+
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7 + ", " + PresionValor8 + ", " + PresionValor9;
+
+                            continue;
+                        }
+
+                        //if (PresionValor10 == "" && PresionValor1 != "" && PresionValor2 != "" && PresionValor3 != "" && PresionValor4 != "" && PresionValor5 != "" && PresionValor6 != "" && PresionValor7 != "" && PresionValor8 != "" && PresionValor9 != "")
+                        //{
+                        //    PresionValor10 = "0";
+                        //    Presion1 = 0;
+
+                        //    if (PresionValor1 != "")
+                        //    {
+                        //        double Presion = Convert.ToInt32(PresionValor1);
+
+                        //        switch (i)
+                        //        {
+                        //            case 1:
+                        //                Presion = Presion + Hoyo1;
+                        //                break;
+                        //            case 2:
+                        //                Presion = Presion + Hoyo2;
+                        //                break;
+                        //            case 3:
+                        //                Presion = Presion + Hoyo3;
+                        //                break;
+                        //            case 4:
+                        //                Presion = Presion + Hoyo4;
+                        //                break;
+                        //            case 5:
+                        //                Presion = Presion + Hoyo5;
+                        //                break;
+                        //            case 6:
+                        //                Presion = Presion + Hoyo6;
+                        //                break;
+                        //            case 7:
+                        //                Presion = Presion + Hoyo7;
+                        //                break;
+                        //            case 8:
+                        //                Presion = Presion + Hoyo8;
+                        //                break;
+                        //            case 9:
+                        //                Presion = Presion + Hoyo9;
+                        //                break;
+                        //            default:
+                        //                Console.WriteLine("Default case");
+                        //                break;
+                        //        }
+
+                        //        PresionValor1 = Convert.ToString(Presion);
+                        //    }
+
+                        //    if (PresionValor2 != "")
+                        //    {
+                        //        double Presion = Convert.ToInt32(PresionValor2);
+
+                        //        switch (i)
+                        //        {
+                        //            case 1:
+                        //                Presion = Presion + Hoyo1;
+                        //                break;
+                        //            case 2:
+                        //                Presion = Presion + Hoyo2;
+                        //                break;
+                        //            case 3:
+                        //                Presion = Presion + Hoyo3;
+                        //                break;
+                        //            case 4:
+                        //                Presion = Presion + Hoyo4;
+                        //                break;
+                        //            case 5:
+                        //                Presion = Presion + Hoyo5;
+                        //                break;
+                        //            case 6:
+                        //                Presion = Presion + Hoyo6;
+                        //                break;
+                        //            case 7:
+                        //                Presion = Presion + Hoyo7;
+                        //                break;
+                        //            case 8:
+                        //                Presion = Presion + Hoyo8;
+                        //                break;
+                        //            case 9:
+                        //                Presion = Presion + Hoyo9;
+                        //                break;
+                        //            default:
+                        //                Console.WriteLine("Default case");
+                        //                break;
+                        //        }
+
+                        //        PresionValor2 = Convert.ToString(Presion);
+                        //    }
+
+                        //    if (PresionValor3 != "")
+                        //    {
+                        //        double Presion = Convert.ToInt32(PresionValor3);
+
+                        //        switch (i)
+                        //        {
+                        //            case 1:
+                        //                Presion = Presion + Hoyo1;
+                        //                break;
+                        //            case 2:
+                        //                Presion = Presion + Hoyo2;
+                        //                break;
+                        //            case 3:
+                        //                Presion = Presion + Hoyo3;
+                        //                break;
+                        //            case 4:
+                        //                Presion = Presion + Hoyo4;
+                        //                break;
+                        //            case 5:
+                        //                Presion = Presion + Hoyo5;
+                        //                break;
+                        //            case 6:
+                        //                Presion = Presion + Hoyo6;
+                        //                break;
+                        //            case 7:
+                        //                Presion = Presion + Hoyo7;
+                        //                break;
+                        //            case 8:
+                        //                Presion = Presion + Hoyo8;
+                        //                break;
+                        //            case 9:
+                        //                Presion = Presion + Hoyo9;
+                        //                break;
+                        //            default:
+                        //                Console.WriteLine("Default case");
+                        //                break;
+                        //        }
+
+                        //        PresionValor3 = Convert.ToString(Presion);
+                        //    }
+
+                        //    if (PresionValor4 != "")
+                        //    {
+                        //        double Presion = Convert.ToInt32(PresionValor4);
+
+                        //        switch (i)
+                        //        {
+                        //            case 1:
+                        //                Presion = Presion + Hoyo1;
+                        //                break;
+                        //            case 2:
+                        //                Presion = Presion + Hoyo2;
+                        //                break;
+                        //            case 3:
+                        //                Presion = Presion + Hoyo3;
+                        //                break;
+                        //            case 4:
+                        //                Presion = Presion + Hoyo4;
+                        //                break;
+                        //            case 5:
+                        //                Presion = Presion + Hoyo5;
+                        //                break;
+                        //            case 6:
+                        //                Presion = Presion + Hoyo6;
+                        //                break;
+                        //            case 7:
+                        //                Presion = Presion + Hoyo7;
+                        //                break;
+                        //            case 8:
+                        //                Presion = Presion + Hoyo8;
+                        //                break;
+                        //            case 9:
+                        //                Presion = Presion + Hoyo9;
+                        //                break;
+                        //            default:
+                        //                Console.WriteLine("Default case");
+                        //                break;
+                        //        }
+
+                        //        PresionValor4 = Convert.ToString(Presion);
+                        //    }
+
+                        //    if (PresionValor5 != "")
+                        //    {
+                        //        double Presion = Convert.ToInt32(PresionValor5);
+
+                        //        switch (i)
+                        //        {
+                        //            case 1:
+                        //                Presion = Presion + Hoyo1;
+                        //                break;
+                        //            case 2:
+                        //                Presion = Presion + Hoyo2;
+                        //                break;
+                        //            case 3:
+                        //                Presion = Presion + Hoyo3;
+                        //                break;
+                        //            case 4:
+                        //                Presion = Presion + Hoyo4;
+                        //                break;
+                        //            case 5:
+                        //                Presion = Presion + Hoyo5;
+                        //                break;
+                        //            case 6:
+                        //                Presion = Presion + Hoyo6;
+                        //                break;
+                        //            case 7:
+                        //                Presion = Presion + Hoyo7;
+                        //                break;
+                        //            case 8:
+                        //                Presion = Presion + Hoyo8;
+                        //                break;
+                        //            case 9:
+                        //                Presion = Presion + Hoyo9;
+                        //                break;
+                        //            default:
+                        //                Console.WriteLine("Default case");
+                        //                break;
+                        //        }
+
+                        //        PresionValor5 = Convert.ToString(Presion);
+                        //    }
+
+                        //    if (PresionValor6 != "")
+                        //    {
+                        //        double Presion = Convert.ToInt32(PresionValor6);
+
+                        //        switch (i)
+                        //        {
+                        //            case 1:
+                        //                Presion = Presion + Hoyo1;
+                        //                break;
+                        //            case 2:
+                        //                Presion = Presion + Hoyo2;
+                        //                break;
+                        //            case 3:
+                        //                Presion = Presion + Hoyo3;
+                        //                break;
+                        //            case 4:
+                        //                Presion = Presion + Hoyo4;
+                        //                break;
+                        //            case 5:
+                        //                Presion = Presion + Hoyo5;
+                        //                break;
+                        //            case 6:
+                        //                Presion = Presion + Hoyo6;
+                        //                break;
+                        //            case 7:
+                        //                Presion = Presion + Hoyo7;
+                        //                break;
+                        //            case 8:
+                        //                Presion = Presion + Hoyo8;
+                        //                break;
+                        //            case 9:
+                        //                Presion = Presion + Hoyo9;
+                        //                break;
+                        //            default:
+                        //                Console.WriteLine("Default case");
+                        //                break;
+                        //        }
+
+                        //        PresionValor6 = Convert.ToString(Presion);
+                        //    }
+
+                        //    if (PresionValor7 != "")
+                        //    {
+                        //        double Presion = Convert.ToInt32(PresionValor7);
+
+                        //        switch (i)
+                        //        {
+                        //            case 1:
+                        //                Presion = Presion + Hoyo1;
+                        //                break;
+                        //            case 2:
+                        //                Presion = Presion + Hoyo2;
+                        //                break;
+                        //            case 3:
+                        //                Presion = Presion + Hoyo3;
+                        //                break;
+                        //            case 4:
+                        //                Presion = Presion + Hoyo4;
+                        //                break;
+                        //            case 5:
+                        //                Presion = Presion + Hoyo5;
+                        //                break;
+                        //            case 6:
+                        //                Presion = Presion + Hoyo6;
+                        //                break;
+                        //            case 7:
+                        //                Presion = Presion + Hoyo7;
+                        //                break;
+                        //            case 8:
+                        //                Presion = Presion + Hoyo8;
+                        //                break;
+                        //            case 9:
+                        //                Presion = Presion + Hoyo9;
+                        //                break;
+                        //            default:
+                        //                Console.WriteLine("Default case");
+                        //                break;
+                        //        }
+
+                        //        PresionValor7 = Convert.ToString(Presion);
+                        //    }
+
+                        //    if (PresionValor8 != "")
+                        //    {
+                        //        double Presion = Convert.ToInt32(PresionValor8);
+
+                        //        switch (i)
+                        //        {
+                        //            case 1:
+                        //                Presion = Presion + Hoyo1;
+                        //                break;
+                        //            case 2:
+                        //                Presion = Presion + Hoyo2;
+                        //                break;
+                        //            case 3:
+                        //                Presion = Presion + Hoyo3;
+                        //                break;
+                        //            case 4:
+                        //                Presion = Presion + Hoyo4;
+                        //                break;
+                        //            case 5:
+                        //                Presion = Presion + Hoyo5;
+                        //                break;
+                        //            case 6:
+                        //                Presion = Presion + Hoyo6;
+                        //                break;
+                        //            case 7:
+                        //                Presion = Presion + Hoyo7;
+                        //                break;
+                        //            case 8:
+                        //                Presion = Presion + Hoyo8;
+                        //                break;
+                        //            case 9:
+                        //                Presion = Presion + Hoyo9;
+                        //                break;
+                        //            default:
+                        //                Console.WriteLine("Default case");
+                        //                break;
+                        //        }
+
+                        //        PresionValor8 = Convert.ToString(Presion);
+                        //    }
+
+                        //    if (PresionValor9 != "")
+                        //    {
+                        //        double Presion = Convert.ToInt32(PresionValor9);
+
+                        //        switch (i)
+                        //        {
+                        //            case 1:
+                        //                Presion = Presion + Hoyo1;
+                        //                break;
+                        //            case 2:
+                        //                Presion = Presion + Hoyo2;
+                        //                break;
+                        //            case 3:
+                        //                Presion = Presion + Hoyo3;
+                        //                break;
+                        //            case 4:
+                        //                Presion = Presion + Hoyo4;
+                        //                break;
+                        //            case 5:
+                        //                Presion = Presion + Hoyo5;
+                        //                break;
+                        //            case 6:
+                        //                Presion = Presion + Hoyo6;
+                        //                break;
+                        //            case 7:
+                        //                Presion = Presion + Hoyo7;
+                        //                break;
+                        //            case 8:
+                        //                Presion = Presion + Hoyo8;
+                        //                break;
+                        //            case 9:
+                        //                Presion = Presion + Hoyo9;
+                        //                break;
+                        //            default:
+                        //                Console.WriteLine("Default case");
+                        //                break;
+                        //        }
+
+                        //        PresionValor9 = Convert.ToString(Presion);
+                        //    }
+
+                        //    ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7 + ", " + PresionValor8 + ", " + PresionValor9 + ", " + PresionValor10;
+
+                        //    continue;
+                        //}
+
                     }
                     else
                     {
@@ -14022,7 +16955,6 @@ namespace DragonGolfBackEnd.Controllers
                                     Console.WriteLine("Default case");
                                     break;
                             }
-
 
                             PresionValor1 = Convert.ToString(Presion);
 
@@ -14242,6 +17174,136 @@ namespace DragonGolfBackEnd.Controllers
 
                             ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6;
                         }
+
+                        if (PresionValor7 != "")
+                        {
+                            double Presion = Convert.ToInt32(PresionValor7);
+
+                            switch (i)
+                            {
+                                case 1:
+                                    Presion = Presion + Hoyo1;
+                                    break;
+                                case 2:
+                                    Presion = Presion + Hoyo2;
+                                    break;
+                                case 3:
+                                    Presion = Presion + Hoyo3;
+                                    break;
+                                case 4:
+                                    Presion = Presion + Hoyo4;
+                                    break;
+                                case 5:
+                                    Presion = Presion + Hoyo5;
+                                    break;
+                                case 6:
+                                    Presion = Presion + Hoyo6;
+                                    break;
+                                case 7:
+                                    Presion = Presion + Hoyo7;
+                                    break;
+                                case 8:
+                                    Presion = Presion + Hoyo8;
+                                    break;
+                                case 9:
+                                    Presion = Presion + Hoyo9;
+                                    break;
+                                default:
+                                    Console.WriteLine("Default case");
+                                    break;
+                            }
+
+                            PresionValor7 = Convert.ToString(Presion);
+
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7;
+                        }
+
+                        if (PresionValor8 != "")
+                        {
+                            double Presion = Convert.ToInt32(PresionValor8);
+
+                            switch (i)
+                            {
+                                case 1:
+                                    Presion = Presion + Hoyo1;
+                                    break;
+                                case 2:
+                                    Presion = Presion + Hoyo2;
+                                    break;
+                                case 3:
+                                    Presion = Presion + Hoyo3;
+                                    break;
+                                case 4:
+                                    Presion = Presion + Hoyo4;
+                                    break;
+                                case 5:
+                                    Presion = Presion + Hoyo5;
+                                    break;
+                                case 6:
+                                    Presion = Presion + Hoyo6;
+                                    break;
+                                case 7:
+                                    Presion = Presion + Hoyo7;
+                                    break;
+                                case 8:
+                                    Presion = Presion + Hoyo8;
+                                    break;
+                                case 9:
+                                    Presion = Presion + Hoyo9;
+                                    break;
+                                default:
+                                    Console.WriteLine("Default case");
+                                    break;
+                            }
+
+                            PresionValor8 = Convert.ToString(Presion);
+
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7 + ", " + PresionValor8;
+                        }
+
+                        if (PresionValor9 != "")
+                        {
+                            double Presion = Convert.ToInt32(PresionValor9);
+
+                            switch (i)
+                            {
+                                case 1:
+                                    Presion = Presion + Hoyo1;
+                                    break;
+                                case 2:
+                                    Presion = Presion + Hoyo2;
+                                    break;
+                                case 3:
+                                    Presion = Presion + Hoyo3;
+                                    break;
+                                case 4:
+                                    Presion = Presion + Hoyo4;
+                                    break;
+                                case 5:
+                                    Presion = Presion + Hoyo5;
+                                    break;
+                                case 6:
+                                    Presion = Presion + Hoyo6;
+                                    break;
+                                case 7:
+                                    Presion = Presion + Hoyo7;
+                                    break;
+                                case 8:
+                                    Presion = Presion + Hoyo8;
+                                    break;
+                                case 9:
+                                    Presion = Presion + Hoyo9;
+                                    break;
+                                default:
+                                    Console.WriteLine("Default case");
+                                    break;
+                            }
+
+                            PresionValor9 = Convert.ToString(Presion);
+
+                            ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7 + ", " + PresionValor8 + ", " + PresionValor9;
+                        }
+
                     }
 
                 }
@@ -14263,6 +17325,7 @@ namespace DragonGolfBackEnd.Controllers
                 }
 
             }
+
 
             string ResultadointFinal = "";
 

@@ -675,7 +675,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                     if (DificultatHoyo2 == Contador)
                                     {
-                                        if (ScoreHole2_P1 > 0 && ScoreHole2_P2 > 0 && ScoreHole3_P3 > 0 && ScoreHole4_P4 > 0)
+                                        if (ScoreHole2_P1 > 0 && ScoreHole2_P2 > 0 && ScoreHole2_P3 > 0 && ScoreHole2_P4 > 0)
                                         {
 
                                             if (TipoGolpesVentaja == "Hi Handicap")
@@ -3950,6 +3950,11 @@ namespace DragonGolfBackEnd.Controllers
                         else if (AdvInverso > 0)
                         {
                             int CicloFor = 18;
+
+                            if (AdvInverso > 18)
+                            {
+                                CicloFor = AdvInverso;
+                            }
 
                             double AdvPositivo = (-1) * (Adv);
                             int AdvPositivo2 = (-1) * (AdvInverso2);
