@@ -8932,7 +8932,7 @@ namespace DragonGolfBackEnd.Controllers
                                 }
                                 else
                                 {
-                                    if (ScoreHole17_P2 >= ScoreHole16_P4)
+                                    if (ScoreHole17_P2 >= ScoreHole17_P4)
                                     {
                                         Resultado17_H = ScoreHole17_P4 - ScoreHole17_P1;
                                     }
