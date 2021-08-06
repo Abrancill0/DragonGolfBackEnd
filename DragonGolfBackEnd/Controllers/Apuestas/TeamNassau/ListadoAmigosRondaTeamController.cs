@@ -284,6 +284,7 @@ namespace DragonGolfBackEnd.Controllers
 
                     string TipoGolpesVentaja = "";
                     string Player = "";
+                    bool Bet_CambioVentaja;
 
                     foreach (DataRow row in DT.Rows)
                     {
@@ -292,6 +293,7 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (Estatus == 1)
                         {
+                            Bet_CambioVentaja = Convert.ToBoolean(row["Bet_CambioVentaja"]);
                             Player = Convert.ToString(row["Player"]);
                             HoyoInicial = Convert.ToInt32(row["HoyoInicial"]);
 

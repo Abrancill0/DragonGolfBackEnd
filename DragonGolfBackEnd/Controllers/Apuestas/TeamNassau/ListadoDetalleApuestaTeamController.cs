@@ -419,6 +419,8 @@ namespace DragonGolfBackEnd.Controllers
                         Estatus = Convert.ToInt32(row["Estatus"]);
                         HoyoInicial = Convert.ToInt32(row["HoyoInicial"]);
 
+                        bool Bet_CambioVentaja = Convert.ToBoolean(row["Bet_CambioVentaja"]);
+
                         bool InicioPartida1 = Convert.ToBoolean(row["InicioPartida1"]);
                         bool InicioPartida2 = Convert.ToBoolean(row["InicioPartida2"]);
                         bool InicioPartida3 = Convert.ToBoolean(row["InicioPartida3"]);
@@ -645,7 +647,7 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
 
-                                                if (HandicapP1 > HandicapP3)
+                                                if (HandicapP1 > HandicapP3 && Bet_CambioVentaja == false)
                                                 {
 
                                                     //Validafinalizacion
@@ -678,7 +680,7 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
-                                                if (HandicapP1 < HandicapP3)
+                                                if (HandicapP1 < HandicapP3 && Bet_CambioVentaja == false)
                                                 {
                                                     //Validafinalizacion
                                                     if (Contador == AdvPositivo)
@@ -708,10 +710,10 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Each")
                                             {
-                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
                                                     //Se le da la ventaja al peor de ese equipo
-                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         //Validafinalizacion
                                                         if (Contador == AdvPositivo)
@@ -741,7 +743,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -768,9 +770,9 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 }
 
-                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
-                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    if (JugadorPeorEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -797,7 +799,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    if (JugadorPeorEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -837,7 +839,7 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
 
-                                                if (HandicapP1 > HandicapP3)
+                                                if (HandicapP1 > HandicapP3 && Bet_CambioVentaja == false)
                                                 {
 
                                                     //Validafinalizacion
@@ -869,7 +871,7 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
-                                                if (HandicapP1 < HandicapP3)
+                                                if (HandicapP1 < HandicapP3 && Bet_CambioVentaja == false)
                                                 {
 
                                                     //Validafinalizacion
@@ -900,10 +902,10 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Each")
                                             {
-                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
                                                     //Se le da la ventaja al peor de ese equipo
-                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         //Validafinalizacion
                                                         if (Contador == AdvPositivo)
@@ -933,7 +935,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -960,9 +962,9 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 }
 
-                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
-                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    if (JugadorPeorEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -989,7 +991,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    if (JugadorPeorEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -1029,7 +1031,7 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
 
-                                                if (HandicapP1 > HandicapP3)
+                                                if (HandicapP1 > HandicapP3 && Bet_CambioVentaja == false)
                                                 {
 
                                                     //Validafinalizacion
@@ -1061,7 +1063,7 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
-                                                if (HandicapP1 < HandicapP3)
+                                                if (HandicapP1 < HandicapP3 && Bet_CambioVentaja == false)
                                                 {
                                                     //Validafinalizacion
                                                     if (Contador == AdvPositivo)
@@ -1092,10 +1094,10 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Each")
                                             {
-                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
                                                     //Se le da la ventaja al peor de ese equipo
-                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         //Validafinalizacion
                                                         if (Contador == AdvPositivo)
@@ -1125,7 +1127,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -1154,7 +1156,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
                                                 {
-                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    if (JugadorPeorEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -1181,7 +1183,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    if (JugadorPeorEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -1222,7 +1224,7 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
 
-                                                if (HandicapP1 > HandicapP3)
+                                                if (HandicapP1 > HandicapP3 && Bet_CambioVentaja == false)
                                                 {
 
                                                     //Validafinalizacion
@@ -1254,7 +1256,7 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
-                                                if (HandicapP1 < HandicapP3)
+                                                if (HandicapP1 < HandicapP3 && Bet_CambioVentaja == false)
                                                 {
                                                     //Validafinalizacion
                                                     if (Contador == AdvPositivo)
@@ -1283,10 +1285,10 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Each")
                                             {
-                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
                                                     //Se le da la ventaja al peor de ese equipo
-                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         //Validafinalizacion
                                                         if (Contador == AdvPositivo)
@@ -1316,7 +1318,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -1343,9 +1345,9 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 }
 
-                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
-                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    if (JugadorPeorEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -1372,7 +1374,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    if (JugadorPeorEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -1412,7 +1414,7 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
 
-                                                if (HandicapP1 > HandicapP3)
+                                                if (HandicapP1 > HandicapP3 && Bet_CambioVentaja == false)
                                                 {
                                                     //Validafinalizacion
                                                     if (Contador == AdvPositivo)
@@ -1442,7 +1444,7 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
-                                                if (HandicapP1 < HandicapP3)
+                                                if (HandicapP1 < HandicapP3 && Bet_CambioVentaja == false)
                                                 {
                                                     //Validafinalizacion
                                                     if (Contador == AdvPositivo)
@@ -1473,10 +1475,10 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Each")
                                             {
-                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
                                                     //Se le da la ventaja al peor de ese equipo
-                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         //Validafinalizacion
                                                         if (Contador == AdvPositivo)
@@ -1506,7 +1508,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -1533,9 +1535,9 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 }
 
-                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
-                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    if (JugadorPeorEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -1562,7 +1564,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    if (JugadorPeorEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -1603,7 +1605,7 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
 
-                                                if (HandicapP1 > HandicapP3)
+                                                if (HandicapP1 > HandicapP3 && Bet_CambioVentaja == false)
                                                 {
                                                     //Validafinalizacion
                                                     if (Contador == AdvPositivo)
@@ -1634,7 +1636,7 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
-                                                if (HandicapP1 < HandicapP3)
+                                                if (HandicapP1 < HandicapP3 && Bet_CambioVentaja == false)
                                                 {
 
                                                     //Validafinalizacion
@@ -1667,10 +1669,10 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Each")
                                             {
-                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
                                                     //Se le da la ventaja al peor de ese equipo
-                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         //Validafinalizacion
                                                         if (Contador == AdvPositivo)
@@ -1700,7 +1702,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -1729,7 +1731,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
                                                 {
-                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    if (JugadorPeorEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -1756,7 +1758,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    if (JugadorPeorEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -1798,7 +1800,7 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
 
-                                                if (HandicapP1 > HandicapP3)
+                                                if (HandicapP1 > HandicapP3 && Bet_CambioVentaja == false)
                                                 {
 
                                                     //Validafinalizacion
@@ -1830,7 +1832,7 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
-                                                if (HandicapP1 < HandicapP3)
+                                                if (HandicapP1 < HandicapP3 && Bet_CambioVentaja == false)
                                                 {
 
                                                     //Validafinalizacion
@@ -1862,10 +1864,10 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Each")
                                             {
-                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
                                                     //Se le da la ventaja al peor de ese equipo
-                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         //Validafinalizacion
                                                         if (Contador == AdvPositivo)
@@ -1895,7 +1897,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -1922,9 +1924,9 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 }
 
-                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
-                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    if (JugadorPeorEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -1951,7 +1953,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    if (JugadorPeorEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -1992,7 +1994,7 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
 
-                                                if (HandicapP1 > HandicapP3)
+                                                if (HandicapP1 > HandicapP3 && Bet_CambioVentaja == false)
                                                 {
                                                     //Validafinalizacion
                                                     if (Contador == AdvPositivo)
@@ -2022,7 +2024,7 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
-                                                if (HandicapP1 < HandicapP3)
+                                                if (HandicapP1 < HandicapP3 && Bet_CambioVentaja == false)
                                                 {
                                                     //Validafinalizacion
                                                     if (Contador == AdvPositivo)
@@ -2051,10 +2053,10 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Each")
                                             {
-                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
                                                     //Se le da la ventaja al peor de ese equipo
-                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         //Validafinalizacion
                                                         if (Contador == AdvPositivo)
@@ -2084,7 +2086,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -2111,9 +2113,9 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 }
 
-                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
-                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    if (JugadorPeorEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -2140,7 +2142,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    if (JugadorPeorEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -2183,7 +2185,7 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
 
-                                                if (HandicapP1 > HandicapP3)
+                                                if (HandicapP1 > HandicapP3 && Bet_CambioVentaja == false)
                                                 {
 
                                                     //Validafinalizacion
@@ -2215,7 +2217,7 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
-                                                if (HandicapP1 < HandicapP3)
+                                                if (HandicapP1 < HandicapP3 && Bet_CambioVentaja == false)
                                                 {
                                                     //Validafinalizacion
                                                     if (Contador == AdvPositivo)
@@ -2245,10 +2247,10 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Each")
                                             {
-                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
                                                     //Se le da la ventaja al peor de ese equipo
-                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         //Validafinalizacion
                                                         if (Contador == AdvPositivo)
@@ -2278,7 +2280,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -2305,9 +2307,9 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 }
 
-                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
-                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    if (JugadorPeorEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -2334,7 +2336,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    if (JugadorPeorEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -2375,7 +2377,7 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
 
-                                                if (HandicapP1 > HandicapP3)
+                                                if (HandicapP1 > HandicapP3 && Bet_CambioVentaja == false)
                                                 {
 
                                                     //Validafinalizacion
@@ -2406,7 +2408,7 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
-                                                if (HandicapP1 < HandicapP3)
+                                                if (HandicapP1 < HandicapP3 && Bet_CambioVentaja == false)
                                                 {
                                                     //Validafinalizacion
                                                     if (Contador == AdvPositivo)
@@ -2435,10 +2437,10 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Each")
                                             {
-                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
                                                     //Se le da la ventaja al peor de ese equipo
-                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         //Validafinalizacion
                                                         if (Contador == AdvPositivo)
@@ -2468,7 +2470,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -2495,9 +2497,9 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 }
 
-                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
-                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    if (JugadorPeorEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -2524,7 +2526,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    if (JugadorPeorEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -2565,7 +2567,7 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
 
-                                                if (HandicapP1 > HandicapP3)
+                                                if (HandicapP1 > HandicapP3 && Bet_CambioVentaja == false)
                                                 {
                                                     //Validafinalizacion
                                                     if (Contador == AdvPositivo)
@@ -2595,7 +2597,7 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
-                                                if (HandicapP1 < HandicapP3)
+                                                if (HandicapP1 < HandicapP3 && Bet_CambioVentaja == false)
                                                 {
                                                     //Validafinalizacion
                                                     if (Contador == AdvPositivo)
@@ -2624,10 +2626,10 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Each")
                                             {
-                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
                                                     //Se le da la ventaja al peor de ese equipo
-                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         //Validafinalizacion
                                                         if (Contador == AdvPositivo)
@@ -2657,7 +2659,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -2684,9 +2686,9 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 }
 
-                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
-                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    if (JugadorPeorEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -2713,7 +2715,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    if (JugadorPeorEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -2755,7 +2757,7 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
 
-                                                if (HandicapP1 > HandicapP3)
+                                                if (HandicapP1 > HandicapP3 && Bet_CambioVentaja == false)
                                                 {
 
                                                     //Validafinalizacion
@@ -2787,7 +2789,7 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
-                                                if (HandicapP1 < HandicapP3)
+                                                if (HandicapP1 < HandicapP3 && Bet_CambioVentaja == false) 
                                                 {
                                                     //Validafinalizacion
                                                     if (Contador == AdvPositivo)
@@ -2816,10 +2818,10 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Each")
                                             {
-                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
                                                     //Se le da la ventaja al peor de ese equipo
-                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         //Validafinalizacion
                                                         if (Contador == AdvPositivo)
@@ -2849,7 +2851,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -2876,9 +2878,9 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 }
 
-                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
-                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    if (JugadorPeorEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -2905,7 +2907,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    if (JugadorPeorEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -2945,7 +2947,7 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
 
-                                                if (HandicapP1 > HandicapP3)
+                                                if (HandicapP1 > HandicapP3 && Bet_CambioVentaja == false)
                                                 {
                                                     //Validafinalizacion
                                                     if (Contador == AdvPositivo)
@@ -2977,7 +2979,7 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
-                                                if (HandicapP1 < HandicapP3)
+                                                if (HandicapP1 < HandicapP3 && Bet_CambioVentaja == false)
                                                 {
 
                                                     //Validafinalizacion
@@ -3008,10 +3010,10 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Each")
                                             {
-                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
                                                     //Se le da la ventaja al peor de ese equipo
-                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         //Validafinalizacion
                                                         if (Contador == AdvPositivo)
@@ -3041,7 +3043,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -3068,9 +3070,9 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 }
 
-                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
-                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    if (JugadorPeorEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -3097,7 +3099,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    if (JugadorPeorEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -3139,7 +3141,7 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
 
-                                                if (HandicapP1 > HandicapP3)
+                                                if (HandicapP1 > HandicapP3 && Bet_CambioVentaja == false)
                                                 {
 
                                                     //Validafinalizacion
@@ -3171,7 +3173,7 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
-                                                if (HandicapP1 < HandicapP3)
+                                                if (HandicapP1 < HandicapP3 && Bet_CambioVentaja == false)
                                                 {
 
                                                     //Validafinalizacion
@@ -3202,10 +3204,10 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Each")
                                             {
-                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
                                                     //Se le da la ventaja al peor de ese equipo
-                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         //Validafinalizacion
                                                         if (Contador == AdvPositivo)
@@ -3235,7 +3237,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -3262,9 +3264,9 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 }
 
-                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
-                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    if (JugadorPeorEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -3291,7 +3293,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    if (JugadorPeorEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -3333,7 +3335,7 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
 
-                                                if (HandicapP1 > HandicapP3)
+                                                if (HandicapP1 > HandicapP3 && Bet_CambioVentaja == false)
                                                 {
 
                                                     //Validafinalizacion
@@ -3365,7 +3367,7 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
-                                                if (HandicapP1 < HandicapP3)
+                                                if (HandicapP1 < HandicapP3 && Bet_CambioVentaja == false)
                                                 {
 
                                                     //Validafinalizacion
@@ -3396,10 +3398,10 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Each")
                                             {
-                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
                                                     //Se le da la ventaja al peor de ese equipo
-                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         //Validafinalizacion
                                                         if (Contador == AdvPositivo)
@@ -3429,7 +3431,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -3456,9 +3458,9 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 }
 
-                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
-                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    if (JugadorPeorEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -3485,7 +3487,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    if (JugadorPeorEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -3526,7 +3528,7 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
 
-                                                if (HandicapP1 > HandicapP3)
+                                                if (HandicapP1 > HandicapP3 && Bet_CambioVentaja == false)
                                                 {
 
                                                     //Validafinalizacion
@@ -3561,7 +3563,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 if (HandicapP1 < HandicapP3)
                                                 {
                                                     //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (Contador == AdvPositivo && Bet_CambioVentaja == false)
                                                     {
                                                         ScoreHole16_P1 = ScoreHole16_P1 - (0.5 + ValCompleto);
                                                     }
@@ -3588,10 +3590,10 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Each")
                                             {
-                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
                                                     //Se le da la ventaja al peor de ese equipo
-                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         //Validafinalizacion
                                                         if (Contador == AdvPositivo)
@@ -3621,7 +3623,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -3648,9 +3650,9 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 }
 
-                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
-                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    if (JugadorPeorEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -3677,7 +3679,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    if (JugadorPeorEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -3717,7 +3719,7 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
 
-                                                if (HandicapP1 > HandicapP3)
+                                                if (HandicapP1 > HandicapP3 && Bet_CambioVentaja == false)
                                                 {
 
                                                     //Validafinalizacion
@@ -3749,7 +3751,7 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
-                                                if (HandicapP1 < HandicapP3)
+                                                if (HandicapP1 < HandicapP3 && Bet_CambioVentaja == false)
                                                 {
 
                                                     //Validafinalizacion
@@ -3780,7 +3782,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Each")
                                             {
-                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
                                                     //Se le da la ventaja al peor de ese equipo
                                                     if (JugadorMejoresEquipo2 == "Jugador 2")
@@ -3813,7 +3815,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -3840,9 +3842,9 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 }
 
-                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
-                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    if (JugadorPeorEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -3869,7 +3871,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    if (JugadorPeorEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -3910,7 +3912,7 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
 
-                                                if (HandicapP1 > HandicapP3)
+                                                if (HandicapP1 > HandicapP3 && Bet_CambioVentaja == false)
                                                 {
 
                                                     //Validafinalizacion
@@ -3942,7 +3944,7 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
-                                                if (HandicapP1 < HandicapP3)
+                                                if (HandicapP1 < HandicapP3 && Bet_CambioVentaja == false)
                                                 {
 
                                                     //Validafinalizacion
@@ -3972,7 +3974,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Each")
                                             {
-                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
                                                     //Se le da la ventaja al peor de ese equipo
                                                     if (JugadorMejoresEquipo2 == "Jugador 2")
@@ -4005,7 +4007,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -4032,9 +4034,9 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 }
 
-                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
-                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    if (JugadorPeorEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -4061,7 +4063,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    if (JugadorPeorEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -4141,7 +4143,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
-                                                if (HandicapP2 > HandicapP4)
+                                                if (HandicapP2 > HandicapP4 && Bet_CambioVentaja == false)
                                                 {
 
                                                     //Validafinalizacion
@@ -4173,7 +4175,7 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
-                                                if (HandicapP2 < HandicapP4)
+                                                if (HandicapP2 < HandicapP4 && Bet_CambioVentaja == false)
                                                 {
 
                                                     //Validafinalizacion
@@ -4205,10 +4207,10 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Each")
                                             {
-                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
                                                     //Se le da la ventaja al peor de ese equipo
-                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         //Validafinalizacion
                                                         if (Contador == AdvPositivo)
@@ -4238,7 +4240,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -4265,9 +4267,9 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 }
 
-                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
-                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    if (JugadorPeorEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -4294,7 +4296,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    if (JugadorPeorEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -4334,7 +4336,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
-                                                if (HandicapP2 > HandicapP4)
+                                                if (HandicapP2 > HandicapP4 && Bet_CambioVentaja == false)
                                                 {
 
                                                     //Validafinalizacion
@@ -4366,7 +4368,7 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
-                                                if (HandicapP2 < HandicapP4)
+                                                if (HandicapP2 < HandicapP4 && Bet_CambioVentaja == false)
                                                 {
 
                                                     //Validafinalizacion
@@ -4398,10 +4400,10 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Each")
                                             {
-                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
                                                     //Se le da la ventaja al peor de ese equipo
-                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2" && Bet_CambioVentaja == false) 
                                                     {
                                                         //Validafinalizacion
                                                         if (Contador == AdvPositivo)
@@ -4431,7 +4433,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -4458,9 +4460,9 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 }
 
-                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
-                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    if (JugadorPeorEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -4487,7 +4489,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    if (JugadorPeorEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -4527,7 +4529,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
-                                                if (HandicapP2 > HandicapP4)
+                                                if (HandicapP2 > HandicapP4 && Bet_CambioVentaja == false)
                                                 {
 
                                                     //Validafinalizacion
@@ -4559,7 +4561,7 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
-                                                if (HandicapP2 < HandicapP4)
+                                                if (HandicapP2 < HandicapP4 && Bet_CambioVentaja == false)
                                                 {
 
                                                     //Validafinalizacion
@@ -4590,10 +4592,10 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Each")
                                             {
-                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
                                                     //Se le da la ventaja al peor de ese equipo
-                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         //Validafinalizacion
                                                         if (Contador == AdvPositivo)
@@ -4623,7 +4625,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -4650,9 +4652,9 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 }
 
-                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
-                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    if (JugadorPeorEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -4679,7 +4681,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    if (JugadorPeorEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -4719,7 +4721,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
-                                                if (HandicapP2 > HandicapP4)
+                                                if (HandicapP2 > HandicapP4 && Bet_CambioVentaja == false)
                                                 {
 
                                                     //Validafinalizacion
@@ -4751,7 +4753,7 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
-                                                if (HandicapP2 < HandicapP4)
+                                                if (HandicapP2 < HandicapP4 && Bet_CambioVentaja == false)
                                                 {
 
                                                     //Validafinalizacion
@@ -4783,10 +4785,10 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Each")
                                             {
-                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
                                                     //Se le da la ventaja al peor de ese equipo
-                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         //Validafinalizacion
                                                         if (Contador == AdvPositivo)
@@ -4816,7 +4818,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -4843,9 +4845,9 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 }
 
-                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
-                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    if (JugadorPeorEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -4872,7 +4874,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    if (JugadorPeorEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -4912,7 +4914,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
-                                                if (HandicapP2 > HandicapP4)
+                                                if (HandicapP2 > HandicapP4 && Bet_CambioVentaja == false)
                                                 {
 
                                                     //Validafinalizacion
@@ -4944,7 +4946,7 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
-                                                if (HandicapP2 < HandicapP4)
+                                                if (HandicapP2 < HandicapP4 && Bet_CambioVentaja == false)
                                                 {
 
                                                     //Validafinalizacion
@@ -4977,10 +4979,10 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Each")
                                             {
-                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
                                                     //Se le da la ventaja al peor de ese equipo
-                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         //Validafinalizacion
                                                         if (Contador == AdvPositivo)
@@ -5010,7 +5012,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -5037,9 +5039,9 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 }
 
-                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
-                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    if (JugadorPeorEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -5066,7 +5068,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    if (JugadorPeorEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -5106,7 +5108,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
-                                                if (HandicapP2 > HandicapP4)
+                                                if (HandicapP2 > HandicapP4 && Bet_CambioVentaja == false)
                                                 {
 
                                                     //Validafinalizacion
@@ -5138,7 +5140,7 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
-                                                if (HandicapP2 < HandicapP4)
+                                                if (HandicapP2 < HandicapP4 && Bet_CambioVentaja == false)
                                                 {
 
                                                     //Validafinalizacion
@@ -5170,10 +5172,10 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Each")
                                             {
-                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
                                                     //Se le da la ventaja al peor de ese equipo
-                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         //Validafinalizacion
                                                         if (Contador == AdvPositivo)
@@ -5203,7 +5205,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -5230,9 +5232,9 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 }
 
-                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
-                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    if (JugadorPeorEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -5259,7 +5261,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    if (JugadorPeorEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -5299,7 +5301,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
-                                                if (HandicapP2 > HandicapP4)
+                                                if (HandicapP2 > HandicapP4 && Bet_CambioVentaja == false)
                                                 {
 
                                                     //Validafinalizacion
@@ -5331,7 +5333,7 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
-                                                if (HandicapP2 < HandicapP4)
+                                                if (HandicapP2 < HandicapP4 && Bet_CambioVentaja == false)
                                                 {
 
                                                     //Validafinalizacion
@@ -5363,10 +5365,10 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Each")
                                             {
-                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
                                                     //Se le da la ventaja al peor de ese equipo
-                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         //Validafinalizacion
                                                         if (Contador == AdvPositivo)
@@ -5396,7 +5398,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -5423,9 +5425,9 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 }
 
-                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
-                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    if (JugadorPeorEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -5452,7 +5454,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    if (JugadorPeorEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -5492,7 +5494,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
-                                                if (HandicapP2 > HandicapP4)
+                                                if (HandicapP2 > HandicapP4 && Bet_CambioVentaja == false)
                                                 {
 
                                                     //Validafinalizacion
@@ -5524,7 +5526,7 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
-                                                if (HandicapP2 < HandicapP4)
+                                                if (HandicapP2 < HandicapP4 && Bet_CambioVentaja == false)
                                                 {
                                                     //Validafinalizacion
                                                     if (Contador == AdvInverso)
@@ -5555,10 +5557,10 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Each")
                                             {
-                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
                                                     //Se le da la ventaja al peor de ese equipo
-                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         //Validafinalizacion
                                                         if (Contador == AdvPositivo)
@@ -5588,7 +5590,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -5615,9 +5617,9 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 }
 
-                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
-                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    if (JugadorPeorEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -5644,7 +5646,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    if (JugadorPeorEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -5684,7 +5686,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
-                                                if (HandicapP2 > HandicapP4)
+                                                if (HandicapP2 > HandicapP4 && Bet_CambioVentaja == false)
                                                 {
                                                     //Validafinalizacion
                                                     if (Contador == AdvInverso)
@@ -5715,7 +5717,7 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
-                                                if (HandicapP2 < HandicapP4)
+                                                if (HandicapP2 < HandicapP4 && Bet_CambioVentaja == false)
                                                 {
 
                                                     //Validafinalizacion
@@ -5747,10 +5749,10 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Each")
                                             {
-                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
                                                     //Se le da la ventaja al peor de ese equipo
-                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         //Validafinalizacion
                                                         if (Contador == AdvPositivo)
@@ -5780,7 +5782,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -5807,9 +5809,9 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 }
 
-                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
-                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    if (JugadorPeorEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -5836,7 +5838,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    if (JugadorPeorEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -5876,7 +5878,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
-                                                if (HandicapP2 > HandicapP4)
+                                                if (HandicapP2 > HandicapP4 && Bet_CambioVentaja == false)
                                                 {
 
                                                     //Validafinalizacion
@@ -5908,7 +5910,7 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
-                                                if (HandicapP2 < HandicapP4)
+                                                if (HandicapP2 < HandicapP4 && Bet_CambioVentaja == false)
                                                 {
 
                                                     //Validafinalizacion
@@ -5940,10 +5942,10 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Each")
                                             {
-                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
                                                     //Se le da la ventaja al peor de ese equipo
-                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         //Validafinalizacion
                                                         if (Contador == AdvPositivo)
@@ -5973,7 +5975,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -6000,9 +6002,9 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 }
 
-                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
-                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    if (JugadorPeorEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -6029,7 +6031,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    if (JugadorPeorEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -6069,7 +6071,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
-                                                if (HandicapP2 > HandicapP4)
+                                                if (HandicapP2 > HandicapP4 && Bet_CambioVentaja == false)
                                                 {
 
                                                     //Validafinalizacion
@@ -6261,7 +6263,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
-                                                if (HandicapP2 > HandicapP4)
+                                                if (HandicapP2 > HandicapP4 && Bet_CambioVentaja == false)
                                                 {
 
                                                     //Validafinalizacion
@@ -6293,7 +6295,7 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
-                                                if (HandicapP2 < HandicapP4)
+                                                if (HandicapP2 < HandicapP4 && Bet_CambioVentaja == false)
                                                 {
 
                                                     //Validafinalizacion
@@ -6325,10 +6327,10 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Each")
                                             {
-                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
                                                     //Se le da la ventaja al peor de ese equipo
-                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         //Validafinalizacion
                                                         if (Contador == AdvPositivo)
@@ -6358,7 +6360,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -6385,9 +6387,9 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 }
 
-                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
-                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    if (JugadorPeorEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -6414,7 +6416,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    if (JugadorPeorEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -6454,7 +6456,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
-                                                if (HandicapP2 > HandicapP4)
+                                                if (HandicapP2 > HandicapP4 && Bet_CambioVentaja == false)
                                                 {
 
                                                     //Validafinalizacion
@@ -6486,7 +6488,7 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
-                                                if (HandicapP2 < HandicapP4)
+                                                if (HandicapP2 < HandicapP4 && Bet_CambioVentaja == false)
                                                 {
 
                                                     //Validafinalizacion
@@ -6518,10 +6520,10 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Each")
                                             {
-                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
                                                     //Se le da la ventaja al peor de ese equipo
-                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         //Validafinalizacion
                                                         if (Contador == AdvPositivo)
@@ -6551,7 +6553,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -6578,9 +6580,9 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 }
 
-                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
-                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    if (JugadorPeorEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -6607,7 +6609,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    if (JugadorPeorEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -6647,7 +6649,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
-                                                if (HandicapP2 > HandicapP4)
+                                                if (HandicapP2 > HandicapP4 && Bet_CambioVentaja == false)
                                                 {
                                                     //Validafinalizacion
                                                     if (Contador == AdvInverso)
@@ -6678,7 +6680,7 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
-                                                if (HandicapP2 < HandicapP4)
+                                                if (HandicapP2 < HandicapP4 && Bet_CambioVentaja == false)
                                                 {
 
                                                     //Validafinalizacion
@@ -6709,10 +6711,10 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Each")
                                             {
-                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
                                                     //Se le da la ventaja al peor de ese equipo
-                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         //Validafinalizacion
                                                         if (Contador == AdvPositivo)
@@ -6742,7 +6744,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -6769,9 +6771,9 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 }
 
-                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
-                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    if (JugadorPeorEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -6798,7 +6800,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    if (JugadorPeorEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -6838,7 +6840,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
-                                                if (HandicapP2 > HandicapP4)
+                                                if (HandicapP2 > HandicapP4 && Bet_CambioVentaja == false)
                                                 {
                                                     //Validafinalizacion
                                                     if (Contador == AdvInverso)
@@ -6870,7 +6872,7 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
-                                                if (HandicapP2 < HandicapP4)
+                                                if (HandicapP2 < HandicapP4 && Bet_CambioVentaja == false)
                                                 {
 
                                                     //Validafinalizacion
@@ -6902,10 +6904,10 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Each")
                                             {
-                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
                                                     //Se le da la ventaja al peor de ese equipo
-                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         //Validafinalizacion
                                                         if (Contador == AdvPositivo)
@@ -6935,7 +6937,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -6962,9 +6964,9 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 }
 
-                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
-                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    if (JugadorPeorEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -6991,7 +6993,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    if (JugadorPeorEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -7031,7 +7033,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
-                                                if (HandicapP2 > HandicapP4)
+                                                if (HandicapP2 > HandicapP4 && Bet_CambioVentaja == false)
                                                 {
 
                                                     //Validafinalizacion
@@ -7062,7 +7064,7 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
-                                                if (HandicapP2 < HandicapP4)
+                                                if (HandicapP2 < HandicapP4 && Bet_CambioVentaja == false)
                                                 {
                                                     //Validafinalizacion
                                                     if (Contador == AdvInverso)
@@ -7092,10 +7094,10 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Each")
                                             {
-                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
                                                     //Se le da la ventaja al peor de ese equipo
-                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         //Validafinalizacion
                                                         if (Contador == AdvPositivo)
@@ -7125,7 +7127,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -7152,9 +7154,9 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 }
 
-                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
-                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    if (JugadorPeorEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -7181,7 +7183,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    if (JugadorPeorEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -7221,7 +7223,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
-                                                if (HandicapP2 > HandicapP4)
+                                                if (HandicapP2 > HandicapP4 && Bet_CambioVentaja == false)
                                                 {
 
                                                     //Validafinalizacion
@@ -7253,7 +7255,7 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
-                                                if (HandicapP2 < HandicapP4)
+                                                if (HandicapP2 < HandicapP4 && Bet_CambioVentaja == false)
                                                 {
 
                                                     //Validafinalizacion
@@ -7285,10 +7287,10 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Each")
                                             {
-                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
                                                     //Se le da la ventaja al peor de ese equipo
-                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         //Validafinalizacion
                                                         if (Contador == AdvPositivo)
@@ -7318,7 +7320,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -7345,9 +7347,9 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 }
 
-                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
-                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    if (JugadorPeorEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -7374,7 +7376,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    if (JugadorPeorEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -7414,7 +7416,7 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
-                                                if (HandicapP2 > HandicapP4)
+                                                if (HandicapP2 > HandicapP4 && Bet_CambioVentaja == false)
                                                 {
                                                     //Validafinalizacion
                                                     if (Contador == AdvInverso)
@@ -7444,7 +7446,7 @@ namespace DragonGolfBackEnd.Controllers
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
-                                                if (HandicapP2 < HandicapP4)
+                                                if (HandicapP2 < HandicapP4 && Bet_CambioVentaja == false)
                                                 {
 
                                                     //Validafinalizacion
@@ -7475,10 +7477,10 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Each")
                                             {
-                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor)
+                                                if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
                                                     //Se le da la ventaja al peor de ese equipo
-                                                    if (JugadorMejoresEquipo2 == "Jugador 2")
+                                                    if (JugadorMejoresEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         //Validafinalizacion
                                                         if (Contador == AdvPositivo)
@@ -7508,7 +7510,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorMejoresEquipo1 == "Jugador 1")
+                                                    if (JugadorMejoresEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -7535,9 +7537,9 @@ namespace DragonGolfBackEnd.Controllers
 
                                                 }
 
-                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor)
+                                                if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor && Bet_CambioVentaja == false)
                                                 {
-                                                    if (JugadorPeorEquipo2 == "Jugador 2")
+                                                    if (JugadorPeorEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
@@ -7564,7 +7566,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 else
                                                 {
                                                     //JugadorMejoresEquipo2
-                                                    if (JugadorPeorEquipo1 == "Jugador 1")
+                                                    if (JugadorPeorEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
                                                     {
                                                         if (Contador == AdvPositivo)
                                                         {
