@@ -191,6 +191,7 @@
     <Compile Include="Controllers\Apuestas\SingleNassau\ListadoDetalleApuestaIndividualController.cs" />
     <Compile Include="Controllers\Apuestas\SingleNassau\ListadoDetalleApuestaController.cs" />
     <Compile Include="Controllers\Apuestas\SingleNassau\ListaApuestaController.cs" />
+    <Compile Include="Controllers\Apuestas\TeamNassau\CambioVentajaController.cs" />
     <Compile Include="Controllers\Apuestas\TeamNassau\CalcularApuestaTeamNassauController.cs" />
     <Compile Include="Controllers\Apuestas\TeamNassau\ActualizarDetalleApuestaTeamController.cs" />
     <Compile Include="Controllers\Apuestas\TeamNassau\CrearDetalleApuestaTeamController.cs" />
