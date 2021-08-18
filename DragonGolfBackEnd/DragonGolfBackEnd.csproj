@@ -224,6 +224,7 @@
     <Compile Include="Controllers\Invitados\ListaTodosController.cs" />
     <Compile Include="Controllers\Invitados\ListadoInvitadosController.cs" />
     <Compile Include="Controllers\Ronda\AbrirRondaController.cs" />
+    <Compile Include="Controllers\Ronda\HandicapIndexController.cs" />
     <Compile Include="Controllers\Ronda\HistoriaController.cs" />
     <Compile Include="Controllers\Ronda\HistoricoRondaController.cs" />
     <Compile Include="Controllers\Ronda\CerrarRondaController.cs" />
