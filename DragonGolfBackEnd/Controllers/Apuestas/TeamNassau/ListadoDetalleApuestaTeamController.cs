@@ -25616,15 +25616,15 @@ namespace DragonGolfBackEnd.Controllers
                     SwitchHoles_P1[7] = hole10_P1;
                     SwitchHoles_P1[8] = hole11_P1;
                     SwitchHoles_P1[9] = hole12_P1;
-                    SwitchHoles_P1[10] = hole7_P1;
-                    SwitchHoles_P1[11] = hole8_P1;
-                    SwitchHoles_P1[12] = hole9_P1;
-                    SwitchHoles_P1[13] = hole10_P1;
-                    SwitchHoles_P1[14] = hole11_P1;
-                    SwitchHoles_P1[15] = hole12_P1;
-                    SwitchHoles_P1[16] = hole13_P1;
-                    SwitchHoles_P1[17] = hole14_P1;
-                    SwitchHoles_P1[18] = hole15_P1;
+                    SwitchHoles_P1[10] = hole13_P1;
+                    SwitchHoles_P1[11] = hole14_P1;
+                    SwitchHoles_P1[12] = hole15_P1;
+                    SwitchHoles_P1[13] = hole16_P1;
+                    SwitchHoles_P1[14] = hole17_P1;
+                    SwitchHoles_P1[15] = hole18_P1;
+                    SwitchHoles_P1[16] = hole1_P1;
+                    SwitchHoles_P1[17] = hole2_P1;
+                    SwitchHoles_P1[18] = hole3_P1;
 
                     SwitchHoles_P2[1] = hole4_P2;
                     SwitchHoles_P2[2] = hole5_P2;
