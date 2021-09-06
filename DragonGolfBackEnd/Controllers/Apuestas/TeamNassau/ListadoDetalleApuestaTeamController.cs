@@ -574,91 +574,6 @@ namespace DragonGolfBackEnd.Controllers
                         double JugadorPeorEquipo1Valor = 0;
                         double JugadorPeorEquipo2Valor = 0;
 
-                        //Cambio de hoyo
-                        double[] CambioHoyos = new double[76];
-
-                        CambioHoyos = HoyoInicialCambio(ScoreHole1_P1, ScoreHole2_P1, ScoreHole3_P1, ScoreHole4_P1, ScoreHole5_P1, ScoreHole6_P1, ScoreHole7_P1, ScoreHole8_P1, ScoreHole9_P1, ScoreHole10_P1, ScoreHole11_P1, ScoreHole12_P1, ScoreHole13_P1, ScoreHole14_P1, ScoreHole15_P1, ScoreHole16_P1, ScoreHole17_P1, ScoreHole18_P1,
-                            ScoreHole1_P2, ScoreHole2_P2, ScoreHole3_P2, ScoreHole4_P2, ScoreHole5_P2, ScoreHole6_P2, ScoreHole7_P2, ScoreHole8_P2, ScoreHole9_P2, ScoreHole10_P2, ScoreHole11_P2, ScoreHole12_P2, ScoreHole13_P2, ScoreHole14_P2, ScoreHole15_P2, ScoreHole16_P2, ScoreHole17_P2, ScoreHole18_P2,
-                            ScoreHole1_P3, ScoreHole2_P3, ScoreHole3_P3, ScoreHole4_P3, ScoreHole5_P3, ScoreHole6_P3, ScoreHole7_P3, ScoreHole8_P3, ScoreHole9_P3, ScoreHole10_P3, ScoreHole11_P3, ScoreHole12_P3, ScoreHole13_P3, ScoreHole14_P3, ScoreHole15_P3, ScoreHole16_P3, ScoreHole17_P3, ScoreHole18_P3,
-                            ScoreHole1_P4, ScoreHole2_P4, ScoreHole3_P4, ScoreHole4_P4, ScoreHole5_P4, ScoreHole6_P4, ScoreHole7_P4, ScoreHole8_P4, ScoreHole9_P4, ScoreHole10_P4, ScoreHole11_P4, ScoreHole12_P4, ScoreHole13_P4, ScoreHole14_P4, ScoreHole15_P4, ScoreHole16_P4, ScoreHole17_P4, ScoreHole18_P4, HoyoInicial);
-
-                        ScoreHole1_P1 = CambioHoyos[1];
-                        ScoreHole2_P1 = CambioHoyos[2];
-                        ScoreHole3_P1 = CambioHoyos[3];
-                        ScoreHole4_P1 = CambioHoyos[4];
-                        ScoreHole5_P1 = CambioHoyos[5];
-                        ScoreHole6_P1 = CambioHoyos[6];
-                        ScoreHole7_P1 = CambioHoyos[7];
-                        ScoreHole8_P1 = CambioHoyos[8];
-                        ScoreHole9_P1 = CambioHoyos[9];
-                        ScoreHole10_P1 = CambioHoyos[10];
-                        ScoreHole11_P1 = CambioHoyos[11];
-                        ScoreHole12_P1 = CambioHoyos[12];
-                        ScoreHole13_P1 = CambioHoyos[13];
-                        ScoreHole14_P1 = CambioHoyos[14];
-                        ScoreHole15_P1 = CambioHoyos[15];
-                        ScoreHole16_P1 = CambioHoyos[16];
-                        ScoreHole17_P1 = CambioHoyos[17];
-                        ScoreHole18_P1 = CambioHoyos[18];
-
-                        ScoreHole1_P2 = CambioHoyos[19];
-                        ScoreHole2_P2 = CambioHoyos[20];
-                        ScoreHole3_P2 = CambioHoyos[21];
-                        ScoreHole4_P2 = CambioHoyos[22];
-                        ScoreHole5_P2 = CambioHoyos[23];
-                        ScoreHole6_P2 = CambioHoyos[24];
-                        ScoreHole7_P2 = CambioHoyos[25];
-                        ScoreHole8_P2 = CambioHoyos[26];
-                        ScoreHole9_P2 = CambioHoyos[27];
-                        ScoreHole10_P2 = CambioHoyos[28];
-                        ScoreHole11_P2 = CambioHoyos[29];
-                        ScoreHole12_P2 = CambioHoyos[30];
-                        ScoreHole13_P2 = CambioHoyos[31];
-                        ScoreHole14_P2 = CambioHoyos[32];
-                        ScoreHole15_P2 = CambioHoyos[33];
-                        ScoreHole16_P2 = CambioHoyos[34];
-                        ScoreHole17_P2 = CambioHoyos[35];
-                        ScoreHole18_P2 = CambioHoyos[36];
-
-                        ScoreHole1_P3 = CambioHoyos[37];
-                        ScoreHole2_P3 = CambioHoyos[38];
-                        ScoreHole3_P3 = CambioHoyos[39];
-                        ScoreHole4_P3 = CambioHoyos[40];
-                        ScoreHole5_P3 = CambioHoyos[41];
-                        ScoreHole6_P3 = CambioHoyos[42];
-                        ScoreHole7_P3 = CambioHoyos[43];
-                        ScoreHole8_P3 = CambioHoyos[44];
-                        ScoreHole9_P3 = CambioHoyos[45];
-                        ScoreHole10_P3 = CambioHoyos[46];
-                        ScoreHole11_P3 = CambioHoyos[47];
-                        ScoreHole12_P3 = CambioHoyos[48];
-                        ScoreHole13_P3 = CambioHoyos[49];
-                        ScoreHole14_P3 = CambioHoyos[50];
-                        ScoreHole15_P3 = CambioHoyos[51];
-                        ScoreHole16_P3 = CambioHoyos[52];
-                        ScoreHole17_P3 = CambioHoyos[53];
-                        ScoreHole18_P3 = CambioHoyos[54];
-
-                        ScoreHole1_P4 = CambioHoyos[55];
-                        ScoreHole2_P4 = CambioHoyos[56];
-                        ScoreHole3_P4 = CambioHoyos[57];
-                        ScoreHole4_P4 = CambioHoyos[58];
-                        ScoreHole5_P4 = CambioHoyos[59];
-                        ScoreHole6_P4 = CambioHoyos[60];
-                        ScoreHole7_P4 = CambioHoyos[61];
-                        ScoreHole8_P4 = CambioHoyos[62];
-                        ScoreHole9_P4 = CambioHoyos[63];
-                        ScoreHole10_P4 = CambioHoyos[64];
-                        ScoreHole11_P4 = CambioHoyos[65];
-                        ScoreHole12_P4 = CambioHoyos[66];
-                        ScoreHole13_P4 = CambioHoyos[67];
-                        ScoreHole14_P4 = CambioHoyos[68];
-                        ScoreHole15_P4 = CambioHoyos[69];
-                        ScoreHole16_P4 = CambioHoyos[70];
-                        ScoreHole17_P4 = CambioHoyos[71];
-                        ScoreHole18_P4 = CambioHoyos[72];
-                        //Termina cambio de hoyo
-
                         //Calculo de ventajas con hoyos cambiados
                         if (HandicapP1 <= HandicapP3)
                         {
@@ -7696,6 +7611,92 @@ namespace DragonGolfBackEnd.Controllers
 
                         }
                         //
+
+
+                        //Cambio de hoyo
+                        double[] CambioHoyos = new double[76];
+
+                        CambioHoyos = HoyoInicialCambio(ScoreHole1_P1, ScoreHole2_P1, ScoreHole3_P1, ScoreHole4_P1, ScoreHole5_P1, ScoreHole6_P1, ScoreHole7_P1, ScoreHole8_P1, ScoreHole9_P1, ScoreHole10_P1, ScoreHole11_P1, ScoreHole12_P1, ScoreHole13_P1, ScoreHole14_P1, ScoreHole15_P1, ScoreHole16_P1, ScoreHole17_P1, ScoreHole18_P1,
+                            ScoreHole1_P2, ScoreHole2_P2, ScoreHole3_P2, ScoreHole4_P2, ScoreHole5_P2, ScoreHole6_P2, ScoreHole7_P2, ScoreHole8_P2, ScoreHole9_P2, ScoreHole10_P2, ScoreHole11_P2, ScoreHole12_P2, ScoreHole13_P2, ScoreHole14_P2, ScoreHole15_P2, ScoreHole16_P2, ScoreHole17_P2, ScoreHole18_P2,
+                            ScoreHole1_P3, ScoreHole2_P3, ScoreHole3_P3, ScoreHole4_P3, ScoreHole5_P3, ScoreHole6_P3, ScoreHole7_P3, ScoreHole8_P3, ScoreHole9_P3, ScoreHole10_P3, ScoreHole11_P3, ScoreHole12_P3, ScoreHole13_P3, ScoreHole14_P3, ScoreHole15_P3, ScoreHole16_P3, ScoreHole17_P3, ScoreHole18_P3,
+                            ScoreHole1_P4, ScoreHole2_P4, ScoreHole3_P4, ScoreHole4_P4, ScoreHole5_P4, ScoreHole6_P4, ScoreHole7_P4, ScoreHole8_P4, ScoreHole9_P4, ScoreHole10_P4, ScoreHole11_P4, ScoreHole12_P4, ScoreHole13_P4, ScoreHole14_P4, ScoreHole15_P4, ScoreHole16_P4, ScoreHole17_P4, ScoreHole18_P4, HoyoInicial);
+
+                        ScoreHole1_P1 = CambioHoyos[1];
+                        ScoreHole2_P1 = CambioHoyos[2];
+                        ScoreHole3_P1 = CambioHoyos[3];
+                        ScoreHole4_P1 = CambioHoyos[4];
+                        ScoreHole5_P1 = CambioHoyos[5];
+                        ScoreHole6_P1 = CambioHoyos[6];
+                        ScoreHole7_P1 = CambioHoyos[7];
+                        ScoreHole8_P1 = CambioHoyos[8];
+                        ScoreHole9_P1 = CambioHoyos[9];
+                        ScoreHole10_P1 = CambioHoyos[10];
+                        ScoreHole11_P1 = CambioHoyos[11];
+                        ScoreHole12_P1 = CambioHoyos[12];
+                        ScoreHole13_P1 = CambioHoyos[13];
+                        ScoreHole14_P1 = CambioHoyos[14];
+                        ScoreHole15_P1 = CambioHoyos[15];
+                        ScoreHole16_P1 = CambioHoyos[16];
+                        ScoreHole17_P1 = CambioHoyos[17];
+                        ScoreHole18_P1 = CambioHoyos[18];
+
+                        ScoreHole1_P2 = CambioHoyos[19];
+                        ScoreHole2_P2 = CambioHoyos[20];
+                        ScoreHole3_P2 = CambioHoyos[21];
+                        ScoreHole4_P2 = CambioHoyos[22];
+                        ScoreHole5_P2 = CambioHoyos[23];
+                        ScoreHole6_P2 = CambioHoyos[24];
+                        ScoreHole7_P2 = CambioHoyos[25];
+                        ScoreHole8_P2 = CambioHoyos[26];
+                        ScoreHole9_P2 = CambioHoyos[27];
+                        ScoreHole10_P2 = CambioHoyos[28];
+                        ScoreHole11_P2 = CambioHoyos[29];
+                        ScoreHole12_P2 = CambioHoyos[30];
+                        ScoreHole13_P2 = CambioHoyos[31];
+                        ScoreHole14_P2 = CambioHoyos[32];
+                        ScoreHole15_P2 = CambioHoyos[33];
+                        ScoreHole16_P2 = CambioHoyos[34];
+                        ScoreHole17_P2 = CambioHoyos[35];
+                        ScoreHole18_P2 = CambioHoyos[36];
+
+                        ScoreHole1_P3 = CambioHoyos[37];
+                        ScoreHole2_P3 = CambioHoyos[38];
+                        ScoreHole3_P3 = CambioHoyos[39];
+                        ScoreHole4_P3 = CambioHoyos[40];
+                        ScoreHole5_P3 = CambioHoyos[41];
+                        ScoreHole6_P3 = CambioHoyos[42];
+                        ScoreHole7_P3 = CambioHoyos[43];
+                        ScoreHole8_P3 = CambioHoyos[44];
+                        ScoreHole9_P3 = CambioHoyos[45];
+                        ScoreHole10_P3 = CambioHoyos[46];
+                        ScoreHole11_P3 = CambioHoyos[47];
+                        ScoreHole12_P3 = CambioHoyos[48];
+                        ScoreHole13_P3 = CambioHoyos[49];
+                        ScoreHole14_P3 = CambioHoyos[50];
+                        ScoreHole15_P3 = CambioHoyos[51];
+                        ScoreHole16_P3 = CambioHoyos[52];
+                        ScoreHole17_P3 = CambioHoyos[53];
+                        ScoreHole18_P3 = CambioHoyos[54];
+
+                        ScoreHole1_P4 = CambioHoyos[55];
+                        ScoreHole2_P4 = CambioHoyos[56];
+                        ScoreHole3_P4 = CambioHoyos[57];
+                        ScoreHole4_P4 = CambioHoyos[58];
+                        ScoreHole5_P4 = CambioHoyos[59];
+                        ScoreHole6_P4 = CambioHoyos[60];
+                        ScoreHole7_P4 = CambioHoyos[61];
+                        ScoreHole8_P4 = CambioHoyos[62];
+                        ScoreHole9_P4 = CambioHoyos[63];
+                        ScoreHole10_P4 = CambioHoyos[64];
+                        ScoreHole11_P4 = CambioHoyos[65];
+                        ScoreHole12_P4 = CambioHoyos[66];
+                        ScoreHole13_P4 = CambioHoyos[67];
+                        ScoreHole14_P4 = CambioHoyos[68];
+                        ScoreHole15_P4 = CambioHoyos[69];
+                        ScoreHole16_P4 = CambioHoyos[70];
+                        ScoreHole17_P4 = CambioHoyos[71];
+                        ScoreHole18_P4 = CambioHoyos[72];
+                        //Termina cambio de hoyo
 
                         double Resultado1_H = 0;
                         double Resultado2_H = 0;
