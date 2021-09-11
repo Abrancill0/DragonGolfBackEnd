@@ -286,6 +286,8 @@ namespace DragonGolfBackEnd.Controllers
                     string Player = "";
                     bool Bet_CambioVentaja;
 
+                    int Ro_Cambio = 0;
+
                     foreach (DataRow row in DT.Rows)
                     {
                         Mensaje = Convert.ToString(row["mensaje"]);
@@ -296,6 +298,8 @@ namespace DragonGolfBackEnd.Controllers
                             Bet_CambioVentaja = Convert.ToBoolean(row["Bet_CambioVentaja"]);
                             Player = Convert.ToString(row["Player"]);
                             HoyoInicial = Convert.ToInt32(row["HoyoInicial"]);
+
+                            Ro_Cambio = Convert.ToInt32(row["Ro_Cambio"]);
 
                             string numeroFormato = Convert.ToInt32(row["usu_ghinnumber"]).ToString("D7");
 
@@ -327,24 +331,57 @@ namespace DragonGolfBackEnd.Controllers
                             HandicapP3 = Convert.ToDouble(row["HandicapP3"]);
                             HandicapP4 = Convert.ToDouble(row["HandicapP4"]);
 
-                            DificultatHoyo1_tee = Convert.ToInt32(row["DificutadHoyo1"]);//7
-                            DificultatHoyo2_tee = Convert.ToInt32(row["DificutadHoyo2"]);//1
-                            DificultatHoyo3_tee = Convert.ToInt32(row["DificutadHoyo3"]);//8
-                            DificultatHoyo4_tee = Convert.ToInt32(row["DificutadHoyo4"]);//5
-                            DificultatHoyo5_tee = Convert.ToInt32(row["DificutadHoyo5"]);//2
-                            DificultatHoyo6_tee = Convert.ToInt32(row["DificutadHoyo6"]);//6
-                            DificultatHoyo7_tee = Convert.ToInt32(row["DificutadHoyo7"]);//4
-                            DificultatHoyo8_tee = Convert.ToInt32(row["DificutadHoyo8"]);//3
-                            DificultatHoyo9_tee = Convert.ToInt32(row["DificutadHoyo9"]);//9
-                            DificultatHoyo10_tee = Convert.ToInt32(row["DificutadHoyo10"]);//10
-                            DificultatHoyo11_tee = Convert.ToInt32(row["DificutadHoyo11"]);//11
-                            DificultatHoyo12_tee = Convert.ToInt32(row["DificutadHoyo12"]);//14
-                            DificultatHoyo13_tee = Convert.ToInt32(row["DificutadHoyo13"]);//15
-                            DificultatHoyo14_tee = Convert.ToInt32(row["DificutadHoyo14"]);//13
-                            DificultatHoyo15_tee = Convert.ToInt32(row["DificutadHoyo15"]);//16
-                            DificultatHoyo16_tee = Convert.ToInt32(row["DificutadHoyo16"]);//17
-                            DificultatHoyo17_tee = Convert.ToInt32(row["DificutadHoyo17"]);//18
-                            DificultatHoyo18_tee = Convert.ToInt32(row["DificutadHoyo18"]);//12
+                            if (Ro_Cambio == 0)
+                            {
+
+                                DificultatHoyo1_tee = Convert.ToInt32(row["DificutadHoyo1"]);//7
+                                DificultatHoyo2_tee = Convert.ToInt32(row["DificutadHoyo2"]);//1
+                                DificultatHoyo3_tee = Convert.ToInt32(row["DificutadHoyo3"]);//8
+                                DificultatHoyo4_tee = Convert.ToInt32(row["DificutadHoyo4"]);//5
+                                DificultatHoyo5_tee = Convert.ToInt32(row["DificutadHoyo5"]);//2
+                                DificultatHoyo6_tee = Convert.ToInt32(row["DificutadHoyo6"]);//6
+                                DificultatHoyo7_tee = Convert.ToInt32(row["DificutadHoyo7"]);//4
+                                DificultatHoyo8_tee = Convert.ToInt32(row["DificutadHoyo8"]);//3
+                                DificultatHoyo9_tee = Convert.ToInt32(row["DificutadHoyo9"]);//9
+                                DificultatHoyo10_tee = Convert.ToInt32(row["DificutadHoyo10"]);//10
+                                DificultatHoyo11_tee = Convert.ToInt32(row["DificutadHoyo11"]);//11
+                                DificultatHoyo12_tee = Convert.ToInt32(row["DificutadHoyo12"]);//14
+                                DificultatHoyo13_tee = Convert.ToInt32(row["DificutadHoyo13"]);//15
+                                DificultatHoyo14_tee = Convert.ToInt32(row["DificutadHoyo14"]);//13
+                                DificultatHoyo15_tee = Convert.ToInt32(row["DificutadHoyo15"]);//16
+                                DificultatHoyo16_tee = Convert.ToInt32(row["DificutadHoyo16"]);//17
+                                DificultatHoyo17_tee = Convert.ToInt32(row["DificutadHoyo17"]);//18
+                                DificultatHoyo18_tee = Convert.ToInt32(row["DificutadHoyo18"]);//12
+                            }
+                            else
+                            {
+                                DificultatHoyo1_tee = Convert.ToInt32(row["DificutadHoyo2"]);//1
+                                DificultatHoyo2_tee = Convert.ToInt32(row["DificutadHoyo1"]);//2
+
+                                DificultatHoyo3_tee = Convert.ToInt32(row["DificutadHoyo4"]);//3
+                                DificultatHoyo4_tee = Convert.ToInt32(row["DificutadHoyo3"]);//4
+
+                                DificultatHoyo5_tee = Convert.ToInt32(row["DificutadHoyo6"]);//5
+                                DificultatHoyo6_tee = Convert.ToInt32(row["DificutadHoyo5"]);//6
+
+                                DificultatHoyo7_tee = Convert.ToInt32(row["DificutadHoyo8"]);//7
+                                DificultatHoyo8_tee = Convert.ToInt32(row["DificutadHoyo7"]);//8
+
+                                DificultatHoyo9_tee = Convert.ToInt32(row["DificutadHoyo10"]);//9
+                                DificultatHoyo10_tee = Convert.ToInt32(row["DificutadHoyo9"]);//10
+
+                                DificultatHoyo11_tee = Convert.ToInt32(row["DificutadHoyo12"]);//11
+                                DificultatHoyo12_tee = Convert.ToInt32(row["DificutadHoyo11"]);//12
+
+                                DificultatHoyo13_tee = Convert.ToInt32(row["DificutadHoyo14"]);//13
+                                DificultatHoyo14_tee = Convert.ToInt32(row["DificutadHoyo13"]);//14
+
+                                DificultatHoyo15_tee = Convert.ToInt32(row["DificutadHoyo16"]);//15
+                                DificultatHoyo16_tee = Convert.ToInt32(row["DificutadHoyo17"]);//16
+
+                                DificultatHoyo17_tee = Convert.ToInt32(row["DificutadHoyo18"]);//17
+                                DificultatHoyo18_tee = Convert.ToInt32(row["DificutadHoyo117"]);//18
+                            }
 
                             GolpesVentaja1 = 0;
                             GolpesVentaja2 = 0;
@@ -10877,40 +10914,40 @@ namespace DragonGolfBackEnd.Controllers
                                                         }
                                                     }
                                                     else
+                                                    {
+                                                        if (HandicapP2 < HandicapP4 && Bet_CambioVentaja == true)
                                                         {
-                                                            if (HandicapP2 < HandicapP4 && Bet_CambioVentaja == true)
+                                                            if (Player == "Jugador 4")
                                                             {
-                                                                if (Player == "Jugador 4")
+                                                                if (Contadorcito == AdvPositivo)
                                                                 {
-                                                                    if (Contadorcito == AdvPositivo)
-                                                                    {
-                                                                        GolpesVentaja17_tee = GolpesVentaja17_tee - (0.5 + ValCompleto);
-                                                                    }
-                                                                    else
-                                                                    {
-                                                                        GolpesVentaja17_tee = GolpesVentaja17_tee - 1;
-                                                                    }
+                                                                    GolpesVentaja17_tee = GolpesVentaja17_tee - (0.5 + ValCompleto);
                                                                 }
-
-                                                            }
-                                                            else
-                                                            {
-                                                                if (Player == "Jugador 2")
+                                                                else
                                                                 {
-                                                                    if (Contadorcito == AdvPositivo)
-                                                                    {
-                                                                        GolpesVentaja17_tee = GolpesVentaja17_tee - (0.5 + ValCompleto);
-                                                                    }
-                                                                    else
-                                                                    {
-                                                                        GolpesVentaja17_tee = GolpesVentaja17_tee - 1;
-                                                                    }
+                                                                    GolpesVentaja17_tee = GolpesVentaja17_tee - 1;
                                                                 }
-
                                                             }
 
                                                         }
+                                                        else
+                                                        {
+                                                            if (Player == "Jugador 2")
+                                                            {
+                                                                if (Contadorcito == AdvPositivo)
+                                                                {
+                                                                    GolpesVentaja17_tee = GolpesVentaja17_tee - (0.5 + ValCompleto);
+                                                                }
+                                                                else
+                                                                {
+                                                                    GolpesVentaja17_tee = GolpesVentaja17_tee - 1;
+                                                                }
+                                                            }
+
+                                                        }
+
                                                     }
+                                                }
 
 
                                             }
@@ -11171,41 +11208,41 @@ namespace DragonGolfBackEnd.Controllers
                                                         }
                                                     }
                                                     else
+                                                    {
+                                                        if (HandicapP2 < HandicapP4 && Bet_CambioVentaja == true)
                                                         {
-                                                            if (HandicapP2 < HandicapP4 && Bet_CambioVentaja == true)
+                                                            if (Player == "Jugador 4")
                                                             {
-                                                                if (Player == "Jugador 4")
+                                                                if (Contadorcito == AdvPositivo)
                                                                 {
-                                                                    if (Contadorcito == AdvPositivo)
-                                                                    {
-                                                                        GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
-                                                                    }
-                                                                    else
-                                                                    {
-                                                                        GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
-                                                                    }
+                                                                    GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
                                                                 }
-
-                                                            }
-                                                            else
-                                                            {
-                                                                if (Player == "Jugador 2")
+                                                                else
                                                                 {
-                                                                    if (Contadorcito == AdvPositivo)
-                                                                    {
-                                                                        GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
-                                                                    }
-                                                                    else
-                                                                    {
-                                                                        GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
-                                                                    }
+                                                                    GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
                                                                 }
-
                                                             }
 
                                                         }
+                                                        else
+                                                        {
+                                                            if (Player == "Jugador 2")
+                                                            {
+                                                                if (Contadorcito == AdvPositivo)
+                                                                {
+                                                                    GolpesVentaja18_tee = GolpesVentaja18_tee - (0.5 + ValCompleto);
+                                                                }
+                                                                else
+                                                                {
+                                                                    GolpesVentaja18_tee = GolpesVentaja18_tee - 1;
+                                                                }
+                                                            }
+
+                                                        }
+
                                                     }
-                                               
+                                                }
+
                                             }
                                             //  }
                                             if (TipoGolpesVentaja == "Each")

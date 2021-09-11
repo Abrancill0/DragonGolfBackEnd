@@ -411,6 +411,8 @@ namespace DragonGolfBackEnd.Controllers
 
                 int contador = DT.Rows.Count;
 
+                int Ro_Cambio = 0;
+
                 if (DT.Rows.Count > 0)
                 {
                     foreach (DataRow row in DT.Rows)
@@ -418,6 +420,8 @@ namespace DragonGolfBackEnd.Controllers
                         Mensaje = Convert.ToString(row["mensaje"]);
                         Estatus = Convert.ToInt32(row["Estatus"]);
                         HoyoInicial = Convert.ToInt32(row["HoyoInicial"]);
+
+                        Ro_Cambio = Convert.ToInt32(row["Ro_Cambio"]);
 
                         bool Bet_CambioVentaja = Convert.ToBoolean(row["Bet_CambioVentaja"]);
 
@@ -516,24 +520,59 @@ namespace DragonGolfBackEnd.Controllers
                         AutoPress = Convert.ToInt32(row["AutoPress"]);
                         Adv = Convert.ToDouble(row["Adv"]);
 
-                        DificultatHoyo1 = Convert.ToInt32(row["DificultatHoyo1"]);//7
-                        DificultatHoyo2 = Convert.ToInt32(row["DificultatHoyo2"]);//1
-                        DificultatHoyo3 = Convert.ToInt32(row["DificultatHoyo3"]);//8
-                        DificultatHoyo4 = Convert.ToInt32(row["DificultatHoyo4"]);//5
-                        DificultatHoyo5 = Convert.ToInt32(row["DificultatHoyo5"]);//2
-                        DificultatHoyo6 = Convert.ToInt32(row["DificultatHoyo6"]);//6
-                        DificultatHoyo7 = Convert.ToInt32(row["DificultatHoyo7"]);//4
-                        DificultatHoyo8 = Convert.ToInt32(row["DificultatHoyo8"]);//3
-                        DificultatHoyo9 = Convert.ToInt32(row["DificultatHoyo9"]);//9
-                        DificultatHoyo10 = Convert.ToInt32(row["DificultatHoyo10"]);//10
-                        DificultatHoyo11 = Convert.ToInt32(row["DificultatHoyo11"]);//11
-                        DificultatHoyo12 = Convert.ToInt32(row["DificultatHoyo12"]);//14
-                        DificultatHoyo13 = Convert.ToInt32(row["DificultatHoyo13"]);//15
-                        DificultatHoyo14 = Convert.ToInt32(row["DificultatHoyo14"]);//13
-                        DificultatHoyo15 = Convert.ToInt32(row["DificultatHoyo15"]);//16
-                        DificultatHoyo16 = Convert.ToInt32(row["DificultatHoyo16"]);//17
-                        DificultatHoyo17 = Convert.ToInt32(row["DificultatHoyo17"]);//18
-                        DificultatHoyo18 = Convert.ToInt32(row["DificultatHoyo18"]);//12
+
+                        if (Ro_Cambio == 0)
+                        {
+                            DificultatHoyo1 = Convert.ToInt32(row["DificultatHoyo1"]);//7
+                            DificultatHoyo2 = Convert.ToInt32(row["DificultatHoyo2"]);//1
+                            DificultatHoyo3 = Convert.ToInt32(row["DificultatHoyo3"]);//8
+                            DificultatHoyo4 = Convert.ToInt32(row["DificultatHoyo4"]);//5
+                            DificultatHoyo5 = Convert.ToInt32(row["DificultatHoyo5"]);//2
+                            DificultatHoyo6 = Convert.ToInt32(row["DificultatHoyo6"]);//6
+                            DificultatHoyo7 = Convert.ToInt32(row["DificultatHoyo7"]);//4
+                            DificultatHoyo8 = Convert.ToInt32(row["DificultatHoyo8"]);//3
+                            DificultatHoyo9 = Convert.ToInt32(row["DificultatHoyo9"]);//9
+                            DificultatHoyo10 = Convert.ToInt32(row["DificultatHoyo10"]);//10
+                            DificultatHoyo11 = Convert.ToInt32(row["DificultatHoyo11"]);//11
+                            DificultatHoyo12 = Convert.ToInt32(row["DificultatHoyo12"]);//14
+                            DificultatHoyo13 = Convert.ToInt32(row["DificultatHoyo13"]);//15
+                            DificultatHoyo14 = Convert.ToInt32(row["DificultatHoyo14"]);//13
+                            DificultatHoyo15 = Convert.ToInt32(row["DificultatHoyo15"]);//16
+                            DificultatHoyo16 = Convert.ToInt32(row["DificultatHoyo16"]);//17
+                            DificultatHoyo17 = Convert.ToInt32(row["DificultatHoyo17"]);//18
+                            DificultatHoyo18 = Convert.ToInt32(row["DificultatHoyo18"]);//12
+
+                        }
+                        else 
+                        {
+                            DificultatHoyo1 = Convert.ToInt32(row["DificultatHoyo2"]);//1
+                            DificultatHoyo2 = Convert.ToInt32(row["DificultatHoyo1"]);//2
+
+                            DificultatHoyo3 = Convert.ToInt32(row["DificultatHoyo4"]);//3
+                            DificultatHoyo4 = Convert.ToInt32(row["DificultatHoyo3"]);//4
+
+                            DificultatHoyo5 = Convert.ToInt32(row["DificultatHoyo6"]);//5
+                            DificultatHoyo6 = Convert.ToInt32(row["DificultatHoyo5"]);//6
+
+                            DificultatHoyo7 = Convert.ToInt32(row["DificultatHoyo8"]);//7
+                            DificultatHoyo8 = Convert.ToInt32(row["DificultatHoyo9"]);//8
+
+                            DificultatHoyo9 = Convert.ToInt32(row["DificultatHoyo10"]);//9
+                            DificultatHoyo10 = Convert.ToInt32(row["DificultatHoyo9"]);//10
+
+                            DificultatHoyo11 = Convert.ToInt32(row["DificultatHoyo12"]);//11
+                            DificultatHoyo12 = Convert.ToInt32(row["DificultatHoyo11"]);//12
+
+                            DificultatHoyo13 = Convert.ToInt32(row["DificultatHoyo14"]);//13
+                            DificultatHoyo14 = Convert.ToInt32(row["DificultatHoyo13"]);//14
+
+                            DificultatHoyo15 = Convert.ToInt32(row["DificultatHoyo16"]);//15
+                            DificultatHoyo16 = Convert.ToInt32(row["DificultatHoyo15"]);//16
+
+                            DificultatHoyo17 = Convert.ToInt32(row["DificultatHoyo18"]);//17
+                            DificultatHoyo18 = Convert.ToInt32(row["DificultatHoyo17"]);//18
+                        }
+                    
 
                         TipoGolpesVentaja = Convert.ToString(row["TipoGolpesVentaja"]);
 
@@ -543,7 +582,6 @@ namespace DragonGolfBackEnd.Controllers
                         HandicapP4 = Convert.ToDouble(row["HandicapP4"]);
 
                         int Contador = 0;
-
 
                         int AdvInverso = (-1) * (Convert.ToInt32(Adv));
                         int AdvInverso2 = 0; //(-1) * (Adv);
@@ -7611,7 +7649,6 @@ namespace DragonGolfBackEnd.Controllers
 
                         }
                         //
-
 
                         //Cambio de hoyo
                         double[] CambioHoyos = new double[76];

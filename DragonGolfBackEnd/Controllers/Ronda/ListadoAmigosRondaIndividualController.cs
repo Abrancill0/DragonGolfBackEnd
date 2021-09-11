@@ -275,6 +275,7 @@ namespace DragonGolfBackEnd.Controllers
                     decimal Adv1 = 0;
                     double Adv_tee = 0;
 
+                    int Ro_Cambio =0;
 
                     foreach (DataRow row in DT.Rows)
                     {
@@ -285,6 +286,8 @@ namespace DragonGolfBackEnd.Controllers
                         {
 
                             string numeroFormato = Convert.ToInt32(row["usu_ghinnumber"]).ToString("D7");
+
+                            Ro_Cambio = Convert.ToInt32(row["Ro_Cambio"]);
 
                             int PlayerId = Convert.ToInt32(row["PlayerId"]);
                             HoyoInicial = Convert.ToInt32(row["HoyoInicial"]);
@@ -368,24 +371,58 @@ namespace DragonGolfBackEnd.Controllers
                             double GolpesVentaja18_tee = 0;
 
 
-                            DificultatHoyo1_tee = Convert.ToInt32(row["DificutadHoyo1"]);//7
-                            DificultatHoyo2_tee = Convert.ToInt32(row["DificutadHoyo2"]);//1
-                            DificultatHoyo3_tee = Convert.ToInt32(row["DificutadHoyo3"]);//8
-                            DificultatHoyo4_tee = Convert.ToInt32(row["DificutadHoyo4"]);//5
-                            DificultatHoyo5_tee = Convert.ToInt32(row["DificutadHoyo5"]);//2
-                            DificultatHoyo6_tee = Convert.ToInt32(row["DificutadHoyo6"]);//6
-                            DificultatHoyo7_tee = Convert.ToInt32(row["DificutadHoyo7"]);//4
-                            DificultatHoyo8_tee = Convert.ToInt32(row["DificutadHoyo8"]);//3
-                            DificultatHoyo9_tee = Convert.ToInt32(row["DificutadHoyo9"]);//9
-                            DificultatHoyo10_tee = Convert.ToInt32(row["DificutadHoyo10"]);//10
-                            DificultatHoyo11_tee = Convert.ToInt32(row["DificutadHoyo11"]);//11
-                            DificultatHoyo12_tee = Convert.ToInt32(row["DificutadHoyo12"]);//14
-                            DificultatHoyo13_tee = Convert.ToInt32(row["DificutadHoyo13"]);//15
-                            DificultatHoyo14_tee = Convert.ToInt32(row["DificutadHoyo14"]);//13
-                            DificultatHoyo15_tee = Convert.ToInt32(row["DificutadHoyo15"]);//16
-                            DificultatHoyo16_tee = Convert.ToInt32(row["DificutadHoyo16"]);//17
-                            DificultatHoyo17_tee = Convert.ToInt32(row["DificutadHoyo17"]);//18
-                            DificultatHoyo18_tee = Convert.ToInt32(row["DificutadHoyo18"]);//12
+                            if (Ro_Cambio == 0)
+                            {
+
+                                DificultatHoyo1_tee = Convert.ToInt32(row["DificutadHoyo1"]);//7
+                                DificultatHoyo2_tee = Convert.ToInt32(row["DificutadHoyo2"]);//1
+                                DificultatHoyo3_tee = Convert.ToInt32(row["DificutadHoyo3"]);//8
+                                DificultatHoyo4_tee = Convert.ToInt32(row["DificutadHoyo4"]);//5
+                                DificultatHoyo5_tee = Convert.ToInt32(row["DificutadHoyo5"]);//2
+                                DificultatHoyo6_tee = Convert.ToInt32(row["DificutadHoyo6"]);//6
+                                DificultatHoyo7_tee = Convert.ToInt32(row["DificutadHoyo7"]);//4
+                                DificultatHoyo8_tee = Convert.ToInt32(row["DificutadHoyo8"]);//3
+                                DificultatHoyo9_tee = Convert.ToInt32(row["DificutadHoyo9"]);//9
+                                DificultatHoyo10_tee = Convert.ToInt32(row["DificutadHoyo10"]);//10
+                                DificultatHoyo11_tee = Convert.ToInt32(row["DificutadHoyo11"]);//11
+                                DificultatHoyo12_tee = Convert.ToInt32(row["DificutadHoyo12"]);//14
+                                DificultatHoyo13_tee = Convert.ToInt32(row["DificutadHoyo13"]);//15
+                                DificultatHoyo14_tee = Convert.ToInt32(row["DificutadHoyo14"]);//13
+                                DificultatHoyo15_tee = Convert.ToInt32(row["DificutadHoyo15"]);//16
+                                DificultatHoyo16_tee = Convert.ToInt32(row["DificutadHoyo16"]);//17
+                                DificultatHoyo17_tee = Convert.ToInt32(row["DificutadHoyo17"]);//18
+                                DificultatHoyo18_tee = Convert.ToInt32(row["DificutadHoyo18"]);//12
+                            }
+                            else
+                            {
+                                DificultatHoyo1_tee = Convert.ToInt32(row["DificutadHoyo2"]);//1
+                                DificultatHoyo2_tee = Convert.ToInt32(row["DificutadHoyo1"]);//2
+
+                                DificultatHoyo3_tee = Convert.ToInt32(row["DificutadHoyo4"]);//3
+                                DificultatHoyo4_tee = Convert.ToInt32(row["DificutadHoyo3"]);//4
+
+                                DificultatHoyo5_tee = Convert.ToInt32(row["DificutadHoyo6"]);//5
+                                DificultatHoyo6_tee = Convert.ToInt32(row["DificutadHoyo5"]);//6
+
+                                DificultatHoyo7_tee = Convert.ToInt32(row["DificutadHoyo8"]);//7
+                                DificultatHoyo8_tee = Convert.ToInt32(row["DificutadHoyo7"]);//8
+
+                                DificultatHoyo9_tee = Convert.ToInt32(row["DificutadHoyo10"]);//9
+                                DificultatHoyo10_tee = Convert.ToInt32(row["DificutadHoyo9"]);//10
+
+                                DificultatHoyo11_tee = Convert.ToInt32(row["DificutadHoyo12"]);//11
+                                DificultatHoyo12_tee = Convert.ToInt32(row["DificutadHoyo11"]);//12
+
+                                DificultatHoyo13_tee = Convert.ToInt32(row["DificutadHoyo14"]);//13
+                                DificultatHoyo14_tee = Convert.ToInt32(row["DificutadHoyo13"]);//14
+
+                                DificultatHoyo15_tee = Convert.ToInt32(row["DificutadHoyo16"]);//15
+                                DificultatHoyo16_tee = Convert.ToInt32(row["DificutadHoyo17"]);//16
+
+                                DificultatHoyo17_tee = Convert.ToInt32(row["DificutadHoyo18"]);//17
+                                DificultatHoyo18_tee = Convert.ToInt32(row["DificutadHoyo117"]);//18
+                            }
+
 
 
                             int ScoreHole1 = Convert.ToInt32(row["ScoreHole1"]);
