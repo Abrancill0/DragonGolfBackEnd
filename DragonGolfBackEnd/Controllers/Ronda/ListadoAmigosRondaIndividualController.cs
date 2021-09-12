@@ -371,10 +371,7 @@ namespace DragonGolfBackEnd.Controllers
                             double GolpesVentaja18_tee = 0;
 
 
-                            if (Ro_Cambio == 0)
-                            {
-
-                                DificultatHoyo1_tee = Convert.ToInt32(row["DificutadHoyo1"]);//7
+                               DificultatHoyo1_tee = Convert.ToInt32(row["DificutadHoyo1"]);//7
                                 DificultatHoyo2_tee = Convert.ToInt32(row["DificutadHoyo2"]);//1
                                 DificultatHoyo3_tee = Convert.ToInt32(row["DificutadHoyo3"]);//8
                                 DificultatHoyo4_tee = Convert.ToInt32(row["DificutadHoyo4"]);//5
@@ -392,36 +389,30 @@ namespace DragonGolfBackEnd.Controllers
                                 DificultatHoyo16_tee = Convert.ToInt32(row["DificutadHoyo16"]);//17
                                 DificultatHoyo17_tee = Convert.ToInt32(row["DificutadHoyo17"]);//18
                                 DificultatHoyo18_tee = Convert.ToInt32(row["DificutadHoyo18"]);//12
-                            }
-                            else
+
+                            if (Ro_Cambio == 1)
                             {
-                                DificultatHoyo1_tee = Convert.ToInt32(row["DificutadHoyo2"]);//1
-                                DificultatHoyo2_tee = Convert.ToInt32(row["DificutadHoyo1"]);//2
 
-                                DificultatHoyo3_tee = Convert.ToInt32(row["DificutadHoyo4"]);//3
-                                DificultatHoyo4_tee = Convert.ToInt32(row["DificutadHoyo3"]);//4
-
-                                DificultatHoyo5_tee = Convert.ToInt32(row["DificutadHoyo6"]);//5
-                                DificultatHoyo6_tee = Convert.ToInt32(row["DificutadHoyo5"]);//6
-
-                                DificultatHoyo7_tee = Convert.ToInt32(row["DificutadHoyo8"]);//7
-                                DificultatHoyo8_tee = Convert.ToInt32(row["DificutadHoyo7"]);//8
-
-                                DificultatHoyo9_tee = Convert.ToInt32(row["DificutadHoyo10"]);//9
-                                DificultatHoyo10_tee = Convert.ToInt32(row["DificutadHoyo9"]);//10
-
-                                DificultatHoyo11_tee = Convert.ToInt32(row["DificutadHoyo12"]);//11
-                                DificultatHoyo12_tee = Convert.ToInt32(row["DificutadHoyo11"]);//12
-
-                                DificultatHoyo13_tee = Convert.ToInt32(row["DificutadHoyo14"]);//13
-                                DificultatHoyo14_tee = Convert.ToInt32(row["DificutadHoyo13"]);//14
-
-                                DificultatHoyo15_tee = Convert.ToInt32(row["DificutadHoyo16"]);//15
-                                DificultatHoyo16_tee = Convert.ToInt32(row["DificutadHoyo17"]);//16
-
-                                DificultatHoyo17_tee = Convert.ToInt32(row["DificutadHoyo18"]);//17
-                                DificultatHoyo18_tee = Convert.ToInt32(row["DificutadHoyo117"]);//18
+                                DificultatHoyo1_tee = DificultatHoyo1_tee + 1
+                                DificultatHoyo2_tee = DificultatHoyo2_tee + 1
+                                DificultatHoyo3_tee = DificultatHoyo3_tee + 1
+                                DificultatHoyo4_tee = DificultatHoyo4_tee + 1
+                                DificultatHoyo5_tee = DificultatHoyo5_tee + 1
+                                DificultatHoyo6_tee = DificultatHoyo6_tee + 1
+                                DificultatHoyo7_tee = DificultatHoyo7_tee + 1
+                                DificultatHoyo8_tee = DificultatHoyo8_tee + 1
+                                DificultatHoyo9_tee = DificultatHoyo9_tee + 1
+                                DificultatHoyo10_tee = DificultatHoyo10_tee - 1
+                                DificultatHoyo11_tee = DificultatHoyo11_tee - 1
+                                DificultatHoyo12_tee = DificultatHoyo12_tee - 1
+                                DificultatHoyo13_tee = DificultatHoyo13_tee - 1
+                                DificultatHoyo14_tee = CDificultatHoyo14_tee - 1
+                                DificultatHoyo15_tee = DificultatHoyo15_tee - 1
+                                DificultatHoyo16_tee = DificultatHoyo16_tee - 1
+                                DificultatHoyo17_tee = DificultatHoyo17_tee - 1
+                                DificultatHoyo18_tee = DificultatHoyo18_tee - 1
                             }
+                         
 
 
 
