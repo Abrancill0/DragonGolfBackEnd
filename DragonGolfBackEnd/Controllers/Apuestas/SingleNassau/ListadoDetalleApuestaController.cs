@@ -477,24 +477,24 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (Ro_Cambio == 1)
                         {
-                            DificultatHoyo1 =  DificultatHoyo1 + 1
-                            DificultatHoyo2 = DificultatHoyo2 + 1
-                            DificultatHoyo3 = DificultatHoyo3 + 1
-                            DificultatHoyo4 = DificultatHoyo4 + 1
-                            DificultatHoyo5 = DificultatHoyo5 + 1
-                            DificultatHoyo6 = DificultatHoyo6 + 1
-                            DificultatHoyo7 = DificultatHoyo7 + 1
-                            DificultatHoyo8 = DificultatHoyo8 + 1
-                            DificultatHoyo9 = DificultatHoyo9 + 1
-                            DificultatHoyo10 = DificultatHoyo10 - 1
-                            DificultatHoyo11 = DificultatHoyo11 - 1
-                            DificultatHoyo12 = DificultatHoyo12 - 1
-                            DificultatHoyo13 = DificultatHoyo13 - 1
-                            DificultatHoyo14 = DificultatHoyo14 - 1
-                            DificultatHoyo15 = DificultatHoyo15 - 1
-                            DificultatHoyo16 = DificultatHoyo16 - 1
-                            DificultatHoyo17 = DificultatHoyo17 - 1
-                            DificultatHoyo18 = DificultatHoyo18 - 1
+                            DificultatHoyo1 =  DificultatHoyo1 + 1;
+                            DificultatHoyo2 = DificultatHoyo2 + 1;
+                            DificultatHoyo3 = DificultatHoyo3 + 1;
+                            DificultatHoyo4 = DificultatHoyo4 + 1;
+                            DificultatHoyo5 = DificultatHoyo5 + 1;
+                            DificultatHoyo6 = DificultatHoyo6 + 1;
+                            DificultatHoyo7 = DificultatHoyo7 + 1;
+                            DificultatHoyo8 = DificultatHoyo8 + 1;
+                            DificultatHoyo9 = DificultatHoyo9 + 1;
+                            DificultatHoyo10 = DificultatHoyo10 - 1;
+                            DificultatHoyo11 = DificultatHoyo11 - 1;
+                            DificultatHoyo12 = DificultatHoyo12 - 1;
+                            DificultatHoyo13 = DificultatHoyo13 - 1;
+                            DificultatHoyo14 = DificultatHoyo14 - 1;
+                            DificultatHoyo15 = DificultatHoyo15 - 1;
+                            DificultatHoyo16 = DificultatHoyo16 - 1;
+                            DificultatHoyo17 = DificultatHoyo17 - 1;
+                            DificultatHoyo18 = DificultatHoyo18 - 1;
                         }
                        
 

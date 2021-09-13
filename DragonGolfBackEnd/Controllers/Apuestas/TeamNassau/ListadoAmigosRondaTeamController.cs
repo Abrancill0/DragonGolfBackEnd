@@ -353,24 +353,24 @@ namespace DragonGolfBackEnd.Controllers
                             if (Ro_Cambio == 1)
                             {
 
-                                DificultatHoyo1_tee = DificultatHoyo1_tee + 1
-                                DificultatHoyo2_tee = DificultatHoyo2_tee + 1
-                                DificultatHoyo3_tee = DificultatHoyo3_tee + 1
-                                DificultatHoyo4_tee = DificultatHoyo4_tee + 1
-                                DificultatHoyo5_tee = DificultatHoyo5_tee + 1
-                                DificultatHoyo6_tee = DificultatHoyo6_tee + 1
-                                DificultatHoyo7_tee = DificultatHoyo7_tee + 1
-                                DificultatHoyo8_tee = DificultatHoyo8_tee + 1
-                                DificultatHoyo9_tee = DificultatHoyo9_tee + 1
-                                DificultatHoyo10_tee = DificultatHoyo10_tee - 1
-                                DificultatHoyo11_tee = DificultatHoyo11_tee - 1
-                                DificultatHoyo12_tee = DificultatHoyo12_tee - 1
-                                DificultatHoyo13_tee = DificultatHoyo13_tee - 1
-                                DificultatHoyo14_tee = CDificultatHoyo14_tee - 1
-                                DificultatHoyo15_tee = DificultatHoyo15_tee - 1
-                                DificultatHoyo16_tee = DificultatHoyo16_tee - 1
-                                DificultatHoyo17_tee = DificultatHoyo17_tee - 1
-                                DificultatHoyo18_tee = DificultatHoyo18_tee - 1
+                                DificultatHoyo1_tee = DificultatHoyo1_tee + 1;
+                                DificultatHoyo2_tee = DificultatHoyo2_tee + 1;
+                                DificultatHoyo3_tee = DificultatHoyo3_tee + 1;
+                                DificultatHoyo4_tee = DificultatHoyo4_tee + 1;
+                                DificultatHoyo5_tee = DificultatHoyo5_tee + 1;
+                                DificultatHoyo6_tee = DificultatHoyo6_tee + 1;
+                                DificultatHoyo7_tee = DificultatHoyo7_tee + 1;
+                                DificultatHoyo8_tee = DificultatHoyo8_tee + 1;
+                                DificultatHoyo9_tee = DificultatHoyo9_tee + 1;
+                                DificultatHoyo10_tee = DificultatHoyo10_tee - 1;
+                                DificultatHoyo11_tee = DificultatHoyo11_tee - 1;
+                                DificultatHoyo12_tee = DificultatHoyo12_tee - 1;
+                                DificultatHoyo13_tee = DificultatHoyo13_tee - 1;
+                                DificultatHoyo14_tee = DificultatHoyo14_tee - 1;
+                                DificultatHoyo15_tee = DificultatHoyo15_tee - 1;
+                                DificultatHoyo16_tee = DificultatHoyo16_tee - 1;
+                                DificultatHoyo17_tee = DificultatHoyo17_tee - 1; 
+                                DificultatHoyo18_tee = DificultatHoyo18_tee - 1;
                             }
                          
 
