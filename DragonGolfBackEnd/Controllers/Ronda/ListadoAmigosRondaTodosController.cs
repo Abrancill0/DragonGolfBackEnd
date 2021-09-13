@@ -183,24 +183,24 @@ namespace DragonGolfBackEnd.Controllers
                 if (DT.Rows.Count > 0)
                 {
 
-                    int GolpesVentaja1_tee = 0;
-                    int GolpesVentaja2_tee = 0;
-                    int GolpesVentaja3_tee = 0;
-                    int GolpesVentaja4_tee = 0;
-                    int GolpesVentaja5_tee = 0;
-                    int GolpesVentaja6_tee = 0;
-                    int GolpesVentaja7_tee = 0;
-                    int GolpesVentaja8_tee = 0;
-                    int GolpesVentaja9_tee = 0;
-                    int GolpesVentaja10_tee = 0;
-                    int GolpesVentaja11_tee = 0;
-                    int GolpesVentaja12_tee = 0;
-                    int GolpesVentaja13_tee = 0;
-                    int GolpesVentaja14_tee = 0;
-                    int GolpesVentaja15_tee = 0;
-                    int GolpesVentaja16_tee = 0;
-                    int GolpesVentaja17_tee = 0;
-                    int GolpesVentaja18_tee = 0;
+                    //int GolpesVentaja1_tee = 0;
+                    //int GolpesVentaja2_tee = 0;
+                    //int GolpesVentaja3_tee = 0;
+                    //int GolpesVentaja4_tee = 0;
+                    //int GolpesVentaja5_tee = 0;
+                    //int GolpesVentaja6_tee = 0;
+                    //int GolpesVentaja7_tee = 0;
+                    //int GolpesVentaja8_tee = 0;
+                    //int GolpesVentaja9_tee = 0;
+                    //int GolpesVentaja10_tee = 0;
+                    //int GolpesVentaja11_tee = 0;
+                    //int GolpesVentaja12_tee = 0;
+                    //int GolpesVentaja13_tee = 0;
+                    //int GolpesVentaja14_tee = 0;
+                    //int GolpesVentaja15_tee = 0;
+                    //int GolpesVentaja16_tee = 0;
+                    //int GolpesVentaja17_tee = 0;
+                    //int GolpesVentaja18_tee = 0;
 
                     int DificultatHoyo1 = 0;
                     int DificultatHoyo2 = 0;
@@ -282,6 +282,8 @@ namespace DragonGolfBackEnd.Controllers
 
                     decimal Adv1 = 0;
                     int Adv_tee = 0;
+                    int Ro_Cambio = 0;
+
 
                     foreach (DataRow row in DT.Rows)
                     {
@@ -294,6 +296,8 @@ namespace DragonGolfBackEnd.Controllers
                             string numeroFormato = Convert.ToInt32(row["usu_ghinnumber"]).ToString("D7");
 
                             HoyoInicial = Convert.ToInt32(row["HoyoInicial"]);
+
+                            Ro_Cambio = Convert.ToInt32(row["Ro_Cambio"]);
 
                             int PlayerId = Convert.ToInt32(row["PlayerId"]);
 
@@ -390,6 +394,31 @@ namespace DragonGolfBackEnd.Controllers
                             DificultatHoyo16_tee = Convert.ToInt32(row["DificutadHoyo16"]);//17
                             DificultatHoyo17_tee = Convert.ToInt32(row["DificutadHoyo17"]);//18
                             DificultatHoyo18_tee = Convert.ToInt32(row["DificutadHoyo18"]);//12
+
+
+                            if (Ro_Cambio == 1)
+                            {
+
+                                DificultatHoyo1_tee = DificultatHoyo1_tee + 1;
+                                DificultatHoyo2_tee = DificultatHoyo2_tee + 1;
+                                DificultatHoyo3_tee = DificultatHoyo3_tee + 1;
+                                DificultatHoyo4_tee = DificultatHoyo4_tee + 1;
+                                DificultatHoyo5_tee = DificultatHoyo5_tee + 1;
+                                DificultatHoyo6_tee = DificultatHoyo6_tee + 1;
+                                DificultatHoyo7_tee = DificultatHoyo7_tee + 1;
+                                DificultatHoyo8_tee = DificultatHoyo8_tee + 1;
+                                DificultatHoyo9_tee = DificultatHoyo9_tee + 1;
+                                DificultatHoyo10_tee = DificultatHoyo10_tee - 1;
+                                DificultatHoyo11_tee = DificultatHoyo11_tee - 1;
+                                DificultatHoyo12_tee = DificultatHoyo12_tee - 1;
+                                DificultatHoyo13_tee = DificultatHoyo13_tee - 1;
+                                DificultatHoyo14_tee = DificultatHoyo14_tee - 1;
+                                DificultatHoyo15_tee = DificultatHoyo15_tee - 1;
+                                DificultatHoyo16_tee = DificultatHoyo16_tee - 1;
+                                DificultatHoyo17_tee = DificultatHoyo17_tee - 1;
+                                DificultatHoyo18_tee = DificultatHoyo18_tee - 1;
+                            }
+
 
 
                             //Adv1 = Convert.ToDecimal(row["usu_golpesventaja"]);
@@ -807,6 +836,8 @@ namespace DragonGolfBackEnd.Controllers
                                 }
 
                             }
+
+
 
 
                             int TotalGolpesVentajaFront = 0;
