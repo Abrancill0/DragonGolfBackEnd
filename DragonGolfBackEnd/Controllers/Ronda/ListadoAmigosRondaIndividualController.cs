@@ -411,6 +411,27 @@ namespace DragonGolfBackEnd.Controllers
                                 DificultatHoyo16 = DificultatHoyo16 - 1;
                                 DificultatHoyo17 = DificultatHoyo17 - 1;
                                 DificultatHoyo18 = DificultatHoyo18 - 1;
+
+                                DificultatHoyo1_tee = DificultatHoyo1 + 1;
+                                DificultatHoyo2_tee = DificultatHoyo2 + 1;
+                                DificultatHoyo3_tee = DificultatHoyo3 + 1;
+                                DificultatHoyo4_tee = DificultatHoyo4 + 1;
+                                DificultatHoyo5_tee = DificultatHoyo5 + 1;
+                                DificultatHoyo6_tee = DificultatHoyo6 + 1;
+                                DificultatHoyo7_tee = DificultatHoyo7 + 1;
+                                DificultatHoyo8_tee = DificultatHoyo8 + 1;
+                                DificultatHoyo9_tee = DificultatHoyo9 + 1;
+                                DificultatHoyo10_tee = DificultatHoyo10 - 1;
+                                DificultatHoyo11_tee = DificultatHoyo11 - 1;
+                                DificultatHoyo12_tee = DificultatHoyo12 - 1;
+                                DificultatHoyo13_tee = DificultatHoyo13 - 1;
+                                DificultatHoyo14_tee = DificultatHoyo14 - 1;
+                                DificultatHoyo15_tee = DificultatHoyo15 - 1;
+                                DificultatHoyo16_tee = DificultatHoyo16 - 1;
+                                DificultatHoyo17_tee = DificultatHoyo17 - 1;
+                                DificultatHoyo18_tee = DificultatHoyo18 - 1;
+
+
                             }
                          
 
