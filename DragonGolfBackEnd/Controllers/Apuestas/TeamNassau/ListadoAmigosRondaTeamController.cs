@@ -197,24 +197,24 @@ namespace DragonGolfBackEnd.Controllers
 
                 if (DT.Rows.Count > 0)
                 {
-                    int DificultatHoyo1 = 0;
-                    int DificultatHoyo2 = 0;
-                    int DificultatHoyo3 = 0;
-                    int DificultatHoyo4 = 0;
-                    int DificultatHoyo5 = 0;
-                    int DificultatHoyo6 = 0;
-                    int DificultatHoyo7 = 0;
-                    int DificultatHoyo8 = 0;
-                    int DificultatHoyo9 = 0;
-                    int DificultatHoyo10 = 0;
-                    int DificultatHoyo11 = 0;
-                    int DificultatHoyo12 = 0;
-                    int DificultatHoyo13 = 0;
-                    int DificultatHoyo14 = 0;
-                    int DificultatHoyo15 = 0;
-                    int DificultatHoyo16 = 0;
-                    int DificultatHoyo17 = 0;
-                    int DificultatHoyo18 = 0;
+                    //int DificultatHoyo1 = 0;
+                    //int DificultatHoyo2 = 0;
+                    //int DificultatHoyo3 = 0;
+                    //int DificultatHoyo4 = 0;
+                    //int DificultatHoyo5 = 0;
+                    //int DificultatHoyo6 = 0;
+                    //int DificultatHoyo7 = 0;
+                    //int DificultatHoyo8 = 0;
+                    //int DificultatHoyo9 = 0;
+                    //int DificultatHoyo10 = 0;
+                    //int DificultatHoyo11 = 0;
+                    //int DificultatHoyo12 = 0;
+                    //int DificultatHoyo13 = 0;
+                    //int DificultatHoyo14 = 0;
+                    //int DificultatHoyo15 = 0;
+                    //int DificultatHoyo16 = 0;
+                    //int DificultatHoyo17 = 0;
+                    //int DificultatHoyo18 = 0;
 
                     int DificultatHoyo1_tee = 0;
                     int DificultatHoyo2_tee = 0;
@@ -305,24 +305,24 @@ namespace DragonGolfBackEnd.Controllers
 
                             int PlayerId = Convert.ToInt32(row["PlayerId"]);
 
-                            DificultatHoyo1 = Convert.ToInt32(row["Ho_Advantage1"]);//7
-                            DificultatHoyo2 = Convert.ToInt32(row["Ho_Advantage2"]);//1
-                            DificultatHoyo3 = Convert.ToInt32(row["Ho_Advantage3"]);//8
-                            DificultatHoyo4 = Convert.ToInt32(row["Ho_Advantage4"]);//5
-                            DificultatHoyo5 = Convert.ToInt32(row["Ho_Advantage5"]);//2
-                            DificultatHoyo6 = Convert.ToInt32(row["Ho_Advantage6"]);//6
-                            DificultatHoyo7 = Convert.ToInt32(row["Ho_Advantage7"]);//4
-                            DificultatHoyo8 = Convert.ToInt32(row["Ho_Advantage8"]);//3
-                            DificultatHoyo9 = Convert.ToInt32(row["Ho_Advantage9"]);//9
-                            DificultatHoyo10 = Convert.ToInt32(row["Ho_Advantage10"]);//10
-                            DificultatHoyo11 = Convert.ToInt32(row["Ho_Advantage11"]);//11
-                            DificultatHoyo12 = Convert.ToInt32(row["Ho_Advantage12"]);//14
-                            DificultatHoyo13 = Convert.ToInt32(row["Ho_Advantage13"]);//15
-                            DificultatHoyo14 = Convert.ToInt32(row["Ho_Advantage14"]);//13
-                            DificultatHoyo15 = Convert.ToInt32(row["Ho_Advantage15"]);//16
-                            DificultatHoyo16 = Convert.ToInt32(row["Ho_Advantage16"]);//17
-                            DificultatHoyo17 = Convert.ToInt32(row["Ho_Advantage17"]);//18
-                            DificultatHoyo18 = Convert.ToInt32(row["Ho_Advantage18"]);//12
+                            //DificultatHoyo1 = Convert.ToInt32(row["Ho_Advantage1"]);//7
+                            //DificultatHoyo2 = Convert.ToInt32(row["Ho_Advantage2"]);//1
+                            //DificultatHoyo3 = Convert.ToInt32(row["Ho_Advantage3"]);//8
+                            //DificultatHoyo4 = Convert.ToInt32(row["Ho_Advantage4"]);//5
+                            //DificultatHoyo5 = Convert.ToInt32(row["Ho_Advantage5"]);//2
+                            //DificultatHoyo6 = Convert.ToInt32(row["Ho_Advantage6"]);//6
+                            //DificultatHoyo7 = Convert.ToInt32(row["Ho_Advantage7"]);//4
+                            //DificultatHoyo8 = Convert.ToInt32(row["Ho_Advantage8"]);//3
+                            //DificultatHoyo9 = Convert.ToInt32(row["Ho_Advantage9"]);//9
+                            //DificultatHoyo10 = Convert.ToInt32(row["Ho_Advantage10"]);//10
+                            //DificultatHoyo11 = Convert.ToInt32(row["Ho_Advantage11"]);//11
+                            //DificultatHoyo12 = Convert.ToInt32(row["Ho_Advantage12"]);//14
+                            //DificultatHoyo13 = Convert.ToInt32(row["Ho_Advantage13"]);//15
+                            //DificultatHoyo14 = Convert.ToInt32(row["Ho_Advantage14"]);//13
+                            //DificultatHoyo15 = Convert.ToInt32(row["Ho_Advantage15"]);//16
+                            //DificultatHoyo16 = Convert.ToInt32(row["Ho_Advantage16"]);//17
+                            //DificultatHoyo17 = Convert.ToInt32(row["Ho_Advantage17"]);//18
+                            //DificultatHoyo18 = Convert.ToInt32(row["Ho_Advantage18"]);//12
 
                             TipoGolpesVentaja = Convert.ToString(row["TipoGolpesVentaja"]);
 
@@ -350,8 +350,9 @@ namespace DragonGolfBackEnd.Controllers
                                 DificultatHoyo17_tee = Convert.ToInt32(row["DificutadHoyo17"]);//18
                                 DificultatHoyo18_tee = Convert.ToInt32(row["DificutadHoyo18"]);//12
 
-                            if (Ro_Cambio == 1)
+                            if (Ro_Cambio == 1 && HoyoInicial>1)
                             {
+                               
 
                                 DificultatHoyo1_tee = DificultatHoyo1_tee + 1;
                                 DificultatHoyo2_tee = DificultatHoyo2_tee + 1;
@@ -11595,24 +11596,24 @@ namespace DragonGolfBackEnd.Controllers
                                 ho_par16 = Convert.ToInt32(row["ho_par16"]),
                                 ho_par17 = Convert.ToInt32(row["ho_par17"]),
                                 ho_par18 = Convert.ToInt32(row["ho_par18"]),
-                                Ho_Advantage1 = Convert.ToInt32(row["Ho_Advantage1"]),
-                                Ho_Advantage2 = Convert.ToInt32(row["Ho_Advantage2"]),
-                                Ho_Advantage3 = Convert.ToInt32(row["Ho_Advantage3"]),
-                                Ho_Advantage4 = Convert.ToInt32(row["Ho_Advantage4"]),
-                                Ho_Advantage5 = Convert.ToInt32(row["Ho_Advantage5"]),
-                                Ho_Advantage6 = Convert.ToInt32(row["Ho_Advantage6"]),
-                                Ho_Advantage7 = Convert.ToInt32(row["Ho_Advantage7"]),
-                                Ho_Advantage8 = Convert.ToInt32(row["Ho_Advantage8"]),
-                                Ho_Advantage9 = Convert.ToInt32(row["Ho_Advantage9"]),
-                                Ho_Advantage10 = Convert.ToInt32(row["Ho_Advantage10"]),
-                                Ho_Advantage11 = Convert.ToInt32(row["Ho_Advantage11"]),
-                                Ho_Advantage12 = Convert.ToInt32(row["Ho_Advantage12"]),
-                                Ho_Advantage13 = Convert.ToInt32(row["Ho_Advantage13"]),
-                                Ho_Advantage14 = Convert.ToInt32(row["Ho_Advantage14"]),
-                                Ho_Advantage15 = Convert.ToInt32(row["Ho_Advantage15"]),
-                                Ho_Advantage16 = Convert.ToInt32(row["Ho_Advantage16"]),
-                                Ho_Advantage17 = Convert.ToInt32(row["Ho_Advantage17"]),
-                                Ho_Advantage18 = Convert.ToInt32(row["Ho_Advantage18"]),
+                                Ho_Advantage1 = DificultatHoyo1_tee,
+                                Ho_Advantage2 = DificultatHoyo2_tee,
+                                Ho_Advantage3 = DificultatHoyo3_tee,
+                                Ho_Advantage4 = DificultatHoyo4_tee,
+                                Ho_Advantage5 = DificultatHoyo5_tee,
+                                Ho_Advantage6 = DificultatHoyo6_tee,
+                                Ho_Advantage7 = DificultatHoyo7_tee,
+                                Ho_Advantage8 = DificultatHoyo8_tee,
+                                Ho_Advantage9 = DificultatHoyo9_tee,
+                                Ho_Advantage10 = DificultatHoyo10_tee,
+                                Ho_Advantage11 = DificultatHoyo11_tee,
+                                Ho_Advantage12 = DificultatHoyo12_tee,
+                                Ho_Advantage13 = DificultatHoyo13_tee,
+                                Ho_Advantage14 = DificultatHoyo14_tee,
+                                Ho_Advantage15 = DificultatHoyo15_tee,
+                                Ho_Advantage16 = DificultatHoyo16_tee,
+                                Ho_Advantage17 = DificultatHoyo17_tee,
+                                Ho_Advantage18 = DificultatHoyo18_tee,
                                 usu_nombre = Convert.ToString(row["usu_nombre"]),
                                 usu_apellido_paterno = Convert.ToString(row["usu_apellido_paterno"]),
                                 usu_apellido_materno = Convert.ToString(row["usu_apellido_materno"]),

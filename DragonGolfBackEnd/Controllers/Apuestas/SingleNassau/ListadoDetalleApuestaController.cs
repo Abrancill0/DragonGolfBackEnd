@@ -475,7 +475,7 @@ namespace DragonGolfBackEnd.Controllers
                             DificultatHoyo18 = Convert.ToInt32(row["DificultatHoyo18"]);//12
 
 
-                        if (Ro_Cambio == 1)
+                        if (Ro_Cambio == 1 && HoyoInicial > 1)
                         {
                             DificultatHoyo1 =  DificultatHoyo1 + 1;
                             DificultatHoyo2 = DificultatHoyo2 + 1;
