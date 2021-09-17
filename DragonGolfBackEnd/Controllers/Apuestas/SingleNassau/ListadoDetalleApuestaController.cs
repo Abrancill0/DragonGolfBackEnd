@@ -118,7 +118,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             Calculo(Convert.ToInt32(row["IDBet"]), Convert.ToInt32(row["IDRonda"]), Convert.ToInt32(row["IDBetDetail"]));
 
-                                                  }
+                         }
                     }
 
                     SqlCommand comando = new SqlCommand("DragoGolf_ListDetailBet");
@@ -409,7 +409,6 @@ namespace DragonGolfBackEnd.Controllers
 
                         if (InicioPartida1 == false && InicioPartida2 == false)
                         {
-
                             return 0;
                         }
 

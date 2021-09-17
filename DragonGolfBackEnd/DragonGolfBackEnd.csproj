@@ -186,6 +186,7 @@
     <Compile Include="Controllers\Apuestas\ActualizarOrdenApuestaController.cs" />
     <Compile Include="Controllers\Apuestas\SingleNassau\CalcularApuestaController.cs" />
     <Compile Include="Controllers\Apuestas\SingleNassau\ActualizarDetalleApuestaController.cs" />
+    <Compile Include="Controllers\Apuestas\SingleNassau\ValidaDetalleApuestaController.cs" />
     <Compile Include="Controllers\Apuestas\SingleNassau\EliminaApuestaController.cs" />
     <Compile Include="Controllers\Apuestas\SingleNassau\CrearDetalleApuestaController.cs" />
     <Compile Include="Controllers\Apuestas\SingleNassau\ListadoDetalleApuestaIndividualController.cs" />
@@ -199,6 +200,7 @@
     <Compile Include="Controllers\Apuestas\TeamNassau\ListadoAmigosRondaTeamController.cs" />
     <Compile Include="Controllers\Apuestas\TeamNassau\ListadoDetalleApuestaTeamController.cs" />
     <Compile Include="Controllers\Apuestas\TeamNassau\ListadoTeesRondaBetDetailsTeamController.cs" />
+    <Compile Include="Controllers\Apuestas\TeamNassau\ValidaDetalleApuestaTeamController.cs" />
     <Compile Include="Controllers\Campos\CopiarCampoController.cs" />
     <Compile Include="Controllers\Campos\EliminarCampoController.cs" />
     <Compile Include="Controllers\Campos\ListaCamposTodosController.cs" />
@@ -225,6 +227,7 @@
     <Compile Include="Controllers\Invitados\ListadoInvitadosController.cs" />
     <Compile Include="Controllers\Ronda\CambioRondaController.cs" />
     <Compile Include="Controllers\Ronda\AbrirRondaController.cs" />
+    <Compile Include="Controllers\Ronda\CrearPlantillaRondaController.cs" />
     <Compile Include="Controllers\Ronda\HandicapIndexController.cs" />
     <Compile Include="Controllers\Ronda\HistoriaController.cs" />
     <Compile Include="Controllers\Ronda\HistoricoRondaController.cs" />
