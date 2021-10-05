@@ -186,6 +186,7 @@
     <Compile Include="Controllers\Apuestas\ActualizarOrdenApuestaController.cs" />
     <Compile Include="Controllers\Apuestas\SingleNassau\CalcularApuestaController.cs" />
     <Compile Include="Controllers\Apuestas\SingleNassau\ActualizarDetalleApuestaController.cs" />
+    <Compile Include="Controllers\Apuestas\SingleNassau\CrearDetalleApuestaMasivoController.cs" />
     <Compile Include="Controllers\Apuestas\SingleNassau\ValidaDetalleApuestaController.cs" />
     <Compile Include="Controllers\Apuestas\SingleNassau\EliminaApuestaController.cs" />
     <Compile Include="Controllers\Apuestas\SingleNassau\CrearDetalleApuestaController.cs" />
