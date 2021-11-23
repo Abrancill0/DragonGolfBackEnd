@@ -730,32 +730,60 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
-
-                                                if (HandicapP1 < HandicapP3 && Bet_CambioVentaja == false)
+                                                if (Bet_CambioVentaja == false)
                                                 {
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 < HandicapP3)
                                                     {
-                                                        ScoreHole1_P1 = ScoreHole1_P1 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                        }
                                                     }
                                                 }
                                                 else
                                                 {
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 > HandicapP3)
                                                     {
-                                                        ScoreHole1_P3 = ScoreHole1_P3 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                        }
                                                     }
                                                 }
-
 
                                             }
 
@@ -889,65 +917,116 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
-
-                                                if (HandicapP1 > HandicapP3 && Bet_CambioVentaja == false)
+                                                if (Bet_CambioVentaja == false)
                                                 {
-
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 > HandicapP3)
                                                     {
-                                                        ScoreHole2_P1 = ScoreHole2_P1 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole2_P1 = ScoreHole2_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole2_P1 = ScoreHole2_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole2_P1 = ScoreHole2_P1 - 1;
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole2_P3 = ScoreHole2_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole2_P3 = ScoreHole2_P3 - 1;
+                                                        }
                                                     }
                                                 }
                                                 else
                                                 {
-
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 < HandicapP3)
                                                     {
-                                                        ScoreHole2_P3 = ScoreHole2_P3 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole2_P1 = ScoreHole2_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole2_P1 = ScoreHole2_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole2_P3 = ScoreHole2_P3 - 1;
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole2_P3 = ScoreHole2_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole2_P3 = ScoreHole2_P3 - 1;
+                                                        }
                                                     }
                                                 }
-
                                             }
 
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
-
-                                                if (HandicapP1 < HandicapP3 && Bet_CambioVentaja == false)
+                                                if (Bet_CambioVentaja == false)
                                                 {
-
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 < HandicapP3)
                                                     {
-                                                        ScoreHole2_P1 = ScoreHole2_P1 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole2_P1 = ScoreHole2_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole2_P1 = ScoreHole2_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole2_P1 = ScoreHole2_P1 - 1;
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole2_P3 = ScoreHole2_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole2_P3 = ScoreHole2_P3 - 1;
+                                                        }
                                                     }
                                                 }
                                                 else
                                                 {
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 > HandicapP3)
                                                     {
-                                                        ScoreHole2_P3 = ScoreHole2_P3 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole2_P1 = ScoreHole2_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole2_P1 = ScoreHole2_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole2_P3 = ScoreHole2_P3 - 1;
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole2_P3 = ScoreHole2_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole2_P3 = ScoreHole2_P3 - 1;
+                                                        }
                                                     }
                                                 }
-
 
                                             }
 
@@ -1081,68 +1160,119 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
-
-                                                if (HandicapP1 > HandicapP3 && Bet_CambioVentaja == false)
+                                                if (Bet_CambioVentaja == false)
                                                 {
-
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 > HandicapP3)
                                                     {
-                                                        ScoreHole3_P1 = ScoreHole3_P1 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole3_P1 = ScoreHole3_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole3_P1 = ScoreHole3_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole3_P1 = ScoreHole3_P1 - 1;
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole3_P3 = ScoreHole3_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole3_P3 = ScoreHole3_P3 - 1;
+                                                        }
                                                     }
                                                 }
                                                 else
                                                 {
-
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 < HandicapP3)
                                                     {
-                                                        ScoreHole3_P3 = ScoreHole3_P3 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole3_P1 = ScoreHole3_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole3_P1 = ScoreHole3_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole3_P3 = ScoreHole3_P3 - 1;
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole3_P3 = ScoreHole3_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole3_P3 = ScoreHole3_P3 - 1;
+                                                        }
                                                     }
                                                 }
-
                                             }
 
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
-
-                                                if (HandicapP1 < HandicapP3 && Bet_CambioVentaja == false)
+                                                if (Bet_CambioVentaja == false)
                                                 {
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 < HandicapP3)
                                                     {
-                                                        ScoreHole3_P1 = ScoreHole3_P1 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole3_P1 = ScoreHole3_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole3_P1 = ScoreHole3_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole3_P1 = ScoreHole3_P1 - 1;
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole3_P3 = ScoreHole3_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole3_P3 = ScoreHole3_P3 - 1;
+                                                        }
                                                     }
                                                 }
                                                 else
                                                 {
-
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 > HandicapP3)
                                                     {
-                                                        ScoreHole3_P3 = ScoreHole3_P3 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole3_P1 = ScoreHole3_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole3_P1 = ScoreHole3_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole3_P3 = ScoreHole3_P3 - 1;
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole3_P3 = ScoreHole3_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole3_P3 = ScoreHole3_P3 - 1;
+                                                        }
                                                     }
                                                 }
 
-
                                             }
-
+                                           
                                             if (TipoGolpesVentaja == "Each")
                                             {
                                                 if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor && Bet_CambioVentaja == false)
@@ -1274,66 +1404,119 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
-
-                                                if (HandicapP1 > HandicapP3 && Bet_CambioVentaja == false)
+                                                if (Bet_CambioVentaja == false)
                                                 {
-
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 > HandicapP3)
                                                     {
-                                                        ScoreHole4_P1 = ScoreHole4_P1 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole4_P1 = ScoreHole4_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole4_P1 = ScoreHole4_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole4_P1 = ScoreHole4_P1 - 1;
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole4_P3 = ScoreHole4_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole4_P3 = ScoreHole4_P3 - 1;
+                                                        }
                                                     }
                                                 }
                                                 else
                                                 {
-
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 < HandicapP3)
                                                     {
-                                                        ScoreHole4_P3 = ScoreHole4_P3 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole4_P1 = ScoreHole4_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole4_P1 = ScoreHole4_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole4_P3 = ScoreHole4_P3 - 1;
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole4_P3 = ScoreHole4_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole4_P3 = ScoreHole4_P3 - 1;
+                                                        }
                                                     }
                                                 }
-
                                             }
 
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
-
-                                                if (HandicapP1 < HandicapP3 && Bet_CambioVentaja == false)
+                                                if (Bet_CambioVentaja == false)
                                                 {
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 < HandicapP3)
                                                     {
-                                                        ScoreHole4_P1 = ScoreHole4_P1 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole4_P1 = ScoreHole4_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole4_P1 = ScoreHole4_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole4_P1 = ScoreHole4_P1 - 1;
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole4_P3 = ScoreHole4_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole4_P3 = ScoreHole4_P3 - 1;
+                                                        }
                                                     }
                                                 }
                                                 else
                                                 {
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 > HandicapP3)
                                                     {
-                                                        ScoreHole4_P3 = ScoreHole4_P3 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole4_P1 = ScoreHole4_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole4_P1 = ScoreHole4_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole4_P3 = ScoreHole4_P3 - 1;
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole4_P3 = ScoreHole4_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole4_P3 = ScoreHole4_P3 - 1;
+                                                        }
                                                     }
                                                 }
 
                                             }
-
+                                           
                                             if (TipoGolpesVentaja == "Each")
                                             {
                                                 if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor && Bet_CambioVentaja == false)
@@ -1464,63 +1647,116 @@ namespace DragonGolfBackEnd.Controllers
                                         {
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
-
-                                                if (HandicapP1 > HandicapP3 && Bet_CambioVentaja == false)
+                                                if (Bet_CambioVentaja == false)
                                                 {
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 > HandicapP3)
                                                     {
-                                                        ScoreHole5_P1 = ScoreHole5_P1 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole5_P1 = ScoreHole5_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole5_P1 = ScoreHole5_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole5_P1 = ScoreHole5_P1 - 1;
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole5_P3 = ScoreHole5_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole5_P3 = ScoreHole5_P3 - 1;
+                                                        }
                                                     }
                                                 }
                                                 else
                                                 {
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 < HandicapP3)
                                                     {
-                                                        ScoreHole5_P3 = ScoreHole5_P3 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole5_P1 = ScoreHole5_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole5_P1 = ScoreHole5_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole5_P3 = ScoreHole5_P3 - 1;
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole5_P3 = ScoreHole5_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole5_P3 = ScoreHole5_P3 - 1;
+                                                        }
                                                     }
                                                 }
-
                                             }
 
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
-
-                                                if (HandicapP1 < HandicapP3 && Bet_CambioVentaja == false)
+                                                if (Bet_CambioVentaja == false)
                                                 {
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 < HandicapP3)
                                                     {
-                                                        ScoreHole5_P1 = ScoreHole5_P1 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole5_P1 = ScoreHole5_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole5_P1 = ScoreHole5_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole5_P1 = ScoreHole5_P1 - 1;
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole5_P3 = ScoreHole5_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole5_P3 = ScoreHole5_P3 - 1;
+                                                        }
                                                     }
                                                 }
                                                 else
                                                 {
-
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 > HandicapP3)
                                                     {
-                                                        ScoreHole5_P3 = ScoreHole5_P3 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole5_P1 = ScoreHole5_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole5_P1 = ScoreHole5_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole5_P3 = ScoreHole5_P3 - 1;
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole5_P3 = ScoreHole5_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole5_P3 = ScoreHole5_P3 - 1;
+                                                        }
                                                     }
                                                 }
-
 
                                             }
 
@@ -1650,95 +1886,124 @@ namespace DragonGolfBackEnd.Controllers
 
                                     if (DificultatHoyo6 == Contador)
                                     {
-                                        if (ScoreHole6_P1 > 0 && ScoreHole6_P2 > 0 && ScoreHole6_P3 > 0 && ScoreHole6_P4 > 0)
+                                        if (ScoreHole6_P1 > 0 && ScoreHole6_P2 > 0 && ScoreHole6_P3 > 0 && ScoreHole6_P4 > 0)0
                                         {
 
-                                            if (Bet_CambioVentaja == false)
+                                            if (TipoGolpesVentaja == "Hi Handicap")
                                             {
-                                                if (HandicapP1 > HandicapP3)
+                                                if (Bet_CambioVentaja == false)
                                                 {
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 > HandicapP3)
                                                     {
-                                                        ScoreHole6_P1 = ScoreHole6_P1 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole6_P1 = ScoreHole6_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole6_P1 = ScoreHole6_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole6_P1 = ScoreHole6_P1 - 1;
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole6_P3 = ScoreHole6_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole6_P3 = ScoreHole6_P3 - 1;
+                                                        }
                                                     }
                                                 }
                                                 else
                                                 {
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 < HandicapP3)
                                                     {
-                                                        ScoreHole6_P3 = ScoreHole6_P3 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole6_P1 = ScoreHole6_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole6_P1 = ScoreHole6_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole6_P3 = ScoreHole6_P3 - 1;
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole6_P3 = ScoreHole6_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole6_P3 = ScoreHole6_P3 - 1;
+                                                        }
                                                     }
                                                 }
                                             }
-                                            else
-                                            {
-                                                if (HandicapP1 < HandicapP3)
-                                                {
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
-                                                    {
-                                                        ScoreHole6_P1 = ScoreHole6_P1 - (0.5 + ValCompleto);
-                                                    }
-                                                    else
-                                                    {
-                                                        ScoreHole6_P1 = ScoreHole6_P1 - 1;
-                                                    }
-                                                }
-                                                else
-                                                {
-                                                    if (Contador == AdvPositivo)
-                                                    {
-                                                        ScoreHole6_P3 = ScoreHole6_P3 - (0.5 + ValCompleto);
-                                                    }
-                                                    else
-                                                    {
-                                                        ScoreHole6_P3 = ScoreHole6_P3 - 1;
-                                                    }
-                                                }
-                                            }
+
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
-
-                                                if (HandicapP1 < HandicapP3 && Bet_CambioVentaja == false)
+                                                if (Bet_CambioVentaja == false)
                                                 {
-
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 < HandicapP3)
                                                     {
-                                                        ScoreHole6_P1 = ScoreHole6_P1 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole6_P1 = ScoreHole6_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole6_P1 = ScoreHole6_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole6_P1 = ScoreHole6_P1 - 1;
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole6_P3 = ScoreHole6_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole6_P3 = ScoreHole6_P3 - 1;
+                                                        }
                                                     }
                                                 }
                                                 else
                                                 {
-                                                    ScoreHole6_P3 = ScoreHole6_P3 - 1;
-
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 > HandicapP3)
                                                     {
-                                                        ScoreHole6_P3 = ScoreHole6_P3 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole6_P1 = ScoreHole6_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole6_P1 = ScoreHole6_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole6_P3 = ScoreHole6_P3 - 1;
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole6_P3 = ScoreHole6_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole6_P3 = ScoreHole6_P3 - 1;
+                                                        }
                                                     }
                                                 }
 
-
                                             }
-
+                                          
                                             if (TipoGolpesVentaja == "Each")
                                             {
                                                 if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor && Bet_CambioVentaja == false)
@@ -1870,69 +2135,119 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
-
-                                                if (HandicapP1 > HandicapP3 && Bet_CambioVentaja == false)
+                                                if (Bet_CambioVentaja == false)
                                                 {
-
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 > HandicapP3)
                                                     {
-                                                        ScoreHole7_P1 = ScoreHole7_P1 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole7_P1 = ScoreHole7_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole7_P1 = ScoreHole7_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole7_P1 = ScoreHole7_P1 - 1;
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole7_P3 = ScoreHole7_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole7_P3 = ScoreHole7_P3 - 1;
+                                                        }
                                                     }
                                                 }
                                                 else
                                                 {
-
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 < HandicapP3)
                                                     {
-                                                        ScoreHole7_P3 = ScoreHole7_P3 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole7_P1 = ScoreHole7_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole7_P1 = ScoreHole7_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole7_P3 = ScoreHole7_P3 - 1;
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole7_P3 = ScoreHole7_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole7_P3 = ScoreHole7_P3 - 1;
+                                                        }
                                                     }
                                                 }
-
                                             }
 
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
-
-                                                if (HandicapP1 < HandicapP3 && Bet_CambioVentaja == false)
+                                                if (Bet_CambioVentaja == false)
                                                 {
-
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 < HandicapP3)
                                                     {
-                                                        ScoreHole7_P1 = ScoreHole7_P1 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole7_P1 = ScoreHole7_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole7_P1 = ScoreHole7_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole7_P1 = ScoreHole7_P1 - 1;
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole7_P3 = ScoreHole7_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole7_P3 = ScoreHole7_P3 - 1;
+                                                        }
                                                     }
                                                 }
                                                 else
                                                 {
-
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 > HandicapP3)
                                                     {
-                                                        ScoreHole7_P3 = ScoreHole7_P3 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole7_P1 = ScoreHole7_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole7_P1 = ScoreHole7_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole7_P3 = ScoreHole7_P3 - 1;
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole7_P3 = ScoreHole7_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole7_P3 = ScoreHole7_P3 - 1;
+                                                        }
                                                     }
                                                 }
 
-
                                             }
-
+                                            
                                             if (TipoGolpesVentaja == "Each")
                                             {
                                                 if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor && Bet_CambioVentaja == false)
@@ -2064,59 +2379,114 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
-
-                                                if (HandicapP1 > HandicapP3 && Bet_CambioVentaja == false)
+                                                if (Bet_CambioVentaja == false)
                                                 {
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 > HandicapP3)
                                                     {
-                                                        ScoreHole8_P1 = ScoreHole8_P1 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole8_P1 = ScoreHole8_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole8_P1 = ScoreHole8_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole8_P1 = ScoreHole8_P1 - 1;
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole8_P3 = ScoreHole8_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole8_P3 = ScoreHole8_P3 - 1;
+                                                        }
                                                     }
                                                 }
                                                 else
                                                 {
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 < HandicapP3)
                                                     {
-                                                        ScoreHole8_P3 = ScoreHole8_P3 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole8_P1 = ScoreHole8_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole8_P1 = ScoreHole8_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole8_P3 = ScoreHole8_P3 - 1;
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole8_P3 = ScoreHole8_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole8_P3 = ScoreHole8_P3 - 1;
+                                                        }
                                                     }
                                                 }
-
                                             }
 
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
-
-                                                if (HandicapP1 < HandicapP3 && Bet_CambioVentaja == false)
+                                                if (Bet_CambioVentaja == false)
                                                 {
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 < HandicapP3)
                                                     {
-                                                        ScoreHole8_P1 = ScoreHole8_P1 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole8_P1 = ScoreHole8_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole8_P1 = ScoreHole8_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole8_P1 = ScoreHole8_P1 - 1;
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole8_P3 = ScoreHole8_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole8_P3 = ScoreHole8_P3 - 1;
+                                                        }
                                                     }
                                                 }
                                                 else
                                                 {
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 > HandicapP3)
                                                     {
-                                                        ScoreHole8_P3 = ScoreHole8_P3 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole8_P1 = ScoreHole8_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole8_P1 = ScoreHole8_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole8_P3 = ScoreHole8_P3 - 1;
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole8_P3 = ScoreHole8_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole8_P3 = ScoreHole8_P3 - 1;
+                                                        }
                                                     }
                                                 }
 
@@ -2255,62 +2625,114 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
-
-                                                if (HandicapP1 > HandicapP3 && Bet_CambioVentaja == false)
+                                                if (Bet_CambioVentaja == false)
                                                 {
-
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 > HandicapP3)
                                                     {
-                                                        ScoreHole9_P1 = ScoreHole9_P1 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole9_P1 = ScoreHole9_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole9_P1 = ScoreHole9_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole9_P1 = ScoreHole9_P1 - 1;
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole9_P3 = ScoreHole9_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole9_P3 = ScoreHole9_P3 - 1;
+                                                        }
                                                     }
                                                 }
                                                 else
                                                 {
-
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 < HandicapP3)
                                                     {
-                                                        ScoreHole9_P3 = ScoreHole9_P3 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole9_P1 = ScoreHole9_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole9_P1 = ScoreHole9_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole9_P3 = ScoreHole9_P3 - 1;
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole9_P3 = ScoreHole9_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole9_P3 = ScoreHole9_P3 - 1;
+                                                        }
                                                     }
                                                 }
-
                                             }
 
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
-
-                                                if (HandicapP1 < HandicapP3 && Bet_CambioVentaja == false)
+                                                if (Bet_CambioVentaja == false)
                                                 {
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 < HandicapP3)
                                                     {
-                                                        ScoreHole9_P1 = ScoreHole9_P1 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole9_P1 = ScoreHole9_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole9_P1 = ScoreHole9_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole9_P1 = ScoreHole9_P1 - 1;
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole9_P3 = ScoreHole9_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole9_P3 = ScoreHole9_P3 - 1;
+                                                        }
                                                     }
                                                 }
                                                 else
                                                 {
-
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 > HandicapP3)
                                                     {
-                                                        ScoreHole9_P3 = ScoreHole9_P3 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole9_P1 = ScoreHole9_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole9_P1 = ScoreHole9_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole9_P3 = ScoreHole9_P3 - 1;
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole9_P3 = ScoreHole9_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole9_P3 = ScoreHole9_P3 - 1;
+                                                        }
                                                     }
                                                 }
 
@@ -2447,60 +2869,114 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
-
-                                                if (HandicapP1 > HandicapP3 && Bet_CambioVentaja == false)
+                                                if (Bet_CambioVentaja == false)
                                                 {
-
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 > HandicapP3)
                                                     {
-                                                        ScoreHole10_P1 = ScoreHole10_P1 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole10_P1 = ScoreHole10_P1 - 1;
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                        }
                                                     }
                                                 }
                                                 else
                                                 {
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 < HandicapP3)
                                                     {
-                                                        ScoreHole10_P3 = ScoreHole10_P3 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole10_P3 = ScoreHole10_P3 - 1;
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                        }
                                                     }
                                                 }
-
                                             }
 
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
-
-                                                if (HandicapP1 < HandicapP3 && Bet_CambioVentaja == false)
+                                                if (Bet_CambioVentaja == false)
                                                 {
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 < HandicapP3)
                                                     {
-                                                        ScoreHole10_P1 = ScoreHole10_P1 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole10_P1 = ScoreHole10_P1 - 1;
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                        }
                                                     }
                                                 }
                                                 else
                                                 {
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 > HandicapP3)
                                                     {
-                                                        ScoreHole10_P3 = ScoreHole10_P3 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole10_P3 = ScoreHole10_P3 - 1;
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                        }
                                                     }
                                                 }
 
@@ -2637,59 +3113,114 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
-
-                                                if (HandicapP1 > HandicapP3 && Bet_CambioVentaja == false)
+                                                if (Bet_CambioVentaja == false)
                                                 {
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 > HandicapP3)
                                                     {
-                                                        ScoreHole11_P1 = ScoreHole11_P1 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole11_P1 = ScoreHole11_P1 - 1;
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                        }
                                                     }
                                                 }
                                                 else
                                                 {
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 < HandicapP3)
                                                     {
-                                                        ScoreHole11_P3 = ScoreHole11_P3 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole11_P3 = ScoreHole11_P3 - 1;
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                        }
                                                     }
                                                 }
-
                                             }
 
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
-
-                                                if (HandicapP1 < HandicapP3 && Bet_CambioVentaja == false)
+                                                if (Bet_CambioVentaja == false)
                                                 {
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 < HandicapP3)
                                                     {
-                                                        ScoreHole11_P1 = ScoreHole11_P1 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole11_P1 = ScoreHole11_P1 - 1;
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                        }
                                                     }
                                                 }
                                                 else
                                                 {
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 > HandicapP3)
                                                     {
-                                                        ScoreHole11_P3 = ScoreHole11_P3 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole11_P3 = ScoreHole11_P3 - 1;
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                        }
                                                     }
                                                 }
 
@@ -2827,61 +3358,114 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
-
-                                                if (HandicapP1 > HandicapP3 && Bet_CambioVentaja == false)
+                                                if (Bet_CambioVentaja == false)
                                                 {
-
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 > HandicapP3)
                                                     {
-                                                        ScoreHole12_P1 = ScoreHole12_P1 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole12_P1 = ScoreHole12_P1 - 1;
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                        }
                                                     }
                                                 }
                                                 else
                                                 {
-
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 < HandicapP3)
                                                     {
-                                                        ScoreHole12_P3 = ScoreHole12_P3 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole12_P3 = ScoreHole12_P3 - 1;
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                        }
                                                     }
                                                 }
-
                                             }
 
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
-
-                                                if (HandicapP1 < HandicapP3 && Bet_CambioVentaja == false)
+                                                if (Bet_CambioVentaja == false)
                                                 {
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 < HandicapP3)
                                                     {
-                                                        ScoreHole12_P1 = ScoreHole12_P1 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole12_P1 = ScoreHole12_P1 - 1;
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                        }
                                                     }
                                                 }
                                                 else
                                                 {
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 > HandicapP3)
                                                     {
-                                                        ScoreHole12_P3 = ScoreHole12_P3 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole12_P3 = ScoreHole12_P3 - 1;
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                        }
                                                     }
                                                 }
 
@@ -3017,63 +3601,114 @@ namespace DragonGolfBackEnd.Controllers
                                         {
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
-
-                                                if (HandicapP1 > HandicapP3 && Bet_CambioVentaja == false)
+                                                if (Bet_CambioVentaja == false)
                                                 {
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 > HandicapP3)
                                                     {
-                                                        ScoreHole13_P1 = ScoreHole13_P1 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole13_P1 = ScoreHole13_P1 - 1;
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                        }
                                                     }
                                                 }
                                                 else
                                                 {
-
-
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 < HandicapP3)
                                                     {
-                                                        ScoreHole13_P3 = ScoreHole13_P3 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole13_P3 = ScoreHole13_P3 - 1;
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                        }
                                                     }
                                                 }
-
                                             }
 
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
-
-                                                if (HandicapP1 < HandicapP3 && Bet_CambioVentaja == false)
+                                                if (Bet_CambioVentaja == false)
                                                 {
-
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 < HandicapP3)
                                                     {
-                                                        ScoreHole13_P1 = ScoreHole13_P1 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole13_P1 = ScoreHole13_P1 - 1;
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                        }
                                                     }
                                                 }
                                                 else
                                                 {
-
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 > HandicapP3)
                                                     {
-                                                        ScoreHole13_P3 = ScoreHole13_P3 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole13_P3 = ScoreHole13_P3 - 1;
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                        }
                                                     }
                                                 }
 
@@ -3211,63 +3846,114 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
-
-                                                if (HandicapP1 > HandicapP3 && Bet_CambioVentaja == false)
+                                                if (Bet_CambioVentaja == false)
                                                 {
-
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 > HandicapP3)
                                                     {
-                                                        ScoreHole14_P1 = ScoreHole14_P1 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole14_P1 = ScoreHole14_P1 - 1;
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                        }
                                                     }
                                                 }
                                                 else
                                                 {
-
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 < HandicapP3)
                                                     {
-                                                        ScoreHole14_P3 = ScoreHole14_P3 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole14_P3 = ScoreHole14_P3 - 1;
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                        }
                                                     }
                                                 }
-
                                             }
 
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
-
-                                                if (HandicapP1 < HandicapP3 && Bet_CambioVentaja == false)
+                                                if (Bet_CambioVentaja == false)
                                                 {
-
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 < HandicapP3)
                                                     {
-                                                        ScoreHole14_P1 = ScoreHole14_P1 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole14_P1 = ScoreHole14_P1 - 1;
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                        }
                                                     }
                                                 }
                                                 else
                                                 {
-
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 > HandicapP3)
                                                     {
-                                                        ScoreHole14_P3 = ScoreHole14_P3 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole14_P3 = ScoreHole14_P3 - 1;
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                        }
                                                     }
                                                 }
 
@@ -3393,7 +4079,6 @@ namespace DragonGolfBackEnd.Controllers
 
                                             }
 
-
                                         }
 
                                     }
@@ -3405,63 +4090,114 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
-
-                                                if (HandicapP1 > HandicapP3 && Bet_CambioVentaja == false)
+                                                if (Bet_CambioVentaja == false)
                                                 {
-
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 > HandicapP3)
                                                     {
-                                                        ScoreHole15_P1 = ScoreHole15_P1 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole15_P1 = ScoreHole15_P1 - 1;
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                        }
                                                     }
                                                 }
                                                 else
                                                 {
-
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 < HandicapP3)
                                                     {
-                                                        ScoreHole15_P3 = ScoreHole15_P3 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole15_P3 = ScoreHole15_P3 - 1;
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                        }
                                                     }
                                                 }
-
                                             }
 
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
-
-                                                if (HandicapP1 < HandicapP3 && Bet_CambioVentaja == false)
+                                                if (Bet_CambioVentaja == false)
                                                 {
-
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 < HandicapP3)
                                                     {
-                                                        ScoreHole15_P1 = ScoreHole15_P1 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole15_P1 = ScoreHole15_P1 - 1;
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                        }
                                                     }
                                                 }
                                                 else
                                                 {
-
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 > HandicapP3)
                                                     {
-                                                        ScoreHole15_P3 = ScoreHole15_P3 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole15_P3 = ScoreHole15_P3 - 1;
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                        }
                                                     }
                                                 }
 
@@ -3598,62 +4334,114 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
-
-                                                if (HandicapP1 > HandicapP3 && Bet_CambioVentaja == false)
+                                                if (Bet_CambioVentaja == false)
                                                 {
-
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 > HandicapP3)
                                                     {
-                                                        ScoreHole16_P1 = ScoreHole16_P1 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole16_P1 = ScoreHole16_P1 - 1;
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                        }
                                                     }
                                                 }
                                                 else
                                                 {
-
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 < HandicapP3)
                                                     {
-                                                        ScoreHole16_P3 = ScoreHole16_P3 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole16_P3 = ScoreHole16_P3 - 1;
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                        }
                                                     }
                                                 }
-
                                             }
 
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
-
-                                                if (HandicapP1 < HandicapP3)
+                                                if (Bet_CambioVentaja == false)
                                                 {
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo && Bet_CambioVentaja == false)
+                                                    if (HandicapP1 < HandicapP3)
                                                     {
-                                                        ScoreHole16_P1 = ScoreHole16_P1 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole16_P1 = ScoreHole16_P1 - 1;
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                        }
                                                     }
                                                 }
                                                 else
                                                 {
-
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 > HandicapP3)
                                                     {
-                                                        ScoreHole16_P3 = ScoreHole16_P3 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole16_P3 = ScoreHole16_P3 - 1;
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                        }
                                                     }
                                                 }
 
@@ -3789,63 +4577,114 @@ namespace DragonGolfBackEnd.Controllers
                                         {
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
-
-                                                if (HandicapP1 > HandicapP3 && Bet_CambioVentaja == false)
+                                                if (Bet_CambioVentaja == false)
                                                 {
-
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 > HandicapP3)
                                                     {
-                                                        ScoreHole17_P1 = ScoreHole17_P1 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole17_P1 = ScoreHole17_P1 - 1;
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                        }
                                                     }
                                                 }
                                                 else
                                                 {
-
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 < HandicapP3)
                                                     {
-                                                        ScoreHole17_P3 = ScoreHole17_P3 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole17_P3 = ScoreHole17_P3 - 1;
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                        }
                                                     }
                                                 }
-
                                             }
 
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
-
-                                                if (HandicapP1 < HandicapP3 && Bet_CambioVentaja == false)
+                                                if (Bet_CambioVentaja == false)
                                                 {
-
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 < HandicapP3)
                                                     {
-                                                        ScoreHole17_P1 = ScoreHole17_P1 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole17_P1 = ScoreHole17_P1 - 1;
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                        }
                                                     }
                                                 }
                                                 else
                                                 {
-
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 > HandicapP3)
                                                     {
-                                                        ScoreHole17_P3 = ScoreHole17_P3 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole17_P3 = ScoreHole17_P3 - 1;
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                        }
                                                     }
                                                 }
 
@@ -3970,7 +4809,6 @@ namespace DragonGolfBackEnd.Controllers
                                                 }
 
                                             }
-
 
                                         }
                                     }
@@ -3979,65 +4817,116 @@ namespace DragonGolfBackEnd.Controllers
                                     {
                                         if (ScoreHole18_P1 > 0 && ScoreHole18_P2 > 0 && ScoreHole18_P3 > 0 && ScoreHole18_P4 > 0)
                                         {
-
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
-
-                                                if (HandicapP1 > HandicapP3 && Bet_CambioVentaja == false)
+                                                if (Bet_CambioVentaja == false)
                                                 {
-
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 > HandicapP3)
                                                     {
-                                                        ScoreHole18_P1 = ScoreHole18_P1 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole18_P1 = ScoreHole18_P1 - 1;
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                        }
                                                     }
                                                 }
                                                 else
                                                 {
-
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 < HandicapP3)
                                                     {
-                                                        ScoreHole18_P3 = ScoreHole18_P3 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole18_P3 = ScoreHole18_P3 - 1;
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                        }
                                                     }
                                                 }
-
                                             }
 
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
-
-                                                if (HandicapP1 < HandicapP3 && Bet_CambioVentaja == false)
+                                                if (Bet_CambioVentaja == false)
                                                 {
-
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 < HandicapP3)
                                                     {
-                                                        ScoreHole18_P1 = ScoreHole18_P1 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole18_P1 = ScoreHole18_P1 - 1;
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                        }
                                                     }
                                                 }
                                                 else
                                                 {
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 > HandicapP3)
                                                     {
-                                                        ScoreHole18_P3 = ScoreHole18_P3 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole18_P3 = ScoreHole18_P3 - 1;
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                        }
                                                     }
                                                 }
 
@@ -4162,7 +5051,6 @@ namespace DragonGolfBackEnd.Controllers
                                                 }
 
                                             }
-
 
                                         }
                                     }
