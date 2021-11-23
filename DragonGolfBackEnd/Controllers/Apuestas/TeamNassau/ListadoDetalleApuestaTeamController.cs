@@ -44,7 +44,7 @@ namespace DragonGolfBackEnd.Controllers
             public float BetD_MontoB9 { get; set; }
             public float BetD_MontoCalculoF9 { get; set; }
             public float BetD_MontoCalculoB9 { get; set; }
-             public float BetD_MachMonto { get; set; }
+            public float BetD_MachMonto { get; set; }
             public int BetD_DiferenciaHoyos { get; set; }
             public float BetD_MontoPerdidoGanado { get; set; }
             public float BetD_MontoApuestaMedal { get; set; }
@@ -112,7 +112,7 @@ namespace DragonGolfBackEnd.Controllers
 
                 string Mensaje1 = "";
                 int Estatus1 = 0;
-                
+
                 if (DT1.Rows.Count > 0)
                 {
                     foreach (DataRow row in DT1.Rows)
@@ -127,9 +127,9 @@ namespace DragonGolfBackEnd.Controllers
                         }
                     }
 
-                  
+
                 }
-                
+
                 SqlCommand comando = new SqlCommand("DragoGolf_ListDetailBet_Team");
                 comando.CommandType = CommandType.StoredProcedure;
                 //Declaracion de parametros
@@ -266,7 +266,7 @@ namespace DragonGolfBackEnd.Controllers
 
 
         #region
-       
+
         public int Calculo(int IDBet, int IDRonda, int IDBetDetail)
         {
             try
@@ -520,29 +520,29 @@ namespace DragonGolfBackEnd.Controllers
                         AutoPress = Convert.ToInt32(row["AutoPress"]);
                         Adv = Convert.ToDouble(row["Adv"]);
 
-                            DificultatHoyo1 = Convert.ToInt32(row["DificultatHoyo1"]);//7
-                            DificultatHoyo2 = Convert.ToInt32(row["DificultatHoyo2"]);//1
-                            DificultatHoyo3 = Convert.ToInt32(row["DificultatHoyo3"]);//8
-                            DificultatHoyo4 = Convert.ToInt32(row["DificultatHoyo4"]);//5
-                            DificultatHoyo5 = Convert.ToInt32(row["DificultatHoyo5"]);//2
-                            DificultatHoyo6 = Convert.ToInt32(row["DificultatHoyo6"]);//6
-                            DificultatHoyo7 = Convert.ToInt32(row["DificultatHoyo7"]);//4
-                            DificultatHoyo8 = Convert.ToInt32(row["DificultatHoyo8"]);//3
-                            DificultatHoyo9 = Convert.ToInt32(row["DificultatHoyo9"]);//9
-                            DificultatHoyo10 = Convert.ToInt32(row["DificultatHoyo10"]);//10
-                            DificultatHoyo11 = Convert.ToInt32(row["DificultatHoyo11"]);//11
-                            DificultatHoyo12 = Convert.ToInt32(row["DificultatHoyo12"]);//14
-                            DificultatHoyo13 = Convert.ToInt32(row["DificultatHoyo13"]);//15
-                            DificultatHoyo14 = Convert.ToInt32(row["DificultatHoyo14"]);//13
-                            DificultatHoyo15 = Convert.ToInt32(row["DificultatHoyo15"]);//16
-                            DificultatHoyo16 = Convert.ToInt32(row["DificultatHoyo16"]);//17
-                            DificultatHoyo17 = Convert.ToInt32(row["DificultatHoyo17"]);//18
-                            DificultatHoyo18 = Convert.ToInt32(row["DificultatHoyo18"]);//12
+                        DificultatHoyo1 = Convert.ToInt32(row["DificultatHoyo1"]);//7
+                        DificultatHoyo2 = Convert.ToInt32(row["DificultatHoyo2"]);//1
+                        DificultatHoyo3 = Convert.ToInt32(row["DificultatHoyo3"]);//8
+                        DificultatHoyo4 = Convert.ToInt32(row["DificultatHoyo4"]);//5
+                        DificultatHoyo5 = Convert.ToInt32(row["DificultatHoyo5"]);//2
+                        DificultatHoyo6 = Convert.ToInt32(row["DificultatHoyo6"]);//6
+                        DificultatHoyo7 = Convert.ToInt32(row["DificultatHoyo7"]);//4
+                        DificultatHoyo8 = Convert.ToInt32(row["DificultatHoyo8"]);//3
+                        DificultatHoyo9 = Convert.ToInt32(row["DificultatHoyo9"]);//9
+                        DificultatHoyo10 = Convert.ToInt32(row["DificultatHoyo10"]);//10
+                        DificultatHoyo11 = Convert.ToInt32(row["DificultatHoyo11"]);//11
+                        DificultatHoyo12 = Convert.ToInt32(row["DificultatHoyo12"]);//14
+                        DificultatHoyo13 = Convert.ToInt32(row["DificultatHoyo13"]);//15
+                        DificultatHoyo14 = Convert.ToInt32(row["DificultatHoyo14"]);//13
+                        DificultatHoyo15 = Convert.ToInt32(row["DificultatHoyo15"]);//16
+                        DificultatHoyo16 = Convert.ToInt32(row["DificultatHoyo16"]);//17
+                        DificultatHoyo17 = Convert.ToInt32(row["DificultatHoyo17"]);//18
+                        DificultatHoyo18 = Convert.ToInt32(row["DificultatHoyo18"]);//12
 
 
                         if (Ro_Cambio == 1 && HoyoInicial > 1)
                         {
-                            DificultatHoyo1 =  DificultatHoyo1 + 1;
+                            DificultatHoyo1 = DificultatHoyo1 + 1;
                             DificultatHoyo2 = DificultatHoyo2 + 1;
                             DificultatHoyo3 = DificultatHoyo3 + 1;
                             DificultatHoyo4 = DificultatHoyo4 + 1;
@@ -674,35 +674,58 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (TipoGolpesVentaja == "Hi Handicap")
                                             {
-
-                                                if (HandicapP1 > HandicapP3 && Bet_CambioVentaja == false)
+                                                if (Bet_CambioVentaja == false)
                                                 {
-
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 > HandicapP3)
                                                     {
-                                                        ScoreHole1_P1 = ScoreHole1_P1 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                        }
                                                     }
-
                                                 }
                                                 else
                                                 {
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
+                                                    if (HandicapP1 < HandicapP3)
                                                     {
-                                                        ScoreHole1_P3 = ScoreHole1_P3 - (0.5 + ValCompleto);
+                                                        //Validafinalizacion
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P1 = ScoreHole1_P1 - 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                        if (Contador == AdvPositivo)
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - (0.5 + ValCompleto);
+                                                        }
+                                                        else
+                                                        {
+                                                            ScoreHole1_P3 = ScoreHole1_P3 - 1;
+                                                        }
                                                     }
-
                                                 }
-
                                             }
 
                                             if (TipoGolpesVentaja == "Low Handicap")
@@ -1630,10 +1653,9 @@ namespace DragonGolfBackEnd.Controllers
                                         if (ScoreHole6_P1 > 0 && ScoreHole6_P2 > 0 && ScoreHole6_P3 > 0 && ScoreHole6_P4 > 0)
                                         {
 
-                                            if (TipoGolpesVentaja == "Hi Handicap")
+                                            if (Bet_CambioVentaja == false)
                                             {
-
-                                                if (HandicapP1 > HandicapP3 && Bet_CambioVentaja == false)
+                                                if (HandicapP1 > HandicapP3)
                                                 {
                                                     //Validafinalizacion
                                                     if (Contador == AdvPositivo)
@@ -1647,8 +1669,6 @@ namespace DragonGolfBackEnd.Controllers
                                                 }
                                                 else
                                                 {
-
-                                                    //Validafinalizacion
                                                     if (Contador == AdvPositivo)
                                                     {
                                                         ScoreHole6_P3 = ScoreHole6_P3 - (0.5 + ValCompleto);
@@ -1658,9 +1678,33 @@ namespace DragonGolfBackEnd.Controllers
                                                         ScoreHole6_P3 = ScoreHole6_P3 - 1;
                                                     }
                                                 }
-
                                             }
-
+                                            else
+                                            {
+                                                if (HandicapP1 < HandicapP3)
+                                                {
+                                                    //Validafinalizacion
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole6_P1 = ScoreHole6_P1 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole6_P1 = ScoreHole6_P1 - 1;
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    if (Contador == AdvPositivo)
+                                                    {
+                                                        ScoreHole6_P3 = ScoreHole6_P3 - (0.5 + ValCompleto);
+                                                    }
+                                                    else
+                                                    {
+                                                        ScoreHole6_P3 = ScoreHole6_P3 - 1;
+                                                    }
+                                                }
+                                            }
                                             if (TipoGolpesVentaja == "Low Handicap")
                                             {
 
@@ -1814,7 +1858,6 @@ namespace DragonGolfBackEnd.Controllers
                                                 }
 
                                             }
-
 
                                         }
 
@@ -9319,7 +9362,7 @@ namespace DragonGolfBackEnd.Controllers
                             BetD_F9_5 = Convert.ToString(FrontValores[4]);
                             BetD_F9_6 = Convert.ToString(FrontValores[5]);
 
-                            ActualizarAPuesta(IDBetDetail, IDBet,IDRonda, PlayerID1, PlayerID2, BetD_F9_1, BetD_F9_2, BetD_F9_3, BetD_F9_4, BetD_F9_5, BetD_F9_6,
+                            ActualizarAPuesta(IDBetDetail, IDBet, IDRonda, PlayerID1, PlayerID2, BetD_F9_1, BetD_F9_2, BetD_F9_3, BetD_F9_4, BetD_F9_5, BetD_F9_6,
                                              BetD_F9_7, BetD_F9_8, BetD_F9_9, BetD_B9_1, BetD_B9_2, BetD_B9_3, BetD_B9_4, BetD_B9_5, BetD_B9_6, BetD_B9_7, BetD_B9_8, BetD_B9_9, ResultadoFinalMedal, ContadorHoyos,
                                            ResultFront[1], ResultFront[2], ResultFront[3], ResultFront[4], ResultFront[5], ResultFront[6], ResultFront[7], ResultFront[8], ResultFront[9],
                                             ResultBack[1], ResultBack[2], ResultBack[3], ResultBack[4], ResultBack[5], ResultBack[6], ResultBack[7], ResultBack[8], ResultBack[9], 3, ValidaJuegoInicio, TotalMeldal);
@@ -9367,7 +9410,7 @@ namespace DragonGolfBackEnd.Controllers
                 }
                 else
                 {
-                  
+
 
                     return 0;
                 }
@@ -9376,7 +9419,7 @@ namespace DragonGolfBackEnd.Controllers
             catch (Exception ex)
             {
 
-               
+
 
                 return 0; //JsonConvert.SerializeObject(lista);
             }
@@ -13330,7 +13373,7 @@ namespace DragonGolfBackEnd.Controllers
 
                             ResultadoPresionFrontString[i] = Convert.ToString(ResultadoInt) + ", " + PresionValor1 + ", " + PresionValor2 + ", " + PresionValor3 + ", " + PresionValor4 + ", " + PresionValor5 + ", " + PresionValor6 + ", " + PresionValor7 + ", " + PresionValor8 + ", " + PresionValor9;
                         }
-                    
+
                     }
 
                 }
