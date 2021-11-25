@@ -258,6 +258,9 @@
     <Compile Include="Controllers\Settings\AltaSettingsController.cs" />
     <Compile Include="Controllers\Settings\ListadoSettingsFriendController.cs" />
     <Compile Include="Controllers\Settings\ListadoSettingsController.cs" />
+    <Compile Include="Controllers\StableFord\ActualizaStableFordStrokesController.cs" />
+    <Compile Include="Controllers\StableFord\ListadoStableFordStrokesController.cs" />
+    <Compile Include="Controllers\StableFord\ListadoJugadoreStableFordStrokesController.cs" />
     <Compile Include="Controllers\Tees\EliminarTeesController.cs" />
     <Compile Include="Controllers\Tees\ActualizarTeesController.cs" />
     <Compile Include="Controllers\Tees\AltaTeesController.cs" />
