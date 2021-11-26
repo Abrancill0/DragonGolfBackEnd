@@ -153,6 +153,11 @@ namespace DragonGolfBackEnd.Controllers
             public int VentajaHoyo16 { get; set; }
             public int VentajaHoyo17 { get; set; }
             public int VentajaHoyo18 { get; set; }
+
+            public int TotalScoreNetoFront { get; set; }
+            public int TotalScoreNetoBack { get; set; }
+            public int TotalPuntosStableFordFront { get; set; }
+            public int TotalPuntosStableFordBack { get; set; }
         }
 
 
@@ -336,7 +341,13 @@ namespace DragonGolfBackEnd.Controllers
                                 VentajaHoyo16 = Convert.ToInt32(row["VentajaHoyo16"]),
                                 VentajaHoyo17 = Convert.ToInt32(row["VentajaHoyo17"]),
                                 VentajaHoyo18 = Convert.ToInt32(row["VentajaHoyo18"]),
-                            };
+
+                                            TotalScoreNetoFront = Convert.ToInt32(row["TotalScoreNetoFront"]),
+         TotalScoreNetoBack = Convert.ToInt32(row["TotalScoreNetoBack"]),
+         TotalPuntosStableFordFront = Convert.ToInt32(row["TotalPuntosStableFordFront"]),
+        TotalPuntosStableFordBack = Convert.ToInt32(row["TotalPuntosStableFordBack"]),
+
+    };
 
                             lista.Add(ent);
                         }
