@@ -262,9 +262,6 @@ namespace DragonGolfBackEnd.Controllers
             }
         }
 
-
-
-
         #region
 
         public int Calculo(int IDBet, int IDRonda, int IDBetDetail)
@@ -11452,7 +11449,7 @@ namespace DragonGolfBackEnd.Controllers
             catch (Exception ex)
             {
 
-
+                string Error = ex.ToString();
 
                 return 0; //JsonConvert.SerializeObject(lista);
             }
