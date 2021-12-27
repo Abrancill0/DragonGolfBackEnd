@@ -21,7 +21,7 @@ namespace DragonGolfBackEnd.Controllers
     {
         public class ParametrosEntradas
         {
-           public int IDRounds { get; set; }
+            public int IDRounds { get; set; }
             public int IDUsuario { get; set; }
             public int PlayerId { get; set; }
             public decimal RoundHandicap { get; set; }
@@ -44,7 +44,7 @@ namespace DragonGolfBackEnd.Controllers
             public int ScoreHole16 { get; set; }
             public int ScoreHole17 { get; set; }
             public int ScoreHole18 { get; set; }
-    }
+        }
         public JObject Post(ParametrosEntradas Datos)
         {
             try
@@ -71,15 +71,14 @@ namespace DragonGolfBackEnd.Controllers
                 comando.Parameters.Add("@ScoreHole11", SqlDbType.Int);
                 comando.Parameters.Add("@ScoreHole12", SqlDbType.Int);
                 comando.Parameters.Add("@ScoreHole13", SqlDbType.Int);
-               comando.Parameters.Add("@ScoreHole14", SqlDbType.Int);
+                comando.Parameters.Add("@ScoreHole14", SqlDbType.Int);
                 comando.Parameters.Add("@ScoreHole15", SqlDbType.Int);
-               comando.Parameters.Add("@ScoreHole16", SqlDbType.Int);
-               comando.Parameters.Add("@ScoreHole17", SqlDbType.Int);
+                comando.Parameters.Add("@ScoreHole16", SqlDbType.Int);
+                comando.Parameters.Add("@ScoreHole17", SqlDbType.Int);
                 comando.Parameters.Add("@ScoreHole18", SqlDbType.Int);
 
 
                 //Asignacion de valores a parametros
-
                 comando.Parameters["@IDRounds"].Value = Datos.IDRounds;
                 comando.Parameters["@IDUsuario"].Value = Datos.IDUsuario;
                 comando.Parameters["@PlayerId"].Value = Datos.PlayerId;
@@ -127,7 +126,7 @@ namespace DragonGolfBackEnd.Controllers
                         Mensaje = Convert.ToString(row["mensaje"]);
                         Estatus = Convert.ToInt32(row["Estatus"]);
 
-                        if (Estatus == 1 )
+                        if (Estatus == 1)
                         {
                             PlayerId = Convert.ToInt32(row["PlayerId"]);
 
@@ -160,14 +159,13 @@ namespace DragonGolfBackEnd.Controllers
                             }
                         }
 
-               
                     }
 
                     JObject Resultado = JObject.FromObject(new
                     {
                         mensaje = Mensaje,
                         estatus = Estatus,
-                       
+
                     });
 
                     return Resultado;
