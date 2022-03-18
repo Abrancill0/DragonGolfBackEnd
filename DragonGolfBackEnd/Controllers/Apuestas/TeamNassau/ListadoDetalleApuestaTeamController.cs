@@ -17,7 +17,8 @@ namespace DragonGolfBackEnd.Controllers
 
     [EnableCors(origins: "*", headers: "*", methods: "*", SupportsCredentials = true)]
     [RoutePrefix("api/ListadoDetalleApuestaTeam")]
-    public class ListadoDetalleApuestaTeamController : ApiController
+    public class 
+        Controller : ApiController
     {
 
         public class ParametrosEntrada
@@ -559,7 +560,6 @@ namespace DragonGolfBackEnd.Controllers
                             DificultatHoyo18 = DificultatHoyo18 - 1;
                         }
 
-
                         TipoGolpesVentaja = Convert.ToString(row["TipoGolpesVentaja"]);
 
                         HandicapP1 = Convert.ToDouble(row["HandicapP1"]);
@@ -635,7 +635,7 @@ namespace DragonGolfBackEnd.Controllers
                         }
 
 
-                        int[] DificultadHoyo_Array = new int[] { DificultatHoyo1,
+                        int[] DificultadHoyo_Array = new int[] {0, DificultatHoyo1,
                             DificultatHoyo2,
                             DificultatHoyo3,
                             DificultatHoyo4,
@@ -654,7 +654,7 @@ namespace DragonGolfBackEnd.Controllers
                             DificultatHoyo17,
                             DificultatHoyo18};
 
-                        Double[] ScoreHole_P1_Array = new Double[] { ScoreHole1_P1,
+                        Double[] ScoreHole_P1_Array = new Double[] {0, ScoreHole1_P1,
                             ScoreHole2_P1,
                             ScoreHole3_P1,
                             ScoreHole4_P1,
@@ -673,7 +673,7 @@ namespace DragonGolfBackEnd.Controllers
                             ScoreHole17_P1,
                             ScoreHole18_P1};
 
-                        Double[] ScoreHole_P2_Array = new Double[] { ScoreHole1_P2,
+                        Double[] ScoreHole_P2_Array = new Double[] {0, ScoreHole1_P2,
                             ScoreHole2_P2,
                             ScoreHole3_P2,
                             ScoreHole4_P2,
@@ -692,7 +692,7 @@ namespace DragonGolfBackEnd.Controllers
                             ScoreHole17_P2,
                             ScoreHole18_P2};
 
-                        Double[] ScoreHole_P3_Array = new Double[] { ScoreHole1_P3,
+                        Double[] ScoreHole_P3_Array = new Double[] {0, ScoreHole1_P3,
                             ScoreHole2_P3,
                             ScoreHole3_P3,
                             ScoreHole4_P3,
@@ -711,7 +711,7 @@ namespace DragonGolfBackEnd.Controllers
                             ScoreHole17_P3,
                             ScoreHole18_P3};
 
-                        Double[] ScoreHole_P4_Array = new Double[] { ScoreHole1_P4,
+                        Double[] ScoreHole_P4_Array = new Double[] {0, ScoreHole1_P4,
                             ScoreHole2_P4,
                             ScoreHole3_P4,
                             ScoreHole4_P4,
@@ -746,7 +746,7 @@ namespace DragonGolfBackEnd.Controllers
                                 CicloFor = GolpesVentajaRedondeado;
                             }
 
-                            for (int i = 0; i < CicloFor; i++)
+                            for (int i = 1; i < CicloFor; i++)
                             {
                                 if (Contador > 18)
                                 {
@@ -756,10 +756,10 @@ namespace DragonGolfBackEnd.Controllers
 
                                 if (Contador <= AdvPositivo)
                                 {
-                                    for (int e = 0; e < 17; i++)
+                                    for (int e = 1; e < 18; e++)
                                     {
 
-                                        if (DificultadHoyo_Array[e] == Contador)
+                                        if (DificultadHoyo_Array[e] == (Contador ))
                                         {
                                             if (ScoreHole_P1_Array[e] > 0 && ScoreHole_P2_Array[e] > 0 && ScoreHole_P3_Array[e] > 0 && ScoreHole_P4_Array[e] > 0)
                                             {
@@ -1029,8 +1029,7 @@ namespace DragonGolfBackEnd.Controllers
                                 ValCompleto = 0.5;
                             }
 
-
-                            for (int i = 0; i < CicloFor; i++)
+                            for (int i = 1; i < CicloFor; i++)
                             {
                                 Contador += 1;
 
@@ -1039,278 +1038,279 @@ namespace DragonGolfBackEnd.Controllers
                                     Contador = 1;
                                     AdvPositivo = AdvPositivo - 18;
                                 }
-
-                                for (int e = 0; e < 17; i++)
+                                if (Contador <= AdvPositivo)
                                 {
-
-                                    if (DificultadHoyo_Array[e] == Contador)
-                                {
-
-                                    if (ScoreHole_P1_Array[e] > 0 && ScoreHole_P2_Array[e] > 0 && ScoreHole_P3_Array[e] > 0 && ScoreHole_P4_Array[e] > 0)
+                                    for (int e = 1; e < 18; e++)
                                     {
 
-                                        if (TipoGolpesVentaja == "Hi Handicap")
+                                        if (DificultadHoyo_Array[e] == (Contador))
                                         {
-                                            if (Bet_CambioVentaja == false)
+
+                                            if (ScoreHole_P1_Array[e] > 0 && ScoreHole_P2_Array[e] > 0 && ScoreHole_P3_Array[e] > 0 && ScoreHole_P4_Array[e] > 0)
                                             {
-                                                if (HandicapP2 > HandicapP4)
-                                                {
 
-                                                    //Validafinalizacion
-                                                    if (Contador == GolpesVentajaRecibidos)
+                                                if (TipoGolpesVentaja == "Hi Handicap")
+                                                {
+                                                    if (Bet_CambioVentaja == false)
                                                     {
-                                                        ScoreHole_P2_Array[i] = ScoreHole_P2_Array[i] - (0.5 + ValCompleto);
+                                                        if (HandicapP2 > HandicapP4)
+                                                        {
+
+                                                            //Validafinalizacion
+                                                            if (Contador == GolpesVentajaRecibidos)
+                                                            {
+                                                                ScoreHole_P2_Array[e] = ScoreHole_P2_Array[e] - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                ScoreHole_P2_Array[e] = ScoreHole_P2_Array[e] - 1;
+                                                            }
+                                                        }
+                                                        else
+                                                        {
+
+                                                            //Validafinalizacion
+                                                            if (Contador == GolpesVentajaRecibidos)
+                                                            {
+                                                                ScoreHole_P4_Array[e] = ScoreHole_P4_Array[e] - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                ScoreHole_P4_Array[e] = ScoreHole_P4_Array[e] - 1;
+                                                            }
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole_P2_Array[i] = ScoreHole_P2_Array[i] - 1;
-                                                    }
-                                                }
-                                                else
-                                                {
+                                                        if (HandicapP2 < HandicapP4)
+                                                        {
 
-                                                    //Validafinalizacion
-                                                    if (Contador == GolpesVentajaRecibidos)
+                                                            //Validafinalizacion
+                                                            if (Contador == GolpesVentajaRecibidos)
+                                                            {
+                                                                ScoreHole_P2_Array[e] = ScoreHole_P2_Array[e] - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                ScoreHole_P2_Array[e] = ScoreHole_P2_Array[e] - 1;
+                                                            }
+                                                        }
+                                                        else
+                                                        {
+
+                                                            //Validafinalizacion
+                                                            if (Contador == GolpesVentajaRecibidos)
+                                                            {
+                                                                ScoreHole_P4_Array[e] = ScoreHole_P4_Array[e] - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                ScoreHole_P4_Array[e] = ScoreHole_P4_Array[e] - 1;
+                                                            }
+                                                        }
+                                                    }
+
+                                                }
+
+                                                if (TipoGolpesVentaja == "Low Handicap")
+                                                {
+                                                    if (Bet_CambioVentaja == false)
                                                     {
-                                                        ScoreHole_P4_Array[i] = ScoreHole_P4_Array[i] - (0.5 + ValCompleto);
+                                                        if (HandicapP2 < HandicapP4)
+                                                        {
+
+                                                            //Validafinalizacion
+                                                            if (Contador == GolpesVentajaRecibidos)
+                                                            {
+                                                                ScoreHole_P2_Array[e] = ScoreHole_P2_Array[e] - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                ScoreHole_P2_Array[e] = ScoreHole_P2_Array[e] - 1;
+                                                            }
+                                                        }
+                                                        else
+                                                        {
+
+                                                            //Validafinalizacion
+                                                            if (Contador == GolpesVentajaRecibidos)
+                                                            {
+                                                                ScoreHole_P4_Array[e] = ScoreHole_P4_Array[e] - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                ScoreHole_P4_Array[e] = ScoreHole_P4_Array[e] - 1;
+                                                            }
+                                                        }
+
                                                     }
                                                     else
                                                     {
-                                                        ScoreHole_P4_Array[i] = ScoreHole_P4_Array[i] - 1;
+                                                        if (HandicapP2 > HandicapP4)
+                                                        {
+
+                                                            //Validafinalizacion
+                                                            if (Contador == GolpesVentajaRecibidos)
+                                                            {
+                                                                ScoreHole_P2_Array[e] = ScoreHole_P2_Array[e] - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                ScoreHole_P2_Array[e] = ScoreHole_P2_Array[e] - 1;
+                                                            }
+                                                        }
+                                                        else
+                                                        {
+
+                                                            //Validafinalizacion
+                                                            if (Contador == GolpesVentajaRecibidos)
+                                                            {
+                                                                ScoreHole_P4_Array[e] = ScoreHole_P4_Array[e] - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                ScoreHole_P4_Array[e] = ScoreHole_P4_Array[e] - 1;
+                                                            }
+                                                        }
+                                                    }
+
+                                                }
+
+                                                if (TipoGolpesVentaja == "Each")
+                                                {
+                                                    if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor && Bet_CambioVentaja == false)
+                                                    {
+                                                        //Se le da la ventaja al peor de ese equipo
+                                                        if (JugadorMejoresEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
+                                                        {
+                                                            //Validafinalizacion
+                                                            if (Contador == AdvPositivo)
+                                                            {
+                                                                ScoreHole_P4_Array[e] = ScoreHole_P4_Array[e] - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                ScoreHole_P4_Array[e] = ScoreHole_P4_Array[e] - 1;
+                                                            }
+
+                                                        }
+                                                        else
+                                                        {
+                                                            //Validafinalizacion
+                                                            if (Contador == AdvPositivo)
+                                                            {
+                                                                ScoreHole_P2_Array[e] = ScoreHole_P2_Array[e] - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                ScoreHole_P2_Array[e] = ScoreHole_P2_Array[e] - 1;
+                                                            }
+
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        //JugadorMejoresEquipo2
+                                                        if (JugadorMejoresEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
+                                                        {
+                                                            if (Contador == AdvPositivo)
+                                                            {
+                                                                ScoreHole_P3_Array[e] = ScoreHole_P3_Array[e] - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                ScoreHole_P3_Array[e] = ScoreHole_P3_Array[e] - 1;
+                                                            }
+
+                                                        }
+                                                        else
+                                                        {
+                                                            if (Contador == AdvPositivo)
+                                                            {
+                                                                ScoreHole_P1_Array[e] = ScoreHole_P1_Array[e] - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                ScoreHole_P1_Array[e] = ScoreHole_P1_Array[e] - 1;
+                                                            }
+
+                                                        }
+
+                                                    }
+
+                                                    if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor && Bet_CambioVentaja == false)
+                                                    {
+                                                        if (JugadorPeorEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
+                                                        {
+                                                            if (Contador == AdvPositivo)
+                                                            {
+                                                                ScoreHole_P2_Array[e] = ScoreHole_P2_Array[e] - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                ScoreHole_P2_Array[e] = ScoreHole_P2_Array[e] - 1;
+                                                            }
+                                                        }
+                                                        else
+                                                        {
+                                                            if (Contador == AdvPositivo)
+                                                            {
+                                                                ScoreHole_P4_Array[e] = ScoreHole_P4_Array[e] - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                ScoreHole_P4_Array[e] = ScoreHole_P4_Array[e] - 1;
+                                                            }
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        //JugadorMejoresEquipo2
+                                                        if (JugadorPeorEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
+                                                        {
+                                                            if (Contador == AdvPositivo)
+                                                            {
+                                                                ScoreHole_P1_Array[e] = ScoreHole_P1_Array[e] - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                ScoreHole_P1_Array[e] = ScoreHole_P1_Array[e] - 1;
+                                                            }
+
+
+                                                        }
+                                                        else
+                                                        {
+                                                            if (Contador == AdvPositivo)
+                                                            {
+                                                                ScoreHole_P3_Array[e] = ScoreHole_P3_Array[e] - (0.5 + ValCompleto);
+                                                            }
+                                                            else
+                                                            {
+                                                                ScoreHole_P3_Array[e] = ScoreHole_P3_Array[e] - 1;
+                                                            }
+                                                        }
+
                                                     }
                                                 }
+
                                             }
-                                            else
-                                            {
-                                                if (HandicapP2 < HandicapP4)
-                                                {
 
-                                                    //Validafinalizacion
-                                                    if (Contador == GolpesVentajaRecibidos)
-                                                    {
-                                                        ScoreHole_P2_Array[i] = ScoreHole_P2_Array[i] - (0.5 + ValCompleto);
-                                                    }
-                                                    else
-                                                    {
-                                                        ScoreHole_P2_Array[i] = ScoreHole_P2_Array[i] - 1;
-                                                    }
-                                                }
-                                                else
-                                                {
-
-                                                    //Validafinalizacion
-                                                    if (Contador == GolpesVentajaRecibidos)
-                                                    {
-                                                        ScoreHole_P4_Array[i] = ScoreHole_P4_Array[i] - (0.5 + ValCompleto);
-                                                    }
-                                                    else
-                                                    {
-                                                        ScoreHole_P4_Array[i] = ScoreHole_P4_Array[i] - 1;
-                                                    }
-                                                }
-                                            }
-
-                                        }
-
-                                        if (TipoGolpesVentaja == "Low Handicap")
-                                        {
-                                            if (Bet_CambioVentaja == false)
-                                            {
-                                                if (HandicapP2 < HandicapP4)
-                                                {
-
-                                                    //Validafinalizacion
-                                                    if (Contador == GolpesVentajaRecibidos)
-                                                    {
-                                                        ScoreHole_P2_Array[e] = ScoreHole_P2_Array[e] - (0.5 + ValCompleto);
-                                                    }
-                                                    else
-                                                    {
-                                                        ScoreHole_P2_Array[e] = ScoreHole_P2_Array[e] - 1;
-                                                    }
-                                                }
-                                                else
-                                                {
-
-                                                    //Validafinalizacion
-                                                    if (Contador == GolpesVentajaRecibidos)
-                                                    {
-                                                        ScoreHole_P4_Array[e] = ScoreHole_P4_Array[e] - (0.5 + ValCompleto);
-                                                    }
-                                                    else
-                                                    {
-                                                        ScoreHole_P4_Array[e] = ScoreHole_P4_Array[e] - 1;
-                                                    }
-                                                }
-
-                                            }
-                                            else
-                                            {
-                                                if (HandicapP2 > HandicapP4)
-                                                {
-
-                                                    //Validafinalizacion
-                                                    if (Contador == GolpesVentajaRecibidos)
-                                                    {
-                                                        ScoreHole_P2_Array[e] = ScoreHole_P2_Array[e] - (0.5 + ValCompleto);
-                                                    }
-                                                    else
-                                                    {
-                                                        ScoreHole_P2_Array[e] = ScoreHole_P2_Array[e] - 1;
-                                                    }
-                                                }
-                                                else
-                                                {
-
-                                                    //Validafinalizacion
-                                                    if (Contador == GolpesVentajaRecibidos)
-                                                    {
-                                                        ScoreHole_P4_Array[e] = ScoreHole_P4_Array[e] - (0.5 + ValCompleto);
-                                                    }
-                                                    else
-                                                    {
-                                                        ScoreHole_P4_Array[e] = ScoreHole_P4_Array[e] - 1;
-                                                    }
-                                                }
-                                            }
-
-                                        }
-
-                                        if (TipoGolpesVentaja == "Each")
-                                        {
-                                            if (JugadorMejoresEquipo1Valor >= JugadorMejoresEquipo2Valor && Bet_CambioVentaja == false)
-                                            {
-                                                //Se le da la ventaja al peor de ese equipo
-                                                if (JugadorMejoresEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
-                                                {
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
-                                                    {
-                                                        ScoreHole_P4_Array[e] = ScoreHole_P4_Array[e] - (0.5 + ValCompleto);
-                                                    }
-                                                    else
-                                                    {
-                                                        ScoreHole_P4_Array[e] = ScoreHole_P4_Array[e] - 1;
-                                                    }
-
-                                                }
-                                                else
-                                                {
-                                                    //Validafinalizacion
-                                                    if (Contador == AdvPositivo)
-                                                    {
-                                                        ScoreHole_P2_Array[e] = ScoreHole_P2_Array[e] - (0.5 + ValCompleto);
-                                                    }
-                                                    else
-                                                    {
-                                                        ScoreHole_P2_Array[e] = ScoreHole_P2_Array[e] - 1;
-                                                    }
-
-                                                }
-                                            }
-                                            else
-                                            {
-                                                //JugadorMejoresEquipo2
-                                                if (JugadorMejoresEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
-                                                {
-                                                    if (Contador == AdvPositivo)
-                                                    {
-                                                        ScoreHole_P3_Array[e] = ScoreHole_P3_Array[e] - (0.5 + ValCompleto);
-                                                    }
-                                                    else
-                                                    {
-                                                        ScoreHole_P3_Array[e] = ScoreHole_P3_Array[e] - 1;
-                                                    }
-
-                                                }
-                                                else
-                                                {
-                                                    if (Contador == AdvPositivo)
-                                                    {
-                                                        ScoreHole_P1_Array[e] = ScoreHole_P1_Array[e] - (0.5 + ValCompleto);
-                                                    }
-                                                    else
-                                                    {
-                                                        ScoreHole_P1_Array[e] = ScoreHole_P1_Array[e] - 1;
-                                                    }
-
-                                                }
-
-                                            }
-
-                                            if (JugadorPeorEquipo1Valor >= JugadorPeorEquipo2Valor && Bet_CambioVentaja == false)
-                                            {
-                                                if (JugadorPeorEquipo2 == "Jugador 2" && Bet_CambioVentaja == false)
-                                                {
-                                                    if (Contador == AdvPositivo)
-                                                    {
-                                                        ScoreHole_P2_Array[e] = ScoreHole_P2_Array[e] - (0.5 + ValCompleto);
-                                                    }
-                                                    else
-                                                    {
-                                                        ScoreHole_P2_Array[e] = ScoreHole_P2_Array[e] - 1;
-                                                    }
-                                                }
-                                                else
-                                                {
-                                                    if (Contador == AdvPositivo)
-                                                    {
-                                                        ScoreHole_P4_Array[e] = ScoreHole_P4_Array[e] - (0.5 + ValCompleto);
-                                                    }
-                                                    else
-                                                    {
-                                                        ScoreHole_P4_Array[e] = ScoreHole_P4_Array[e] - 1;
-                                                    }
-                                                }
-
-                                            }
-                                            else
-                                            {
-                                                //JugadorMejoresEquipo2
-                                                if (JugadorPeorEquipo1 == "Jugador 1" && Bet_CambioVentaja == false)
-                                                {
-                                                    if (Contador == AdvPositivo)
-                                                    {
-                                                        ScoreHole_P1_Array[e] = ScoreHole_P1_Array[e] - (0.5 + ValCompleto);
-                                                    }
-                                                    else
-                                                    {
-                                                        ScoreHole_P1_Array[e] = ScoreHole_P1_Array[e] - 1;
-                                                    }
-
-
-                                                }
-                                                else
-                                                {
-                                                    if (Contador == AdvPositivo)
-                                                    {
-                                                        ScoreHole_P3_Array[e] = ScoreHole_P3_Array[e] - (0.5 + ValCompleto);
-                                                    }
-                                                    else
-                                                    {
-                                                        ScoreHole_P3_Array[e] = ScoreHole_P3_Array[e] - 1;
-                                                    }
-                                                }
-
-                                            }
                                         }
 
                                     }
-
-                                    }
-
                                 }
-
+                            }
                         }
-
 
                         //Cambio de hoyo
                         double[] CambioHoyos = new double[76];
 
-                        CambioHoyos = HoyoInicialCambio(ScoreHole1_P1, ScoreHole2_P1, ScoreHole3_P1, ScoreHole4_P1, ScoreHole5_P1, ScoreHole6_P1, ScoreHole7_P1, ScoreHole8_P1, ScoreHole9_P1, ScoreHole10_P1, ScoreHole11_P1, ScoreHole12_P1, ScoreHole13_P1, ScoreHole14_P1, ScoreHole15_P1, ScoreHole16_P1, ScoreHole17_P1, ScoreHole18_P1,
-                            ScoreHole1_P2, ScoreHole2_P2, ScoreHole3_P2, ScoreHole4_P2, ScoreHole5_P2, ScoreHole6_P2, ScoreHole7_P2, ScoreHole8_P2, ScoreHole9_P2, ScoreHole10_P2, ScoreHole11_P2, ScoreHole12_P2, ScoreHole13_P2, ScoreHole14_P2, ScoreHole15_P2, ScoreHole16_P2, ScoreHole17_P2, ScoreHole18_P2,
-                            ScoreHole1_P3, ScoreHole2_P3, ScoreHole3_P3, ScoreHole4_P3, ScoreHole5_P3, ScoreHole6_P3, ScoreHole7_P3, ScoreHole8_P3, ScoreHole9_P3, ScoreHole10_P3, ScoreHole11_P3, ScoreHole12_P3, ScoreHole13_P3, ScoreHole14_P3, ScoreHole15_P3, ScoreHole16_P3, ScoreHole17_P3, ScoreHole18_P3,
-                            ScoreHole1_P4, ScoreHole2_P4, ScoreHole3_P4, ScoreHole4_P4, ScoreHole5_P4, ScoreHole6_P4, ScoreHole7_P4, ScoreHole8_P4, ScoreHole9_P4, ScoreHole10_P4, ScoreHole11_P4, ScoreHole12_P4, ScoreHole13_P4, ScoreHole14_P4, ScoreHole15_P4, ScoreHole16_P4, ScoreHole17_P4, ScoreHole18_P4, HoyoInicial);
+                        CambioHoyos = HoyoInicialCambio(ScoreHole_P1_Array[1], ScoreHole_P1_Array[2], ScoreHole_P1_Array[3], ScoreHole_P1_Array[4], ScoreHole_P1_Array[5], ScoreHole_P1_Array[6], ScoreHole_P1_Array[7], ScoreHole_P1_Array[8], ScoreHole_P1_Array[9], ScoreHole_P1_Array[10], ScoreHole_P1_Array[11], ScoreHole_P1_Array[12], ScoreHole_P1_Array[13], ScoreHole_P1_Array[14], ScoreHole_P1_Array[15], ScoreHole_P1_Array[16], ScoreHole_P1_Array[17], ScoreHole_P1_Array[18],
+                            ScoreHole_P2_Array[1], ScoreHole_P2_Array[2], ScoreHole_P2_Array[3], ScoreHole_P2_Array[4], ScoreHole_P2_Array[5], ScoreHole_P2_Array[6], ScoreHole_P2_Array[7], ScoreHole_P2_Array[8], ScoreHole_P2_Array[9], ScoreHole_P2_Array[10], ScoreHole_P2_Array[11], ScoreHole_P2_Array[12], ScoreHole_P2_Array[13], ScoreHole_P2_Array[14], ScoreHole_P2_Array[15], ScoreHole_P2_Array[16], ScoreHole_P2_Array[17], ScoreHole_P2_Array[18],
+                            ScoreHole_P3_Array[1], ScoreHole_P3_Array[2], ScoreHole_P3_Array[3], ScoreHole_P3_Array[4], ScoreHole_P3_Array[5], ScoreHole_P3_Array[6], ScoreHole_P3_Array[7], ScoreHole_P3_Array[8], ScoreHole_P3_Array[9], ScoreHole_P3_Array[10], ScoreHole_P3_Array[11], ScoreHole_P3_Array[12], ScoreHole_P3_Array[13], ScoreHole_P3_Array[14], ScoreHole_P3_Array[15], ScoreHole_P3_Array[16], ScoreHole_P3_Array[17], ScoreHole_P3_Array[18],
+                            ScoreHole_P4_Array[1], ScoreHole_P4_Array[2], ScoreHole_P4_Array[3], ScoreHole_P4_Array[4], ScoreHole_P4_Array[5], ScoreHole_P4_Array[6], ScoreHole_P4_Array[7], ScoreHole_P4_Array[8], ScoreHole_P4_Array[9], ScoreHole_P4_Array[10], ScoreHole_P4_Array[11], ScoreHole_P4_Array[12], ScoreHole_P4_Array[13], ScoreHole_P4_Array[14], ScoreHole_P4_Array[15], ScoreHole_P4_Array[16], ScoreHole_P4_Array[17], ScoreHole_P4_Array[18], HoyoInicial);
 
                         ScoreHole1_P1 = CambioHoyos[1];
                         ScoreHole2_P1 = CambioHoyos[2];
