@@ -17,8 +17,7 @@ namespace DragonGolfBackEnd.Controllers
 
     [EnableCors(origins: "*", headers: "*", methods: "*", SupportsCredentials = true)]
     [RoutePrefix("api/ListadoDetalleApuestaTeam")]
-    public class 
-        Controller : ApiController
+    public class ListadoDetalleApuestaTeamController : ApiController
     {
 
         public class ParametrosEntrada
@@ -767,7 +766,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 {
                                                     if (Bet_CambioVentaja == false)
                                                     {
-                                                        if (HandicapP1 > HandicapP3)
+                                                        if (HandicapP1 >= HandicapP3)
                                                         {
                                                             //Validafinalizacion
                                                             if (Contador == AdvPositivo)
@@ -823,7 +822,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 {
                                                     if (Bet_CambioVentaja == false)
                                                     {
-                                                        if (HandicapP1 < HandicapP3)
+                                                        if (HandicapP1 <= HandicapP3)
                                                         {
                                                             //Validafinalizacion
                                                             if (Contador == AdvPositivo)
@@ -1029,7 +1028,7 @@ namespace DragonGolfBackEnd.Controllers
                                 ValCompleto = 0.5;
                             }
 
-                            for (int i = 1; i < CicloFor; i++)
+                            for (int i = 1; i <= CicloFor; i++)
                             {
                                 Contador += 1;
 
@@ -1040,7 +1039,7 @@ namespace DragonGolfBackEnd.Controllers
                                 }
                                 if (Contador <= AdvPositivo)
                                 {
-                                    for (int e = 1; e < 18; e++)
+                                    for (int e = 1; e <= 18; e++)
                                     {
 
                                         if (DificultadHoyo_Array[e] == (Contador))
@@ -1048,12 +1047,11 @@ namespace DragonGolfBackEnd.Controllers
 
                                             if (ScoreHole_P1_Array[e] > 0 && ScoreHole_P2_Array[e] > 0 && ScoreHole_P3_Array[e] > 0 && ScoreHole_P4_Array[e] > 0)
                                             {
-
                                                 if (TipoGolpesVentaja == "Hi Handicap")
                                                 {
                                                     if (Bet_CambioVentaja == false)
                                                     {
-                                                        if (HandicapP2 > HandicapP4)
+                                                        if (HandicapP2 >= HandicapP4)
                                                         {
 
                                                             //Validafinalizacion
@@ -1116,7 +1114,7 @@ namespace DragonGolfBackEnd.Controllers
                                                 {
                                                     if (Bet_CambioVentaja == false)
                                                     {
-                                                        if (HandicapP2 < HandicapP4)
+                                                        if (HandicapP2 <= HandicapP4)
                                                         {
 
                                                             //Validafinalizacion

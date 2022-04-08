@@ -36,7 +36,8 @@ namespace DragonGolfBackEnd.Controllers
             public double Stroke { get; set; }
             public double StrokeSiguiente { get; set; }
             public int IDUsuarioGano { get; set; }
-    }
+            public int Carry { get; set; }
+        }
 
         public JObject Post(ParametrosEntradas Datos)
         {
@@ -89,7 +90,8 @@ namespace DragonGolfBackEnd.Controllers
                             Campo = Convert.ToString(row["Campo"]),
                             Stroke = Convert.ToDouble(row["Stroke"]),
                             StrokeSiguiente = Convert.ToDouble(row["StrokeSiguiente"]),
-                            IDUsuarioGano = Convert.ToInt32(row["IDUsuarioGano"])
+                            IDUsuarioGano = Convert.ToInt32(row["IDUsuarioGano"]),
+                            Carry = Convert.ToInt32(row["Carry"])
                         };
 
 
